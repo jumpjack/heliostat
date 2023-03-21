@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Basic BabylonJS Page</title>
+        <style>
+            html, body {
+                overflow: hidden;
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            #renderCanvas {
+                width: 600px;
+                height: 480px;
+            }
+        </style>
+        <script src="babylon.max.js"></script>
+        <script src="babylonjs.loaders.min.js"></script>
+<script src="https://cdn.babylonjs.com/earcut.min.js"></script>
+
+    </head>
+    <body>
+      A: <input type="range" id ="rnga" value = 2 min = -10 max = 10 step = 1><br>
+      B: <input type="range" id ="rngb" value = 4 min = -10 max = 10 step = 1><br>
+        <canvas id="renderCanvas" ></canvas>
+        <script>
+                var a=2;
+                var b=4;
+            window.addEventListener('DOMContentLoaded', function(){
+                var canvas = document.getElementById('renderCanvas');
+                var engine = new BABYLON.Engine(canvas, true);
+
+
+
+                var createScene = function () {
+                    var scene = new BABYLON.Scene(engine);
+
+    scene.registerBeforeRender( () => {
+                a = document.getElementById("rnga").value*1;
+                b = document.getElementById("rngb").value*1;
+      } );
+                        ///// Basic environment; ground plane, axis, light  /////////
+
+                    // Camera
+                    var camera = new BABYLON.ArcRotateCamera("Camera", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+                    camera.setPosition(new BABYLON.Vector3(0, 0, -10));
+                    camera.attachControl(canvas, true);
+
+                    // Light
+                    var light = new BABYLON.HemisphericLight("light", new BABYLON.Vector3(0, 1, 0), scene);
+                    var light2 = new BABYLON.PointLight("light", new BABYLON.Vector3(0,0, -5), scene);
+
+                    // Ground
+                    var ground = BABYLON.Mesh.CreateGround("ground", 20, 20, 1, scene);
+
+                    // Axes
+                    var size = 10;
+                    var xAxis = BABYLON.Mesh.CreateLines("xAxis", [
+                        new BABYLON.Vector3.Zero(), new BABYLON.Vector3(size, 0, 0),
+                        new BABYLON.Vector3(size * 0.95, 0.05 * size, 0), new BABYLON.Vector3(size, 0, 0),
+                        new BABYLON.Vector3(size * 0.95, -0.05 * size, 0)
+                    ], scene);
+                    xAxis.color = new BABYLON.Color3(1, 0, 0);
+
+                    var yAxis = BABYLON.Mesh.CreateLines("yAxis", [
+                        new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, size, 0),
+                        new BABYLON.Vector3(-0.05 * size, size * 0.95, 0), new BABYLON.Vector3(0, size, 0),
+                        new BABYLON.Vector3(0.05 * size, size * 0.95, 0)
+                    ], scene);
+                    yAxis.color = new BABYLON.Color3(0, 1, 0);
+
+                    var zAxis = BABYLON.Mesh.CreateLines("zAxis", [
+                        new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, 0, size),
+                        new BABYLON.Vector3(0, -0.05 * size, size * 0.95), new BABYLON.Vector3(0, 0, size),
+                        new BABYLON.Vector3(0, 0.05 * size, size * 0.95)
+                    ], scene);
+                    zAxis.color = new BABYLON.Color3(0, 0, 1);
+
+
+                    /////// Parabolic mirror made of many small mirrors parallel to face: /////////
+
+                    // Definisci la funzione che restituisce la posizione del paraboloide
+                    function getParaboloidPosition(x, z) {
+                      var y = 0.2 * (a * x*x + b * z*z); //// equazione del paraboloide  // debug renderlo dinamico
+                      return new BABYLON.Vector3(x, y, z);
+                    }
+
+                    // Crea i vertici del paraboloide
+                    var vertices = [];
+                    for (var x = -5; x <= 5; x += 0.5) {
+                      for (var z = -5; z <= 5; z += 0.5) {
+                        var position = getParaboloidPosition(x, z);
+                        vertices.push(position.x, position.y, position.z);
+                      }
+                    }
+
+                    // Crea gli indici per disegnare il paraboloide
+                    var indices = [];
+                    for (var i = 0; i < (20*20-1); i++) {
+                      if ((i+1) % 20 === 0) continue; // salta gli ultimi punti di ogni riga
+                      indices.push(i, i+20, i+1);
+                      indices.push(i+1, i+20, i+21);
+                    }
+
+                    /*
+                    // Crea il mesh del paraboloide
+                    var paraboloid = new BABYLON.Mesh("paraboloid", scene);
+                    paraboloid.setVerticesData(BABYLON.VertexBuffer.PositionKind, vertices);
+                    paraboloid.setIndices(indices);
+
+                    // Ruota il paraboloide di 20 gradi attorno all'asse y
+                    paraboloid.rotation.y = 20 * Math.PI / 180;
+                    */
+
+
+                    // Trova il fuoco del paraboloide // debug per ora è l'origine
+                    var focus = new BABYLON.Vector3(0, 0, 0);
+
+                    // Aggiungi le rette passanti per il fuoco al centro di ogni faccia
+                    for (var i = 0; i < indices.length; i += 3) {
+                      var v1Index = indices[i];
+                      var v2Index = indices[i+1];
+                      var v3Index = indices[i+2];
+
+                      var v1 = new BABYLON.Vector3(vertices[3*v1Index], vertices[3*v1Index+1], vertices[3*v1Index+2]);
+                      var v2 = new BABYLON.Vector3(vertices[3*v2Index], vertices[3*v2Index+1], vertices[3*v2Index+2]);
+                      var v3 = new BABYLON.Vector3(vertices[3*v3Index], vertices[3*v3Index+1], vertices[3*v3Index+2]);
+
+                      // Trova il centro della faccia
+                      var center = new BABYLON.Vector3((v1.x + v2.x + v3.x) / 3, (v1.y + v2.y + v3.y) / 3, (v1.z + v2.z + v3.z) / 3);
+
+
+                      var faceCenter = BABYLON.Vector3.Center(v1, v2, v3);
+                      var faceNormal = BABYLON.Vector3.Cross(v2.subtract(v1), v3.subtract(v1)).normalize();
+                      var baseVector = BABYLON.Vector3.Cross(faceNormal, BABYLON.Vector3.Up()).normalize();
+                      var radius = 1;
+                      var thickness = 0.1;
+
+
+
+                      // Crea una retta che passa per il segmento e che sia perpendicolare alla faccia del paraboloide
+                      var normal = BABYLON.Vector3.Cross(v2.subtract(v1), v3.subtract(v1)).normalize();
+                      var linePoints = [new BABYLON.Vector3(center.x + normal.x, center.y + normal.y, center.z + normal.z), new BABYLON.Vector3(center.x , center.y , center.z )];
+                      var line = BABYLON.MeshBuilder.CreateLines("line", {points: linePoints, updatable: true}, scene);
+
+                      // Crea un vettore di base perpendicolare a normal
+                      var baseVector = BABYLON.Vector3.Cross(normal, BABYLON.Vector3.Up()).normalize();
+
+                      // Crea il cilindro
+                      var cylinder = BABYLON.MeshBuilder.CreateCylinder("cylinder", {
+                        height: 0.1,
+                        diameterTop: 0.5,
+                        diameterBottom: 0.5,
+                        tessellation: 6
+                      }, scene);
+
+                      // Aggiungi una trasformazione di posizione
+                      cylinder.position = center;
+
+                      // Aggiungi una trasformazione di rotazione
+                      cylinder.rotationQuaternion = BABYLON.Quaternion.RotationAxis(baseVector, BABYLON.Tools.ToRadians(45));
+
+
+                    }
+
+                    // Calcola un vettore di base per il disco che sia perpendicolare a Vect
+                    var baseVector = new BABYLON.Vector3(1, 0, 0); // scegliamo un vettore arbitrario come base
+                    var perpendicularVector = BABYLON.Vector3.Cross(baseVector, normal).normalize();
+
+                    // Calcola un secondo vettore perpendicolare a entrambi i vettori precedenti
+                    var secondPerpendicularVector = BABYLON.Vector3.Cross(normal, perpendicularVector);
+
+
+
+                    return scene;
+                }
+
+                var scene = createScene();
+
+                engine.runRenderLoop(function () {
+                    scene.render();
+                });
+
+                window.addEventListener('resize', function(){
+                    engine.resize();
+                });
+            });
+        </script>
+    </body>
+</html>
