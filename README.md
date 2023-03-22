@@ -6,11 +6,11 @@ This page collects documents, images, source codes and formulas about "heliostat
 
 ### Made with Three.js
 
-#### Parabola3.html [source](https://github.com/jumpjack/heliostat/blob/main/parabola3.html), [live demo](https://jumpjack.github.io/heliostat/parabola3.html))
+#### Parabola3.html ([source](https://github.com/jumpjack/heliostat/blob/main/parabola3.html), [live demo](https://jumpjack.github.io/heliostat/parabola3.html))
 
 Paraboloid customizable by user. No mirrors, because Three.js has so many versions, subversions and variants that I was not yet able to figure out whic version to use to create a reflective mirror..
 
-### Made with BabylonJS
+### Made with [BabylonJS](https://www.cdnpkg.com/babylonjs?id=22051)
 
 #### Parabolic mirror 001 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-001.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-001.html))
 
