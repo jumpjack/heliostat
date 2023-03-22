@@ -4,7 +4,7 @@ This page collects documents, images, source codes and formulas about "heliostat
 
 ## Source codes
 
-### Parabolic mirror 001 (made with BabylonJS)
+### Parabolic mirror 001 (made with BabylonJS) ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-001.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-001.html))
 
 It displays in 3d space a paraboloid with one hexagon parallel to each face; ideally the cylinder should be turned into a real reflector capable of reflecting surrounding objects, to simulate how moving sun appears in the mirror.
 
