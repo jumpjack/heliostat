@@ -30,12 +30,20 @@ To do:
 
 ## Images
 
--
+- ![image](https://user-images.githubusercontent.com/1620953/226894896-5f8caf1d-481c-4d04-a28d-cad1f78b68c1.png)
+- ![image](https://user-images.githubusercontent.com/1620953/226895117-0e9c855e-5906-4f84-abe6-6b2ea357b6ea.png)
 
 
 # Sites
 
 ![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
 
-
 - Silbermann's heliostat [explained](http://www.fondazionegalileogalilei.it/museo/collezioni/strumenti_scientifici/astronomia/schede_astronomia/eli_silbermann.html) at Fondazione Galileo Galilei (italian)
+- Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios
+- 
+
+
+## Commercial products (not yet on sale)
+- Heliosfera - https://heliostat.pl/it/di-progetto  (Poland)
+- Caia - https://www.solenica.com  (Italy)
+- 
