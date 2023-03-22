@@ -26,10 +26,16 @@ To do:
 
 ## Documents
 
+-
 
 ## Images
 
+-
 
 
 # Sites
 
+![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
+
+
+- Silbermann's heliostat [explained](http://www.fondazionegalileogalilei.it/museo/collezioni/strumenti_scientifici/astronomia/schede_astronomia/eli_silbermann.html) at Fondazione Galileo Galilei (italian)
