@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Grafico 3D di z = sin(x^2 + y^2)</title>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r129/build/three.min.js"></script>
+<script src="https://cdn.rawgit.com/mrdoob/three.js/r129/examples/js/controls/OrbitControls.js"></script>
+<script type="module" src="https://cdn.rawgit.com/mrdoob/three.js/r135/examples/jsm/objects/Reflector.js"></script>
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+        background-color: #ffffcc; /* colore sfondo */
+      }
+
+.axis-label {
+  position: absolute;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: white;
+  pointer-events: none;
+}
+#x-axis-label {
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%) rotate(90deg);
+}
+#y-axis-label {
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+}
+#z-axis-label {
+  top: 50%;
+  right: 0;
+  transform: translate(100%, -50%) rotate(90deg);
+}
+    </style>
+  </head>
+  <body>
+    <div>
+      <label for="slider_a">Coefficiente di x:</label>
+      <input type="range" id="slider_a" min="-2" max="2" value="2" step="0.01">
+    </div>
+    <div>
+      <label for="slider_b">Coefficiente di y:</label>
+      <input type="range" id="slider_b" min="-2" max="2" value="1" step="0.01">
+    </div>
+        <script>
+
+// Aggiungere gli slider per a e b
+var aSlider = document.getElementById('slider_a');
+var bSlider = document.getElementById('slider_b');
+
+// Associare l'evento "input" ad ognuno di essi
+aSlider.addEventListener('input', updateFunction);
+bSlider.addEventListener('input', updateFunction);
+
+
+
+// creare la scena, la fotocamera e il renderer
+var scene = new THREE.Scene();
+
+/*
+// Create a box with geometry and material
+var geometry = new THREE.BoxGeometry(10, 10, 10);
+var material = new THREE.MeshBasicMaterial({color: 0x00ff00});
+var box = new THREE.Mesh(geometry, material);
+
+// Create a reflector with the same size and position as the box
+var reflector = new THREE.Reflector(geometry);
+reflector.position.copy(box.position);
+
+// Add both objects to the scene
+scene.add(box);
+scene.add(reflector);
+
+// Set the clip plane of the reflection
+reflector.setClipPlane(new THREE.Plane(new THREE.Vector3(0, -1, 0), 0));
+
+// Get the render target of the reflection
+var renderTarget = reflector.getRenderTarget();
+
+*/
+
+
+// Crea i marcatori per gli assi x, y e z
+for (i=1; i< 4; i++) {
+  var xMarker = createMarker("x", i);
+  var yMarker = createMarker("y", i);
+  var zMarker = createMarker("z", i);
+  xMarker.name = "x_" + i;
+  yMarker.name = "y_" + i;
+  zMarker.name = "z_" + i;
+  // Aggiungi i marcatori alla scena
+  scene.add(xMarker);
+  scene.add(yMarker);
+  scene.add(zMarker);
+}
+
+
+// Funzione per creare un marcatore
+function createMarker(label, value) {
+  // Crea un canvas per il marcatore
+  var canvas = document.createElement("canvas");
+  var context = canvas.getContext("2d");
+  context.font = "Bold 50px Arial";
+  context.fillStyle = "rgba(255,255,255,0.95)";
+  context.fillText(label + " = " + value, 0, 20);
+
+  // Crea la texture del marcatore
+  var texture = new THREE.CanvasTexture(canvas);
+  texture.needsUpdate = true;
+
+  // Crea lo sprite del marcatore
+  var spriteMaterial = new THREE.SpriteMaterial({ map: texture });
+  var sprite = new THREE.Sprite(spriteMaterial);
+  sprite.scale.set(1, 1, 5.0);
+
+  // Posiziona lo sprite sull'asse corrispondente alla coordinata
+  if (label === "x") {
+    sprite.position.set(value, 0, 0);
+  } else if (label === "y") {
+    sprite.position.set(0, value, 0);
+  } else if (label === "z") {
+    sprite.position.set(0, 0, value);
+  }
+
+  return sprite;
+}
+
+
+
+var camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+var renderer = new THREE.WebGLRenderer();
+renderer.setSize(window.innerWidth, window.innerHeight);
+document.body.appendChild(renderer.domElement);
+
+/*
+// creare la geometria per la funzione (ad esempio, una sfera)
+var geometry = new THREE.SphereGeometry(5, 32, 32);
+*/
+
+
+
+// definire la funzione z = a*x^2 + b*y^2 come una funzione di due variabili
+function funzione(u, v, target) {
+    var x = (u - 0.5) * 10;
+    var z = slider_a.value * x * x + slider_b.value * v * v;
+    var y = (v - 0.5) * 10;
+    if (x < -5 || x > 5 || y < -5 || y > 5) {
+        target.set(0, 0, 0);
+    } else {
+        target.set(x, z, y);
+    }
+}
+
+
+// creare la geometria utilizzando THREE.ParametricGeometry
+geometryParabola = new THREE.ParametricGeometry(funzione, 8, 8);
+
+/*
+  var geometryParabola = new THREE.BufferGeometry();
+  definisciFunzione();
+
+// Definire la funzione come array di punti
+function definisciFunzione() {
+  var points = [];
+  for (var i = -5; i <= 5; i += 0.5) {
+    for (var j = -5; j <= 5; j += 0.5) {
+      var x = i;
+      var y = slider_a.value * i * i + slider_b.value * j * j;
+      var z = j;
+      points.push(x, y, z);
+    }
+  }
+
+  // Creare la BufferGeometry
+  geometryParabola = new THREE.BufferGeometry();
+  geometryParabola.setAttribute('position', new THREE.Float32BufferAttribute(points, 3));
+  v=geometryParabola.computeVertexNormals();
+  //var vertexNormalsHelper = new THREE.VertexNormalsHelper(geometryParabola, 1, 0x00ff00, 1);
+  console.log(v);
+
+}
+*/
+
+// Creare un'istanza di THREE.AxesHelper con la lunghezza degli assi
+var axesHelper = new THREE.AxesHelper(5);
+axesHelper.name = "axesHelper";
+
+// Aggiungere l'helper alla scena
+scene.add(axesHelper);
+
+// Creare un'istanza di THREE.Group per gli assi
+var axesGroup = new THREE.Group();
+axesGroup.name = "assi";
+scene.add(axesGroup);
+
+// Aggiungere le frecce sugli assi
+var arrowXGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowXMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+var arrowXMesh = new THREE.Mesh(arrowXGeometry, arrowXMaterial);
+arrowXMesh.position.set(5, 0, 0);
+arrowXMesh.rotation.z = -Math.PI / 2;
+arrowXMesh.name="xarrow";
+axesGroup.add(arrowXMesh);
+
+var arrowYGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowYMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+var arrowYMesh = new THREE.Mesh(arrowYGeometry, arrowYMaterial);
+arrowYMesh.position.set(0, 5, 0);
+arrowYMesh.name="yarrow";
+axesGroup.add(arrowYMesh);
+
+var arrowZGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowZMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+var arrowZMesh = new THREE.Mesh(arrowZGeometry, arrowZMaterial);
+arrowZMesh.position.set(0, 0, 5);
+arrowZMesh.rotation.x = Math.PI / 2;
+arrowZMesh.name="zarrow";
+axesGroup.add(arrowZMesh);
+
+// Aggiungere gli assi alla scena
+scene.add(axesGroup);
+
+
+// Aggiungere le frecce sugli assi
+var arrowXGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowXMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+var arrowXMesh = new THREE.Mesh(arrowXGeometry, arrowXMaterial);
+arrowXMesh.position.set(5, 0, 0);
+arrowXMesh.name = "x";
+arrowXMesh.rotation.z = -Math.PI / 2;
+scene.add(arrowXMesh);
+
+var arrowYGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowYMaterial = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
+var arrowYMesh = new THREE.Mesh(arrowYGeometry, arrowYMaterial);
+arrowYMesh.name = "y";
+arrowYMesh.position.set(0, 5, 0);
+scene.add(arrowYMesh);
+
+var arrowZGeometry = new THREE.ConeGeometry(0.2, 0.5, 16);
+var arrowZMaterial = new THREE.MeshBasicMaterial({ color: 0x0000ff });
+var arrowZMesh = new THREE.Mesh(arrowZGeometry, arrowZMaterial);
+arrowZMesh.name = "z";
+arrowZMesh.position.set(0, 0, 5);
+arrowZMesh.rotation.x = Math.PI / 2;
+scene.add(arrowZMesh);
+
+
+// creare il materiale per la geometria (ad esempio, un materiale con effetto wireframe)
+var materialWireframe = new THREE.MeshBasicMaterial({ color: 0xffffff, wireframe: true });
+
+// creare la mesh utilizzando la geometria e il materiale
+var meshWireframe = new THREE.Mesh(geometryParabola, materialWireframe);
+meshWireframe.name = "wire";
+scene.add(meshWireframe);
+
+
+// creare il materiale per la geometria
+var materialSurface = new THREE.MeshPhongMaterial({ color: 0xffffff, side: THREE.FrontSide });
+
+// creare la mesh utilizzando la geometria e il materiale
+var meshSurface = new THREE.Mesh(geometryParabola, materialSurface);
+meshSurface.name = "surface";
+scene.add(meshSurface);
+
+// posizionare la fotocamera in modo che la mesh sia visibile
+camera.position.z = 20;
+
+// creare un oggetto per gestire le interazioni del mouse
+var controls = new THREE.OrbitControls(camera, renderer.domElement);
+
+
+
+var lineVertices = [
+  new THREE.Vector3(1, 2,3),
+  new THREE.Vector3(3, 5,7)
+];
+
+var lineGeom = new THREE.BufferGeometry().setFromPoints(lineVertices);
+var lineMat = new THREE.LineBasicMaterial({color: 0x00ffff});
+var line = new THREE.Line(lineGeom, lineMat);
+scene.add(line);
+
+var midPoint = new THREE.Vector3()
+  .subVectors(lineVertices[1], lineVertices[0])
+  .multiplyScalar(0.5)
+  .add(lineVertices[0]);
+
+var normal = new THREE.Vector3()
+  .subVectors(lineVertices[1], lineVertices[0])
+  .applyAxisAngle(new THREE.Vector3(0, 0, 1), Math.PI * 0.5)
+  .normalize();
+
+
+var normalVertices = [
+  normal.clone().setLength(2).add(midPoint),
+  normal.clone().negate().setLength(2).add(midPoint)
+];
+
+var normalGeom = new THREE.BufferGeometry().setFromPoints(normalVertices);
+var normalMat = new THREE.LineBasicMaterial({color: 0xff0000 });
+var normal = new THREE.Line(normalGeom, normalMat);
+scene.add(normal);
+
+
+
+// aggiornare la scena e renderizzare ogni frame
+function animate() {
+    requestAnimationFrame(animate);
+    renderer.render(scene, camera);
+}
+animate();
+
+
+
+
+
+// Definire la funzione di aggiornamento
+function updateFunction() {
+  // Aggiornare i coefficienti a e b in base ai valori degli slider
+  var a = parseFloat(aSlider.value);
+  var b = parseFloat(bSlider.value);
+
+
+  // Aggiornare la geometria della funzione
+  var geometryParabola = new THREE.ParametricGeometry(funzione,
+    8,
+    8
+  );
+
+
+ //   definisciFunzione();
+
+//console.log("Scena 1:" , scene.children);
+  scene.remove(meshSurface);
+  meshSurface = new THREE.Mesh(geometryParabola, materialSurface);
+  meshSurface.name = "newSurface";
+  scene.add(meshSurface);
+
+//console.log("Scena 2:" , scene.children);
+  scene.remove(meshWireframe);
+  meshWireframe = new THREE.Mesh(geometryParabola, materialWireframe);
+  meshWireframe.name = "newWireframe";
+  scene.add(meshWireframe);
+
+//console.log("Scena 3:" , scene.children);
+
+}
+
+    </script>
+
+  </body>
+</html>
