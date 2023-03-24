@@ -23,6 +23,10 @@ To do:
 - moving sun to be added
 - mirrors to be made smaller and denser
 
+#### Parabolic-004 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-004.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-004.html))
+
+First functional version: a paraboloid mesh has been created starting from the embedded BabylonJS function which creates a "Toroidal knot"
+
 
 ## Documents
 
