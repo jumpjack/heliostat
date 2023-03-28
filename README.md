@@ -34,6 +34,10 @@ First functional version: a paraboloid mesh has been created starting from the e
 
 ![image](https://user-images.githubusercontent.com/1620953/228312007-33b91315-f914-4d36-9e7a-73c9df2a6cf7.png)
 
+- [A New Heliostat](https://archive.org/details/jstor-3220382/page/n1/mode/2up), by **Deck**, Lyman S. (how to build a simple heliostat using a standard mechanical clock)
+
+![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
+
 
 ## Images
 
