@@ -34,7 +34,7 @@ First functional version: a paraboloid mesh has been created starting from the e
 
 ![image](https://user-images.githubusercontent.com/1620953/228312007-33b91315-f914-4d36-9e7a-73c9df2a6cf7.png)
 
-- [A New Heliostat](https://archive.org/details/jstor-3220382/page/n1/mode/2up), by **Deck**, Lyman S. (how to build a simple heliostat using a standard mechanical clock)
+- [A New Heliostat](https://archive.org/details/jstor-3220382/page/n1/mode/2up) ([alternative link](https://www.jstor.org/stable/3220382?searchText=heliostat&searchUri=%2Faction%2FdoBasicSearch%3Fscope%3DeyJwYWdlTmFtZSI6ICJUcmFuc2FjdGlvbnMgb2YgdGhlIEFtZXJpY2FuIE1pY3Jvc2NvcGljYWwgU29jaWV0eSIsICJwYWdlVXJsIjogIi9qb3VybmFsL3RyYW5hbWVybWljcnNvY2kiLCAidHlwZSI6ICJqb3VybmFsIiwgImpjb2RlcyI6ICJpbnZlYmlvbDp0cmFuYW1lcm1pY3Jzb2NpOnByb2NhbWVybWljcnNvY2k6cHJvY2FtZXJzb2NpbWljciJ9%26Query%3Dheliostat&ab_segments=0%2Fbasic_search_gsv2%2Fcontrol&refreqid=fastly-default%3A73b72a9b1de22ed680d93b1cc70cf071)), by **Deck**, Lyman S. , in **Transactions of the American Microscopical Society**, Vol. 25, Twenty-Sixth Annual Meeting (Sep., **1904**), pp. 187-234 (48 pages) (how to build a simple heliostat using a standard mechanical clock)
 
 ![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
 
