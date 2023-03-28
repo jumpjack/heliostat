@@ -30,7 +30,10 @@ First functional version: a paraboloid mesh has been created starting from the e
 
 ## Documents
 
--
+- [A Heliostat for Photo-Micrography](https://www.jstor.org/stable/pdf/3220592.pdf), by S. W. **Stratton** and T. J. **Burrill**, in **Proceedings of the American Society of Microscopists**, Vol. 7, Eighth Annual Meeting (**1885**), pp. 103-107
+
+![image](https://user-images.githubusercontent.com/1620953/228312007-33b91315-f914-4d36-9e7a-73c9df2a6cf7.png)
+
 
 ## Images
 
