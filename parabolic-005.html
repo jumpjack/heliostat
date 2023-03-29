@@ -1,0 +1,400 @@
+<!doctype html>
+<html>
+   <head>
+      <meta charset = "utf-8">
+      <title>BabylonJs - Basic Element-Creating Scene</title>
+      <script src = "babylon.max.js"></script>
+      <style>
+         canvas {width: 500px; height: 500px;}
+      </style>
+   </head>
+
+   <body>
+   <table>
+   <tr>
+   <td>
+   Function coefficients:<br>
+   _X_<input type="range" id = "sliderX" value = "0.1" min = "-0.4" max = "0.4" step = "0.01"><span id="Xval"></span><br>
+   _Z_<input type="range" id = "sliderZ" value = "0.1" min = "-0.4" max = "0.4" step = "0.01"><span id="Zval"></span><br>
+   Range:<br>
+   _X_<input type="range" id = "sliderXrange" value = "4" min = "1" max = "10" step = "0.5"><span id="XrangeVal"></span><br>
+   _Z_<input type="range" id = "sliderZrange" value = "4" min = "1" max = "10" step = "0.5"><span id="ZrangeVal"></span><br>
+   Solar position:<br>
+   _Hour_<input type="range" id = "sliderHour" value = "0" min = "0" max = "360" step = "1"><span id="Hval"></span><br>
+   _Angle_<input type="range" id = "sliderAngle" value = "42" min = "0" max = "90" step = "1"><span id="Aval"></span><br>
+   <input type="checkbox" id="chkRays" checked="false">Test rays<br>
+   <input type="checkbox" id="chkSunRays" checked="false">Permanent Sun rays<br>
+   Sun ray intersects mirror? <span id="spnIntersection"></span><br>
+   <br>
+   Memory usage:<br>
+   Materials:   <span id="spnMaterials"></span><br>
+   Meshes: <span id="spnMeshes"></span><br>
+   Probes: <span id="spnProbes"></span><br>
+   Textures: <span id="spnTextures"></span><br>
+   Rays 1: <span id="spnRays1"></span><br>
+
+   </td>
+   <td width = "800" height="600">
+      <canvas id = "renderCanvas"></canvas>
+  </td>
+  </tr>
+  </table>
+      <script type = "text/javascript">
+        //parabolicMirror = null;
+        //mainMaterial = null;
+        probe = null;
+        ray = null;
+        ray2 = null;
+        ray3 = null;
+        rayHelperSunToFocus = null;
+        sunRotationAxis2Helper = null;
+        sunRotationAxis3Helper = null;
+        rayHelperReflected = [];
+        rayHelperReflected2 = [];
+        focusSphere = null;
+        sunSphere = null;
+        reflectionSphere = null;
+        traced=false;
+        MIRROR_FACES_SIZE = 0.1;
+        TEST_RAYS_DISTANCE = 1;
+        showRays = false;
+        sunRayIndex = 0;
+
+         var canvas = document.getElementById("renderCanvas");
+         var engine = new BABYLON.Engine(canvas, true);
+
+         var createScene  = function() {
+            var scene = new BABYLON.Scene(engine);
+            camera = new BABYLON.ArcRotateCamera("camera1", 0, 0, 10, BABYLON.Vector3.Zero(), scene);
+            camera.setPosition(new BABYLON.Vector3(4, 10, -25));
+            camera.attachControl(canvas, true);
+            camera.lowerRadiusLimit = 4;
+            camera.mode = BABYLON.Camera.ORTHOGRAPHIC_CAMERA;
+
+            let left = (30 / -1.6);
+            let right = (30 / 1.6);
+            let top = (30 / 1.4);
+            let bottom = (30  / -1.4);
+
+            camera.orthoTop = top;
+            camera.orthoBottom = bottom;
+            camera.orthoLeft = left;
+            camera.orthoRight = right;
+
+            var light = new BABYLON.HemisphericLight("light1", new BABYLON.Vector3(0, 1, 0), scene);
+            light.intensity = 0.7;
+
+            // Ground
+            //var ground = BABYLON.Mesh.CreatePlane("ground", 50, null, null, BABYLON.Mesh.DOUBLESIDE);
+            //ground.translate(BABYLON.Axis.Y, -5);
+            //ground.rotate(BABYLON.Axis.X, Math.PI / 2);
+
+            //var wall = BABYLON.Mesh.CreatePlane("ground", 20, null, null, BABYLON.Mesh.DOUBLESIDE);
+            //wall.translate(BABYLON.Axis.Z, -15);
+
+            // Axes
+            var size = 10;
+            var xAxis = BABYLON.Mesh.CreateLines("xAxis", [
+                new BABYLON.Vector3.Zero(), new BABYLON.Vector3(size, 0, 0),
+                new BABYLON.Vector3(size * 0.95, 0.05 * size, 0), new BABYLON.Vector3(size, 0, 0),
+                new BABYLON.Vector3(size * 0.95, -0.05 * size, 0)
+            ], scene);
+            xAxis.color = new BABYLON.Color3(1, 0, 0); // X = RED
+
+            var yAxis = BABYLON.Mesh.CreateLines("yAxis", [
+                new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, size, 0),
+                new BABYLON.Vector3(-0.05 * size, size * 0.95, 0), new BABYLON.Vector3(0, size, 0),
+                new BABYLON.Vector3(0.05 * size, size * 0.95, 0)
+            ], scene);
+            yAxis.color = new BABYLON.Color3(0, 1, 0); // Y = Green
+
+            var zAxis = BABYLON.Mesh.CreateLines("zAxis", [
+                new BABYLON.Vector3.Zero(), new BABYLON.Vector3(0, 0, -size),
+                new BABYLON.Vector3(0, -0.05 * size, -size * 0.95), new BABYLON.Vector3(0, 0, -size),
+                new BABYLON.Vector3(0, 0.05 * size, -size * 0.95)
+            ], scene);
+            zAxis.color = new BABYLON.Color3(0, 0, 1); // Z = Blue
+
+
+            ////////////////////////////////////
+
+
+
+            function getFunctionPoints(x, y) {
+            ////// Define here any 3d function you want to turn into reflective surface
+              var z =  parseFloat(sliderX.value) * x*x + parseFloat(sliderZ.value) * y*y; // paraboloid
+              //var y = Math.sin(parseFloat(sliderX.value) * x*x + parseFloat(sliderZ.value) * z*z); // paraboloid
+              return new BABYLON.Vector3(x, y, z);
+            }
+
+            function buildIt() {
+            var paths = [];
+            for (let x = -parseFloat(sliderXrange.value); x < parseFloat(sliderXrange.value); x += MIRROR_FACES_SIZE) {
+                         let path = [];
+                    for (var z = -parseFloat(sliderZrange.value); z <= parseFloat(sliderZrange.value); z += MIRROR_FACES_SIZE) {
+                        var position = getFunctionPoints(x, z);
+                        path.push(new BABYLON.Vector3(position.x, position.y, position.z));
+                    }
+                         paths.push(path);
+            }
+              focusSphere = new BABYLON.MeshBuilder.CreateSphere("focus", { diameter: 1 }, scene);
+              focusSphere.position.x = 0
+              focusSphere.position.y = 0;
+              focusSphere.position.z = 1  / (4 * parseFloat(sliderZ.value) );
+              return (paths);
+            }
+
+
+            // Setup Sun
+            var yellowMaterial = new BABYLON.StandardMaterial("yellow", scene);
+            yellowMaterial.diffuseColor = new BABYLON.Color3(1, 1, 0);
+            var sunObject = BABYLON.MeshBuilder.CreateSphere("newsun", { diameter: 2 }, scene);
+            sunObject.material = yellowMaterial;
+            sunOrbitRadius = 15;
+
+            var mainMaterial = new BABYLON.StandardMaterial("main", scene);
+            var parabolicMirrorPaths =  buildIt();
+            parabolicMirror = BABYLON.Mesh.CreateRibbon("ribbon", parabolicMirrorPaths, false, false, 0, scene, true, BABYLON.Mesh.DOUBLESIDE);
+
+            var speed = 0.1; // la velocità di movimento dell'oggetto
+            var myAngle = 0;
+
+            trajectoryLine = null;
+            scene.registerBeforeRender(function () { //////////////////// <<<<<<<<<<<<<<<<<<<<<<<<<<----------------------
+
+              var INCL = BABYLON.Tools.ToRadians(parseFloat(sliderAngle.value)); // Inclinations of Sun rotation axis
+
+              myAngle = BABYLON.Tools.ToRadians(parseFloat(sliderHour.value)); //+= speed;
+              var x = sunOrbitRadius * Math.sin(myAngle);
+              var z = sunOrbitRadius * Math.cos(myAngle);
+              var position = new BABYLON.Vector3(x, 0, z);
+              position.rotateByQuaternionToRef(BABYLON.Quaternion.RotationAxis(new BABYLON.Vector3(1, 0, 0), INCL), position);
+              sunObject.position = position;
+
+
+              var Axis = new BABYLON.Vector3( 0, Math.cos(INCL),  Math.sin(INCL)); //vettore che definisce l'asse di rotazione
+
+              var N = 100; //numero di punti da calcolare
+              var ANGLE = 2 * Math.PI; //angolo totale di rotazione in radianti
+              var DELTA = ANGLE / N; //angolo di rotazione per ogni punto in radianti
+
+
+              if (trajectoryLine) {
+                trajectoryLine.dispose();
+                trajectoryPoints = [];
+                axisLine.dispose();
+              }
+
+              var axisPoints = [new BABYLON.Vector3(0, 0, 0), Axis.scale(10)]; //array di punti che definiscono l'asse
+              axisLine = BABYLON.MeshBuilder.CreateDashedLines("axis2", {points: axisPoints}, scene); //crea la linea che rappresenta l'asse
+              axisLine.color = new BABYLON.Color3(0.5, 0.5, 0.5);
+
+              var angle = 0.1; //angolo di rotazione in radianti per ogni render
+
+              trajectoryPoints = []; //array di punti che definiscono la traiettoria
+              for (var i = 0; i <= N; i++) { //ciclo for che calcola i punti
+                  var t = i * DELTA; //angolo di rotazione attuale in radianti
+                  var x = sunOrbitRadius * Math.sin(t);
+                  var z = sunOrbitRadius * Math.cos(t);
+                  position2 = new BABYLON.Vector3(x, 0, z);
+                  position2.rotateByQuaternionToRef(BABYLON.Quaternion.RotationAxis(new BABYLON.Vector3(1, 0, 0), INCL), position2);
+                  trajectoryPoints.push(position2); //aggiungi il punto all'array di punti
+              }
+              trajectoryLine = BABYLON.MeshBuilder.CreateDashedLines("trajectory", {points: trajectoryPoints, dashSize: 3, gapSize: 3}, scene);
+              //trajectoryLine = BABYLON.MeshBuilder.CreateDashedLines("trajectory", {points: trajectoryPoints}, scene); //crea la linea che rappresenta la traiettoria
+              trajectoryLine.color = new BABYLON.Color3(1, 1, 0); //imposta il colore giallo
+;
+
+                // Recycle memory:
+                if (parabolicMirror) { if (typeof parabolicMirror !== "undefined") { parabolicMirror.dispose()}};
+               // if (parabolicMirrorWireframe) { if (typeof parabolicMirrorWireframe !== "undefined") { parabolicMirrorWireframe.dispose()}};
+                //if (mainMaterial) {if (typeof mainMaterial !== "undefined") {mainMaterial.dispose()}};
+                if (probe) {if (typeof probe !== "undefined") {probe.dispose()}};
+                if (ray) { if (typeof ray !== "undefined") { ray.dispose()}};
+                if (focusSphere) { if (typeof focusSphere !== "undefined") { focusSphere.dispose()}};
+              //  if (typeof intersectionPoint !== "undefined") { intersectionPoint.dispose()};
+                if (rayHelperSunToFocus) {if (typeof rayHelperSunToFocus !== "undefined") { rayHelperSunToFocus.dispose()}};
+                if (sunRotationAxis2Helper) {if (typeof sunRotationAxis2Helper !== "undefined") { sunRotationAxis2Helper.dispose()}};
+                if (sunRotationAxis3Helper) {if (typeof sunRotationAxis3Helper !== "undefined") { sunRotationAxis3Helper.dispose()}};
+                if (typeof rayHelperNormal !== "undefined") { rayHelperNormal.dispose()};
+
+
+                if (!chkSunRays.checked) {
+//console.log("unchecked");
+                  if (typeof rayHelperReflected !== "undefined") {
+//console.log("defined")
+                    if (rayHelperReflected.length > 0) {
+//console.log("deleting ", rayHelperReflected.length , " elements...");
+                      rayHelperReflected.forEach((ray) => {
+                        ray.dispose()
+                      })
+                      rayHelperReflected = [];
+                      sunRayIndex = 0;
+
+                      rayHelperReflected2.forEach((ray) => {
+                        ray.dispose()
+                      })
+                      rayHelperReflected2 = [];
+                    }
+                  }
+                }
+
+                if (reflectionSphere) { if (typeof reflectionSphere !== "undefined") { reflectionSphere.dispose()}};
+
+                // Rebuild mirror at each render, beacuse it can be customized by sliders
+                parabolicMirrorPaths =  buildIt();
+                parabolicMirror = BABYLON.Mesh.CreateRibbon("ribbon", parabolicMirrorPaths, false, false, 0, scene, true, BABYLON.Mesh.DOUBLESIDE);
+                //parabolicMirrorWireframe = BABYLON.Mesh.CreateRibbon("wireframe", parabolicMirrorPaths, false, false, 0, scene, true, BABYLON.Mesh.DOUBLESIDE);
+
+                origin = sunObject.position;
+                direction = focusSphere.position.subtract(origin).normalize();
+                length = focusSphere.position.subtract( sunObject.position).length()*2;
+
+                raySunToFocus = new BABYLON.Ray(origin, direction, length);
+                rayHelperSunToFocus = new BABYLON.RayHelper(raySunToFocus);
+                rayHelperSunToFocus.show(scene);
+
+
+
+                // Main material
+//                var mainMaterial = new BABYLON.StandardMaterial("main", scene);
+                parabolicMirror.material = mainMaterial;
+                /*parabolicMirrorWireframe.material = mainMaterial;
+                parabolicMirrorWireframe.material.wireframe = true;
+                parabolicMirrorWireframe.material.alpha = 0.4;
+                parabolicMirrorWireframe.position = new BABYLON.Vector3(0, 0.01, 0);*/
+
+                probe = new BABYLON.ReflectionProbe("main", 512, scene);
+                probe.attachToMesh(parabolicMirror);
+                probe.renderList.push(sunObject); // Add Sun to list of objects to be reflected by mirror
+
+                mainMaterial.diffuseColor = new BABYLON.Color3(0.8, 0.8, 1); // Mirror color
+                mainMaterial.reflectionTexture = probe.cubeTexture;
+
+                ///// Draw single sun ray reflection ////
+                try { 
+                   pickInfo = scene.pickWithRay(raySunToFocus, function (mesh) {
+                      return mesh == parabolicMirror;
+                  });
+                  if (pickInfo.hit) {
+                      intersectionPoint = pickInfo.pickedPoint;
+                      reflectionSphere =  BABYLON.MeshBuilder.CreateSphere("reflection", { diameter: 0.2 }, scene);
+                      reflectionSphere.position = intersectionPoint;
+                      origin = intersectionPoint.clone();
+                      direction = parabolicMirror.getFacetNormal(parabolicMirror.getClosestFacetAtCoordinates(intersectionPoint.x,intersectionPoint.y,intersectionPoint.z));
+                      length = 100;
+                      rayNormal = new BABYLON.Ray(origin, direction, 2);
+                      //rayHelperNormal = new BABYLON.RayHelper(rayNormal);
+                      //rayHelperNormal.show(scene, new BABYLON.Color3(1, 1, 0.1), 3,1);
+                      reflectedRay = new BABYLON.Ray(intersectionPoint, BABYLON.Vector3.Reflect(raySunToFocus.direction, rayNormal.direction));
+                      rayHelperReflected[sunRayIndex] = new BABYLON.RayHelper(reflectedRay);
+                      rayHelperReflected[sunRayIndex].show(scene, new BABYLON.Color3(0.1, 1, 0.1), 3,1);
+                      sunRayIndex++;
+                      spnIntersection.innerHTML = "YES";
+                  } else {
+                    console.log("No sun ray intersection");
+                    spnIntersection.innerHTML = "no";
+                  }
+
+                } catch(e) {
+                  console.log("Reflection error:", e, intersectionPoint);
+                }
+
+                /////// Draw reflected rays for testing //////
+                if ((!traced) && (chkRays.checked)) { 
+                 traced=true;
+                 rayHelperReflectedTest = [];
+                 testSphereSource = [];
+                 testSphereDest = [];
+                 intersectionPointTest = [];
+                 reflectionSphereTest = [];
+                 testRayIndex = 0;
+                 for (var posX = -4; posX <=4 ; posX += TEST_RAYS_DISTANCE) {
+                    for (var posZ = -4; posZ <=4 ; posZ  += TEST_RAYS_DISTANCE) {
+                      testSphereSource[testRayIndex] = BABYLON.MeshBuilder.CreateSphere("source", { diameter: 0.1 }, scene);
+                      testSphereDest[testRayIndex] = BABYLON.MeshBuilder.CreateSphere("dest", { diameter: 0.1 }, scene);
+                      testSphereSource[testRayIndex].position.x = posX;
+                      testSphereSource[testRayIndex].position.y = posZ;
+                      testSphereSource[testRayIndex].position.z = -8;
+
+                      testSphereDest[testRayIndex].position.x = posX;
+                      testSphereDest[testRayIndex].position.y = posZ;
+                      testSphereDest[testRayIndex].position.z = 4;
+                      directionTest = testSphereDest[testRayIndex].position.subtract(testSphereSource[testRayIndex].position).normalize();
+                      lengthTest = testSphereDest[testRayIndex].position.subtract( testSphereSource[testRayIndex].position).length()*2;
+                      var rayTest = new BABYLON.Ray(testSphereSource[testRayIndex].position, directionTest, lengthTest);
+                      //var rayHelperTest = new BABYLON.RayHelper(rayTest);
+                      //rayHelperTest.show(scene, new BABYLON.Color3(0.5,0.5,1), 3,1);
+                      testSphereSource[testRayIndex].dispose()
+                      testSphereDest[testRayIndex].dispose()
+
+                      try {
+                        pickInfoTest = scene.pickWithRay(rayTest, function (mesh) {
+                          return mesh == parabolicMirror;
+                        });
+                        if (pickInfoTest.hit) {
+                            intersectionPointTest[testRayIndex] = pickInfoTest.pickedPoint;
+                            reflectionSphereTest[testRayIndex] =  BABYLON.MeshBuilder.CreateSphere("reflectionTest", { diameter: 0.2 }, scene);
+                            reflectionSphereTest[testRayIndex].position = intersectionPointTest[testRayIndex];
+                            originTest = intersectionPointTest[testRayIndex].clone();
+                            directionTest = parabolicMirror.getFacetNormal(parabolicMirror.getClosestFacetAtCoordinates(intersectionPointTest[testRayIndex].x,intersectionPointTest[testRayIndex].y,intersectionPointTest[testRayIndex].z));
+                            length = 100;
+                            var rayNormalTest = new BABYLON.Ray(originTest, directionTest, length);
+                            var reflectedRayTest = new BABYLON.Ray(intersectionPointTest[testRayIndex], BABYLON.Vector3.Reflect(rayTest.direction, rayNormalTest.direction), 5);
+                            //var rayHelperReflectedTestTemp = new BABYLON.RayHelper(reflectedRayTest);
+                            rayHelperReflectedTest[testRayIndex] = new BABYLON.RayHelper(reflectedRayTest);
+                            rayHelperReflectedTest[testRayIndex].show(scene);
+                            reflectionSphereTest[testRayIndex].dispose()
+                       } else {
+                          console.log("No test ray intersection for ray ", testRayIndex);
+                        }
+                      } catch(e) {
+                        console.log("Test ray reflection error:", e);
+                      }
+                      testRayIndex++;
+                    }
+                  }
+                }
+
+                ///// Cleanup test sphere and test rays /////
+                if ((traced) && (!chkRays.checked)) {
+                  traced = false;
+                  rayHelperReflectedTest.forEach((ray) => {
+                    ray.dispose();
+                  })
+                  /*testSphereSource.forEach((sphere) => {
+                    sphere.dispose();
+                  })
+                  testSphereDest.forEach((sphere) => {
+                    sphere.dispose();
+                  })
+                  reflectionSphereTest.forEach((sphere) => {
+                    sphere.dispose();
+                  })*/
+                }
+//console.log("materials:", scene.materials.length,  scene.meshes.length, scene.reflectionProbes.length, scene.textures.length);
+                 spnMaterials.innerHTML = scene.materials.length;
+                  spnMeshes.innerHTML = scene.meshes.length;
+                  spnProbes.innerHTML = scene.reflectionProbes.length;
+                  spnTextures.innerHTML = scene.textures.length;
+                  spnRays1.innerHTML = rayHelperReflected.length;
+                });
+
+            return scene;
+         };
+
+
+         var scene = createScene();
+        engine.runRenderLoop(function() {
+            scene.render();
+            Xval.innerHTML = sliderX.value;
+            Zval.innerHTML = sliderZ.value;
+            XrangeVal.innerHTML = sliderXrange.value;
+            ZrangeVal.innerHTML = sliderZrange.value;
+            //rotVal.innerHTML = sliderRot.value;
+            Hval.innerHTML = sliderHour.value;
+            //parabolicMirror.dispose();
+         });
+      </script>
+   </body>
+</html>
