@@ -38,6 +38,10 @@ First functional version: a paraboloid mesh has been created starting from the e
 
 ![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
 
+- On an improved heliostat invented by Alfred M. Mayer (1886) - [Document is behind a paywall](https://www.ajsonline.org/content/s4-4/22/306), but the patent of the device is available for free, with full explanation of the mechanism: [link](https://patentimages.storage.googleapis.com/cd/0e/33/16c660c35582f1/US333769.pdf) . The device makes use of a clock mechanism which rotates an axis by 360 degrees every 24 hours, which is not part of this patent. The device is specifically intended to project "one single ray" from the sun.
+
+![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
+
 
 ## Images
 
