@@ -27,6 +27,24 @@ To do:
 
 First functional version: a paraboloid mesh has been created starting from the embedded BabylonJS function which creates a "Toroidal knot"
 
+#### Parabolic-005 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-005.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-005.html))
+
+Fully functional parabolic mirror simulator:
+
+![image](https://user-images.githubusercontent.com/1620953/228653475-7ea5423e-3a35-4fcc-81af-80700c61af1c.png)
+
+
+You can change inclination of the rotation axis of the sun, and change the hour angle of the sun, to see how rays are reflected by the mirror; the mirror itself can be chamged by means of two parameter, but please note that only a simmetrical mirror (i.e. elliptical paraboloid, with a = b) will have a point-shaped focus and will reflect all rays into parallel rays). Symmetric paraboloid, with parallel test rays reflectd into single point:
+
+![image](https://user-images.githubusercontent.com/1620953/228653131-e628e908-5b03-4a09-a23a-eb8f84452b6b.png)
+
+Non-symmetric paraboloid, reflecting parallel rays into "something else" (catenary?):
+
+![image](https://user-images.githubusercontent.com/1620953/228653335-a45d2f1d-6eab-43c5-9274-5e12833b37c4.png)
+
+
+
+
 
 ## Documents
 
