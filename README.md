@@ -60,7 +60,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     - **Mirror rotation speed**: 1 turn in 48 hours (half sun speed)
     - **Reflection direction**: orthogonal to clock axis 
     - **Reflection target** : final target
-    - **clock mechanism**: 1:40 reduction mechanism applied to hour-hand of a standard clock.
+    - **clock mechanism**: 1:4 reduction mechanism applied to hour-hand of a standard clock.
 
 ![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
 
