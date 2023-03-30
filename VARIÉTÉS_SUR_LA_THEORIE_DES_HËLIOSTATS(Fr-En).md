@@ -11,6 +11,69 @@
 
 # Original French text (English follows)
 
+L’héliostat est un appareil destiné à ramener à une direction
+fixe les rayons solaires qui, par suite du mouvement diurne,
+décrivent un cône autour de l’axe du monde. Ce but est atteint
+par l’emploi d’un miroir mobile qui fait constamment des angles
+égaux avec la direction variable des rayons incidents et la direc
+tion fixe des rayons réfléchis. Il s’ensuit que le plan d’incidence
+et de réflexion doit tourner autour de la droite fixe quijreprésente
+la direction des rayons réfléchis. C’est cette condition ’qu’il s’agit
+de remplir par le mécanisme qui constitue l’héliostat. 
+
+Soient M {fig. 1) le centre du miroir; MN la normale prolongée
+en arrière; MG la direction du rayon incident; FM celle du rayon 
+réfléchi ; SS' l’intersection du plan d’incidence avec le plan du miroir; MR une droite perpendiculaire au plan d’incidence.
+La normale MN faisant des angles égaux avec FM et MG, si
+l’on mène NS parallèle à GM, NS' parallèle à FM, on aura
+FM = FN = FS = GM = GN = GS'.
+Les droites NS et GM, parallèles aux rayons solaires, décrivent
+des cônes droits ayant leurs sommets en F et en M. Le triangle
+rectangle NMS tourne autour de la droite fixe FM. La normale MN
+et la trace SS' du plan d’incidence décrivent des c,ônes obliques
+en glissant sur les cercles que les points N et S décrivent autour de
+l’axe du monde. La droite MR tourne dans un plan perpendiculaire MS et àMR. la droite fixe FM. Le plan du miroir passe par les droites MS et MR.
+Pour maintenir le rayon réfléchi dans une direction donnée FM,
+il suffit donc de rendre le miroir mobile autour du point M, et
+d’appuyer la normale en N sur une aiguille qui parcourt en vingtquatre heures un cadran équatorial. C’est le principe de l’héliostat
+de S’ Gravesande(iy2o). Mais, sous saforme primitive, cetappareil
+était d’un usage incommode, parce que, l’aiguille ayant une longueur invariable, la position du point F par rapport au cadran de
+l’horloge changeait avec la déclinaison du Soleil, de sorte que
+l’installation de l’héliosiat devenait une opération compliquée.
+Perfectionné par Charles et par Malus, il n’a reçu sa forme définitive qu’entre les mains de Léon Foucault (1862). Dans l’héliostat
+et le sidéroslat de Foucault, la normale s’appuie sur une tige NS,
+de longueur invariable, que soutient à son milieu, en F, l’axe
+polaire d’un cadran équatorial, et qui, entraînée par cet axe, reste
+toujours parallèle aux rayons solaires. On place le miroir M de
+manière que FM == FN. 
+
+Ce mécanisme suffit pour obtenir la fixité du rayon réfléchi;
+mais le miroir n’est pas orienté dans* son plan, il peut encore
+tourner autour de la normale. L’orienlation qu’il pourra recevoir
+dépend du mode de suspension. Si on lui donne pour axe de rotation un de ses diamètres, soutenu par une fourchette qui tourne
+sur un support, il se trouvera orienté par ce diamètre, astreint à
+rester perpendiculaire à la normale et à l’axe de la fourchette. Le
+plus simple serait de faire coïncider l’axe de la fourchette avec la
+droite fixe FM, et l’axe de rotation avec MR; le plan d’incidence resterait alors toujours perpendiculaire à l’axe de rotation. Un
+miroir oblong, soutenu par son diamètre transversal, serait ainsi
+forcé de présenter toujours sa plus grande dimension aux rayons
+solaires, et l’on pourrait utiliser un faisceau plus large. C’est, le
+mode de suspension adopté dans le porte-lumière ordinaire, dans
+l’héliostat de Gambey (1823) et dans celui de Silbermann (i843). 
+
+Mais on préfère, pour les grands miroirs, un support vertical à
+fourchette soutenant un axe de rotation horizontal. C’est le support
+adopté par S’ Gravesande et par Foucault. Dans ce cas, si le
+miroir est directement soutenu par la fourchette, il se trouve
+orienté par son diamètre horizontal, qui fait un angle variable avec
+le plan d’incidence SS\ Cela n’a pas d’inconvénient pour un
+miroir circulaire, comme celui du sidérostat; mais il n’en est pas
+de même pour un miroir oblong, dont le diamètre longitudinal
+doit rester parallèle au plan d’incidence. .Foucault a tourné la difficulté en appuyant le miroir de l’héliostat librement sur une plaque soutenue par la fourchette et percée de manière à donner
+passage à la normale; la plaque est orientée par le support, mais
+le miroir tourne autour de la normale, et une queue MS, guidée
+par la tige NS ( fig . 1), ramène constamment le diamètre longitudinal dans le plan d’incidence et de réflexion. 
+
 Dans l’héliostat de Gambey, le miroir est aussi orienté par la queue MS; mais Gambey a supprimé la normale MN, devenue inutile, puisque le diamètre transversal MR est soutenu par une fourchette que porte une tige FM, articulée en F. L’horloge fait tourner la tige FS sur laquelle s’appuie la queue MS. Rien n’empêcherait d’ailleurs, en conservant la tige FM, d’employer la normale MN au lieu de la queue MS pour guider le miroir. L’héliostat de Silbermann diffère des précédents en ce que l’axe polaire de l’horloge passe par le centre du miroir, dont l’axe de rotation MR est soutenu par deux tiges à fourchettes FM et GM, l’une fixe et l’autre mobile. Cette dernière (la tige GM) est conduite par l’horloge, et la normale MN est maintenue à égale distance des deux tiges par un parallélogramme articulé. Les tiges sont portées par deux arcs de cercle qui glissent dans des mortaises, et qui permettent de leur donner l’inclinaison voulue. Tous les héliostats qui viennent d’être décrits constituent des, solutions générales du problème : ils permettent de maintenir le rayon réfléchi dans une direction fixe quelconque. Des solutions  particulières, beaucoup plus simples, s’obtiennent comme il suit:
 
 
@@ -22,6 +85,69 @@ i° Si la direction fixe coïncide avec l’axe du monde, FM représentera l’a
 
 
 # English translation by Google Translate:
+
+The heliostat is a device intended to bring back to a direction
+fixes the solar rays which, as a result of the diurnal movement,
+describe a cone around the axis of the world. This goal is achieved
+by the use of a mobile mirror which constantly makes angles
+equal with the variable direction of the incident rays and the direction
+fixed tion of the reflected rays. It follows that the plane of incidence
+and of reflection must revolve around the fixed line which represents
+the direction of the reflected rays. It is this condition that is involved
+filled by the mechanism that constitutes the heliostat.
+
+Let M {fig. 1) the center of the mirror; MN normal prolonged
+backward; MG the direction of the incident ray; FM that of the radius
+thoughtful ; SS' the intersection of the plane of incidence with the plane of the mirror; MR a straight line perpendicular to the plane of incidence.
+The normal MN making equal angles with FM and MG, if
+we lead NS parallel to GM, NS' parallel to FM, we will have
+FM=FN=FS=GM=GN=GS'.
+The lines NS and GM, parallel to the solar rays, describe
+right cones having their vertices at F and at M. The triangle
+rectangle NMS revolves around the fixed line FM. Normal MN
+and the trace SS' of the plane of incidence describe oblique cones
+by sliding on the circles that the points N and S describe around
+the axis of the world. The line MR turns in a perpendicular plane MS and to MR. the fixed line FM. The plane of the mirror passes through the lines MS and MR.
+To maintain the reflected ray in a given direction FM,
+it is therefore sufficient to make the mirror mobile around the point M, and
+to press the normal in N on a hand which traverses an equatorial dial in twenty-four hours. This is the principle of the heliostat
+de S’Gravesande(iy2o). But, in its primitive form, this apparatus
+was inconvenient to use, because, the needle having an invariable length, the position of the point F with respect to the dial of
+the clock changed with the declination of the Sun, so that
+the installation of the heliostat became a complicated operation.
+Perfected by Charles and Malus, it only received its final form in the hands of Léon Foucault (1862). In the heliostat
+and Foucault's sideroslat, the normal relies on an NS rod,
+of invariable length, supported in its middle, at F, by the axis
+pole of an equatorial sundial, and which, driven by this axis, remains
+always parallel to the sun's rays. We place the mirror M of
+way that FM == FN.
+
+This mechanism suffices to obtain the fixity of the reflected ray;
+but the mirror is not oriented in* its plane, it can still
+turn around normal. The guidance he may receive
+depends on the mode of suspension. If we give it as its axis of rotation one of its diameters, supported by a fork which turns
+on a support, it will be oriented by this diameter, constrained to
+remain perpendicular to the normal and to the axis of the range. THE
+simpler would be to make the axis of the fork coincide with the
+fixed line FM, and the axis of rotation with MR; the plane of incidence would then always remain perpendicular to the axis of rotation. A
+oblong mirror, supported by its transverse diameter, would thus be
+forced to always present its largest dimension to the rays
+solar, and a wider beam could be used. It's the
+suspension mode adopted in the ordinary light holder, in
+Gambey's heliostat (1823) and that of Silbermann (1843).
+
+But we prefer, for large mirrors, a vertical support
+fork supporting a horizontal axis of rotation. It's the backing
+adopted by S’Gravesande and by Foucault. In this case, if the
+mirror is directly supported by the fork, it sits
+oriented by its horizontal diameter, which forms a variable angle with
+the incidence plane SS\ This has no disadvantage for a
+circular mirror, like that of the siderostat; but it is not
+the same for an oblong mirror, whose longitudinal diameter
+must remain parallel to the plane of incidence. .Foucault solved the difficulty by leaning the mirror of the heliostat freely on a plate supported by the fork and pierced in such a way as to give
+transition to normal; the plate is oriented by the support, but
+the mirror rotates around the normal, and an MS tail, guided
+by the NS rod (fig. 1), constantly brings the longitudinal diameter back into the plane of incidence and reflection.
 
 In the Gambey heliostat. the mirror is also oriented by the tail MS; but Gambey has removed the normal MN, which has become useless, since the transverse diameter MR is supported by a fork carried by a stem FM, hinged at F. The clock makes the stem FS turn, on which the tail MS rests. Nothing would prevent besides, by keeping the stem FM, to use the normal MN instead of the tail MS to guide the mirror. Silbermann's heliostat differs from the previous ones in that the polar axis of the clock passes through the center of the mirror, whose axis of rotation MR is supported by two fork rods FM and GM, one fixed and the other motive. The latter (the GM rod) is driven by the clock, and the normal MN is maintained at an equal distance from the two rods by an articulated parallelogram. The rods are carried by two circular arcs which slide in mortises, and which allow them to be given the desired inclination. All the heliostats which have just been described constitute general solutions of the problem: they make it possible to maintain the reflected ray in any fixed direction. Particular solutions, much simpler, are obtained as follows:
 
