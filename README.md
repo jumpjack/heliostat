@@ -50,8 +50,9 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 - [A Heliostat for Photo-Micrography](https://www.jstor.org/stable/pdf/3220592.pdf), by S. W. **Stratton** and T. J. **Burrill**, in **Proceedings of the American Society of Microscopists**, Vol. 7, Eighth Annual Meeting (**1885**), pp. 103-107
     - **Mirror rotation speed**: 1 turn in 24 hours (full sun speed)
-    - **Reflection direction**: ?
-    - **Reflection target** : final target
+    - **Reflection direction**: customizable
+    - **Reflection target**: final target
+    - **Clock mechanism**: an endless screw is fixed to the axis of the minutes-hand of a standard clock, engaging a 24-cogs wheel on heliostat main axis
 
 ![image](https://user-images.githubusercontent.com/1620953/228312007-33b91315-f914-4d36-9e7a-73c9df2a6cf7.png)
 
@@ -59,6 +60,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     - **Mirror rotation speed**: 1 turn in 48 hours (half sun speed)
     - **Reflection direction**: orthogonal to clock axis 
     - **Reflection target** : final target
+    - **clock mechanism**: 1:40 reduction mechanism applied to hour-hand of a standard clock.
 
 ![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
 
@@ -66,6 +68,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     - **Mirror rotation speed**: 1 turn in 24 hours (full sun speed)
     - **Reflection direction**: parallel to clock axis 
     - **Reflection target** : secondary mirror
+    - **clock mechanism**: not specified
+    
 
 ![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
 
