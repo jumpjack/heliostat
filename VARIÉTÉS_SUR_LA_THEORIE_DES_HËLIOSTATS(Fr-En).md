@@ -15,31 +15,17 @@ L’héliostat est un appareil destiné à ramener à une direction
 fixe les rayons solaires qui, par suite du mouvement diurne,
 décrivent un cône autour de l’axe du monde. Ce but est atteint
 par l’emploi d’un miroir mobile qui fait constamment des angles
-égaux avec la direction variable des rayons incidents et la direc
-tion fixe des rayons réfléchis. Il s’ensuit que le plan d’incidence
+égaux avec la direction variable des rayons incidents et la direction fixe des rayons réfléchis. Il s’ensuit que le plan d’incidence
 et de réflexion doit tourner autour de la droite fixe quijreprésente
-la direction des rayons réfléchis. C’est cette condition ’qu’il s’agit
-de remplir par le mécanisme qui constitue l’héliostat. 
+la direction des rayons réfléchis.  C’est cette condition ’qu’il s’agit de remplir par le mécanisme qui constitue l’héliostat. 
 
-Soient M {fig. 1) le centre du miroir; MN la normale prolongée
-en arrière; MG la direction du rayon incident; FM celle du rayon 
-réfléchi ; SS' l’intersection du plan d’incidence avec le plan du miroir; MR une droite perpendiculaire au plan d’incidence.
-La normale MN faisant des angles égaux avec FM et MG, si
-l’on mène NS parallèle à GM, NS' parallèle à FM, on aura
-FM = FN = FS = GM = GN = GS'.
-Les droites NS et GM, parallèles aux rayons solaires, décrivent
-des cônes droits ayant leurs sommets en F et en M. Le triangle
-rectangle NMS tourne autour de la droite fixe FM. La normale MN
-et la trace SS' du plan d’incidence décrivent des c,ônes obliques
-en glissant sur les cercles que les points N et S décrivent autour de
-l’axe du monde. La droite MR tourne dans un plan perpendiculaire MS et àMR. la droite fixe FM. Le plan du miroir passe par les droites MS et MR.
-Pour maintenir le rayon réfléchi dans une direction donnée FM,
-il suffit donc de rendre le miroir mobile autour du point M, et
-d’appuyer la normale en N sur une aiguille qui parcourt en vingtquatre heures un cadran équatorial. C’est le principe de l’héliostat
-de S’ Gravesande(iy2o). Mais, sous saforme primitive, cetappareil
-était d’un usage incommode, parce que, l’aiguille ayant une longueur invariable, la position du point F par rapport au cadran de
-l’horloge changeait avec la déclinaison du Soleil, de sorte que
-l’installation de l’héliosiat devenait une opération compliquée.
+Soient M {fig. 1) le centre du miroir; MN la normale prolongée en arrière; MG la direction du rayon incident; FM celle du rayon réfléchi ; SS' l’intersection du plan d’incidence avec le plan du miroir; MR une droite perpendiculaire au plan d’incidence.
+La normale MN faisant des angles égaux avec FM et MG, si l’on mène NS parallèle à GM, NS' parallèle à FM, on aura 
+
+FM = FN = FS = GM = GN = GS'
+
+Les droites NS et GM, parallèles aux rayons solaires, décrivent des cônes droits ayant leurs sommets en F et en M. Le triangle rectangle NMS tourne autour de la droite fixe FM. La normale MN et la trace SS' du plan d’incidence décrivent des cônes obliques en glissant sur les cercles que les points N et S décrivent autour de l’axe du monde. La droite MR tourne dans un plan perpendiculaire a la droite fixe FM. Le plan du miroir passe par les droites MS et MR.
+Pour maintenir le rayon réfléchi dans une direction donnée FM, il suffit donc de rendre le miroir mobile autour du point M, et d’appuyer la normale en N sur une aiguille qui parcourt en vingtquatre heures un cadran équatorial. C’est le principe de l’héliostat de S’ Gravesande (1720). Mais, sous saforme primitive, cet appareil était d’un usage incommode, parce que, l’aiguille ayant une longueur invariable, la position du point F par rapport au cadran de l’horloge changeait avec la déclinaison du Soleil, de sorte que l’installation de l’héliosiat devenait une opération compliquée.
 Perfectionné par Charles et par Malus, il n’a reçu sa forme définitive qu’entre les mains de Léon Foucault (1862). Dans l’héliostat
 et le sidéroslat de Foucault, la normale s’appuie sur une tige NS,
 de longueur invariable, que soutient à son milieu, en F, l’axe
@@ -90,31 +76,17 @@ The heliostat is a device intended to bring back to a direction
 fixes the solar rays which, as a result of the diurnal movement,
 describe a cone around the axis of the world. This goal is achieved
 by the use of a mobile mirror which constantly makes angles
-equal with the variable direction of the incident rays and the direction
-fixed tion of the reflected rays. It follows that the plane of incidence
+equal with the variable direction of the incident rays and the fixed direction of the reflected rays. It follows that the plane of incidence
 and of reflection must revolve around the fixed line which represents
-the direction of the reflected rays. It is this condition that is involved
-filled by the mechanism that constitutes the heliostat.
+the direction of the reflected rays. It is this condition that must be fulfilled by the mechanism which constitutes the heliostat.
 
-Let M {fig. 1) the center of the mirror; MN normal prolonged
-backward; MG the direction of the incident ray; FM that of the radius
-thoughtful ; SS' the intersection of the plane of incidence with the plane of the mirror; MR a straight line perpendicular to the plane of incidence.
-The normal MN making equal angles with FM and MG, if
-we lead NS parallel to GM, NS' parallel to FM, we will have
-FM=FN=FS=GM=GN=GS'.
-The lines NS and GM, parallel to the solar rays, describe
-right cones having their vertices at F and at M. The triangle
-rectangle NMS revolves around the fixed line FM. Normal MN
-and the trace SS' of the plane of incidence describe oblique cones
-by sliding on the circles that the points N and S describe around
-the axis of the world. The line MR turns in a perpendicular plane MS and to MR. the fixed line FM. The plane of the mirror passes through the lines MS and MR.
-To maintain the reflected ray in a given direction FM,
-it is therefore sufficient to make the mirror mobile around the point M, and
-to press the normal in N on a hand which traverses an equatorial dial in twenty-four hours. This is the principle of the heliostat
-de S’Gravesande(iy2o). But, in its primitive form, this apparatus
-was inconvenient to use, because, the needle having an invariable length, the position of the point F with respect to the dial of
-the clock changed with the declination of the Sun, so that
-the installation of the heliostat became a complicated operation.
+Let M {fig. 1) the center of the mirror; MN the normal prolonged backwards; MG the direction of the incident ray; FM that of the reflected ray; SS' the intersection of the plane of incidence with the plane of the mirror; MR a straight line perpendicular to the plane of incidence.
+The normal MN making equal angles with FM and MG, if we draw NS parallel to GM, NS' parallel to FM, we will have
+
+FM=FN=FS=GM=GN=GS'
+
+The lines NS and GM, parallel to the solar rays, describe right cones having their vertices in F and in M. The right-angled triangle NMS revolves around the fixed line FM. The normal MN and the trace SS' of the plane of incidence describe oblique cones by sliding on the circles that the points N and S describe around the axis of the world. Line MR rotates in a plane perpendicular to fixed line FM. The plane of the mirror passes through the lines MS and MR.
+To maintain the reflected ray in a given direction FM, it is therefore sufficient to make the mirror mobile around the point M, and to press the normal in N on a needle which traverses an equatorial dial in twenty-four hours. This is the principle of the heliostat of S'Gravesande (1720). But, in its primitive form, this apparatus was inconvenient to use, because, the needle having an invariable length, the position of the point F with respect to the face of the clock changed with the declination of the Sun, so that the heliostat installation became a complicated operation.
 Perfected by Charles and Malus, it only received its final form in the hands of Léon Foucault (1862). In the heliostat
 and Foucault's sideroslat, the normal relies on an NS rod,
 of invariable length, supported in its middle, at F, by the axis
