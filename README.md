@@ -48,6 +48,9 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Documents
 
+- **A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats** by Dougherty, L. M., in  
+**Journal of the British Astronomical Association**, vol.92, no.4, p.182-187 (**1982**) ([source](https://ui.adsabs.harvard.edu/search/p_=6&q=bibstem%3A(%22JBAA...92%22)&sort=date%20desc%2C%20bibcode%20desc)
+
 [VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here]().
 
 ![image](https://user-images.githubusercontent.com/1620953/228923691-b19b96dd-cf33-4565-a9aa-cbd25e46d8e0.png)
