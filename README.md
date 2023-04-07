@@ -158,7 +158,11 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 - http://www.redrok.com/main.htm#gsc.tab=0
 
+Literatur:
 
+- [1] Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904. 
+– [2] Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867), S. 1 ff. und S. 234 ff. - https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat
+– [3] Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln. - https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat
 
 
 
