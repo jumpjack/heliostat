@@ -89,7 +89,10 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Inventors
 
-- Hilger ():
+- Hilger (1919):
+
+![image](https://user-images.githubusercontent.com/1620953/230622052-d6ca8a36-3ebe-40d1-9fed-cc4e05bcff20.png)
+
 
 - [Thomas Comber](https://www.biodiversitylibrary.org/item/196100#page/19/mode/1up) ():
 
