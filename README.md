@@ -87,15 +87,48 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - ![image](https://user-images.githubusercontent.com/1620953/226894896-5f8caf1d-481c-4d04-a28d-cad1f78b68c1.png)
 - ![image](https://user-images.githubusercontent.com/1620953/226895117-0e9c855e-5906-4f84-abe6-6b2ea357b6ea.png)
 
+## Inventors
+
+- Silbermann ()
+
+- George Johnston Stoney (1869)
+
+- [Grassmann (inventor), Rudolf Fuess (builder)](http://hdl.handle.net/20.500.12460/111014) (1870-1872):
+
+![image](https://user-images.githubusercontent.com/1620953/230617429-3c3b23f4-4e38-4ca4-961e-98e73c107a8d.png)
+
+
+- ADAM HILGER IN LONDON. LORD BLYTHSWOOD, ARCHIBALD CAMPELL:
+![image](https://user-images.githubusercontent.com/1620953/230616890-ee1f50d8-c6ab-4e74-a3aa-00404e4b31b5.png)
+
+[Brashear](https://www.uvm.edu/~dahammon/museum/heliostat.html) (1910):
+
+![image](https://user-images.githubusercontent.com/1620953/230617302-64c2b4c2-5540-4789-a5a8-57cf561b1ca7.png)
+
+- Alfonso Borrelli ()
+
+
 
 # Sites
 
 ![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
 
+- Some dozens of heliostats linked, with [pictures and patents](http://www.redrok.com/neat.htm) - [link](http://www.redrok.com/main.htm#gsc.tab=0):
 - Silbermann's heliostat [explained](http://www.fondazionegalileogalilei.it/museo/collezioni/strumenti_scientifici/astronomia/schede_astronomia/eli_silbermann.html) at Fondazione Galileo Galilei (italian)
+- Sun path in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html
+
+![image](https://user-images.githubusercontent.com/1620953/230616983-01ca00b8-52be-40d6-8f15-a6b119922a6f.png)
+
+- Sun path in 3d: https://ccnmtl.github.io/astro-simulations/sun-motion-simulator/
+
+![image](https://user-images.githubusercontent.com/1620953/230616952-a4db4afb-8420-49bd-9c90-374791eb7425.png)
+
 - Silbermann's heliostat [explained](https://en.m.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Heliostat) by Encyclopedia Britannica
-- Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios
-- Some dozens of heliostats linked, with [pictures and patents](http://www.redrok.com/neat.htm) - [link](http://www.redrok.com/main.htm#gsc.tab=0)
+- Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios :
+
+
+
+
 
 
 ## Commercial products (not yet on sale)
