@@ -84,10 +84,26 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Images
 
+- ![image](https://user-images.githubusercontent.com/1620953/230624103-41b78e41-bc39-4367-97d1-260e8ba3e5d8.png)
+
+
 - ![image](https://user-images.githubusercontent.com/1620953/226894896-5f8caf1d-481c-4d04-a28d-cad1f78b68c1.png)
 - ![image](https://user-images.githubusercontent.com/1620953/226895117-0e9c855e-5906-4f84-abe6-6b2ea357b6ea.png)
 
 ## Inventors
+
+- Ekling ():
+
+![image](https://user-images.githubusercontent.com/1620953/230623926-f8be295d-b8a6-424c-b61c-8a58a291f1ed.png)
+
+
+- [Tornaghi](https://collection.maas.museum/object/250225) ();
+
+![image](https://user-images.githubusercontent.com/1620953/230623189-fcee2439-e733-4076-bcef-f31b4875ac94.png)
+
+![image](https://user-images.githubusercontent.com/1620953/230623296-e4bbfe04-fb82-4985-8d6d-32ab5d9eb6a9.png)
+
+
 
 - Hilger (1919):
 
@@ -121,6 +137,10 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 # Sites
 
+ - https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
+
+- Images/link: https://ro.pinterest.com/adimuraru11/heliostat/
+
 ![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
 
 - Some dozens of heliostats linked, with [pictures and patents](http://www.redrok.com/neat.htm) - [link](http://www.redrok.com/main.htm#gsc.tab=0):
@@ -136,6 +156,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - Silbermann's heliostat [explained](https://en.m.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Heliostat) by Encyclopedia Britannica
 - Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios :
 
+- http://www.redrok.com/main.htm#gsc.tab=0
 
 
 
