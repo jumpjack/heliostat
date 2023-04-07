@@ -89,6 +89,13 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Inventors
 
+- Hilger ():
+
+- [Thomas Comber](https://www.biodiversitylibrary.org/item/196100#page/19/mode/1up) ():
+
+![image](https://user-images.githubusercontent.com/1620953/230619233-b9f71d2a-fa39-43b6-8332-737d838bc822.png)
+
+
 - Silbermann ()
 
 - George Johnston Stoney (1869)
