@@ -138,6 +138,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 # Sites
 
 - [Spiegazione dettagliata eliostato di Gambey](http://www.museodifisica.unito.it/index.phtml?Museo&id=582)
+- [How Silbermann heliostat moves (video)](http://rhe.ish-lyon.cnrs.fr/instruments-scientifiques/instr_opt_heliostat.htm)
+
 
 - https://www.redrok.com/main.htm#gsc.tab=0
 - https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
