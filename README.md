@@ -137,8 +137,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 # Sites
 
- - https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
-
+- https://www.redrok.com/main.htm#gsc.tab=0
+- https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
 - Images/link: https://ro.pinterest.com/adimuraru11/heliostat/
 
 ![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
