@@ -137,6 +137,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 # Sites
 
+- [Spiegazione dettagliata eliostato di Gambey](http://www.museodifisica.unito.it/index.phtml?Museo&id=582)
+
 - https://www.redrok.com/main.htm#gsc.tab=0
 - https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
 - Images/link: https://ro.pinterest.com/adimuraru11/heliostat/
