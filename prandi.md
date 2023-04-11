@@ -21,6 +21,9 @@ Prandi suggerisce anche la possibilità di aggiungere un ulteriore meccanismo ad
 l'orientamento dell'eliostato per tutto l'anno, quando il sole segue la curva dell'analemma; Prandi però non parla di analemma, ma accenna a un 
 "semicerchio" che dovrebbe essere percorso dal punto L sull'arco DY.
 
+Un'ulteriore miglioria rispetto ad altri modelli è la possibilità di orientare manualmente lo specchio in modo che la congiungente BB' possa essere rivolta in varie direzioni anzichè essere fissa;
+cop è reso possibile dalla presenza degli archi PR, che hanno centro in B, e dall'arco T'T', anch'esso centrato in B; condizione necessaria per il funzionamento dell'eliostato, infatti, è che, una volta posizionato e collimato, B resti immobile, ed equifistante da B'.
+
 
 
 
