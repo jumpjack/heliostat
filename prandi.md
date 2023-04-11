@@ -4,7 +4,14 @@ Antonio Tessarolo costruì per primo lo strumento di Prandi su indicazione di Da
 
 ![image](https://user-images.githubusercontent.com/1620953/231253334-40d98891-aa1d-4002-831b-58ecce591f68.png) ([Hi res](https://user-images.githubusercontent.com/1620953/231253283-dd066f33-e152-4157-9e62-43e450e9648d.png))
 
-## Progetto originale di Prandi ##
+# Progetto originale di Prandi #
+
+## Spiegazione originale ##
+
+(fonte: [Nuova collezione d'Opuscoli scientifici](https://www.google.it/books/edition/Nuova_collezione_d_opuscoli_scientifici/8CJ4-jCC-UcC?hl=it&gbpv=1&pg=RA1-PA244&printsec=frontcover) )
+
+![image](https://user-images.githubusercontent.com/1620953/231255812-c737b7cc-f234-4c97-b0ce-100db81f7bb4.png)
+
 
 ## Schema ##
 
