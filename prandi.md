@@ -12,7 +12,7 @@ Antonio Tessarolo costruì per primo lo strumento di Prandi su indicazione di Da
 
 ## Ipotesi di realizzazione ##
 
-![image](https://user-images.githubusercontent.com/1620953/231253892-6ba2ef7d-b2f6-48fd-b9c6-d194c8015109.png)
+![image](https://user-images.githubusercontent.com/1620953/231254764-09d7f83b-7414-4e14-a2b2-d16cc324e152.png)
 
 Nè lo schema nè il disegno mostrano il meccanismo ad orologeria che, collegato all'asse AB, permetterebbe all'eliostato di funzionare: Prandi 
 lo lascia "alla fantasia del meccanico che costruirà il dispositivo"....
