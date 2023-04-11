@@ -94,6 +94,9 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Inventors
 
+- BERTHOLLET and MALUS ():
+-
+
 - Ekling ():
 
 ![image](https://user-images.githubusercontent.com/1620953/230623926-f8be295d-b8a6-424c-b61c-8a58a291f1ed.png)
