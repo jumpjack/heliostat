@@ -48,6 +48,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Documents
 
+[BULLETIN OF THE ENCOURAGEMENT SOCIETY FOR NATIONAL INDUSTRY](https://cnum.cnam.fr/CGI/fpage.cgi?BSPI.25/0117/100/507/6/401) - Details page
+
 - **A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats** by Dougherty, L. M., in  
 **Journal of the British Astronomical Association**, vol.92, no.4, p.182-187 (**1982**) ([source](https://ui.adsabs.harvard.edu/search/p_=6&q=bibstem%3A(%22JBAA...92%22)&sort=date%20desc%2C%20bibcode%20desc)
 
