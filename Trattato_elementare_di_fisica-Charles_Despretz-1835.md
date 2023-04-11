@@ -6,7 +6,7 @@ Di **Charles Despretz**
 
 
 - [Google books page](https://www.google.it/books/edition/Trattato_elementare_di_fisica_adottato_p/vdj0ydxWWQQC?hl=it&gbpv=0)
-- [Google books PDF](https://books.googleusercontent.com/books/content?req=AKW5QafaYqd5_ywC1hQ7BmSkxSSdge84wd5gnI-sgBSUXz2WjrpMo6XuuNpMJ7BgTUaTI8McqrpfHkC6b_l0ge2JmfsDbWsNRkjbRwUW2r4X-QqjQjVN1URue0mXJZVxslSrzY9qO0oII6gmqqntVonge1i74HA1L4GP87_SZcI7tC9pzxTe_hmc_UHJo_ueVNkq3jiTQPikgtzQ3HYz3arIczIjnRRVo4kAfNtkzbDbNkiEnW8UQrSrBbQd_lS6khcfz6i1lJRd5sQESayJ5uPx-AXshYr509c8GTB85Y2ploY_ZDREx10)
+- [Alternative google books page](https://books.google.it/books?id=FOoByH0YJOIC&pg=PA472&lpg=PA472&dq=%22Le+parti+principali+d%27+un+Eliostato+sono+uno+specchio+e+un+orologio;+e+la+lancetta+fa+muovere+la+Coda+dello+specchio%22&source=bl&ots=NM56vgqHc1&sig=ACfU3U2M9DnWfHXOjxYjxclsLwnCoCKvRQ&hl=it&sa=X&ved=2ahUKEwiSuK3lyaH-AhWESfEDHbKAA84Q6AF6BAgJEAM#v=onepage&q&f=false) (only volume 2; original pictures corrupted)
 
 ## OCR
 
@@ -18,7 +18,7 @@ Di **Charles Despretz**
 
 **P. 609**
 
-  chio rappresentato dalla fig . 40. 1, XV. composto d'uno specchio AB e d'un orologio M. Lo specchio é mobile intorno all'asse cc'; l'asta che sostiene questo asse si muove sopra sè medesima; all'ago del quadrante è adatlala una forca hl mobile intorno all'asse u; e finalmente questa forca sostiene un tubo in cui scorre liberamente a incastro l'asse c c '; il qual tubo è mobile intorno ad un asse perpendicolare alla sua direzione. Si noti che il quadrante dell'orologio deve sempre esser diretto parallelamente all'equalore. Del resto il rapporto che deve passare fra la situazione de!l'orologio e quella dello speechio deve essere regolato secondo l ' epoca dell'anno e il luogo dell'osservazione. L'eliostato imaginato per la prima volta dallo S' Gravesand è stato perfezionato dai Prof. Charles , Malas ec.  Si può riscontrare in questo proposito il *Journal de l'Ecole Polytechnique*, t. 10. 11, in cui l' Hachelte descrive i diversi eliostati, come pure il *Bulletin de la Société d'Encouragement* an. 1826 , per una descrizione fatta dal medesimo fisico d'un eliostato proposto dal sig. Gambey.
+  chio rappresentato dalla fig . 40. 1, XV. composto d'uno specchio AB e d'un orologio M. Lo specchio é mobile intorno all'asse cc'; l'asta che sostiene questo asse si muove sopra sè medesima; all'ago del quadrante è adatlala una forca hl mobile intorno all'asse u; e finalmente questa forca sostiene un tubo in cui scorre liberamente a incastro l'asse c c '; il qual tubo è mobile intorno ad un asse perpendicolare alla sua direzione. Si noti che il quadrante dell'orologio deve sempre esser diretto parallelamente all'equalore. Del resto il rapporto che deve passare fra la situazione de!l'orologio e quella dello speechio deve essere regolato secondo l' epoca dell'anno e il luogo dell'osservazione. L'eliostato imaginato per la prima volta dallo S' Gravesand è stato perfezionato dai Prof. Charles , Malus ec.  Si può riscontrare in questo proposito il *Journal de l'Ecole Polytechnique*, t. 10. 11, in cui l' Hachelte descrive i diversi eliostati, come pure il *Bulletin de la Société d'Encouragement* an. 1826 , per una descrizione fatta dal medesimo fisico d'un eliostato proposto dal sig. Gambey.
 
 
 Fig. 39:
