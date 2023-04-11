@@ -7,6 +7,7 @@ Di **Charles Despretz**
 
 - [Google books page](https://www.google.it/books/edition/Trattato_elementare_di_fisica_adottato_p/vdj0ydxWWQQC?hl=it&gbpv=0)
 - [Alternative google books page](https://books.google.it/books?id=FOoByH0YJOIC&pg=PA472&lpg=PA472&dq=%22Le+parti+principali+d%27+un+Eliostato+sono+uno+specchio+e+un+orologio;+e+la+lancetta+fa+muovere+la+Coda+dello+specchio%22&source=bl&ots=NM56vgqHc1&sig=ACfU3U2M9DnWfHXOjxYjxclsLwnCoCKvRQ&hl=it&sa=X&ved=2ahUKEwiSuK3lyaH-AhWESfEDHbKAA84Q6AF6BAgJEAM#v=onepage&q&f=false) (only volume 2; original pictures corrupted)
+- [Alternative google books page](https://www.google.it/books/edition/Trattato_elementare_di_fisica_di_C_Despr/7D9MnXxF_a0C?hl=it&gbpv=0) (volume 3, 1838; fig.39/XV not visible)
 
 ## OCR
 
