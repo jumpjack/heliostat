@@ -1,4 +1,5 @@
 Bulletin of the Encouragement Society for National Industry (April 1826 - N. CCLXII (262))
+- [Main page](https://cnum.cnam.fr/CGI/redir.cgi?BSPI.25)
 - [PDF version (71 MB)](https://cnum.cnam.fr/PDF/cnum_BSPI.25.pdf)
 - [Full Table of Contents](https://cnum.cnam.fr/CGI/redird.cgi?BSPI.25)
 - [Pages thumbnails](https://cnum.cnam.fr/CGI/redirv.cgi?BSPI.25)
@@ -13,6 +14,8 @@ Explained from p. 107:
 Explained from p.179:
 - ![image](https://user-images.githubusercontent.com/1620953/231114137-eb3991c5-50a2-4d59-b27e-4780ff94bf59.png) (301/1) ([Full resoution](https://user-images.githubusercontent.com/1620953/231116145-fda9855a-10cf-4583-9a2c-f91576d69699.png))
 - ![image](https://user-images.githubusercontent.com/1620953/231114243-14598096-9d79-4e3d-b091-3bcd97fc635f.png) (301/2) ([Full resolution](https://user-images.githubusercontent.com/1620953/231116183-e97bba31-a380-470a-8f20-ab3c966bc03c.png))
+    - ![image](https://user-images.githubusercontent.com/1620953/231117964-9de2bb47-4748-4131-8069-5d149467a296.png)
+ [Combined](https://user-images.githubusercontent.com/1620953/231117784-e794c91f-c74e-4ea7-a661-e986b81e2c92.png)
 - ![image](https://user-images.githubusercontent.com/1620953/231114387-ca4166a1-57e7-4143-83b3-bd0c30261a39.png) (302) ([Full resolution](https://user-images.githubusercontent.com/1620953/231116223-a2a7225f-3f5b-4804-8902-f97d33c56259.png))
 
 
