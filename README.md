@@ -131,8 +131,6 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 ![image](https://user-images.githubusercontent.com/1620953/230617429-3c3b23f4-4e38-4ca4-961e-98e73c107a8d.png)
 
 
-- ADAM HILGER IN LONDON. LORD BLYTHSWOOD, ARCHIBALD CAMPELL:
-![image](https://user-images.githubusercontent.com/1620953/230616890-ee1f50d8-c6ab-4e74-a3aa-00404e4b31b5.png)
 
 [Brashear](https://www.uvm.edu/~dahammon/museum/heliostat.html) (1910):
 
