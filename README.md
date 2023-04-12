@@ -94,13 +94,15 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Inventors
 
-- BERTHOLLET and MALUS ():
--
+- Colonel Archibald Campbell (1865-1940) from Blythswood; device built by Adam Hilger.  [Link](https://www.superstock.com/asset/photograph-universal-heliostat-made-english-instrument-makers-adam-hilger-london/1895-25564)
 
+![image](https://user-images.githubusercontent.com/1620953/231557793-b4f0f21b-1aa7-4899-95da-710428823ca0.png)
+
+
+- BERTHOLLET and MALUS ():
 - Ekling ():
 
 ![image](https://user-images.githubusercontent.com/1620953/230623926-f8be295d-b8a6-424c-b61c-8a58a291f1ed.png)
-
 
 - [Tornaghi](https://collection.maas.museum/object/250225) ();
 
