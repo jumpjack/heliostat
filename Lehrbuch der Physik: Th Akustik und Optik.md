@@ -43,7 +43,8 @@ Zur Justirung des Apparats hat man zuerst die Achse des Uhrwerks in die Richtung
 
 Der Spiegelnormalen hat man schliesslich eine solche Richtung zu geben , dass ihr Winkel mit der Weltachse gleich dem halben Complement der Declination (1) ist. Wenn die Uhr geht, folgt der Spiegel dem Gang der Sonne und die Lichtstrahlen werden beständig in der Richtung der Weltachse reflectirt ; mit Hülfe eines zweiten Spiegels NN' kann man dann den Strahlen in ein facher Weise die gewünschte Richtung AR geben.
 
-![image](https://user-images.githubusercontent.com/1620953/233346964-6c5ae1f2-71d7-48bf-a550-661a8f8d6efb.png)
+![image](https://user-images.githubusercontent.com/1620953/233460523-1dba707e-5a19-45c2-9645-7afd81d77971.png)
+
 
 Die Anwendung eines zweiten Spiegels ist offenbar ein Nachtheil , der übrigens im Vergleich mit der Schwierigkeit der Justirung bei anderen Heliostaten nicht schwer ins Gewicht fällt. An Stelle der Spiegel kann man totalreflectirende Prismen verwenden und auf diese Weise den Verlust an Lichtintensität bedeutend verringern.(2)
 
@@ -237,7 +238,9 @@ To adjust the apparatus, one must first bring the axis of the clockwork in the d
 
 Finally, one has to give the mirror normal such a direction that its angle with the world axis is equal to half the complement of the declination (1). When the clock ticks, the mirror follows the course of the sun, and the rays of light are constantly reflected in the direction of the axis of the world; With the help of a second mirror NN', the beams can then be given the desired direction AR in a simple manner.
 
-![FIG.190](https://user-images.githubusercontent.com/1620953/233346964-6c5ae1f2-71d7-48bf-a550-661a8f8d6efb.png)
+![image](https://user-images.githubusercontent.com/1620953/233460523-1dba707e-5a19-45c2-9645-7afd81d77971.png)  ![image](https://user-images.githubusercontent.com/1620953/233461911-05a4f68d-8cd2-40de-b75f-c12e0f24ad51.png)
+
+
 
 The use of a second mirror is obviously a disadvantage, which, by the way, does not weigh heavily in comparison with the difficulty of adjusting with other heliostats. Totally reflecting prisms can be used in place of mirrors, and in this way the loss of light intensity can be reduced considerably. (2)
 
