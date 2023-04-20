@@ -1,4 +1,4 @@
-= German =
+# German
 
 **eliostaten** . Das Sonnenlicht bietet für physikalische Versuche alle nur wünschenswerthen Vorzüge ; es ist billig , seine Intensität ist bedeutend und die Strahlen sind pa rallel ( er Winkel der äussersten Strahlen beträgt kaum einen halben Grad) ; aber die Richtung der Sonnenstrahlen bleibt nicht unveränderlich.
 
@@ -14,7 +14,7 @@ Die Einrichtung des Apparates ( Fig. 190) ist leicht verständlich. Er besteht a
 
 ...
 
-= English =
+# English
 
 **eliostats** . Sunlight offers all desirable advantages for physical experiments; it is cheap, its intensity is great, and the rays are parallel (the angle of the extreme rays is scarcely half a degree); but the direction of the sun's rays does not remain constant.
 
