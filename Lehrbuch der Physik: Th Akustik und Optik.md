@@ -269,7 +269,8 @@ describes its diurnal cone about the world axis. s'Gravesande now connects the m
 
 By moving the column and adjusting its height, the point C is brought into such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. By adjusting the height, the point C is placed in such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. The ABC triangle will then constantly coincide with the plane of incidence;
 
-![FIG.192](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)
+![FIG.192](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)  ![image](https://user-images.githubusercontent.com/1620953/233463355-4d8102d2-f65e-4ecf-8d2d-ea08ed057777.png)
+
 
 Furthermore, since the legs AB and AC are of invariable length, only the length of the base changes), the triangle remains isosceles, and consequently the angles RCB' and SCB, which are equal to the angles C and B of the triangle, are always equal to one another; CR is then the fixed direction of the reflected 
 
