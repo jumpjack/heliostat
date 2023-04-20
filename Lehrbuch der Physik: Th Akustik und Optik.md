@@ -2,6 +2,8 @@
 
 # German
 
+**p.334**
+
 **415. Heliostaten**
 
 Das Sonnenlicht bietet für physikalische Versuche alle nur wünschenswerthen Vorzüge ; es ist billig , seine Intensität ist bedeutend und die Strahlen sind pa rallel ( er Winkel der äussersten Strahlen beträgt kaum einen halben Grad) ; aber die Richtung der Sonnenstrahlen bleibt nicht unveränderlich.
@@ -16,9 +18,14 @@ Schon die Mitglieder der Academia del Cimento waren durch ihre Untersuchungen ü
 
 In 24 Stunden beschreibt die Sonne scheinbar einen dem Äquator parallelen Kreis , der sich im Lauf des Jahres langsam verschiebt, indem die auf einem Meridian gemessene Entfernung desselben vom Äquator (die Declination) von einer Sonnenwende, wo sie ihren grössten Werth von 23 ° 27 ' erreicht, bis zu einem Äquinoctium,
 
-notes 1,2
+(1) Über die relative Wichtigkeit dieser beiden Fehlerquellen und die Mittel , um ihren Einfluss abzuschwächen , vgl. Mallard , Lehrbuch der Krystallographie I , 221 ; Paris, Dunod, 1879
 
------------
+(2) Betreffs der Fuess’schen Goniometer vgl. Liebisch , Bericht über die wissenschaftlichen Instrumente auf der Berliner Gewerbeaus
+stellung im Jahre 1879, herausgegeben von Loewenherz , 321 ; Berlin 1880, J. Springer,sowie Liebisch , physikalische Krystallographie; Leipzig 1891. Ferner sei auf das Zeiss’sche Krystallgoniometer verwiesen ( Czapski , Zeitschr. f. Instrumentenkunde 1893, 1 u. 242) . – L.
+
+=============
+
+**p.335**
 
 wo sie den Werth Null hat , schwankt. Ein die Erde, die wir hier als punktförmig ansehen können , treffender Sonnenstrahl beschreibt folglich in einem Tag um die Weltachse einen Kegel, dessen Öffnungswinkel das Complement der für dieses Datum gültigen Declination (Fig. 189) ist.
 
@@ -31,7 +38,7 @@ Die Einrichtung des Apparates ( Fig. 190) ist leicht verständlich. Er besteht a
 
 Zur Justirung des Apparats hat man zuerst die Achse des Uhrwerks in die Richtung der Weltachse zu bringen; nun ist aber bekanntlich die Polhöhe eines Orts gleich seiner geographischen Breite ; die Achse des Uhrwerks muss also mit der Verticalen einen Winkel bilden , der das Complement der geographischen Breite des Ortes ist . Dann stellt man die Achse des Apparates in den Meridian , den man immer mit genügender Genauigkeit bestimmen kann (im Nothfall mit Hülfe eines Kompasses) . Wenn das Uhrwerk die richtige Zeit zeigt, so fällt die Ebene, in welcher die Achse, die Spiegelnormale und der Zeiger liegen, mit dem Stundenkreis der Sonne zusammen.
 
--------
+=============
 
 **p.336**
 
@@ -41,7 +48,11 @@ Der Spiegelnormalen hat man schliesslich eine solche Richtung zu geben , dass ih
 
 Die Anwendung eines zweiten Spiegels ist offenbar ein Nachtheil , der übrigens im Vergleich mit der Schwierigkeit der Justirung bei anderen Heliostaten nicht schwer ins Gewicht fällt. An Stelle der Spiegel kann man totalreflectirende Prismen verwenden und auf diese Weise den Verlust an Lichtintensität bedeutend verringern.(2)
 
----------
+_(1) Die Einstellung lässt sich leicht controliren , wenn der Apparat, wie der Heliostat von Silbermann , mit einem eine kleine Öffnung entaltenden Diaphragma und einem kleinen Schirm versehen ist ; bei richtiger Justirung müssen die durch das Diaphragma eintretenden Strahlen auf die Mitte des Schirms fallen._
+
+_(2) Brünner verfertigt sehr zweckentsprechende Apparate dieser_
+
+=============
 
 **p. 337**
 
@@ -53,9 +64,15 @@ wie beim vorigen Apparat so angeordnet , dass der Zeiger A'B dem Schatten der Ac
 
 seinen täglichen Kegel um die Weltachse beschreibt. s’Gravesande verbindet nun den Spiegel MM' mit diesem Uhrwerk mit Hülfe einer am Ende B des Zeigers angebrachten Führung, in welcher ein senkrecht am Spiegel befestigter Stiel gleiten und sich frei drehen kann (Fig. 192) . Der Spiegel wird von einer besonderen, verticalen Säule getragen, um die er sich drehen lässt ; ferner ist er um eine orizontale Achse beweglich , so dass man ihm jede beliebige Orientirung geben kann . Durch Verschiebung der Säule und 
 
-notes: half previous, note 1
+---
 
------------
+_Art; von Monckhoven wird fur photographische Zwecke ein einfaches und solides Modell in grossen Dimensionen ausgeführt.
+Eine sinnreiche Lösung desselben Problems liefert der Heliostat von Hartnack und Prazmowski , in welchem der Spiegel , in dessen Ebene die Weltachse liegt, sich einmal in 48 Stunden um die letztere dreht ; hierdurch bleibt die Richtung des reflectirten Strahls stets die gleiche. (Vgl. La nature 5, 881; 1877.)_
+
+_(1) s'Gravesande, Physices elementa mathematica , 715 ; Lugd . Batav.; 1720._
+
+
+=============
 
 **p. 338**
 
@@ -66,7 +83,7 @@ Verstellung in der Höhe wird der Punkt C in eine solche Lage gebracht, dass die
 
 da ferner die Schenkel AB und AC von unveränderlicher Länge sind nur die Länge der Basis ändert sich ), so bleibt das Dreieck gleichschenklig und folglich sind auch die den Winkeln C und B des Dreiecks gleichen Winkel RCB' und SCB stets einander gleich ; CR ist dann die feste Richtung des reflectirten 
 
---------
+=============
 
 **p. 339**
 
@@ -79,6 +96,25 @@ In dem Heliostaten von Gambey (2->5) ist, wie in demjenigen von s'Gravesande , e
 ![image](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
 
 dessen eine Seite AF der Richtung der Sonnenstrahlen parallel ist, während die andere AC eine den reflectirten Strahlen parallele Richtung hat ; die Basis CF wird durch einen Stiel gebildet , der hier in die Verlängerung des Spiegels MM ' fällt. Diese Anordnung des Dreiecks ist vortheilhafter
+
+
+
+_(1) Bezeichnen wir die Länge des Zeigers A'B mit R, so muss nach dem Obigen der Mittelpunkt C des Spiegels ( wenn 2 die geographische Breite bezeichnet) um die Strecke_
+
+EQ1 ![image](https://user-images.githubusercontent.com/1620953/233364613-787c8531-1ced-482b-9793-d942f77c5b7a.png)
+
+_höher als die durch das Rotationscentrum A' gehende Horizontale liegen, und dieser Punkt C muss von A' die (horizontale) Entfernung_
+
+EQ2 ![image](https://user-images.githubusercontent.com/1620953/233364649-823ebfcd-e3d1-4555-b8a4-adbc3e4ddf53.png)
+
+
+_haben . Diese Längen müssen genau berechnet und eingestellt werden,
+eine keineswegs einfache Aufgabe._
+
+
+_(2) Auf dem gleichen Princip beruht der Fuess'sche Heliostat , der durch seine einfache, zuverlässige und compacte Construction (Declination und Breite lassen sich z. B. an einem mit doppelter Theilung versehenen Kreisbogen einstellen ; das Gewicht des Spiegels wird zum grössten Theil durch eine Frictionsrolle aufgenommen u. s. w. ) vortheil haft vor anderen Apparaten auszeichnet. Vgl. Loewenherz , Wiss.
+Instr. a. d. Berliner Gewerbeausstellung 1879 , 398) . Eine vereinfachte Form, die sich besonders zum Gebrauch an höheren Schulen eignet, ist in der Zeitschr. f . d. phys. u. chem. Unterricht 9 , 157 , 1896 , beschrieben. - L._
+
 
 ---------------
 
@@ -99,6 +135,8 @@ welch' letzteres in die Richtung des reflectirten Strahles gebracht wird. Die Gr
 Der Apparat ist in Fig. 194 dargestellt. Das um die verti cale Säule Z und die horizontale Achse X drehbare Rad EE' kann mittels des Breitenkreises L beliebig geneigt werden und wird mit Hülfe der mit Dioptern PP versehenen Alhidade in die gewünschte Richtung gebracht ; besser noch verwendet man ein Fernrohr, das man auf eine im Meridian befindliche Mire einstellt.
 Das Uhrwerk HH' dreht dieses Rad gleichförmig in 24 Stunden einmal um 360 ° um die Achse A'A , die ihre Richtung im Raum beibehält und zu der Ebene des Rades senkrecht steht. Der Stab a B, der um die zum Äquatorkreis parallele Achse a A dreh bar ist , kann gegen diesen Kreis um den Winkeld geneigt werden , welcher auf dem Deklinationskreis D gemessen wird.
 In F endigt dieser Stab in einer Hülse , in welcher der Stiel Q des Spiegels gleiten und sich drehen kann. An dem Ende der Achse A ist der Stiel der Gabel AC befestigt, die zwischen ihren Zinken den Spiegel M'M hält. Der Apparat lässt sich ohne Ausführung von Rechnungen leicht einstellen und arbeitet sehr regelmässig , indessen ist er ziemlich theuer. Soll der Heliostat an einem bestimmten Platz bleiben , so sind übrigens auch Vereinfachungen möglich. Man kann dabei sogar einen allen Heliostaten Constructionen gemeinsamen Nachtheil vermeiden , nämlich den, dass der den Sonnenstrahlen unmittelbar ausgesetzte Apparat sich stark erwärmt und nicht mehr richtig justirt bleibt. Thatsächlich lässt sich ganz leicht das Uhrwerk von dem Apparat vollständig trennen und im Laboratorium aufstellen . Eine kräftige Pendeluhr genügt dann vollständig , um mittels einer Übertragung den aussen aufgestellten Spiegel in Bewegung zu setzen und verbürgt einen vollständig gleichmässigen Gang: (1->6)
+
+_(1) Vgl. z . B. Johnston's Heliostat in der Ausführung von Schmidt & Haensch in Berlin , Löwenherz , Wiss. Instr. a. d. Berliner Gewerbeausstellung 1879, S. 402. – L.Violle , Physik. II. 2._
 
 ------------
 
@@ -149,37 +187,19 @@ Note 1
 
 ----------------
 
-(1) Die Einstellung lässt sich leicht controliren , wenn der Apparat, wie der Heliostat von Silbermann , mit einem eine kleine Öffnung entaltenden Diaphragma und einem kleinen Schirm versehen ist ; bei richtiger Justirung müssen die durch das Diaphragma eintretenden Strahlen auf die Mitte des Schirms fallen .
-
-(2) Brünner verfertigt sehr zweckentsprechende Apparate dieser Art; von Monckhoven wird fur photographische Zwecke ein einfaches und solides Modell in grossen Dimensionen ausgeführt.
-Eine sinnreiche Lösung desselben Problems liefert der Heliostat von Hartnack und Prazmowski , in welchem der Spiegel , in dessen Ebene die Weltachse liegt, sich einmal in 48 Stunden um die letztere dreht ; hierdurch bleibt die Richtung des reflectirten Strahls stets die gleiche. (Vgl. La nature 5, 881; 1877.)
 
 
-(3) s'Gravesande, Physices elementa mathematica , 715 ; Lugd .
-Batav.; 1720.
 
-eq1
 
-höher als die durch das Rotationscentrum A' gehende Horizontale liegen, und dieser Punkt C muss von A' die (horizontale) Entfernung
 
-eq2
 
-haben . Diese Längen müssen genau berechnet und eingestellt werden,
-eine keineswegs einfache Aufgabe.
 
-(1->4) Bezeichnen wir die Länge des Zeigers A'B mit R, so muss nach dem Obigen der Mittelpunkt C des Spiegels ( wenn 2 die geographische Breite bezeichnet) um die Strecke
-
-(2->5)
- Auf dem gleichen Princip beruht der Fuess'sche Heliostat , der durch seine einfache, zuverlässige und compacte Construction (Declination und Breite lassen sich z. B. an einem mit doppelter Theilung versehenen Kreisbogen einstellen ; das Gewicht des Spiegels wird zum grössten Theil durch eine Frictionsrolle aufgenommen u. s. w. ) vortheil haft vor anderen Apparaten auszeichnet. Vgl. Loewenherz , Wiss.
-Instr. a. d. Berliner Gewerbeausstellung 1879 , 398) . Eine vereinfachte Form, die sich besonders zum Gebrauch an höheren Schulen eignet, ist in der Zeitschr. f . d. phys. u. chem. Unterricht 9 , 157 , 1896 , beschrieben. - L.
-
-(1->6)
- Vgl. z . B. Johnston's Heliostat in der Ausführung von Schmidt & Haensch in Berlin , Löwenherz , Wiss. Instr. a. d. Berliner Gewerbeausstellung 1879, S. 402. – L.
-Violle , Physik. II. 2. 
 
 ...
 
 # English
+
+**p.334**
 
 **eliostats** . Sunlight offers all desirable advantages for physical experiments; it is cheap, its intensity is great, and the rays are parallel (the angle of the extreme rays is scarcely half a degree); but the direction of the sun's rays does not remain constant.
 
@@ -187,9 +207,20 @@ Violle , Physik. II. 2.
 
 Fahrenheit heliostat. The members of the Academia del Cimento had already been led by their investigations into the speed of light to the construction of an apparatus belonging to this field, and Borelli can be regarded as the inventor of the heliostat. Meanwhile, the first practical solution to the problem, as simple as it is beautiful, came from Fahrenheit.
 
-In 24 hours the sun apparently describes a circle parallel to the equator, which slowly shifts in the course of the year, the distance of the same measured on a meridian from the equator (the declination) from a solstice, where it reaches its greatest value of 23 ° 27 ' reached, up to an equinox, where it has the value zero, fluctuates. A sunbeam hitting the earth, which we can regard here as a point, describes a cone in one day around the world axis, the opening angle of which is the complement of the declination (Fig. 189) valid for this date.
+In 24 hours the sun apparently describes a circle parallel to the equator, which slowly shifts in the course of the year, the distance of the same measured on a meridian from the equator (the declination) from a solstice, where it reaches its greatest value of 23 ° 27 ' reached, up to an equinox, 
 
-![image](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)
+_(1) For the relative importance of these two sources of error, and the means of mitigating their influence, see Mallard, Lehrbuch der Krystallographie I, 221; Paris, Dunod, 1879_
+
+_(2)Regarding Fuess's goniometer, see Liebisch, Report on the scientific instruments at the Berlin trade fair
+position in 1879, published by Loewenherz, 321; Berlin 1880, J. Springer, and Liebisch, physical crystallography; Leipzig 1891. Reference is also made to the Zeiss crystal goniometer (Czapski, Zeitschr. f. Instrumentenkunde 1893, 1 and 242). – L._
+
+=========
+
+**p.335**
+
+where it has the value zero, fluctuates. A sunbeam hitting the earth, which we can regard here as a point, describes a cone in one day around the world axis, the opening angle of which is the complement of the declination (Fig. 189) valid for this date.
+
+![FIG.189](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)
 
 
 If, therefore, at a given moment the light falls at a point C in the direction SC, which is to be reflected with the world axis CA, set up a mirror MM' at C perpendicular to the line CB bisecting the angle SCA. In order that the reflected ray should remain in the direction CA, the mirror MM' is made to rotate about an axis lying in the direction CA' through 360° in 24 hours by means of an ordinary clockwork. The mirror normal then remains constantly in the hour circle of the sun (the plane which passes through the world axis and the center of the sun) and, since it constantly bisects the angle of the incident rays with the world axis, the rays also always become in the direction of this axis reflected; with the help of a second mirror you can then give them any other, unchanging direction.
@@ -198,38 +229,81 @@ The arrangement of the apparatus (Fig. 190) is easy to understand. It consists o
 
 To adjust the apparatus, one must first bring the axis of the clockwork in the direction of the axis of the world; but now, as is well known, the polar height of a place is equal to its geographical latitude; the axis of the movement must therefore form an angle with the vertical which is the complement of the latitude of the place. Then the axis of the apparatus is placed in the meridian, which can always be determined with sufficient accuracy (if necessary with the help of a compass). When the clockwork shows the correct time, the plane in which the axis, the mirror normal and the pointer lie coincides with the hour circle of the sun.
 
+========
+
+**p.336**
+
 Finally, one has to give the mirror normal such a direction that its angle with the world axis is equal to half the complement of the declination (1). When the clock ticks, the mirror follows the course of the sun, and the rays of light are constantly reflected in the direction of the axis of the world; With the help of a second mirror NN', the beams can then be given the desired direction AR in a simple manner.
 
-![image](https://user-images.githubusercontent.com/1620953/233346964-6c5ae1f2-71d7-48bf-a550-661a8f8d6efb.png)
+![FIG.190](https://user-images.githubusercontent.com/1620953/233346964-6c5ae1f2-71d7-48bf-a550-661a8f8d6efb.png)
 
 The use of a second mirror is obviously a disadvantage, which, by the way, does not weigh heavily in comparison with the difficulty of adjusting with other heliostats. Totally reflecting prisms can be used in place of mirrors, and in this way the loss of light intensity can be reduced considerably. (2)
 
---- 
+(1) The adjustment can be easily controlled if the apparatus, like the Silbermann heliostat, is provided with a diaphragm containing a small opening and a small screen; with proper adjustment, the rays entering through the diaphragm must fall on the center of the screen.
 
-*Heliostat from s'Gravesande*
+(2) Brünner manufactures very useful apparatus of this kind; von Monckhoven made a simple and solid model in large dimensions for photographic purposes.
+An ingenious solution to the same problem is provided by Hartnack and Prazmowski's heliostat, in which the mirror, in the plane of which lies the axis of the world, revolves around the latter once every 48 hours; hence the direction of the reflected ray always remains the same. (Cf. La nature 5, 881; 1877.)
+
+==========
+
+**p.337**
+
+**Heliostat from s'Gravesande**
 
 s'Gravesande (3) succeeded in reflecting the sun's rays in any direction with the help of a single mirror. The idea of construction is to realize an isosceles triangle, one side of which lies constantly in the direction of the incident ray, the other in that of the reflected ray, and the base of which is perpendicular to the mirror. A clockwork HH is in the same way
 arranged as in the preceding apparatus, so that the pointer A'B follows the shadow of the axis AA' on the dial, which is parallel to the equator, while the ray SB (Fig. 191)
 
-![image](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png)
+![FIG.191](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png)
 
 describes its diurnal cone about the world axis. s'Gravesande now connects the mirror MM' to this movement by means of a guide attached to the end B of the pointer, in which a stem fixed perpendicularly to the mirror can slide and rotate freely (Fig. 192). The mirror is supported by a special vertical column, around which it rotates; moreover, it is movable about an orizontal axis, so that it can be given any orientation. 
 
 ![image](https://user-images.githubusercontent.com/1620953/233352583-0a73f02f-1627-43d7-99a2-92ba38b61062.png)
 
-By moving the column and adjusting its height, the point C is brought into such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. By adjusting the height, the point C is placed in such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. 
 
-![image](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)
+===============
 
-The ABC triangle will then constantly coincide with the plane of incidence; Furthermore, since the legs AB and AC are of invariable length, only the length of the base changes), the triangle remains isosceles, and consequently the angles RCB' and SCB, which are equal to the angles C and B of the triangle, are always equal to one another; CR is then the fixed direction of the reflected ray. The construction of the apparatus is, it is true, simple, but the adjustment so complicated, (4) that this heliostat, in spite of Charles' efforts to make it practically useful, has seldom been used.
+**p.338**
+
+By moving the column and adjusting its height, the point C is brought into such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. By adjusting the height, the point C is placed in such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. The ABC triangle will then constantly coincide with the plane of incidence;
+
+![FIG.192](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)
+
+Furthermore, since the legs AB and AC are of invariable length, only the length of the base changes), the triangle remains isosceles, and consequently the angles RCB' and SCB, which are equal to the angles C and B of the triangle, are always equal to one another; CR is then the fixed direction of the reflected 
+
+==============
+
+**p.339**
+
+ray. The construction of the apparatus is, it is true, simple, but the adjustment so complicated, (4) that this heliostat, in spite of Charles' efforts to make it practically useful, has seldom been used.
 
 **Heliostat from Gambey**
 
 In Gambey's heliostat (2->5), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), 
 
-![image](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
+![FIG.193](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
 
-one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one rays have parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. This arrangement of the triangle is more advantageous than the previous apparatus, and the sliding of the movable side AF on the base is smoother. The side AF is held in the direction of the sun's rays by the rotation of a wheel EE' 
+one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one rays have parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. 
+This arrangement of the triangle is more advantageous 
+
+-----------
+_(1)If we denote the length of the pointer A'B by R, then according to the above the center C of the mirror (if 2 denotes the geographical latitude) must be the distance_
+
+EQ1
+
+_higher than the horizontal line passing through the center of rotation A', and this point C must have the (horizontal) distance _
+
+EQ2
+
+_from A'. These lengths must be calculated and set precisely, a by no means easy task._
+
+_(2)  Fuess's heliostat is based on the same principle, which, due to its simple, reliable and compact construction (declination and width can be adjusted, for example, on a circular arc provided with double graduations; the weight of the mirror is largely controlled by a friction roller recorded, etc.) advantageous compared to other apparatuses. See Loewenherz, Wiss. instruments a.d. Berlin trade exhibition 1879, 398). A simplified form, which is particularly suitable for use in secondary schools, is published in the Zeitschr. f. d. phys. u. chem. Lessons 9, 157, 1896. - L_
+
+=========
+
+**p.340**
+
+
+than the previous apparatus, and the sliding of the movable side AF on the base is smoother. The side AF is held in the direction of the sun's rays by the rotation of a wheel EE' 
 
 ![image](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
@@ -240,31 +314,12 @@ The apparatus is shown in Fig. 194. The wheel EE', which can be rotated about th
 Clockwork HH' rotates this wheel uniformly once in 24 hours through 360° around axis A'A, which maintains its direction in space and is perpendicular to the plane of the wheel. The rod a B , which can be rotated about the axis a A parallel to the equatorial circle, can be inclined against this circle by the angle d, which is measured on the declination circle D.
 At F this rod ends in a sleeve , in which the stem Q of the mirror can slide and rotate. At the end of the axis A is fixed the stem of the fork AC, which holds the mirror M'M between its tines. The apparatus can easily be adjusted without performing calculations, and works very regularly, although it is rather expensive. If the heliostat is to remain in a certain place, simplifications are also possible. One can even avoid a disadvantage common to all heliostat constructions, namely that the apparatus, which is directly exposed to the sun's rays, heats up considerably and no longer remains correctly adjusted. In fact, the clockwork can be completely separated from the apparatus and set up in the laboratory quite easily. A powerful pendulum clock is then completely sufficient to set the mirror set up outside in motion by means of a transmission and guarantees a completely even movement: (1->6)
 
-(3) s'Gravesande, Physices elementa mathematica, 715; Lugd .
-Batav.; 1720
-
-eq1
-
-higher than the horizontal passing through the center of rotation A', and this point C must be the (horizontal) distance from A'
-
-eq2
-
-have . These lengths must be calculated and set precisely,
-a by no means easy task.
 
 
 
 ----------------
-(1) The adjustment can be easily controlled if the apparatus, like the Silbermann heliostat, is provided with a diaphragm containing a small opening and a small screen; with proper adjustment, the rays entering through the diaphragm must fall on the center of the screen.
 
-(2) Brünner manufactures very useful apparatus of this kind; von Monckhoven made a simple and solid model in large dimensions for photographic purposes.
-An ingenious solution to the same problem is provided by Hartnack and Prazmowski's heliostat, in which the mirror, in the plane of which lies the axis of the world, revolves around the latter once every 48 hours; hence the direction of the reflected ray always remains the same. (Cf. La nature 5, 881; 1877.)
 
-(1->4) If we denote the length of the pointer A'B by R, then according to the above the center point C of the mirror (when 2 denotes the geographical latitude) must be around the distance
-
-(2->5)
-  Fuess's heliostat is based on the same principle, which, due to its simple, reliable and compact construction (declination and width can be adjusted, for example, on a circular arc provided with double graduations; the weight of the mirror is largely controlled by a friction roller recorded, etc.) advantageous compared to other apparatuses. See Loewenherz, Wiss.
-instruments a. i.e. Berlin trade exhibition 1879, 398). A simplified form, which is particularly suitable for use in secondary schools, is published in the Zeitschr. f. i.e. phys. and chem. Lessons 9, 157, 1896. - L
 
 (1->6)
   See z. B. Johnston's heliostat in the execution of Schmidt & Haensch in Berlin, Löwenherz, Wiss. instruments a. i.e. Berlin trade exhibition 1879, p. 402. – L.
