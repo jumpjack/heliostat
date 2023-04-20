@@ -220,7 +220,8 @@ position in 1879, published by Loewenherz, 321; Berlin 1880, J. Springer, and Li
 
 where it has the value zero, fluctuates. A sunbeam hitting the earth, which we can regard here as a point, describes a cone in one day around the world axis, the opening angle of which is the complement of the declination (Fig. 189) valid for this date.
 
-![FIG.189](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)  ![image](https://user-images.githubusercontent.com/1620953/233459157-d05c4ff6-0db3-4b89-80c9-b6d73336a34b.png)
+![FIG.189](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)  ![image](https://user-images.githubusercontent.com/1620953/233459298-dfed1ee0-c428-44f4-96ad-0fe4829adede.png)
+
 
 
 
