@@ -253,7 +253,8 @@ An ingenious solution to the same problem is provided by Hartnack and Prazmowski
 s'Gravesande (3) succeeded in reflecting the sun's rays in any direction with the help of a single mirror. The idea of construction is to realize an isosceles triangle, one side of which lies constantly in the direction of the incident ray, the other in that of the reflected ray, and the base of which is perpendicular to the mirror. A clockwork HH is in the same way
 arranged as in the preceding apparatus, so that the pointer A'B follows the shadow of the axis AA' on the dial, which is parallel to the equator, while the ray SB (Fig. 191)
 
-![FIG.191](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png)
+![FIG.191](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png) ![image](https://user-images.githubusercontent.com/1620953/233458725-06f7a512-25f6-4bb0-b3e4-4d0b6eff2152.png)
+
 
 describes its diurnal cone about the world axis. s'Gravesande now connects the mirror MM' to this movement by means of a guide attached to the end B of the pointer, in which a stem fixed perpendicularly to the mirror can slide and rotate freely (Fig. 192). The mirror is supported by a special vertical column, around which it rotates; moreover, it is movable about an orizontal axis, so that it can be given any orientation. 
 
