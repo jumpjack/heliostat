@@ -124,7 +124,7 @@ wie bei dem vorhergehenden Apparat, und das Gleiten der beweglichen Seite AF auf
 
 ![image](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
-welchem AF so befestigt ist 9, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, 
+welchem AF so befestigt ist, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, 
 
 ------------
 
@@ -279,7 +279,7 @@ In Gambey's heliostat (2), as in that of s'Gravesande, there is an isosceles tri
 
 ![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
 
-one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one rays have parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. 
+one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one, which has parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. 
 This arrangement of the triangle is more advantageous 
 
 -----------
@@ -304,7 +304,7 @@ than the previous apparatus, and the sliding of the movable side AF on the base 
 
 ![FIG.194](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
-parallel to the equator, on which AF is fixed 9 so that it makes an angle equal to the declination with the plane of the wheel. The usage
+parallel to the equator, on which AF is fixed so that it makes an angle equal to the declination with the plane of the wheel. The usage
 of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork
 
 ==========
