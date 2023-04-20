@@ -18,10 +18,10 @@ Schon die Mitglieder der Academia del Cimento waren durch ihre Untersuchungen ü
 
 In 24 Stunden beschreibt die Sonne scheinbar einen dem Äquator parallelen Kreis , der sich im Lauf des Jahres langsam verschiebt, indem die auf einem Meridian gemessene Entfernung desselben vom Äquator (die Declination) von einer Sonnenwende, wo sie ihren grössten Werth von 23 ° 27 ' erreicht, bis zu einem Äquinoctium,
 
-(1) Über die relative Wichtigkeit dieser beiden Fehlerquellen und die Mittel , um ihren Einfluss abzuschwächen , vgl. Mallard , Lehrbuch der Krystallographie I , 221 ; Paris, Dunod, 1879
+_(1) Über die relative Wichtigkeit dieser beiden Fehlerquellen und die Mittel , um ihren Einfluss abzuschwächen , vgl. Mallard , Lehrbuch der Krystallographie I , 221 ; Paris, Dunod, 1879_
 
-(2) Betreffs der Fuess’schen Goniometer vgl. Liebisch , Bericht über die wissenschaftlichen Instrumente auf der Berliner Gewerbeaus
-stellung im Jahre 1879, herausgegeben von Loewenherz , 321 ; Berlin 1880, J. Springer,sowie Liebisch , physikalische Krystallographie; Leipzig 1891. Ferner sei auf das Zeiss’sche Krystallgoniometer verwiesen ( Czapski , Zeitschr. f. Instrumentenkunde 1893, 1 u. 242) . – L.
+_(2) Betreffs der Fuess’schen Goniometer vgl. Liebisch , Bericht über die wissenschaftlichen Instrumente auf der Berliner Gewerbeaus
+stellung im Jahre 1879, herausgegeben von Loewenherz , 321 ; Berlin 1880, J. Springer,sowie Liebisch , physikalische Krystallographie; Leipzig 1891. Ferner sei auf das Zeiss’sche Krystallgoniometer verwiesen ( Czapski , Zeitschr. f. Instrumentenkunde 1893, 1 u. 242) . – L._
 
 =============
 
@@ -30,7 +30,6 @@ stellung im Jahre 1879, herausgegeben von Loewenherz , 321 ; Berlin 1880, J. Spr
 wo sie den Werth Null hat , schwankt. Ein die Erde, die wir hier als punktförmig ansehen können , treffender Sonnenstrahl beschreibt folglich in einem Tag um die Weltachse einen Kegel, dessen Öffnungswinkel das Complement der für dieses Datum gültigen Declination (Fig. 189) ist.
 
 ![image](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)
-
 
 Wenn also in einem gegebenen Augenblick das Licht in einem Punkt C in der Richtung SC einfällt, welche mit der Weltachse CA zu reflectiren, in C einen Spiegel MM ' senkrecht zu der den Winkel SCA halbirenden Linie CB aufzustellen . Damit nun der reflectirte Strahl die Richtung CA beibehält, lässt man den Spiegel MM' um eine in der Richtung CA' liegenden Achse um 360° in 24 Stunden mit Hülfe eines gewöhnlichen Uhrwerks rotiren. Die Spiegelnormale bleibt dann beständig in dem Stundenkreis der Sonne (der Ebene, welche durch die Weltachse und den Mittelpunkt der Sonne geht) und , da sie den Winkel der einfallenden Strahlen mit der Weltachse beständig halbirt so werden die Strahlen auch stets in der Richtung dieser Achse reflectirt; mit Hülfe eines zweiten Spiegels kann man ihnen dann eine beliebige andere, unveränderliche Richtung geben.
 
@@ -257,9 +256,6 @@ arranged as in the preceding apparatus, so that the pointer A'B follows the shad
 
 describes its diurnal cone about the world axis. s'Gravesande now connects the mirror MM' to this movement by means of a guide attached to the end B of the pointer, in which a stem fixed perpendicularly to the mirror can slide and rotate freely (Fig. 192). The mirror is supported by a special vertical column, around which it rotates; moreover, it is movable about an orizontal axis, so that it can be given any orientation. 
 
-![image](https://user-images.githubusercontent.com/1620953/233352583-0a73f02f-1627-43d7-99a2-92ba38b61062.png)
-
-
 ===============
 
 **p.338**
@@ -288,11 +284,11 @@ This arrangement of the triangle is more advantageous
 -----------
 _(1)If we denote the length of the pointer A'B by R, then according to the above the center C of the mirror (if 2 denotes the geographical latitude) must be the distance_
 
-EQ1
+EQ1 ![image](https://user-images.githubusercontent.com/1620953/233364613-787c8531-1ced-482b-9793-d942f77c5b7a.png)
 
 _higher than the horizontal line passing through the center of rotation A', and this point C must have the (horizontal) distance _
 
-EQ2
+EQ2 ![image](https://user-images.githubusercontent.com/1620953/233364649-823ebfcd-e3d1-4555-b8a4-adbc3e4ddf53.png)
 
 _from A'. These lengths must be calculated and set precisely, a by no means easy task._
 
@@ -305,10 +301,16 @@ _(2)  Fuess's heliostat is based on the same principle, which, due to its simple
 
 than the previous apparatus, and the sliding of the movable side AF on the base is smoother. The side AF is held in the direction of the sun's rays by the rotation of a wheel EE' 
 
-![image](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
+![FIG.194](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
 parallel to the equator, on which AF is fixed 9 so that it makes an angle equal to the declination with the plane of the wheel. The usage
-of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork which can rotate about an axial distance, the latter in the direction Finally, the base line CF, which is movable at C about an axis perpendicular to AC, slides at F in a sleeve arranged at the end of the rod AF.When the apparatus is in action, the stem of the mirror describes itself AC an oblique cone, which has as its base the circle parallel to the equator described by the sleeve F. The sides AF and AC remain equal to one another and always lie one in the direction of the incident ray, the other in the direction AR, which hence will be the direction of the reflected ray.
+of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork
+
+==========
+
+**p.341**
+
+which can rotate about an axial distance, the latter in the direction Finally, the base line CF, which is movable at C about an axis perpendicular to AC, slides at F in a sleeve arranged at the end of the rod AF.When the apparatus is in action, the stem of the mirror describes itself AC an oblique cone, which has as its base the circle parallel to the equator described by the sleeve F. The sides AF and AC remain equal to one another and always lie one in the direction of the incident ray, the other in the direction AR, which hence will be the direction of the reflected ray.
 
 The apparatus is shown in Fig. 194. The wheel EE', which can be rotated about the vertical column Z and the horizontal axis X, can be inclined at will by means of the circle of latitude L and is brought in the desired direction with the aid of the alidade provided with diopters PP; it is even better to use a telescope which is focused on a mire located in the meridian.
 Clockwork HH' rotates this wheel uniformly once in 24 hours through 360° around axis A'A, which maintains its direction in space and is perpendicular to the plane of the wheel. The rod a B , which can be rotated about the axis a A parallel to the equatorial circle, can be inclined against this circle by the angle d, which is measured on the declination circle D.
