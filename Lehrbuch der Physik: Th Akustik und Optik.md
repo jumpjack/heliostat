@@ -285,7 +285,8 @@ ray. The construction of the apparatus is, it is true, simple, but the adjustmen
 
 In Gambey's heliostat (2), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), 
 
-![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
+![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)  ![image](https://user-images.githubusercontent.com/1620953/233464885-33067c4f-c7dd-4547-9d6d-59288e7919db.png)
+
 
 one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one, which has parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. 
 This arrangement of the triangle is more advantageous 
