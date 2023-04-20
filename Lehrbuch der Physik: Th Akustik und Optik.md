@@ -86,11 +86,11 @@ da ferner die Schenkel AB und AC von unveränderlicher Länge sind nur die Läng
 
 **p. 339**
 
-Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justirung so complicirt, (4) dass dieser Heliostat, trotz der Bemühungen von Charles , ihn praktisch brauchbar zu machen, nur selten benutzt worden ist.
+Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justirung so complicirt, (1) dass dieser Heliostat, trotz der Bemühungen von Charles , ihn praktisch brauchbar zu machen, nur selten benutzt worden ist.
 
 ## Heliostat von Gambey ##
 
-In dem Heliostaten von Gambey (2->5) ist, wie in demjenigen von s'Gravesande , ein gleichschenkeliges Dreieck ACF (Fig. 193) enthalten , 
+In dem Heliostaten von Gambey (2) ist, wie in demjenigen von s'Gravesande , ein gleichschenkeliges Dreieck ACF (Fig. 193) enthalten , 
 
 ![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
 
@@ -271,11 +271,11 @@ Furthermore, since the legs AB and AC are of invariable length, only the length 
 
 **p.339**
 
-ray. The construction of the apparatus is, it is true, simple, but the adjustment so complicated, (4) that this heliostat, in spite of Charles' efforts to make it practically useful, has seldom been used.
+ray. The construction of the apparatus is, it is true, simple, but the adjustment so complicated, (1) that this heliostat, in spite of Charles' efforts to make it practically useful, has seldom been used.
 
 **Heliostat from Gambey**
 
-In Gambey's heliostat (2->5), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), 
+In Gambey's heliostat (2), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), 
 
 ![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
 
