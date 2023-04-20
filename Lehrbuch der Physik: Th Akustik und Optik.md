@@ -92,7 +92,8 @@ Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justiru
 
 In dem Heliostaten von Gambey (2->5) ist, wie in demjenigen von s'Gravesande , ein gleichschenkeliges Dreieck ACF (Fig. 193) enthalten , 
 
-![image](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
+![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
+
 
 dessen eine Seite AF der Richtung der Sonnenstrahlen parallel ist, während die andere AC eine den reflectirten Strahlen parallele Richtung hat ; die Basis CF wird durch einen Stiel gebildet , der hier in die Verlängerung des Spiegels MM ' fällt. Diese Anordnung des Dreiecks ist vortheilhafter
 
@@ -276,7 +277,7 @@ ray. The construction of the apparatus is, it is true, simple, but the adjustmen
 
 In Gambey's heliostat (2->5), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), 
 
-![FIG.193](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
+![FIG.193](https://user-images.githubusercontent.com/1620953/233375220-cec177d1-5cd7-423e-aa44-10d611959912.png)
 
 one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one rays have parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. 
 This arrangement of the triangle is more advantageous 
