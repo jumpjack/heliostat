@@ -220,7 +220,8 @@ position in 1879, published by Loewenherz, 321; Berlin 1880, J. Springer, and Li
 
 where it has the value zero, fluctuates. A sunbeam hitting the earth, which we can regard here as a point, describes a cone in one day around the world axis, the opening angle of which is the complement of the declination (Fig. 189) valid for this date.
 
-![FIG.189](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)
+![FIG.189](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)  ![image](https://user-images.githubusercontent.com/1620953/233459157-d05c4ff6-0db3-4b89-80c9-b6d73336a34b.png)
+
 
 
 If, therefore, at a given moment the light falls at a point C in the direction SC, which is to be reflected with the world axis CA, set up a mirror MM' at C perpendicular to the line CB bisecting the angle SCA. In order that the reflected ray should remain in the direction CA, the mirror MM' is made to rotate about an axis lying in the direction CA' through 360° in 24 hours by means of an ordinary clockwork. The mirror normal then remains constantly in the hour circle of the sun (the plane which passes through the world axis and the center of the sun) and, since it constantly bisects the angle of the incident rays with the world axis, the rays also always become in the direction of this axis reflected; with the help of a second mirror you can then give them any other, unchanging direction.
