@@ -2,7 +2,7 @@ https://books.google.it/books?hl=it&lr=&id=P2oiAQAAMAAJ&oi=fnd&pg=PA301&dq=prazm
 
 # German
 
-**eliostaten**
+**415. Heliostaten**
 
 Das Sonnenlicht bietet für physikalische Versuche alle nur wünschenswerthen Vorzüge ; es ist billig , seine Intensität ist bedeutend und die Strahlen sind pa rallel ( er Winkel der äussersten Strahlen beträgt kaum einen halben Grad) ; aber die Richtung der Sonnenstrahlen bleibt nicht unveränderlich.
 
@@ -14,7 +14,13 @@ Diesem Mangel lässt sich dadurch einiger maassen abhelfen , dass man mit Hülfe
 
 Schon die Mitglieder der Academia del Cimento waren durch ihre Untersuchungen über die Geschwindigkeit des Lichts auf die Construction eines hierher ge hörigen Apparates geführt worden , und Borelli kann als Erfinder des Heliostaten betrachtet werden. Indessen stammt die erste, ebenso einfache wie schöne, praktische Lösung des Problems von Fahrenheit.
 
-In 24 Stunden beschreibt die Sonne scheinbar einen dem Äquator parallelen Kreis , der sich im Lauf des Jahres langsam verschiebt, indem die auf einem Meridian gemessene Entfernung desselben vom Äquator (die Declination) von einer Sonnenwende, wo sie ihren grössten Werth von 23 ° 27 ' erreicht, bis zu einem Äquinoctium, wo sie den Werth Null hat , schwankt. Ein die Erde, die wir hier als punktförmig ansehen können , treffender Sonnenstrahl beschreibt folglich in einem Tag um die Weltachse einen Kegel, dessen Öffnungswinkel das Complement der für dieses Datum gültigen Declination (Fig. 189) ist.
+In 24 Stunden beschreibt die Sonne scheinbar einen dem Äquator parallelen Kreis , der sich im Lauf des Jahres langsam verschiebt, indem die auf einem Meridian gemessene Entfernung desselben vom Äquator (die Declination) von einer Sonnenwende, wo sie ihren grössten Werth von 23 ° 27 ' erreicht, bis zu einem Äquinoctium,
+
+notes 1,2
+
+-----------
+
+wo sie den Werth Null hat , schwankt. Ein die Erde, die wir hier als punktförmig ansehen können , treffender Sonnenstrahl beschreibt folglich in einem Tag um die Weltachse einen Kegel, dessen Öffnungswinkel das Complement der für dieses Datum gültigen Declination (Fig. 189) ist.
 
 ![image](https://user-images.githubusercontent.com/1620953/233344979-77c1c43d-e737-4a31-9a53-e239fcf19863.png)
 
@@ -23,13 +29,21 @@ Wenn also in einem gegebenen Augenblick das Licht in einem Punkt C in der Richtu
 
 Die Einrichtung des Apparates ( Fig. 190) ist leicht verständlich. Er besteht aus einem Uhrwerk, das beliebig orientirt werden kann , und dessen Achse sich in 24 Stunden einmal um sich selbst dreht; die letztere trägt einen in einem Scharnier senkrecht zu ihr beweglichen Spiegel.
 
-Zur Justirung des Apparats hat man zuerst die Achse des Uhrwerks in die Richtung der Weltachse zu bringen; nun ist aber bekanntlich die Polhöhe eines Orts gleich seiner geographischen Breite ; die Achse des Uhrwerks muss also mit der Verticalen einen Winkel bilden , der das Complement der geographischen Breite des Ortes ist . Dann stellt man die Achse des Apparates in den Meridian , den man immer mit genügender Genauigkeit bestimmen kann (im Nothfall mit Hülfe eines Kompasses) . Wenn das Uhrwerk die richtige Zeit zeigt, so fällt die Ebene, in welcher die Achse, die Spiegelnormale und der Zeiger liegen, mit dem Stundenkreis der Sonne zusammen .
+Zur Justirung des Apparats hat man zuerst die Achse des Uhrwerks in die Richtung der Weltachse zu bringen; nun ist aber bekanntlich die Polhöhe eines Orts gleich seiner geographischen Breite ; die Achse des Uhrwerks muss also mit der Verticalen einen Winkel bilden , der das Complement der geographischen Breite des Ortes ist . Dann stellt man die Achse des Apparates in den Meridian , den man immer mit genügender Genauigkeit bestimmen kann (im Nothfall mit Hülfe eines Kompasses) . Wenn das Uhrwerk die richtige Zeit zeigt, so fällt die Ebene, in welcher die Achse, die Spiegelnormale und der Zeiger liegen, mit dem Stundenkreis der Sonne zusammen.
+
+-------
+
+**p.336**
 
 Der Spiegelnormalen hat man schliesslich eine solche Richtung zu geben , dass ihr Winkel mit der Weltachse gleich dem halben Complement der Declination (1) ist. Wenn die Uhr geht, folgt der Spiegel dem Gang der Sonne und die Lichtstrahlen werden beständig in der Richtung der Weltachse reflectirt ; mit Hülfe eines zweiten Spiegels NN' kann man dann den Strahlen in ein facher Weise die gewünschte Richtung AR geben.
 
 ![image](https://user-images.githubusercontent.com/1620953/233346964-6c5ae1f2-71d7-48bf-a550-661a8f8d6efb.png)
 
 Die Anwendung eines zweiten Spiegels ist offenbar ein Nachtheil , der übrigens im Vergleich mit der Schwierigkeit der Justirung bei anderen Heliostaten nicht schwer ins Gewicht fällt. An Stelle der Spiegel kann man totalreflectirende Prismen verwenden und auf diese Weise den Verlust an Lichtintensität bedeutend verringern.(2)
+
+---------
+
+**p. 337**
 
 ## Heliostat von s'Gravesande ##
 s'Gravesande (3) gelang es, mit Hülfe eines einzigen Spiegels die Sonnenstrahlen in einer beliebigen Richtung zu reflectiren . Der Constructionsgedanke ist der, ein gleichschenkliges Dreieck zu verwirklichen , dessen einer Schenkel beständig in der Richtung des einfallenden , der andere in der des reflectirten Strahls liegt , und dessen Basis senkrecht zum Spiegel steht. Ein Uhrwerk HH ist in der nämlichen Weise
@@ -39,11 +53,24 @@ wie beim vorigen Apparat so angeordnet , dass der Zeiger A'B dem Schatten der Ac
 
 seinen täglichen Kegel um die Weltachse beschreibt. s’Gravesande verbindet nun den Spiegel MM' mit diesem Uhrwerk mit Hülfe einer am Ende B des Zeigers angebrachten Führung, in welcher ein senkrecht am Spiegel befestigter Stiel gleiten und sich frei drehen kann (Fig. 192) . Der Spiegel wird von einer besonderen, verticalen Säule getragen, um die er sich drehen lässt ; ferner ist er um eine orizontale Achse beweglich , so dass man ihm jede beliebige Orientirung geben kann . Durch Verschiebung der Säule und 
 
+notes: half previous, note 1
+
+-----------
+
+**p. 338**
+
+
 Verstellung in der Höhe wird der Punkt C in eine solche Lage gebracht, dass die Verlängerung des reflectirten Strahls die Weltachse in einem von C und B gleich weit entfernten Punkt A trifft. Das Verstellung in der Höhe wird der Punkt C in eine solche Lage ge bracht, dass die Verlängerung des reflectirten Strahls die Weltachse in einem von C und B gleich weit entfernten Punkt A trifft. Das Dreieck ABC wird dann beständig mit der Einfallsebene zusammenfallen ; 
 
 ![image](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)
 
-da ferner die Schenkel AB und AC von unveränderlicher Länge sind nur die Länge der Basis ändert sich ), so bleibt das Dreieck gleichschenklig und folglich sind auch die den Winkeln C und B des Dreiecks gleichen Winkel RCB' und SCB stets einander gleich ; CR ist dann die feste Richtung des reflectirten Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justirung so complicirt, (4) dass dieser Heliostat, trotz der Bemühungen von Charles , ihn praktisch brauchbar zu machen, nur selten benutzt worden ist.
+da ferner die Schenkel AB und AC von unveränderlicher Länge sind nur die Länge der Basis ändert sich ), so bleibt das Dreieck gleichschenklig und folglich sind auch die den Winkeln C und B des Dreiecks gleichen Winkel RCB' und SCB stets einander gleich ; CR ist dann die feste Richtung des reflectirten 
+
+--------
+
+**p. 339**
+
+Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justirung so complicirt, (4) dass dieser Heliostat, trotz der Bemühungen von Charles , ihn praktisch brauchbar zu machen, nur selten benutzt worden ist.
 
 ## Heliostat von Gambey ##
 
@@ -51,16 +78,74 @@ In dem Heliostaten von Gambey (2->5) ist, wie in demjenigen von s'Gravesande , e
 
 ![image](https://user-images.githubusercontent.com/1620953/233353738-a1e984a0-93ff-453d-a722-eec0c3f3394b.png)
 
-dessen eine Seite AF der Richtung der Sonnenstrahlen parallel ist, während die andere AC eine den reflectirten Strahlen parallele Richtung hat ; die Basis CF wird durch einen Stiel gebildet , der hier in die Verlängerung des Spiegels MM ' fällt. Diese Anordnung des Dreiecks ist vortheilhafter wie bei dem vorhergehenden Apparat, und das Gleiten der beweglichen Seite AF auf der Basis geht sanfter vor sich. Die Seite AF wird in der Richtung der Sonnenstrahlen gehalten durch die Drehung eines dem Äquator parallelen Rades EE' , auf 
+dessen eine Seite AF der Richtung der Sonnenstrahlen parallel ist, während die andere AC eine den reflectirten Strahlen parallele Richtung hat ; die Basis CF wird durch einen Stiel gebildet , der hier in die Verlängerung des Spiegels MM ' fällt. Diese Anordnung des Dreiecks ist vortheilhafter
+
+---------------
+
+**p. 340**
+
+wie bei dem vorhergehenden Apparat, und das Gleiten der beweglichen Seite AF auf der Basis geht sanfter vor sich. Die Seite AF wird in der Richtung der Sonnenstrahlen gehalten durch die Drehung eines dem Äquator parallelen Rades EE' , auf 
 
 ![image](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
-welchem AF so befestigt ist 9, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, welch' letzteres in die Richtung des reflectirten Strahles gebracht wird. Die Grundlinie CF endlich , die in C um eine zu AC senkrechte Achse beweglich ist , gleitet in F in einer an dem Ende der Stange AF angeordneten Hülse. Wenn der Apparat in Thätigkeit ist , beschreibt der Stiel des Spiegels um AC einen schiefen Kegel, welcher den von der Hülse F beschriebenen , dem Äquator parallelen Kreis zur Basis hat. Die Seiten AF und AC bleiben einander gleich und liegen dauernd die eine in der Richtung des einfallenden Strahles , die andere in der Rich tung AR, welche folglich die Richtung des reflectirten Strahls sein wird.
+welchem AF so befestigt ist 9, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, 
+
+------------
+
+**p.341**
+
+welch' letzteres in die Richtung des reflectirten Strahles gebracht wird. Die Grundlinie CF endlich , die in C um eine zu AC senkrechte Achse beweglich ist , gleitet in F in einer an dem Ende der Stange AF angeordneten Hülse. Wenn der Apparat in Thätigkeit ist , beschreibt der Stiel des Spiegels um AC einen schiefen Kegel, welcher den von der Hülse F beschriebenen , dem Äquator parallelen Kreis zur Basis hat. Die Seiten AF und AC bleiben einander gleich und liegen dauernd die eine in der Richtung des einfallenden Strahles , die andere in der Rich tung AR, welche folglich die Richtung des reflectirten Strahls sein wird.
 
 Der Apparat ist in Fig. 194 dargestellt. Das um die verti cale Säule Z und die horizontale Achse X drehbare Rad EE' kann mittels des Breitenkreises L beliebig geneigt werden und wird mit Hülfe der mit Dioptern PP versehenen Alhidade in die gewünschte Richtung gebracht ; besser noch verwendet man ein Fernrohr, das man auf eine im Meridian befindliche Mire einstellt.
 Das Uhrwerk HH' dreht dieses Rad gleichförmig in 24 Stunden einmal um 360 ° um die Achse A'A , die ihre Richtung im Raum beibehält und zu der Ebene des Rades senkrecht steht. Der Stab a B, der um die zum Äquatorkreis parallele Achse a A dreh bar ist , kann gegen diesen Kreis um den Winkeld geneigt werden , welcher auf dem Deklinationskreis D gemessen wird.
 In F endigt dieser Stab in einer Hülse , in welcher der Stiel Q des Spiegels gleiten und sich drehen kann. An dem Ende der Achse A ist der Stiel der Gabel AC befestigt, die zwischen ihren Zinken den Spiegel M'M hält. Der Apparat lässt sich ohne Ausführung von Rechnungen leicht einstellen und arbeitet sehr regelmässig , indessen ist er ziemlich theuer. Soll der Heliostat an einem bestimmten Platz bleiben , so sind übrigens auch Vereinfachungen möglich. Man kann dabei sogar einen allen Heliostaten Constructionen gemeinsamen Nachtheil vermeiden , nämlich den, dass der den Sonnenstrahlen unmittelbar ausgesetzte Apparat sich stark erwärmt und nicht mehr richtig justirt bleibt. Thatsächlich lässt sich ganz leicht das Uhrwerk von dem Apparat vollständig trennen und im Laboratorium aufstellen . Eine kräftige Pendeluhr genügt dann vollständig , um mittels einer Übertragung den aussen aufgestellten Spiegel in Bewegung zu setzen und verbürgt einen vollständig gleichmässigen Gang: (1->6)
 
+------------
+
+**p.342**
+
+Heliostat von  Silbermann (1)
+
+
+
+![FIG.195 - Silbermann](https://user-images.githubusercontent.com/1620953/233355637-e1099f8b-2323-463f-9337-b845300ed95a.png)
+
+note 1
+
+------------
+
+**p.343**
+
+**Heliostat von Foucault**
+
+
+------------
+
+**p.344**
+
+![FIG.196](https://user-images.githubusercontent.com/1620953/233355746-5b9c5a83-905f-4cd7-b151-525031f4f3b0.png)
+
+------------
+
+**p.345**
+
+**Siderostat**
+
+![FIG.197](https://user-images.githubusercontent.com/1620953/233355876-75f86e9f-1b93-4c02-b481-1793752181f5.png)
+
+------------
+
+**p.346**
+
+![FIG.198](https://user-images.githubusercontent.com/1620953/233355963-d9aeca9b-e1e5-4e98-b4c9-41bc06828784.png)
+
+Note 1
+
+------------
+
+**p.347**
+
+(end)
 
 ----------------
 
