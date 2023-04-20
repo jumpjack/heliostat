@@ -2,11 +2,17 @@ https://books.google.it/books?hl=it&lr=&id=P2oiAQAAMAAJ&oi=fnd&pg=PA301&dq=prazm
 
 # German
 
-**eliostaten** . Das Sonnenlicht bietet für physikalische Versuche alle nur wünschenswerthen Vorzüge ; es ist billig , seine Intensität ist bedeutend und die Strahlen sind pa rallel ( er Winkel der äussersten Strahlen beträgt kaum einen halben Grad) ; aber die Richtung der Sonnenstrahlen bleibt nicht unveränderlich.
+**eliostaten**
 
-**Heliostaten** . Diesem Mangel lässt sich dadurch einiger maassen abhelfen , dass man mit Hülfe eines ausserhalb des Be obachtungsraums angebrachten Spiegels von Zeit zu Zeit dem Lichtbündel wieder die gewünschte Richtung giebt , indem man mit der Hand mittels zweier Triebe den Spiegel um zwei zu einander senkrechte Achsen dreht. Wenn auch ein solch einfacher Heliostat nützlich und oft auch ausreichend ist , so lässt er sich doch nicht mit den werthvollen Constructionen vergleichen, welche beliebig lange die Sonnenstrahlen in einer Richtung zu reflectiren gestatten.
+Das Sonnenlicht bietet für physikalische Versuche alle nur wünschenswerthen Vorzüge ; es ist billig , seine Intensität ist bedeutend und die Strahlen sind pa rallel ( er Winkel der äussersten Strahlen beträgt kaum einen halben Grad) ; aber die Richtung der Sonnenstrahlen bleibt nicht unveränderlich.
 
-Heliostat von Fahrenheit. Schon die Mitglieder der Academia del Cimento waren durch ihre Untersuchungen über die Geschwindigkeit des Lichts auf die Construction eines hierher ge hörigen Apparates geführt worden , und Borelli kann als Erfinder des Heliostaten betrachtet werden. Indessen stammt die erste, ebenso einfache wie schöne, praktische Lösung des Problems von Fahrenheit.
+**Heliostaten**
+
+Diesem Mangel lässt sich dadurch einiger maassen abhelfen , dass man mit Hülfe eines ausserhalb des Be obachtungsraums angebrachten Spiegels von Zeit zu Zeit dem Lichtbündel wieder die gewünschte Richtung giebt , indem man mit der Hand mittels zweier Triebe den Spiegel um zwei zu einander senkrechte Achsen dreht. Wenn auch ein solch einfacher Heliostat nützlich und oft auch ausreichend ist , so lässt er sich doch nicht mit den werthvollen Constructionen vergleichen, welche beliebig lange die Sonnenstrahlen in einer Richtung zu reflectiren gestatten.
+
+**Heliostat von Fahrenheit**
+
+Schon die Mitglieder der Academia del Cimento waren durch ihre Untersuchungen über die Geschwindigkeit des Lichts auf die Construction eines hierher ge hörigen Apparates geführt worden , und Borelli kann als Erfinder des Heliostaten betrachtet werden. Indessen stammt die erste, ebenso einfache wie schöne, praktische Lösung des Problems von Fahrenheit.
 
 In 24 Stunden beschreibt die Sonne scheinbar einen dem Äquator parallelen Kreis , der sich im Lauf des Jahres langsam verschiebt, indem die auf einem Meridian gemessene Entfernung desselben vom Äquator (die Declination) von einer Sonnenwende, wo sie ihren grössten Werth von 23 ° 27 ' erreicht, bis zu einem Äquinoctium, wo sie den Werth Null hat , schwankt. Ein die Erde, die wir hier als punktförmig ansehen können , treffender Sonnenstrahl beschreibt folglich in einem Tag um die Weltachse einen Kegel, dessen Öffnungswinkel das Complement der für dieses Datum gültigen Declination (Fig. 189) ist.
 
@@ -25,12 +31,61 @@ Der Spiegelnormalen hat man schliesslich eine solche Richtung zu geben , dass ih
 
 Die Anwendung eines zweiten Spiegels ist offenbar ein Nachtheil , der übrigens im Vergleich mit der Schwierigkeit der Justirung bei anderen Heliostaten nicht schwer ins Gewicht fällt. An Stelle der Spiegel kann man totalreflectirende Prismen verwenden und auf diese Weise den Verlust an Lichtintensität bedeutend verringern.(2)
 
+## Heliostat von s'Gravesande ##
+s'Gravesande (3) gelang es, mit Hülfe eines einzigen Spiegels die Sonnenstrahlen in einer beliebigen Richtung zu reflectiren . Der Constructionsgedanke ist der, ein gleichschenkliges Dreieck zu verwirklichen , dessen einer Schenkel beständig in der Richtung des einfallenden , der andere in der des reflectirten Strahls liegt , und dessen Basis senkrecht zum Spiegel steht. Ein Uhrwerk HH ist in der nämlichen Weise
+wie beim vorigen Apparat so angeordnet , dass der Zeiger A'B dem Schatten der Achse A A ' auf dem Zifferblatt folgt, das dem Äquator parallel ist , während der Strahl SB (Fig. 191 ) 
+
+![image](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png)
+
+seinen täglichen Kegel um die Weltachse beschreibt. s’Gravesande verbindet nun den Spiegel MM' mit diesem Uhrwerk mit Hülfe einer am Ende B des Zeigers angebrachten Führung, in welcher ein senkrecht am Spiegel befestigter Stiel gleiten und sich frei drehen kann (Fig. 192) . Der Spiegel wird von einer besonderen, verticalen Säule getragen, um die er sich drehen lässt ; ferner ist er um eine orizontale Achse beweglich , so dass man ihm jede beliebige Orientirung geben kann . Durch Verschiebung der Säule und 
+
+![image](https://user-images.githubusercontent.com/1620953/233352583-0a73f02f-1627-43d7-99a2-92ba38b61062.png)
+
+
+Verstellung in der Höhe wird der Punkt C in eine solche Lage gebracht, dass die Verlängerung des reflectirten Strahls die Weltachse in einem von C und B gleich weit entfernten Punkt A trifft. Das Verstellung in der Höhe wird der Punkt C in eine solche Lage ge bracht, dass die Verlängerung des reflectirten Strahls die Weltachse in einem von C und B gleich weit entfernten Punkt A trifft. Das Dreieck ABC wird dann beständig mit der Einfallsebene zusammenfallen ; 
+
+![image](https://user-images.githubusercontent.com/1620953/233352852-6dd1cf68-cccc-4672-8078-365201d1e6ca.png)
+
+da ferner die Schenkel AB und AC von unveränderlicher Länge sind nur die Länge der Basis ändert sich ), so bleibt das Dreieck gleichschenklig und folglich sind auch die den Winkeln C und B des Dreiecks gleichen Winkel RCB' und SCB stets einander gleich ; CR ist dann die feste Richtung des reflectirten Strahls. Die Construction des Apparats ist allerdings einfach , aber die Justirung so complicirt, (4) dass dieser Heliostat, trotz der Bemühungen von Charles , ihn praktisch brauchbar zu machen, nur selten benutzt worden ist.
+
+## Heliostat von Gambey ##
+
+In dem Heliostaten von Gambey (2->5) ist, wie in demjenigen von s'Gravesande , ein gleichschenkeliges Dreieck ACF (Fig. 193) enthalten , dessen eine Seite AF der Richtung der Sonnenstrahlen parallel ist, während die andere AC eine den reflectirten Strahlen parallele Richtung hat ; die Basis CF wird durch einen Stiel gebildet , der hier in die Verlängerung des Spiegels MM ' fällt. Diese Anordnung des Dreiecks ist vortheilhafter wie bei dem vorhergehenden Apparat, und das Gleiten der beweglichen Seite AF auf der Basis geht sanfter vor sich. Die Seite AF wird in der Richtung der Sonnenstrahlen gehalten durch die Drehung eines dem Äquator parallelen Rades EE' , auf welchem AF so befestigt ist 9, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, welch' letzteres in die Richtung des reflectirten Strahles gebracht wird. Die Grundlinie CF endlich , die in C um eine zu AC senkrechte Achse beweglich ist , gleitet in F in einer an dem Ende der Stange AF angeordneten Hülse. Wenn der Apparat in Thätigkeit ist , beschreibt der Stiel des Spiegels um AC einen schiefen Kegel, welcher den von der Hülse F beschriebenen , dem Äquator parallelen Kreis zur Basis hat. Die Seiten AF und AC bleiben einander gleich und liegen dauernd die eine in der Richtung des einfallenden Strahles , die andere in der Rich tung AR, welche folglich die Richtung des reflectirten Strahls sein wird.
+
+Der Apparat ist in Fig. 194 dargestellt. Das um die verti cale Säule Z und die horizontale Achse X drehbare Rad EE' kann mittels des Breitenkreises L beliebig geneigt werden und wird mit Hülfe der mit Dioptern PP versehenen Alhidade in die gewünschte Richtung gebracht ; besser noch verwendet man ein Fernrohr, das man auf eine im Meridian befindliche Mire einstellt.
+Das Uhrwerk HH' dreht dieses Rad gleichförmig in 24 Stunden einmal um 360 ° um die Achse A'A , die ihre Richtung im Raum beibehält und zu der Ebene des Rades senkrecht steht. Der Stab a B, der um die zum Äquatorkreis parallele Achse a A dreh bar ist , kann gegen diesen Kreis um den Winkeld geneigt werden , welcher auf dem Deklinationskreis D gemessen wird.
+In F endigt dieser Stab in einer Hülse , in welcher der Stiel Q des Spiegels gleiten und sich drehen kann. An dem Ende der Achse A ist der Stiel der Gabel AC befestigt, die zwischen ihren Zinken den Spiegel M'M hält. Der Apparat lässt sich ohne Ausführung von Rechnungen leicht einstellen und arbeitet sehr regelmässig , indessen ist er ziemlich theuer. Soll der Heliostat an einem bestimmten Platz bleiben , so sind übrigens auch Vereinfachungen möglich. Man kann dabei sogar einen allen Heliostaten Constructionen gemeinsamen Nachtheil vermeiden , nämlich den, dass der den Sonnenstrahlen unmittelbar ausgesetzte Apparat sich stark erwärmt und nicht mehr richtig justirt bleibt. Thatsächlich lässt sich ganz leicht das Uhrwerk von dem Apparat vollständig trennen und im Laboratorium aufstellen . Eine kräftige Pendeluhr genügt dann vollständig , um mittels einer Übertragung den aussen aufgestellten Spiegel in Bewegung zu setzen und verbürgt einen vollständig gleichmässigen Gang: (1->6)
+
+
 ----------------
 
 (1) Die Einstellung lässt sich leicht controliren , wenn der Apparat, wie der Heliostat von Silbermann , mit einem eine kleine Öffnung entaltenden Diaphragma und einem kleinen Schirm versehen ist ; bei richtiger Justirung müssen die durch das Diaphragma eintretenden Strahlen auf die Mitte des Schirms fallen .
 
 (2) Brünner verfertigt sehr zweckentsprechende Apparate dieser Art; von Monckhoven wird fur photographische Zwecke ein einfaches und solides Modell in grossen Dimensionen ausgeführt.
 Eine sinnreiche Lösung desselben Problems liefert der Heliostat von Hartnack und Prazmowski , in welchem der Spiegel , in dessen Ebene die Weltachse liegt, sich einmal in 48 Stunden um die letztere dreht ; hierdurch bleibt die Richtung des reflectirten Strahls stets die gleiche. (Vgl. La nature 5, 881; 1877.)
+
+
+(3) s'Gravesande, Physices elementa mathematica , 715 ; Lugd .
+Batav.; 1720.
+
+eq1
+
+höher als die durch das Rotationscentrum A' gehende Horizontale liegen, und dieser Punkt C muss von A' die (horizontale) Entfernung
+
+eq2
+
+haben . Diese Längen müssen genau berechnet und eingestellt werden,
+eine keineswegs einfache Aufgabe.
+
+(1->4) Bezeichnen wir die Länge des Zeigers A'B mit R, so muss nach dem Obigen der Mittelpunkt C des Spiegels ( wenn 2 die geographische Breite bezeichnet) um die Strecke
+
+(2->5)
+ Auf dem gleichen Princip beruht der Fuess'sche Heliostat , der durch seine einfache, zuverlässige und compacte Construction (Declination und Breite lassen sich z. B. an einem mit doppelter Theilung versehenen Kreisbogen einstellen ; das Gewicht des Spiegels wird zum grössten Theil durch eine Frictionsrolle aufgenommen u. s. w. ) vortheil haft vor anderen Apparaten auszeichnet. Vgl. Loewenherz , Wiss.
+Instr. a. d. Berliner Gewerbeausstellung 1879 , 398) . Eine vereinfachte Form, die sich besonders zum Gebrauch an höheren Schulen eignet, ist in der Zeitschr. f . d. phys. u. chem. Unterricht 9 , 157 , 1896 , beschrieben. - L.
+
+(1->6)
+ Vgl. z . B. Johnston's Heliostat in der Ausführung von Schmidt & Haensch in Berlin , Löwenherz , Wiss. Instr. a. d. Berliner Gewerbeausstellung 1879, S. 402. – L.
+Violle , Physik. II. 2. 
 
 ...
 
@@ -59,9 +114,56 @@ Finally, one has to give the mirror normal such a direction that its angle with 
 
 The use of a second mirror is obviously a disadvantage, which, by the way, does not weigh heavily in comparison with the difficulty of adjusting with other heliostats. Totally reflecting prisms can be used in place of mirrors, and in this way the loss of light intensity can be reduced considerably. (2)
 
+--- 
+
+*Heliostat from s'Gravesande*
+
+s'Gravesande (3) succeeded in reflecting the sun's rays in any direction with the help of a single mirror. The idea of construction is to realize an isosceles triangle, one side of which lies constantly in the direction of the incident ray, the other in that of the reflected ray, and the base of which is perpendicular to the mirror. A clockwork HH is in the same way
+arranged as in the preceding apparatus, so that the pointer A'B follows the shadow of the axis AA' on the dial, which is parallel to the equator, while the ray SB (Fig. 191)
+
+![image](https://user-images.githubusercontent.com/1620953/233352341-3d4ecaa2-5000-4617-8a04-fc2d0a44c574.png)
+
+describes its diurnal cone about the world axis. s'Gravesande now connects the mirror MM' to this movement by means of a guide attached to the end B of the pointer, in which a stem fixed perpendicularly to the mirror can slide and rotate freely (Fig. 192). The mirror is supported by a special vertical column, around which it rotates; moreover, it is movable about an orizontal axis, so that it can be given any orientation. 
+
+![image](https://user-images.githubusercontent.com/1620953/233352583-0a73f02f-1627-43d7-99a2-92ba38b61062.png)
+
+By moving the column and adjusting its height, the point C is brought into such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. By adjusting the height, the point C is placed in such a position that the prolongation of the reflected ray strikes the world axis at a point A equidistant from C and B. The ABC will then constantly coincide with the plane of incidence; Furthermore, since the legs AB and AC are of invariable length, only the length of the base changes), the triangle remains isosceles, and consequently the angles RCB' and SCB, which are equal to the angles C and B of the triangle, are always equal to one another; CR is then the fixed direction of the reflected ray. The construction of the apparatus is, it is true, simple, but the adjustment so complicated, (4) that this heliostat, in spite of Charles' efforts to make it practically useful, has seldom been used.
+
+**Heliostat from Gambey**
+
+In Gambey's heliostat (2->5), as in that of s'Gravesande, there is an isosceles triangle ACF (Fig. 193), one side AF of which is parallel to the direction of the sun's rays, while the other AC is a reflected one rays have parallel direction ; the base CF is formed by a stem which here falls in the extension of the mirror MM'. This arrangement of the triangle is more advantageous than the previous apparatus, and the sliding of the movable side AF on the base is smoother. The side AF is held in the direction of the sun's rays by the rotation of a wheel EE' parallel to the equator, on which AF is fixed 9 so that it makes an angle equal to the declination with the plane of the wheel. The usage
+of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork which can rotate about an axial distance, the latter in the direction Finally, the base line CF, which is movable at C about an axis perpendicular to AC, slides at F in a sleeve arranged at the end of the rod AF.When the apparatus is in action, the stem of the mirror describes itself AC an oblique cone, which has as its base the circle parallel to the equator described by the sleeve F. The sides AF and AC remain equal to one another and always lie one in the direction of the incident ray, the other in the direction AR, which hence will be the direction of the reflected ray.
+
+The apparatus is shown in Fig. 194. The wheel EE', which can be rotated about the vertical column Z and the horizontal axis X, can be inclined at will by means of the circle of latitude L and is brought in the desired direction with the aid of the alidade provided with diopters PP; it is even better to use a telescope which is focused on a mire located in the meridian.
+Clockwork HH' rotates this wheel uniformly once in 24 hours through 360° around axis A'A, which maintains its direction in space and is perpendicular to the plane of the wheel. The rod a B , which can be rotated about the axis a A parallel to the equatorial circle, can be inclined against this circle by the angle d, which is measured on the declination circle D.
+At F this rod ends in a sleeve , in which the stem Q of the mirror can slide and rotate. At the end of the axis A is fixed the stem of the fork AC, which holds the mirror M'M between its tines. The apparatus can easily be adjusted without performing calculations, and works very regularly, although it is rather expensive. If the heliostat is to remain in a certain place, simplifications are also possible. One can even avoid a disadvantage common to all heliostat constructions, namely that the apparatus, which is directly exposed to the sun's rays, heats up considerably and no longer remains correctly adjusted. In fact, the clockwork can be completely separated from the apparatus and set up in the laboratory quite easily. A powerful pendulum clock is then completely sufficient to set the mirror set up outside in motion by means of a transmission and guarantees a completely even movement: (1->6)
+
+(3) s'Gravesande, Physices elementa mathematica, 715; Lugd .
+Batav.; 1720
+
+eq1
+
+higher than the horizontal passing through the center of rotation A', and this point C must be the (horizontal) distance from A'
+
+eq2
+
+have . These lengths must be calculated and set precisely,
+a by no means easy task.
+
+
 
 ----------------
 (1) The adjustment can be easily controlled if the apparatus, like the Silbermann heliostat, is provided with a diaphragm containing a small opening and a small screen; with proper adjustment, the rays entering through the diaphragm must fall on the center of the screen.
 
 (2) Brünner manufactures very useful apparatus of this kind; von Monckhoven made a simple and solid model in large dimensions for photographic purposes.
 An ingenious solution to the same problem is provided by Hartnack and Prazmowski's heliostat, in which the mirror, in the plane of which lies the axis of the world, revolves around the latter once every 48 hours; hence the direction of the reflected ray always remains the same. (Cf. La nature 5, 881; 1877.)
+
+(1->4) If we denote the length of the pointer A'B by R, then according to the above the center point C of the mirror (when 2 denotes the geographical latitude) must be around the distance
+
+(2->5)
+  Fuess's heliostat is based on the same principle, which, due to its simple, reliable and compact construction (declination and width can be adjusted, for example, on a circular arc provided with double graduations; the weight of the mirror is largely controlled by a friction roller recorded, etc.) advantageous compared to other apparatuses. See Loewenherz, Wiss.
+instruments a. i.e. Berlin trade exhibition 1879, 398). A simplified form, which is particularly suitable for use in secondary schools, is published in the Zeitschr. f. i.e. phys. and chem. Lessons 9, 157, 1896. - L
+
+(1->6)
+  See z. B. Johnston's heliostat in the execution of Schmidt & Haensch in Berlin, Löwenherz, Wiss. instruments a. i.e. Berlin trade exhibition 1879, p. 402. – L.
+Violet, Physics. II. 2.
