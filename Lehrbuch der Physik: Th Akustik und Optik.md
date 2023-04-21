@@ -69,7 +69,7 @@ seinen täglichen Kegel um die Weltachse beschreibt. s’Gravesande verbindet nu
 _Art; von Monckhoven wird fur photographische Zwecke ein einfaches und solides Modell in grossen Dimensionen ausgeführt.
 Eine sinnreiche Lösung desselben Problems liefert der Heliostat von Hartnack und Prazmowski , in welchem der Spiegel , in dessen Ebene die Weltachse liegt, sich einmal in 48 Stunden um die letztere dreht ; hierdurch bleibt die Richtung des reflectirten Strahls stets die gleiche. (Vgl. La nature 5, 881; 1877.)_
 
-_(1) s'Gravesande, [Physices elementa mathematica , 715](https://books.google.it/books?id=z7U-AAAAcAAJ&hl=it&pg=PA714#v=onepage&q&f=false) ; Lugd . Batav.; 1720._
+_(1) s'Gravesande, [Physices elementa mathematica , 715](https://books.google.it/books?hl=it&id=pG414R2jTBMC&q=heliostata#v=onepage&q&f=false) ; Lugd . Batav.; 1720._
 
 
 =============
@@ -263,7 +263,7 @@ arranged as in the preceding apparatus, so that the pointer A'B follows the shad
 
 describes its diurnal cone about the world axis. s'Gravesande now connects the mirror MM' to this movement by means of a guide attached to the end B of the pointer, in which a stem fixed perpendicularly to the mirror can slide and rotate freely (Fig. 192). The mirror is supported by a special vertical column, around which it rotates; moreover, it is movable about an orizontal axis, so that it can be given any orientation. 
 
-_(1) s'Gravesande, [Physices elementa mathematica , 715](https://books.google.it/books?id=z7U-AAAAcAAJ&hl=it&pg=PA714#v=onepage&q&f=false) ; Lugd . Batav.; 1720._
+_(1) s'Gravesande, [Physices elementa mathematica , 715](https://books.google.it/books?hl=it&id=pG414R2jTBMC&q=heliostata#v=onepage&q&f=false) ; Lugd . Batav.; 1720._
 
 ===============
 
