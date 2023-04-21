@@ -321,8 +321,11 @@ than the previous apparatus, and the sliding of the movable side AF on the base 
 
 ![FIG.194](https://user-images.githubusercontent.com/1620953/233590263-4f8ab47b-34bb-49a4-8f91-dfd17a8893c4.png)
 
-parallel to the equator, on which AF is fixed so that it makes an angle equal to the declination with the plane of the wheel. The usage
-of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork
+parallel to the equator, on which AF is fixed in such a way that it forms an angle equal to the declination with the plane of the wheel. The use of the two Silbermann marks (which can be easily attached to the apparatus) facilitates the orientation of this side  and allows its position to be controlled at any time.
+
+The side AC is formed by a fork that can rotate around an axial piece, the latter being brought in the direction of the reflected beam. 
+Finally, the baseline CF , which is movable in C about an axis perpendicular to AC, slides in F in a sleeve placed at the end of the rod AF. If the apparatus is in
+Activity is , the stem of the mirror around AC describes an oblique cone, which has the circle parallel to the equator described by the sleeve F at its base.
 
 ==========
 
