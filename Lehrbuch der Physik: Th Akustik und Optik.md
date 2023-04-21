@@ -323,18 +323,23 @@ than the previous apparatus, and the sliding of the movable side AF on the base 
 
 parallel to the equator, on which AF is fixed in such a way that it forms an angle equal to the declination with the plane of the wheel. The use of the two Silbermann marks (which can be easily attached to the apparatus) facilitates the orientation of this side  and allows its position to be controlled at any time.
 
-The side AC is formed by a fork that can rotate around an axial piece, the latter being brought in the direction of the reflected beam. 
-Finally, the baseline CF , which is movable in C about an axis perpendicular to AC, slides in F in a sleeve placed at the end of the rod AF. If the apparatus is in
-Activity is , the stem of the mirror around AC describes an oblique cone, which has the circle parallel to the equator described by the sleeve F at its base.
+The side AC is formed by a fork that can rotate around an axial piece, 
 
 ==========
 
 **p.341**
 
-which can rotate about an axial distance, the latter in the direction Finally, the base line CF, which is movable at C about an axis perpendicular to AC, slides at F in a sleeve arranged at the end of the rod AF.When the apparatus is in action, the stem of the mirror describes itself AC an oblique cone, which has as its base the circle parallel to the equator described by the sleeve F. The sides AF and AC remain equal to one another and always lie one in the direction of the incident ray, the other in the direction AR, which hence will be the direction of the reflected ray.
+the latter being brought in the direction of the reflected beam. 
+Finally, the baseline CF , which is movable in C about an axis perpendicular to AC, slides in F in a sleeve placed at the end of the rod AF. If the apparatus is in activity, the stem of the mirror around AC describes an oblique cone, which has the circle parallel to the equator described by the sleeve F at its base.
+
+The sides AF and AC remain equal to one another and always lie one in the direction of the incident ray, the other in the direction AR, which hence will be the direction of the reflected ray.
 
 The apparatus is shown in Fig. 194. The wheel EE', which can be rotated about the vertical column Z and the horizontal axis X, can be inclined at will by means of the circle of latitude L and is brought in the desired direction with the aid of the alidade provided with diopters PP; it is even better to use a telescope which is focused on a mire located in the meridian.
-Clockwork HH' rotates this wheel uniformly once in 24 hours through 360° around axis A'A, which maintains its direction in space and is perpendicular to the plane of the wheel. The rod a B , which can be rotated about the axis a A parallel to the equatorial circle, can be inclined against this circle by the angle d, which is measured on the declination circle D.
+
+Clockwork HH' rotates this wheel EE' uniformly once in 24 hours through 360° around axis A'A, which maintains its direction in space and is perpendicular to the plane of the wheel. 
+
+The rod aB , which can be rotated about the axis aA parallel to the equatorial circle, can be inclined against this circle by the angle d, which is measured on the declination circle D.
+
 At F this rod ends in a sleeve , in which the stem Q of the mirror can slide and rotate. At the end of the axis A is fixed the stem of the fork AC, which holds the mirror M'M between its tines. The apparatus can easily be adjusted without performing calculations, and works very regularly, although it is rather expensive. If the heliostat is to remain in a certain place, simplifications are also possible. One can even avoid a disadvantage common to all heliostat constructions, namely that the apparatus, which is directly exposed to the sun's rays, heats up considerably and no longer remains correctly adjusted. In fact, the clockwork can be completely separated from the apparatus and set up in the laboratory quite easily. A powerful pendulum clock is then completely sufficient to set the mirror set up outside in motion by means of a transmission and guarantees a completely even movement: (1->6)
 
 
