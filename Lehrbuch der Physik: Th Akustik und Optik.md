@@ -319,7 +319,8 @@ than the previous apparatus, and the sliding of the movable side AF on the base 
 
 ![FIG.194](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
 
-![FIG.194](https://user-images.githubusercontent.com/1620953/233590263-4f8ab47b-34bb-49a4-8f91-dfd17a8893c4.png)
+![FIG.194](https://user-images.githubusercontent.com/1620953/233629066-8b37ba12-4488-4b17-8ca9-3a13aadb1ccf.png)
+
 
 parallel to the equator, on which AF is fixed in such a way that it forms an angle equal to the declination with the plane of the wheel. The use of the two Silbermann marks (which can be easily attached to the apparatus) facilitates the orientation of this side  and allows its position to be controlled at any time.
 
