@@ -123,7 +123,11 @@ Instr. a. d. Berliner Gewerbeausstellung 1879 , 398) . Eine vereinfachte Form, d
 
 wie bei dem vorhergehenden Apparat, und das Gleiten der beweglichen Seite AF auf der Basis geht sanfter vor sich. Die Seite AF wird in der Richtung der Sonnenstrahlen gehalten durch die Drehung eines dem Äquator parallelen Rades EE' , auf 
 
-![image](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
+
+
+![FIG.194](https://user-images.githubusercontent.com/1620953/233589287-4c2d458d-a408-45ed-b6ce-195980ce5683.png)
+
+
 
 welchem AF so befestigt ist, dass es mit der Ebene des Rades einen der Declination gleichen Winkel bildet. Die Verwendung der beiden Marken von Silbermann ( die man am Apparat leicht anbringen kann erleichtert die Orientirung dieser Seite und erlaubt ihre Lage jederzeit zu controliren . Die Seite AC ist durch eine Gabel gebildet, die sich um ein axiales Stück drehen kann, 
 
@@ -314,6 +318,8 @@ _(2)  Fuess's heliostat is based on the same principle, which, due to its simple
 than the previous apparatus, and the sliding of the movable side AF on the base is smoother. The side AF is held in the direction of the sun's rays by the rotation of a wheel EE' 
 
 ![FIG.194](https://user-images.githubusercontent.com/1620953/233354088-76876149-a1e0-4b69-8148-47a8f826fcb4.png)
+
+![FIG.194](https://user-images.githubusercontent.com/1620953/233590263-4f8ab47b-34bb-49a4-8f91-dfd17a8893c4.png)
 
 parallel to the equator, on which AF is fixed so that it makes an angle equal to the declination with the plane of the wheel. The usage
 of the two Silbermann marks ( which can be easily applied to the apparatus, facilitating the orientation of this side and allowing its position to be checked at any time . Side AC is formed by a fork
