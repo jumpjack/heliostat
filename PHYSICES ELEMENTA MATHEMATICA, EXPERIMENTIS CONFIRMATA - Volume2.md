@@ -22,8 +22,18 @@ Speculo utimur metallico, quia in speculo vitreo reflexio duplex est. Ad magnitu
 Lamellae ligneae hoc imponimus, quæ, regulis ligneis incisis, circumdatur, quibus speculum retinetur.
 
 Ut hoc sustineatur, non impeditâ ipsus agitatione, dictæ Lamellæ ligneæ, ad posticam partem, applicatur lamina ænea aa, cujus extremitates, inflexæ, lateraliter ligno conjunguntur.
- In ansâ AA speculum hoc S suspenditur transmissis per foramina, in illius extremitatibus, Cochleis tenuibus, quæ penetrant in extremitates a, a dictae laminæ, & quarum partes, quæ in foraminibus ansædantur, cylindricæ sunt ita, ut speculum liberè rotetur circa axem, qui, si ipse sensibilis fieret, juxta ipsam speculi superficiem transiret.
+
+--------------
+
+In ansâ **AA** speculum hoc S suspenditur transmissis per foramina, in illius extremitatibus, Cochleis tenuibus, quæ penetrant in extremitates **a, a** dictae laminæ, & quarum partes, quæ in foraminibus ansædantur, cylindricæ sunt ita, ut speculum liberè rotetur circa axem, qui, si ipse sensibilis fieret, juxta ipsam speculi superficiem transiret.
+
+Ansa cohæret cum Cylindro C , cujus Axis , si continuatus effet , concurreret cum Puncto medio memorati Axis revolutionis Speculi.
+
+Huic eidem Puncto respondet Cauda DE, quæ ad posticam partem Speculo perpendiculariter jungitur.
+Cauda hæc est cylindrica ; efficitur ex Filo aneo , recto , firmo , & cujus Diameter eft circiter fextæ partis unius Pollicis.
  
+Cylindrus C imponitur Pedi ligneo P, cujus superiorem partem separatim exhibemus ; dum hoc fit, Cylindrus ferreus e , cujus superficies levigata est, penetrat in cavitatem in Cylindro C, qui cupreus est; qua methodo liberrimè hic circa Axem rotatur ita , ut agitatione Cauda DE , quàm facillimè situs Speculi ad libitum mutetur.
+
 # Italian
 
 ## Eliostato ##
@@ -40,10 +50,26 @@ con le quali viene trattenuto lo specchio.
 
 Affinché questo possa essere sostenuto, senza interferire con l'agitazione stessa, nella parte posteriore del 
 piatto **aa** vengono applicate le cosiddette lamelle di legno, le cui estremità, essendo piegate, si uniscono lateralmente al legno.
+
+Il cilindro **C** è posto su un piede di legno **P**, di cui presentiamo separatamente la parte superiore; mentre ciò è fatto, il cilindro di ferro **e**, la cui superficie è stata levigata, penetra nella cavità del cilindro **C**, che è di rame; con quale metodo questo viene ruotato più liberamente attorno all'Asse, in modo che scuotendo la Coda **DE**, la posizione dello Specchio può essere cambiata più facilmente a piacimento.
+
+![image](https://user-images.githubusercontent.com/1620953/234514994-ba3e7108-178d-4f10-8e0c-c0fd7b1cce82.png)
+
+
+--------------
+
 Nelle asole **AA** questo specchio **S** viene sospeso facendo passare nei fori, alle sue estremità, 
-sottili viti, che penetrano nelle estremità a, a delle dette piastre, e le cui parti, che si fissano nei fori, sono 
+sottili viti, che penetrano nelle estremità **a, a** delle dette piastre, e le cui parti, che si fissano nei fori, sono 
 cilindriche in modo che lo specchio ruoti liberamente attorno all'asse, il quale, se egli stesso diventasse sensibile,
 passerebbe vicino alla superficie stessa dello specchio.
+
+L'ansa si collegherebbe con il cilindro C, il cui asse, se proseguito, coinciderebbe con il punto medio del suddetto asse di rivoluzione dello specchio.
+
+A questo stesso Punto corrisponde la coda **DE**, che è collegata perpendicolarmente alla parte posteriore dello specchio.
+Questa coda è cilindrica; è fatto di un filo sottile, dritto, fermo, e il cui diametro è di circa mezzo pollice.
+
+
+
   
   
  
