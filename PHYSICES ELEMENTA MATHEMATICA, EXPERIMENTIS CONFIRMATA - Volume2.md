@@ -45,6 +45,11 @@ Planum Horologii ad Horizontem inclinatur , juxta inclinationem Æquatoris in Lo
 
 2672: Horologium sustinetur Columnâ cupreâ FG ; constat hæc ex duabus partibus , quæ Cochleis d, d, junguntur , inter quas , ut in Vaginâ , movetur Lamina ferrea , in cujus medio scissura datur , per quam transeunt memorate Cochleæ d, d. Lamina hæc firmiter conjuncta est cum inferiori Laminâ ipsius Horologii , quod hac methodo attollitur , & deprimitur , firmatur que Cochleis d, d. Magis quoque attolli potest Cochleis I , I , I , transeuntibus per Laminam cupream crassiorem LLM , cui Columna FG infiftit
 
+2673: Laminæ hujus extrema L, L, ita terminantur , ut bc & cb unicam efficiant Lineam rectam , per quam si Planum verticale concipiamus , hoc perpendiculare sit ad Lineas horizontales, quæ in plano horologii duci possunt ; quales sunt "f g" et "h i".
+
+2674: Ita constituta Machina est , ut Planum Horologii antea memoratam habeat inclinationem , quando Planum LLM est horizontale ; in quo situ , Cochleis I , I , I, facilè disponitur , auxilio Perpendiculi Q, cujus Cuspis respondere debet Puncto o , in ipsâ superficie LLM notato.
+
+
 # Italian
 
 ## Eliostato ##
@@ -60,7 +65,6 @@ Usiamo uno specchio di metallo, perché in uno specchio di vetro il riflesso è 
 piatto **aa** vengono applicate le cosiddette lamelle di legno, le cui estremità, essendo piegate, si uniscono lateralmente al legno.
 
 2663: Nelle asole **AA** questo specchio **S** viene sospeso facendo passare nei fori, alle sue estremità, 
-
 --------------
 
 
@@ -89,6 +93,14 @@ Questa coda è cilindrica; è fatto di un filo sottile, dritto, fermo, e il cui 
 
 2672: L'orologio è sostenuto da una colonna di rame **FG**; essa è costituita da due parti che sono unite dalle Viti **d, d**, tra le quali, come nella vagina, si muove una piastra di ferro, nel mezzo della quale vi è una fessura, attraverso la quale passano le suddette Viti **d, d** . Questa piastra è saldamente collegata alla parte inferiore dell'orologio, che viene sollevato e abbassato con questo metodo, ed è fissata dalle viti **d, d**. 
 Le viti **I, I, I** possono anche essere alzate maggiormente, passando attraverso la piastra di rame **LLM** di maggior spessore, alla quale è inserita la Colonna **FG**
+
+2673: Le estremità **L, L** di questa piastra sono terminate in modo tale che **bc** e **cb** formano un'unica linea retta, attraverso la quale se concepiamo un piano verticale, questo dovrebbe essere perpendicolare alle linee orizzontali che possono essere tracciate nel piano dell'orologio **fg** e **hi**.
+
+![image](https://user-images.githubusercontent.com/1620953/234524416-5bdaefaa-79e0-41a1-80c5-3868bc45211a.png)
+
+2674: La Macchina è disposta in modo che il piano dell'orologio abbia la suddetta inclinazione, quando il piano **LLM** è orizzontale; in tale situazione, le viti **I, I, I** sono facilmente disposte, con l'ausilio della perpendicolare **Q**, il cui estremo deve corrispondere al punto **o**, segnato sulla superficie **LLM**.
+
+(in altre parole: la base di appoggio e il piano dell'orologio sono paralleli tra loro, e il sostegno FG è perpendicolare ad essi; quindi, per assicurarsi che il piano dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggo utilizzeremmo forse una livella a bolla a due direzioni)
 
 
 
