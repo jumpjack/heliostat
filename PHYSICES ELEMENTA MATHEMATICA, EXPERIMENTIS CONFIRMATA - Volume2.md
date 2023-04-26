@@ -34,6 +34,9 @@ Cauda hæc est cylindrica ; efficitur ex Filo aneo , recto , firmo , & cujus Dia
  
 Cylindrus C imponitur Pedi ligneo P, cujus superiorem partem separatim exhibemus ; dum hoc fit, Cylindrus ferreus e , cujus superficies levigata est, penetrat in cavitatem in Cylindro C, qui cupreus est; qua methodo liberrimè hic circa Axem rotatur ita , ut agitatione Cauda DE , quàm facillimè situs Speculi ad libitum mutetur.
 
+Attollitur hoc, & deprimitur , Cochleis tribus æneis B , B , B , quæ Clave convertuntur , & trajiciunt La minam ex eodem Metallo , illum in finem bafi Pedis applicatam ; & quæ prominet in tribus locis, ut cochleas recipiat.
+
+
 # Italian
 
 ## Eliostato ##
@@ -51,9 +54,12 @@ con le quali viene trattenuto lo specchio.
 Affinché questo possa essere sostenuto, senza interferire con l'agitazione stessa, nella parte posteriore del 
 piatto **aa** vengono applicate le cosiddette lamelle di legno, le cui estremità, essendo piegate, si uniscono lateralmente al legno.
 
-Il cilindro **C** è posto su un piede di legno **P**, di cui presentiamo separatamente la parte superiore; mentre ciò è fatto, il cilindro di ferro **e**, la cui superficie è stata levigata, penetra nella cavità del cilindro **C**, che è di rame; con quale metodo questo viene ruotato più liberamente attorno all'Asse, in modo che scuotendo la Coda **DE**, la posizione dello Specchio può essere cambiata più facilmente a piacimento.
+Il cilindro **C** è posto su un piede di legno **P**, di cui presentiamo separatamente la parte superiore; mentre ciò è fatto, il cilindro di ferro **e**, la cui superficie è stata levigata, penetra nella cavità del cilindro **C**, che è di rame; con quale metodo questo viene ruotato più liberamente attorno all'asse, in modo che mediante il movimento della coda **DE**, l'adattamento dello specchio sia più facilmente modificato a piacimento.
 
-![image](https://user-images.githubusercontent.com/1620953/234514994-ba3e7108-178d-4f10-8e0c-c0fd7b1cce82.png)
+![image](https://user-images.githubusercontent.com/1620953/234516672-b7b752d6-c7b0-4dc4-9c42-0986c6497dd4.png)
+
+
+Questo \[specchio\] si alza, e si abbassa, per le viti dei tre ottoni **B, B, B,** che girano a chiave, e passano per la piastrina dello stesso metallo, che si applica all'estremità del becco del piede; e che sporge in tre punti per ricevere le viti.
 
 
 --------------
@@ -68,7 +74,7 @@ L'ansa si collegherebbe con il cilindro C, il cui asse, se proseguito, coincider
 A questo stesso Punto corrisponde la coda **DE**, che è collegata perpendicolarmente alla parte posteriore dello specchio.
 Questa coda è cilindrica; è fatto di un filo sottile, dritto, fermo, e il cui diametro è di circa mezzo pollice.
 
-
+Questo si alza, e si abbassa, per le viti dei tre ottoni B, B, B, che girano a chiave, e passano per la piastrina dello stesso metallo, che si applica all'estremità del becco del piede; e che sporge in tre punti per ricevere le viti.
 
   
   
