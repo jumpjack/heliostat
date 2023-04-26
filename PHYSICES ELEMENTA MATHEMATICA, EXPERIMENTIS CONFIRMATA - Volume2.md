@@ -55,6 +55,25 @@ Planum Horologii ad Horizontem inclinatur , juxta inclinationem Æquatoris in Lo
 
 2677: Index ipse exhibetur in ON; æneus hic est , hujus Cauda pq exactè replet cavitatem ultimùm memora tam , in quam arctè intruditur , ut cohæreat , et  rotâ , in motu suo , secum ferat Indicem ; cujus situs tamen mutari potest , ut ad Horam constituatur.
 
+2678: Cauda hæc cylindricè quoque perforata est , & per hanc transit Filum æneum tenue lk, quod hæret in omni situ , dum attollitur , aut deprimitur
+
+2679: In extremitate O indicis huic insistit Cylindrus parvus n, cylindricè perforatus
+
+2680: Longitudo Indicis menfuratur in Lineâ , ad Ik perpendiculari , ab axe Cylindri n ad axem Fili Ik ductâ, In nostrâ Machinâ longitudo hæc est sex Pollicum.
+
+2681: In cavitatem Cylindri n penetrat Cauda ferrea furce T; Cauda hæc exactè replet cavitatem , fed tamen liberè in hac rotatur.
+
+2682: Inter Crura Furcæ ad diversas altitudines suspendi potest Tubulus R, per quem liberè moveri potest Speculi Cauda DE * , qua Tubulum exactiffimè replet. Tubulus hic suspenditur , ut de Speculo dictum *.
+
+Tubulus hic suspenditur , ut de Speculo dictum *. Cochleæ minores "r,r" , transeunt per dicta Crura , & ipsarum extremitates penetrant in Auriculas m m , cum Tubulo conjunctas , ibique hærent : tunc Tubulus
+
+---------
+
+p.719
+
+liberrimè verfatur circa Axem tranfeuntem per mm; Cylindricæ enim funt partes Cochlearum minimarum , que refpondent ipfis foraminibus in Cruribus Furce.
+
+
 # Italian
 
 ## Eliostato ##
@@ -114,3 +133,32 @@ Le viti **I, I, I** possono anche essere alzate maggiormente, passando attravers
 2677: L'indice \[dell'orologio\] costituito da **ON**; questo è di bronzo, la sua coda **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
 
 (probabilmente vuol dire che l'indice è, sì, solidale con la ruota dell'orologio, ma non è fissato saldamente, quindi può essere con un po' di sforzo ruotato in modo da dargli segnare l'ora attuale (??))
+
+2678: Anche questa coda è forata cilindricamente, e attraverso di essa passa un sottile filo di bronzo, che si attacca in ogni posizione, mentre viene alzata o abbassata
+
+2679: All'estremità dell'indice **O** poggia un cilindretto **n**, forato cilindricamente.
+
+2680: La lunghezza dell'indice è misurata su una linea, perpendicolare a **Ik**, tracciata dall'asse del cilindro **n** all'asse del figlio **Ik**. Nella nostra macchina, questa lunghezza è di sei pollici.
+
+2681: La coda \[**t**\] di ferro della forcella **T** penetra nella cavità del cilindro **n**; Questa coda riempie esattamente la cavità, ruotando però  liberamente al suo interno \[senza attrito\].
+
+2682: Tra i bracci della forcella può essere posizionato il tubicino **R** a diverse altezze,
+
+![image](https://user-images.githubusercontent.com/1620953/234554357-f068aa1d-b7db-4723-8145-720dd759a385.png)
+
+ed esso è attraversato dalla coda dello specchio **DE** (cfr. 2665) , che riempie esattamente il tubicino stesso, all'interno del quale può scorrere liberamente. 
+
+Il tubicino è sospeso nello stesso modo in cui è sospeso lo specchio  (cfr. 2663). Le piccole viti **r,r** passano per i detti bracci \[della forcella\], e le loro estremità penetrano nelle flange **mm** connesse al tubicino, con cui sono solidali:  il tubicino
+
+---------
+
+p. 719
+
+è quindi libero di ruotare  attorno all'asse passante per **mm**, perchè una parte del gambo delle vitine è liscio e senza filetttura, potendo così ruotare liberamente dentro i fori della forcella.
+
+![image](https://user-images.githubusercontent.com/1620953/234558278-8a6ac6a9-3714-492b-9775-7021172d0448.png)
+
+
+(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)
+
+
