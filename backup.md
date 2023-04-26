@@ -118,3 +118,12 @@ p. 719
 - 0.      8.     17.     32.     47.    64.     77.     90.
 - 21.Set  11.Ott 21.Ott  1.Nov  11.Nov  21.Nov  1.Dic   21.Dic
 ```
+
+Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrisponde molto fedelmente al **vs**, le cui divisioni sono contenute in questa seconda tavola.
+
+```
+21.Mar   1.Apr   21.Apr  1.Mag   11.Mag  21.Mag   1.Giu   21.Giu
+0.       11.      22.    36.     51.     66.     79.      90.
+21.Set.  1.Set   21.Au   11.Ago  1.Ago   21.Lug   11.Lug  21.Giu
+```
+
