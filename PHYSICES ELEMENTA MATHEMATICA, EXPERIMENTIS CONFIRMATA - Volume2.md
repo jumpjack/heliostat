@@ -1,5 +1,8 @@
  - [Google books](https://books.google.it/books?id=pG414R2jTBMC&lpg=PA715&ots=IWSB0d5yy-&dq=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&hl=it&pg=PA715#v=onepage&q=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&f=false)
  - [archive.org](https://archive.org/details/A077240117)
+ - [English translation by Desaguliers, J. T. (John Theophilus), 1683-1744](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up); section about heliostata is in Book V, chapter II, starting from  page 107 of the real book (p.152 of the PDF). Pictures are between p.112 and p.113 of book (158-162 of PDF). 
+
+Heliostats: Lines 2659-2702
 
 Tavola LXXXIII:
 
