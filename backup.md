@@ -131,4 +131,9 @@ Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrispo
 
 2694 Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692), e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
 
-2395: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
+2695: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
+
+2696: Tutta questa parte sarà trasferita al Positore, essendo stato stabilito come prima si è detto (2693). E così si sposta l'orologio al positore, e questo si alza, in modo che l'estremità **l** del filo di rame **Ik** incontri l'estremità **Z** del regolo **YZ**. La Perpendicolare **Q** continua ad essere curata, in modo che corrisponda sempre al punto **o**; dobbiamo anche fare attenzione che, dopo che l'Orologio è stato spostato, i Raggi Solari e l'ombra del Punto **l**, in modo che prima passino attraverso il Tubo **R**, affinché la posizione non sia disturbata dal riflesso del meridiano.
+
+2697: La Colonna **VX** con il Righello **YZ** può ora essere tolta, lasciando il supporto **P** in posizione, e collocando poi su di esso il Cilindro **C** con lo Specchio. La Forcella **T** viene temporaneamente rimossa dal suo posto, in modo da far passare  la Coda dello Specchio **DE**  attraverso il tubicino **R**; una volta riposizionata la Forella, avremo tutto pronto.
+
