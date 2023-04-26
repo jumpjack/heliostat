@@ -53,6 +53,8 @@ Planum Horologii ad Horizontem inclinatur , juxta inclinationem Æquatoris in Lo
 
 2676: Axis Rotæ, quæ movet Indicem , crassior est , & cylindricè perforatus ; ad conicam figuram tamen parum vergit cavitas ; nam in inferiori parte paululò anguftior est. 
 
+2677: Index ipse exhibetur in ON; æneus hic est , hujus Cauda pq exactè replet cavitatem ultimùm memora tam , in quam arctè intruditur , ut cohæreat , et  rotâ , in motu suo , secum ferat Indicem ; cujus situs tamen mutari potest , ut ad Horam constituatur.
+
 # Italian
 
 ## Eliostato ##
@@ -108,3 +110,7 @@ Le viti **I, I, I** possono anche essere alzate maggiormente, passando attravers
 2675: Se il dispositivo deve essere usato in un altro luogo, la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**. (??)
 
 2676: L'asse della Ruota, che muove l'Indice, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
+
+2677: L'indice \[dell'orologio\] costituito da **ON**; questo è di bronzo, la sua coda **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
+
+(probabilmente vuol dire che l'indice è, sì, solidale con la ruota dell'orologio, ma non è fissato saldamente, quindi può essere con un po' di sforzo ruotato in modo da dargli segnare l'ora attuale (??))
