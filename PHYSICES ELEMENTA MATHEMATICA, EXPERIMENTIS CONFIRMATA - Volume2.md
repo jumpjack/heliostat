@@ -49,6 +49,9 @@ Planum Horologii ad Horizontem inclinatur , juxta inclinationem Æquatoris in Lo
 
 2674: Ita constituta Machina est , ut Planum Horologii antea memoratam habeat inclinationem , quando Planum LLM est horizontale ; in quo situ , Cochleis I , I , I, facilè disponitur , auxilio Perpendiculi Q, cujus Cuspis respondere debet Puncto o , in ipsâ superficie LLM notato.
 
+2675: Si în alio loco , cujus Latitudo differret ab eâ , pro qua Machina fuit constructa , hæc adhibenda soret \*2670 ,   aliud Punctum ut o notandum soret , in quo casu inclinaretur ad Horizontem Planum LLM.
+
+2676: Axis Rotæ, quæ movet Indicem , crassior est , & cylindricè perforatus ; ad conicam figuram tamen parum vergit cavitas ; nam in inferiori parte paululò anguftior est. 
 
 # Italian
 
@@ -65,8 +68,8 @@ Usiamo uno specchio di metallo, perché in uno specchio di vetro il riflesso è 
 piatto **aa** vengono applicate le cosiddette lamelle di legno, le cui estremità, essendo piegate, si uniscono lateralmente al legno.
 
 2663: Nelle asole **AA** questo specchio **S** viene sospeso facendo passare nei fori, alle sue estremità, 
---------------
 
+--------------
 
 sottili viti, che penetrano nelle estremità **a, a** delle dette piastre, e le cui parti, che si fissano nei fori, sono 
 cilindriche in modo che lo specchio ruoti liberamente attorno all'asse, il quale, se egli stesso diventasse sensibile,
@@ -98,21 +101,10 @@ Le viti **I, I, I** possono anche essere alzate maggiormente, passando attravers
 
 ![image](https://user-images.githubusercontent.com/1620953/234524416-5bdaefaa-79e0-41a1-80c5-3868bc45211a.png)
 
-2674: La Macchina è disposta in modo che il piano dell'orologio abbia la suddetta inclinazione, quando il piano **LLM** è orizzontale; in tale situazione, le viti **I, I, I** sono facilmente disposte, con l'ausilio della perpendicolare **Q**, il cui estremo deve corrispondere al punto **o**, segnato sulla superficie **LLM**.
+2674: La Macchina è disposta in modo che il piano dell'orologio abbia la suddetta inclinazione (v. 2670), quando il piano **LLM** è orizzontale; in tale situazione, le viti **I, I, I** sono facilmente disposte, con l'ausilio della perpendicolare **Q**, il cui estremo deve corrispondere al punto **o**, segnato sulla superficie **LLM**.
 
-(in altre parole: la base di appoggio e il piano dell'orologio sono paralleli tra loro, e il sostegno FG è perpendicolare ad essi; quindi, per assicurarsi che il piano dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggo utilizzeremmo forse una livella a bolla a due direzioni)
+(in altre parole: la base di appoggio è perpendicolare al sostegno FG, e il piano dell'orologio deve avere un'inclinazione rispetto all'orizzonte pari alla latitudine del luogo;  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)
 
+2675: Se il dispositivo deve essere usato in un altro luogo, la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**. (??)
 
-
---------------
-
-
-
-
-
-
-Questo si alza, e si abbassa, per le viti dei tre ottoni B, B, B, che girano a chiave, e passano per la piastrina dello stesso metallo, che si applica all'estremità del becco del piede; e che sporge in tre punti per ricevere le viti.
-
-  
-  
- 
+2676: L'asse della Ruota, che muove l'Indice, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
