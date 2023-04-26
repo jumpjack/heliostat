@@ -62,23 +62,21 @@ Le viti **I, I, I** possono anche essere alzate maggiormente, passando attravers
 
 (in altre parole: la base di appoggio è perpendicolare al sostegno FG, e il piano dell'orologio deve avere un'inclinazione rispetto all'orizzonte pari alla latitudine del luogo;  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)
 
-2675: Se il dispositivo deve essere usato in un altro luogo, la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**. (??)
+2675: Se il dispositivo deve essere usato in un luogo la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**, che risulterebbe quindi non più orizzontale *(pare cioè che l'inclinazione del piano dell'orologio sia fissata in fabbrica e non regolabile, quindi per adattarla ad altre latitudini, bisogna inclinare l'intero blocco, per cui il filo a piombo non cadrà più in **o**)*
 
 2676: L'asse della Ruota, che muove l'Indice, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
 
-2677: L'indice \[dell'orologio\] costituito da **ON**; questo è di bronzo, la sua coda **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
-
-(probabilmente vuol dire che l'indice è, sì, solidale con la ruota dell'orologio, ma non è fissato saldamente, quindi può essere con un po' di sforzo ruotato in modo da dargli segnare l'ora attuale (??))
+2677: L'indice \[dell'orologio\] è costituito da **ON**; questo indice è di bronzo, e il suo perno **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
 
 2678: Anche questa coda è forata cilindricamente, e attraverso di essa passa un sottile filo di bronzo, che si attacca in ogni posizione, mentre viene alzata o abbassata
 
-2679: All'estremità dell'indice **O** poggia un cilindretto **n**, forato cilindricamente.
+2679: All'estremità dell'indice **O** poggia un cilindretto **n**, lungo il cui asse è praticato un foro.
 
 2680: La lunghezza dell'indice è misurata su una linea, perpendicolare a **Ik**, tracciata dall'asse del cilindro **n** all'asse del figlio **Ik**. Nella nostra macchina, questa lunghezza è di sei pollici.
 
-2681: La coda \[**t**\] di ferro della forcella **T** penetra nella cavità del cilindro **n**; Questa coda riempie esattamente la cavità, ruotando però  liberamente al suo interno \[senza attrito\].
+2681: La coda \[**t**\] di ferro della forcella **T** penetra nella cavità del cilindro **n**; Questa coda riempie esattamente la cavità, ruotando però liberamente al suo interno.
 
-2682: Tra i bracci della forcella può essere posizionato il tubicino **R** a diverse altezze,
+2682: Tra i bracci della forcella è collocato un tubicino **R**,  che può essere posizionato a diverse altezze,
 
 ![image](https://user-images.githubusercontent.com/1620953/234554357-f068aa1d-b7db-4723-8145-720dd759a385.png)
 
@@ -95,7 +93,7 @@ p. 719
 ![image](https://user-images.githubusercontent.com/1620953/234558278-8a6ac6a9-3714-492b-9775-7021172d0448.png)
 
 
-(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)
+*(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)*
 
 
 2683: Dopo aver allestito lo strumento, ne allestiremo un altro, che chiameremo "**Posizionatore**"; 
@@ -127,3 +125,10 @@ Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrispo
 21.Set.  1.Set   21.Au   11.Ago  1.Ago   21.Lug   11.Lug  21.Giu
 ```
 
+2692: Una volta predisposta la macchina come indicato, la si ponga su un piano orizzontale, o quasi.
+
+2693: Per prima cosa installiamo il Posizionatore (2683) sul supporto **P** (2684), e alziamolo/abbassiamolo quanto serve (2667, 2668), in modo che il regolo **YZ**, precedentemente impostato sulla giusta lunghezza (2688), opportunamente ruotato risulti infine allineato secondo la direzione dei raggi solari che desideriamo "staticizzare".
+
+2694 Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692), e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
+
+2395: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
