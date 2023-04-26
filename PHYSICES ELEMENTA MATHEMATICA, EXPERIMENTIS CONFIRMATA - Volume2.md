@@ -5,7 +5,7 @@ Tavola LXXXIII:
 
 ![image](https://user-images.githubusercontent.com/1620953/234495325-abec201b-a8e8-496b-b5d6-51835413ee15.png)
 
-hi-res main image: ![image](https://user-images.githubusercontent.com/1620953/234497699-02ccd30d-584f-4fa9-8e42-5228946c8eb4.png)
+[hi-res main image](https://user-images.githubusercontent.com/1620953/234497699-02ccd30d-584f-4fa9-8e42-5228946c8eb4.png)
 
 
 P. 715-725
