@@ -65,13 +65,19 @@ Planum Horologii ad Horizontem inclinatur , juxta inclinationem Æquatoris in Lo
 
 2682: Inter Crura Furcæ ad diversas altitudines suspendi potest Tubulus R, per quem liberè moveri potest Speculi Cauda DE * , qua Tubulum exactiffimè replet. Tubulus hic suspenditur , ut de Speculo dictum *.
 
-Tubulus hic suspenditur , ut de Speculo dictum *. Cochleæ minores "r,r" , transeunt per dicta Crura , & ipsarum extremitates penetrant in Auriculas m m , cum Tubulo conjunctas , ibique hærent : tunc Tubulus
+Tubulus hic suspenditur , ut de Speculo dictum . Cochleæ minores "r,r" , transeunt per dicta Crura , & ipsarum extremitates penetrant in Auriculas m m , cum Tubulo conjunctas , ibique hærent : tunc Tubulus
 
 ---------
 
 p.719
 
 liberrimè verfatur circa Axem tranfeuntem per mm; Cylindricæ enim funt partes Cochlearum minimarum , que refpondent ipfis foraminibus in Cruribus Furce.
+
+2683: Ubi constituenda Machina est , utimur aliâ , quam Positorem vocabimus.
+
+2684: Removetur Cylindrus C cum Speculo à Pede P cui imponitur Columna ænea VX. Hæc arctiùs cum e cohæret quàm Cylindrus C, ut Columna situm servet , dum Machina constituitur.
+
+2685 In capite "X" columne circa centrum movetur regula ŸZ ita , ut ad libitum ad Horizontem inclinari possit , & situm servet. Talis est Columnæ VX altitudo, ut hoc ipsum centrum motûs in Capite X in eo detur Puncto , in quo , quando Cylindrus C pedi imponitur, se se habet punctum superficiei speculi cui respondet axis cauda (2665). Brachii YX  longitudo ad arbitrium determinatur. 
 
 
 # Italian
@@ -154,11 +160,17 @@ Il tubicino è sospeso nello stesso modo in cui è sospeso lo specchio  (cfr. 26
 
 p. 719
 
-è quindi libero di ruotare  attorno all'asse passante per **mm**, perchè una parte del gambo delle vitine è liscio e senza filetttura, potendo così ruotare liberamente dentro i fori della forcella.
+è però libero di ruotare  attorno all'asse passante per **mm**, perchè una parte del gambo delle vitine è liscio e senza filetttura, potendo così ruotare liberamente dentro i fori della forcella.
 
 ![image](https://user-images.githubusercontent.com/1620953/234558278-8a6ac6a9-3714-492b-9775-7021172d0448.png)
 
 
 (questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)
 
+
+2683: Dopo aver allestito lo strumento, ne allestiremo un altro, che chiameremo "**Posizionatore**"; 
+
+2684: il Cilindro **C** viene rimosso insieme allo specchio dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, senza spostare il supporto P rispetto a come era stato posizionato durante il precedente montaggio.
+
+2685 L'asta **YZ** è incernierata nell'estremità **X**  in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX è  a piacere.
 
