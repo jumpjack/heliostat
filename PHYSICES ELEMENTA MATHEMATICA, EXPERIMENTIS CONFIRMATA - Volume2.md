@@ -77,7 +77,9 @@ liberrimè verfatur circa Axem tranfeuntem per mm; Cylindricæ enim funt partes 
 
 2684: Removetur Cylindrus C cum Speculo à Pede P cui imponitur Columna ænea VX. Hæc arctiùs cum e cohæret quàm Cylindrus C, ut Columna situm servet , dum Machina constituitur.
 
-2685 In capite "X" columne circa centrum movetur regula ŸZ ita , ut ad libitum ad Horizontem inclinari possit , & situm servet. Talis est Columnæ VX altitudo, ut hoc ipsum centrum motûs in Capite X in eo detur Puncto , in quo , quando Cylindrus C pedi imponitur, se se habet punctum superficiei speculi cui respondet axis cauda (2665). Brachii YX  longitudo ad arbitrium determinatur. 
+2685 In capite "X" columne circa centrum movetur regula ŸZ ita , ut ad libitum ad Horizontem inclinari possit , & situm servet. Talis est Columnæ VX altitudo, ut hoc ipsum centrum motûs in Capite X in eo detur Puncto , in quo , quando Cylindrus C pedi imponitur, se se habet punctum superficiei speculi cui respondet axis cauda (2665). Brachii YX  longitudo ad arbitrium determinatur.  Brachii XZ constructio peculiaris eft , & longitudo determinata.
+
+2686: Memoratæ Regulæ, quæ non ultra y fe extendit , duæ applicantur aliæ, ut xZ, inter quas prima includitur : junctæ hæ funt in Z, & quoque cohærent Cochleis 2,2, tranfeuntibus per ſciſſuram in primâ Regulâ. Huic eidem Regulæ infcripta eft Lineola vs , cujus longitudo æqualis est novem partibus centefimis longitudinis Indicis ; & quæ dividitur , ut ftatim dicam.
 
 
 # Italian
@@ -172,5 +174,6 @@ p. 719
 
 2684: il Cilindro **C** viene rimosso insieme allo specchio dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, senza spostare il supporto P rispetto a come era stato posizionato durante il precedente montaggio.
 
-2685 L'asta **YZ** è incernierata nell'estremità **X**  in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX è  a piacere.
+2685 L'asta **YZ** è incernierata nell'estremità **X**  in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX è  a piacere.  Il braccio XZ invece deve avere una lunghezza ben precisa.
 
+2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto Z,  a formare l'asta cava **xZ**; questa speciale asta, grazie alle due viti "z,z" che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio XZ. A questa stessa regola è inscritto il righello "vs", la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); E ciò che è diviso, lasciatemelo dire subito.
