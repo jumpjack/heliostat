@@ -98,6 +98,8 @@ p. 719
 
 2683: Dopo aver allestito lo strumento, ne allestiremo un altro, che chiameremo "**Posizionatore**"; 
 
+![image](https://user-images.githubusercontent.com/1620953/234600669-c5b607e6-b52e-4c53-adfd-ada8a8d32637.png)
+
 2684: il Cilindro **C** viene rimosso insieme allo specchio dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, senza spostare il supporto P rispetto a come era stato posizionato durante il precedente montaggio.
 
 2685 L'asta **YZ** è incernierata nell'estremità **X**  in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX è  a piacere.  Il braccio XZ invece deve avere una lunghezza ben precisa.
