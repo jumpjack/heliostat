@@ -1,8 +1,9 @@
- - [Google books](https://books.google.it/books?id=pG414R2jTBMC&lpg=PA715&ots=IWSB0d5yy-&dq=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&hl=it&pg=PA715#v=onepage&q=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&f=false)
- - [archive.org](https://archive.org/details/A077240117)
- - [English translation by Desaguliers, J. T. (John Theophilus), 1683-1744](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up); section about heliostata is in Book V, chapter II, starting from  page 107 of the real book (p.152 of the PDF). Pictures are between p.112 and p.113 of book (158-162 of PDF). 
+ - Latin (original language) (pages 715-725)
+     - [Google books](https://books.google.it/books?id=pG414R2jTBMC&lpg=PA715&ots=IWSB0d5yy-&dq=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&hl=it&pg=PA715#v=onepage&q=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&f=false)
+     - [archive.org](https://archive.org/details/A077240117)
+ - [English translation by Desaguliers, J. T. (John Theophilus)](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up); section about heliostata is in Book V, chapter II, starting from  page 107 of the real book (p.152 of the PDF). Pictures are between p.112 and p.113 of book (158-162 of PDF).  (Lines 2659-2702)
+ - [French translation by C.F. Roland De Virloys, 1747, vol. 2](https://www.google.it/books/edition/%C3%89l%C3%A9mens_de_physique_d%C3%A9montrez_math%C3%A9m/95vDCwJlppkC?hl=it&gbpv=1&dq=soleil+miroir++Physique++gravesande&pg=PA246&printsec=frontcover) (from page 126) (Lines 2659-2702)
 
-Heliostats: Lines 2659-2702
 
 Tavola LXXXIII:
 
@@ -11,7 +12,6 @@ Tavola LXXXIII:
 [hi-res main image](https://user-images.githubusercontent.com/1620953/234497699-02ccd30d-584f-4fa9-8e42-5228946c8eb4.png)
 
 
-P. 715-725
 
 # Latin
  
