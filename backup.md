@@ -14,7 +14,9 @@ Tavola LXXXIII:
 
 ## Eliostato ##
 
-Con cui i raggi solari sono rafforzati
+***Con cui i raggi solari sono rafforzati***
+
+### Parte 1 - Descrizione dello strumento
 
 2660: Questa macchina è composta da due parti principali, ognuna delle quali è fusa da varie parti più piccole. (Tavola LXXXIII). La prima è uno specchietto metallico piatto; la seconda è l'orologio che dirige lo specchio.
 Usiamo uno specchio di metallo, perché in uno specchio di vetro il riflesso è doppio. 
@@ -95,6 +97,7 @@ p. 719
 
 *(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)*
 
+### Parte 2 - Il "posizionatore"
 
 2683: Dopo aver allestito lo strumento, ne allestiremo un altro, che chiameremo "**Posizionatore**"; 
 
@@ -127,6 +130,8 @@ Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrispo
 21.Set.  1.Set   21.Au   11.Ago  1.Ago   21.Lug   11.Lug  21.Giu
 ```
 
+### Parte 3 - Posizionamento e calibrazione dello strumento
+
 2692: Una volta predisposta la macchina come indicato, la si ponga su un piano orizzontale, o quasi.
 
 2693: Per prima cosa installiamo il Posizionatore (2683) sul supporto **P** (2684), e alziamolo/abbassiamolo quanto serve (2667, 2668), in modo che il regolo **YZ**, precedentemente impostato sulla giusta lunghezza (2688), opportunamente ruotato risulti infine allineato secondo la direzione dei raggi solari che desideriamo "staticizzare".
@@ -143,16 +148,16 @@ Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrispo
 
 2699: Se sostituiamo il perno **NO** con la lancetta **K**, la macchina divewnterà un normale orologio.
 
-### parte 2 - descrizione di esperimento da fare al buio 
+### Parte 4 - Descrizione di esperimento da fare al buio 
 
 *2700: Devono essere istituiti esperimenti sulla luce in un luogo oscuro; Per questo motivo, la macchina deve essere inclusa nella scatola, dove viene utilizzata negli esperimenti.
 
 *2701: Presentiamo il caso in A; Questo insiste sui piedi, che hanno rotule articolate, in modo che possano essere facilmente spostati.
 È aperto da un lato, e questo viene spostato verso la finestra aperta, attraverso la quale i raggi solari raggiungono liberamente lo specchio.
 
-**2702. E la teca si estende oltre la finestratura da ogni parte, in modo che l'ingresso della luce nella stanza sia impedito da strisce di stoffa, che sono coerenti con la teca e applicate al muro; a tal fine, per quanto è possibile, si sposta l'astuccio al muro, e si girano le viti **C, C**, con i piedi anteriori, fino ad appoggiarle sul pavimento.
+*2702. E la teca si estende oltre la finestratura da ogni parte, in modo che l'ingresso della luce nella stanza sia impedito da strisce di stoffa, che sono coerenti con la teca e applicate al muro; a tal fine, per quanto è possibile, si sposta l'astuccio al muro, e si girano le viti **C, C**, con i piedi anteriori, fino ad appoggiarle sul pavimento.
 
-2703: La porta nel motore sinistro è opposta a sinistra; potrebbe essere diffuso in altro modo. Trasmettiamo i raggi attraverso la faccia **B**; scegliamo questo, per l'ubicazione del luogo in cui abbiamo installato gli Esperimenti sulla Luce. In questa faccia ci sono due aperture larghe tre pollici e diciotto cerchi alti pollici, uno dei quali è mostrato aperto in **DE**.
+*2703: La porta nel motore sinistro è opposta a sinistra; potrebbe essere diffuso in altro modo. Trasmettiamo i raggi attraverso la faccia **B**; scegliamo questo, per l'ubicazione del luogo in cui abbiamo installato gli Esperimenti sulla Luce. In questa faccia ci sono due aperture larghe tre pollici e diciotto cerchi alti pollici, uno dei quali è mostrato aperto in **DE**.
 
 *2704: Questi sono chiusi, all'esterno, con pannelli di legno, che si muovono tra i regoli di legno. Entrambi possono essere riscaldati attraverso entrambe le aperture, in modo che possano scambiarsi. Una F è lunga tre piedi e perforata al centro. L'apertura da b è lunga cinque pollici e larga due.
 
