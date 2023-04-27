@@ -69,23 +69,32 @@ e il perno di ferro **e**, la cui superficie è stata levigata, si inserisce nel
 2671: Possiamo però usare la stessa Macchina in altri Luoghi, le cui Latitudini differiscono di uno o due Gradi da questo Luogo, come vedremo (v. 2675)
 
 2672: L'orologio è sostenuto da una colonna di rame **FG**; essa è costituita da due parti che sono unite dalle Viti **d, d**, tra le quali, si muove una piastra di ferro, nel mezzo della quale vi è una fessura  come nella vagina, attraverso la quale passano le suddette Viti **d, d**. Questa piastra è solidale con la parte inferiore dell'orologio, che viene sollevato e abbassato con questo metodo, ed è mantenuta in posizione dalle viti **d, d**. 
-Le viti **I, I, I**, passando attraverso la piastra di rame **LLM** di maggior spessore, alla quale è inserita la Colonna **FG**,  possono essere usate anche essere per aumentare l'altezza dell'orologio.
+Le viti **I, I, I**, passando attraverso la piastra di rame **LLM**, alla quale è fissata la Colonna **FG**,  possono essere usate anche  per regolare l'altezza dell'orologio.
 
-2673: Le estremità **L, L** di questa piastra sono terminate in modo tale che **bc** e **cb** formino un'unica linea retta, attraverso la quale se immaginiamo un piano verticale, questo dovrebbe essere perpendicolare alle linee orizzontali che possono essere tracciate nel piano dell'orologio **fg** e **hi**.
+2673: Le estremità **L, L** della piastra sono sagomate in modo tale che **bc** e **cb** formino un'unica linea retta; un piano verticale passante per questa linea risulterà perpendicolare alle linee orizzontali **fg** e **hi** che possono essere tracciate nel piano dell'orologio.
 
 ![image](https://user-images.githubusercontent.com/1620953/234524416-5bdaefaa-79e0-41a1-80c5-3868bc45211a.png)
 
-2674: La Macchina è disposta in modo che il piano dell'orologio abbia la giusta inclinazione (v. 2670), quando la base **LLM** è orizzontale;  l'inclinazione della base si può facilmente regolare usando le viti **I, I, I** , con l'ausilio del filo a piombo **Q**, il cui estremo deve corrispondere al punto **o** segnato sulla superficie della base **LLM**.
+2674: La Macchina è progettata in modo che il piano dell'orologio abbia la giusta inclinazione (v. 2670) quando la base **LLM** è orizzontale;  l'inclinazione della base si può facilmente regolare usando le viti **I, I, I** , con l'ausilio del filo a piombo **Q**, il cui estremo deve corrispondere al punto **o** segnato sulla superficie della base **LLM**.
 
-(in altre parole:  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)
+*(in altre parole:  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)*
 
-2675: Se il dispositivo deve essere usato in un luogo la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**, che risulterebbe quindi non più orizzontale *(pare cioè che l'inclinazione del piano dell'orologio sia fissata in fabbrica e non regolabile, quindi per adattarla ad altre latitudini, bisogna inclinare l'intero blocco, per cui il filo a piombo non cadrà più in **o**)*
+2675: Se il dispositivo deve essere usato in un luogo la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**, che risulterebbe quindi non più orizzontale 
 
-2676: L'asse della Ruota che muove la lancetta, è abbastanza largo da poter essee forato cilindricamente; il foro, tuttavia, ha una forma leggermente conica, più stretto nella parte inferiore.
+*(pare cioè che l'inclinazione del piano dell'orologio sia fissata in fabbrica e non regolabile, quindi per adattarla ad altre latitudini, bisogna inclinare l'intero blocco, per cui il filo a piombo non cadrà più in **o**)*
+
+2676: L'asse della ruota che muove la lancetta è abbastanza largo da poter essere cavo; il foro, tuttavia, ha una forma leggermente conica, più stretto nella parte inferiore.
+
+![image](https://user-images.githubusercontent.com/1620953/234854652-571ac84e-a623-4b00-b0d2-773aaa4bbcc0.png)
 
 2677: La lancetta \[dell'orologio\] è indicata con **ON**; questa lancetta è di bronzo, e il suo perno **pq** è inserito nel suddetto foro conico della ruota dell'orologio, con cui diventa solidale, ma se necessario può essere estratta e ruotata in modo da segnare l'ora esatta.
 
+![image](https://user-images.githubusercontent.com/1620953/234854349-0348ad89-5fa3-41a1-b26c-d76acad3faf5.png)
+
 2678: Questo perno è a sua volta forato al centro, e attraverso di esso passa un sottile filo di bronzo, che può essere fatto scorrere per variarne l'altezza.
+
+![image](https://user-images.githubusercontent.com/1620953/234854724-371d2e9f-f33d-49e5-b94c-45a4538be84e.png)
+
 
 2679: All'estremità dell'indice **O** si trova un cilindretto **n**, lungo il cui asse è praticato un foro.
 
@@ -120,15 +129,15 @@ p. 719
 
 2684: il Cilindro **C** viene rimosso, insieme allo specchio, dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, che può girare meno liberamente intorno al perno  **e**, di modo che il suo orientamento resti stabile mentre viene allestita la macchina.
 
-2685 Mell'estremità **X** viene incernierata l'asta **YZ** , in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX può essere a piacere, mentre il braccio XZ invece deve avere una lunghezza ben precisa.
+2685 Nell'estremità **X** viene incernierata l'asta **YZ** , in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio **YX** può essere a piacere, mentre il braccio **XZ**  deve avere una lunghezza ben precisa.
 
-2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto Z a formare l'asta cava **xZ**; questa speciale asta, o regolo, grazie alle due viti "z,z" che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio XZ. Sull'astina interna è tracciata la lineetta "vs", la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); E come essa è divisa, lasciatemelo dire subito.
+2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto **Z** a formare l'asta cava **xZ**; questa speciale asta, o regolo, grazie alle due viti **z,z** che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio **XZ**. Sull'astina interna è tracciata la lineetta **vs**, la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); e come essa è divisa, lasciatemelo dire subito.
 
-2687:  La lunghezza della lancetta (cfr. 2680) è pari a quella del al braccio XZ, se è misurata tra il centro di moto in X e l'estremità di Z, quando l'estremità "x" del regolo esterno coincide con "v" , dove è dato l'inizio delle divisioni del righello "vs".
+2687:  La lunghezza della lancetta (cfr. 2680) è pari a quella del al braccio **XZ**, se è misurata tra il perno **X** e l'estremità  **Z**, quando l'estremità **x** del regolo esterno coincide con **v** , dove iniziano le divisioni della linea **vs**.
 
 2688: Le divisioni di questo righello sono disuguali, e determinano la lunghezza del braccio nelle diverse stagioni dell'anno, posizionando l'estremo **x** sulla divisione che corrisponde al giorno in cui usiamo la macchina.
 
-2689: Ora che possiamo notare le Divisioni, concepiamo la Lunghezza del Braccio (cfr. 2680) essere divisa in mille parti uguali, cioè in novanta parti; e la divisione della distanza è annotata al punto **v** nella tabella seguente.
+2689: Ora che possiamo notare le Divisioni, concepiamo la Lunghezza del Braccio (cfr. 2680) essere divisa in mille parti uguali, cioè in novanta parti; e la divisione della distanza è annotata al punto **v** nella tabella seguente:
 
 2690: 
 ```
@@ -137,7 +146,7 @@ p. 719
 - 21.Set  11.Ott 21.Ott  1.Nov  11.Nov  21.Nov  1.Dic   21.Dic
 ```
 
-Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrisponde molto fedelmente al **vs**, le cui divisioni sono contenute in questa seconda tavola.
+Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrisponde molto fedelmente al **vs**, le cui divisioni sono contenute in questa seconda tabella:
 
 ```
 21.Mar   1.Apr   21.Apr  1.Mag   11.Mag  21.Mag   1.Giu   21.Giu
