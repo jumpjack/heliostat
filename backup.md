@@ -81,25 +81,25 @@ Le viti **I, I, I**, passando attraverso la piastra di rame **LLM** di maggior s
 
 2675: Se il dispositivo deve essere usato in un luogo la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**, che risulterebbe quindi non più orizzontale *(pare cioè che l'inclinazione del piano dell'orologio sia fissata in fabbrica e non regolabile, quindi per adattarla ad altre latitudini, bisogna inclinare l'intero blocco, per cui il filo a piombo non cadrà più in **o**)*
 
-2676: L'asse della Ruota, che muove la lancetta, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
+2676: L'asse della Ruota che muove la lancetta, è abbastanza largo da poter essee forato cilindricamente; il foro, tuttavia, ha una forma leggermente conica, più stretto nella parte inferiore.
 
-2677: L'indice \[dell'orologio\] è costituito da **ON**; questo indice è di bronzo, e il suo perno **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
+2677: La lancetta \[dell'orologio\] è indicata con **ON**; questa lancetta è di bronzo, e il suo perno **pq** è inserito nel suddetto foro conico della ruota dell'orologio, con cui diventa solidale, ma se necessario può essere estratta e ruotata in modo da segnare l'ora esatta.
 
-2678: Anche questa coda è forata cilindricamente, e attraverso di essa passa un sottile filo di bronzo, che si attacca in ogni posizione, mentre viene alzata o abbassata
+2678: Questo perno è a sua volta forato al centro, e attraverso di esso passa un sottile filo di bronzo, che può essere fatto scorrere per variarne l'altezza.
 
-2679: All'estremità dell'indice **O** poggia un cilindretto **n**, lungo il cui asse è praticato un foro.
+2679: All'estremità dell'indice **O** si trova un cilindretto **n**, lungo il cui asse è praticato un foro.
 
-2680: La lunghezza dell'indice è misurata su una linea, perpendicolare a **Ik**, tracciata dall'asse del cilindro **n** all'asse del figlio **Ik**. Nella nostra macchina, questa lunghezza è di sei pollici.
+2680: La lunghezza della lancetta è misurata lungo una linea, perpendicolare a **lk**, tracciata dall'asse del cilindro **n** all'asse del filo **lk**. Nella nostra macchina, questa lunghezza è di sei pollici.
 
-2681: La coda \[**t**\] di ferro della forcella **T** penetra nella cavità del cilindro **n**; Questa coda riempie esattamente la cavità, ruotando però liberamente al suo interno.
+2681: Nel foro del cilindro **n** viene fatta passare la coda \[**t**\] di ferro della forcella **T**, in modo che possa ruotare liberamente.
 
 2682: Tra i bracci della forcella è collocato un tubicino **R**,  che può essere posizionato a diverse altezze,
 
 ![image](https://user-images.githubusercontent.com/1620953/234554357-f068aa1d-b7db-4723-8145-720dd759a385.png)
 
-ed esso è attraversato dalla coda dello specchio **DE** (cfr. 2665) , che riempie esattamente il tubicino stesso, all'interno del quale può scorrere liberamente. 
+ed è attraversato dalla coda dello specchio **DE** (cfr. 2665) , che riempie esattamente il tubicino stesso, all'interno del quale può scorrere liberamente. 
 
-Il tubicino è sospeso nello stesso modo in cui è sospeso lo specchio  (cfr. 2663). Le piccole viti **r,r** passano per i detti bracci \[della forcella\], e le loro estremità penetrano nelle flange **mm** connesse al tubicino, con cui sono solidali:  il tubicino
+Il tubicino è sospeso nello stesso modo in cui è sospeso lo specchio  (cfr. 2663): le piccole viti **r,r** passano per i detti bracci \[della forcella\], e le loro estremità penetrano nelle flange **mm** connesse al tubicino, con cui sono solidali:  il tubicino
 
 ---------
 
@@ -110,24 +110,23 @@ p. 719
 ![image](https://user-images.githubusercontent.com/1620953/234809269-dbc66de7-87a2-4b92-94a8-739c025ef9cd.png)
 
 
-
 *(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)*
 
 ### Parte 2 - Il "posizionatore"
 
-2683: Dopo aver allestito lo strumento, ne allestiremo un altro, che chiameremo "**Posizionatore**"; 
+2683: Dopo aver allestito lo strumento, bisogna allestirne un altro, che chiameremo "**Posizionatore**"; 
 
 ![image](https://user-images.githubusercontent.com/1620953/234600669-c5b607e6-b52e-4c53-adfd-ada8a8d32637.png)
 
-2684: il Cilindro **C** viene rimosso insieme allo specchio dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, senza spostare il supporto P rispetto a come era stato posizionato durante il precedente montaggio.
+2684: il Cilindro **C** viene rimosso, insieme allo specchio, dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, che può girare meno liberamente intorno al perno  **e**, di modo che il suo orientamento resti stabile mentre viene allestita la macchina.
 
-2685 L'asta **YZ** è incernierata nell'estremità **X**  in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX è  a piacere.  Il braccio XZ invece deve avere una lunghezza ben precisa.
+2685 Mell'estremità **X** viene incernierata l'asta **YZ** , in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio YX può essere a piacere, mentre il braccio XZ invece deve avere una lunghezza ben precisa.
 
-2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto Z a formare l'asta cava **xZ**; questa speciale asta, grazie alle due viti "z,z" che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio XZ. Su questa stessa astina è tracciata la lineetta "vs", la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); E come è divisa, lasciatemelo dire subito.
+2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto Z a formare l'asta cava **xZ**; questa speciale asta, o regolo, grazie alle due viti "z,z" che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio XZ. Sull'astina interna è tracciata la lineetta "vs", la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); E come essa è divisa, lasciatemelo dire subito.
 
-2687:  La lunghezza dell'indice (cfr. 2680) è pari al braccio XZ, se è misurata tra il centro di moto in X e l'estremità di Z, quando l'estremità "x" del regolo esterno coincide con "v" , dove è dato l'inizio delle divisioni del righello "vs".
+2687:  La lunghezza della lancetta (cfr. 2680) è pari a quella del al braccio XZ, se è misurata tra il centro di moto in X e l'estremità di Z, quando l'estremità "x" del regolo esterno coincide con "v" , dove è dato l'inizio delle divisioni del righello "vs".
 
-2688: Le divisioni di questo righello sono disuguali, e determinano la lunghezza del braccio nelle diverse stagioni dell'anno, applicando x alla divisione, che corrisponde al giorno in cui usiamo la macchina.
+2688: Le divisioni di questo righello sono disuguali, e determinano la lunghezza del braccio nelle diverse stagioni dell'anno, posizionando l'estremo **x** sulla divisione che corrisponde al giorno in cui usiamo la macchina.
 
 2689: Ora che possiamo notare le Divisioni, concepiamo la Lunghezza del Braccio (cfr. 2680) essere divisa in mille parti uguali, cioè in novanta parti; e la divisione della distanza è annotata al punto **v** nella tabella seguente.
 
