@@ -18,55 +18,70 @@ Tavola LXXXIII:
 
 ### Parte 1 - Descrizione dello strumento
 
-2660: Questa macchina è composta da due parti principali, ognuna delle quali è fusa da varie parti più piccole. (Tavola LXXXIII). La prima è uno specchietto metallico piatto; la seconda è l'orologio che dirige lo specchio.
+2660: Questa macchina è composta da due parti principali, ognuna delle quali è composta da varie parti più piccole. (Tavola LXXXIII). 
+- la prima è uno specchietto metallico piatto; 
+- la seconda è l'orologio che dirige lo specchio.
+
+#### Parte 1a: lo specchio
+
 Usiamo uno specchio di metallo, perché in uno specchio di vetro il riflesso è doppio. 
 
-2661: Non prestiamo attenzione alla sua taglia e alla sua forma; il nostro è un rettangolo, lungo quattro pollici e largo tre. Mettiamo su queste doghe di legno, che, dopo essere state tagliate con righelli di legno, ne sono circondate, con le quali viene trattenuto lo specchio.
+2661: Dimensioni e forma dello specchio non hanno importanza: nel nostro caso, abbiamo usato un rettangolo lungo quattro pollici e largo tre. Circondiamo lo specchio con una intelaiatura di legno.
 
-2662: Affinché questo possa essere sostenuto, senza interferire con l'agitazione stessa, nella parte posteriore del 
-piatto **aa** vengono applicate le cosiddette lamelle di legno, le cui estremità, essendo piegate, si uniscono lateralmente al legno.
+2662: Per sostenere lo specchio senza interferire coi suoi movimenti, all'intelaiatura di legno viene fissata una lamella di bronzo **a,a** \[quella piegata ad "U"\]:
 
-2663: Nelle asole **AA** questo specchio **S** viene sospeso facendo passare nei fori, alle sue estremità, 
+![image](https://user-images.githubusercontent.com/1620953/234807283-ab4daf73-4bcc-490c-b278-d2ee3a356b0d.png)
+
+2663: Lo specchio **S** viene sospeso alla forcella  **AA** facendo passare nei fori  alle sue estremità 
 
 --------------
 
-sottili viti, che penetrano nelle estremità **a, a** delle dette piastre, e le cui parti, che si fissano nei fori, sono 
-cilindriche in modo che lo specchio ruoti liberamente attorno all'asse, il quale, se egli stesso diventasse sensibile,
-passerebbe vicino alla superficie stessa dello specchio.
+delle piccole viti, che penetrano nelle estremità **a, a** della suddetta lamella; le parti delle viti che passano nei fori della forcella non sono filettate ma lisce,  in modo che lo specchio possa ruotare liberamente attorno all'asse; asse che, se prolungato, passerebbe sulla superficie  dello specchio stesso.
 
-2664:  L'ansa si collegherebbe con il cilindro C, il cui asse, se proseguito, coinciderebbe con il punto medio del suddetto asse di rivoluzione dello specchio.
+![image](https://user-images.githubusercontent.com/1620953/234809222-d3901a98-3458-4c1c-85ac-dba0b8879c87.png)
 
-2665: A questo stesso Punto corrisponde la coda **DE**, che è collegata perpendicolarmente alla parte posteriore dello specchio.
-Questa coda è cilindrica; è fatto di un filo sottile, dritto, fermo, e il cui diametro è di circa mezzo pollice.
 
-2666: Il cilindro **C** è posto su un piede di legno **P**, di cui presentiamo separatamente la parte superiore; mentre ciò è fatto, il cilindro di ferro **e**, la cui superficie è stata levigata, penetra nella cavità del cilindro **C**, che è di rame; con quale metodo questo viene ruotato più liberamente attorno all'asse, in modo che mediante il movimento della coda **DE**, l'adattamento dello specchio sia più facilmente modificato a piacimento.
+2664:  La forcella è solidale con il cilindro C, il cui asse, se proseguito, passerebbe per il punto medio del suddetto asse di rivoluzione dello specchio.
+
+![image](https://user-images.githubusercontent.com/1620953/234810554-dfd324db-1781-4839-bb92-fc8c6c5fe9dd.png)
+
+
+2665: Per questo stesso punto centrale dello specchio passa anche la "coda" **DE**, che è collegata perpendicolarmente alla parte posteriore dello specchio. Questa coda è cilindrica: è fatta di un filo sottile, dritto, fermo, e il cui diametro è di circa mezzo pollice.
+
+2666: Il cilindro **C** è posto su un supporto di legno **P**, di cui mostriamo separatamente la parte superiore; 
+
+![image](https://user-images.githubusercontent.com/1620953/234810886-6f982881-1713-4068-abfc-b0ec9c60ec9f.png)
+
+e il perno di ferro **e**, la cui superficie è stata levigata, si inserisce nella cavità del cilindro **C**, che invece è di rame; con questo metodo risulta più fluida la rotazione attorno all'asse, il che permette di modificare a piacimento l'orientamento dello specchio  mediante la movimentazione della coda **DE**.
 
 ![image](https://user-images.githubusercontent.com/1620953/234516672-b7b752d6-c7b0-4dc4-9c42-0986c6497dd4.png)
 
-2667: Questo \[specchio\] si alza, e si abbassa, per le viti dei tre ottoni **B, B, B,** che girano a chiave, e passano per la piastrina dello stesso metallo, che si applica all'estremità del becco del piede; e che sporge in tre punti per ricevere le viti.
+2667: Lo specchio può essere alzato e abbassato tramite le tre viti di ottone **B, B, B,** , collegate ai tre piedini, e passanti per tre fori posti alle tre estremità della piastra che supporta il cilindro C.
 
-2668: Se lo specchio si deve alzare più di quanto si possa convenientemente fare con queste viti, lo portiamo a uno più piccolo, stando con i piedi abbassati, ed avendolo pronto all'estremità, mettiamo lo specchio col suo piede. (??)
+2668: Se lo specchio deve essere alzato più di quanto si possa convenientemente fare con queste viti, si può posizionare sotto al supporto uno spessore.
 
-2669: La seconda parte dell'intera macchina è l'orologio di cui abbiamo parlato sopra. Questo è mostrato in H; L'indice compie una rivoluzione in un periodo di ventiquattro ore.
+#### Parte 2b: il meccanismo ad orologeria
+
+2669: La seconda parte dell'intera macchina è l'orologio di cui abbiamo parlato sopra. Questo è rappresentato con **H**; la lancetta compie una rivoluzione in un periodo di ventiquattro ore.
 
 2670: Il Piano dell'Orologio è inclinato rispetto all'Orizzonte, secondo l'inclinazione dell'Equatore nel Luogo in cui usiamo la Macchina; ad esempio in questa nostra città di Leida tale inclinazione è di 37°.49
 
 2671: Possiamo però usare la stessa Macchina in altri Luoghi, le cui Latitudini differiscono di uno o due Gradi da questo Luogo, come vedremo (v. 2675)
 
-2672: L'orologio è sostenuto da una colonna di rame **FG**; essa è costituita da due parti che sono unite dalle Viti **d, d**, tra le quali, come nella vagina, si muove una piastra di ferro, nel mezzo della quale vi è una fessura, attraverso la quale passano le suddette Viti **d, d** . Questa piastra è saldamente collegata alla parte inferiore dell'orologio, che viene sollevato e abbassato con questo metodo, ed è fissata dalle viti **d, d**. 
-Le viti **I, I, I** possono anche essere alzate maggiormente, passando attraverso la piastra di rame **LLM** di maggior spessore, alla quale è inserita la Colonna **FG**
+2672: L'orologio è sostenuto da una colonna di rame **FG**; essa è costituita da due parti che sono unite dalle Viti **d, d**, tra le quali, si muove una piastra di ferro, nel mezzo della quale vi è una fessura  come nella vagina, attraverso la quale passano le suddette Viti **d, d**. Questa piastra è solidale con la parte inferiore dell'orologio, che viene sollevato e abbassato con questo metodo, ed è mantenuta in posizione dalle viti **d, d**. 
+Le viti **I, I, I**, passando attraverso la piastra di rame **LLM** di maggior spessore, alla quale è inserita la Colonna **FG**,  possono essere usate anche essere per aumentare l'altezza dell'orologio.
 
-2673: Le estremità **L, L** di questa piastra sono terminate in modo tale che **bc** e **cb** formano un'unica linea retta, attraverso la quale se concepiamo un piano verticale, questo dovrebbe essere perpendicolare alle linee orizzontali che possono essere tracciate nel piano dell'orologio **fg** e **hi**.
+2673: Le estremità **L, L** di questa piastra sono terminate in modo tale che **bc** e **cb** formino un'unica linea retta, attraverso la quale se immaginiamo un piano verticale, questo dovrebbe essere perpendicolare alle linee orizzontali che possono essere tracciate nel piano dell'orologio **fg** e **hi**.
 
 ![image](https://user-images.githubusercontent.com/1620953/234524416-5bdaefaa-79e0-41a1-80c5-3868bc45211a.png)
 
-2674: La Macchina è disposta in modo che il piano dell'orologio abbia la suddetta inclinazione (v. 2670), quando il piano **LLM** è orizzontale; in tale situazione, le viti **I, I, I** sono facilmente disposte, con l'ausilio della perpendicolare **Q**, il cui estremo deve corrispondere al punto **o**, segnato sulla superficie **LLM**.
+2674: La Macchina è disposta in modo che il piano dell'orologio abbia la giusta inclinazione (v. 2670), quando la base **LLM** è orizzontale;  l'inclinazione della base si può facilmente regolare usando le viti **I, I, I** , con l'ausilio del filo a piombo **Q**, il cui estremo deve corrispondere al punto **o** segnato sulla superficie della base **LLM**.
 
-(in altre parole: la base di appoggio è perpendicolare al sostegno FG, e il piano dell'orologio deve avere un'inclinazione rispetto all'orizzonte pari alla latitudine del luogo;  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)
+(in altre parole:  per assicurarsi che la base di appoggio dell'orologio sia esattamente orizzontale, basta assicurarsi che il sostegno FG sia esattamente verticale, il che si può verificare assicurandosi che il filo a piombo **Q**, che è parallelo al sostegno **FG**,  punti esattamente al punto **o** indicato sulla base; oggi utilizzeremmo forse una livella a bolla a due direzioni collocata sulla base)
 
 2675: Se il dispositivo deve essere usato in un luogo la cui latitudine differisce da quella per cui la macchina è stata costruita, (cfr. 2670), un diverso punto **o** dovrebbe essere segnato sulla base **LLM**, che risulterebbe quindi non più orizzontale *(pare cioè che l'inclinazione del piano dell'orologio sia fissata in fabbrica e non regolabile, quindi per adattarla ad altre latitudini, bisogna inclinare l'intero blocco, per cui il filo a piombo non cadrà più in **o**)*
 
-2676: L'asse della Ruota, che muove l'Indice, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
+2676: L'asse della Ruota, che muove la lancetta, è più grosso, e forato cilindricamente; la cavità, tuttavia, si avvicina un po' ad una forma conica; perché nella parte inferiore è un po' più stretto. (??)
 
 2677: L'indice \[dell'orologio\] è costituito da **ON**; questo indice è di bronzo, e il suo perno **pq**  *riempie esattamente l'ultima cavità, ricorda, in cui è strettamente inserita, in modo che sia coerente*, e nel suo movimento, la ruota porta con sé l'Indice; la cui posizione, tuttavia, può essere cambiata, in modo che possa essere stabilita all'ora.
 
@@ -92,7 +107,8 @@ p. 719
 
 è però libero di ruotare  attorno all'asse passante per **mm**, perchè una parte del gambo delle vitine è liscio e senza filetttura, potendo così ruotare liberamente dentro i fori della forcella.
 
-![image](https://user-images.githubusercontent.com/1620953/234558278-8a6ac6a9-3714-492b-9775-7021172d0448.png)
+![image](https://user-images.githubusercontent.com/1620953/234809269-dbc66de7-87a2-4b92-94a8-739c025ef9cd.png)
+
 
 
 *(questo significa che la coda **DE** dello specchio ha qui due gradi di libertà: può ruotare intorno all'asse **mm** (= **rr** della forcella) e scorrere lungo l'asse del tubo **R**)*
