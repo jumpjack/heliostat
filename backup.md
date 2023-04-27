@@ -143,7 +143,7 @@ p. 719
 
 2688: Le divisioni di questo righello sono disuguali, e determinano la lunghezza del braccio nelle diverse stagioni dell'anno, posizionando l'estremo **x** sulla divisione che corrisponde al giorno in cui usiamo la macchina.
 
-2689: Ora che possiamo notare le Divisioni, concepiamo la Lunghezza del Braccio (cfr. 2680) essere divisa in mille parti uguali, cioè in novanta parti; e la divisione della distanza è annotata al punto **v** nella tabella seguente:
+2689: ora, per tracciare le divisioni, immaginiamo di dividere la lunghezza del braccio (2680)  in mille parti uguali, oppure  la linea **vs** in novanta parti; e le distanze delle divisioni dal punto **v** sono riportate nella tabella seguente:
 
 2690: 
 ```
@@ -152,11 +152,11 @@ p. 719
 - 21.Set  11.Ott 21.Ott  1.Nov  11.Nov  21.Nov  1.Dic   21.Dic
 ```
 
-Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrisponde molto fedelmente al **vs**, le cui divisioni sono contenute in questa seconda tabella:
+Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrisponde molto fedelmente alla linea **vs**, le cui divisioni sono contenute in questa seconda tabella:
 
 ```
 21.Mar   1.Apr   21.Apr  1.Mag   11.Mag  21.Mag   1.Giu   21.Giu
-0.       11.      22.    36.     51.     66.     79.      90.
+0.       11.      22.    36.     51.     66.      79.      90.
 21.Set.  1.Set   21.Au   11.Ago  1.Ago   21.Lug   11.Lug  21.Giu
 ```
 
@@ -166,7 +166,7 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 
 2693: Per prima cosa installiamo il Posizionatore (2683) sul supporto **P** (2684), e alziamolo/abbassiamolo quanto serve (2667, 2668), in modo che il regolo **YZ**, precedentemente impostato sulla giusta lunghezza (2688), opportunamente ruotato risulti infine allineato secondo la direzione dei raggi solari che desideriamo "staticizzare".
 
-2694 Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692), e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
+2694: Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692), e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
 
 2695: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
 
@@ -180,17 +180,4 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 
 ### Parte 4 - Descrizione di esperimento da fare al buio 
 
-*2700: Devono essere istituiti esperimenti sulla luce in un luogo oscuro; Per questo motivo, la macchina deve essere inclusa nella scatola, dove viene utilizzata negli esperimenti.
-
-*2701: Presentiamo il caso in A; Questo insiste sui piedi, che hanno rotule articolate, in modo che possano essere facilmente spostati.
-È aperto da un lato, e questo viene spostato verso la finestra aperta, attraverso la quale i raggi solari raggiungono liberamente lo specchio.
-
-*2702. E la teca si estende oltre la finestratura da ogni parte, in modo che l'ingresso della luce nella stanza sia impedito da strisce di stoffa, che sono coerenti con la teca e applicate al muro; a tal fine, per quanto è possibile, si sposta l'astuccio al muro, e si girano le viti **C, C**, con i piedi anteriori, fino ad appoggiarle sul pavimento.
-
-*2703: La porta nel motore sinistro è opposta a sinistra; potrebbe essere diffuso in altro modo. Trasmettiamo i raggi attraverso la faccia **B**; scegliamo questo, per l'ubicazione del luogo in cui abbiamo installato gli Esperimenti sulla Luce. In questa faccia ci sono due aperture larghe tre pollici e diciotto cerchi alti pollici, uno dei quali è mostrato aperto in **DE**.
-
-*2704: Questi sono chiusi, all'esterno, con pannelli di legno, che si muovono tra i regoli di legno. Entrambi possono essere riscaldati attraverso entrambe le aperture, in modo che possano scambiarsi. Una F è lunga tre piedi e perforata al centro. L'apertura da b è lunga cinque pollici e larga due.
-
-*2705: Questa lastra GH è chiusa, di rame, nella quale sono dati due fori c, d; ; il diametro di quello è di due terzi di pollice, il diametro di questo è più piccolo. Queste aperture sono chiuse dalle placche I & K, che vengono prima applicate a GH, e sono mobili attorno ai Centri i & k; anche le dimensioni dei fori, mediante la rotazione delle ultime lamelle, possono essere variate, come dimostra la figura.
-
-*2706: Il pannello F è scavato posteriormente in modo che possa ricevere il vetro obbiettivo di un cannocchiale di dieci, venti o venticinque piedi, secondo la grandezza del luogo in cui sono allestiti gli esperimenti; Il centro di questo bicchiere deve corrispondere al centro del foro c.
+....
