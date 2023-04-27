@@ -188,5 +188,3 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 *2705: Questa lastra GH è chiusa, di rame, nella quale sono dati due fori c, d; ; il diametro di quello è di due terzi di pollice, il diametro di questo è più piccolo. Queste aperture sono chiuse dalle placche I & K, che vengono prima applicate a GH, e sono mobili attorno ai Centri i & k; anche le dimensioni dei fori, mediante la rotazione delle ultime lamelle, possono essere variate, come dimostra la figura.
 
 *2706: Il pannello F è scavato posteriormente in modo che possa ricevere il vetro obbiettivo di un cannocchiale di dieci, venti o venticinque piedi, secondo la grandezza del luogo in cui sono allestiti gli esperimenti; Il centro di questo bicchiere deve corrispondere al centro del foro c.
-
-
