@@ -139,21 +139,25 @@ Sulla faccia opposta del regolo è stato disegnato un altro regolo, che corrispo
 
 2697: La Colonna **VX** con il Righello **YZ** può ora essere tolta, lasciando il supporto **P** in posizione, e collocando poi su di esso il Cilindro **C** con lo Specchio. La Forcella **T** viene temporaneamente rimossa dal suo posto, in modo da far passare  la Coda dello Specchio **DE**  attraverso il tubicino **R**; una volta riposizionata la Forella, avremo tutto pronto.
 
-2698: I raggi poi riflessi dalla parte di mezzo dello specchio, a cui tutti gli altri riflessi dallo specchio sono paralleli, concordano come luogo e come direzione con la posizione che aveva la regola del posizionatore; e mentre si muove il Movimento dell'Orologio, il cui Indice segue il Sole, si muove la Coda dello Specchio, si cambia la sua posizione rispetto al Sole; E il raggio, riflesso dal punto medio dello specchio, rimane fisso.
+2698: I raggi poi riflessi dalla parte di mezzo dello specchio, a cui tutti gli altri riflessi dallo specchio sono paralleli, concordano come luogo e come direzione con la posizione che aveva il regolo del posizionatore; e mentre l'orologio si muove e il suo indice segue il sole, si muove la Coda dello Specchio, si cambia la sua posizione rispetto al Sole; E il raggio, riflesso dal punto medio dello specchio, rimane fisso.
 
-2699: Se, dopo aver tolto l'Indice NO, sostituiamo questo con l'Indice K, la Macchina avrà a disposizione un Orologio comune.
+2699: Se sostituiamo il perno **NO** con la lancetta **K**, la macchina divewnterà un normale orologio.
 
-2700: Devono essere istituiti esperimenti sulla luce in un luogo oscuro; Per questo motivo, la macchina deve essere inclusa nella scatola, dove viene utilizzata negli esperimenti.
+### parte 2 - descrizione di esperimento da fare al buio 
 
-2701: Presentiamo il caso in A; Questo insiste sui piedi, che hanno rotule articolate, in modo che possano essere facilmente spostati.
+*2700: Devono essere istituiti esperimenti sulla luce in un luogo oscuro; Per questo motivo, la macchina deve essere inclusa nella scatola, dove viene utilizzata negli esperimenti.
+
+*2701: Presentiamo il caso in A; Questo insiste sui piedi, che hanno rotule articolate, in modo che possano essere facilmente spostati.
 È aperto da un lato, e questo viene spostato verso la finestra aperta, attraverso la quale i raggi solari raggiungono liberamente lo specchio.
 
-2702. E la teca si estende oltre la finestratura da ogni parte, in modo che l'ingresso della luce nella stanza sia impedito da strisce di stoffa, che sono coerenti con la teca e applicate al muro; a tal fine, per quanto è possibile, si sposta l'astuccio al muro, e si girano le chiocciole C, C, con i piedi anteriori, fino ad appoggiarle sul pavimento.
+**2702. E la teca si estende oltre la finestratura da ogni parte, in modo che l'ingresso della luce nella stanza sia impedito da strisce di stoffa, che sono coerenti con la teca e applicate al muro; a tal fine, per quanto è possibile, si sposta l'astuccio al muro, e si girano le viti **C, C**, con i piedi anteriori, fino ad appoggiarle sul pavimento.
 
-2703: La porta nel motore sinistro è opposta a sinistra; potrebbe essere diffuso in altro modo. Trasmettiamo i raggi attraverso la faccia B; scegliamo questo, per l'ubicazione del luogo in cui abbiamo installato gli Esperimenti sulla Luce. In questa faccia ci sono due aperture larghe tre pollici e diciotto cerchi alti pollici, uno dei quali è mostrato aperto in DE
+2703: La porta nel motore sinistro è opposta a sinistra; potrebbe essere diffuso in altro modo. Trasmettiamo i raggi attraverso la faccia **B**; scegliamo questo, per l'ubicazione del luogo in cui abbiamo installato gli Esperimenti sulla Luce. In questa faccia ci sono due aperture larghe tre pollici e diciotto cerchi alti pollici, uno dei quali è mostrato aperto in **DE**.
 
-2704: Questi sono chiusi, all'esterno, con pannelli di legno, che si muovono tra i regoli di legno. Entrambi possono essere riscaldati attraverso entrambe le aperture, in modo che possa avvenire lo scambio di IPFA. Una F è lunga tre piedi e perforata al centro. L'apertura da b è lunga cinque pollici e larga due.
+*2704: Questi sono chiusi, all'esterno, con pannelli di legno, che si muovono tra i regoli di legno. Entrambi possono essere riscaldati attraverso entrambe le aperture, in modo che possano scambiarsi. Una F è lunga tre piedi e perforata al centro. L'apertura da b è lunga cinque pollici e larga due.
 
-2705: Questa Laminâ GH è chiusa, copperâ, in cui sono dati due fori c, d; il diametro di quello è di due terzi di pollice, il diametro di questo è più piccolo. Queste aperture sono chiuse dalle placche I & K, che vengono prima applicate a GH, e sono mobili attorno ai Centri i & k; anche le dimensioni dei fori, mediante la rotazione delle ultime lamelle, possono essere variate, come dimostra la figura.
+*2705: Questa lastra GH è chiusa, di rame, nella quale sono dati due fori c, d; ; il diametro di quello è di due terzi di pollice, il diametro di questo è più piccolo. Queste aperture sono chiuse dalle placche I & K, che vengono prima applicate a GH, e sono mobili attorno ai Centri i & k; anche le dimensioni dei fori, mediante la rotazione delle ultime lamelle, possono essere variate, come dimostra la figura.
 
-2706: La Tavola F à parte pofticâ è scavata in modo che possa ricevere il vetro obiettivo del Telecopius di dieci, venti, o venticinque piedi, secondo la grandezza del Luogo in cui sono installati gli Esperimenti; Il centro di questo vetro deve essere a filo con il centro del foro c.
+*2706: Il pannello F è scavato posteriormente in modo che possa ricevere il vetro obbiettivo di un cannocchiale di dieci, venti o venticinque piedi, secondo la grandezza del luogo in cui sono allestiti gli esperimenti; Il centro di questo bicchiere deve corrispondere al centro del foro c.
+
+
