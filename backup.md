@@ -3,6 +3,7 @@
      - [archive.org](https://archive.org/details/A077240117)
  - [English translation by Desaguliers, J. T. (John Theophilus)](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up); section about heliostata is in Book V, chapter II, starting from  page 107 of the real book (p.152 of the PDF). Pictures are between p.112 and p.113 of book (158-162 of PDF).  (Lines 2659-2702)
  - [French translation by C.F. Roland De Virloys, 1747, vol. 2](https://www.google.it/books/edition/%C3%89l%C3%A9mens_de_physique_d%C3%A9montrez_math%C3%A9m/95vDCwJlppkC?hl=it&gbpv=1&dq=soleil+miroir++Physique++gravesande&pg=PA246&printsec=frontcover) (from page 126) (Lines 2659-2702)
+ - [Alternate English description in "Cyclopedia" by Rees](https://archive.org/details/mobot31753002000542/page/554/mode/2up)
 
 Tavola LXXXIII:
 
