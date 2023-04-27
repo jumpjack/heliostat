@@ -129,11 +129,16 @@ p. 719
 
 2684: il Cilindro **C** viene rimosso, insieme allo specchio, dal supporto **P**, e al suo posto viene posizionata la colonna di bronzo **VX**, che può girare meno liberamente intorno al perno  **e**, di modo che il suo orientamento resti stabile mentre viene allestita la macchina.
 
+![image](https://user-images.githubusercontent.com/1620953/234857996-ed23cbff-61d8-4b56-86e7-0fab48274395.png)
+
 2685 Nell'estremità **X** viene incernierata l'asta **YZ** , in modo da poter essere inclinata a piacere rispetto all'orizzonte, e in tale posizione può essere fissata stabilmente. L'altezza della colonna **VX** è tale che questo centro di rotazione **X** è come se si trovasse al centro dello specchio (cfr. 2665). La lunghezza del braccio **YX** può essere a piacere, mentre il braccio **XZ**  deve avere una lunghezza ben precisa.
 
-2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto **Z** a formare l'asta cava **xZ**; questa speciale asta, o regolo, grazie alle due viti **z,z** che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio **XZ**. Sull'astina interna è tracciata la lineetta **vs**, la cui lunghezza è pari a nove centesimi della lunghezza dell'indice (cfr. 2680); e come essa è divisa, lasciatemelo dire subito.
+2686: Il suddetto braccio \[XZ\] in realtà non si estende oltre il punto **y**: ai suoi lati si trovano altre due astine, unite nel punto **Z** a formare l'asta cava **xZ**; questa speciale asta cava, o regolo, grazie alle due viti **z,z** che passano in una fessura dela suddetta astina interna, può scorrere, rendendo regolabile la lunghezza del braccio **XZ**. Sull'astina interna è tracciata la lineetta **vs**, la cui lunghezza è pari a nove centesimi della lunghezza della lancetta (cfr. 2680); e come essa è divisa, lasciatemelo dire subito.
 
 2687:  La lunghezza della lancetta (cfr. 2680) è pari a quella del al braccio **XZ**, se è misurata tra il perno **X** e l'estremità  **Z**, quando l'estremità **x** del regolo esterno coincide con **v** , dove iniziano le divisioni della linea **vs**.
+
+![image](https://user-images.githubusercontent.com/1620953/234862096-d89e8683-22a8-4cc1-a983-6e527cddb82f.png)
+
 
 2688: Le divisioni di questo righello sono disuguali, e determinano la lunghezza del braccio nelle diverse stagioni dell'anno, posizionando l'estremo **x** sulla divisione che corrisponde al giorno in cui usiamo la macchina.
 
