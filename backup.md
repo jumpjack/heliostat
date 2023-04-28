@@ -207,10 +207,15 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 ![image](https://user-images.githubusercontent.com/1620953/235130236-6422e33f-9350-4d21-a680-48627e6b7b1b.png)
 
 
-9) Alziamo/abbassiamo il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
-10) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
-11) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
-12) Rimuovere temporaneamente la forcella T dalla sua sede, in modo da poter inserire la coda **DE** dello specchio nel tubicino **R**, dopdichè riposizionare in sede la forcella. Il dispositivo è pronto per l'utilizzo.
+9) Alzare/abbassare il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
+
+![image](https://user-images.githubusercontent.com/1620953/235130754-b345fb98-fda4-4a88-848d-ccec5c696863.png)
+
+![image](https://user-images.githubusercontent.com/1620953/235131061-b6815b5b-ca24-43bd-bd4a-405f8976dffd.png)
+
+11) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
+12) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
+13) Rimuovere temporaneamente la forcella T dalla sua sede, in modo da poter inserire la coda **DE** dello specchio nel tubicino **R**, dopdichè riposizionare in sede la forcella. Il dispositivo è pronto per l'utilizzo.
 
 ### Parte 4 - Descrizione di esperimento da fare al buio 
 
