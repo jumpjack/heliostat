@@ -192,13 +192,17 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 
 ![image](https://user-images.githubusercontent.com/1620953/235109154-e79c3e2a-dd71-45c2-b696-3adae0b41b8c.png)
 
-5) Prenderere ora il blocco-orologio e metterlo in piano tramite le viti "I, I, I"
-6) Ruotare l'orologio intorno all'asse verticale in modo che i piedi "bc,bc" seguano la linea del meridiano (sud-nord), cosicchè l'asse dell'orologio risulterà puntato verso il polo nord, ossia sarà parallelo all'asse terrestre.
-7) Regoliamo la lancetta dell'orologio (l'asta che sostiene la forcella T) in modo che i raggi di sole passino esattamente attraverso il tubicino R, che quindi dovrà anch' esseo essere opportunamente ruotato sul suo asse; l'orientamento sarà quello corretto quando sarà visibile l'ombra del "buco" del tubicino.
-8) Alziamo/abbassiamo il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
-9) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
-10) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
-11) Rimuovere temporaneamente la forcella T dalla sua sede, in modo da poter inserire la coda **DE** dello specchio nel tubicino **R**, dopdichè riposizionare in sede la forcella. Il dispositivo è pronto per l'utilizzo.
+4) Prenderere ora il blocco-orologio e metterlo in piano tramite le viti "I, I, I"
+5) Ruotare l'orologio intorno all'asse verticale in modo che i piedi "bc,bc" seguano la linea del meridiano (sud-nord), cosicchè l'asse dell'orologio risulterà puntato verso il polo nord, ossia sarà parallelo all'asse terrestre.
+
+![image](https://user-images.githubusercontent.com/1620953/235110184-df163ffc-7752-46d8-b156-c65babcc289e.png)
+
+
+6) Regolare la lancetta dell'orologio (l'asta che sostiene la forcella T) in modo che i raggi di sole passino esattamente attraverso il tubicino R, che quindi dovrà anch' esseo essere opportunamente ruotato sul suo asse; l'orientamento sarà quello corretto quando sarà visibile l'ombra del "buco" del tubicino.
+9) Alziamo/abbassiamo il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
+10) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
+11) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
+12) Rimuovere temporaneamente la forcella T dalla sua sede, in modo da poter inserire la coda **DE** dello specchio nel tubicino **R**, dopdichè riposizionare in sede la forcella. Il dispositivo è pronto per l'utilizzo.
 
 ### Parte 4 - Descrizione di esperimento da fare al buio 
 
