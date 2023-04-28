@@ -228,10 +228,11 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 ![image](https://user-images.githubusercontent.com/1620953/235137330-5e4f7003-4c6f-4c43-af12-07f03d2b6bf1.png)
 
 
-17) Il dispositivo è ora pronto per l'utilizzo: man mano che l'orologio ruoterà, indurrà nella coda dello specchio un movimento tale da far puntare il riflesso del sole sempre nella stessa direzione.
+17) Il dispositivo è ora pronto per l'utilizzo: 
+
+![image](https://user-images.githubusercontent.com/1620953/235137573-6beeff63-63ab-4b85-a34b-99fd68f513e5.png)
 
 
+Man mano che il meccanismo dell'orologio ruoterà, esso indurrà nella coda dello specchio un movimento tale da far puntare il riflesso del sole sempre nella stessa direzione.
 
-### Parte 4 - Descrizione di esperimento da fare al buio 
 
-....
