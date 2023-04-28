@@ -241,10 +241,10 @@ Man mano che il meccanismo dell'orologio ruoterà, esso indurrà nella coda dell
 
 Secondo altre pubblicazioni, come la "Cilopedia", "[The Complete Dictionary of Arts and Sciences.... - vol. 1](https://books.google.it/books?id=Z28iAQAAMAAJ&pg=PP997&lpg=PP997&dq=the+radius+is+secant+to+23%C2%B0,30%27+as+10000000+to+10904411&source=bl&ots=gzEZrtpij6&sig=ACfU3U3ycL_aNQT994KEiBptuTwfr1RZKg&hl=it&sa=X&ved=2ahUKEwi6uLT2z8z-AhXEqaQKHcSfBEgQ6AF6BAgWEAM#v=onepage&q&f=false)", "[Philosophia Britannica: Or, A New and Comprehensive System Of The ... - vol. 3](https://books.google.it/books?id=tFP9Y7VC5_MC&pg=PA91&lpg=PA91&dq=the+radius+is+secant+to+23%C2%B0,30%27+as+10000000+to+10904411&source=bl&ots=J7ssVYrhy8&sig=ACfU3U1zy5NTuWyS1vIPdquCJLV87pNQHA&hl=it&sa=X&ved=2ahUKEwi6uLT2z8z-AhXEqaQKHcSfBEgQ6AF6BAgIEAM#v=onepage&q&f=false)", è possibile dimostrare che, date le seguenti condizioni:
 
-1) La linea delle 12:00 dell'orologio giace sul piano del meridiano locale
-2) Il tubicino R ha una posizione e un orientamento tale da essere esattamente attraversato da un raggio di sole
-3) L'ombra del perno lk (o lN) passa esattamente attraverso il foro di R
-4) La distanza del centro dello specchio dal punto l è esattamente uguale alla distanza di l dal centro del tubicino R (condizione realizzata tramite il posizionatore)
-5) La coda DE dello specchio passa attraverso il tubicino R
+1) La linea delle 12:00 dell'orologio giace sul piano del meridiano locale *(tramite posizionamento manuale dell'orologio)*
+2) Il tubicino R ha una posizione e un orientamento tale da essere esattamente attraversato da un raggio di sole *(tramite regolazione manuale della lancetta dell'orologio, e dell'altezza di R sulla forcella T)* 
+3) L'ombra del perno lk (o lN) passa esattamente attraverso il foro di R *(tramite scorrimento del perno nel foro N)*
+4) La distanza del centro S dello specchio dal punto l è esattamente uguale alla distanza di l dal centro del tubicino R *(tramite il posizionatore)* (triangolo isoscele **SlR**)
+5) La coda DE dello specchio passa attraverso il tubicino R *(smontando la forcella T, inserendo la coda DE in R e rimontando la forcella)*
 
-allora in qualunque momento della giornata lo specchio, grazie al meccanismo ad orologeria, risulterà orientato in modo tale da proiettare i raggi di sole sempre nella stessa direzione.
+allora risulterà che in qualunque momento della giornata lo specchio, grazie al meccanismo ad orologeria, sarà  orientato in modo tale da proiettare i raggi di sole sempre nella stessa direzione.
