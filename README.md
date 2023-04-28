@@ -56,7 +56,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 ![image](https://user-images.githubusercontent.com/1620953/235206087-1c56417d-d700-4dca-ae5d-0b87bd5c6af3.png)
 
 
-[VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here]().
+[VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here](https://github.com/jumpjack/heliostat/blob/main/VARI%C3%89T%C3%89S_SUR_LA_THEORIE_DES_H%C3%8BLIOSTATS(Fr-En).md).
 
 ![image](https://user-images.githubusercontent.com/1620953/228923691-b19b96dd-cf33-4565-a9aa-cbd25e46d8e0.png)
 
