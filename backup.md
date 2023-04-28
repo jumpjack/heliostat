@@ -207,20 +207,30 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 ![image](https://user-images.githubusercontent.com/1620953/235130236-6422e33f-9350-4d21-a680-48627e6b7b1b.png)
 
 
-9) Alzare/abbassare il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
+7) Alzare/abbassare il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
 
 ![image](https://user-images.githubusercontent.com/1620953/235130754-b345fb98-fda4-4a88-848d-ccec5c696863.png)
 
 ![image](https://user-images.githubusercontent.com/1620953/235131061-b6815b5b-ca24-43bd-bd4a-405f8976dffd.png)
 
-11) Fatto ciò, avvicinare orologio e posizionatore, e alzare/abbassare il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**:
+8) Fatto ciò, avvicinare orologio e posizionatore, e alzare/abbassare il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**:
 
 ![image](https://user-images.githubusercontent.com/1620953/235136245-a992a041-15e0-4fb9-b8b5-5d7ccc81e483.png)
 
 ![image](https://user-images.githubusercontent.com/1620953/235136192-39c8e540-fd40-4a4f-bfa0-4d7813a29393.png)
 
-13) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
-14) Rimuovere temporaneamente la forcella T dalla sua sede, in modo da poter inserire la coda **DE** dello specchio nel tubicino **R**, dopdichè riposizionare in sede la forcella. Il dispositivo è pronto per l'utilizzo.
+9) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ:
+
+![image](https://user-images.githubusercontent.com/1620953/235136689-448a9278-4499-4989-a257-9691377019b7.png)
+
+14) L'ultimo passo sarà orientare lo specchio in modo che la sua coda **DE** passi nel tubicino **R**; per farlo, dovremo temporaneamente rimuovere la forcella **T** dalla sua sede, inserire la coda **DE** nel tubicino, e ricollocare al suo posto la forcella:
+
+![image](https://user-images.githubusercontent.com/1620953/235137330-5e4f7003-4c6f-4c43-af12-07f03d2b6bf1.png)
+
+
+17) Il dispositivo è ora pronto per l'utilizzo: man mano che l'orologio ruoterà, indurrà nella coda dello specchio un movimento tale da far puntare il riflesso del sole sempre nella stessa direzione.
+
+
 
 ### Parte 4 - Descrizione di esperimento da fare al buio 
 
