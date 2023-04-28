@@ -198,7 +198,15 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 ![image](https://user-images.githubusercontent.com/1620953/235110184-df163ffc-7752-46d8-b156-c65babcc289e.png)
 
 
-6) Regolare la lancetta dell'orologio (l'asta che sostiene la forcella T) in modo che i raggi di sole passino esattamente attraverso il tubicino R, che quindi dovrà anch' esseo essere opportunamente ruotato sul suo asse; l'orientamento sarà quello corretto quando sarà visibile l'ombra del "buco" del tubicino.
+6) Regolare la lancetta **ON** dell'orologio (l'asta che sostiene la forcella T) in modo che i raggi di sole passino esattamente attraverso il tubicino **R**, che quindi dovrà anch'esso essere opportunamente ruotato sul suo asse; l'orientamento sarà quello corretto quando sul piano d'appoggio sarà visibile l'ombra del "buco" del tubicino.
+
+![image](https://user-images.githubusercontent.com/1620953/235129929-be0e68ba-2606-4c2f-9926-81de213c5dbc.png)
+
+![image](https://user-images.githubusercontent.com/1620953/235129547-8e8aa25d-c063-416d-b23e-a6abd134d7e4.png)
+
+![image](https://user-images.githubusercontent.com/1620953/235130236-6422e33f-9350-4d21-a680-48627e6b7b1b.png)
+
+
 9) Alziamo/abbassiamo il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
 10) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
 11) A questo punto si può inserire lo specchio S nel supporto P al posto del regolo XZ.
