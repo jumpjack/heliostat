@@ -170,13 +170,23 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 
 2695: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
 
-2696: Tutta questa parte sarà trasferita al Positore, essendo stato stabilito come prima si è detto (2693). E così si sposta l'orologio al positore, e questo si alza, in modo che l'estremità **l** del filo di rame **Ik** incontri l'estremità **Z** del regolo **YZ**. La Perpendicolare **Q** continua ad essere curata, in modo che corrisponda sempre al punto **o**; dobbiamo anche fare attenzione che, dopo che l'Orologio è stato spostato, i Raggi Solari e l'ombra del Punto **l**, in modo che prima passino attraverso il Tubo **R**, affinché la posizione non sia disturbata dal riflesso del meridiano.
+2696: Tutta questa parte sarà trasferita al Positore, essendo stato stabilito come prima si è detto (2693). E così si sposta l'orologio al positore, e questo si alza, in modo che l'estremità **l** del filo di rame **lk** incontri l'estremità **Z** del regolo **YZ**. La Perpendicolare **Q** continua ad essere curata, in modo che corrisponda sempre al punto **o**; dobbiamo anche fare attenzione che, dopo che l'Orologio è stato spostato, i Raggi Solari e l'ombra del Punto **l**, in modo che prima passino attraverso il Tubo **R**, affinché la posizione non sia disturbata dal riflesso del meridiano.
 
 2697: La Colonna **VX** con il Righello **YZ** può ora essere tolta, lasciando il supporto **P** in posizione, e collocando poi su di esso il Cilindro **C** con lo Specchio. La Forcella **T** viene temporaneamente rimossa dal suo posto, in modo da far passare  la Coda dello Specchio **DE**  attraverso il tubicino **R**; una volta riposizionata la Forella, avremo tutto pronto.
 
 2698: I raggi poi riflessi dalla parte di mezzo dello specchio, a cui tutti gli altri riflessi dallo specchio sono paralleli, concordano come luogo e come direzione con la posizione che aveva il regolo del posizionatore; e mentre l'orologio si muove e il suo indice segue il sole, si muove la Coda dello Specchio, si cambia la sua posizione rispetto al Sole; E il raggio, riflesso dal punto medio dello specchio, rimane fisso.
 
 2699: Se sostituiamo il perno **NO** con la lancetta **K**, la macchina divewnterà un normale orologio.
+
+### In altre parole...
+1) Collocare il posizionatore sul supporto P
+2) Regolare la lunghezza del regolo xz secondo il giorno dell'anno, in base alle tacche presenti sulla linea vs tracciata sul regolo xy
+3) Ruotare il regolo sia intorno al perno **e** che intorno all'asse **x**, in modo che il regolo stesso segua esattamente quella dei raggi solari: basta vedere quando la sua ombra proiettata non è pù una linea ma praticamente un "punto" (o meglio, la sezione rettangolare del regolo)
+4) Prendiamo il blocco-orologio e mettiamolo in piano tramite le viti "I, I, I"
+5) Ruotiamo l'orologio intorno all'asse verticale in modo che i piedi "bc,bc" seguano la linea del meridiano (sud-nord), cosicchè l'asse dell'orologio risulterà puntato verso il polo nord, ossia sarà parallelo all'asse terrestre.
+6) Regoliamo la lancetta dell'orologio (l'asta che sostiene la forcella T) in modo che i raggi di sole passino esattamente attraverso il tubicino R, che quindi dovrà anch' esseo essere opportunamente ruotato sul suo asse; l'orientamento sarà quello corretto quando sarà visibile l'ombra del "buco" del tubicino.
+7) Alziamo/abbassiamo il perno **lk** della lancetta finchè l'ombra del punto **l** passa esattamente in mezzo all'ombra del buco del tubicino **R**
+8) Fatto ciò, avviciniamo orologio e posizionatore, e alziamo/abbassiamo il posizionatore in modo che la sua estremità **Z** vada a toccare l'estremità **l** del perno **lk**.
 
 ### Parte 4 - Descrizione di esperimento da fare al buio 
 
