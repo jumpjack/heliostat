@@ -166,7 +166,7 @@ Sulla faccia opposta del regolo è stato disegnato un'altra linea, che corrispon
 
 2693: Per prima cosa installiamo il Posizionatore (2683) sul supporto **P** (2684), e alziamolo/abbassiamolo quanto serve (2667, 2668), in modo che il regolo **YZ**, precedentemente impostato sulla giusta lunghezza (2688), opportunamente ruotato risulti infine allineato secondo la direzione dei raggi solari che desideriamo "staticizzare".
 
-2694: Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692), e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
+2694: Disponiamo poi l'altra parte della Macchina in modo tale che le Linee **bc, bc** incontrino la linea del Meridiano del Luogo, nel piano preventivamente tracciato (2692) *(cioè facciamo in modo che l'asse dell'orologio punti al polo nord)* , e le viti "I, I, I" siano disposte in modo che la Perpendicolare **Q** incontri il punto **o** (2674). *(cioè mettiamo in piano la base dell'orologio)*
 
 2695: L'indice **ON** (2677) va ruotato, in modo che i raggi solari passino direttamente attraverso il tubicino **R** (2682), che va quindi opportunamente ruotato e inclinato. Poi si alza o si abbassa il filo di bronzo **ld** (2678), in modo che l'ombra dell'estremità **l** passi per la metà del tubo.
 
