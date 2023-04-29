@@ -47,18 +47,16 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 
 ## Documents
-
+- [A self-setting heliostat and its use in experimental optics](https://archive.org/details/sim_popular-astronomy_1913-11_21_9/page/534/mode/2up) - by Edison Pettit, in **Popular Astronomy** Vol 21, Iss 9 (double mirror)
 - [BULLETIN OF THE ENCOURAGEMENT SOCIETY FOR NATIONAL INDUSTRY](https://cnum.cnam.fr/CGI/fpage.cgi?BSPI.25/0117/100/507/6/401) - Details page
 - [A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats](https://articles.adsabs.harvard.edu/pdf/1982JBAA...92..182D) by Dougherty, L. M., in  
 **Journal of the British Astronomical Association**, vol.92, no.4, p.182-187 (**1982**) (geometric eplanation of various types of heliostats)
 
 ![image](https://user-images.githubusercontent.com/1620953/235206087-1c56417d-d700-4dca-ae5d-0b87bd5c6af3.png)
 
-
-[VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here](https://github.com/jumpjack/heliostat/blob/main/VARI%C3%89T%C3%89S_SUR_LA_THEORIE_DES_H%C3%8BLIOSTATS(Fr-En).md).
+- [VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here](https://github.com/jumpjack/heliostat/blob/main/VARI%C3%89T%C3%89S_SUR_LA_THEORIE_DES_H%C3%8BLIOSTATS(Fr-En).md).
 
 ![image](https://user-images.githubusercontent.com/1620953/228923691-b19b96dd-cf33-4565-a9aa-cbd25e46d8e0.png)
-
 
 - [A Heliostat for Photo-Micrography](https://www.jstor.org/stable/pdf/3220592.pdf), by S. W. **Stratton** and T. J. **Burrill**, in **Proceedings of the American Society of Microscopists**, Vol. 7, Eighth Annual Meeting (**1885**), pp. 103-107
     - **Mirror rotation speed**: 1 turn in 24 hours (full sun speed)
@@ -82,7 +80,6 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     - **Reflection target** : secondary mirror
     - **clock mechanism**: not specified
     
-
 ![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
 
 
