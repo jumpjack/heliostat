@@ -48,10 +48,9 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Documents
 
-[BULLETIN OF THE ENCOURAGEMENT SOCIETY FOR NATIONAL INDUSTRY](https://cnum.cnam.fr/CGI/fpage.cgi?BSPI.25/0117/100/507/6/401) - Details page
-
-- **A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats** by Dougherty, L. M., in  
-**Journal of the British Astronomical Association**, vol.92, no.4, p.182-187 (**1982**) ([source](https://ui.adsabs.harvard.edu/search/p_=6&q=bibstem%3A(%22JBAA...92%22)&sort=date%20desc%2C%20bibcode%20desc) (geometric eplanation of various types of heliostats)
+- [BULLETIN OF THE ENCOURAGEMENT SOCIETY FOR NATIONAL INDUSTRY](https://cnum.cnam.fr/CGI/fpage.cgi?BSPI.25/0117/100/507/6/401) - Details page
+- [A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats](https://articles.adsabs.harvard.edu/pdf/1982JBAA...92..182D) by Dougherty, L. M., in  
+**Journal of the British Astronomical Association**, vol.92, no.4, p.182-187 (**1982**) (geometric eplanation of various types of heliostats)
 
 ![image](https://user-images.githubusercontent.com/1620953/235206087-1c56417d-d700-4dca-ae5d-0b87bd5c6af3.png)
 
