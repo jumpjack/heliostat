@@ -54,7 +54,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ![image](https://user-images.githubusercontent.com/1620953/235206087-1c56417d-d700-4dca-ae5d-0b87bd5c6af3.png)
 
-- [ON A HELIOSTAT FOR THE SMITHSONIAN INSTITUTION, WASHINGTON. By SIR HOWARD GRUBB, F.R.S., an Hon. Secretary of the Royal Dublin Society. (Plate XIII.)](https://www.biodiversitylibrary.org/page/30422459) in [The Scientific proceedings of the Royal Dublin Society - new series - volume 6](https://www.biodiversitylibrary.org/item/95855#page/7/mode/1up), on [page 598](https://www.biodiversitylibrary.org/item/95855#page/614/mode/1up), drawing on [Plate XIII](https://www.biodiversitylibrary.org/item/95855#page/671/mode/1up):
+- [ON A HELIOSTAT FOR THE SMITHSONIAN INSTITUTION, WASHINGTON](https://www.biodiversitylibrary.org/page/30422459) by SIR HOWARD GRUBB, F.R.S., an Hon. Secretary of the Royal Dublin Society (Plate XIII) in [The Scientific proceedings of the Royal Dublin Society - new series - volume 6](https://www.biodiversitylibrary.org/item/95855#page/7/mode/1up), on [page 598](https://www.biodiversitylibrary.org/item/95855#page/614/mode/1up), drawing on [Plate XIII](https://www.biodiversitylibrary.org/item/95855#page/671/mode/1up):
 
 ![image](https://user-images.githubusercontent.com/1620953/235440997-2929a7c8-a611-4019-a5a7-8acd63a7b012.png)
 
