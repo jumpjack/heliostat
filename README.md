@@ -95,10 +95,10 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 ## Images
 
 - ![image](https://user-images.githubusercontent.com/1620953/230624103-41b78e41-bc39-4367-97d1-260e8ba3e5d8.png)
-
-
 - ![image](https://user-images.githubusercontent.com/1620953/226894896-5f8caf1d-481c-4d04-a28d-cad1f78b68c1.png)
 - ![image](https://user-images.githubusercontent.com/1620953/226895117-0e9c855e-5906-4f84-abe6-6b2ea357b6ea.png)
+- ![Keith's american heliostat](https://user-images.githubusercontent.com/1620953/235442076-88581fb3-78e4-4cb6-8250-d1c3b03639b4.png) ([source](https://airandspace.si.edu/collection-media/NASM-A19880210000cp02))
+
 
 ## Inventors
 
