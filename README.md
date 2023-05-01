@@ -91,6 +91,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     
 ![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
 
+- Teoria dei "tubi solari": https://www.researchgate.net/publication/340111732_Study_and_Analysis_of_Parameters_Affecting_Tubular_Daylighting_Device
 
 ## Images
 
