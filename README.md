@@ -54,6 +54,10 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ![image](https://user-images.githubusercontent.com/1620953/235206087-1c56417d-d700-4dca-ae5d-0b87bd5c6af3.png)
 
+- [ON A HELIOSTAT FOR THE SMITHSONIAN INSTITUTION, WASHINGTON. By SIR HOWARD GRUBB, F.R.S., an Hon. Secretary of the Royal Dublin Society. (Plate XIII.)](https://www.biodiversitylibrary.org/page/30422459) in [The Scientific proceedings of the Royal Dublin Society - new series - volume 6](https://www.biodiversitylibrary.org/item/95855#page/7/mode/1up), on [page 598](https://www.biodiversitylibrary.org/item/95855#page/614/mode/1up), drawing on [Plate XIII](https://www.biodiversitylibrary.org/item/95855#page/671/mode/1up):
+
+![image](https://user-images.githubusercontent.com/1620953/235440997-2929a7c8-a611-4019-a5a7-8acd63a7b012.png)
+
 - [VARIÉTÉS SUR LA THEORIE DES HËLIOSTATS](https://www.persee.fr/docAsPDF/bastr_0572-7405_1884_num_1_1_9783.pdf), by Par M. R. RADAU, in "Bulletin astronomique", tome 1, **1884**. pp. 153-160.  Detailed descriptions of mechanism of heliostats by **Foucalt**, **Silbermann** and **Littrow** in **French language**. See transcriptions [here](https://github.com/jumpjack/heliostat/blob/main/VARI%C3%89T%C3%89S_SUR_LA_THEORIE_DES_H%C3%8BLIOSTATS(Fr-En).md).
 
 ![image](https://user-images.githubusercontent.com/1620953/228923691-b19b96dd-cf33-4565-a9aa-cbd25e46d8e0.png)
