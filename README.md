@@ -109,6 +109,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ![image](https://user-images.githubusercontent.com/1620953/231557793-b4f0f21b-1aa7-4899-95da-710428823ca0.png)
 
+UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the English instrument makers, Adam Hilger in London. Lord Blythswood, Archibald Campell (1865-1940), a Scottish scientist designed this instrument. It was used to direct sunlight into an ancillary instrument, such as a spectrograph, for analysis. It uses a flat mirror, driven by a clockwork mechanism, to follow the Sun as it move across the sky. This heliostat was displayed at the 1876 Loan exhibition that was held on the site of today's Science Museum at South Kensington, London. (Photo by SSPL/Getty Images)
 
 - BERTHOLLET and MALUS ():
 - Ekling ():
