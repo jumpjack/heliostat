@@ -105,6 +105,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - ![Keith's american heliostat](https://user-images.githubusercontent.com/1620953/235442076-88581fb3-78e4-4cb6-8250-d1c3b03639b4.png) ([source](https://airandspace.si.edu/collection-media/NASM-A19880210000cp02))
 - ![Foacault heliostat](https://user-images.githubusercontent.com/1620953/235442361-a88de498-f6fe-46f5-9e72-132c15e0973c.png) ([source: "Instruments of Precision Laboratory Apparatus", W.M. Gaertner & co](https://digital.sciencehistory.org/works/mc87pq27c))
 - ![image](https://user-images.githubusercontent.com/1620953/235448896-c4bd22ec-b8dc-4a71-aeb8-8748f8051d5a.png) ([source](http://waywiser.fas.harvard.edu/objects/16281/solar-light-source); remotely operated! unknown inventor)
+- [Stoney's heliostat](![image](https://user-images.githubusercontent.com/1620953/235600536-6bedad97-ac94-4f49-b709-bd6165ddda6b.png) ([source](https://collection.sciencemuseumgroup.org.uk/objects/co56796/heliostat-contrived-by-the-late-g-johnstone-stoney-ancillary-instruments-astronomical-instruments-heliostats-astronomical)) Stoney's heliostat
 
 
 
