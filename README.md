@@ -99,7 +99,8 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - Teoria dei "tubi solari": https://www.researchgate.net/publication/340111732_Study_and_Analysis_of_Parameters_Affecting_Tubular_Daylighting_Device
 - Multiple references:
 
-![immagine](https://user-images.githubusercontent.com/1620953/235970330-5cfe554f-a1d5-4675-8156-4102aa1cb969.png)
+![immagine](https://user-images.githubusercontent.com/1620953/235970330-5cfe554f-a1d5-4675-8156-4102aa1cb969.png) (source: [Sur la théorie des héliostats](https://www.persee.fr/doc/bastr_0572-7405_1884_num_1_1_9783), R. Radau
+"Bulletin astronomique, Observatoire de Paris", 1884,1 pp. 153-160 )
 
 
 ## Images
