@@ -95,8 +95,6 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
     
 ![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
 
-- Multiple references:
-- 
 
 - Teoria dei "tubi solari": https://www.researchgate.net/publication/340111732_Study_and_Analysis_of_Parameters_Affecting_Tubular_Daylighting_Device
 
@@ -109,6 +107,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - ![Foacault heliostat](https://user-images.githubusercontent.com/1620953/235442361-a88de498-f6fe-46f5-9e72-132c15e0973c.png) ([source: "Instruments of Precision Laboratory Apparatus", W.M. Gaertner & co](https://digital.sciencehistory.org/works/mc87pq27c))
 - ![image](https://user-images.githubusercontent.com/1620953/235448896-c4bd22ec-b8dc-4a71-aeb8-8748f8051d5a.png) ([source](http://waywiser.fas.harvard.edu/objects/16281/solar-light-source); remotely operated! unknown inventor)
 - ![Stoney's heliostat](https://user-images.githubusercontent.com/1620953/235600536-6bedad97-ac94-4f49-b709-bd6165ddda6b.png) ([source](https://collection.sciencemuseumgroup.org.uk/objects/co56796/heliostat-contrived-by-the-late-g-johnstone-stoney-ancillary-instruments-astronomical-instruments-heliostats-astronomical)) Stoney's heliostat - setup description [here](https://www.google.it/books/edition/It_s_Part_of_What_We_Are_Volumes_1_and_2/cjnJDwAAQBAJ?hl=it&gbpv=1&dq=Stoney+heliostat&pg=PA1762&printsec=frontcover); [other hires images](https://www.flintsauctions.com/auction/lot/220-a-rare-dr-g-johnstone-stoneys-improved-heliostat-by-watson--sons/?lot=14174&sd=1#); geometric description: ?
+ - ![Gray's heliostat](https://user-images.githubusercontent.com/1620953/235961194-312d984a-c2b5-4065-b4eb-2a0f530bb050.png) - Gray's heliostat in "Journal of the Royal Microscopical Society" byy Royal Microscopical Society (Great Britain) , 1904
 
 
 
