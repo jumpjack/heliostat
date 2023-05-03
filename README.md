@@ -87,13 +87,16 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ![image](https://user-images.githubusercontent.com/1620953/228319119-c0e29a55-c808-4b09-acf3-d83c787ef096.png)
 
-- On an improved heliostat invented by Alfred M. Mayer (**1886**) - [Document is behind a paywall](https://www.ajsonline.org/content/s4-4/22/306), but the patent of the device is available for free, with full explanation of the mechanism: [link](https://patentimages.storage.googleapis.com/cd/0e/33/16c660c35582f1/US333769.pdf) . The device makes use of a clock mechanism which rotates an axis by 360 degrees every 24 hours, which is not part of this patent. The device is specifically intended to project "one single ray" from the sun. 
+- On an improved heliostat invented by Alfred M. Mayer (**1886**) - [Document is behind a paywall](https://www.ajsonline.org/content/s4-4/22/306), but the patent of the device is available for free, with full explanation of the mechanism: [link](https://patentimages.storage.googleapis.com/cd/0e/33/16c660c35582f1/US333769.pdf) . Also available in "**The American journal of science**" (AKA "Silliman's Journal"), series 4, vol. 4: [link](https://archive.org/details/americanjournal441897newh/page/306/mode/2up?q=heliostat) (link found in "[Die Fortschritte der Physik](https://archive.org/details/diefortschritte60gesegoog/page/n137/mode/2up?q=nouvel+heliostat+stoney)" by Deutsche Physikalische Gesellschaft, vol. 53, 1845.  The device makes use of a clock mechanism which rotates an axis by 360 degrees every 24 hours, which is not part of this patent. The device is specifically intended to project "one single ray" from the sun. 
     - **Mirror rotation speed**: 1 turn in 24 hours (full sun speed)
     - **Reflection direction**: parallel to clock axis 
     - **Reflection target** : secondary mirror
     - **clock mechanism**: not specified
     
 ![immagine](https://user-images.githubusercontent.com/1620953/228582818-987919a8-e179-45b8-939b-8773defc18e7.png)
+
+- Multiple references:
+- 
 
 - Teoria dei "tubi solari": https://www.researchgate.net/publication/340111732_Study_and_Analysis_of_Parameters_Affecting_Tubular_Daylighting_Device
 
