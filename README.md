@@ -113,7 +113,13 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - ![image](https://user-images.githubusercontent.com/1620953/235448896-c4bd22ec-b8dc-4a71-aeb8-8748f8051d5a.png) ([source](http://waywiser.fas.harvard.edu/objects/16281/solar-light-source); remotely operated! unknown inventor)
 - ![Stoney's heliostat](https://user-images.githubusercontent.com/1620953/235600536-6bedad97-ac94-4f49-b709-bd6165ddda6b.png) ([source](https://collection.sciencemuseumgroup.org.uk/objects/co56796/heliostat-contrived-by-the-late-g-johnstone-stoney-ancillary-instruments-astronomical-instruments-heliostats-astronomical)) Stoney's heliostat - setup description [here](https://www.google.it/books/edition/It_s_Part_of_What_We_Are_Volumes_1_and_2/cjnJDwAAQBAJ?hl=it&gbpv=1&dq=Stoney+heliostat&pg=PA1762&printsec=frontcover); [other hires images](https://www.flintsauctions.com/auction/lot/220-a-rare-dr-g-johnstone-stoneys-improved-heliostat-by-watson--sons/?lot=14174&sd=1#); geometric description: ?
  - ![Gray's heliostat](https://user-images.githubusercontent.com/1620953/235961194-312d984a-c2b5-4065-b4eb-2a0f530bb050.png) - Gray's heliostat in "Journal of the Royal Microscopical Society" byy Royal Microscopical Society (Great Britain) , 1904
+- Alternative method proposed by Johnstone Stoney to guarantee rectilinear motion of connection between mirror tail and clockwork driver arm, in place of hollow cylinder moving along a bar; [article](https://ui.adsabs.harvard.edu/abs/1896MNRAS..56..452S/abstract) "On making the siderostat an instrument of precision" in "Monthly Notices of the Royal Astronomical Society":
 
+![image](https://user-images.githubusercontent.com/1620953/236227979-559ccfaf-4cf8-435e-967c-f5cc39dd1b54.png)
+
+Modern view:
+
+![image](https://user-images.githubusercontent.com/1620953/236236449-bb02ceb9-d88e-4508-bf22-683e7a8f4117.png)
 
 
 ## Inventors
