@@ -197,9 +197,13 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 - Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios :
 
 - http://www.redrok.com/main.htm#gsc.tab=0
-- [Linkage mechanism by Peaucellier–Lipkin](Peaucellier–Lipkin linkage) to turn linear motion into circular, **and vicerversa** (could be used to force driver edge moving along mirror tail?)
+- [Linkage mechanism by Peaucellier–Lipkin](https://en.wikipedia.org/wiki/Peaucellier%E2%80%93Lipkin_linkage) to turn linear motion into circular, **and vicerversa** (could be used to force driver edge moving along mirror tail?)
 
 ![aa](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Peaucellier-Lipkin_Inversor.gif/220px-Peaucellier-Lipkin_Inversor.gif)
+
+- [Linkage mechanism by James watt](https://it.wikipedia.org/wiki/Parallelogramma_di_Watt) with similar function
+
+![aa](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Watts_Linkage.gif/220px-Watts_Linkage.gif)
 
 Literatur:
 
