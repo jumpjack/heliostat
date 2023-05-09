@@ -2,45 +2,45 @@ https://lesia.obspm.fr/perso/jean-marie-malherbe/observatoires/La-Nature/expo190
 
 ![image](https://user-images.githubusercontent.com/1620953/237048290-aaff3e39-66d7-4d9d-ab4e-3acb4916a7de.png)
 
-L'asse polare è costituito da un albero cavo in ghisa; tale albero poggia su quattro rulli i cui assi sono fissati 
+L'asse polare è costituito da un albero cavo in ghisa; tale albero poggia su quattro rulli i cui assi sono fissati
 all'estremità dei montanti della parte in ghisa, posta all'estremità del telaio.
 
 Questi rulli sono disposti a coppie di due, i loro assi sono disposti parallelamente all'asse polare.
 
 Al centro di questa asta è incuneato un cerchio recante un ingranaggio cilindrico destinato a imprimere rapidi movimenti all'asse polare.
 
-Questo cerchio ingrana con un pignone che riceve tramite una trasmissione il movimento di una manovella posta alla base del basamento 
+Questo cerchio ingrana con un pignone che riceve tramite una trasmissione il movimento di una manovella posta alla base del basamento
 e che permette di dare la posizione dell'ora utile.
 
 A breve distanza da questo cerchio c'è un secondo cerchio C a denti elicoidali che si ingranano con una vite azionata dal meccanismo a orologeria; questo secondo cerchio è lasco sull'albero e può diventare solidale con esso mediante un morsetto che lo impegna con il primo cerchio fissato sull'albero.
 
 Inoltre, questo secondo cerchio dentato porta su una delle sue facce una lama d'argento divisa su parte della sua circonferenza.
-Questa è la divisione dell'ascensione retta. Questa divisione è fatta in ore e minuti; le cifre sono composte da quindici in quindici 
+Questa è la divisione dell'ascensione retta. Questa divisione è fatta in ore e minuti; le cifre sono composte da quindici in quindici
 minuti; le ore sono indicate con numeri più grandi.
-Il movimento dell'orologio disposto in alto e all'interno della cornice è mosso da un peso trainante; trasmette il movimento alla 
+Il movimento dell'orologio disposto in alto e all'interno della cornice è mosso da un peso trainante; trasmette il movimento alla
 vite tangente che ingrana nel cerchio a denti elicoidali, in modo da far ruotare l'asse polare a velocità uniforme, al ritmo di
 un giro ogni ventiquattro ore.
 
-Questo albero, essendo inclinato secondo la latitudine del luogo che, a Parigi, è di 48° 50', è sostenuto da una 
+Questo albero, essendo inclinato secondo la latitudine del luogo che, a Parigi, è di 48° 50', è sostenuto da una
 piastra centrale appoggiata ad un grano di acciaio fissato alla faccia superiore del suo supporto.
-All'estremità dell'asse polare è fissato il supporto in ghisa ad U, sui cui rami sono fissati i cuscinetti 
+All'estremità dell'asse polare è fissato il supporto in ghisa ad U, sui cui rami sono fissati i cuscinetti
 contenenti i perni dell'asse di declinazione.
-Questo asse è costituito da un manicotto in ghisa nel quale può ruotare un terzo asse, che porta all'estremità 
+Questo asse è costituito da un manicotto in ghisa nel quale può ruotare un terzo asse, che porta all'estremità
 inferiore un pezzo di acciaio a forma di U.
 Un arco D in ghisa con l'incavo porta sul suo bordo a
-denti di bronzo e una lama d'argento. 
+denti di bronzo e una lama d'argento.
 **Questo semicerchio a denti elicoidali ingrana con una vite tangente mossa,
-tramite una trasmissione ad ingranaggi, da una manovella posta alla base del siderostato. Questo arco serve per 
+tramite una trasmissione ad ingranaggi, da una manovella posta alla base del siderostato. Questo arco serve per
 impostare l'asse di declinazione lungo il parallelo determinato.** *\[Nota: automatizzando questa regolazione in modo da seguire il sole lungo l'analemma, forse si può rendere il siderostato funzionante per tutto l'anno; ma servirebbe anche la regolazione  orizzontale?\]*
 
-La lama d'argento attaccata a questo arco è divisa per cinque in cinque minuti d'arco, cioè in dodicesimi di 
+La lama d'argento attaccata a questo arco è divisa per cinque in cinque minuti d'arco, cioè in dodicesimi di
 grado; un decimo nonio leggerà la divisione con un'approssimazione di trenta secondi.
 La lettura di questo lembo indica la declinazione del parallelo seguita dallo strumento.
 
 Quando l'asse di declinazione è inclinato lungo un dato parallelo, non deve muoversi angolarmente durante la
-rotazione dell'asse polare da parte dell'orologio. Una frizione ad artiglio posta nella parte superiore del telaio 
+rotazione dell'asse polare da parte dell'orologio. Una frizione ad artiglio posta nella parte superiore del telaio
 permette di rendere indipendente il cerchio di declinazione durante tutta la sua trasmissione alla base del
-siderostato, durante la marcia dello strumento, e quindi di garantire completamente l'assoluta fissità della 
+siderostato, durante la marcia dello strumento, e quindi di garantire completamente l'assoluta fissità della
 sua posizione angolare . Anche questa frizione è comandata dalla base dello strumento.
 
 Il pezzo a due punte \[(la forcella)\] che termina la barra di declinazione sostiene su due cuscinetti i perni di un manicotto Y in bronzo che scorre sull'asta cilindrica in rame I fissata al centro del giogo dello specchio.
@@ -77,12 +77,15 @@ Il peso del motore dell'orologio necessario per l'allenamento è di 70 chilogram
 ----
 
 Regolazione dello strumento
- 
+
 Per verificare la posizione relativa dei diversi assi e la loro direzione, possono essere apportate le seguenti regolazioni:
 
 1° Verticalità dell'asse di rotazione del supporto dello specchio agendo sulle sei viti di livellamento mediante le quali la cornice si appoggia sui blocchetti in ghisa posti sotto le viti;
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/41f25e76-3a23-4408-9ecc-3fc0fac42fef)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6a2b6b53-c5eb-4f0d-9d99-d65b460f88ed)
+
 
 2° Parallelismo dell'asse polare con l'asse del mondo agendo sulle viti di richiamo disposte nelle sue vicinanze; (?)
 
@@ -102,7 +105,23 @@ Per verificare la posizione relativa dei diversi assi e la loro direzione, posso
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a723f22e-e007-40ca-911e-c22a0510fea4)
 
-7° L'asse dell'asta di direzione normale dello specchio passante per il al centro dell'asse orizzontale di rotazione dello specchio e al centro dell'asse di rotazione del manicotto
+7° L'asse I dell'asta normale allo specchio passante per il al centro dell'asse orizzontale di rotazione dello specchio e al centro dell'asse di rotazione del manicotto
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/840e4262-3229-46be-9195-9b58f705b167)
+
+**Funzionamento dello strumento**
+
+La manovra si effettua dalla base dove sono disposti:
+- le due manovelle di ascensione retta **M_1** e declinazione **M_2**;
+- la manovella per i movimenti lenti in ascensione retta **M** tramite il movimento differenziale adattato al movimento a orologeria;
+- il meccanismo di carica a manovella **M3** dell'orologio;
+- il comando dell'innesto del cerchio orario con l'asse polare, nonché il comando dell'innesto dell'arco di declinazione con la trasmissione;
+- infine le due lunette **L** e **L’**, una per la lettura del cerchio orario, l'altra per la lettura dell'arco di declinazione.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ecef7676-4069-435a-a455-39c15ffb26af)
+
+
+L'intero strumento pesa 38.000 chilogrammi.
 
 -----------
 
@@ -142,7 +161,7 @@ Le poids moteur du mouvement d’horlogerie nécessaire pour l’entrainement es
 ----
 
 **Réglages de l’instrument.**
- 
+
 Pour vérifier la situation relative des différents axes et leur direction, on a procédé aux réglages suivants:
 
 1° Verticalité de l’axe de rotation du support du miroir en agissant sur les six vis calantes par lesquelles repose le bâti sur les dés en fonte disposés sous les vis;
@@ -158,3 +177,13 @@ Pour vérifier la situation relative des différents axes et leur direction, on 
 6° Égalité de la distance horizontale entre le milieu de l’axe de déclinaison et l’axe vertical du support du miroir et de la distance entre le milieu de l’axe de déclinaison et le milieu de l’axe du manchon;
 
 7° L’axe de la tige normale de direction du miroir passant par le milieu de l’axe horizontal de rotation du miroir et par le milieu de l’axe de rotation du manchon
+
+**Maneuuvre de l’instrument**
+
+La manoeuvre se fait de la base où sont disposées:
+- les deux manivelles d’ascension droite et de déclinaison **M_1M_2**;
+- la manivelle des mouvements lents en ascension droite **M** par l’intermédiaire du mouvement différentiel adapté au mouvement d’horlogerie;
+- la manivelle-remontoir **M3** du mouvement d’horlogerie;
+- la commande de la pince d’embrayage du cercle horaire avec l’axe polaire, ainsi que la commande de l’embrayage de l’arc de déclinaison avec la transmission;
+- enfin les deux lunettes **L** et **L’** servant l’une pour la lecture du cercle horaire, l’autre pour la lecture del’arc de déclinaison.
+L’ensemble de l’instrument pèse 38.000 kilogrammes.
