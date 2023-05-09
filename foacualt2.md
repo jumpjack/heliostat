@@ -3,22 +3,23 @@ Indichiamo con B, C, b, c i raggi di queste quattro ruote dentate, con V la velo
 tra queste quantità il rapporto (BÉLANGER, Traité de Cinématique.
 P. 198)
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
+
+
 Le due velocità hanno lo stesso verso se B/b è maggiore di C/c, questo è il caso che adotteremo. Inoltre, per stabilire tra la velocità del regolatore e quella dell'asse dell'orologio l'opportuna relazione, è necessario che v sia 9 decimi di V; pertanto:
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/71e6df08-acde-4d8c-bb96-13e0dcf2f28a)
 
 relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
-
-
-
 
 Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il treno satellite
 riceverà un aumento o una diminuzione della velocità che, senza
 non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B e all'albero XX'. Questa ruota angolare ha quindi una duplice funzione:
-1° - mantenere ferma la ruota C durante il movimento uniforme di A e dell'albero;
-2° - comunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
 
-  È sempre possibile soddisfare la prima condizione,
-poiché smaltisce l'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare;
+- 1 Mantenere ferma la ruota C durante il movimento uniforme di A e dell'albero;
+- 2 Ccomunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
+
+È sempre possibile soddisfare la prima condizione, poiché smaltisce l'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare;
 giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore.
 
 
