@@ -22,6 +22,15 @@ non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B 
 È sempre possibile soddisfare la prima condizione, poiché smaltisce l'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare;
 giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore.
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a3866735-bd53-4757-b47f-55141b1caa5a)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ac36bd54-876c-4e7e-9003-d0d4ea2e453e)
+
+L'albero XX' {fig. 3), tramite ruote angolari e asta verticale,
+comunica il suo movimento ad una vite tangente che ingrana con la ruota K {fig. 4).
+Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
+uno ha 20 denti, l'altro ne ha 18. Il pignone 18 ingrana con una grande ruota A,
+di 200 denti che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza P lo rende solidale al cerchio orario H.
+Da quel momento in poi, l'asse polare XX' obbedisce al movimento che gli viene comunicato dal regolatore ea tutti quelli, additivi o sottrattivi, impartitigli dalla mano dell'osservatore tramite l'ingranaggio del satellite.
 
 -------
 
@@ -55,3 +64,9 @@ de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque
 Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage
 satellite.
 
+L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
+communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4). 
+Surl'arbre de cettedernière sont également fixés deux pignons,
+l'un a de 20 dents, l'autre a, de 18. Le pignon de 18 engrène avec une grande roue A, 
+de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
+Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage satellite.
