@@ -69,6 +69,11 @@ Tra i due rami di questo supporto verticale è posto un argano **T** mosso da un
 Un sistema di leve e contrappesi **P** assicura l'equilibrio dell'involucro dello specchio rispetto al suo asse orizzontale di oscillazione, che deve passare attraverso la superficie d'argento.
 Il peso di questa seconda unità mobile raggiunge i 13.000 chilogrammi.
 
+Ad una distanza dal centro pari a 0,80 m, la forza tangenziale da esercitare per produrre il movimento rotatorio iniziale di questo assieme è di 5 chilogrammi.
+La cilindricità dei vari assi nel punto di appoggio sui rulli, nonché quella di questi ultimi, è stata verificata con un'approssimazione di 1/1000 di millimetro.
+Il peso totale della parte mobile è di 13.000 chilogrammi;
+Il peso del motore dell'orologio necessario per l'allenamento è di 70 chilogrammi
+
 -----------
 
 Cet arbre, étant incliné suivant la latitude du lieu qui, à Paris, est 48° 50’, est soutenu par une crapaudine s’appuyant contre un grain d’acier fixé à la face supérieure de son support.
@@ -98,4 +103,9 @@ Au centre de la culasse est boulonnée la tige cylindrique **I** normale à la s
 Entre les deux branches de ce support vertical est disposé un treuil **T** mû par une manivelle **X**, disposée latéralement et destinée à supporter la cuve devant servir à l’argenture du miroir.
 Un système de leviers et de contrepoids **P** assure l’équilibre du barillet par rapport à son axe horizontal d’oscillation, qui doit passer par la surface argentée.
 Le poids de ce deuxième ensemble mobile atteint 13.000 kilogrammes.
+
+A une distance du centre égale à 0,80 m l’effort tangentiel à exercer pour produire le mouvement initial de rotation de cet ensemble est de 5 kilogrammes.
+La cylindricité des différents axes à l’endroit de leur roulement sur les galets, ainsi que celle de ces derniers, a été vérifiée avec une approximation de 1/1000 de millimètre.
+Le poids total de la partie mobile est de 13.000 kilogrammes;
+Le poids moteur du mouvement d’horlogerie nécessaire pour l’entrainement est 70 kilogrammes
 
