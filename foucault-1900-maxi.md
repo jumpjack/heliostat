@@ -62,6 +62,12 @@ Questo supporto ruota a sua volta attorno ad un asse verticale poggiando sulla s
 
 ![image](https://user-images.githubusercontent.com/1620953/237057300-a58cfcf0-a8d2-409e-8e97-23a84d12091b.png)
 
+Inoltre la parte inferiore del supporto galleggia in un serbatoio anulare **U** fissato al telaio, contenente 100 litri di mercurio; il volume della parte sommersa è calcolato in modo che il carico portato dal mercurio sia 9/10 del peso totale del supporto con lo specchio.
+L'involucro **B** dello specchio poggia con i suoi perni su due coppie di due rulli, ogni coppia essendo fissata all'estremità dei rami del supporto verticale **J**. Lo specchio **N** ha un diametro di 2 metri, uno spessore di 28 centimetri e pesa 3000 chilogrammi; è regolato nell'involucro e poggia con la sua faccia non riflettente sulla testata in ghisa **R** imbullonata alla sua cornice sotto la faccia inferiore dell'involucro **B**.
+Al centro del giogo è imbullonata l'asta cilindrica **I** normale alla superficie riflettente su cui scorre il manicotto dell'asse di declinazione.
+Tra i due rami di questo supporto verticale è posto un argano **T** mosso da una manovella **X**, disposto lateralmente e destinato a sostenere la vasca da utilizzare per l'argentatura dello specchio.
+Un sistema di leve e contrappesi **P** assicura l'equilibrio dell'involucro dello specchio rispetto al suo asse orizzontale di oscillazione, che deve passare attraverso la superficie d'argento.
+Il peso di questa seconda unità mobile raggiunge i 13.000 chilogrammi.
 
 -----------
 
@@ -84,3 +90,12 @@ Ce premier ensemble mobile se déplaçant autour de l’axe polaire sur les quat
 La deuxième partie mobile comprend *le miroir et son support* vertical à la partie sud du bâti.
 Le support J du miroir est en fonte et présente deux branches verticales entre lesquelles se meut le miroir.
 Ce support se déplace autour d’un axe vertical en roulant par **s** a base sur un système de trois galets **g** indépendants, se déplaçant entre deux chemins circulaires; l’un des chemins est ménagé dans le bâti, l’autre dans le support.
+
+
+En outre, la partie inférieure du support flotte dans une cuve annulaire **U** fixée au bâti, contenant 100 litres de mercure ; le volume de la partie immergée étant calculé de manière que la charge porté e par le mercure soit les 9/10 du poids total du support avec le miroir.
+Le barillet **B** du miroir repose par ses tourillons sur deux couples de deux galets, chaque couple étant fixé à l’extrémité des branches du support vertical **J**. Le miroir **N** a 2 mètres de diamètre, 28 centimètres d’épaisseur et pèse 3000 kilogrammes ; il est ajusté dans le barillet et repose par sa face non réfléchissante sur la culasse **R** en fonte boulonnée sur son pourtour après la face inférieure du barillet **B**.
+Au centre de la culasse est boulonnée la tige cylindrique **I** normale à la surface réfléchissante sur laquelle glisse le manchon de l’axe de déclinaison.
+Entre les deux branches de ce support vertical est disposé un treuil **T** mû par une manivelle **X**, disposée latéralement et destinée à supporter la cuve devant servir à l’argenture du miroir.
+Un système de leviers et de contrepoids **P** assure l’équilibre du barillet par rapport à son axe horizontal d’oscillation, qui doit passer par la surface argentée.
+Le poids de ce deuxième ensemble mobile atteint 13.000 kilogrammes.
+
