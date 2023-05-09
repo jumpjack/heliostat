@@ -25,6 +25,9 @@ giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lung
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a3866735-bd53-4757-b47f-55141b1caa5a)
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/ac36bd54-876c-4e7e-9003-d0d4ea2e453e)
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/61fb5f74-023a-4ad0-8a35-bf0f506db392) ([fonte](https://artsandculture.google.com/asset/photograph-siderostat/GgFoc7aHFSKidg?ms=%7B%22x%22%3A0.6418827816171588%2C%22y%22%3A0.21732036875557856%2C%22z%22%3A10.68708947672984%2C%22size%22%3A%7B%22width%22%3A0.7162344367656822%2C%22height%22%3A0.3129570890080808%7D%7D)) ([menzione su Nature](https://www.nature.com/articles/010358a0.pdf)) ([descrizione completa by C. Wolf](http://www.numdam.org/article/ASENS_1872_2_1__51_0.pdf))
+
+
 L'albero **XX'** {fig. 3), tramite ruote angolari e asta verticale,
 comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
 Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
