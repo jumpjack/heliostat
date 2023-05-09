@@ -43,6 +43,24 @@ permette di rendere indipendente il cerchio di declinazione durante tutta la sua
 siderostato, durante la marcia dello strumento, e quindi di garantire completamente l'assoluta fissità della 
 sua posizione angolare . Anche questa frizione è comandata dalla base dello strumento.
 
+Il pezzo a due punte \[(la forcella)\] che termina la barra di declinazione sostiene su due cuscinetti i perni di un manicotto Y in bronzo che scorre sull'asta cilindrica in rame I fissata al centro del giogo dello specchio.
+
+![image](https://user-images.githubusercontent.com/1620953/237054928-3644b481-eb51-48d0-ab7b-9c06fbe7b69a.png)
+
+Questo manicotto ne ha un secondo concentrico che può ruotare attorno al proprio asse tramite rulli.
+
+![image](https://user-images.githubusercontent.com/1620953/237058222-0950508b-46de-42ad-bbbd-37a1aa2b072e.png)
+
+Questo secondo manicotto porta esso stesso rulli disposti parallelamente all'asse. Lo scopo di questa disposizione è quello di sostituire lo scorrimento del manicotto sovrapposto con due cuscinetti, uno angolare, l'altro seguendo l'asse normale dello specchio.
+
+Questo primo gruppo mobile che si muove attorno all'asse polare sui quattro rulli fissati alla parte superiore del telaio pesa 2800 chilogrammi.
+
+La seconda parte mobile comprende *lo specchio e il suo supporto* verticali alla parte sud della cornice.
+
+Il supporto **J** dello specchio è in ghisa e presenta due rami verticali tra i quali si muove lo specchio.
+Questo supporto ruota a sua volta attorno ad un asse verticale poggiando sulla sua base tramite un sistema di tre rulli indipendenti **g**, spostandosi tra due percorsi circolari; uno dei percorsi è previsto nel telaio, l'altro nel supporto.
+
+![image](https://user-images.githubusercontent.com/1620953/237057300-a58cfcf0-a8d2-409e-8e97-23a84d12091b.png)
 
 
 -----------
@@ -57,3 +75,12 @@ denture en bronze et un limbe en argent. Ce demi-cercle à denture héliçoïdal
 La lecture de ce limbe indique la déclinaison du parallèle suivi par l’in strument.
 
 Lorsque l’axe de déclinaison est incliné suivant un parallèle donné, il ne doit pas se déplacer angulairement pendant la rotation de l’axe polaire par le mouvement d’horlogerie. Un embrayage à griffe placé dans le haut du bâti permet de rendre le cercle de déclinaison indépendant de toute sa transmission jusqu’à la base du sidérostat, pendant la marche de l’instrument, et d’assurer ainsi complètement la fixité absolue de sa position angulaire. Cet embrayage se commande également de la base de l’instrument.
+
+La pièce à deux branches qui termine la barre de déclinaison porte par deux coussinets les tourillons d’un inanchon en bronze Y glissant sur la tige cylindrique 1 en cuivre fixée au centre de la culasse du miroir.
+Ce manchon en comporte un deuxième concentrique pouvant tourner autour de son axe par l’intermédiaire de galets.
+Ce deuxième manchon est lui-même porteur de galets disposés parallèlement à l’axe. Cette disposition a pour but de substituer au glissement du manchon surlatige deux roulements, l’un angulaire, l’autre suivant l’axe normal du miroir.
+
+Ce premier ensemble mobile se déplaçant autour de l’axe polaire sur les quatre galets fixés au haut du bâti pèse 2800 kilogrammes.
+La deuxième partie mobile comprend *le miroir et son support* vertical à la partie sud du bâti.
+Le support J du miroir est en fonte et présente deux branches verticales entre lesquelles se meut le miroir.
+Ce support se déplace autour d’un axe vertical en roulant par **s** a base sur un système de trois galets **g** indépendants, se déplaçant entre deux chemins circulaires; l’un des chemins est ménagé dans le bâti, l’autre dans le support.
