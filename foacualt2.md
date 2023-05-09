@@ -47,5 +47,11 @@ influencer en rien la vitesse de A, se transmettra à la roue B et à l'arbre XX
 puisquon dispose des frottements exercés sur l'extérieur du manchon et sur les pièces qui se relient à la roue d'angle; 
 onfait tourner D, quand il en est besoin, à l'aide d'une roue d'angle et d'une longue manette dont la poignée se trouve à portée de l'observateur.
 
-
+L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
+communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4). 
+Surl'arbre de cettedernière sont également fixés deux pignons,
+l'un a de 20 dents, l'autre a, de 18. Le pignon de iS engrène avec une grande roue A, 
+de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
+Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage
+satellite.
 
