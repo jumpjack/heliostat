@@ -19,4 +19,41 @@ Questa è la divisione dell'ascensione retta. Questa divisione è fatta in ore e
 minuti; le ore sono indicate con numeri più grandi.
 Il movimento dell'orologio disposto in alto e all'interno della cornice è mosso da un peso trainante; trasmette il movimento alla 
 vite tangente che ingrana nel cerchio a denti elicoidali, in modo da far ruotare l'asse polare a velocità uniforme, al ritmo di
-un giro ogni ventiquattro ore
+un giro ogni ventiquattro ore.
+
+Questo albero, essendo inclinato secondo la latitudine del luogo che, a Parigi, è di 48° 50', è sostenuto da una 
+piastra centrale appoggiata ad un grano di acciaio fissato alla faccia superiore del suo supporto.
+All'estremità dell'asse polare è fissato il supporto in ghisa ad U, sui cui rami sono fissati i cuscinetti 
+contenenti i perni dell'asse di declinazione.
+Questo asse è costituito da un manicotto in ghisa nel quale può ruotare un terzo asse, che porta all'estremità 
+inferiore un pezzo di acciaio a forma di U.
+Un arco D in ghisa con l'incavo porta sul suo bordo a
+denti di bronzo e una lama d'argento. 
+**Questo semicerchio a denti elicoidali ingrana con una vite tangente mossa,
+tramite una trasmissione ad ingranaggi, da una manovella posta alla base del siderostato. Questo arco serve per 
+impostare l'asse di declinazione lungo il parallelo determinato.** *\[Nota: automatizzando questa regolazione in modo da seguire il sole lungo l'analemma, forse si può rendere il siderostato funzionante per tutto l'anno; ma servirebbe anche la regolazione  orizzontale?\]*
+
+La lama d'argento attaccata a questo arco è divisa per cinque in cinque minuti d'arco, cioè in dodicesimi di 
+grado; un decimo nonio leggerà la divisione con un'approssimazione di trenta secondi.
+La lettura di questo lembo indica la declinazione del parallelo seguita dallo strumento.
+
+Quando l'asse di declinazione è inclinato lungo un dato parallelo, non deve muoversi angolarmente durante la
+rotazione dell'asse polare da parte dell'orologio. Una frizione ad artiglio posta nella parte superiore del telaio 
+permette di rendere indipendente il cerchio di declinazione durante tutta la sua trasmissione alla base del
+siderostato, durante la marcia dello strumento, e quindi di garantire completamente l'assoluta fissità della 
+sua posizione angolare . Anche questa frizione è comandata dalla base dello strumento.
+
+
+
+-----------
+
+Cet arbre, étant incliné suivant la latitude du lieu qui, à Paris, est 48° 50’, est soutenu par une crapaudine s’appuyant contre un grain d’acier fixé à la face supérieure de son support.
+A l’extrémité de l’axe polaire est fixé le support en fonte en forme d’U, sur les branches duquel sont fixés les coussinets contenant les tourillons de l’axe cle déclinaison.
+Cét axe est composé d’une douille en fonte dans laquelle peut tourner un troisième axe portant à son extrémité inférieure une pièce d’acier en forme d’U.
+Un arc D venu de fonte avec la douille porte sur sa tranche une
+denture en bronze et un limbe en argent. Ce demi-cercle à denture héliçoïdale engrène avec une vis tangente mue, au moyen d’une transmission d’engrenages, par une manivelle placée à la base du sidérostat. Cet arc sert à caler l’axe de déclinaison suivant le parallèle déterminé.
+
+ Le limbe en argent fixé sur cet arc est divisé de cinq en cinq minutes d’arc, c’est-à-dire en douzièmes de degré ; un vernier au dixième permettra de lire la division avec une approximation de trente secondes.
+La lecture de ce limbe indique la déclinaison du parallèle suivi par l’in strument.
+
+Lorsque l’axe de déclinaison est incliné suivant un parallèle donné, il ne doit pas se déplacer angulairement pendant la rotation de l’axe polaire par le mouvement d’horlogerie. Un embrayage à griffe placé dans le haut du bâti permet de rendre le cercle de déclinaison indépendant de toute sa transmission jusqu’à la base du sidérostat, pendant la marche de l’instrument, et d’assurer ainsi complètement la fixité absolue de sa position angulaire. Cet embrayage se commande également de la base de l’instrument.
