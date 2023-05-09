@@ -25,12 +25,13 @@ giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lung
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a3866735-bd53-4757-b47f-55141b1caa5a)
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/ac36bd54-876c-4e7e-9003-d0d4ea2e453e)
 
-L'albero XX' {fig. 3), tramite ruote angolari e asta verticale,
-comunica il suo movimento ad una vite tangente che ingrana con la ruota K {fig. 4).
+L'albero **XX'** {fig. 3), tramite ruote angolari e asta verticale,
+comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
 Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
-uno ha 20 denti, l'altro ne ha 18. Il pignone 18 ingrana con una grande ruota A
-di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza P lo rende solidale al cerchio orario H.
-Da quel momento in poi, l'asse polare XX' obbedisce al movimento che gli viene comunicato dal regolatore ea tutti quelli, additivi o sottrattivi, impartitigli dalla mano dell'osservatore tramite l'ingranaggio del satellite.
+uno **a** con 20 denti, l'altro **a1** con 18. Il pignone 18 ingrana con una grande ruota **A1**
+di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza **P** lo rende solidale al cerchio orario **H**.
+
+Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene comunicato dal regolatore e da tutti quelli, additivi o sottrattivi, impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi.
 
 -------
 
