@@ -33,6 +33,12 @@ di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con ess
 
 Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene comunicato dal regolatore e da tutti quelli, additivi o sottrattivi, impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi.
 
+Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare.
+
+Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
+
+L'asse polare **XX'** {Pl. 1, fig. 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **rr**, comanda un pignone il cui la dentatura ingrana con quella che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
+
 -------
 
 Désignons par B, C, b, c ls rayos de ces quatre roues dentées par V la vitesse de rotation de la roue A, par v celle de B, nous aurons
@@ -71,3 +77,8 @@ Surl'arbre de cettedernière sont également fixés deux pignons,
 l'un a de 20 dents, l'autre a, de 18. Le pignon de 18 engrène avec une grande roue A, 
 de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
 Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage satellite.
+
+Le second problème qu'avait à résoudre le constructeur du sidérostat était plus ardu que le premier : il sagissait de produire, à l'aide d'une manette immobile, un mouvement de rappel du cercle de déclinaison, à l'extrémité d'un axe mobile, sans altérer le mouvement de cet axe. L. Foucault avait seulement indiqué le problème, et en avait fait entrevoir la solution à l'aide d'un rouage satellit mais sans donner de vive voix ou laisser dans ses papiers aucune description da système qu'il prétendait appliquer. 
+Voici l'élégante construction à l'aide de laquelle M. Eichens a atteint le but proposé.
+
+L'axe polaire **XX'** {Pl. I, fig. 1) est enveloppé, sur la portion de sa longueur qui semble nue sur la figure, d'un manchon en bronze qui traverse le collet inférieur du support, et là, au moyen de deux rôuea d'angle **rr**, commande un pignon dont la denture engrene avec celle qu'on a taillée sur tout le pourtour du cercle de déclinaison. Si le manchon tourne avec l'axe polaire, ces roues restent en repos  elatif et immobilisent le cercle par rapport à l'axe. Si le manchon prend une avance ou un retard sur le mouvement de l'axe, les roues déplacent d'une quantité proportionnelle la denture du cercle, et par conséquent la direction de la fourchette. Il faut donc établir entre le manchon et l'axe polaire une solidarité telle que le mouvement horaire les entraîne tous deux avec la même vitesse, mais que l'on puisse néanmoins faire tourner ce manchon isolément sans altérer le mouvement de l'axe. Un rouage satellite identique à celui que je viens de décrire va suffire à obtenir ce double effet.
