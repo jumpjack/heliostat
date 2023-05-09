@@ -74,6 +74,36 @@ La cilindricità dei vari assi nel punto di appoggio sui rulli, nonché quella d
 Il peso totale della parte mobile è di 13.000 chilogrammi;
 Il peso del motore dell'orologio necessario per l'allenamento è di 70 chilogrammi
 
+----
+
+Regolazione dello strumento
+ 
+Per verificare la posizione relativa dei diversi assi e la loro direzione, possono essere apportate le seguenti regolazioni:
+
+1° Verticalità dell'asse di rotazione del supporto dello specchio agendo sulle sei viti di livellamento mediante le quali la cornice si appoggia sui blocchetti in ghisa posti sotto le viti;
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/41f25e76-3a23-4408-9ecc-3fc0fac42fef)
+
+2° Parallelismo dell'asse polare con l'asse del mondo agendo sulle viti di richiamo disposte nelle sue vicinanze; (?)
+
+3° L'asse polare e l'asse verticale di rotazione del supporto dello specchio nello stesso piano verticale;
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/35fc4637-3a70-448d-9c04-d9f4ebea0a9b)
+
+4° Il centro dell'asse di declinazione e dell'asse orizzontale di oscillazione dello specchio nello stesso piano orizzontale;
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/236db6e9-5c64-4656-ab3b-69eceb6b7321)
+
+5° L'asse verticale di rotazione del supporto dello specchio passante per la mezzeria dell'asse orizzontale di oscillazione dello specchio;
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/9c50ff30-cc55-4936-a723-673dc7f8ccf9)
+
+6° Uguaglianza della distanza orizzontale tra il centro dell'asse di declinazione e l'asse verticale del supporto dello specchio e della distanza tra il centro dell'asse di declinazione e il centro dell'asse del manicotto;
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a723f22e-e007-40ca-911e-c22a0510fea4)
+
+7° L'asse dell'asta di direzione normale dello specchio passante per il al centro dell'asse orizzontale di rotazione dello specchio e al centro dell'asse di rotazione del manicotto
+
 -----------
 
 Cet arbre, étant incliné suivant la latitude du lieu qui, à Paris, est 48° 50’, est soutenu par une crapaudine s’appuyant contre un grain d’acier fixé à la face supérieure de son support.
@@ -109,3 +139,22 @@ La cylindricité des différents axes à l’endroit de leur roulement sur les g
 Le poids total de la partie mobile est de 13.000 kilogrammes;
 Le poids moteur du mouvement d’horlogerie nécessaire pour l’entrainement est 70 kilogrammes
 
+----
+
+**Réglages de l’instrument.**
+ 
+Pour vérifier la situation relative des différents axes et leur direction, on a procédé aux réglages suivants:
+
+1° Verticalité de l’axe de rotation du support du miroir en agissant sur les six vis calantes par lesquelles repose le bâti sur les dés en fonte disposés sous les vis;
+
+2° Parallélisme de l’axe polaire avec l’axe du monde en agissant sur les vis de rappel disposées dans son voisinage;
+
+3° L’axe polaire et l’axe vertical de rotation du support du miroir dans le même plan verti cal ;
+
+4° Le milieu de l’axe de déclinaison et l’axe horizontal d’oscillation du miroir dans le même plan horizontal ;
+
+5° L’axe vertical de rotation du support du miroir passant par le milieu de l’axe horizontal d’oscillation du miroir ;
+
+6° Égalité de la distance horizontale entre le milieu de l’axe de déclinaison et l’axe vertical du support du miroir et de la distance entre le milieu de l’axe de déclinaison et le milieu de l’axe du manchon;
+
+7° L’axe de la tige normale de direction du miroir passant par le milieu de l’axe horizontal de rotation du miroir et par le milieu de l’axe de rotation du manchon
