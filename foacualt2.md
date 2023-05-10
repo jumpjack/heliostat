@@ -112,15 +112,7 @@ non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B 
 - 2 Ccomunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
 
 È sempre possibile soddisfare la prima condizione, poiché smaltisce l'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare;
-giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore.
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/a3866735-bd53-4757-b47f-55141b1caa5a)
-![image](https://github.com/jumpjack/heliostat/assets/1620953/ac36bd54-876c-4e7e-9003-d0d4ea2e453e)
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/61fb5f74-023a-4ad0-8a35-bf0f506db392) ([fonte](https://artsandculture.google.com/asset/photograph-siderostat/GgFoc7aHFSKidg?ms=%7B%22x%22%3A0.6418827816171588%2C%22y%22%3A0.21732036875557856%2C%22z%22%3A10.68708947672984%2C%22size%22%3A%7B%22width%22%3A0.7162344367656822%2C%22height%22%3A0.3129570890080808%7D%7D)) ([menzione su Nature](https://www.nature.com/articles/010358a0.pdf)) ([descrizione completa by C. Wolf](http://www.numdam.org/article/ASENS_1872_2_1__51_0.pdf))
-
-
-L'albero **XX'** {fig. 3), tramite ruote angolari e asta verticale,
+giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. L'albero **XX'** {fig. 3), tramite ruote angolari e asta verticale,
 comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
 Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
 uno **a** con 20 denti, l'altro **a1** con 18. Il pignone 18 ingrana con una grande ruota **A1**
@@ -137,11 +129,17 @@ impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi satellit
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
 
 
-Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare.
+Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare. Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
 
-Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
+L'asse polare **XX'** {Tavola 1, fig. 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **rr**, comanda un pignone la cui  dentatura ingrana con quella
 
-L'asse polare **XX'** {Pl. 1, fig. 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **rr**, comanda un pignone il cui la dentatura ingrana con quella che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
+------
+
+P. 65
+
+che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
+
+....
 
 -------
 
@@ -242,3 +240,11 @@ Le second problème qu'avait à résoudre le constructeur du sidérostat était 
 Voici l'élégante construction à l'aide de laquelle M. Eichens a atteint le but proposé.
 
 L'axe polaire **XX'** {Pl. I, fig. 1) est enveloppé, sur la portion de sa longueur qui semble nue sur la figure, d'un manchon en bronze qui traverse le collet inférieur du support, et là, au moyen de deux rôuea d'angle **rr**, commande un pignon dont la denture engrene avec celle qu'on a taillée sur tout le pourtour du cercle de déclinaison. Si le manchon tourne avec l'axe polaire, ces roues restent en repos  elatif et immobilisent le cercle par rapport à l'axe. Si le manchon prend une avance ou un retard sur le mouvement de l'axe, les roues déplacent d'une quantité proportionnelle la denture du cercle, et par conséquent la direction de la fourchette. Il faut donc établir entre le manchon et l'axe polaire une solidarité telle que le mouvement horaire les entraîne tous deux avec la même vitesse, mais que l'on puisse néanmoins faire tourner ce manchon isolément sans altérer le mouvement de l'axe. Un rouage satellite identique à celui que je viens de décrire va suffire à obtenir ce double effet.
+
+----------
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a3866735-bd53-4757-b47f-55141b1caa5a)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ac36bd54-876c-4e7e-9003-d0d4ea2e453e)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/61fb5f74-023a-4ad0-8a35-bf0f506db392) ([fonte](https://artsandculture.google.com/asset/photograph-siderostat/GgFoc7aHFSKidg?ms=%7B%22x%22%3A0.6418827816171588%2C%22y%22%3A0.21732036875557856%2C%22z%22%3A10.68708947672984%2C%22size%22%3A%7B%22width%22%3A0.7162344367656822%2C%22height%22%3A0.3129570890080808%7D%7D)) ([menzione su Nature](https://www.nature.com/articles/010358a0.pdf)) ([descrizione completa by C. Wolf](http://www.numdam.org/article/ASENS_1872_2_1__51_0.pdf))
+
