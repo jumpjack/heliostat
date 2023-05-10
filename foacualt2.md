@@ -17,6 +17,9 @@ Vi si identificano tre parti:
 - l'asse polare e il meccanismo che stabilisce il collegamento di questo asse con lo specchio,
 - e infine il regolatore.
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/b79b165c-c488-4341-978b-64ef0f07336d)
+
+
 L'elemento essenziale del siderostato è lo specchio piano.  Sappiamo come L. Foucault fu portato, dal suo lavoro sulla costruzione dello specchio
 
 --------
