@@ -6,43 +6,81 @@ p. 56
 
 Il siderostato fu costruito da M. Eichens, sotto la direzione della Commissione incaricata del completamento e della pubblicazione delle Opere di L. Foucault, grazie al finanziamento della cassa imperiale. Fu presentato all'Accademia delle Scienze il 13 dicembre 1869 da M. H. Sainte-Claire Deville, poi donato da Napoleone III all'Osservatorio. È qui che ho iniziato a installarlo, seguendo il progetto che avevo precedentemente discusso con L. Foucault. Interrotta da eventi politici, poi da circostanze al di fuori del mio controllo, questa installazione non è ancora completa. Il presente lavoro sarà quindi ancora puramente descrittivo e teorico. Per guidarci nella costruzione dello strumento, abbiamo approfittato di due piccoli modelli in legno, uno eseguito nel 1866 per l'Osservatorio, l'altro costruito per L. Foucault, raffigurante l'apparato che voleva collocare presso il suo osservatorio in rue d'Assas. 
 
-L'intero strumento, di cui la fig. I, Tav. I dà il prospetto laterale, poggia su un basamento in ghisa sostenuto da tre viti di livellamento **U**, con due livelli rettangolari e movimento di regolazione azimutale, il rullo su cui poggia una delle viti **U** essendo dotato di slitta mobile di mezzo di una vite con testa. Vi si identificano tre parti: 
+L'intero strumento, di cui la fig. I, Tav. I dà il prospetto laterale, poggia su un basamento in ghisa sostenuto da tre viti di livellamento **U**, con due livelli rettangolari e movimento di regolazione azimutale, il rullo su cui poggia una delle viti **U** essendo dotato di slitta mobile di mezzo di una vite con testa.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/38566331-36e9-4e82-b603-d73f9a325078)
+
+
+Vi si identificano tre parti: 
 
 - lo specchio e il suo montaggio, 
 - l'asse polare e il meccanismo che stabilisce il collegamento di questo asse con lo specchio,
 - e infine il regolatore.
 
-L'elemento essenziale del siderostato è lo specchio piano. Sappiamo come L. Foucault fu portato, dal suo lavoro sulla costruzione dello specchio parabolico in vetro argentato, a realizzare questa meraviglia ottica che Gambey e Arago dichiararono impossibile. Il signor Ad. Martin, allievo di Foucault e continuatore del suo lavoro ottico, costruì lo specchio del siderostato; spiegò, in una Nota presentata all'Accademia, il 29 novembre 1869, i metodi da lui impiegati per guidare il ritocco della superficie, e le prove a cui era sottoposto lo specchio. Aggiungo qui un solo fatto, di capitale importanza: esposto per un'ora ai raggi di un sole estivo, prima di argentarsi, lo specchio conservava la sua superficie otticamente piana. Questo esperimento del signor Ad. Martin risponde a un'obiezione spesso formulata contro gli specchi argentati, e mostra che i processi di fabbricazione di Saint-Gobain sono abbastanza perfetti da dare un disco di vetro di 30 centimetri di diametro e 5 centimetri di altezza di medio spessore perfetta omogeneità .
+L'elemento essenziale del siderostato è lo specchio piano.  Sappiamo come L. Foucault fu portato, dal suo lavoro sulla costruzione dello specchio
+
+--------
+
+P. 57
+
+ parabolico in vetro argentato, a realizzare questa meraviglia ottica che Gambey e Arago dichiararono impossibile. Il signor Ad. Martin, allievo di Foucault e continuatore del suo lavoro ottico, costruì lo specchio del siderostato; spiegò, in una Nota presentata all'Accademia, il 29 novembre 1869, i metodi da lui impiegati per guidare il ritocco della superficie, e le prove a cui era sottoposto lo specchio. Aggiungo qui un solo fatto, di capitale importanza: esposto per un'ora ai raggi di un sole estivo, prima di argentarsi, lo specchio conservava la sua superficie otticamente piana. Questo esperimento del signor Ad. Martin risponde a un'obiezione spesso formulata contro gli specchi argentati, e mostra che i processi di fabbricazione di Saint-Gobain sono abbastanza perfetti da dare un disco di vetro di 30 centimetri di diametro e 5 centimetri di altezza di medio spessore perfetta omogeneità .
 
 Lo specchio (Fig. 2, Tav. 1) è portato da un asse orizzontale xx alla sommità di due montanti verticali M, giunti al calco con una piattaforma P che gira attorno ad un centro. Questo movimento è facilitato da una corona di ciottoli G nascosti nel piede dello specchio, e che conferiscono una perfetta mobilità, senza alterare la regolarità del piano descritto dalla pedana, la sua superficie inferiore e la corrispondente faccia della base accuratamente lappata. .
 A volte sarà necessario riparare lo specchio al contrario. I collegamenti della coda direttrice con l'asse polare non darebbero sufficiente stabilità; si ottiene fissando la pedana alla base mediante un morsetto non rappresentato nell'incisione.
-Lo specchio è tenuto nel suo barilotto {fig. 3, Tav. 7) da tre ramponi esterni t e da una molla a tre rami che lo preme contro di essi senza deformarlo. La condizione di perpendicolarità della coda di guida alla superficie riflettente è così assicurata da un'esatta lappatura della corona della canna.
-La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. L'asse XX in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo g che è tutt'uno con esso e che funge da supporto per il cerchio di declinazione dd. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
+Lo specchio è tenuto nel suo barilotto (fig. 3, Tav. 7) da tre ramponi esterni t e da una molla a tre rami che lo preme contro di essi senza deformarlo. La condizione di perpendicolarità della coda di guida alla superficie riflettente è così assicurata da un'esatta lappatura della corona della canna.
+
+La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. 
+L'asse XX in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo g che è tutt'uno con esso e che funge da supporto per il cerchio di declinazione dd. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
+
+--------
+
+P. 58
+
 L'estensione matematica dell'asse orario e quella dell'asse del cerchio di declinazione si incontrano proprio sull'asse della coda della forcella. È da questo punto che si devono contare le due lunghezze uguali **OF** e **OM** (fig. 1). Il punto **M** è già definito dall'intersezione dei due assi, uno orizzontale, l'altro verticale, attorno ai quali lo specchio può oscillare. Resta da definire il punto **F** che delimita la lunghezza della forcella.
 L'articolazione della forcella e dell'asta di guida è realizzata mediante un manicotto cilindrico **m**, in cui l'asta passa liberamente senza sballottamenti, e che oscilla attorno ad un asse compreso tra i due denti della forcella.
 
 È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
 Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, bilanciata allo stato puro rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza la quale non segue alcun cambiamento nella direzione matematica dei raggi.
-Solo l'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di regia, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed era sufficiente abbassare i perni un po' sotto la metà dello spessore della canna per ottenere l'equilibrio.
+Solo l'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di regia, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed 
+
+---------
+
+P. 59
+
+era sufficiente abbassare i perni un po' sotto la metà dello spessore della canna per ottenere l'equilibrio.
 Il pezzo di bronzo che prolunga l'asse polare, molto poco eccentrico rispetto all'asse polare, è sufficientemente equilibrato attorno a questo asse dai pezzi che stanno dall'altra parte e di cui parleremo più avanti. Ma l'equilibrio del cerchio ridotto a settore circolare e quello della forcella erano estremamente difficili da ottenere, dato lo spazio ristretto in cui queste parti devono muoversi.
 Quindi ci siamo dovuti limitare a renderli il più leggeri possibile; e anche, a questo scopo, la forcella è stata realizzata in alluminio: ne sarebbero derivati ​​alcuni inconvenienti, come diremo in seguito; ma bisognava pensare prima di assicurare la regolarità del movimento dell'asse polare.
 Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di declinazione (vedremo presto come si ottiene questa relativa immobilità), la sua estremità **f** descrive un piccolo cerchio perpendicolare all'asse orario e di raggio variabile pari a l\*sinP, dove **l** è la lunghezza della forcella e **P** l'angolo che forma con l'asse dell'orologio.
 È su questo cerchio che si appoggia costantemente nel suo movimento la coda direttrice dello specchio, che di conseguenza descrive un cono obliquo.
-Ne consegue che il canotto deve poter non solo girare attorno a questa coda, ma anche scorrere lungo la sua lunghezza, compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella.
+Ne consegue che il canotto deve poter non solo girare attorno a questa coda, ma anche scorrere lungo la sua lunghezza, compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella. Il cerchio di declinazione è graduato in terzi di grado, e l'alidada **e** 
 
-Il cerchio di declinazione è graduato in terzi di grado, e l'alidada **e** porta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
+-------
+
+P.60 
+
+porta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
+
 L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. I, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
+
 L'asse dell'orologio non ha movimenti di rettifica diversi da quelli che l'intera base può accogliere utilizzando le sue viti di livellamento. L'artista ne ha adattato l'inclinazione alla latitudine del luogo, prendendo come piano orizzontale il piano su cui rotola la piattaforma.
-Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà modo di correggerla se non agendo sulle viti **U** e, conseguentemente, sacrificando la verticalità dei montanti dello specchio, e cambiando la direzione del **OM** o del raggio riflesso e del telescopio che deve riceverlo. Ma il principio/teorico dell'apparato non impone ai supporti dello specchio altra condizione che l'immobilità del punto di intersezione della coda regia con l'asse delle torrette dello specchio; e questa immobilità è assicurata qualunque sia la posizione dei sostegni rispetto all'orizzonte. Il cannocchiale invece deve avere tutti i movimenti di raddrizzamento in azimut e inclinazione.
 
-Una leggera deviazione del piano della base fuori dal piano orizzontale non presenta quindi alcun inconveniente. Sarebbe stato inoltre impossibile imprimere ai sostegni di Vw orario w un particolare movimento di oscillazione, poiché questo movimento, che non poteva essere effettuato intorno ad un asse orizzontale passante per il punto **O**, avrebbe alterato la distanza **OM**. D'altra parte ancora, non si è voluto rendere indipendenti il ​​supporto dello specchio e quello dell'asse delle ore, e lasciare all'osservatore la cura di regolare la distanza **OM** sul pilastro che deve sostenere l'intero dispositivo. La difficoltà di questa regolazione richiede che venga eseguita una volta per tutte, e la sua manutenzione richiede inoltre che parti metalliche della stessa natura uniscano il punto **O** ai punti **M** e **F** .
+Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà modo di correggerla se non agendo sulle viti **U** e, conseguentemente, sacrificando la verticalità dei montanti dello specchio, e cambiando la direzione del **OM** o del raggio riflesso e del telescopio che deve riceverlo. Ma il principio/teorico dell'apparato non impone ai supporti dello specchio altra condizione che l'immobilità del punto di intersezione della coda regia con l'asse delle torrette dello specchio; e questa immobilità è assicurata qualunque sia la posizione dei sostegni rispetto all'orizzonte. Il cannocchiale invece deve avere tutti i movimenti di raddrizzamento in azimut e inclinazione. Una leggera deviazione del piano della base fuori dal piano orizzontale non presenta quindi alcun inconveniente. Sarebbe stato inoltre impossibile imprimere ai sostegni di Vw orario w un particolare movimento di oscillazione, poiché questo movimento, che non poteva essere effettuato intorno ad un asse orizzontale passante per il punto **O**, avrebbe alterato la distanza **OM**. D'altra parte ancora, non si è voluto rendere indipendenti il supporto dello specchio e quello dell'asse delle ore, e lasciare all'osservatore la cura di regolare la distanza **OM** sul pilastro che deve sostenere l'intero dispositivo. La 
+
+------
+
+P. 61
+
+difficoltà di questa regolazione richiede che venga eseguita una volta per tutte, e la sua manutenzione richiede inoltre che parti metalliche della stessa natura uniscano il punto **O** ai punti **M** e **F** .
 Vedremo come rettificare la lunghezza della portata, se l'osservazione mostra che non è uguale alla distanza **OM**.
-
-Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena parlato, e cioè: l'asse polare coincidente con l'asse del mondo, lo zero del cerchio orario corrispondente al riflesso nel meridiano, il cerchio di declinazione ha zero quando la forcella è dentro
-l'estensione dell'asse polare, la lunghezza della gittata pari alla distanza **OM**, lo specchio perpendicolare all'asta di orientamento, ed infine l'asse del cannocchiale coincidente con la direzione **OM** estesa. Se tutte queste condizioni sono soddisfatte, basta portare nell'asse di questo telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, portare sotto l'indice del cerchio orario la scala corrispondente all'angolo orario , sotto l'indice del cerchio di declinazione la scala corrispondente alla distanza polare, e fissate i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
+Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena parlato, e cioè: l'asse polare coincidente con l'asse del mondo, lo zero del cerchio orario corrispondente al riflesso nel meridiano, il cerchio di declinazione ha zero quando la forcella è dentro l'estensione dell'asse polare, la lunghezza della gittata pari alla distanza **OM**, lo specchio perpendicolare all'asta di orientamento, ed infine l'asse del cannocchiale coincidente con la direzione **OM** estesa. Se tutte queste condizioni sono soddisfatte, basta portare nell'asse di questo telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, portare sotto l'indice del cerchio orario la scala corrispondente all'angolo orario , sotto l'indice del cerchio di declinazione la scala corrispondente alla distanza polare, e fissate i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
 Il ruotismo **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti di ghiaccio proprio alla base dello strumento. Riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega,
 può trovare posto qui Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
-Qui, come in un equatoriale, è necessario disporre di mezzi di ritorno, variare piccole quantità o l'angolo orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un treno satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
+Qui, come in un equatoriale, è necessario disporre di mezzi di ritorno, variare piccole quantità o l'angolo 
+
+------
+
+P. 62
+orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un treno satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
 Sull'albero XX' {fig. 3), che riceve il movimento del rotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9b013f42-1162-4e23-bdf4-42d2e1bc349c)
@@ -50,7 +88,12 @@ Sull'albero XX' {fig. 3), che riceve il movimento del rotismo per trasmetterlo a
 **A** e **C**, sono pazzi sull'albero, mentre il terzo B è tutt'uno con lui. A riceve direttamente il movimento del rotismo e lo trasmette a B tramite i due pignoni satelliti **b** e **c**, fissati allo stesso albero **YY'** che attraversa uno dei bracci del la ruota **A**, ed è quindi trascinato nel movimento rotatorio di quest'ultima. In questo movimento il pignone **c** rotola sviluppandosi sulla ruota **C** che supponiamo ferma; il pignone **b** gira quindi allo stesso modo e comunica il movimento alla ruota **B**, che trascina l'albero. Il senso e la velocità di rotazione di questo albero dipendono dai rapporti stabiliti tra le circonferenze primitive e quindi tra i numeri di denti dei quattro mobili B, C, b e c.
 
 
-Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote dentate, con V la velocità di rotazione della ruota A, con v quella di B, avremo
+Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote dentate, 
+
+------
+P. 63
+
+con V la velocità di rotazione della ruota A, con v quella di B, avremo
 tra queste quantità il rapporto (BÉLANGER, Traité de Cinématique, P. 198)
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
@@ -83,7 +126,16 @@ Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
 uno **a** con 20 denti, l'altro **a1** con 18. Il pignone 18 ingrana con una grande ruota **A1**
 di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza **P** lo rende solidale al cerchio orario **H**.
 
-Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene comunicato dal regolatore e da tutti quelli, additivi o sottrattivi, impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi.
+Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene comunicato dal regolatore e da tutti quelli, additivi o sottrattivi, 
+
+------
+
+P. 64
+
+impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi satelliti.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
+
 
 Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare.
 
