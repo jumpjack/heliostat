@@ -1,3 +1,6 @@
+[Description du sidérostat de L. Foucault](http://www.numdam.org/item/10.24033/asens.78.pdf), by C. WOLF, in "Annales Scientifiques de l'École Normale Supérieure, 2e série, tome 1 (1872), p. 51-84"
+
+
 
 Indichiamo con B, C, b, c i raggi di queste quattro ruote dentate, con V la velocità di rotazione della ruota A, con v quella di B, avremo
 tra queste quantità il rapporto (BÉLANGER, Traité de Cinématique.
@@ -43,6 +46,32 @@ Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha ragg
 L'asse polare **XX'** {Pl. 1, fig. 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **rr**, comanda un pignone il cui la dentatura ingrana con quella che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
 
 -------
+
+Le sidérostat a été construit par M. Eichens, sous la direction de la Commission chargée de l'achèvement et de la publication des Oeuvres de L. Foucault, et aux frais de la cassette impériale.
+Il a été présenté a l'Académie des Sciences, le i3 décembre 1869, par M. H. Sainte-Claire Deville, 
+puis donné par Napoléon III à l'Observatoire. C'est là que j'ai commencé son installation, 
+suivant le projet que j'avais autrefois discuté avec L. Foucault. Interrompue par les événements politiques, puis par des circonstances étrangères à ma volonté, 
+cette installation n'est pas encore terminée. Le présent travail sera donc encore purement descriptif et théorique.
+Nous avions, pour nous guider dans la construction de l'instrament,
+deux petits modèles en bois, l'un exécuté en 1866 pour l'Observatoire,
+l'autre construit pour L. Foucault, représentant l'appareil qu'il voulait placer à son observatoire de la rue d'Assas.
+Tout l'instrument, dont la fig. I, Pl. I, donne l'élévation latérale,
+repose sur un socle en fonte porté par trois vis calantes U, avec deux niveaux rectangulaires et mouvement de réglage en azimut, 
+le galet sur lequel s'appuie l'une des vis U étant muni d'une coulisse mobile à l'aide d'une vis à téte. 
+On y idt'stingue trois parties: le miroir et sa monture, l'axe polaire et le mécanisme qui établit la liaison de cet axe avec le miroir, et enfin le régulateur. 
+
+L'élément essentiel du sidérostat estle miroir plan. On sait comment L. Foucault a été conduit, par ses travaux sur la construction du miroir parabolique en verre argenté, à réaliser cette merveille optique que Gambey et Arago déclaraient impossible. M. Ad. Martin, élève de Foucault et continuateur de ses travaux optiques, a construit le miroir du sidérostat; il a exposé, dans une Note présentée à l'Académie, le 29 novembre 1869, les méthodes qu'il a employées pour guider les retouches delà surface, et les épreuves auxquelles a été soumis le miroir.
+J'ajouterai ici un seul fait, d'une importance capitale: exposé pendant une heure aux rayons d'un soleil d'été, avant l'argenture, le miroir a conservé sa surface optiquement plane. Cette expérience de M. Ad. Martin répond à une objection souvent formulée contre les miroirs argentés, et montre que les procédés de fabrication de Saint-Gobain sont assez parfaits pour donner à un disque de verre de 3o centimètres de diamètre et 5 centimètres d'épaisseur moyenne une homogénéité parfaite.
+
+Le miroir {Fig. 2, Pl. 1} est porté par un axe horizontal xx au sommet de deux montants verticaux M, venus à la fonte avec une plate-forme P qui tourne autour d'un centre. Ce mouvement est facilité par une couronne de galets G cachés dans le pied du miroir, et qui donnent une mobilité parfaite, sans altérer la régularité du plan décrit par la plate-forme, la surface inférieure de celle-ci et là face correspondante du socle ayanfcété rodées avec soin.
+II sera parfois nécessaire de fixer au contraire le miroir. Les liaisons de la queue directrice avec l'axe polaire ne donneraient pas une stabilité suffisante; on l'obtient en fixant la plate-forme sur le socle à l'aide d'une pince qui n'est pas figurée dans la gravure.
+Le miroir est maintenu dans son barillet {fig. 3, Pi. 7) par trois taquets extérieurs t et par un ressort a trois branches qui le presse contre eux sans le déformer. La condition de perpendiculârité de la queue directrice à la surface réfléchissante se trouve ainsi assurée par un rodage exact de la couronne du barillet.
+La fig.I (Pl. I) fait comprendre la disposition de l'axe horaire et son mode de liaison avec la queue directrice du miroir. L'axe d'acier XX se prolonge au-dessous du coussinet inférieur par une pièce en bronze g qui fait corps avec lui et qui sert de support au cercle de déclinaison dd. Ce cercle n'est pas entier, mais réduit à un peu plus de sa moitié, afin de ne pasgêner les mouvements du miroir. Il porte, suivant un diamètre et sur la face opposée à la pièce de bronze, deux colliers dans lesquels s'engage et tourne à frottement doux, sans ballottement dans aucun sens, la queue de la fourchette **f** qui va guider la tige directrice du miroir.
+Le prolongement mathématique de l'axe horaire et celui de l'axe du cercle de déclinaison se rencontrent sur l'axe même de la queue de la fourchette. C'est à partir de ce point que doivent être comptées les deux longueurs égales **OF** et **OM** (fig. 1). Le point **M** est défini déjà par l'intersection des deux axes, l'un horizontal, l'autre vertical, autour desquels peut osciller le miroir. Il reste à définir le point **F** qui limite la longueur de la fourchette.
+L'articulation de la fourchette et de la tige directrice se fait à l'aide d'un manchon cylindrique **m**, dans lequel la tige passe librement sans balloter, et qui oscille autour d'un axe entre les deux dents de la fourchette.
+
+
+***
 
 Désignons par B, C, b, c ls rayos de ces quatre roues dentées par V la vitesse de rotation de la roue A, par v celle de B, nous aurons
 entre ces quantités la relation (BÉLANGER, Traité de Cinématique.
