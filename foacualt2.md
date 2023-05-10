@@ -139,9 +139,28 @@ P. 65
 
 che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
 
+
+------
+
+P. 66
+
+------
+
+P. 67
+
+------
+
+P. 68
+
+------
+
+P. 69
+
 ....
 
 -------
+
+56
 
 Le sidérostat a été construit par M. Eichens, sous la direction de la Commission chargée de l'achèvement et de la publication des Oeuvres de L. Foucault, et aux frais de la cassette impériale.
 Il a été présenté a l'Académie des Sciences, le i3 décembre 1869, par M. H. Sainte-Claire Deville, 
@@ -156,41 +175,66 @@ repose sur un socle en fonte porté par trois vis calantes U, avec deux niveaux 
 le galet sur lequel s'appuie l'une des vis U étant muni d'une coulisse mobile à l'aide d'une vis à téte. 
 On y idt'stingue trois parties: le miroir et sa monture, l'axe polaire et le mécanisme qui établit la liaison de cet axe avec le miroir, et enfin le régulateur. 
 
-L'élément essentiel du sidérostat estle miroir plan. On sait comment L. Foucault a été conduit, par ses travaux sur la construction du miroir parabolique en verre argenté, à réaliser cette merveille optique que Gambey et Arago déclaraient impossible. M. Ad. Martin, élève de Foucault et continuateur de ses travaux optiques, a construit le miroir du sidérostat; il a exposé, dans une Note présentée à l'Académie, le 29 novembre 1869, les méthodes qu'il a employées pour guider les retouches delà surface, et les épreuves auxquelles a été soumis le miroir.
+L'élément essentiel du sidérostat estle miroir plan. On sait comment L. Foucault a été conduit, par ses travaux sur la construction du miroir 
+
+57
+
+parabolique en verre argenté, à réaliser cette merveille optique que Gambey et Arago déclaraient impossible. M. Ad. Martin, élève de Foucault et continuateur de ses travaux optiques, a construit le miroir du sidérostat; il a exposé, dans une Note présentée à l'Académie, le 29 novembre 1869, les méthodes qu'il a employées pour guider les retouches delà surface, et les épreuves auxquelles a été soumis le miroir.
 J'ajouterai ici un seul fait, d'une importance capitale: exposé pendant une heure aux rayons d'un soleil d'été, avant l'argenture, le miroir a conservé sa surface optiquement plane. Cette expérience de M. Ad. Martin répond à une objection souvent formulée contre les miroirs argentés, et montre que les procédés de fabrication de Saint-Gobain sont assez parfaits pour donner à un disque de verre de 3o centimètres de diamètre et 5 centimètres d'épaisseur moyenne une homogénéité parfaite.
 
 Le miroir (Fig. 2, Pl. 1) est porté par un axe horizontal xx au sommet de deux montants verticaux M, venus à la fonte avec une plate-forme P qui tourne autour d'un centre. Ce mouvement est facilité par une couronne de galets G cachés dans le pied du miroir, et qui donnent une mobilité parfaite, sans altérer la régularité du plan décrit par la plate-forme, la surface inférieure de celle-ci et là face correspondante du socle ayanfcété rodées avec soin.
 II sera parfois nécessaire de fixer au contraire le miroir. Les liaisons de la queue directrice avec l'axe polaire ne donneraient pas une stabilité suffisante; on l'obtient en fixant la plate-forme sur le socle à l'aide d'une pince qui n'est pas figurée dans la gravure.
 Le miroir est maintenu dans son barillet {fig. 3, Pi. 7) par trois taquets extérieurs t et par un ressort a trois branches qui le presse contre eux sans le déformer. La condition de perpendiculârité de la queue directrice à la surface réfléchissante se trouve ainsi assurée par un rodage exact de la couronne du barillet.
-La fig.I (Pl. I) fait comprendre la disposition de l'axe horaire et son mode de liaison avec la queue directrice du miroir. L'axe d'acier XX se prolonge au-dessous du coussinet inférieur par une pièce en bronze g qui fait corps avec lui et qui sert de support au cercle de déclinaison dd. Ce cercle n'est pas entier, mais réduit à un peu plus de sa moitié, afin de ne pasgêner les mouvements du miroir. Il porte, suivant un diamètre et sur la face opposée à la pièce de bronze, deux colliers dans lesquels s'engage et tourne à frottement doux, sans ballottement dans aucun sens, la queue de la fourchette **f** qui va guider la tige directrice du miroir.
+La fig.I (Pl. I) fait comprendre la disposition de l'axe horaire et son mode de liaison avec la queue directrice du miroir. L'axe d'acier XX se prolonge au-dessous du coussinet inférieur par une pièce en bronze g qui fait corps avec lui et qui sert de support au cercle de déclinaison dd. Ce cercle n'est pas entier, mais réduit à un peu plus de sa moitié, afin de ne pasgêner les mouvements du miroir. Il porte, 
+
+58
+
+suivant un diamètre et sur la face opposée à la pièce de bronze, deux colliers dans lesquels s'engage et tourne à frottement doux, sans ballottement dans aucun sens, la queue de la fourchette **f** qui va guider la tige directrice du miroir.
 Le prolongement mathématique de l'axe horaire et celui de l'axe du cercle de déclinaison se rencontrent sur l'axe même de la queue de la fourchette. C'est à partir de ce point que doivent être comptées les deux longueurs égales **OF** et **OM** (fig. 1). Le point **M** est défini déjà par l'intersection des deux axes, l'un horizontal, l'autre vertical, autour desquels peut osciller le miroir. Il reste à définir le point **F** qui limite la longueur de la fourchette.
 L'articulation de la fourchette et de la tige directrice se fait à l'aide d'un manchon cylindrique **m**, dans lequel la tige passe librement sans balloter, et qui oscille autour d'un axe entre les deux dents de la fourchette.
 
 C'est l'intersection de cet axe avec l'axe de la queue directrice du miroir qui détermine le point **F**. L'arliste a donc dû apporter tons ses soins à rendre rigoureusement égales et constantes les deux distances qui viennent d'être définies. Nous verrons bientôt quelle serait l'influence d'une erreur sur la longueur réelle de la fourchette, et comment il sera facile do la reconnaitre.
 Les diverses pièces qui établissent la liaison de l'axe horaire au miroir pourront prendre autour de cet axe des positions très-variées; il était essentiel, pour la régularité des mouvemente, que chaque pièce fût, autant que possible, équilibrée pur rapport aux axes qui la supportent. L'équilibre du miroir muni de sa tige directrice n'eût pas été possible autour de son axe horizontal, si l'on avait laissé cet axe dans le plan même de la surface réfléchissante, comme le suppose la figure théorique (fig. I). Mais on voit par cejte même construction que'la surface du miroir peut être déplacée parallèlement à elle-rnême, sang qu'il en resuite aucun changement dans la direction mathématique  des rayons.
-Seulement l'objectif fixe da la lunette utilise alors des portions trèslégèrement différentes du miroir dans ses diverses positions ; d'où suivrait la nécessité d'augmenter te diamètre du miroir s'il devait être déplacé d'une quantité notable. Mais la tige directrice, étant formée d'un tube creux, est très-légère anprtrdu miroir et de sanbarillet, et il a suffi d'abaisser les tourillons un peu au-dessous de la demi-épaisseur du barillet pour obtenir l'équilibre.
+Seulement l'objectif fixe da la lunette utilise alors des portions trèslégèrement différentes du miroir dans ses diverses positions ; d'où suivrait la nécessité d'augmenter te diamètre du miroir s'il devait être déplacé d'une quantité notable. Mais la tige directrice, étant formée d'un tube creux, est très-légère anprtrdu miroir et de son barillet, et
+
+59
+
+
+il a suffi d'abaisser les tourillons un peu au-dessous de la demi-épaisseur du barillet pour obtenir l'équilibre.
 La pièce de bronze qui prolonge l'axe polaire, très-peu excentrique par rapport à l'axe polaire, est suffisamment équilibrée autour de cet axe par les pièces qui se trouvent de l'autre côté et dont nous parlerons tout à l'heure. Mais l'équilibre du cercle réduit à un secteur circulaire et celui de la fourchette étaient extrêmement difficiles à obtenir, vu l'espace restreint dans lequel doivent se mouvoir ces pièces.
 Nous avons donc dû nous borner à les rendre aussi légères que possible; et même, dans ce but, la fourchette a élé faite en aluminium: il devait en résulter quelques inconvénients, comme nous le dirons plus loin; mais il a fallu d'abord penser à assurer la régularité du mouvement de l'axe polaire.
 Lorque la fourchette est entraînée par l'axe horaire, le cercle de déclinaison étant fixe (nous verrons bientôt comment est obtenue cette immobilité relative), son extrémité **f** décrit un petit cercle perpendiculaire à l'axe horaire et de rayon variable égal à l\*sinP, **l** étant la longueur de la fourchette et **P** l'angle qu'elle fait avec l'axe horaire.
 C'est sur ce cercle que s'appuie constamment dans son mouvement la queue directrice du miroir, qui décrit par conséquent un cône oblique.
-Il en résulte que le manchon doit non-seulement pouvoir tourner autour de cette queue, mais aussi glisser suivant sa longueur, exécuter donc autour de son axe un mouvement hélicoïdal, tantôt tres-lent, lorsque le plan de la fourchette et de la queue coïncide presque avec le plan vertical médian de tout l'appareil, tantôt très-rapide et se réduisant presque à un glissement longitudinal, lorsque ces deux plans sont au maximum d'écart. Aucune autre articulation qu'un manchon ne pouvait satisfaire à ces conditions variées: nous avons donc dû l'adopter et lui donner même assez de longueur pour que tout ballottement de la tige directrice fût impossible. Mais les frottements ont été diminués autant que possible en réduisant les surfaces en contact à deux anneaux aux extrémités du manchon. L'observateur, de son côté, doit avoir le soin d'entretenir toujours la surface de la tige bien lubrifiée, et de ne jamais la toucher avec les doigts: pour guider le miroir à la main il doit agir sur l'extrémité de la fourchette.
+Il en résulte que le manchon doit non-seulement pouvoir tourner autour de cette queue, mais aussi glisser suivant sa longueur, exécuter donc autour de son axe un mouvement hélicoïdal, tantôt tres-lent, lorsque le plan de la fourchette et de la queue coïncide presque avec le plan vertical médian de tout l'appareil, tantôt très-rapide et se réduisant presque à un glissement longitudinal, lorsque ces deux plans sont au maximum d'écart. Aucune autre articulation qu'un manchon ne pouvait satisfaire à ces conditions variées: nous avons donc dû l'adopter et lui donner même assez de longueur pour que tout ballottement de la tige directrice fût impossible. Mais les frottements ont été diminués autant que possible en réduisant les surfaces en contact à deux anneaux aux extrémités du manchon. L'observateur, de son côté, doit avoir le soin d'entretenir toujours la surface de la tige bien lubrifiée, et de ne jamais la toucher avec les doigts: pour guider le miroir à la main il doit agir sur l'extrémité de la fourchette. Le cercle de déclinaison est gradué en tiers de degré,  et l'alidade **e** 
 
-Le cercle de déclinaison est gradué en tiers de degré,  et l'alidade **e** porte un vernier qui donne la minute. La position de cette alidade est réglée à l'aide d'une vis de rappel, qui permet d'amener le cercle exactement au zéro lorsque la fourchette est dans le prolongement de l'axe polaire. Les lectures donnent donc immédiatement les distances polaires du rayon incident, si l'instrument est bien réglé.
+
+60
+
+
+porte un vernier qui donne la minute. La position de cette alidade est réglée à l'aide d'une vis de rappel, qui permet d'amener le cercle exactement au zéro lorsque la fourchette est dans le prolongement de l'axe polaire. Les lectures donnent donc immédiatement les distances polaires du rayon incident, si l'instrument est bien réglé.
 L'axe horaire, porte à sa partie supérieure (Pl. I, Fig. I, et dans le texte, fig. 4) un cercle **HH** divisé en 24 heures qui, au moyen de deux verniers, donne les deux secondes de temps. Ce cercle fait corps avec l'axe. Les verniers sont portés par un cercle alidade **VV** concentrique au premier, monté sur un manchon mobile autour de l'axe. A ce manchon est fixé un bras **I** que maintiennent deux vis butantes dont les écrous sont solidaires du support de l'appareil; on peul donc regler les verniers de manière à faire marquer 0h 0m 0s au cercle horaire lorsque la réflexion se fait dans le plan, du méridien.
 L'axe horaire ne possède pas de mouvements de rectification autres que ceux que peut recevoir le socle tout entier à l'aide de ses vis calantes. L'artiste a réglé son inclinaison pour la latitude du lieu, en prenant comme plan horizontal le plan sur lequel roule la plate-forme.
 Si l'observation montre que cette inclinaison n'est pas exacte, il n'y ara moyen de la corriger qu'en agissant sur les vis **U** et, par conséquent, en sacrifiant la verticalité des montants du miroir, et changeant la direction de la ligne **OM** ou du rayon réfléchi et de la lunette qui doit le recevoir. Mais le principe/théorique de l'appareil n'impose aux supports du miroir d'autre condition que rimmobilité du point d'intersection de laqueu e directrice avec l'axe des tourilloîig du miroir; et, cette immobilité est assurée quelle que soit la position dos supports par rapport à l'horizon. D'autre part, la lunette d'observation doit posséder tous les mouvements de rectification en azimut et en inclinaison.
-
-
-
 Une légère déviation du plan du socle en dehors du plan horizontal n'offre donc aucun inconvénient. Il eût d'ailleurs été impossible de donner aux supports de Vw horaire w mouvement de bascule particulier, puisque ce mouvement, ne pou vaut s'exécuter autour d'un axe horizontal passant par le point **O**, aurait altéré la distance **OM**. D'autre part encore, nous n'avons pôint voulu rendre indépendants le support du miroir et celui de l'axe horaire, et laisser à l'observateur le soin de
-régler la distance **OM** surl e pilier qnîdoit porter tout l'appareil. La difficulté de ce réglage exige qu'il soit fait une fois pour toutes, et son maintien exige en outre que des pièces métalliques de même nature réunissent le point **O** aux points **M** et **F**.
+régler la distance **OM** surl e pilier qnîdoit porter tout l'appareil. 
+
+
+61
+
+La difficulté de ce réglage exige qu'il soit fait une fois pour toutes, et son maintien exige en outre que des pièces métalliques de même nature réunissent le point **O** aux points **M** et **F**.
 Nous verrons comment peut être rectifiée la longueur de la fourchette, si l'observation démontre qu'elle n'est pas égale à la distance **OM**.
 
 Supposons maintenant l'instrument assujetti aux diverses conditions dont nous venons de parler, savoir: l'axe polaire coïncidant avec l'axe du monde, le zéro du cercle horaire répondant à la réflexion dans le méridien, le cercle de déclinaison a zéro quand la fourchette est dans
 le prolongement de l'axe polaire, la longueur de la fourchette égale à la distance **OM**, le miroir perpendiculaire à la tige directrice, et enfin l'axe de la lunette coïncidant avec la direction **OM** prolongée. Si toutes ces conditions sont réalisées, il suffit, pour amener dans l'axe de cette lunette les rayons provenant d'un astre dont la distance polaire et l'angle horaire actuel sont donnés, d'amener sous l'index du cercle horaire la graduation correspondante à l'angle horaire, sous l'index du cercle de déclinaison la graduation correspondante à la distance polaire, et de fixer les deux cercles. Si, de plus, à partir de cet instant, un moteur communique à l'axe horaire un mouvement uniforme de rotation, à raison d'un tour en un jour sidéral, l'astre restera immobile au milieu du champ de la lunette.
 Le rouage **R** qui communique le mouvement à l'axe est placé sous une cage à parois de glace dans le pied même de l'instrument. Il reçoit le mouvement de l'action d'un poids qui descend dans un puits creusé à travers le pilier qui porte le sidérostat; et ce mouvement est rendu uniforme par un régulateur isochrone de L. Foucault. La description de ce régulateur, dont les formes et les applications diverses constituent une partie importante de l'oeuvre de notre regretté collègue, ne
 peut trouver place ici. Je rappellerai seulement que ce régulateur, appliqué par M. Eichens à plusieurs grands équatoriaux, donne un mouvement d'une régularité parfaite, et que, à l'Exposition universelle de 1867, il a mérité à son habile constructeur le grand prix des arts mécaniques.
-Ici, comme dans un équatorial, il est nécessaire de disposer de moyens de rappel, pour faire varier de petites quantités ou l'angle horaire ou la distance polaire, sans arrêter d'ailleurs la marche du mouvement d'horlogerie. La variation de l'angle horaire s'obtient à l'aide d'un rouage satellite semblable à celui que M. Eichens adapte depuis longtemps aux équatoriaux. Je décrirai en quelques mots ce rouage, que nous retrouverons tout à l'heure dans le rappel de la distance polaire.
+Ici, comme dans un équatorial, il est nécessaire de disposer de moyens de rappel, pour faire varier de petites quantités ou l'angle 
+
+
+62
+
+
+horaire ou la distance polaire, sans arrêter d'ailleurs la marche du mouvement d'horlogerie. La variation de l'angle horaire s'obtient à l'aide d'un rouage satellite semblable à celui que M. Eichens adapte depuis longtemps aux équatoriaux. Je décrirai en quelques mots ce rouage, que nous retrouverons tout à l'heure dans le rappel de la distance polaire.
 Sur l'arbre XX' {fig. 3), qui reçoit le mouvement du rouage pour le transmettre à l'axe horaire, sont montées trois roues, dont deuxs
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9b013f42-1162-4e23-bdf4-42d2e1bc349c)
@@ -199,7 +243,13 @@ Sur l'arbre XX' {fig. 3), qui reçoit le mouvement du rouage pour le transmettre
 
 ***
 
-Désignons par B, C, b, c ls rayos de ces quatre roues dentées par V la vitesse de rotation de la roue A, par v celle de B, nous aurons
+Désignons par B, C, b, c ls rayos de ces quatre roues dentées,
+
+
+63
+
+
+par V la vitesse de rotation de la roue A, par v celle de B, nous aurons
 entre ces quantités la relation (BÉLANGER, Traité de Cinématique.
 p. 198)
 
@@ -207,8 +257,6 @@ Les deux vitesses sont de même sens si B/b  est plus grand que C/c c'est le cas
 
 
 relation à laquelle on satisfait en prenant B = 5b, C = 1/2 c.
-
-
 
 
 Nous avons supposé la roue C immobile, mais si pendant le mouvement de A on vient à la faire tourner sur elle-même par l'intermédiaire d'une roue d'angle D fixée sur le même manchon, le rouage satellite
@@ -226,7 +274,12 @@ communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4
 Surl'arbre de cettedernière sont également fixés deux pignons,
 l'un a de 20 dents, l'autre a, de 18. Le pignon de iS engrène avec une grande roue A, 
 de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
-Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage
+Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, 
+
+64
+
+
+que lui imprime la main de l'observateur par l'intermédiaire du rouage
 satellite.
 
 L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
@@ -239,7 +292,15 @@ Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateu
 Le second problème qu'avait à résoudre le constructeur du sidérostat était plus ardu que le premier : il sagissait de produire, à l'aide d'une manette immobile, un mouvement de rappel du cercle de déclinaison, à l'extrémité d'un axe mobile, sans altérer le mouvement de cet axe. L. Foucault avait seulement indiqué le problème, et en avait fait entrevoir la solution à l'aide d'un rouage satellit mais sans donner de vive voix ou laisser dans ses papiers aucune description da système qu'il prétendait appliquer. 
 Voici l'élégante construction à l'aide de laquelle M. Eichens a atteint le but proposé.
 
-L'axe polaire **XX'** {Pl. I, fig. 1) est enveloppé, sur la portion de sa longueur qui semble nue sur la figure, d'un manchon en bronze qui traverse le collet inférieur du support, et là, au moyen de deux rôuea d'angle **rr**, commande un pignon dont la denture engrene avec celle qu'on a taillée sur tout le pourtour du cercle de déclinaison. Si le manchon tourne avec l'axe polaire, ces roues restent en repos  elatif et immobilisent le cercle par rapport à l'axe. Si le manchon prend une avance ou un retard sur le mouvement de l'axe, les roues déplacent d'une quantité proportionnelle la denture du cercle, et par conséquent la direction de la fourchette. Il faut donc établir entre le manchon et l'axe polaire une solidarité telle que le mouvement horaire les entraîne tous deux avec la même vitesse, mais que l'on puisse néanmoins faire tourner ce manchon isolément sans altérer le mouvement de l'axe. Un rouage satellite identique à celui que je viens de décrire va suffire à obtenir ce double effet.
+L'axe polaire **XX'** {Pl. I, fig. 1) est enveloppé, sur la portion de sa longueur qui semble nue sur la figure, d'un manchon en bronze qui traverse le collet inférieur du support, et là, au moyen de deux rôuea d'angle **rr**, commande un pignon dont la denture engrene avec celle 
+
+
+65
+
+
+qu'on a taillée sur tout le pourtour du cercle de déclinaison. Si le manchon tourne avec l'axe polaire, ces roues restent en repos  elatif et immobilisent le cercle par rapport à l'axe. Si le manchon prend une avance ou un retard sur le mouvement de l'axe, les roues déplacent d'une quantité proportionnelle la denture du cercle, et par conséquent la direction de la fourchette. Il faut donc établir entre le manchon et l'axe polaire une solidarité telle que le mouvement horaire les entraîne tous deux avec la même vitesse, mais que l'on puisse neanmoins faire tourner ce manchon isolément sans altérer le mouvement de l'axe. Un rouage satellite identique à celui que je viens de décrire va suffire à obtenir ce double effet.
+
+....
 
 ----------
 
