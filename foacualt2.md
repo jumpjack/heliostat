@@ -40,10 +40,18 @@ P. 57
 
 Lo specchio (Fig. 2, Tav. 1) è sostenuto da un asse orizzontale **xx** fissato alla sommità di due montanti verticali **N** *\[erroneamente indicati con "M" nel testo originale, ma M è lo specchio\]*, attaccati in basso ad una piattaforma **P** che può ruotare attorno ad un centro. Questo movimento è facilitato da una corona di ruote **G** nascoste sotto la piattaforma, e che conferiscono una perfetta mobilità, senza alterare la regolarità del piano descritto dalla pedana, essendo la sua superficie inferiore e la corrispondente faccia della base accuratamente levigata.
 *A volte sarà necessario riparare lo specchio al contrario. I collegamenti della coda direttrice con l'asse polare non darebbero sufficiente stabilità; si ottiene fissando la pedana alla base mediante un morsetto non rappresentato nell'incisione.* (? Forse un sistema di bloccaggio in caso di trasporto?)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/3dbce0eb-bf87-4762-8ce5-367afbc0d354)
+
+
 Lo specchio è tenuto nel suo barilotto (fig. 3, Tav. 1) da tre ramponi esterni **t** e da una molla a tre rami che lo preme contro di essi senza deformarlo. La condizione di perpendicolarità della coda di guida alla superficie riflettente è così assicurata da un'esatta lappatura della corona della canna.
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/beccdaf3-bd42-4ae2-874b-0cb11c736edd)
+
+
 La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. 
-L'asse XX in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo g che è tutt'uno con esso e che funge da supporto per il cerchio di declinazione dd. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
+
+L'asse **XX** in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo **g** che è tutt'uno con esso e che funge da supporto per il cerchio di declinazione **dd**. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
 
 --------
 
