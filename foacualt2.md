@@ -100,7 +100,10 @@ P.60
 
 monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
 
-L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. I, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e465a564-f263-48c9-a12b-ceb884a06646)
+
+
+L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
 
 L'asse dell'orologio non ha movimenti di rettifica diversi da quelli che l'intera base può accogliere utilizzando le sue viti di livellamento. L'artista ne ha adattato l'inclinazione alla latitudine del luogo, prendendo come piano orizzontale il piano su cui rotola la piattaforma.
 
