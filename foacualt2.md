@@ -188,7 +188,9 @@ P. 64
 
 impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi satelliti.
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
+![fig.4 ](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
+
+![fig.4 colorata](https://github.com/jumpjack/heliostat/assets/1620953/46cc437e-1251-41ce-899a-173f71ac50a0)
 
 
 Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare. Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
