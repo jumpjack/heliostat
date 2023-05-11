@@ -126,20 +126,22 @@ Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena
 
 Se tutte queste condizioni sono soddisfatte, basta portare nell'asse di questo telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, portando sotto l'indice del cerchio orario la scala corrispondente all'angolo orario, sotto l'indice del cerchio di declinazione la scala corrispondente alla distanza polare, e fissando i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
 
-Il ruotismo **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti di ghiaccio proprio alla base dello strumento. Riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega,
-può trovare posto qui Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
-Qui, come in un equatoriale, è necessario disporre di mezzi di ritorno, variare piccole quantità o l'angolo 
+Il regolatre **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti trasparenti proprio alla base dello strumento. \[Esso\] riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega, può trovare posto qui. 
+Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
+
+Qui, come in un equatoriale, è necessario disporre di metodi  di regolazione, variare piccole quantità o l'angolo 
 
 ------
 
 P. 62
-orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un treno satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
-Sull'albero XX' {fig. 3), che riceve il movimento del rotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
+orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un ruotismo satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
+Sull'albero XX' (fig. 3), che riceve il movimento del rotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9b013f42-1162-4e23-bdf4-42d2e1bc349c)
 
-**A** e **C**, sono pazzi sull'albero, mentre il terzo B è tutt'uno con lui. A riceve direttamente il movimento del rotismo e lo trasmette a B tramite i due pignoni satelliti **b** e **c**, fissati allo stesso albero **YY'** che attraversa uno dei bracci del la ruota **A**, ed è quindi trascinato nel movimento rotatorio di quest'ultima. In questo movimento il pignone **c** rotola sviluppandosi sulla ruota **C** che supponiamo ferma; il pignone **b** gira quindi allo stesso modo e comunica il movimento alla ruota **B**, che trascina l'albero. Il senso e la velocità di rotazione di questo albero dipendono dai rapporti stabiliti tra le circonferenze primitive e quindi tra i numeri di denti dei quattro mobili B, C, b e c.
+**A** e **C**, sono svincolate dall'albero, mentre la terza **B** è solidale con esso.
 
+\[La ruota\] **A** riceve direttamente il movimento del rotismo e lo trasmette a **B** tramite i due pignoni satelliti **b** e **c**, fissati allo stesso albero **YY'** che attraversa uno dei bracci del la ruota **A**, ed è quindi trascinato nel movimento rotatorio di quest'ultima. In questo movimento il pignone **c** rotola intorno alla ruota **C**, che supponiamo ferma; il pignone **b** gira quindi allo stesso modo e comunica il movimento alla ruota **B**, che trascina l'albero. Il senso e la velocità di rotazione di questo albero dipendono dai rapporti stabiliti tra le circonferenze primitive e quindi tra i numeri di denti dei quattro mobili **B**, **C**, **b** e **c**.
 
 Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote dentate, 
 
