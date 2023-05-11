@@ -126,7 +126,7 @@ Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena
 
 Se tutte queste condizioni sono soddisfatte, basta portare nell'asse di questo telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, portando sotto l'indice del cerchio orario la scala corrispondente all'angolo orario, sotto l'indice del cerchio di declinazione la scala corrispondente alla distanza polare, e fissando i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
 
-Il regolatre **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti trasparenti proprio alla base dello strumento. \[Esso\] riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega, può trovare posto qui. 
+Il regolatore **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti trasparenti proprio alla base dello strumento. \[Esso\] riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega, può trovare posto qui. 
 Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
 
 Qui, come in un equatoriale, è necessario disporre di metodi  di regolazione, variare piccole quantità o l'angolo 
@@ -158,6 +158,13 @@ Le due velocità hanno lo stesso verso se **B/b** è maggiore di **C/c**, questo
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/71e6df08-acde-4d8c-bb96-13e0dcf2f28a)
 
 relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
+
+\[dimostrazione:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/5f455120-cc61-4f9d-b982-6364fac54c93)
+
+
+\]
 
 Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il treno satellite
 riceverà un aumento o una diminuzione della velocità che, senza
