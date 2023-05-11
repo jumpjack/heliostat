@@ -90,13 +90,15 @@ Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di decl
 
 Ne consegue che il canotto deve poter non solo girare attorno a questa coda, ma anche scorrere lungo la sua lunghezza, compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella.
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/96e8c0cd-3b52-4227-a1dc-c52c4eaffa7e)
+
 Il cerchio di declinazione è graduato in terzi di grado, e l'alidada **e** 
 
 -------
 
 P.60 
 
-porta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
+monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
 
 L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. I, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
 
