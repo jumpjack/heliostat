@@ -67,7 +67,12 @@ L'articolazione della forcella e dell'asta di guida è realizzata mediante un ma
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/02f81ad6-0d67-43b8-8320-75fa42229c4b)
 
 
-È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
+È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. 
+
+![sovrapposizione schema/disegno](https://github.com/jumpjack/heliostat/assets/1620953/8ab63057-0469-4274-af28-373751b0dcdf)
+
+
+L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
 Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, bilanciata allo stato puro rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza la quale non segue alcun cambiamento nella direzione matematica dei raggi.
 Solo l'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di regia, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed 
 
