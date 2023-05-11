@@ -46,7 +46,8 @@ Lo specchio (Fig. 2, Tav. 1) è sostenuto da un asse orizzontale **xx** fissato 
 
 Lo specchio è tenuto nel suo barilotto (fig. 3, Tav. 1) da tre ramponi esterni **t** e da una molla a tre rami che lo preme contro di essi senza deformarlo. La condizione di perpendicolarità della coda di guida alla superficie riflettente è così assicurata da un'esatta lappatura della corona della canna.
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/beccdaf3-bd42-4ae2-874b-0cb11c736edd)
+![fig 1 tav 1](https://github.com/jumpjack/heliostat/assets/1620953/ffb31482-72ee-4f32-8c2c-0dd702f01d26)
+
 
 
 La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. 
@@ -57,8 +58,14 @@ L'asse **XX** in acciaio è prolungato al di sotto del cuscinetto inferiore da u
 
 P. 58
 
+![fig 1 in testo](https://github.com/jumpjack/heliostat/assets/1620953/20422ab4-9a20-4ef5-a073-c006783f954e)
+
+
 L'estensione matematica dell'asse orario e quella dell'asse del cerchio di declinazione si incontrano proprio sull'asse della coda della forcella. È da questo punto che si devono contare le due lunghezze uguali **OF** e **OM** (fig. 1). Il punto **M** è già definito dall'intersezione dei due assi, uno orizzontale, l'altro verticale, attorno ai quali lo specchio può oscillare. Resta da definire il punto **F** che delimita la lunghezza della forcella.
 L'articolazione della forcella e dell'asta di guida è realizzata mediante un manicotto cilindrico **m**, in cui l'asta passa liberamente senza sballottamenti, e che oscilla attorno ad un asse compreso tra i due denti della forcella.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/02f81ad6-0d67-43b8-8320-75fa42229c4b)
+
 
 È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
 Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, bilanciata allo stato puro rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza la quale non segue alcun cambiamento nella direzione matematica dei raggi.
