@@ -210,10 +210,25 @@ che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se 
 
 Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
 
+L'intero meccanismo è rappresentato in sezione verticale [fig. 4].
+In questa figura, come nella precedente, le linee tratteggiate indicano, attraverso la loro direzione, l'interconnessione o l'indipendenza delle parti in contatto: due parti vicine, dove le linee tratteggiate hanno la stessa direzione, sono collegate tra loro; sono indipendenti se le linee tratteggiate hanno direzioni opposte. Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**, e segue quindi il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. 
+
+Ma **il pignone** a ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare. Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza: B = 5b, C = 1/2 c, sarà ridotta di un decimo e di conseguenza il manicotto girerà nello stesso senso e alla stessa velocità dell'asse.  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
+
+La ruota **D**, che deve immobilizzare **C**, ingrana con la ruota **E**, montata su un albero parallelo a quello dei pignoni **a** e **a1**, e quest'albero può essere messo in movimento mediante una leva lunga, ruote ad angolo e una barra verticale che si vedono nella fig. 1. 
+
+È questo movimento della leva, che, tramite la trasmissione ad ingranaggi satelliti, si trasferisce fino al manicotto, e fa variare la direzione della forcella e dello specchio senza alterare il movimento orario.
+
+Questo movimento di ritorno è abbastanza rapido perché possa essere utilizzato
+
 
 ------
 
 P. 66
+
+
+per il posizionamento dell'strumento in declinazione. A tale scopo, la barra della leva è dotata di una manopola di legno che si trova alla portata dell'osservatore che legge la scala del cerchio di declinazione. Se si desidera operare molto rapidamente, è necessario disinnestare la ruota ad angolo laterale **r**, cosa che si fa allentando il pulsante che la tiene in posizione sul suo quadrato.
+
 
 ------
 
