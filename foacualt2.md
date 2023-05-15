@@ -173,14 +173,17 @@ non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B 
 - 1 Mantenere ferma la ruota C durante il movimento uniforme di A e dell'albero;
 - 2 Ccomunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
 
-È sempre possibile soddisfare la prima condizione, poiché smaltisce l'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare;
-giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. L'albero **XX'** {fig. 3), tramite ruote angolari e asta verticale,
-comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
+È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
+
+L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti che ingrana con un pignone **a1** a 18 denti coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
+
+*(letterale: ...
+L'albero **XX'** comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
 Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
 uno **a** con 20 denti, l'altro **a1** con 18. Il pignone 18 ingrana con una grande ruota **A1**
-di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza **P** lo rende solidale al cerchio orario **H**.
+di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza **P** lo rende solidale al cerchio orario **H**.)*
 
-Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene comunicato dal regolatore e da tutti quelli, additivi o sottrattivi, 
+L'asse polare **XX'** riceve quindi il movimento sia dal regolatore che da altri ruotismi, additivi o sottrattivi, 
 
 ------
 
@@ -193,15 +196,19 @@ impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi satellit
 ![fig.4 colorata](https://github.com/jumpjack/heliostat/assets/1620953/46cc437e-1251-41ce-899a-173f71ac50a0)
 
 
-Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento di ritorno del cerchio di declinazione, all'estremità di un asse mobile, senza alterare il movimento di questo asse. L. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare. Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
+Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento del cerchio di declinazione, posto all'estremità di un asse mobile, senza alterare il movimento di questo asse. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare. 
 
-L'asse polare **XX'** {Tavola 1, fig. 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **rr**, comanda un pignone la cui  dentatura ingrana con quella
+Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
+
+L'asse polare **XX'** (fig. 1, Tavola 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **r, r**, comanda un pignone la cui dentatura ingrana con quella
 
 ------
 
 P. 65
 
-che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
+che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. 
+
+Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
 
 
 ------
