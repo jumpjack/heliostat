@@ -175,7 +175,7 @@ non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B 
 
 È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
 
-L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti che ingrana con un pignone **a1** a 18 denti coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
+L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti, non vincolata all'asse, ma a cui può essere fissata tramite la pinza **P**; questa ruota **A1** si ingrana  con un pignone **a1** a 18 denti, coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
 
 *(letterale: ...
 L'albero **XX'** comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
