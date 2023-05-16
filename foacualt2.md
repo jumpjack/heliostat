@@ -134,6 +134,7 @@ Qui, come in un equatoriale, è necessario disporre di metodi  di regolazione, v
 ------
 
 P. 62
+
 orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un ruotismo satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
 Sull'albero XX' (fig. 3), che riceve il movimento del rotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
 
@@ -166,30 +167,24 @@ relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
 
 \]
 
-Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il treno satellite
-riceverà un aumento o una diminuzione della velocità che, senza
-non influenzano in alcun modo la velocità di A, saranno trasmessi alla ruota B e all'albero XX'. Questa ruota angolare ha quindi una duplice funzione:
+Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il ruotismo satellite \[(i pignoni b e c)\] riceverà un aumento o una diminuzione della velocità che, senza  influenzare in alcun modo la velocità di A, saranno trasmessi alla ruota **B** e all'albero **XX'**. 
 
-- 1 Mantenere ferma la ruota C durante il movimento uniforme di A e dell'albero;
-- 2 Ccomunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
+Questa ruota angolare ha quindi una duplice funzione:
 
-È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo D, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
+- 1 Mantenere ferma la ruota **C** durante il movimento uniforme di **A** e dell'albero;
+- 2 Comunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
 
-L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti, non vincolata all'asse, ma a cui può essere fissata tramite la pinza **P**; questa ruota **A1** si ingrana  con un pignone **a1** a 18 denti, coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
+È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo **D**, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
+
+L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti, non vincolata all'asse,  con cui però diventa solidale quando la pinza **P** la rende solidale col cerchio orario **H**; questa ruota **A1** si ingrana  con un pignone **a1** a 18 denti, coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
 
 *(letterale: ...
-L'albero **XX'** comunica il suo movimento ad una vite tangente che ingrana con la ruota **K** {fig. 4).
-Sull'albero di quest'ultimo sono inoltre fissati due pignoni,
-uno **a** con 20 denti, l'altro **a1** con 18. Il pignone 18 ingrana con una grande ruota **A1**
-di 200 denti, che ruota liberamente sull'asse ma che diventa un tutt'uno con esso quando la pinza **P** lo rende solidale al cerchio orario **H**.)*
+L'albero **XX'** (fig. 3), tramite ruote angolari e un'asta verticale, trasmette il suo movimento a una vite tangente che si ingrana con la ruota **K** (fig. 4). Sull'albero di quest'ultima sono anche fissate due ruote dentate, una con 20 denti e l'altra con 18. La ruota dentata da 20 denti ingrana con una grande ruota A, con 200 denti, che ruota liberamente sull'asse, ma si blocca ad esso quando la pinza P la collega al cerchio orario **H**. Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene trasmesso dal regolatore e a tutti quelli, sia aggiuntivi che sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite il sistema di ingranaggi satellite. )*
 
-L'asse polare **XX'** riceve quindi il movimento sia dal regolatore che da altri ruotismi, additivi o sottrattivi, 
 
 ------
 
 P. 64
-
-impartitigli dalla mano dell'osservatore tramite la serie di ingranaggi satelliti.
 
 ![fig.4 ](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
 
