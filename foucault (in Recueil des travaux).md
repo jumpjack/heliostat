@@ -32,18 +32,22 @@ facilitata dall'interposizione di tre rulli G che rotolano tra la base e la pias
 
 All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale FF sostenuta da tre colonne 0 e sulla quale è fissato il telaio che regge l'asse polare.
 
-![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/30158680-0780-4f12-b9d0-5a454ea2dbbf)
+
+![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
 
 Fig.3, Planche 15  (Figura 3, tavola 15)
 
-![Figura 4, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/36dc3826-697d-401b-a16c-f841e57639f0)
+
+
+![Figura 4, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/27f8c283-8fef-4c5e-98b8-d3f226671821)
 
 Fig. 4, Planche 15 (Figura 4, Tavola 15)
 
 
-![Figura 5, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/6957d66a-eeb3-499b-933a-d94e67297480)
+![(Figura 5, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/b618ffa2-6341-48b5-8d5a-8d858666ddfc)
 
 Fig.5, Planche 15 (Figura 5, Tavola 15)
+
 
 Lo specchio **M** ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fuso a Saint Gobain e lavorato dal signor Ad. Martin; è fissato nel barilotto **Q** tramite tre sporgenze esterne **t** contro le quali si appoggia una molla a tre bracci **h**. Lo specchio è sostenuto dall'asse orizzontale xx sulla cima della colonna **N**: la coda direttiva è saldamente fissata nella parte inferiore di questo barilotto ed è costituita da un tubo cavo.
 L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne **TT**; quest'asse si prolunga con una parte in bronzo **g** che fa corpo con esso e che serve da supporto per il cerchio di declinazione **dd**, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti **j**, la coda **l** della forcella direttiva in alluminio **f**, che guiderà il bastoncino direttivo dello specchio **S**. La connessione tra queste due parti avviene tramite il manicotto **m**, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti conservati alle sue estremità.
