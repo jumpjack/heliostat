@@ -93,9 +93,9 @@ Inoltre, era necessario produrre, mediante una leva immobile, un movimento di ri
 Fig. 1, Planche 14  (Figura 1, Tavola 14)
 
 
-![(Figura 5, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/b618ffa2-6341-48b5-8d5a-8d858666ddfc)
+![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
 
-Fig.5, Planche 15 (Figura 5, Tavola 15)
+Fig.3, Planche 15  (Figura 3, tavola 15)
 
 nella vista in sezione di fig. 3, tav. 15, le parti che sono solidali sono indicate da tratteggi diretti nello stesso senso e quelle che sono indipendenti presentano tratteggi in senso contrario. Non insisteremo  sul funzionamento di questo dispositivo che soddisfa le condizioni imposte e ci limiteremo a indicare i dati numerici che consentono di rendersi conto degli effetti che produce.
 
