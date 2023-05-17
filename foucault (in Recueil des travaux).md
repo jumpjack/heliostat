@@ -32,8 +32,21 @@ facilitata dall'interposizione di tre rulli G che rotolano tra la base e la pias
 
 All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale FF sostenuta da tre colonne 0 e sulla quale è fissato il telaio che regge l'asse polare.
 
-Lo specchio M ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fuso a Saint Gobain e lavorato dal signor Ad. Martin; è fissato nel barilotto Q tramite tre sporgenze esterne t contro le quali si appoggia una molla a tre bracci h. Lo specchio è sostenuto dall'asse orizzontale xx sulla cima della colonna N: la coda direttiva è saldamente fissata nella parte inferiore di questo barilotto ed è costituita da un tubo cavo.
-L'asse orario XX', in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne TT; quest'asse si prolunga con una parte in bronzo g che fa corpo con esso e che serve da supporto per il cerchio di declinazione dd, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti j, la coda I della forcella direttiva in alluminio f, che guiderà il bastoncino direttivo dello specchio S. La connessione tra queste due parti avviene tramite il manicotto m, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti conservati alle sue estremità.
+![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/30158680-0780-4f12-b9d0-5a454ea2dbbf)
+
+Fig.3, Planche 15  (Figura 3, tavola 15)
+
+![Figura 4, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/36dc3826-697d-401b-a16c-f841e57639f0)
+
+Fig. 4, Planche 15 (Figura 4, Tavola 15)
+
+
+![Figura 5, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/6957d66a-eeb3-499b-933a-d94e67297480)
+
+Fig.5, Planche 15 (Figura 5, Tavola 15)
+
+Lo specchio **M** ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fuso a Saint Gobain e lavorato dal signor Ad. Martin; è fissato nel barilotto **Q** tramite tre sporgenze esterne **t** contro le quali si appoggia una molla a tre bracci **h**. Lo specchio è sostenuto dall'asse orizzontale xx sulla cima della colonna **N**: la coda direttiva è saldamente fissata nella parte inferiore di questo barilotto ed è costituita da un tubo cavo.
+L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne **TT**; quest'asse si prolunga con una parte in bronzo **g** che fa corpo con esso e che serve da supporto per il cerchio di declinazione **dd**, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti **j**, la coda **l** della forcella direttiva in alluminio **f**, che guiderà il bastoncino direttivo dello specchio **S**. La connessione tra queste due parti avviene tramite il manicotto **m**, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti conservati alle sue estremità.
 
 Il cerchio di declinazione è diviso in terzi di grado e ha un nonio e che indica i minuti. Nella parte superiore, l'asse orario porta un cerchio HH diviso in 24 ore, attorno al quale ruota un cerchio con alidada VV sul quale sono presenti due noni che indicano i 2 secondi di tempo; questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio I che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere On Om 0 ' con il cerchio orario quando la riflessione avviene nel piano del meridiano. Il movimento del motore R viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota K: sull'albero di quest'ultima è montata una ruota a con 18 denti, che ingrana con una ruota A a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario H utilizzando la morsetto P: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
 Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti.
