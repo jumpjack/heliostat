@@ -1,3 +1,9 @@
+https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat
+
+p.580
+
+## SIDEROSTATO (Tavole 14 e 15)
+
 L'idea che aveva portato L. Foucault a costruire il siderostato è stata precedentemente menzionata (pagina 432) e 
 non c'è motivo di ripeterla; dobbiamo solo limitarci a fornire alcuni dettagli sull'apparecchio come è stato costruito da
 M. Eichens e descritto da M. C. Wolf nelle Annales scientifiques de l'École normale supérieure.
@@ -10,6 +16,7 @@ asse orizzontale intorno al quale ruota lo specchio, è inclinata di 10° al di 
 consentire l'osservazione degli astri molto vicini all'orizzonte sud, sopra il telescopio che deve essere collegato al siderostato.
 L'apparecchio presenta, indipendentemente dal suo supporto, tre elementi essenziali: lo specchio e il suo telaio,
 l'arco polare e il meccanismo che collega questo asse allo specchio, infine il motore e il regolatore.
+
 Le tavole 14 e 15 rappresentano l'apparecchio e i vari dettagli ad esso collegati, come segue:
 
 - Tav. 14
@@ -23,14 +30,20 @@ Le tavole 14 e 15 rappresentano l'apparecchio e i vari dettagli ad esso collegat
     - fig. 4, vista frontale della forcella direttiva; 
     - fig. 5, vista dall'alto del cerchio di declinazione e della trasmissione del movimento; 
     - fig. 6, piano generale del supporto del siderostato.
+    
 In queste diverse figure, le stesse lettere si riferiscono agli stessi oggetti.
 
-L'apparecchio si appoggia su una base in ghisa sostenuta da tre viti livellatrici U, L'I", con due livelle rettangolari 
+L'apparecchio si appoggia su una base in ghisa sostenuta da tre viti livellatrici **U, U', U"**, con due livelle rettangolari 
 e un movimento di regolazione in azimut, il rullo su cui si appoggia una delle viti è provvisto di una guida mobile 
-tramite una vite con testa. N N è un supporto mobile in ghisa attorno a un asse verticale, la cui rotazione è 
-facilitata dall'interposizione di tre rulli G che rotolano tra la base e la piastra P.
+tramite una vite con testa. **N N** è un supporto mobile in ghisa attorno a un asse verticale, la cui rotazione è 
+facilitata 
 
-All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale FF sostenuta da tre colonne 0 e sulla quale è fissato il telaio che regge l'asse polare.
+--------------
+p. 581
+
+dall'interposizione di tre rulli **G** che rotolano tra la base e la piastra **P**.
+
+All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale **FF** sostenuta da tre colonne **O** e sulla quale è fissato il telaio che regge l'asse polare.
 
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
@@ -57,6 +70,10 @@ Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti.
 Il meccanismo R che trasmette il movimento all'asse è posto all'interno di una gabbia con pareti di vetro nel piede stesso dell'apparecchio: viene messo in movimento da un peso che scende in un pozzo attraverso un foro praticato nella colonna di pietra su cui poggia il siderostato; il movimento viene reso uniforme grazie a un regolatore alette e contrappesi di L. Foucault (pagina 505), che era stato precedentemente utilizzato da M. Eichens su vari strumenti equatoriali e che fornisce un movimento estremamente regolare.
 Abbiamo già accennato in precedenza a come il movimento di questo meccanismo viene trasmesso all'asse orario.
 
+-----------
+
+p. 582
+
 ![Figura 1, Tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/e2d23598-971b-43e5-bdb0-e442070a76d5)
 
 Fig. 1, Planche 14  (Figura 1, Tavola 14)
@@ -79,6 +96,9 @@ e
 C = 1/2 c.
 
 La ruota C è solidale con D che riceve il suo movimento dalla ruota E (fig. 1, tav. 14) che, tramite ingranaggi angolari e alberi di varie direzioni, è mosso dall'osservatore utilizzando la leva u. Il movimento trasmesso dal sistema satellite alla ruota B aziona un manicotto in bronzo che circonda l'asse XX' e termina con la ruota angolare r; lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare r, il pignone i e il dentato h che è inciso sul bordo del cerchio.
+
+--- fine -----
+
 
 -----------
 
