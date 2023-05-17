@@ -4,6 +4,11 @@ p.580
 
 ## SIDEROSTATO (Tavole 14 e 15)
 
+![tav. 14](https://github.com/jumpjack/heliostat/assets/1620953/b5ad90ad-3268-43d3-a4de-1eef143a11dc)
+
+![tav. 15](https://github.com/jumpjack/heliostat/assets/1620953/00530650-8b34-46bb-a8c7-af6ec1c74a19)
+
+
 L'idea che aveva portato L. Foucault a costruire il siderostato è stata precedentemente menzionata (pagina 432) e 
 non c'è motivo di ripeterla; dobbiamo solo limitarci a fornire alcuni dettagli sull'apparecchio come è stato costruito da
 M. Eichens e descritto da M. C. Wolf nelle Annales scientifiques de l'École normale supérieure.
