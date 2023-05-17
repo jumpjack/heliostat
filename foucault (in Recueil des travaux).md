@@ -130,7 +130,12 @@ Il movimento trasmesso dal sistema satellite alla ruota **B** aziona un manicott
 
 Fig.1, Planche 14 (Figura 1, Tavola 14, dettaglio a destra)
 
-lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare **r**, il pignone **i** e la dentatura **h** che è incisa sul bordo del cerchio.
+lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare **r'**, il pignone **i** e la dentatura **h** che è incisa sul bordo del cerchio (vedi anche fig. 4, tavola 15).
+
+
+![Figura 4, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/27f8c283-8fef-4c5e-98b8-d3f226671821)
+
+Fig. 4, Planche 15 (Figura 4, Tavola 15)
 
 --- fine -----
 
