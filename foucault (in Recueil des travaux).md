@@ -112,11 +112,14 @@ e
 
 **C = 1/2 c**
 
-![Figura 1, Tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/e2d23598-971b-43e5-bdb0-e442070a76d5)
+![Figura 1, Tavola 14, dettaglio in alt](https://github.com/jumpjack/heliostat/assets/1620953/16261684-3f49-484c-bd30-b9fd71c4bf48)
 
-Fig. 1, Planche 14  (Figura 1, Tavola 14)
 
-La ruota **C** è solidale con **D** che riceve il suo movimento dalla ruota **E** (fig. 1, tav. 14) che, tramite ingranaggi angolari e alberi di varie direzioni, è mosso dall'osservatore utilizzando la leva **u**. Il movimento trasmesso dal sistema satellite alla ruota **B** aziona un manicotto in bronzo che circonda l'asse **XX'** e termina con la ruota angolare **r**; lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare **r**, il pignone **i** e la dentatura **h** che è incisa sul bordo del cerchio.
+Fig. 1, Planche 14  (Figura 1, Tavola 14, dettaglio in alto)
+
+La ruota **C** è solidale con **D** che riceve il suo movimento dalla ruota **E** (fig. 1, tav. 14, in alto) che, tramite ingranaggi angolari e alberi di varie direzioni, è mosso dall'osservatore utilizzando la leva **u**. 
+
+Il movimento trasmesso dal sistema satellite alla ruota **B** aziona un manicotto in bronzo che circonda l'asse **XX'** e termina con la ruota angolare **r**; lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare **r**, il pignone **i** e la dentatura **h** che è incisa sul bordo del cerchio.
 
 --- fine -----
 
