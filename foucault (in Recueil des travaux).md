@@ -1,4 +1,7 @@
-https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat
+
+[Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat)
+
+----------
 
 p.580
 
