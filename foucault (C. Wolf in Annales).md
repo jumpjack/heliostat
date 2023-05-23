@@ -186,12 +186,11 @@ Questa ruota angolare ha quindi una duplice funzione:
 
 È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo **D**, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
 
-![immagine](https://github.com/jumpjack/heliostat/assets/1620953/3e0bd893-fb00-4a35-8201-25771d7c9458)
-
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/1638f4ea-edc3-4a79-a45f-7759daf5fede)
 
 L'albero **XX'**  *\[inferiore\]* di fig. 3, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una a 20 denti e l'altra a  18; quella a 20 denti ingrana con una a 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quandi si blocca la pinza **P**; da questo momento in poi, l'asse **XX'** *\[superiore\]* obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a tutti quelli, aggiuntivi o sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite i sistemi di ingranaggi satellite *\[uno posto accanto al regolatore, e uno nella parte superiore dello strumento\].*
 
-*(letterale: ...
+*(3e: ...
 L'albero **XX'**  (fig. 3) , tramite ruote angolari e un'asta verticale, trasmette il suo movimento a una vite tangente che si ingrana con la ruota **K** (fig. 4). Sull'albero di quest'ultima sono anche fissate due ruote dentate, una con 20 denti e l'altra con 18. La ruota dentata da 20 denti ingrana con una grande ruota A, con 200 denti, che ruota liberamente sull'asse, ma si blocca ad esso quando la pinza P la collega al cerchio orario **H**. Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene trasmesso dal regolatore e a tutti quelli, sia aggiuntivi che sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite il sistema di ingranaggi satellite. )*
 
 
