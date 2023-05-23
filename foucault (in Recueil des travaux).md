@@ -75,7 +75,7 @@ L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a 
 
 Il cerchio di declinazione è diviso in terzi di grado e ha un nonio e che indica i minuti. Nella parte superiore, l'asse orario porta un cerchio HH diviso in 24 ore, attorno al quale ruota un cerchio con alidada VV sul quale sono presenti due noni che indicano i 2 secondi di tempo; questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio I che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
 
-Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a_1** con 18 denti, che ingrana con una ruota **A_1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
+Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a1** con 18 denti, che ingrana con una ruota **A1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
 
 Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti.
 
@@ -107,7 +107,7 @@ Fig.3, Planche 15  (Figura 3, tavola 15)
 
 nella vista in sezione di fig. 3, tav. 15, le parti che sono solidali sono indicate da tratteggi diretti nello stesso senso e quelle che sono indipendenti presentano tratteggi in senso contrario. Non insisteremo  sul funzionamento di questo dispositivo che soddisfa le condizioni imposte e ci limiteremo a indicare i dati numerici che consentono di rendersi conto degli effetti che produce.
 
-- a, pignone di 18 denti;
+- a, pignone di 18 denti; \[**NOTA: nella pagina precedente viene detto che è a1 ad avere 18 denti!**\]
 - a1, pignone, montato sullo stesso albero, 20 denti;
 - A1, ruota di 200 denti;
 - A, ruota di 200 denti.
