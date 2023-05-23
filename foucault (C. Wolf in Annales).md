@@ -170,7 +170,7 @@ relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
 *\[Risulterà:*
 - *v = 0.9 V*
 
-*Cioè l'asse XX' di uscita avrà una velocità pari a 0.9 volte quella del regolatore. Tramite la ruota **n**, a sua volta pilotata dall'esterno tramite l'asse **q** (fig.1 della tavola I degli "Annales"), sarà possibile aggiungere/sottrrarre all'asse la velocità desiderata.*
+*Cioè l'asse XX' di uscita avrà una velocità pari a 0.9 volte quella del regolatore. Tramite la ruota **n**, a sua volta pilotata dall'esterno tramite l'asse **q** (fig.1 della tavola I degli "Annales"), sarà possibile aggiungere/sottrrarre all'asse la velocità desiderata, rendendo così possibile regolare l'**angolo orario**.*
 
 ![immagine](https://github.com/jumpjack/heliostat/assets/1620953/69b5e958-de38-4c00-8637-1fd6cd874bd3)
 
@@ -182,14 +182,17 @@ Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A ess
 Questa ruota angolare ha quindi una duplice funzione:
 
 - 1 Mantenere ferma la ruota **C** durante il movimento uniforme di **A** e dell'albero;
-- 2 Comunicargli la velocità additiva o sottrattiva che riceve dall'esterno.
+- 2 Comunicargli la velocità additiva o sottrattiva che riceve dall'esterno. *\[= regolare l' angolo orario\]*
 
 È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo **D**, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
 
-L'albero **XX'** (fig. 3), è messo in movimento da  una grande ruota **A1** a 200 denti, non vincolata all'asse,  con cui però diventa solidale quando la pinza **P** la rende solidale col cerchio orario **H**; questa ruota **A1** si ingrana  con un pignone **a1** a 18 denti, coassiale a un altro pignone **a** a 20 denti e a una ruota **K** (fig. 4),  che a sua volta riceve il movimento da una vite senza fine azionata manualmente tramite una ruota angolare e un'asta verticale.
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/f7201386-f4ae-4618-92fd-b15b793fa307)
+
+
+L'albero **XX'**  *\[inferiore\]* di fig. 3, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una a 20 denti e l'altra a  18; quella a 20 denti ingrana con una a 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quandi si blocca la pinza **P**; da questo momento in poi, l'asse **XX'** *\[superiore\]* obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a tutti quelli, aggiuntivi o sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite i sistemi di ingranaggi satellite *\[uno posto accanto al regolatore, e uno nella parte superiore dello strumento\].*
 
 *(letterale: ...
-L'albero **XX'** (fig. 3), tramite ruote angolari e un'asta verticale, trasmette il suo movimento a una vite tangente che si ingrana con la ruota **K** (fig. 4). Sull'albero di quest'ultima sono anche fissate due ruote dentate, una con 20 denti e l'altra con 18. La ruota dentata da 20 denti ingrana con una grande ruota A, con 200 denti, che ruota liberamente sull'asse, ma si blocca ad esso quando la pinza P la collega al cerchio orario **H**. Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene trasmesso dal regolatore e a tutti quelli, sia aggiuntivi che sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite il sistema di ingranaggi satellite. )*
+L'albero **XX'**  (fig. 3) , tramite ruote angolari e un'asta verticale, trasmette il suo movimento a una vite tangente che si ingrana con la ruota **K** (fig. 4). Sull'albero di quest'ultima sono anche fissate due ruote dentate, una con 20 denti e l'altra con 18. La ruota dentata da 20 denti ingrana con una grande ruota A, con 200 denti, che ruota liberamente sull'asse, ma si blocca ad esso quando la pinza P la collega al cerchio orario **H**. Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene trasmesso dal regolatore e a tutti quelli, sia aggiuntivi che sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite il sistema di ingranaggi satellite. )*
 
 
 ------
