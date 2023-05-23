@@ -167,14 +167,15 @@ relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
 
 \]
 
-*\[Risulterà quindi:*
-- *V = 0.10 Vclock*
-- *v = 0.9 V = 0.09 * Vclock*
-- *V1 = 0.09 * Vclock*
+*\[Risulterà:*
+- *v = 0.9 V*
 
-*Cioè, in assenza di input aggiuntivi esterni tramite la ruota E che incide su D e quindi su C, la ruota r ha la tessa velocità (v) dell'asse XX' (V1), quindi è come se fossero solidali.*
+*Cioè l'asse XX' di uscita avrà una velocità pari a 0.9 volte quella del regolatore. Tramite la ruota **n**, a sua volta pilotata dall'esterno tramite l'asse **q** (fig.1 della tavola I degli "Annales"), sarà possibile aggiungere/sottrrarre all'asse la velocità desiderata.*
 
-\]*
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/69b5e958-de38-4c00-8637-1fd6cd874bd3)
+
+
+*\]*
 
 Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il ruotismo satellite \[(i pignoni b e c)\] riceverà un aumento o una diminuzione della velocità che, senza  influenzare in alcun modo la velocità di A, saranno trasmessi alla ruota **B** e all'albero **XX'**. 
 
@@ -220,6 +221,17 @@ In questa figura, come nella precedente, le linee tratteggiate indicano, attrave
 Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**,  segue il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. Ma il pignone **a** ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare. Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza (B = 5b, C = 1/2 c), sarà ridotta di un decimo e di conseguenza il manicotto girerà nello stesso senso e alla stessa velocità dell'asse.  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
 
 \[Quindi: Va = Va1 + 1/10 Va , ma V_asse = Va1 - 1/10 Va1 \]
+
+
+*\[Risulterà quindi:*
+- *V = 0.10 Vclock*
+- *v = 0.9 V = 0.09 * Vclock*
+- *V1 = 0.09 * Vclock*
+
+*Cioè, in assenza di input aggiuntivi esterni tramite la ruota E che incide su D e quindi su C, la ruota r ha la tessa velocità (v) dell'asse XX' (V1), quindi è come se fossero solidali.*
+
+\*]*
+
 
 La ruota **D**, che deve immobilizzare **C**, ingrana con la ruota **E**, montata su un albero parallelo a quello dei pignoni **a** e **a1**, e quest'albero può essere messo in movimento mediante una leva lunga, ruote ad angolo e una barra verticale che si vedono nella fig. 1. 
 
