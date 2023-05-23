@@ -142,7 +142,7 @@ Sull'albero XX' (fig. 3), che riceve il movimento del rotismo per trasmetterlo a
 
 **A** e **C**, sono svincolate dall'albero, mentre la terza **B** è solidale con esso.
 
-\[La ruota\] **A** riceve direttamente il movimento del rotismo e lo trasmette a **B** tramite i due pignoni satelliti **b** e **c**, fissati allo stesso albero **YY'** che attraversa uno dei bracci del la ruota **A**, ed è quindi trascinato nel movimento rotatorio di quest'ultima. In questo movimento il pignone **c** rotola intorno alla ruota **C**, che supponiamo ferma; il pignone **b** gira quindi allo stesso modo e comunica il movimento alla ruota **B**, che trascina l'albero. Il senso e la velocità di rotazione di questo albero dipendono dai rapporti stabiliti tra le circonferenze primitive e quindi tra i numeri di denti dei quattro mobili **B**, **C**, **b** e **c**.
+\[La ruota\] **A** riceve direttamente il movimento del regolatore **R** e lo trasmette a **B** tramite i due pignoni satelliti **b** e **c**, fissati allo stesso albero **YY'** che attraversa uno dei bracci della ruota **A**, ed è quindi trascinato nel movimento rotatorio di quest'ultima. In questo movimento il pignone **c** ruota intorno alla ruota **C**, che supponiamo ferma; il pignone **b** gira quindi allo stesso modo e comunica il movimento alla ruota **B**, che trascina l'albero. Il senso e la velocità di rotazione di questo albero dipendono dai rapporti stabiliti tra le circonferenze primitive e quindi tra i numeri di denti dei quattro mobili **B**, **C**, **b** e **c**.
 
 Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote dentate, 
 
@@ -166,6 +166,15 @@ relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
 
 
 \]
+
+*\[Risulterà quindi:*
+- *V = 0.10 Vclock*
+- *v = 0.9 V = 0.09 * Vclock*
+- *V1 = 0.09 * Vclock*
+
+*Cioè, in assenza di input aggiuntivi esterni tramite la ruota E che incide su D e quindi su C, la ruota r ha la tessa velocità (v) dell'asse XX' (V1), quindi è come se fossero solidali.*
+
+\]*
 
 Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il ruotismo satellite \[(i pignoni b e c)\] riceverà un aumento o una diminuzione della velocità che, senza  influenzare in alcun modo la velocità di A, saranno trasmessi alla ruota **B** e all'albero **XX'**. 
 
