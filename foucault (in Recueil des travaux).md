@@ -96,14 +96,14 @@ Questo risultato è stato ottenuto mediante l'uso di un meccanismo satellite **n
 
 Inoltre, era necessario produrre, mediante una leva immobile, un movimento di rientro del cerchio di declinazione posto all'estremità di un arco mobile, senza alterare il movimento di quest'asse. L. Foucault aveva indicato che la soluzione doveva essere cercata nell'uso di un meccanismo satellite, ma non aveva fornito né spiegato il sistema che intendeva applicare. La disposizione ideata e applicata dal signor Eichens è indicata nella figura 1, tavola 14, e nella figura 3, tavola 15: 
 
-![Figura 1, Tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/e2d23598-971b-43e5-bdb0-e442070a76d5)
-
-Fig. 1, Planche 14  (Figura 1, Tavola 14)
-
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
 
 Fig.3, Planche 15  (Figura 3, tavola 15)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/dad494bd-fb8a-4649-8af7-f4c59bff6a5c)
+
+Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori)
 
 nella vista in sezione di fig. 3, tav. 15, le parti che sono solidali sono indicate da tratteggi diretti nello stesso senso e quelle che sono indipendenti presentano tratteggi in senso contrario. Non insisteremo  sul funzionamento di questo dispositivo che soddisfa le condizioni imposte e ci limiteremo a indicare i dati numerici che consentono di rendersi conto degli effetti che produce.
 
