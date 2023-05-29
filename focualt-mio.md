@@ -25,11 +25,20 @@ La figura 3 della tavola 15 della "Recueil" (prime due figure) rappresenta il me
 
 La figura 3 all'interno del testo degli "Annales", invece (successive 2 figure) rappresenta la variante di meccanismo usata per **introdurre una variazione positiva o negativa della rotazione oraria** senza però influenzare il movimento orario di base.
 
-Entrambi i meccanismi si basano però sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione è inserito nella ruota **A** e si muove con essa, come meglio illustrato in questa ricostruzione 3d:
+# Impieghi del ruotismo satelllite
+
+Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione è inserito nella ruota **A** e si muove con essa, ma sono leggermente diversi:
+
+- un primo meccanismo, più semplice, prende il movimento principale solo dalla ruota A, azionata da un "regolatore isocrono di precisione" (un orologio), a cui aggiunge/toglie una certa velocità rotazionale tramite una ruota esterna controllata dall'utilizzatore
+- un secondo meccanismo, più complesso, aggiunge una ruota **A1**, coassiale alla ruota **A**, e un ruotino **a1**, coassiale al ruotino **a** che nell'altro meccanismo aziona la ruota **A**; queste due ruote aggiuntive **A1** e **a1**, unitamente a un differente tipo di fissaggio delle ruote all'asse **XX'**, permettono di far ruotare la ruota finale **B** alla stessa velocità dell'asse **XX'** in assenza di intervento dall'esterno, ma di muoverla all'occorrenza **temporaneamente** più avanti o più indietro, in modo che la semiruota di declinazione ad essa collegata, che ruota con l'asse **XX'**, possa anche ruotare **perpendicolarmente** all'asse **XX'**, in modo da variare il puntamentro dello strumento (variazione della declinazione).
+
+## Ruotismo 1 - variazione oraria
+
+Vediamo meglio il meccanismo in questa moderna ricostruzione 3d:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/5a76caf5-48b1-4ec5-b0ca-1cfac2de1976)
 
-Qui la colorazione ha una logica differente:
+Qui la colorazione ha una logica differente rispetto a prima:
 
 - Il colore giallo raggruppa gli ingranaggi che trasmettono il movimento orario principale.
 - Il colore celeste raggruppa quelli che permettono di aggiungere/togliere una componente rotazionale a quella di base.
@@ -69,7 +78,7 @@ quindi:
 
 **Condizione 2**
 
-Per avere esattamente: $v_B = \frac{9}{10}V_A$  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+**Per avere esattamente $v_B = \frac{9}{10}V_A$**  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
 
 dovrà essere:
 
@@ -105,7 +114,35 @@ Quindi abbiamo complessivamente queste 3 condizioni:
 
 Le ho elencate in ordine diverso rispetto a quello in cui le ho prima mostrate perchè la (5) può forse essere modificata, a condizione di modificare anche quella su A-a-A1-a1, per eventualmente provare a ridurre le dimensioni delle ruote a 200 denti, che rendono il meccanismo un po' ingombrante.
 
+Secondo i miei calcoli, tutte queste condizioni sono soddisfatte, **ad esempio**, per questi valori:
+- b = 1
+- B = 5
+- c = 4
+- C = 2
 
+Infatti:
+
+La (3) diventa:
+
+$\Large{\frac{5}{1} > \frac{2}{4}}$
+
+$\Large{5>\frac{1}{2}}$
+
+La (9) diventa:
+
+$1 + 5 = 4 + 2$
+
+$6 = 6$
+
+E la 5 diventa:
+
+$\Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\$ 
+
+$\Large5 - \frac{1}{2} = \frac{9}{10}5\$ 
+
+$5-0.5=\frac{45}{10}$ 
+
+$4.5=4.5$
 
 
 
