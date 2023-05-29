@@ -57,11 +57,24 @@ dove:
 
 Sulla quantità al numeratore possiamo porre due condizioni:
 
-- $\frac{B}{b} - \frac{C}{c}>0$  per avere verso di $v_B$ uguale a quello di $V_A$, da cui:
+**Condizione 1**
 
-2:  $\Large{\frac{B}{b}>\frac{C}{c}}$;
+Per avere **verso di $v_B$ uguale a quello di $V_A$** il numeratore dovrà essere maggiore di 0:
 
-- $\Large{\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}}$ per avere esattamente $v_B = \frac{9}{10}V_A$ ( per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+2: $\frac{B}{b} - \frac{C}{c}>0$ 
+
+quindi:
+
+3: $\Large{\frac{B}{b}>\frac{C}{c}}$;
+
+**Condizione 2**
+
+Per avere esattamente: $v_B = \frac{9}{10}V_A$  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+
+dovrà essere:
+
+4: $\Large\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10}\$ 
+
 
 Formule originali:
 
