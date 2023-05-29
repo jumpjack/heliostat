@@ -157,17 +157,17 @@ Le prime due sono indispensabili; sulla (5) si può lavorare; bisogna tenere pre
 
 $v_B = \frac{9}{10}V_A$
 
-Questo però solo perchè $V_A$ ha velocità pari a:
+Questo però solo perchè **A** ha velocità pari a:
 
-10: $V_A=0.1V_C$
+10: $V_A=0.10V_C$
 
 dove $V_C$ è la velocità dell'orologio (Clock), e quindi:
 
-11: $v_B = \frac{9}{10}V_A=0.9V_A=0.9 * 0.1V_C$
+11: $v_B = \frac{9}{10}V_A=0.9V_A=0.9 * 0.1V_C=0.09 V_C$
 
 ma la (10) è dovuta a come è strutturato il secondo meccanismo, dotato della coppia aggiuntiva a1-A1, oltre ad a-A; per questo meccanismo valgono infatti le relazioni:
 
-12: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.1A$ 
+12: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.10$ 
 
 e
 
@@ -177,7 +177,18 @@ Essendo la ruota A1 solidale con l'asse XX', la velocità di A1 è anche la velo
 
 14: $V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C$
 
-mentre:
+e:
 
 15: $V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C$
+
+Quindi la (13) fa sì che  $V_{A_1}=V_{XX'}=0.09V_C$ (14), mentre la (12) fa sì che  $v_B=0.09 V_C$ (11):
+
+- (13) =>  (14)
+- (12) => (11)
+
+
+cioè:
+
+- $\frac{a1}{A1} = 0.09$  => $V_{A_1} = V_{XX'} = 0.09V_C$
+- $\frac{a}{A} = 0.10$    => $v_B     = 0.09 V_C$
 
