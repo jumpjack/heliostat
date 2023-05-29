@@ -59,6 +59,10 @@ da cui:
 
 1a: $\Large{{v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}}$
 
+che può essere espressa anche come:
+
+1b: $\Large{v_B=\frac{Bc-Cb}{Bc}V_A}$
+
 dove:
 
 - $\Large{{v_B}}$ = velocità di B
@@ -191,4 +195,51 @@ cioè:
 
 - $\frac{a1}{A1} = 0.09$  => $V_{A_1} = V_{XX'} = 0.09V_C$
 - $\frac{a}{A} = 0.10$    => $v_B     = 0.09 V_C$
+
+
+Ma proviamo a generalizzare: riprendiamo la 1b:
+
+1b: $\Large{v_B=\frac{Bc-Cb}{Bc}V_A}$
+
+La possiamo anche riscrivere come:
+
+16: $\Large{v_B=\frac{Bc-Cb}{Bc}\frac{a}{A}V_C}$
+
+Mentre la velocità di B e dell'asse XX' è:
+
+17: $V_{XX'} = \frac{a_1}{A1}V_C$
+
+Questo significa che, affinchè le due velocità siano uguali, è necessario che:
+
+18: $\Large{\frac{Bc-Cb}{Bc}\frac{a}{A} = \frac{a_1}{A_1}}$
+
+Proviamo a rendere le cose più semplici rispettando l'ipotesi A=A1: possiamo allora semplificare a:
+
+19: $\Large{\frac{Bc-Cb}{Bc}a = a_1}$
+
+cioè
+
+20: $\Large{\frac{a_1}{a}=\frac{Bc-Cb}{Bc}}$
+
+Questo vorrebbe dire che dovrebbe essere possibile rendere uguali $v_B$ e $V_{XX'}$ a prescindere dalle dimensioni di $A$ e $A_1$, purchè sia rispettata la (20).
+
+Per i succitati valori:
+
+- b = 1
+- B = 5
+- c = 4
+- C = 2
+
+e:
+
+- a1 = 18
+- a = 20
+
+
+La (20) diventa:
+
+21: $\Large{\frac{a1}{a}=\frac{5 * 4 - 2 * 1}{5 * 4} = \frac{18}{20}}$
+
+che è quanto riportato nei testi originali di Foucault.
+
 
