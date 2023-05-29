@@ -274,6 +274,7 @@ Quindi alla fine le condizioni  sarebbero:
 
 - 3b: $\Large{b < \frac{cB}{C}}$
 - 23: $A > b+B$
+- 9: $b + B = c + C$
 - 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
 
 C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
