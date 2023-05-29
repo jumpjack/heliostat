@@ -161,19 +161,23 @@ Questo però solo perchè $V_A$ ha velocità pari a:
 
 10: $V_A=0.1V_C$
 
-dove $V_C$ è la velocità dell'orologio (Clock); ciko è dovuto a come è strutturato il secondo meccanismo, dotato della coppia aggiuntiva a1-A1, oltre ad a-A; per questo meccanismo valgono le relazioni:
+dove $V_C$ è la velocità dell'orologio (Clock), e quindi:
 
-11: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.1A$ 
+11: $v_B = \frac{9}{10}V_A=0.9V_A=0.9 * 0.1V_C$
+
+ma la (10) è dovuta a come è strutturato il secondo meccanismo, dotato della coppia aggiuntiva a1-A1, oltre ad a-A; per questo meccanismo valgono infatti le relazioni:
+
+12: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.1A$ 
 
 e
 
-12: $\frac{a1}{A1}=\frac{18}{200}=\frac{9}{100}=0.09$ 
+13: $\frac{a1}{A1}=\frac{18}{200}=\frac{9}{100}=0.09$ 
 
 Essendo la ruota A1 solidale con l'asse XX', la velocità di A1 è anche la velocità dell'asse XX', e risulterà pari a:
 
-$V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C$
+14: $V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C$
 
 mentre:
 
-$V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C$
+15: $V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C$
 
