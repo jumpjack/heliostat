@@ -75,6 +75,19 @@ dovrà essere:
 
 4: $\Large\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10}\$ 
 
+Cioè:
+
+5:  $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+
+da cui:
+
+6: $\frac{b}{B}\frac{C}{c}=\frac{1}{10}$
+
+Relazione che è soddisfatta, ad esempio, prendendo:
+
+7: $B=5b$
+
+8: $C=\frac{1}{2}c$
 
 Formule originali:
 
@@ -82,6 +95,17 @@ Formule originali:
 
 Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c e C** soddisfino un'ulteriore condizione, affinchè **b** e **c** siano coassiali, formando così un unico meccanismo satellite:
 
-- b + B = c + C
+9: b + B = c + C
+
+Quindi abbiamo complessivamente queste 3 condizioni:
+
+- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
+- 9: $b + B = c + C$
+- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+
+Le ho elencate in ordine diverso rispetto a quello in cui le ho prima mostrate perchè la (5) può forse essere modificata, a condizione di modificare anche quella su A-a-A1-a1, per eventualmente provare a ridurre le dimensioni delle ruote a 200 denti, che rendono il meccanismo un po' ingombrante.
+
+
+
 
 
