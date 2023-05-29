@@ -205,7 +205,7 @@ La possiamo anche riscrivere come:
 
 16: $\Large{v_B=\frac{Bc-Cb}{Bc}\frac{a}{A}V_C}$
 
-Mentre la velocità di B e dell'asse XX' è:
+Mentre la velocità dell'asse XX' è:
 
 17: $V_{XX'} = \frac{a_1}{A1}V_C$
 
@@ -242,4 +242,38 @@ La (20) diventa:
 
 che è quanto riportato nei testi originali di Foucault.
 
+Quindi complessivamente le condizioni necessarie dovrebbero essere:
 
+- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
+- 9: $b + B = c + C$
+- 20: $\Large{\frac{a_1}{a} = \frac{Bc-Cb}{Bc}}$
+
+Sviluppiamo la (3):
+
+3a: $\Large{b < \frac{B}{\frac{C}{c}}}$
+
+3b: $\Large{b < \frac{cB}{C}}$
+
+Sviluppiamo la (9):
+
+9a: $b  = c + C - B$
+
+e mettiamola la (9a) nella (20), tenendo conto anche della 3b:
+
+- 3b: $\Large{b < \frac{cB}{C}}$
+- 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
+
+Queste dovrebbero essere le uniche condizioni da rispettare, a prescindere dalle dimensioni di A e A1.
+
+C'è però da considerare che il satellite deve essere attaccato alla ruota A, quindi sicuramente il suo asse YY' dovrà distare dall'asse XX' meno del raggio di A; ma la distanza di YY' da XX' è data dalla somma di b+B o la somma di c+C (che sono uguali), quindi un'altra condizione è:
+
+23: b+B < A
+
+
+Quindi alla fine le condizioni  sarebbero:
+
+- 3b: $\Large{b < \frac{cB}{C}}$
+- 23: $A > b+B$
+- 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
+
+C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
