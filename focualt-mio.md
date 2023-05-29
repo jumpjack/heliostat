@@ -44,28 +44,29 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
 
-$v(\frac{B}{b} - \frac{C}{c}) = v\frac{B}{b}$
+1:  $\Large{{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}}$
 
-- v = velocità di B
-- V = velocità di A
+da cui:
 
-Le due velocità **v** e **V** risultano avere lo stesso verso se **B/b** > **C/c**. 
+1a: $\Large{{v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}}$
+
+dove:
+
+- $\Large{{v_B}}$ = velocità di B
+- $\Large{{V_A}}$ = velocità di A
+
+Le due velocità **v** e **V** risultano avere lo stesso verso se:
+
+2:  $\Large{\frac{B}{b}>\frac{C}{c}}$
 
 Inoltre, Foucault studiò i rapporti tra le ruote in modo tale che **v**, oltre ad avere lo stesso verso di **V**, sia anche esattamente pari a 9/10 di essa, per motivi che vedemo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA); cioè è vero se:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/71e6df08-acde-4d8c-bb96-13e0dcf2f28a)
 
-$\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}=>\frac{b}{B}\frac{C}{c}=\frac{1}{10}$
+$\Large{\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}=>\frac{b}{B}\frac{C}{c}=\frac{1}{10}}$
 
 Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c e C** soddisfino un'ulteriore condizione, affinchè **b** e **c** siano coassiali, formando così un unico meccanismo satellite:
 
 - b + B = c + C
-
-$$
-A_1
-$$
-
-$A_2$
-
 
 
