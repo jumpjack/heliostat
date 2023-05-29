@@ -145,4 +145,35 @@ $5-0.5=\frac{45}{10}$
 $4.5=4.5$
 
 
+# Cambiare i valori suggeriti da Foucault
+
+Di queste 3 condizioni:
+
+- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
+- 9: $b + B = c + C$
+- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+
+Le prime due sono indispensabili; sulla (5) si può lavorare; bisogna tenere presente che la (5) è dettata dalla necessità che la ruota finale B abbia velocità pari a 9/10 della velocità di A:
+
+$v_B = \frac{9}{10}V_A$
+
+Questo però solo perchè $V_A$ ha velocità pari a:
+
+10: $V_A=0.1V_C$
+
+dove $V_C$ è la velocità dell'orologio (Clock); ciko è dovuto a come è strutturato il secondo meccanismo, dotato della coppia aggiuntiva a1-A1, oltre ad a-A; per questo meccanismo valgono le relazioni:
+
+11: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.1A$ 
+
+e
+
+12: $\frac{a1}{A1}=\frac{18}{200}=\frac{9}{100}=0.09$ 
+
+Essendo la ruota A1 solidale con l'asse XX', la velocità di A1 è anche la velocità dell'asse XX', e risulterà pari a:
+
+$V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C$
+
+mentre:
+
+$V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C$
 
