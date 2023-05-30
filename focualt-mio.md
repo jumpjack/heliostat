@@ -278,3 +278,17 @@ Quindi alla fine le condizioni  sarebbero:
 - 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
 
 C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
+
+# Ruotismo 2 - Variazione della declinazione
+
+L'altro meccanismo in cui è inserito il ruotismo satellite è quello superiore del siderostato di Foucault, quello che si occupa, principalmente, di far eseguire una rotazione ogni 24 ore all'asse dello strumento:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/15e7c1ef-8b89-4bb8-93ab-88fa6191b9e3)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/528a677c-1614-4ef5-9ec7-bf859abe4b62)
+
+Schematicamente:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/82dbec2b-d6e5-4dea-91a9-2659c5c7a8aa)
+
+
