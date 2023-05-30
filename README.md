@@ -213,7 +213,7 @@ Literatur:
 
 
 
-## Commercial products (not yet on sale)
-- Heliosfera - https://heliostat.pl/it/di-progetto  (Poland)
-- Caia - https://www.solenica.com  (Italy)
-- 
+## Commercial products 
+- Heliosfera - https://heliostat.pl/it/di-progetto  (Poland) (not yet on sale)
+- Caia - https://www.solenica.com  (Italy) (not yet on sale)
+- Heliostat on https://www.heliostaat.nl/products.html (just mechanics+electronics, no mirror: 539$)
