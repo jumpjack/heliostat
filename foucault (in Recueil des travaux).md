@@ -89,6 +89,7 @@ M. Foucault, come si sa, fece costruire da M. Duboscq nel 1863 un nuovo eliostat
 La disposizione abituale degli strumenti astronomici, come i cannocchiali o i telescopi, non permette di adattarvi facilmente gli strumenti necessari allo studio delle proprietà della luce delle stelle (fotometria, fotografia, polarizzazione, spettroscopia). Inoltre, l'instabilità dei telescopi equatoriali diventa molto significativa quando vi si adattano strumenti spesso pesanti ed eccentrici che disturbano l'equilibrio.
 
 Il siderostato ha lo scopo di evitare questi inconvenienti e consentire all'astronomo di osservare la luce delle stelle esattamente come il fisico 
+
 *(1) Estratto da una nota letta all'Accademia delle scienze da M. H. Sainte-Claire Deville il 2 marzo 1868, Comptes rendus de l'Acad. des Sc, t. LXVI, p. 387. Non è stato possibile trovare alcuna nota di L. Foucault relativa a questo strumento.*
 
 *(2) Sembra che da molto tempo L. Foucault si interessasse a questa idea, poiché tra le carte che ha lasciato ci sono vari schizzi datati novembre 1861 e intitolati "Sidérostat".*
@@ -114,7 +115,13 @@ Poiché tale progetto non fu messo in atto, il signor Foucault decise di costrui
 
 P. 434:
 
+La astronomia fisica in Francia non può disporre di strumenti altrettanto perfetti di quelli posseduti dagli stranieri. Con il siderostato, il nostro paese avrebbe immediatamente guadagnato un vantaggio: questa era l'opinione del signor Foucault, e tale opinione ha determinato la risoluzione che non ha potuto realizzare.
 
+Una delle applicazioni più interessanti del siderostato era quella che il signor Foucault voleva fare per lo studio continuo del Sole. In una delle sale più frequentate di un osservatorio, desiderava installare un dispositivo che proiettasse su uno schermo quadrettato un'immagine fissa e ingrandita del Sole. L'apparizione e la forma delle macchie solari, il passaggio di un asteroide sul disco solare sarebbero stati oggetto di uno studio continuo, effettuato senza pericolo per gli occhi, da tutte le persone che attraversavano continuamente quella sala a causa delle loro occupazioni.
+
+Nella fotografia del Sole, il signor Foucault voleva utilizzare, insieme al siderostato, un obiettivo di lunga focale cromatica per i raggi chimici. Un secondo specchio quasi normale al fascio rifratto avrebbe ricevuto i raggi a una distanza pari alla metà della sua lunghezza focale e avrebbe riflessato l'immagine formandola sulla parete anteriore della camera oscura, accanto all'obiettivo stesso. L'osservatore si sarebbe così trovato a portata dell'immagine e dello specchio mobile, nonostante la grande distanza focale dell'obiettivo.
+
+Si può vedere quanto lo studio del siderostato sia stato spinto dal nostro collega fino ai suoi ultimi dettagli, e quanto sia deplorevole che questo dispositivo non sia stato realizzato nella camera oscura di rue d'Assas.
 
 ----------
 
