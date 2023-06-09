@@ -58,7 +58,11 @@ La colonna V (tav. 13) che sostiene lo specchio,
 
 Tavola 13
 
-anziché essere montata su guida sull'alidade che la trasporta attorno al centro, è fissata direttamente su quest'ultima. Il meccanismo originale era stato concepito per consentire di variare l'inclinazione del raggio riflesso; è stato possibile eliminarlo poiché, nella pratica, questa inclinazione è sempre molto piccola. Lo spazio reso libero è stato quindi utilizzato per ospitare il semicerchio dentato D, sul quale ingranano il pignone P che serve a spostare lo specchio e a dirigere il raggio riflesso a destra e a sinistra rispetto al piano del meridiano.
+anziché essere montata su guida sull'alidade 
+
+P.431:
+
+che la trasporta attorno al centro, è fissata direttamente su quest'ultima. Il meccanismo originale era stato concepito per consentire di variare l'inclinazione del raggio riflesso; è stato possibile eliminarlo poiché, nella pratica, questa inclinazione è sempre molto piccola. Lo spazio reso libero è stato quindi utilizzato per ospitare il semicerchio dentato D, sul quale ingranano il pignone P che serve a spostare lo specchio e a dirigere il raggio riflesso a destra e a sinistra rispetto al piano del meridiano.
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/c0b1119a-0727-4160-86fc-4a6949ba3b2e)
 
@@ -76,7 +80,44 @@ Va infine aggiunto che il grande specchio poggia su tre ruote equidistanti GG, m
 
 *(1) L'idea di utilizzare questa molla ausiliaria fu suggerita a L. Foucault da M. Duboscq, l'abile costruttore che aveva già realizzato con estrema cura il primo modello di eliostato.*
 
+P. 432:
+
+# SIDEROSTATO
+
+M. Foucault, come si sa, fece costruire da M. Duboscq nel 1863 un nuovo eliostato in grado di avere dimensioni considerevoli. Quello che non si sa è che, migliorando ulteriormente le condizioni di stabilità di quell'apparecchio, applicò la sua idea alla costruzione di un dispositivo astronomico, il siderostato (1). Per descriverlo sommariamente, ho fatto affidamento sui miei ricordi, sui ricordi di alcuni amici di M. Foucault e infine sul magnifico modello in legno realizzato a spese del nostro collega e conservato da M. Eichens, l'abile e scrupoloso artista che gli ha fornito un prezioso aiuto in molte occasioni.
+
+La disposizione abituale degli strumenti astronomici, come i cannocchiali o i telescopi, non permette di adattarvi facilmente gli strumenti necessari allo studio delle proprietà della luce delle stelle (fotometria, fotografia, polarizzazione, spettroscopia). Inoltre, l'instabilità dei telescopi equatoriali diventa molto significativa quando vi si adattano strumenti spesso pesanti ed eccentrici che disturbano l'equilibrio.
+
+Il siderostato ha lo scopo di evitare questi inconvenienti e consentire all'astronomo di osservare la luce delle stelle esattamente come il fisico 
+*(1) Estratto da una nota letta all'Accademia delle scienze da M. H. Sainte-Claire Deville il 2 marzo 1868, Comptes rendus de l'Acad. des Sc, t. LXVI, p. 387. Non è stato possibile trovare alcuna nota di L. Foucault relativa a questo strumento.*
+
+*(2) Sembra che da molto tempo L. Foucault si interessasse a questa idea, poiché tra le carte che ha lasciato ci sono vari schizzi datati novembre 1861 e intitolati "Sidérostat".*
+
+P.433:
+
+studia la luce del sole nella camera oscura, utilizzando strumenti che si trovano nei laboratori di fisica, senza doverne modificare né la forma né la disposizione.
+
+Il siderostato è essenzialmente composto da:
+
+- 1) Uno specchio piano argentato, mosso da un orologio, in modo da riflettere in una direzione orizzontale costante i raggi dell'astro che si desidera osservare.
+
+- 2) Un dispositivo a obiettivo fisso, riflettente o rifrattore, che concentra questi raggi in un punto focale (1). Questo punto focale si trova all'apertura di una camera oscura che può essere riscaldata, e all'interno della quale l'astronomo può effettuare comodamente tutte le esperienze e le misurazioni desiderate, senza affaticamento né disagio. Le manopole gli consentono di agire sullo specchio e di cambiare a piacimento la sua direzione.
+
+Se lo specchio piano rimane immobile, questo dispositivo può essere utilizzato come un equatoriale per le misure delle posizioni relative degli astri. È anche lo strumento vero e proprio per la costruzione delle carte celesti, e il signor Wolf si è attrezzato per adattarvi un dispositivo mediante il quale l'astronomo potrebbe ottenere immediatamente la riproduzione delle costellazioni celesti.
+
+Il signor Foucault aveva coinvolto il signor Wolf nella concezione di un progetto di siderostato da realizzare presso l'Osservatorio. Si era riservato lo specchio e il suo movimento, mentre il signor Wolf aveva progettato il telescopio orizzontale e la camera oscura.
+
+Poiché tale progetto non fu messo in atto, il signor Foucault decise di costruire il primo siderostato presso la sua residenza. Utilizzò il secondo piano della casa in rue d'Assas (di proprietà di sua madre) e lo trasformò in una camera oscura con relative attrezzature. Un modello di specchio fu realizzato per lui dal signor Eichens, con tutte le disposizioni necessarie per modificare l'angolo orario e la declinazione. Purtroppo, il nostro sfortunato collega fu colpito il giorno stesso in cui si conclusero questi preparativi.
+
+(1) La stabilità dell'obiettivo presenta il notevole vantaggio di eliminare qualsiasi influenza delle flessioni dello specchio o delle lenti, flessioni impossibili da evitare completamente quando questi vetri devono assumere diverse posizioni nello spazio. È vero che rimane la flessione dello specchio piano, ma non vi è alcun limite allo spessore dello specchio, poiché è sostenuto da assi estremamente corti.
+
+
+P. 434:
+
+
+
 ----------
+
 P.579:
 
 Il grande modello di eliostato rappresentato nella tavola 13 differisce abbastanza poco dal modello descritto in precedenza (pagina 427) da rendere superflua una descrizione dettagliata, bastando fornire una spiegazione sommaria delle figure.
