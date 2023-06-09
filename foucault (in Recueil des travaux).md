@@ -1,6 +1,23 @@
 
 [Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat)
 
+P. 427
+# Descrizione dell'eliostato
+
+## Primo modello
+
+P. 429:
+
+Dalla combinazione dei due movimenti prodotti dalla ruota dentata e dal dado, risulta che il punto della colonna situato all'altezza dell'incastro **L'** della biella si muove su una zona sferica centrata sul punto dell'asse **A** corrispondente all'altra estremità L di questa biella. Poiché questi due punti **LL'** sono obbligati a mantenere rispettivamente con i punti **C** e **C'** distanze uguali e costanti, il sistema di questi quattro punti forma un parallelogramma che obbliga anche il punto **C'** a muoversi su una zona sferica centrata su C; in altre parole, qualunque sia la posizione data alla colonna, il punto **C'** è obbligato a mantenere, rispetto al punto **C**, una distanza uguale a **LL'**.
+
+*Teoria e utilizzo del nuovo eliostato.*
+
+La teoria di questo nuovo strumento è quasi identica a quella del telescopio solare di S'Gravesande: l'asse motore **X** è posizionato nel meridiano del luogo, si posiziona il cerchio che porta l'ago motore alla declinazione del giorno e poi lo si porta nel piano orizzontale attualmente occupato dal sole; con queste condizioni soddisfatte, l'ago motore punta dritto al sole e continua a seguirlo durante tutta la giornata. Questo ago rappresenta quindi in ogni istante la direzione variabile dei raggi incidenti. Una parte di questi raggi cade sullo specchio; si tratta di dimostrare che attraverso la loro riflessione, questi raggi non smetteranno di seguire la direzione della retta fissa **CC'**.
+
+Infatti, per costruzione, la lunghezza **CN** dell'ago è uguale a **CC'**; al contrario, **CN'** è variabile, ma il triangolo **CC'N** è sempre isoscele e compreso nel piano di riflessione, e poiché il lato variabile **CN'** è formato dalla normale allo specchio, quest'ultimo occupa la posizione desiderata per riflettere il raggio successivo **CC'**; infatti, 1° è perpendicolare al piano di riflessione, e 2° la sua normale è parallela alla bisettrice dell'angolo formato dalle direzioni incrociate del raggio incidente e del raggio riflesso. Così si dimostra che, per tutta la durata della giornata, i raggi riflessi sul piano mobile dello specchio prenderanno la direzione fissa **CC'**.
+
+Ma lo strumento svolge anche un'altra funzione: oltre a posizionare il piano riflettente nell'incidenza desiderata, orienta lo specchio nello stesso piano in modo che, nelle posizioni oblique in cui solitamente si proietta, la riflessione che subisce riguardi esclusivamente la sua maggiore lunghezza. È per soddisfare questa condizione che lo specchio, che è più lungo che largo, è reso mobile nel piano del disco che lo supporta.
+
 ----------
 
 p.580
