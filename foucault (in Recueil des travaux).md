@@ -18,7 +18,7 @@ Per soddisfare questa condizione, si prende come centro di movimento
 
 ![FIG.24](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)
 
-[![FIG.24-thumb](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)](https://github.com/jumpjack/heliostat/blob/main/images/focault%20-%20primo%20tipo%20-%20disegno%20ok.png)
+([Hi-res](https://github.com/jumpjack/heliostat/blob/main/images/focault%20-%20primo%20tipo%20-%20disegno%20ok.png))
 
 
 un asse verticale A situato nella proiezione del punto C e fissato al centro di un cerchio dentato che costituisce la base dell'apparecchio. Su questo cerchio poggia, come una sorta di alidada, una larga striscia metallica che, grazie all'azione di una ruota dentata R, ruota attorno all'asse A, trainando la colonna V il cui piede, montato su una guida scorrevole, è collegato all'asse mediante una biella articolata LL'. L'asse della colonna è formato da un albero cilindrico di ferro, saldamente fissato alla piastra di base; nella sua parte inferiore, questo albero è filettato per ospitare un ampio dado scanalato, su cui poggia il piede della colonna cava che, grazie a questo meccanismo, si alza e si abbassa in un'ampia gamma di movimento.
