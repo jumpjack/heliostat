@@ -77,6 +77,38 @@ Va infine aggiunto che il grande specchio poggia su tre ruote equidistanti GG, m
 *(1) L'idea di utilizzare questa molla ausiliaria fu suggerita a L. Foucault da M. Duboscq, l'abile costruttore che aveva già realizzato con estrema cura il primo modello di eliostato.*
 
 ----------
+P.579:
+
+Il grande modello di eliostato rappresentato nella tavola 13 differisce abbastanza poco dal modello descritto in precedenza (pagina 427) da rendere superflua una descrizione dettagliata, bastando fornire una spiegazione sommaria delle figure.
+
+La figura 1 
+
+![FIG.1](https://github.com/jumpjack/heliostat/assets/1620953/5699d365-efa0-4138-a124-7c1f248fb3d0)
+
+
+rappresenta un'elevazione laterale dell'intero eliostato; la figura 3 
+
+![FIG.3](https://github.com/jumpjack/heliostat/assets/1620953/b3f5690e-8cda-4d7f-956d-d2a4db783f19)
+
+
+rappresenta la parte principale del piano. Lo specchio **M**, di cui si vede la semiproiezione (fig. 6),
+
+![FIG.6](https://github.com/jumpjack/heliostat/assets/1620953/046b1bf6-c0e8-4e8b-8f35-0875758de574)
+
+
+è posizionato sulla cima di una colonna **V** terminante in una forcella **S** nella sua parte superiore; poggia su un disco **Q** tramite tre rulli **G**: il disco **Q** è mobile attorno ai perni e il movimento gli viene trasmesso attraverso la barra normale **FF**. Un meccanismo motore contenuto nella struttura **B**, mediante un pignone e la ruota angolare **H**, fa ruotare l'asse **XX** che sostiene il cerchio di declinazione **AA**, al quale è collegata la barra **NN'**, che da un lato, tramite un manicotto, aziona la barra **FF** e, con la sua estremità opposta, scorrendo nella guida **E** (visibile nella figura 5 dall'alto), mantiene la grande dimensione dello specchio nel piano d'incidenza. Il cerchio di declinazione ruota intorno al punto **G** e può essere fissato nella posizione desiderata mediante la vite di bloccaggio **d**; nella figura 4 si può vedere l'altro lato di questo cerchio, distinguendo il foro circolare in **a**, la cui immagine deve coincidere con il reticolo **b** affinché l'apparecchio sia ben orientato.
+
+![FIG.4](https://github.com/jumpjack/heliostat/assets/1620953/6fa0c949-9e61-4a46-a786-d98609bd0039)
+
+
+La colonna **V** che sostiene lo specchio è sostenuta da una parte mobile che scorre su un arco metallico e ruota attorno all'asse verticale **I**: il movimento viene trasmesso a questo insieme tramite la ruota dentata **D** e il pignone **P**; una livella sferica a bolla **K** consente di verificare l'orizzontalità della base dell'eliostato.
+
+Le figure 2 e 2 bis 
+
+![FIG2, 2bis](https://github.com/jumpjack/heliostat/assets/1620953/f1526abd-237c-4df1-b369-206a7fa97093)
+
+
+mostrano, su grande scala, il dettaglio della colonna che funge da supporto: la barra centrale **T** è fissata in modo invariabile alla base; la forcella **S** è sostenuta da un manicotto **V** centrato su questa barra e può ruotare attorno al suo asse quando viene sollecitata dall'azione della barra normale **FF**. Questo manicotto poggia su un cilindro filettato **L** che si accoppia con la vite intagliata alla base della barra **T**, in modo tale che ruotando questo cilindro **L** in una direzione o nell'altra, si faccia salire o scendere di piccole quantità la forcella **S** e il centro dello specchio. Infine, nella parte superiore, si può vedere la molla tesa **R**, la cui azione, come spiegato nel memorandum, aiuta l'apparecchio a superare le situazioni difficili.
 
 p.580
 
