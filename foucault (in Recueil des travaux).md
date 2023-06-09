@@ -1,5 +1,8 @@
 
-[Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat)
+Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878
+
+- [Link 1](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up)
+- [Link 2](https://archive.org/details/recueildestrava01lissgoog/page/427/mode/1up)
 
 P. 427
 # Descrizione dell'eliostato (1)
@@ -10,7 +13,7 @@ Lo specchio M (fig. 24) di forma allungata si appoggia su una colonna verticale 
 
 La colonna V, che sostiene lo specchio, è in grado di ricevere due diversi movimenti: un movimento di traslazione e un movimento di abbassamento o sollevamento; tuttavia, qualunque sia la sua posizione, è necessario che il punto medio C' della retta che forma l'asse dei perni del disco si mantenga a una distanza invariabile dal punto C dell'asse orario situato al centro dell'arco di declinazione.
 
-1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.
+*1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.*
 
 P.428:
 
@@ -43,6 +46,25 @@ la riflessione che subisce riguardi esclusivamente la sua maggiore lunghezza. È
 Per facilitare il posizionamento dello strumento e per controllarne il funzionamento, ho mantenuto l'uso della pinnula fissata parallelamente all'ago motore. Tuttavia, anziché montare l'intero strumento su una piattaforma girevole che si riteneva necessaria per individuare il meridiano, ho deciso di farlo poggiare direttamente su viti di livellamento, combinate con una vite centrale su cui ruota durante il posizionamento e che, alzandosi, consente al dispositivo di riprendere la sua posizione normale.
 
 
+## SECONDO MODELLO -  ELIOSTATO DI GRANDI DIMENSIONI
+
+Questo modello è in generale conforme all'apparecchio descritto in precedenza; si differenzia solo, oltre alle grandi dimensioni dello specchio (0,80 m x 0,40 m), per i seguenti dettagli:
+
+La colonna V (tav. 13) che sostiene lo specchio, anziché essere montata su guida sull'alidade che la trasporta attorno al centro, è fissata direttamente su quest'ultima. Il meccanismo originale era stato concepito per consentire di variare l'inclinazione del raggio riflesso; è stato possibile eliminarlo poiché, nella pratica, questa inclinazione è sempre molto piccola. Lo spazio reso libero è stato quindi utilizzato per ospitare il semicerchio dentato D, sul quale ingranano il pignone P che serve a spostare lo specchio e a dirigere il raggio riflesso a destra e a sinistra rispetto al piano del meridiano.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/7fadca59-29e1-4d65-b748-66e2503266c3)
+
+([Versione ad alta risoluzione]())
+
+Tavola 13
+
+Il motore è stato adattato alle dimensioni dell'apparecchio e consiste in un ingranaggio a cinque ruote dentate regolate dal pendolo e dall'escapement del metronomo, che riceve il movimento da una molla d'acciaio che rappresenta una forza motrice di circa 6 chilogrammimetri. Questo ingranaggio funziona per sei ore ed è completamente contenuto all'interno della scatola B. Il movimento viene trasmesso da una ruota H tramite un pignone O, il cui limbo è suddiviso in ore e minuti.
+
+Indipendentemente dall'energia del motore e dalla perfezione di esecuzione, è facile riconoscere che ci sono posizioni in cui l'amplificazione del movimento crea enormi resistenze. Questa imperfezione che persisteva nel primo apparecchio è stata completamente eliminata mediante l'aggiunta di una molla a spirale R (fig. 2 pl. 13), fissata da un lato alla parte fissa della colonna e dall'altro alla parte mobile che sostiene lo specchio. Questa molla viene armata una volta per tutte in modo da agire sulle parti che spinge nella direzione del movimento celeste. Considerando gli spazi relativamente percorribili nelle diverse posizioni dell'apparecchio, si può facilmente constatare che questa molla, posizionata in questo modo, aiuta il meccanismo motore nelle precise circostanze in cui la forza potrebbe mancare. In questo modo, l'apparecchio funziona in modo adeguato in tutte le posizioni comuni (1).
+
+Va infine aggiunto che il grande specchio poggia su tre rotoli equidistanti GG, montati sul contorno del cerchio sottostante e che sono stati resi necessari dal peso dello specchio.
+
+(1) L'idea di utilizzare questa molla ausiliaria fu suggerita a L. Foucault da M. Duboscq, l'abile costruttore che aveva già realizzato con estrema cura il primo modello di eliostato.
 
 ----------
 
