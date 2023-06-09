@@ -2,9 +2,26 @@
 [Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up?q=siderostat)
 
 P. 427
-# Descrizione dell'eliostato
+# Descrizione dell'eliostato (1)
 
 ## Primo modello
+
+Lo specchio M (fig. 24) di forma allungata si appoggia su una colonna verticale V a forchetta attraverso un piatto circolare P su cui ruota con un leggero attrito intorno al loro centro comune. Questo disco P è sospeso da due perni alle estremità dei due bracci della forchetta e sulla sua parte posteriore porta un'asta normale C'N attraverso la quale viene comunicato il movimento. Un ingranaggio motore è contenuto nella scatola cilindrica B e fa muovere un asse orario XX' inclinato, secondo la latitudine del luogo, con un giro ogni ventiquattro ore. Questo asse, contenuto all'interno del tubo T, porta all'estremità superiore un centro su cui è montata una semicirconferenza D che comprende l'arco delle declinazioni solari. Il piano di quest'arco segue il movimento dell'asse con cui viene reso solidale mediante una vite di serraggio. Parallelamente al diametro di questa semicirconferenza si estende una barra d'acciaio, una sorta di ago motore, che si articola con una delle sue estremità N con l'asta normale e con l'altra estremità N' si inserisce in una guida fissata sul retro dello specchio in un piano che passa per i perni del disco. L'ago motore, l'asta normale e la guida dello specchio formano un triangolo rettangolo su cui si basa la teoria dello strumento.
+
+La colonna V, che sostiene lo specchio, è in grado di ricevere due diversi movimenti: un movimento di traslazione e un movimento di abbassamento o sollevamento; tuttavia, qualunque sia la sua posizione, è necessario che il punto medio C' della retta che forma l'asse dei perni del disco si mantenga a una distanza invariabile dal punto C dell'asse orario situato al centro dell'arco di declinazione.
+
+1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.
+
+P.428:
+
+Per soddisfare questa condizione, si prende come centro di movimento 
+
+![FIG.24](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)
+
+[![FIG.24-thumb](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)](https://github.com/jumpjack/heliostat/blob/main/images/focault%20-%20primo%20tipo%20-%20disegno%20ok.png)
+
+
+un asse verticale A situato nella proiezione del punto C e fissato al centro di un cerchio dentato che costituisce la base dell'apparecchio. Su questo cerchio poggia, come una sorta di alidada, una larga striscia metallica che, grazie all'azione di una ruota dentata R, ruota attorno all'asse A, trainando la colonna V il cui piede, montato su una guida scorrevole, è collegato all'asse mediante una biella articolata LL'. L'asse della colonna è formato da un albero cilindrico di ferro, saldamente fissato alla piastra di base; nella sua parte inferiore, questo albero è filettato per ospitare un ampio dado scanalato, su cui poggia il piede della colonna cava che, grazie a questo meccanismo, si alza e si abbassa in un'ampia gamma di movimento.
 
 P. 429:
 
@@ -16,7 +33,16 @@ La teoria di questo nuovo strumento è quasi identica a quella del telescopio so
 
 Infatti, per costruzione, la lunghezza **CN** dell'ago è uguale a **CC'**; al contrario, **CN'** è variabile, ma il triangolo **CC'N** è sempre isoscele e compreso nel piano di riflessione, e poiché il lato variabile **CN'** è formato dalla normale allo specchio, quest'ultimo occupa la posizione desiderata per riflettere il raggio successivo **CC'**; infatti, 1° è perpendicolare al piano di riflessione, e 2° la sua normale è parallela alla bisettrice dell'angolo formato dalle direzioni incrociate del raggio incidente e del raggio riflesso. Così si dimostra che, per tutta la durata della giornata, i raggi riflessi sul piano mobile dello specchio prenderanno la direzione fissa **CC'**.
 
-Ma lo strumento svolge anche un'altra funzione: oltre a posizionare il piano riflettente nell'incidenza desiderata, orienta lo specchio nello stesso piano in modo che, nelle posizioni oblique in cui solitamente si proietta, la riflessione che subisce riguardi esclusivamente la sua maggiore lunghezza. È per soddisfare questa condizione che lo specchio, che è più lungo che largo, è reso mobile nel piano del disco che lo supporta.
+Ma lo strumento svolge anche un'altra funzione: oltre a posizionare il piano riflettente nell'incidenza desiderata, orienta lo specchio nello stesso piano in modo che, nelle posizioni oblique in cui solitamente si proietta, 
+
+
+P.430:
+
+la riflessione che subisce riguardi esclusivamente la sua maggiore lunghezza. È per soddisfare questa condizione che lo specchio, che è più lungo che largo, è reso mobile nel piano del disco che lo supporta. È per soddisfare questa condizione che lo specchio, che è più lungo che largo, è stato reso mobile sul piano del disco che lo sostiene. Di conseguenza, estendendo l'ago motore oltre il punto C e inserendo la seconda estremità nella guida, parallela al grande diametro dello specchio, si è sicuri di mantenerlo orientato nella direzione desiderata. Quest'ultima caratteristica, combinata con la condizione di supportare lo specchio su un supporto verticale, costituisce l'innovazione e il vantaggio della nuova configurazione, in quanto consente di conferire allo specchio un peso e dimensioni considerevoli senza compromettere il funzionamento preciso del meccanismo che lo muove. Nessuno degli eliostati descritti in precedenza gode approssimativamente di questa combinazione di proprietà, pertanto ho ritenuto che unire tutte queste caratteristiche in un unico strumento avrebbe portato a un risultato nuovo e meritevole di nota.
+
+Per facilitare il posizionamento dello strumento e per controllarne il funzionamento, ho mantenuto l'uso della pinnula fissata parallelamente all'ago motore. Tuttavia, anziché montare l'intero strumento su una piattaforma girevole che si riteneva necessaria per individuare il meridiano, ho deciso di farlo poggiare direttamente su viti di livellamento, combinate con una vite centrale su cui ruota durante il posizionamento e che, alzandosi, consente al dispositivo di riprendere la sua posizione normale.
+
+
 
 ----------
 
