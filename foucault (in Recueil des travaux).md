@@ -68,13 +68,11 @@ Il motore è stato adattato alle dimensioni dell'apparecchio e consiste in un in
 
 Indipendentemente dall'energia del motore e dalla perfezione di esecuzione, è facile riconoscere che ci sono posizioni in cui l'amplificazione del movimento crea enormi resistenze. Questa imperfezione che persisteva nel primo apparecchio è stata completamente eliminata mediante l'aggiunta di una molla a spirale R (fig. 2,  tav. 13), 
 
-
-![FIG.2, Tav.13](https://github.com/jumpjack/heliostat/assets/1620953/82baa9a7-e1ca-4ac4-8eb1-8289b08d0fae)
-
+![FIG.2, Tav.13](https://github.com/jumpjack/heliostat/assets/1620953/1fd120b6-f8a0-492d-a51f-376dcd23a727)
 
 fissata da un lato alla parte fissa della colonna e dall'altro alla parte mobile che sostiene lo specchio. Questa molla viene armata una volta per tutte in modo da agire sulle parti che spinge nella direzione del movimento celeste. Considerando gli spazi relativamente percorribili nelle diverse posizioni dell'apparecchio, si può facilmente constatare che questa molla, posizionata in questo modo, aiuta il meccanismo motore nelle precise circostanze in cui la forza potrebbe mancare. In questo modo, l'apparecchio funziona in modo adeguato in tutte le posizioni comuni (1).
 
-Va infine aggiunto che il grande specchio poggia su tre ruote equidistanti GG, montati sul contorno del cerchio sottostante e che sono stati resi necessari dal peso dello specchio.
+Va infine aggiunto che il grande specchio poggia su tre ruote equidistanti GG, montati sul contorno del cerchio sottostante e che sono state rese necessarie dal peso dello specchio.
 
 *(1) L'idea di utilizzare questa molla ausiliaria fu suggerita a L. Foucault da M. Duboscq, l'abile costruttore che aveva già realizzato con estrema cura il primo modello di eliostato.*
 
