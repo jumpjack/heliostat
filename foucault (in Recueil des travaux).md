@@ -126,6 +126,10 @@ M. Eichens e descritto da M. C. Wolf nelle Annales scientifiques de l'École nor
 Il principio geometrico è lo stesso del grande eliostato; tuttavia, destinato all'osservazione degli astri tra il 
 polo e l'orizzonte sud, l'apparecchio, al contrario degli eliostati, riflette i raggi da nord a sud nel piano del 
 meridiano; di conseguenza, lo specchio è posizionato all'estremità inferiore dell'asse orario.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/552f42d8-6c12-42d5-9002-e38db712def9)
+
+
 La direzione del raggio riflesso, determinata dalla linea che collega l'estremità dell'asse orario al centro dell'
 asse orizzontale intorno al quale ruota lo specchio, è inclinata di 10° al di sotto dell'orizzontale, al fine di 
 consentire l'osservazione degli astri molto vicini all'orizzonte sud, sopra il telescopio che deve essere collegato al siderostato.
