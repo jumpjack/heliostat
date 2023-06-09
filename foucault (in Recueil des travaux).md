@@ -50,13 +50,19 @@ Per facilitare il posizionamento dello strumento e per controllarne il funzionam
 
 Questo modello è in generale conforme all'apparecchio descritto in precedenza; si differenzia solo, oltre alle grandi dimensioni dello specchio (0,80 m x 0,40 m), per i seguenti dettagli:
 
-La colonna V (tav. 13) che sostiene lo specchio, anziché essere montata su guida sull'alidade che la trasporta attorno al centro, è fissata direttamente su quest'ultima. Il meccanismo originale era stato concepito per consentire di variare l'inclinazione del raggio riflesso; è stato possibile eliminarlo poiché, nella pratica, questa inclinazione è sempre molto piccola. Lo spazio reso libero è stato quindi utilizzato per ospitare il semicerchio dentato D, sul quale ingranano il pignone P che serve a spostare lo specchio e a dirigere il raggio riflesso a destra e a sinistra rispetto al piano del meridiano.
+La colonna V (tav. 13) che sostiene lo specchio, 
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/7fadca59-29e1-4d65-b748-66e2503266c3)
 
 ([Versione ad alta risoluzione](https://github.com/jumpjack/heliostat/blob/main/images/tav13.png?raw=true))
 
 Tavola 13
+
+anziché essere montata su guida sull'alidade che la trasporta attorno al centro, è fissata direttamente su quest'ultima. Il meccanismo originale era stato concepito per consentire di variare l'inclinazione del raggio riflesso; è stato possibile eliminarlo poiché, nella pratica, questa inclinazione è sempre molto piccola. Lo spazio reso libero è stato quindi utilizzato per ospitare il semicerchio dentato D, sul quale ingranano il pignone P che serve a spostare lo specchio e a dirigere il raggio riflesso a destra e a sinistra rispetto al piano del meridiano.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/c0b1119a-0727-4160-86fc-4a6949ba3b2e)
+
+
 
 Il motore è stato adattato alle dimensioni dell'apparecchio e consiste in un ingranaggio a cinque ruote dentate regolate dal pendolo e dallo scappamento del metronomo, che riceve il movimento da una molla d'acciaio che rappresenta una forza motrice di circa 6 chilogrammi. Questo ingranaggio funziona per sei ore ed è completamente contenuto all'interno della scatola B. Il movimento viene trasmesso da una ruota H tramite un pignone O, il cui quadrante è suddiviso in ore e minuti.
 
