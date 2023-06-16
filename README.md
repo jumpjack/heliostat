@@ -12,12 +12,13 @@ There are 2 main types of heliostats: north-facing and south-facing:
 
 Type 1 - North facing: the mirror points toward North:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/0b76c100-ac46-408e-8b95-d6b42d6776f6)
+![North facing](https://github.com/jumpjack/heliostat/assets/1620953/948c524e-36cf-4e02-b4a4-2c5c8b633770)
+
 
 
 Type 2 - South facing: the mirror points toward south:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/9ef59556-111b-4d78-911c-0b8e69e550f5)
+![South facing](https://github.com/jumpjack/heliostat/assets/1620953/9ef59556-111b-4d78-911c-0b8e69e550f5)
 
 
 If you want to reflect sun rays toward a north-oriented window, you will need the south facing type:
@@ -44,6 +45,19 @@ Showing them for both types (but we need type 2):
 ![South facing](https://github.com/jumpjack/heliostat/assets/1620953/0786fef3-582e-4ff7-892c-aab47bc4cc54)
 
 ![North facing](https://github.com/jumpjack/heliostat/assets/1620953/8545c73a-34f3-4dfc-9543-10764a23b622)
+
+The joint 3 is the most important part and the most difficult to build. Its requirement are:
+
+- Shall be able to freely slide along tail (1a)
+- Shall allow driver (2b) to rotate around tail (1a)
+- Shall allow driver (2b) to rotate around the pivot on joint (3) itself
+
+An other fundamental requirement is that, whatever it happens, segments highlighted in this picture must remain exactly equal in length:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/b61a763c-1730-4950-ad52-aa36dee42e62)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ee177027-8773-442e-b97f-f37368fdb87b)
+
 
 
 ### Whole year lasting heliostat
