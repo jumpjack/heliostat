@@ -2,6 +2,55 @@
 
 This page collects documents, images, source codes and formulas about "heliostats", "special mirrors" used to make solar light static while sun crosses the sky.
 
+## Basic principles
+
+Basic principle of an heliostat is that the mirror shall not point directly sun, but the bisector between sun and target. To accomplish this task, it is possibile to build a totally passive mechanism, without any sensor, any electronic, and even any electricity: a springloaded clockwork would be enough to build an heliostat working for a whole day; to get it working for the whole year without manual adjustement, a little more work is needed, due to sun movement along **analemma**.
+
+### Types of heliostats
+
+There are 2 main types of heliostats: north-facing and south-facing:
+
+Type 1 - North facing: the mirror points toward North:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/0b76c100-ac46-408e-8b95-d6b42d6776f6)
+
+
+Type 2 - South facing: the mirror points toward south:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/9ef59556-111b-4d78-911c-0b8e69e550f5)
+
+
+If you want to reflect sun rays toward a north-oriented window, you will need the south facing type:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/21a02f81-2e7c-4211-9fce-c7d64639d1f9)
+
+
+### Single day lasting heliostat
+
+All you need to build an heliostat which follows the sun along a single day is:
+
+1) Pointer: a Mirror mounted on a 2-degrees-of-freedom stand (horizontal and vertical)
+2) Clockwork: a clockwork making 1 turn in 24 hours
+3) Joint: a peculiar joint to connect the mirror to the driving mechanism
+
+Some more items will be needed to join 1) and 2):
+
+1a) Mirror tail: a rod fixed perpendicularly to the back of the mirror
+2a) Clockwork extension: a rod parallel to the clockworx axis, extending it by some centimeters
+2b) Driver: a rod fixed to clockwork axis with **a certain** angle (corresponding to sun declination)
+
+Showing them for both types (but we need type 2):
+
+![South facing](https://github.com/jumpjack/heliostat/assets/1620953/0786fef3-582e-4ff7-892c-aab47bc4cc54)
+
+![North facing](https://github.com/jumpjack/heliostat/assets/1620953/8545c73a-34f3-4dfc-9543-10764a23b622)
+
+
+### Whole year lasting heliostat
+
+To Do
+
+
 ## Source codes
 
 ### Made with Three.js
