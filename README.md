@@ -84,8 +84,11 @@ The sun follows a simple arc in the sky along the day; unfortunately, this arc d
 
 This site shows how this arc moves in the sky along the year: http://andrewmarsh.com/apps/staging/sunpath3d.html
 
-Seen from ground, with observer always in same position along the year, and sun position marked always at same hour in the day, the sun appars describing a cure named "analemma":
+Seen from ground, with observer always in same position along the year, and sun position marked always at same hour in the day, the sun appars describing a curve named "[analemma](https://github.com/jumpjack/heliostat/blob/main/analemma.md)":
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e0d2a736-d71c-47f1-a27a-036ef048700d)
+
+In Alt/Az coordinates, analemma has an "8" shape.
 
 
 
