@@ -57,6 +57,11 @@ This is how the joint appears in Foucault's drawings:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/08190412-a3aa-4301-8aff-93a5ce70723d)
 
+Modern 3d representation:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/eb86ddab-1f00-41c9-8e48-8f945b5ca4d8)
+
+
 
 An other fundamental requirement of the whole instrument is that, whatever it happens, segments highlighted in this picture  must remain exactly equal in length:
 
