@@ -36,9 +36,9 @@ All you need to build an heliostat which follows the sun along a single day is:
 
 Some more items will be needed to join 1) and 2):
 
-1a) Mirror tail: a rod fixed perpendicularly to the back of the mirror
-2a) Clockwork extension: a rod parallel to the clockworx axis, extending it by some centimeters
-2b) Driver: a rod fixed to clockwork axis with **a certain** angle (corresponding to sun declination)
+- 1a) Mirror tail: a rod fixed perpendicularly to the back of the mirror
+- 2a) Clockwork extension: a rod parallel to the clockworx axis, extending it by some centimeters
+- 2b) Driver: a rod fixed to clockwork axis with **a certain** angle (corresponding to sun declination)
 
 Showing them for both types (but we need type 2):
 
@@ -51,18 +51,42 @@ The joint 3 is the most important part and the most difficult to build. Its requ
 - Shall be able to freely slide along tail (1a)
 - Shall allow driver (2b) to rotate around tail (1a)
 - Shall allow driver (2b) to rotate around the pivot on joint (3) itself
+- Shall have very low friction with mirror tail, hence only 2 points of contact at joint edges
 
-An other fundamental requirement is that, whatever it happens, segments highlighted in this picture must remain exactly equal in length:
+This is how the joint appears in Foucault's drawings:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/08190412-a3aa-4301-8aff-93a5ce70723d)
+
+
+An other fundamental requirement of the whole instrument is that, whatever it happens, segments highlighted in this picture  must remain exactly equal in length:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/b61a763c-1730-4950-ad52-aa36dee42e62)
 
+They are marked as (P'L' and P'M) in following schematic:
+
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/ee177027-8773-442e-b97f-f37368fdb87b)
 
+Two configurations are possible for heliostats: "underdrive" and "overdrive"; for south-facing type, they look like this:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/8461e87d-f7fe-491d-9383-fb99fc825aa1)
+
+Underdrive connects driver to mirror tail, which is ortogonal to mirror and below it; it's how Foucault's heliostat is deisgned; overdrive connects driver to a rod which is parallel to the mirror and above it.
+
+Various arrangements are wel described in "[A Note on the Principle And Nomenclature of Heliostats, Coelostats, Siderostats](https://articles.adsabs.harvard.edu/pdf/1982JBAA...92..182D)" by Dougherty, L. M., in
+"_Journal of the British Astronomical Association_", vol.92, no.4, p.182-187 (1982)
 
 
 ### Whole year lasting heliostat
 
-To Do
+The sun follows a simple arc in the sky along the day; unfortunately, this arc does not remain the same along the day, due to orbital mechanics:
+
+![sun path in 3d](https://user-images.githubusercontent.com/1620953/230616983-01ca00b8-52be-40d6-8f15-a6b119922a6f.png)
+
+This site shows how this arc moves in the sky along the year: http://andrewmarsh.com/apps/staging/sunpath3d.html
+
+Seen from ground, with observer always in same position along the year, and sun position marked always at same hour in the day, the sun appars describing a cure named "analemma":
+
+
 
 
 ## Source codes
