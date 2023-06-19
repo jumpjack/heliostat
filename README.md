@@ -59,8 +59,12 @@ This is how the joint appears in Foucault's drawings:
 
 Modern 3d representation:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/eb86ddab-1f00-41c9-8e48-8f945b5ca4d8)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e3cb1a8c-5738-42dc-b7ab-6c7018cfa227)
 
+
+Foucualt highlighted how the friction between the joint and the mirror tail should be reduced at minimum, adding that thia could be better accomplished if just the edge of the joint are in touch with the tail, so this is how I imagined the interior of the joint:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/453a5216-9686-4315-8c4a-c3613e2881dd)
 
 
 An other fundamental requirement of the whole instrument is that, whatever it happens, segments highlighted in this picture  must remain exactly equal in length:
