@@ -49,6 +49,7 @@ Possiamo rappresentare questo primo meccanismo in forma più compatta:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/bdf8a05b-4db3-441b-a555-a848a671f6f3)
 
+**N.B.: E' importante notare che in questa variante del meccanismo la ruota B è libera, non è collegata all'asse XX', quindi B e XX' possono avere  velocità diverse e indipendenti l'una dall'altra.**
 
 Foucault (o forse Eichens?) calcolò queste formule:
 
