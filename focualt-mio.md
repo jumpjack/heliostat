@@ -47,7 +47,8 @@ Qui la colorazione ha una logica differente rispetto a prima:
 
 Possiamo rappresentare questo primo meccanismo in forma più compatta:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/ecdacaf2-f6b2-4c77-9b64-e0bbc0cc7b12)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/bdf8a05b-4db3-441b-a555-a848a671f6f3)
+
 
 Foucault (o forse Eichens?) calcolò queste formule:
 
@@ -147,6 +148,33 @@ $\Large5 - \frac{1}{2} = \frac{9}{10}5\$
 $5-0.5=\frac{45}{10}$ 
 
 $4.5=4.5$
+
+## Combinazioni possibili di in granaggi
+
+La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfino le condizioni viste:
+
++-----+-----+----+-----+
+|  c  |  C  | b  |  B  |
++-----+-----+----+-----+
+|  32 |  16 |  8 |  40 |
+|  40 |  20 | 10 |  50 |
+|  48 |  24 | 12 |  60 |
+|  56 |  28 | 14 |  70 |
+|  64 |  32 | 16 |  80 |
+|  72 |  36 | 18 |  90 |
+|  80 |  40 | 20 | 100 |
+|  88 |  44 | 22 | 110 |
+|  96 |  48 | 24 | 120 |
+| 104 |  52 | 26 | 130 |
+| 112 |  56 | 28 | 140 |
+| 120 |  60 | 30 | 150 |
+| 128 |  64 | 32 | 160 |
+| 136 |  68 | 34 | 170 |
+| 144 |  72 | 36 | 180 |
+| 152 |  76 | 38 | 190 |
+| 160 |  80 | 40 | 200 |
++-----+-----+----+-----+
+
 
 
 # Cambiare i valori suggeriti da Foucault
