@@ -154,9 +154,8 @@ $4.5=4.5$
 
 La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfino le condizioni viste:
 
-+-----+-----+----+-----+
 |  c  |  C  | b  |  B  |
-+-----+-----+----+-----+
+|-----|-----|----|-----|
 |  32 |  16 |  8 |  40 |
 |  40 |  20 | 10 |  50 |
 |  48 |  24 | 12 |  60 |
@@ -174,9 +173,14 @@ La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfi
 | 144 |  72 | 36 | 180 |
 | 152 |  76 | 38 | 190 |
 | 160 |  80 | 40 | 200 |
-+-----+-----+----+-----+
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/91f6e76a-e704-43f8-97e5-90531ef08077)
 
+Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente sono vere anche la (3) e la (5): 
+
+- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
+- B/b = 5
+- C/c = 1/2
 
 # Cambiare i valori suggeriti da Foucault
 
