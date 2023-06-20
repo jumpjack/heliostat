@@ -179,8 +179,13 @@ La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfi
 Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente sono vere anche la (3) e la (5): 
 
 - 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
-- B/b = 5
-- C/c = 1/2
+    - B/b = 5
+    - C/c = 1/2
+- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$
+    - $\Large\frac{40}{8} - \frac{16}{32} = \frac{9}{10}\frac{40}{8}\$ 
+    - $\Large 5 - \frac{1}{2} = 5\frac{9}{10}\$ 
+    - $\Large \frac{9}{2} = \frac{45}{10}\$ 
+    - $\Large \frac{9}{2} = \frac{9}{2}\$ 
 
 # Cambiare i valori suggeriti da Foucault
 
