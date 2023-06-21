@@ -99,7 +99,21 @@ Seen from ground, with observer always in same position along the year, and sun 
 
 In Alt/Az coordinates, analemma has an "8" shape.
 
+To properly follow the sun all along the year, rotating a mirror around an axis one turn every 24 hours is not enough: corrections to sun declination and hour angle must be added to the instrument.
 
+One of Foucault's heliostat designs apparently could do the trick, being it equipped with two gears which allow external inputs:
+
+![Foucault](https://user-images.githubusercontent.com/1620953/238906372-e2d23598-971b-43e5-bdb0-e442070a76d5.png)
+
+- "q" allows introducing time variations (Hour Angle or Right Ascension, it's not clear to me) to the upper clock mechanism
+- "u" allows introducing declination variations without affecting upper clock mechanism
+  
+**Question is: which mechanisms should be connected to "q" and "u" to automatically follow the sun along each day of the year?**
+
+Maybe these sites could provide some hints (I am currently investigating):
+
+- [Mechanical implementation of Equation of Time](https://equation-of-time.info/gears) ([contact](https://equation-of-time.info/contact))
+- [Analemma calculator](https://mtirado.com/resources/analemma-calc/) ([contact](https://mtirado.com/about/))
 
 ## Source codes
 
