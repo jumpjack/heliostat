@@ -7,5 +7,6 @@ Analemma explanations and simulations
 - https://mtirado.com/blog/demystifying-the-analemma/
 - https://www.geogebra.org/m/jv4knafm (Geogebra)
 - https://alokm.com/astro/analemmagenerator.html# (all planets)
+- http://andrewmarsh.com/apps/staging/sunpath3d.html (3d path of the sun across celestial sphere)
 
 
