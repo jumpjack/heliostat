@@ -119,6 +119,13 @@ Maybe these sites could provide some hints (I am currently investigating):
 
 ### Made with Three.js
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e4e21218-d761-4cd2-aaea-303fee05a1ac)
+
+Plotter for "kidney cam", [Greubel/Forsey cam](https://equation-of-time.info/copy-of-equation-clocks-forerunners), declination cam and analemma.
+
+
+### Made with Three.js
+
 #### Parabola3.html ([source](https://github.com/jumpjack/heliostat/blob/main/parabola3.html), [live demo](https://jumpjack.github.io/heliostat/parabola3.html))
 
 Paraboloid customizable by user. No mirrors, because Three.js has so many versions, subversions and variants that I was not yet able to figure out whic version to use to create a reflective mirror..
