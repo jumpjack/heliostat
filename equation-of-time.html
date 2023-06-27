@@ -82,8 +82,12 @@ Analemma Alt/Az:<br>
 </td>
 </tr>
   </table><br>
+	JSON cam  profile:<br>
   <textarea id="camProfileJSON" cols = 50 rows = 20></textarea><br>
+	Use this site to import the JSON cam profile above and simulate cam/follower mechanism: <a href="https://jumpjack.github.io/CamFollowerJS/">link</a><br>
+	<br>
 References:<br>
+<ul>
 <a href="https://equation-of-time.info/">Theory and real mechanisms (cams, gears, clocks,...)</a><br>
 <a href="https://www.wikiwand.com/en/equation_of_time">Wikiwand</a><br>
 <a href="https://equation-of-time.info/copy-of-equation-clocks-forerunners">Kidney cam, Greubel/Forsey cam</a><br>
@@ -91,8 +95,7 @@ References:<br>
 <a href="https://www.renatoweb.it/renatomeridiane/gnomon13.htm">Formula di Cooper per declinazione solare</a><br>
 <a href="https://www.tecnologica.altervista.org/php5/index.php?title=Declinazione_solare">Formula e valori tabulati</a><br>
 <a href="https://www.desmos.com/calculator/hbsrvo4bkv?lang=it">Grafico su Desmos</a><br>
-<a href=""></a><br>
-
+</ul>
   <script>
   // min/max in second column have been  manually set after first run of the script
     minVal =   9999; minC = -15;
@@ -132,8 +135,8 @@ References:<br>
           showline: false,   showgrid: false, showticklabels: false, ticks: ""
         }
       },
-      line: null,
-      marker : null,
+			mode : "lines",
+
 
     }
 
@@ -158,9 +161,9 @@ References:<br>
             showlegend : false,
             marker :{
               symbol: "circle",
-              size: 12,
-              colors: c
-            },
+              size: 4,
+              colors: c,
+            }
           }
     };
 
@@ -274,7 +277,7 @@ References:<br>
         });
 
         polarData.push({ r: parseInt(kidneyVal.toFixed(0)), theta: dayOfYear });
-console.log(dayOfYear, kidneyVal.toFixed(0));
+//console.log(dayOfYear, kidneyVal.toFixed(0));
         polarData2.push({ r: parseInt(GreubelForseyVal.toFixed(0)), theta: dayOfYear });
         polarData3.push({ r: parseInt(declinationPolar.toFixed(0)), theta: dayOfYear });
 
@@ -311,23 +314,30 @@ console.log(dayOfYear, kidneyVal.toFixed(0));
         mode: "lines+markers",
         marker: {
           symbol: 'circle',  // Imposta la forma del marcatore a cerchio
-          size: 2,  // Dimensione del cerchietto
+          size: 4,  // Dimensione del cerchietto
           color: colors,
         },
         name: "Polar",
         r: polarData.map((point) => point.r),
         theta: polarData.map((point) => point.theta),
         fill: "toself",
-        fillcolor: '#AAAAAA',
+        fillcolor: '#AAAAAA'
       });
+
+console.log(colors);
 
       // Greubel cam
       data.push({
         type: "scatterpolar",
         mode: "lines+markers",
-        marker: {
+/*				line : {
+					color: colors,
+					width : 2,
+				},
+*/
+				marker: {
           symbol: 'circle',  // Imposta la forma del marcatore a cerchio
-          size: 2,  // Dimensione del cerchietto
+          size: 4,  // Dimensione del cerchietto
           color: colors,  // Assegna l'array di colori ai punti
         },
         name: "Polar2",
@@ -335,6 +345,7 @@ console.log(dayOfYear, kidneyVal.toFixed(0));
         theta: polarData2.map((point) => point.theta),
         fill: "toself",
         fillcolor: '#AAAAAA',
+
       });
 
 
@@ -500,7 +511,8 @@ console.log(y, indiceMarker, allData[0].y[indiceMarker], ZERO_OFFSET, minValK, a
       originalPolarLayout = restoreLayout();
       Plotly.newPlot("polar-chart2", [allData[2]], originalPolarLayout).then(function (gd)  {
         gdPolar2 = gd;
-        Plotly.relayout(gd, {aspectratio:1, polar : { radialaxis : {range : [0, maxValG]}}});
+        Plotly.relayout(gd, {aspectratio:1, polar : { radialaxis : {range : [0, maxValG]}}  });
+				//Plotly.restyle(gd, { 'line.color': colors, 'line.width' : 3});
         addAxis(gd);
       });
     }
@@ -564,7 +576,6 @@ console.log(y, indiceMarker, allData[0].y[indiceMarker], ZERO_OFFSET, minValK, a
         JSONexportData = polarData3;
       }
 
-console.log(sel,polarData,JSONexportData);
 
 /*
 Cam profile format:
@@ -589,25 +600,19 @@ Cam profile format:
 	"rotationDir": 1
 }
 */
-camProfileJSON.value='{ "segments" :  [\n';
+			camProfileJSON.value='{ "segments" :  [\n';
 
-for (var i=0; i < JSONexportData.length-1; i++) {
-  camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '},\n';
-}
-camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '}\n'; // without final comma
-camProfileJSON.value +='	],\n	"rotSpeed": 2,\n	"stepsWidth": ' + step + ',	\n"rotationDir": 1}';
+			for (var i=0; i < JSONexportData.length-1; i++) {
+			  camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '},\n';
+			}
+			camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '}\n'; // without final comma
+			camProfileJSON.value +='	],\n	"rotSpeed": 2,\n	"stepsWidth": ' + step + ',	\n"rotationDir": 1}';
 
 
       // Rimuovi gli assi dal layout del grafico
       Plotly.relayout(gd, downloadPolarLayout)
-      Plotly.update(gd,
-        {
-          marker: {
-            size : 0, color: colorsDownload // nasconde markers
-          }
-        },
-        0
-      );
+      Plotly.update(gd,  { mode : "lines"	 }   );
+			Plotly.restyle(gd , {marker : { color : colorsDownload } });
 
       if (gd.data.length > 1) { // Elimina la linea radiale che punta al marker, se presente
           Plotly.deleteTraces(gd, [1]);
@@ -620,13 +625,15 @@ camProfileJSON.value +='	],\n	"rotSpeed": 2,\n	"stepsWidth": ' + step + ',	\n"ro
       Plotly.downloadImage(gd, { format: 'png', width: 800, height: 600, filename: name }).then( function() {
         // Applica il layout originale per ripristinare gli assi e la griglia visibili
         originalPolarLayout = restoreLayout();
-        Plotly.relayout(gd,  originalPolarLayout);
+
         Plotly.update(gd, {
           marker: {
             size : 2, color: colors
           },
-        },
-         0);
+        });
+				Plotly.update(gd,  { mode : "lines+markers"	 }   )
+				Plotly.relayout(gd, restoreLayout())
+				Plotly.restyle(gd , {marker : { color : colors, size : 4 } });
        console.log("Tracce:",gd.data.length);
       });
 
