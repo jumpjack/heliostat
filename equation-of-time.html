@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r125/three.min.js"></script>
+<script src="solar.js"></script>
+<script src="meuusjs.1.0.3.min.js"></script>
+<script src="meeus-easy.js"></script>
+<title>Equazione del Tempo - Equation of time</title>
+</head>
+<body>
+<center><big><big><big>Equazione del Tempo - Equation of time</big></big></big><br>
+<i>
+v. 1.0.0 - 27/06/2023<br>
+<a href="https://github.com/jumpjack/heliostat/blob/main/equation-of-time.html">Source code</a><br>
+<br>
+<br>
+</i></center>
+  <table border = 1>
+  <tr>
+  <td>
+  Equazione del tempo in coordinate cartesiane
+  </td>
+  <td>
+  Camma "a rene" ("kidney cam")
+  </td>
+  <td>
+  Camma Greubel/Forsey
+  </td>
+  </tr>
+  <tr>
+  <td>
+    <span id="cartesian-chart" style="width:600px;height:400px;"></span>
+
+</td>
+  <td>
+  <span id="polar-chart" style="width:400px;"></span>
+  <br>
+  <button onclick="downloadCamProfile(1)">DOWNLOAD PROFILE</button><a target="#" href="https://anyconv.com/it/convertitore-da-png-a-stl/">Click here to convert to STL</a>
+  </td>
+  <td>
+  <span id="polar-chart2" style="width:400px;"></span><br>
+  <button onclick="downloadCamProfile(2)">DOWNLOAD PROFILE</button><a target="#" href="https://anyconv.com/it/convertitore-da-png-a-stl/">Click here to convert to STL</a>
+ </td>
+
+ </tr>
+ <tr>
+ <td>
+ </td>
+ <td>
+
+</td>
+ <td>
+
+</td>
+ </tr>
+ <tr>
+
+<td>
+Declinazione in coordinate cartesiane:<br>
+    <span id="cartesian-chart2" style="width:600px;height:400px;"></span>
+
+</td>
+  <td>
+  Camma declinazione:<br>
+  <span id="polar-chart3" style="width:400px;"></span>
+  <br>
+  <button onclick="downloadCamProfile(3)">DOWNLOAD PROFILE</button><a target="#" href="https://anyconv.com/it/convertitore-da-png-a-stl/">Click here to convert to STL</a>
+ </td>
+<td>
+
+</td>
+</tr>
+<tr>
+<td>
+Analemma Decl/EoT:<br>
+  <span id="analemma-chart" style="width:400px;"></span>
+</td>
+<td>
+Analemma Alt/Az:<br>
+  <span id="analemma-chart2" style="width:400px;"></span>
+</td>
+</tr>
+  </table><br>
+  <textarea id="camProfileJSON" cols = 50 rows = 20></textarea><br>
+References:<br>
+<a href="https://equation-of-time.info/">Theory and real mechanisms (cams, gears, clocks,...)</a><br>
+<a href="https://www.wikiwand.com/en/equation_of_time">Wikiwand</a><br>
+<a href="https://equation-of-time.info/copy-of-equation-clocks-forerunners">Kidney cam, Greubel/Forsey cam</a><br>
+<a href="https://equation-of-time.info/cams">Obliquity and Eccentricity cams mechanically summed up</a><br>
+<a href="https://www.renatoweb.it/renatomeridiane/gnomon13.htm">Formula di Cooper per declinazione solare</a><br>
+<a href="https://www.tecnologica.altervista.org/php5/index.php?title=Declinazione_solare">Formula e valori tabulati</a><br>
+<a href="https://www.desmos.com/calculator/hbsrvo4bkv?lang=it">Grafico su Desmos</a><br>
+<a href=""></a><br>
+
+  <script>
+  // min/max in second column have been  manually set after first run of the script
+    minVal =   9999; minC = -15;
+    maxVal =  -9999; maxC =  16
+    minValG =  9999; minG = -16;
+    maxValG = -9999; maxG =   0;
+    minValK =  9999; minK = -15;
+    maxValK = -9999; maxK =  16;
+    minValDc =  9999; minDc = -23;
+    maxValDc = -9999; maxDc =  23;
+    minValD =  9999; minD = 15;
+    maxValD = -9999; maxD =  53;
+
+    const ZERO_OFFSET = 5;
+    const step = 10;
+
+    thisYear = new Date().getFullYear();
+    capodanno = new Date(thisYear + "/01/01 00:00");
+
+      var cartesianData = [];
+      var cartesianDataDeclination = [];
+      var polarData = [];
+      var polarData2 = [];
+      var polarData3 = [];
+      var analemmaData = [];
+      var analemmaDataAltAz = [];
+
+    var colors = [];  // Array di colori per ogni punto
+    var colorsDownload = [];
+
+    downloadPolarLayout = {
+      polar: {
+        radialaxis: {
+          showline: false,  showgrid: false, showticklabels: false, ticks: ""
+        },
+        angularaxis: {
+          showline: false,   showgrid: false, showticklabels: false, ticks: ""
+        }
+      },
+      line: null,
+      marker : null,
+
+    }
+
+
+
+    function restoreLayout(c) {
+      return {
+            polar: {
+              radialaxis: {
+                title: "",
+                //range: [0, ZERO_OFFSET + 20],
+                showline: true,
+                showgrid: true,
+                showticklabels: true
+              },
+              angularaxis: {
+                showline: true,
+                showgrid: true,
+                showticklabels: true
+              }
+            },
+            showlegend : false,
+            marker :{
+              symbol: "circle",
+              size: 12,
+              colors: c
+            },
+          }
+    };
+
+
+    function generateData() {
+      var data = [];
+      var originalLayout;
+
+      for (var dayOfYear = 0; dayOfYear <= 365; dayOfYear += step) {
+        var cartesianVal =
+          9.87 *
+            Math.sin((2 * 2 * Math.PI * (dayOfYear - 81)) / 365) -
+          7.53 *
+            Math.cos((2 * Math.PI * (dayOfYear - 81)) / 365) -
+          1.5 *
+            Math.sin((2 * Math.PI * (dayOfYear - 81)) / 365);
+
+
+        ///// Find cartesian min/max values:
+        if (cartesianVal < minVal) {
+          minVal = cartesianVal
+        }
+        if (cartesianVal > maxVal) {
+          maxVal = cartesianVal
+        }
+
+
+///////// kidney /////////
+        kidneyVal = cartesianVal + ZERO_OFFSET - minK;
+
+        ///// Find kidney polar min/max values:
+        if (kidneyVal < minValK) {
+          minValK = kidneyVal
+        }
+        if (kidneyVal > maxValK) {
+          maxValK = kidneyVal
+        }
+
+
+/////// Greubel /////
+        if (cartesianVal>0) {
+          var GreubelForseyVal = -cartesianVal + ZERO_OFFSET - minG;
+          colors.push('red');  // Colore rosso per punti con y > 0
+        } else {
+          var GreubelForseyVal = cartesianVal + ZERO_OFFSET - minG;
+           colors.push('blue');  // Colore blu per punti con y <= 0
+        }
+
+        if (GreubelForseyVal < minValG) {
+          minValG = GreubelForseyVal
+        }
+        if (GreubelForseyVal > maxValG) {
+          maxValG = GreubelForseyVal
+        }
+
+
+/////  declination /////
+        declination = 23.45 * Math.sin(((360*3.14/180)/365) * (284 + dayOfYear));
+        declinationPolar = declination + ZERO_OFFSET - minDc;
+
+        if (declination < minValDc) {
+          minValDc = declination
+        }
+        if (declination > maxValDc) {
+          maxValDc = declination
+        }
+
+
+        if (declinationPolar < minValD) {
+          minValD = declinationPolar
+        }
+        if (declinationPolar > maxValD) {
+          maxValD = declinationPolar
+        }
+
+
+
+
+        lat = 42; // debug
+        lon = 12; // debug
+
+        declinationRad = declination*3.14/180;
+        T0 = 12;
+        EoT = cartesianVal;
+        HA = (15 * (T0 - 12) + EoT)*3.14/180; // Angolo orario
+        //elevation = (Math.asin(Math.sin(lat) * Math.sin(declinationRad) + Math.cos(lat) * Math.cos(declinationRad) * Math.cos(HA)));
+        //azimuth = (Math.acos((Math.sin(declinationRad) - Math.sin(elevation) * Math.sin(lat)) / (Math.cos(elevation) * Math.cos(lat))));
+        sunData = suncalcMeeus(new Date(capodanno.getTime() + dayOfYear * 86400000 +86400000/2), lat,lon, 100);
+        elevation = sunData.sunAltitudeDegrees;
+        azimuth = sunData.sunAzimuthDegrees;
+        //console.log(dayOfYear, new Date(capodanno.getTime() + dayOfYear * 86400000+86400000/2), (elevation).toFixed(0),  (azimuth).toFixed(0));
+
+
+
+
+        colorsDownload = "#AAAAAA";
+
+//console.log(dayOfYear, minValD.toFixed(0),declination.toFixed(0),declinationPolar.toFixed(0),maxValD.toFixed(0));
+
+
+
+
+        cartesianData.push({
+          x: dayOfYear,
+          y: cartesianVal
+        });
+
+        cartesianDataDeclination.push({
+          x: dayOfYear,
+          y: declination
+        });
+
+        polarData.push({ r: parseInt(kidneyVal.toFixed(0)), theta: dayOfYear });
+console.log(dayOfYear, kidneyVal.toFixed(0));
+        polarData2.push({ r: parseInt(GreubelForseyVal.toFixed(0)), theta: dayOfYear });
+        polarData3.push({ r: parseInt(declinationPolar.toFixed(0)), theta: dayOfYear });
+
+        analemmaData.push({
+          x: cartesianVal,
+          y: declination
+        });
+
+        analemmaDataAltAz.push({
+          x: azimuth,
+          y: elevation
+        });
+
+      }
+
+
+
+      // Cartesian EoT
+      data.push({
+        type: "scatter",
+          mode: 'lines',
+          marker: {
+            symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+            size: 2  // Dimensione del cerchietto
+          },
+        name: "Cartesian",
+        x: cartesianData.map((point) => point.x),
+        y: cartesianData.map((point) => point.y),
+      });
+
+      // kidney cam
+      data.push({
+        type: "scatterpolar",
+        mode: "lines+markers",
+        marker: {
+          symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+          size: 2,  // Dimensione del cerchietto
+          color: colors,
+        },
+        name: "Polar",
+        r: polarData.map((point) => point.r),
+        theta: polarData.map((point) => point.theta),
+        fill: "toself",
+        fillcolor: '#AAAAAA',
+      });
+
+      // Greubel cam
+      data.push({
+        type: "scatterpolar",
+        mode: "lines+markers",
+        marker: {
+          symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+          size: 2,  // Dimensione del cerchietto
+          color: colors,  // Assegna l'array di colori ai punti
+        },
+        name: "Polar2",
+        r: polarData2.map((point) => point.r),
+        theta: polarData2.map((point) => point.theta),
+        fill: "toself",
+        fillcolor: '#AAAAAA',
+      });
+
+
+      // declination cartesian
+      data.push({
+        type: "scatter",
+          mode: 'lines',
+          marker: {
+            symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+            size: 2  // Dimensione del cerchietto
+          },
+        name: "Cartesian",
+        x: cartesianDataDeclination.map((point) => point.x),
+        y: cartesianDataDeclination.map((point) => point.y),
+      });
+
+
+      // declination cam
+     data.push({
+        type: "scatterpolar",
+        mode: "lines+markers",
+        marker: {
+          symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+          size: 2,  // Dimensione del cerchietto
+          color: colors,  // Assegna l'array di colori ai punti
+        },
+        name: "Polar3",
+        r: polarData3.map((point) => point.r),
+        theta: polarData3.map((point) => point.theta),
+        fill: "toself",
+        fillcolor: '#AAAAAA',
+      });
+
+      // analemma cartesian
+      data.push({
+        type: "scatter",
+          mode: 'lines',
+          marker: {
+            symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+            size: 2  // Dimensione del cerchietto
+          },
+        name: "Analemma",
+        x: analemmaData.map((point) => point.x),
+        y: analemmaData.map((point) => point.y),
+      });
+
+
+      // analemma cartesian Alt/Az
+      data.push({
+        type: "scatter",
+          mode: 'lines',
+          marker: {
+            symbol: 'circle',  // Imposta la forma del marcatore a cerchio
+            size: 2  // Dimensione del cerchietto
+          },
+        name: "Analemma alt/az",
+        x: analemmaDataAltAz.map((point) => point.x),
+        y: analemmaDataAltAz.map((point) => point.y),
+      });
+
+      return data;
+    }
+
+    function createCartesianChart() {
+      allData = generateData();
+
+      originalCartesianLayout = {
+        title: "",
+        xaxis: { title: "Giorno dell'anno" },
+        yaxis: { title: "" },
+      };
+
+      Plotly.newPlot("cartesian-chart", [allData[0]], originalCartesianLayout).then(function(gd) {
+        gdCartesian = gd;
+        // Aggiungi l'evento plotly_hover al primo grafico
+        gd.on('plotly_hover', function(eventData) {
+          // Recupera l'indice del marker selezionato nel primo grafico
+          var indiceMarker = eventData.points[0].pointNumber;
+
+          // Recupera le coordinate del marker evidenziato
+          var x = eventData.points[0].x;
+          var y = eventData.points[0].y;
+console.log(y, indiceMarker, allData[0].y[indiceMarker], ZERO_OFFSET, minValK, allData[0].y[indiceMarker] +ZERO_OFFSET +  minValK);
+          // Aggiunge linea verticale nel grafico cartesiano quando passa il mouse:
+          var lineLayoutUpdate = {
+            shapes: [
+              {
+                type: 'line',
+                x0: x,
+                y0: 0,
+                x1: x,
+                y1: y ,
+                line: {
+                  color: 'red',
+                  width: 2
+                }
+              }
+            ]
+          };
+
+          Plotly.relayout('cartesian-chart', lineLayoutUpdate);
+
+
+          // Aggiungi la linea dal centro al marker evidenziato nel grafico polare Kidney/1
+          Plotly.addTraces('polar-chart', {
+            r: [0, allData[1].r[indiceMarker] ],  // Coordinate r della linea (0 per il centro)
+            theta: [0, x],  // Coordinate theta della linea (0 per il centro)
+            mode: 'lines',
+            type: "scatterpolar",
+            line: {
+              color: 'red',
+              width: 2
+            }
+          });
+
+          if (y>0) {
+            var G = -y;
+          } else {
+            var G = y;
+          }
+
+          // Aggiungi la linea dal centro al marker evidenziato nel grafico polare Greubel/2
+          Plotly.addTraces('polar-chart2', {
+            r: [0,  allData[2].r[indiceMarker]  ],  // Coordinate r della linea (0 per il centro)
+            theta: [0, x],  // Coordinate theta della linea (0 per il centro)
+            mode: 'lines',
+            type: "scatterpolar",
+            line: {
+              color: 'red',
+              width: 2
+            }
+          });
+        });
+
+        // Aggiungi l'evento plotly_unhover al primo grafico
+        gd.on('plotly_unhover', function(eventData) {
+          Plotly.deleteTraces('polar-chart', [-1]);  // Rimuove l'ultima traccia aggiunta
+          Plotly.deleteTraces('polar-chart2', [-1]);  // Rimuove l'ultima traccia aggiunta
+        });
+      });
+
+      Plotly.newPlot("cartesian-chart2", [allData[3]], originalCartesianLayout);
+    }
+
+    function createPolarChart() {
+      // Kidney cam
+      //var data = generateData();
+      originalPolarLayout = restoreLayout();
+
+      Plotly.newPlot("polar-chart", [allData[1]], originalPolarLayout).then(function (gd) {
+        gdPolar1 = gd;
+        Plotly.relayout(gd, {aspectratio:1, polar : { radialaxis : {range : [0, maxValK]}}});
+        addAxis(gd);
+      });
+    }
+
+
+    function createPolarChart2() {
+      // Greubel/Forsey cam
+      // www.youtube.com/watch?v=hs4Jt44x6Pw
+      // It can't be used as a real cam because some arcs represent negative values, other represent positive ones, depending on arc color!
+      //var data = generateData();
+      originalPolarLayout = restoreLayout();
+      Plotly.newPlot("polar-chart2", [allData[2]], originalPolarLayout).then(function (gd)  {
+        gdPolar2 = gd;
+        Plotly.relayout(gd, {aspectratio:1, polar : { radialaxis : {range : [0, maxValG]}}});
+        addAxis(gd);
+      });
+    }
+
+
+    function createPolarChart3() {
+      // Declination cam
+      //var data = generateData();
+      originalPolarLayout = restoreLayout();
+      Plotly.newPlot("polar-chart3", [allData[4]], originalPolarLayout).then(function (gd)  {
+        gdPolar3 = gd;
+        Plotly.relayout(gd, {aspectratio:1, polar : { radialaxis : {range : [0, maxValD]}}});
+        addAxis(gd);
+      });
+    }
+
+    function createAnalemmaChart() {
+      originalCartesianLayout = {
+        title: "",
+        xaxis: { title: "EoT" },
+        yaxis: { title: "Declination" },
+      };
+
+      Plotly.newPlot("analemma-chart", [allData[5]], originalCartesianLayout).then(function(gd) {
+        gdAnalemma = gd;
+      });
+    }
+
+
+    function createAnalemmaAltAzChart() {
+      originalCartesianLayout = {
+        title: "",
+        xaxis: { title: "Azimuth" },
+        yaxis: { title: "Elevation" },
+      };
+
+      Plotly.newPlot("analemma-chart2", [allData[6]], originalCartesianLayout).then(function(gd) {
+        gdAnalemmaAltAz = gd;
+      });
+    }
+
+
+
+    function downloadCamProfile(sel) {
+      if(sel === 1) {
+        gd = gdPolar1;
+        name = "kidneyCam";
+        dataIndex = 1;
+        JSONexportData = polarData;
+      }
+      if(sel === 2) {
+        gd = gdPolar2;
+        name = "GreubelCam";
+        dataIndex = 2;
+        JSONexportData = polarData2;
+      }
+      if(sel === 3) {
+        gd = gdPolar3;
+        name = "declinationCam";
+        dataIndex = 4;
+        JSONexportData = polarData3;
+      }
+
+console.log(sel,polarData,JSONexportData);
+
+/*
+Cam profile format:
+
+{
+	"segments" :  [
+		{"x" : 30, "y" : 25},
+		{"x" : 60, "y" : 60},
+		{"x" : 90, "y" : 50},
+		{"x" : 95, "y" : 70},
+		{"x" : 150, "y" : 50},
+		{"x" : 180, "y" : 70},
+		{"x" : 210, "y" : 40},
+		{"x" : 240, "y" : 50},
+		{"x" : 270, "y" : 20},
+		{"x" : 300, "y" : 10},
+		{"x" : 330, "y" : 5},
+		{"x" : 360, "y" : 0}
+	],
+	"rotSpeed": 2,
+	"stepsWidth": 10,
+	"rotationDir": 1
+}
+*/
+camProfileJSON.value='{ "segments" :  [\n';
+
+for (var i=0; i < JSONexportData.length-1; i++) {
+  camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '},\n';
+}
+camProfileJSON.value += '{"x" : ' + parseInt(JSONexportData[i].theta.toFixed(0)) + ', "y" : ' + parseInt(JSONexportData[i].r.toFixed(0)) + '}\n'; // without final comma
+camProfileJSON.value +='	],\n	"rotSpeed": 2,\n	"stepsWidth": ' + step + ',	\n"rotationDir": 1}';
+
+
+      // Rimuovi gli assi dal layout del grafico
+      Plotly.relayout(gd, downloadPolarLayout)
+      Plotly.update(gd,
+        {
+          marker: {
+            size : 0, color: colorsDownload // nasconde markers
+          }
+        },
+        0
+      );
+
+      if (gd.data.length > 1) { // Elimina la linea radiale che punta al marker, se presente
+          Plotly.deleteTraces(gd, [1]);
+      }
+
+      addAxis(gd);
+
+
+      // Scarica l'immagine del grafico
+      Plotly.downloadImage(gd, { format: 'png', width: 800, height: 600, filename: name }).then( function() {
+        // Applica il layout originale per ripristinare gli assi e la griglia visibili
+        originalPolarLayout = restoreLayout();
+        Plotly.relayout(gd,  originalPolarLayout);
+        Plotly.update(gd, {
+          marker: {
+            size : 2, color: colors
+          },
+        },
+         0);
+       console.log("Tracce:",gd.data.length);
+      });
+
+
+
+    }
+
+
+
+
+    function addAxis(gd) {
+      // Aggiunge punto al centro della camma:
+
+      Plotly.addTraces(gd, {
+        r: [0],  // Coordinata r del punto (0 = centro)
+        theta: [0],  // Coordinata theta del punto (0 = angolo 0)
+        mode: 'markers',
+        marker: {
+          color: 'white',
+          size: 8
+        },
+        type: 'scatterpolar',
+        hoverinfo: 'none'
+      });
+
+    }
+
+    createCartesianChart();
+    createPolarChart();
+    createPolarChart2();
+    createPolarChart3();
+    createAnalemmaChart();
+    createAnalemmaAltAzChart();
+    console.log("Cartesian min, max, range:", minVal.toFixed(0),maxVal.toFixed(0),(maxVal - minVal).toFixed(0));
+    console.log("Kidney min, max, range:", minValK.toFixed(0),maxValK.toFixed(0),(maxValK - minValK).toFixed(0));
+    console.log("Greubel min, max, range:", minValG.toFixed(0),maxValG.toFixed(0),(maxValG - minValG).toFixed(0));
+    console.log("Declination cartesian min, max, range:", minValDc.toFixed(0),maxValDc.toFixed(0),(maxValDc - minValDc).toFixed(0));
+    console.log("Declination min, max, range:", minValD.toFixed(0),maxValD.toFixed(0),(maxValD - minValD).toFixed(0));
+
+
+  </script>
+</body>
+</html>
+
