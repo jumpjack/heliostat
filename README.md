@@ -117,11 +117,17 @@ Maybe these sites could provide some hints (I am currently investigating):
 
 ## Source codes
 
-### Made with Three.js
+### Made with Plotly.js
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e4e21218-d761-4cd2-aaea-303fee05a1ac)
 
 Plotter for "kidney cam", [Greubel/Forsey cam](https://equation-of-time.info/copy-of-equation-clocks-forerunners), declination cam and analemma.
+
+You can download ready-made ownload cams from this folder: https://github.com/jumpjack/heliostat/tree/main/cams
+
+You can use CamFollowerJS to import JSON cams and simulate cam/follower mechanism: [link](https://jumpjack.github.io/CamFollowerJS/)
+
+You can use [Algodoo](http://www.algodoo.com/) to import cams as 3d images and build 3d mechanisms.
 
 
 ### Made with Three.js
