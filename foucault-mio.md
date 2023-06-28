@@ -57,7 +57,7 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
  
 
-1: $$ {V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b} $$
+1: $${V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$$
 
 da cui:
 
@@ -70,7 +70,7 @@ che può essere espressa anche come:
 dove:
 
 
-- $$ {v_B} $$ = velocità di B
+- $${v_B}$$ = velocità di B
 - $$ {V_A} $$ = velocità di A
 
 Sulla quantità al numeratore possiamo porre due condizioni:
@@ -117,7 +117,7 @@ Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c
 
 Quindi abbiamo complessivamente queste 3 condizioni:
 
-- 3: $$\frac{B}{b} > \frac{C}{c} $$
+- 3: $$ \frac{B}{b} > \frac{C}{c} $$
 - 9: $$ b + B = c + C $$
 - 5: $$ \frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b} $$
 
