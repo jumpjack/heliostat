@@ -57,9 +57,10 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
 1: 
 
-$$\begin{aligned}
-\Large{{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}}
-\end{aligned}$$
+When $a \ne 0$, there are two solutions to $(ax^2 + bx + c = 0)$ and they are 
+$$ x = {-b \pm \sqrt{b^2-4ac} \over 2a} $$
+
+$$\Large{{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}}$$
 
 da cui:
 
