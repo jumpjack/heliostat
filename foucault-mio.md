@@ -57,11 +57,11 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
  
 
-1: $${V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$$
+1: $$\Large{{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}}$$
 
 da cui:
 
-$$1a: {v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}$$
+1a: $$\Large{{v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}}$$
 
 che può essere espressa anche come:
 
