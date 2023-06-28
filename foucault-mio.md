@@ -145,9 +145,9 @@ La (9) diventa:
 
 E la 5 diventa:
 
- $$ \Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\ $$
+ $$ \Large {frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}} $$
 
- $$ \Large5 - \frac{1}{2} = \frac{9}{10}5\ $$
+ $$ \Large {5 - \frac{1}{2} = \frac{9}{10}5} $$
 
  $$ 5-0.5=\frac{45}{10} $$
 
