@@ -121,6 +121,8 @@ Maybe these sites could provide some hints (I am currently investigating):
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e4e21218-d761-4cd2-aaea-303fee05a1ac)
 
+Cams plotter - try it here: [link](https://jumpjack.github.io/heliostat/equation-of-time.html)
+
 Plotter for "kidney cam", [Greubel/Forsey cam](https://equation-of-time.info/copy-of-equation-clocks-forerunners), declination cam and analemma.
 
 You can download ready-made ownload cams from this folder: https://github.com/jumpjack/heliostat/tree/main/cams
