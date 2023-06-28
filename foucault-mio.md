@@ -69,7 +69,7 @@ che può essere espressa anche come:
 
 dove:
 
-- $$ \Large{{v_B}} $$ = velocità di B
+- $$ {v_B} $$ = velocità di B
 - $$ \Large{{V_A}} $$ = velocità di A
 
 Sulla quantità al numeratore possiamo porre due condizioni:
