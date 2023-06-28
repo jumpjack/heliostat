@@ -133,23 +133,23 @@ Infatti:
 
 La (3) diventa:
 
- $$ \Large{\frac{5}{1} > \frac{2}{4}} $$ 
+ $$ \Large{\frac{5}{1} > \frac{2}{4}} $$
 
- $$ \Large{5>\frac{1}{2}} $$ 
+ $$ \Large{5>\frac{1}{2}} $$
 
 La (9) diventa:
 
- $$ 1 + 5 = 4 + 2 $$ 
+ $$ 1 + 5 = 4 + 2 $$
 
- $$ 6 = 6 $$ 
+ $$ 6 = 6 $$
 
 E la 5 diventa:
 
- $$ \Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\ $$ 
+ $$ \Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\ $$
 
- $$ \Large5 - \frac{1}{2} = \frac{9}{10}5\ $$ 
+ $$ \Large5 - \frac{1}{2} = \frac{9}{10}5\ $$
 
- $$ 5-0.5=\frac{45}{10} $$ 
+ $$ 5-0.5=\frac{45}{10} $$
 
  $$ 4.5=4.5 $$ 
 
