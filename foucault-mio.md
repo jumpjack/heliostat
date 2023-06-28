@@ -145,9 +145,9 @@ La (9) diventa:
 
 E la 5 diventa:
 
- $$ \Large {frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}} $$
+ $$  frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}  $$
 
- $$ \Large {5 - \frac{1}{2} = \frac{9}{10}5} $$
+ $$ 5 - \frac{1}{2} = \frac{9}{10}5 $$
 
  $$ 5-0.5=\frac{45}{10} $$
 
@@ -184,19 +184,19 @@ Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente
 - 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$ 
     - B/b = 5
     - C/c = 1/2
-- 5:  $$ \Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\ $$ 
-    -  $$ \Large\frac{40}{8} - \frac{16}{32} = \frac{9}{10}\frac{40}{8}\ $$ 
-    -  $$ \Large 5 - \frac{1}{2} = 5\frac{9}{10}\ $$ 
-    -  $$ \Large \frac{9}{2} = \frac{45}{10}\ $$ 
-    -  $$ \Large \frac{9}{2} = \frac{9}{2}\ $$ 
+- 5:  $$ \frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\ $$ 
+    -  $$ \frac{40}{8} - \frac{16}{32} = \frac{9}{10}\frac{40}{8}\ $$ 
+    -  $$  5 - \frac{1}{2} = 5\frac{9}{10}\ $$ 
+    -  $$  \frac{9}{2} = \frac{45}{10}\ $$ 
+    -  $$  \frac{9}{2} = \frac{9}{2}\ $$ 
 
 # Cambiare i valori suggeriti da Foucault
 
 Di queste 3 condizioni:
 
-- 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$ 
-- 9:  $$ b + B = c + C $$ 
-- 5:  $$ \Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\ $$ 
+- 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$
+- 9:  $$ b + B = c + C $$
+- 5:  $$ \Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b} $$ 
 
 Le prime due sono indispensabili; sulla (5) si può lavorare; bisogna tenere presente che la (5) è dettata dalla necessità che la ruota finale B abbia velocità pari a 9/10 della velocità di A:
 
