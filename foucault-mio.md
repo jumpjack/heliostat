@@ -57,7 +57,9 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
  
 
-$`1: \{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}`$
+```math
+1: \{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}
+```
 
 da cui:
 
