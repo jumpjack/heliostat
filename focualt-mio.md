@@ -55,13 +55,13 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
 
-1: 
+ 
 
-$\{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$
+$1: \{V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$
 
 da cui:
 
-1a: ${v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}$
+$1a: \{v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}$
 
 che può essere espressa anche come:
 
