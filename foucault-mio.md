@@ -65,15 +65,13 @@ da cui:
 
 che può essere espressa anche come:
 
-1b: $$ \Large{v_B=\frac{Bc-Cb}{Bc}V_A} $$
+1b: $$ v_B=\frac{Bc-Cb}{Bc}V_A $$
 
 dove:
 
-latex test: $$ V_x = 2*3 $$
-
 
 - $$ {v_B} $$ = velocità di B
-- $$ \Large{{V_A}} $$ = velocità di A
+- $$ {V_A} $$ = velocità di A
 
 Sulla quantità al numeratore possiamo porre due condizioni:
 
@@ -81,33 +79,33 @@ Sulla quantità al numeratore possiamo porre due condizioni:
 
 Per avere **verso di $$ v_B $$ uguale a quello di $$ V_A $$** il numeratore dovrà essere maggiore di 0:
 
-2: $\frac{B}{b} - \frac{C}{c}>0$ 
+2: $$ \frac{B}{b} - \frac{C}{c}>0 $$ 
 
 quindi:
 
-3: $\Large{\frac{B}{b}>\frac{C}{c}}$;
+3: $$ \frac{B}{b}>\frac{C}{c} $$
 
 **Condizione 2**
 
-**Per avere esattamente $v_B = \frac{9}{10}V_A$**  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+**Per avere esattamente $$ v_B = \frac{9}{10}V_A $$**  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
 
 dovrà essere:
 
-4: $\Large\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10}\$ 
+4: $$\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10} $$ 
 
 Cioè:
 
-5:  $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+5:  $$ \frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b} $$ 
 
 da cui:
 
-6: $\frac{b}{B}\frac{C}{c}=\frac{1}{10}$
+6: $$ \frac{b}{B}\frac{C}{c}=\frac{1}{10} $$
 
 Relazione che è soddisfatta, ad esempio, prendendo:
 
-7: $B=5b$
+7: $$ B=5b $$
 
-8: $C=\frac{1}{2}c$
+8: $$ C=\frac{1}{2}c $$
 
 Formule originali:
 
@@ -119,9 +117,9 @@ Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c
 
 Quindi abbiamo complessivamente queste 3 condizioni:
 
-- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
-- 9: $b + B = c + C$
-- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+- 3: $$\frac{B}{b} > \frac{C}{c} $$
+- 9: $$ b + B = c + C $$
+- 5: $$ \frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b} $$
 
 Le ho elencate in ordine diverso rispetto a quello in cui le ho prima mostrate perchè la (5) può forse essere modificata, a condizione di modificare anche quella su A-a-A1-a1, per eventualmente provare a ridurre le dimensioni delle ruote a 200 denti, che rendono il meccanismo un po' ingombrante.
 
@@ -135,25 +133,25 @@ Infatti:
 
 La (3) diventa:
 
-$\Large{\frac{5}{1} > \frac{2}{4}}$
+ $$ \Large{\frac{5}{1} > \frac{2}{4}} $$ 
 
-$\Large{5>\frac{1}{2}}$
+ $$ \Large{5>\frac{1}{2}} $$ 
 
 La (9) diventa:
 
-$1 + 5 = 4 + 2$
+ $$ 1 + 5 = 4 + 2 $$ 
 
-$6 = 6$
+ $$ 6 = 6 $$ 
 
 E la 5 diventa:
 
-$\Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\$ 
+ $$ \Large\frac{5}{1} - \frac{2}{4} = \frac{9}{10}\frac{5}{1}\ $$ 
 
-$\Large5 - \frac{1}{2} = \frac{9}{10}5\$ 
+ $$ \Large5 - \frac{1}{2} = \frac{9}{10}5\ $$ 
 
-$5-0.5=\frac{45}{10}$ 
+ $$ 5-0.5=\frac{45}{10} $$ 
 
-$4.5=4.5$
+ $$ 4.5=4.5 $$ 
 
 ## Combinazioni possibili di in granaggi
 
@@ -181,54 +179,54 @@ La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfi
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/91f6e76a-e704-43f8-97e5-90531ef08077)
 
-Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente sono vere anche la (3) e la (5): 
+Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente sono vere anche la (3) e la (5):
 
-- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
+- 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$ 
     - B/b = 5
     - C/c = 1/2
-- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$
-    - $\Large\frac{40}{8} - \frac{16}{32} = \frac{9}{10}\frac{40}{8}\$ 
-    - $\Large 5 - \frac{1}{2} = 5\frac{9}{10}\$ 
-    - $\Large \frac{9}{2} = \frac{45}{10}\$ 
-    - $\Large \frac{9}{2} = \frac{9}{2}\$ 
+- 5:  $$ \Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\ $$ 
+    -  $$ \Large\frac{40}{8} - \frac{16}{32} = \frac{9}{10}\frac{40}{8}\ $$ 
+    -  $$ \Large 5 - \frac{1}{2} = 5\frac{9}{10}\ $$ 
+    -  $$ \Large \frac{9}{2} = \frac{45}{10}\ $$ 
+    -  $$ \Large \frac{9}{2} = \frac{9}{2}\ $$ 
 
 # Cambiare i valori suggeriti da Foucault
 
 Di queste 3 condizioni:
 
-- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
-- 9: $b + B = c + C$
-- 5: $\Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\$ 
+- 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$ 
+- 9:  $$ b + B = c + C $$ 
+- 5:  $$ \Large\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}\ $$ 
 
 Le prime due sono indispensabili; sulla (5) si può lavorare; bisogna tenere presente che la (5) è dettata dalla necessità che la ruota finale B abbia velocità pari a 9/10 della velocità di A:
 
-$v_B = \frac{9}{10}V_A$
+ $$ v_B = \frac{9}{10}V_A $$ 
 
 Questo però solo perchè **A** ha velocità pari a:
 
-10: $V_A=0.10V_C$
+10:  $$ V_A=0.10V_C $$ 
 
-dove $V_C$ è la velocità dell'orologio (Clock), e quindi:
+dove  $$ V_C $$  è la velocità dell'orologio (Clock), e quindi:
 
-11: $v_B = \frac{9}{10}V_A=0.9V_A=0.9 * 0.1V_C=0.09 V_C$
+11:  $$ v_B = \frac{9}{10}V_A=0.9V_A=0.9 * 0.1V_C=0.09 V_C $$ 
 
 ma la (10) è dovuta a come è strutturato il secondo meccanismo, dotato della coppia aggiuntiva a1-A1, oltre ad a-A; per questo meccanismo valgono infatti le relazioni:
 
-12: $\frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.10$ 
+12:  $$ \frac{a}{A}=\frac{20}{200}=\frac{1}{10}=0.10 $$ 
 
 e
 
-13: $\frac{a1}{A1}=\frac{18}{200}=\frac{9}{100}=0.09$ 
+13:  $$ \frac{a1}{A1}=\frac{18}{200}=\frac{9}{100}=0.09 $$ 
 
 Essendo la ruota A1 solidale con l'asse XX', la velocità di A1 è anche la velocità dell'asse XX', e risulterà pari a:
 
-14: $V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C$
+14:  $$ V_{A_1}=\frac{a1}{A1}V_C=\frac{18}{200}V_C=\frac{9}{100}V_C=0.09V_C $$ 
 
 e:
 
-15: $V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C$
+15:  $$ V_A=\frac{20}{200}V_C =\frac{1}{10}V_C=0.10V_C $$ 
 
-Quindi la (13) fa sì che  $V_{A_1}=V_{XX'}=0.09V_C$ (14), mentre la (12) fa sì che  $v_B=0.09 V_C$ (11):
+Quindi la (13) fa sì che   $$ V_{A_1}=V_{XX'}=0.09V_C $$  (14), mentre la (12) fa sì che   $$ v_B=0.09 V_C $$  (11):
 
 - (13) =>  (14)
 - (12) => (11)
@@ -236,35 +234,35 @@ Quindi la (13) fa sì che  $V_{A_1}=V_{XX'}=0.09V_C$ (14), mentre la (12) fa sì
 
 cioè:
 
-- $\frac{a1}{A1} = 0.09$  => $V_{A_1} = V_{XX'} = 0.09V_C$
-- $\frac{a}{A} = 0.10$    => $v_B     = 0.09 V_C$
+-  $$ \frac{a1}{A1} = 0.09 $$   =>  $$ V_{A_1} = V_{XX'} = 0.09V_C $$ 
+-  $$ \frac{a}{A} = 0.10 $$     =>  $$ v_B     = 0.09 V_C $$ 
 
 
 Ma proviamo a generalizzare: riprendiamo la 1b:
 
-1b: $\Large{v_B=\frac{Bc-Cb}{Bc}V_A}$
+1b:  $$ \Large{v_B=\frac{Bc-Cb}{Bc}V_A} $$ 
 
 La possiamo anche riscrivere come:
 
-16: $\Large{v_B=\frac{Bc-Cb}{Bc}\frac{a}{A}V_C}$
+16:  $$ \Large{v_B=\frac{Bc-Cb}{Bc}\frac{a}{A}V_C} $$ 
 
 Mentre la velocità dell'asse XX' è:
 
-17: $V_{XX'} = \frac{a_1}{A1}V_C$
+17:  $$ V_{XX'} = \frac{a_1}{A1}V_C $$ 
 
 Questo significa che, affinchè le due velocità siano uguali, è necessario che:
 
-18: $\Large{\frac{Bc-Cb}{Bc}\frac{a}{A} = \frac{a_1}{A_1}}$
+18:  $$ \Large{\frac{Bc-Cb}{Bc}\frac{a}{A} = \frac{a_1}{A_1}} $$ 
 
 Proviamo a rendere le cose più semplici rispettando l'ipotesi A=A1: possiamo allora semplificare a:
 
-19: $\Large{\frac{Bc-Cb}{Bc}a = a_1}$
+19:  $$ \Large{\frac{Bc-Cb}{Bc}a = a_1} $$ 
 
 cioè
 
-20: $\Large{\frac{a_1}{a}=\frac{Bc-Cb}{Bc}}$
+20:  $$ \Large{\frac{a_1}{a}=\frac{Bc-Cb}{Bc}} $$ 
 
-Questo vorrebbe dire che dovrebbe essere possibile rendere uguali $v_B$ e $V_{XX'}$ a prescindere dalle dimensioni di $A$ e $A_1$, purchè sia rispettata la (20).
+Questo vorrebbe dire che dovrebbe essere possibile rendere uguali  $$ v_B $$  e  $$ V_{XX'} $$  a prescindere dalle dimensioni di  $$ A $$  e  $$ A_1 $$ , purchè sia rispettata la (20).
 
 Per i succitati valori:
 
@@ -281,30 +279,30 @@ e:
 
 La (20) diventa:
 
-21: $\Large{\frac{a1}{a}=\frac{5 * 4 - 2 * 1}{5 * 4} = \frac{18}{20}}$
+21:  $$ \Large{\frac{a1}{a}=\frac{5 * 4 - 2 * 1}{5 * 4} = \frac{18}{20}} $$ 
 
 che è quanto riportato nei testi originali di Foucault.
 
 Quindi complessivamente le condizioni necessarie dovrebbero essere:
 
-- 3: $\Large{\frac{B}{b} > \frac{C}{c}}$
-- 9: $b + B = c + C$
-- 20: $\Large{\frac{a_1}{a} = \frac{Bc-Cb}{Bc}}$
+- 3:  $$ \Large{\frac{B}{b} > \frac{C}{c}} $$ 
+- 9:  $$ b + B = c + C $$ 
+- 20:  $$ \Large{\frac{a_1}{a} = \frac{Bc-Cb}{Bc}} $$ 
 
 Sviluppiamo la (3):
 
-3a: $\Large{b < \frac{B}{\frac{C}{c}}}$
+3a:  $$ \Large{b < \frac{B}{\frac{C}{c}}} $$ 
 
-3b: $\Large{b < \frac{cB}{C}}$
+3b:  $$ \Large{b < \frac{cB}{C}} $$ 
 
 Sviluppiamo la (9):
 
-9a: $b  = c + C - B$
+9a:  $$ b  = c + C - B $$ 
 
 e mettiamola la (9a) nella (20), tenendo conto anche della 3b:
 
-- 3b: $\Large{b < \frac{cB}{C}}$
-- 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
+- 3b:  $$ \Large{b < \frac{cB}{C}} $$ 
+- 22:  $$ \Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc} $$ 
 
 Queste dovrebbero essere le uniche condizioni da rispettare, a prescindere dalle dimensioni di A e A1.
 
@@ -315,10 +313,10 @@ C'è però da considerare che il satellite deve essere attaccato alla ruota A, q
 
 Quindi alla fine le condizioni  sarebbero:
 
-- 3b: $\Large{b < \frac{cB}{C}}$
-- 23: $A > b+B$
-- 9: $b + B = c + C$
-- 22: $\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$
+- 3b:  $$ \Large{b < \frac{cB}{C}} $$ 
+- 23:  $$ A > b+B $$ 
+- 9:  $$ b + B = c + C $$ 
+- 22:  $$ \Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc} $$
 
 C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
 
@@ -335,3 +333,4 @@ Schematicamente:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/82dbec2b-d6e5-4dea-91a9-2659c5c7a8aa)
 
 
+.stl)
