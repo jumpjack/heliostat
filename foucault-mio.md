@@ -65,18 +65,18 @@ da cui:
 
 che può essere espressa anche come:
 
-1b: $`\Large{v_B=\frac{Bc-Cb}{Bc}V_A}`$
+1b: $$ \Large{v_B=\frac{Bc-Cb}{Bc}V_A} $$
 
 dove:
 
-- $$\Large{{v_B}}$$ = velocità di B
-- $$\Large{{V_A}}$$ = velocità di A
+- $$ \Large{{v_B}} $$ = velocità di B
+- $$ \Large{{V_A}} $$ = velocità di A
 
 Sulla quantità al numeratore possiamo porre due condizioni:
 
 **Condizione 1**
 
-Per avere **verso di $$v_B$$ uguale a quello di $$V_A$$** il numeratore dovrà essere maggiore di 0:
+Per avere **verso di $$ v_B $$ uguale a quello di $$ V_A $$** il numeratore dovrà essere maggiore di 0:
 
 2: $\frac{B}{b} - \frac{C}{c}>0$ 
 
