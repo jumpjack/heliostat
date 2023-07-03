@@ -95,6 +95,7 @@ References:<br>
 <a href="https://www.renatoweb.it/renatomeridiane/gnomon13.htm">Formula di Cooper per declinazione solare</a><br>
 <a href="https://www.tecnologica.altervista.org/php5/index.php?title=Declinazione_solare">Formula e valori tabulati</a><br>
 <a href="https://www.desmos.com/calculator/hbsrvo4bkv?lang=it">Grafico su Desmos</a><br>
+<a href="https://anyconv.com/it/convertitore-da-png-a-stl/">PNG to STL converter</a><br>
 </ul>
   <script>
   // min/max in second column have been  manually set after first run of the script
@@ -276,10 +277,9 @@ References:<br>
           y: declination
         });
 
-        polarData.push({ r: parseInt(kidneyVal.toFixed(0)), theta: dayOfYear });
-//console.log(dayOfYear, kidneyVal.toFixed(0));
-        polarData2.push({ r: parseInt(GreubelForseyVal.toFixed(0)), theta: dayOfYear });
-        polarData3.push({ r: parseInt(declinationPolar.toFixed(0)), theta: dayOfYear });
+        polarData.push({ r: kidneyVal, theta: dayOfYear });
+        polarData2.push({ r: GreubelForseyVal, theta: dayOfYear });
+        polarData3.push({ r: declinationPolar, theta: dayOfYear });
 
         analemmaData.push({
           x: cartesianVal,
