@@ -1,7 +1,7 @@
 This folder contains cam profiles in 3 formats:
 
 - PNG: for viewing, and for importing in Algodoo for 3d simulations
-- JSON: for importing in CamFollowerJS page, to study and edit profile and to calculate pressure angle
+- JSON: for importing in [CamFollowerJS page](https://jumpjack.github.io/CamFollowerJS/), to study and edit profile and to calculate pressure angle
 - STL: for 3d printing
 
 Two variants exist for each cam:
