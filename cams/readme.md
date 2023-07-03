@@ -13,33 +13,30 @@ Two variants exist for each cam:
 ## kidney cam
 
 - Low res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/kidneyCam10.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/kidneyCam10.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/kidneyCam10.stl)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/kidneyCam10.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/kidneyCam10.json)
 - High res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/kidneyCam.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/kidneyCam.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/kidneyCam.stl)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/kidneyCam.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/kidneyCam.json)
+    - [STL](https://github.com/jumpjack/heliostat/blob/main/cams/kidneyCam.stl)
  
 ## Greubel cam
 
 - Low res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/GreubelCam10.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/GreubelCam10.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/GreubelCam10.stl)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/GreubelCam10.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/GreubelCam10.json)
 - High res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/GreubelCam.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/GreubelCam.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/GreubelCam.stl)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/GreubelCam.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/GreubelCam.json)
+    - [STL](https://github.com/jumpjack/heliostat/blob/main/cams/GreubelCam.stl)
 
 # Declination
 
 - Low res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/declinationCam10.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/declinationCam10.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/declinationCam10.stl)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/declinationCam10.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/declinationCam10.json)
 - High res:
-    - [PNG](https://github.com/jumpjack/heliostat/blob/main/declinationCam.png)
-    - [JSON](https://github.com/jumpjack/heliostat/blob/main/declinationCam.json)
-    - [STL](https://github.com/jumpjack/heliostat/blob/main/declinationCam)
+    - [PNG](https://github.com/jumpjack/heliostat/blob/main/cams/declinationCam.png)
+    - [JSON](https://github.com/jumpjack/heliostat/blob/main/cams/declinationCam.json)
+    - [STL](https://github.com/jumpjack/heliostat/blob/main/cams/declinationCam.stl)
  
