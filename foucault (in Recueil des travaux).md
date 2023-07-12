@@ -5,13 +5,18 @@ di  C.-M. Gariel (Madre di Foucault), pubblicato postumo nel 1878
 - [Link 1](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up)
 - [Link 2](https://archive.org/details/recueildestrava01lissgoog/page/427/mode/1up)
 
-Modello 1 (fig. 24 nel testo):
+Eliostato - Modello 1 (fig. 24 nel testo):
 
 ![FIG.24](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)
 
-Modello 2 (Tavola 13 in fondo al libro):
+Eliostato - Modello 2 (Tavola 13 in fondo al libro):
 
 ![Tavola 13](https://github.com/jumpjack/heliostat/blob/main/images/tav13mini.png)
+
+
+Siderostato (tavole 14 e 15 in fondo al libro)
+
+![tav. 14](https://github.com/jumpjack/heliostat/assets/1620953/b5ad90ad-3268-43d3-a4de-1eef143a11dc)
 
 ------------
 
