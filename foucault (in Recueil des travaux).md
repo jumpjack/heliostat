@@ -1,19 +1,30 @@
+# Recueil des travaux scientifique de Leon Foucault
 
-Recueil des travaux scientifique de Leon Foucault by C.-M. Gariel - 1878
+di  C.-M. Gariel (Madre di Foucault), pubblicato postumo nel 1878
 
 - [Link 1](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up)
 - [Link 2](https://archive.org/details/recueildestrava01lissgoog/page/427/mode/1up)
 
+Modello 1 (fig. 24 nel testo):
+
+![FIG.24](https://github.com/jumpjack/heliostat/assets/1620953/0d856601-2958-46e0-8f1b-2de28b63ad30)
+
+Modello 2 (Tavola 13 in fondo al libro):
+
+![Tavola 13](https://github.com/jumpjack/heliostat/blob/main/images/tav13mini.png)
+
+------------
+
 P. 427
-# Descrizione dell'eliostato (1)
+# Descrizione dell'eliostato (V. nota (1) )
 
 ## Primo modello
 
-Lo specchio M (fig. 24) di forma allungata si appoggia su una colonna verticale V a forchetta attraverso un piatto circolare P su cui ruota con un leggero attrito intorno al loro centro comune. Questo disco P è sospeso da due perni alle estremità dei due bracci della forchetta e sulla sua parte posteriore porta un'asta normale C'N attraverso la quale viene comunicato il movimento. Un ingranaggio motore è contenuto nella scatola cilindrica B e fa muovere un asse orario XX' inclinato, secondo la latitudine del luogo, con un giro ogni ventiquattro ore. Questo asse, contenuto all'interno del tubo T, porta all'estremità superiore un centro su cui è montata una semicirconferenza D che comprende l'arco delle declinazioni solari. Il piano di quest'arco segue il movimento dell'asse con cui viene reso solidale mediante una vite di serraggio. Parallelamente al diametro di questa semicirconferenza si estende una barra d'acciaio, una sorta di ago motore, che si articola con una delle sue estremità N con l'asta normale e con l'altra estremità N' si inserisce in una guida fissata sul retro dello specchio in un piano che passa per i perni del disco. L'ago motore, l'asta normale e la guida dello specchio formano un triangolo rettangolo su cui si basa la teoria dello strumento.
+Lo specchio **M** (fig. 24) di forma allungata si appoggia su una colonna verticale **V** a forchetta attraverso un piatto circolare **P** su cui ruota con un leggero attrito intorno al loro centro comune. Questo disco P è sospeso da due perni alle estremità dei due bracci della forchetta e sulla sua parte posteriore porta un'asta normale **C'N** attraverso la quale viene comunicato il movimento. Un ingranaggio motore è contenuto nella scatola cilindrica **B** e fa muovere un asse orario **XX'** inclinato, secondo la latitudine del luogo, con un giro ogni ventiquattro ore. Questo asse, contenuto all'interno del tubo **T**, porta all'estremità superiore un centro su cui è montata una semicirconferenza **D** che comprende l'arco delle declinazioni solari. Il piano di quest'arco segue il movimento dell'asse con cui viene reso solidale mediante una vite di serraggio. Parallelamente al diametro di questa semicirconferenza si estende una barra d'acciaio, una sorta di ago motore, che si articola con una delle sue estremità **N** con l'asta normale e con l'altra estremità **N'** si inserisce in una guida fissata sul retro dello specchio in un piano che passa per i perni del disco. L'ago motore, l'asta normale e la guida dello specchio formano un triangolo rettangolo su cui si basa la teoria dello strumento.
 
-La colonna V, che sostiene lo specchio, è in grado di ricevere due diversi movimenti: un movimento di traslazione e un movimento di abbassamento o sollevamento; tuttavia, qualunque sia la sua posizione, è necessario che il punto medio C' della retta che forma l'asse dei perni del disco si mantenga a una distanza invariabile dal punto C dell'asse orario situato al centro dell'arco di declinazione.
+La colonna **V**, che sostiene lo specchio, è in grado di ricevere due diversi movimenti: un movimento di traslazione e un movimento di abbassamento o sollevamento; tuttavia, qualunque sia la sua posizione, è necessario che il punto medio **C'** della retta che forma l'asse dei perni del disco si mantenga a una distanza invariabile dal punto **C** dell'asse orario situato al centro dell'arco di declinazione.
 
-*1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.*
+*(1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.*
 
 P.428:
 
