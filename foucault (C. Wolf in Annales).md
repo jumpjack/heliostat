@@ -1,4 +1,4 @@
-- [Description du sidérostat de L. Foucault](http://www.numdam.org/item/10.24033/asens.78.pdf), by C. WOLF, in "Annales Scientifiques de l'École Normale Supérieure, 2e série, tome 1 (1872), p. 51-84"
+- [Description du sidérostat de L. Foucault](http://www.numdam.org/item/10.24033/asens.78.pdf), by C. WOLF (only pages 51-84 from "Annales Scientifiques de l'École Normale Supérieure", 2e série, tome 1 (1872) )
 - Altre immagini in "[Recueil des travaux scientifiques de Léon Foucault](https://archive.org/details/recueildestrava00lissgoog/page/n653/mode/thumb?q=siderostat)" ("Raccolta di lavori scientifici"), di Leon Foucault (pubblicato postumo nel 1878):
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/03bba9b9-3fa7-4f49-a3e9-75b84c4355ef)
