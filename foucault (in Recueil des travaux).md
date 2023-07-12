@@ -282,9 +282,10 @@ questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizi
 
 Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a1** con 18 denti, che ingrana con una ruota **A1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
 
-Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti.
+Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti. *\[Nota: più avanti, a p.582, viene spiegato che l'asse orario XX' **non** è solidale con la ruota **r**: gli passa attraverso e si connette con la forcella **g**, la quale invece gira insieme all'asse orario; la ruota **r** gira alla stessa identica velocità di **XX'**, pur non essendo solidale con esso, **solo se nessuno agisce esernamente su un perno** che attiva il meccanismo satellite descritto più avanti, meccanismo che  permette di far avanzare o retrocedere a piacimento la forcella **g** rispetto all'asse orario facendo ruotare la ruota **r** indipendentemente dall'asse orario **XX'**\]*
 
 Il meccanismo **R** che trasmette il movimento all'asse è posto all'interno di una gabbia con pareti di vetro alla base dell'apparecchio: viene messo in movimento da un peso che scende in un pozzo attraverso un foro praticato nella colonna di pietra su cui poggia il siderostato; il movimento viene reso uniforme grazie a un regolatore alette e contrappesi di L. Foucault (pagina 505), che era stato precedentemente utilizzato da M. Eichens su vari strumenti equatoriali e che fornisce un movimento estremamente regolare.
+
 Abbiamo già accennato in precedenza a come il movimento di questo meccanismo viene trasmesso all'asse orario.
 
 -----------
@@ -295,11 +296,15 @@ p. 582
 
 Fig. 1, Planche 14  (Figura 1, Tavola 14)
 
-Era necessario per l'uso del siderostato disporre di mezzi di rientro per variare di piccole quantità l'angolo orario o la distanza polare, senza fermare il movimento del meccanismo dell'orologio. 
+Era necessario, per poter utilizzare il siderostato, disporre di un "sistema di input" per variare di piccole quantità:
+- l'angolo orario
+- la distanza polare
 
-Questo risultato è stato ottenuto mediante l'uso di un meccanismo satellite **n**, **p** che si vede nella vista laterale in fig. 1, tav. 14; \[il meccanismo è \], simile a quello che il signor Eichens adotta da tempo negli strumenti equatoriali. Questo meccanismo è azionato tramite una leva **q**, la cui impugnatura è a portata dell'osservatore.
+senza fermare il movimento del meccanismo dell'orologio. 
 
-Inoltre, era necessario produrre, mediante una leva immobile, un movimento di rientro del cerchio di declinazione posto all'estremità di un arco mobile, senza alterare il movimento di quest'asse. L. Foucault aveva indicato che la soluzione doveva essere cercata nell'uso di un meccanismo satellite, ma non aveva fornito né spiegato il sistema che intendeva applicare. La disposizione ideata e applicata dal signor Eichens è indicata nella figura 1, tavola 14, e nella figura 3, tavola 15: 
+Questo risultato *(\[il primo punto\])* è stato ottenuto mediante l'uso di un meccanismo satellite **n**, **p** che si vede nella vista laterale in fig. 1, tav. 14; \[il meccanismo è \], simile a quello che il signor Eichens adotta da tempo negli strumenti equatoriali. Questo meccanismo è azionato tramite una leva **q**, la cui impugnatura è a portata dell'osservatore.
+
+Inoltre *(\[il secondo punto\])*, era necessario produrre, mediante una leva immobile *(\[cioè che non ruota con l'asse orario\])*, un movimento del cerchio di declinazione posto all'estremità dell'asse mobile, senza alterare il movimento di quest'ultimo. L. Foucault aveva indicato che la soluzione doveva essere cercata nell'uso di un meccanismo satellite, ma non aveva fornito né spiegato il sistema che intendeva applicare. La disposizione ideata e applicata dal signor Eichens è indicata nella figura 1, tavola 14, e nella figura 3, tavola 15: 
 
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
@@ -310,7 +315,7 @@ Fig.3, Planche 15  (Figura 3, tavola 15)
 
 Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori)
 
-nella vista in sezione di fig. 3, tav. 15, le parti che sono solidali sono indicate da tratteggi diretti nello stesso senso e quelle che sono indipendenti presentano tratteggi in senso contrario. Non insisteremo  sul funzionamento di questo dispositivo che soddisfa le condizioni imposte e ci limiteremo a indicare i dati numerici che consentono di rendersi conto degli effetti che produce.
+Nella vista in sezione di fig. 3, tav. 15, le parti che sono solidali sono indicate da tratteggi diretti nello stesso senso e quelle che sono indipendenti presentano tratteggi in senso contrario. Non insisteremo  sul funzionamento di questo dispositivo che soddisfa le condizioni imposte e ci limiteremo a indicare i dati numerici che consentono di rendersi conto degli effetti che produce.
 
 - a, pignone di 18 denti; \[**NOTA: nella pagina precedente viene detto che è a1 ad avere 18 denti!**\]
 - a1, pignone, montato sullo stesso albero, 20 denti;
