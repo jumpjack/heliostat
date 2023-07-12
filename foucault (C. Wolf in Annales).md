@@ -1,9 +1,31 @@
-- [Description du sidérostat de L. Foucault](http://www.numdam.org/item/10.24033/asens.78.pdf), by C. WOLF (only pages 51-84 from "Annales Scientifiques de l'École Normale Supérieure", 2e série, tome 1 (1872) )
-- Altre immagini in "[Recueil des travaux scientifiques de Léon Foucault](https://archive.org/details/recueildestrava00lissgoog/page/n653/mode/thumb?q=siderostat)" ("Raccolta di lavori scientifici"), di Leon Foucault (pubblicato postumo nel 1878):
+# Description du sidérostat de L. Foucault
+di C. WOLF 
+(da "Annales Scientifiques de l'École Normale Supérieure", 2a serie, tomo 1 (1872)):
+- [Pagine 51-84](http://www.numdam.org/item/10.24033/asens.78.pdf), senza immagini
+- [Libro completo con immagini](https://github.com/jumpjack/heliostat/blob/main/Annales_Scientifiques_de_L_%C3%89cole_Normal.pdf)
+
+Tavola 1 del testo:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6ac0eae9-4cc8-490c-9a9b-3d7ad6f46a38)
+
+(versione ad alta risoluzione [qui](https://github.com/jumpjack/heliostat/blob/main/images/tavola-I-Annales.png))
+
+
+Altre immagini sono disponibili in "[Recueil des travaux scientifiques de Léon Foucault](https://archive.org/details/recueildestrava00lissgoog/page/n653/mode/thumb?q=siderostat)" ("Raccolta di lavori scientifici"), di Leon Foucault (pubblicato postumo nel 1878), disponibile tradotto [qui](https://github.com/jumpjack/heliostat/blob/main/foucault%20(in%20Recueil%20des%20travaux).md):
+
+Tavola 14:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/03bba9b9-3fa7-4f49-a3e9-75b84c4355ef)
 
+(versione ad alta risoluzione [qui](https://github.com/jumpjack/heliostat/blob/main/images/tav14-foucault-travaux.png))
+
+
+Tavol 15:
+
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/527fb985-b632-4852-b634-fb7a359ee934)
+
+(versione ad alta risoluzione [qui](https://github.com/jumpjack/heliostat/blob/main/images/tav15-foucault-travaux.png))
+
 
 
 -----------
