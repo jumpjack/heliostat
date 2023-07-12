@@ -258,12 +258,27 @@ Lo specchio **M** ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fu
 Fig.3, Planche 14 (Figura 3, tavola 14)
 
 
-L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne **TT**; quest'asse si prolunga con una parte in bronzo **g** che fa corpo con esso e che serve da supporto per il cerchio di declinazione **dd**, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti **j**, la coda **l** della forcella direttiva in alluminio **f**, che guiderà il bastoncino direttivo dello specchio **S**. La connessione tra queste due parti avviene tramite il manicotto **m**, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti conservati alle sue estremità.
+L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne **TT**; quest'asse si prolunga con una parte in bronzo **g** che fa corpo con esso e che serve da supporto per il cerchio di declinazione **dd**, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti **j**, la coda **l** della forcella direttiva in alluminio **f**, che guiderà il bastoncino direttivo dello specchio **S**. La connessione tra queste due parti avviene tramite il manicotto **m**, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti posti alle sue estremità.
 
 ![Fig. 1,2,3](https://github.com/jumpjack/heliostat/blob/main/images/tav14-fig1,2,3.png)
 
+Ipotsi di ricostruzione 3d (dubbi sull'alidada/nonio **e**):
 
-Il cerchio di declinazione è diviso in terzi di grado e ha un nonio e che indica i minuti. Nella parte superiore, l'asse orario porta un cerchio **hh** diviso in 24 ore, attorno al quale ruota un cerchio con alidada **VV** sul quale sono presenti due noni che indicano i 2 secondi di tempo; questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio **I** che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ab078b9e-b735-4455-accc-8e3c7f8659bb)
+
+Vista posteriore (supporti "j" per coda "I" della forcella):
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/4a85415d-b9ea-4978-ab22-9fdb6e93c7e5)
+
+
+Il cerchio di declinazione è diviso in terzi di grado e ha un nonio (\[alidada\]) **e** che indica i minuti. 
+
+Nella parte superiore \[dello strumento\], l'asse orario porta un cerchio **HH** diviso in 24 ore, attorno al quale ruota un cerchio con alidada **VV** sul quale sono presenti due noni che indicano i 2 secondi di tempo; 
+
+![Fig. 1,2,3](https://github.com/jumpjack/heliostat/blob/main/images/eliostato-foucault-spiegazione-alidada-orario.png)
+
+questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio **I** che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
+
 
 Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a1** con 18 denti, che ingrana con una ruota **A1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
 
