@@ -190,7 +190,12 @@ meridiano; di conseguenza, lo specchio è posizionato all'estremità inferiore d
 
 
 La direzione del raggio riflesso, determinata dalla linea che collega l'estremità dell'asse orario al centro dell'
-asse orizzontale intorno al quale ruota lo specchio, è inclinata di 10° al di sotto dell'orizzontale, al fine di 
+asse orizzontale intorno al quale ruota lo specchio, è inclinata di 10° al di sotto dell'orizzontale, 
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/5616bed4-c9c5-4967-9f82-6468ee71d3a5)
+
+
+al fine di 
 consentire l'osservazione degli astri molto vicini all'orizzonte sud, sopra il telescopio che deve essere collegato al siderostato.
 L'apparecchio presenta, indipendentemente dal suo supporto, tre elementi essenziali: lo specchio e il suo telaio,
 l'arco polare e il meccanismo che collega questo asse allo specchio, infine il motore e il regolatore.
