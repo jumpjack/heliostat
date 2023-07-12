@@ -200,17 +200,26 @@ asse orizzontale intorno al quale ruota lo specchio, è inclinata di 10° al di 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/5616bed4-c9c5-4967-9f82-6468ee71d3a5)
 
 
-al fine di 
-consentire l'osservazione degli astri molto vicini all'orizzonte sud, sopra il telescopio che deve essere collegato al siderostato.
-L'apparecchio presenta, indipendentemente dal suo supporto, tre elementi essenziali: lo specchio e il suo telaio,
-l'arco polare e il meccanismo che collega questo asse allo specchio, infine il motore e il regolatore.
+al fine di consentire l'osservazione degli astri molto vicini all'orizzonte sud, sopra il telescopio che deve essere collegato al siderostato.
+L'apparecchio presenta, indipendentemente dal suo supporto, tre elementi essenziali: 
+- lo specchio e il suo supporto,
+- l'asse polare e il meccanismo che collega questo asse allo specchio,
+- infine il motore e il regolatore.
+
+![Struttura](https://github.com/jumpjack/heliostat/assets/1620953/9e107b88-fea7-477d-b0a0-f5d5feb3f9cc)
 
 Le tavole 14 e 15 rappresentano l'apparecchio e i vari dettagli ad esso collegati, come segue:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/1c0cdf49-ddbe-48b8-8a5a-a60570194049)
 
 - Tav. 14
     - Fig. 1, elevazione laterale; 
     - fig. 2, vista frontale dello specchio e sezione verticale del supporto; 
     - fig. 3, sezione dello specchio.
+ 
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/cf9585b6-24c0-4127-8dcc-b0a1563c595c)
+    
 - Tav. 15
     - Fig. 1, elevazione della testa dell'asse polare; 
     - fig. 2, vista dall'alto della trasmissione del movimento; 
@@ -221,36 +230,34 @@ Le tavole 14 e 15 rappresentano l'apparecchio e i vari dettagli ad esso collegat
     
 In queste diverse figure, le stesse lettere si riferiscono agli stessi oggetti.
 
-L'apparecchio si appoggia su una base in ghisa sostenuta da tre viti livellatrici **U, U', U"**, con due livelle rettangolari 
-e un movimento di regolazione in azimut, il rullo su cui si appoggia una delle viti è provvisto di una guida mobile 
-tramite una vite con testa. **N N** è un supporto mobile in ghisa attorno a un asse verticale, la cui rotazione è 
-facilitata 
+L'apparecchio si appoggia su una base in ghisa sostenuta da tre viti livellatrici **U, U', U"** *(errore: queste lettere si riferiscono alla figura della TAV. I degli "Annales", invece in questo libro per le 3 viti vengono usare altre lettere, forse "v" minuscole)*, 
+
+
+![Confronto/errore](https://github.com/jumpjack/heliostat/assets/1620953/b9564f96-4b88-453e-b733-cb899312e489)
+
+con due livelle rettangolari e un movimento di regolazione in azimut, il rullo su cui si appoggia una delle viti è provvisto di una guida mobile tramite una vite con testa. **N N** è un supporto mobile in ghisa attorno a un asse verticale, la cui rotazione è facilitata 
 
 --------------
 p. 581
 
-dall'interposizione di tre rulli **G** che rotolano tra la base e la piastra **P**.
+dall'interposizione di tre ruote **G** che ruotano tra la base e la piastra **P**.
+
+![Figura 2, tavola 14](https://github.com/jumpjack/heliostat/blob/main/images/tav14-fig2-travaux.png)
+
+Fig.2, Planche 14 (Figura 2, Tavola 14)
 
 All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale **FF** sostenuta da tre colonne **O** e sulla quale è fissato il telaio che regge l'asse polare.
 
-
-![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
-
-Fig.3, Planche 15  (Figura 3, tavola 15)
+![Figura 1, tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/3295790e-c857-4e42-b33b-468b5342d355)
 
 
+Lo specchio **M** ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fuso a Saint Gobain e lavorato dal signor Ad. Martin; è fissato nel barilotto **Q** tramite tre sporgenze esterne **t** contro le quali si appoggia una molla a tre bracci **h**. Lo specchio è sostenuto dall'asse orizzontale **xx** sulla cima del supporto **N**: la coda direttiva è saldamente attaccata alla parte inferiore di questo barilotto ed è costituita da un tubo cavo.
 
-![Figura 4, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/27f8c283-8fef-4c5e-98b8-d3f226671821)
+![Figura 3, tavola 14](https://github.com/jumpjack/heliostat/blob/main/images/tav14-fig3-travaux.png)
 
-Fig. 4, Planche 15 (Figura 4, Tavola 15)
-
-
-![(Figura 5, Tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/b618ffa2-6341-48b5-8d5a-8d858666ddfc)
-
-Fig.5, Planche 15 (Figura 5, Tavola 15)
+Fig.3, Planche 14 (Figura 3, tavola 14)
 
 
-Lo specchio **M** ha un diametro di 0,30 m e uno spessore di 0,05 m; è stato fuso a Saint Gobain e lavorato dal signor Ad. Martin; è fissato nel barilotto **Q** tramite tre sporgenze esterne **t** contro le quali si appoggia una molla a tre bracci **h**. Lo specchio è sostenuto dall'asse orizzontale xx sulla cima della colonna **N**: la coda direttiva è saldamente fissata nella parte inferiore di questo barilotto ed è costituita da un tubo cavo.
 L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a cuscinetti fissati alle colonne **TT**; quest'asse si prolunga con una parte in bronzo **g** che fa corpo con esso e che serve da supporto per il cerchio di declinazione **dd**, che è ridotto a poco più della metà per non ostacolare il movimento dello specchio; porta, lungo un diametro, tramite due morsetti **j**, la coda **l** della forcella direttiva in alluminio **f**, che guiderà il bastoncino direttivo dello specchio **S**. La connessione tra queste due parti avviene tramite il manicotto **m**, che è stato reso abbastanza lungo, ma la cui superficie di contatto è ridotta a due morsetti conservati alle sue estremità.
 
 Il cerchio di declinazione è diviso in terzi di grado e ha un nonio e che indica i minuti. Nella parte superiore, l'asse orario porta un cerchio HH diviso in 24 ore, attorno al quale ruota un cerchio con alidada VV sul quale sono presenti due noni che indicano i 2 secondi di tempo; questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio I che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
@@ -334,7 +341,7 @@ L'idée qui avait conduit L. Foucault à construire le sidérostat a été signa
 
 Le principe géométrique est le même que celui du grand héliostat ; mais, destiné à l'observation des astres entre le pole et l'horizon sud , l'instrument, à l'inverse des héliostats, renvoie les rayons du nord au sud dans le plan du méridien ; aussi le miroir est il placé à l'extrémité inférieure de l'axe horaire.
 La direction du rayon réfléchi , qui est donnée par la ligne qui joint l'extrémité de l'axe horaire au milieu de l'axe horizontal autour duquel tourne le miroir, est inclinée à 10° au-dessous de l'horizontale, dans le but de permettre l'observation des astres très voisins de l'horizon sud, pardessus la lunette qui doit être jointe au sidérostat.
-L'appareil présente à considérer, indépendamment de son support, trois éléments essentiels : le miroir et sa monture, l'are polaire, et le mécanisme qui établit la liaison de cet axe avec le miroir, enfin le moteur et le régulateur.
+L'appareil présente à considérer, indépendamment de son support, trois éléments essentiels : le miroir et sa monture, l'axe polaire, et le mécanisme qui établit la liaison de cet axe avec le miroir, enfin le moteur et le régulateur.
 Les planches 14 et 15 représentent l'appareil et les détails divers qui s'y rattachent, ainsi qu'il suit :
 Pl . 14. – Fig. 1 , élévation latérale ; fig. 2 , vue de face du miroir et coupe verticale du support; fig . 3 , coupe du miroir .
 Pl . 15. — Fig. 1 , élévation de la tête de l'axe polaire ; fig. 2 , vue par -dessus de la transmission de mouvement; fig . 3 , coupe et élévation latérales de l'axe polaire, mon trant le mouvement de rappel du cercle de déclinaison ; fig . 4. vue de face de la fourchette directrice ; fig . 5 , vue pardessus du cercle de déclinaison et de la transmission de mouvement; fig. 6, plan général du support du sidérostat .
