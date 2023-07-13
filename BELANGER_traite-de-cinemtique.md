@@ -24,13 +24,14 @@ A tale scopo, prendiamo come incognita ausiliaria la velocità angolare del sist
 
 p.198
 
-è quella che un osservatore percepirebbe, come una rotazione assoluta, se venisse inconsapevolmente trascinato nel movimento della barra **A**. Indichiamo, inoltre, con **B, b, C e c** i raggi dei quattro ingranaggi **B, b, C e c**.
+è quella che un osservatore percepirebbe, come una rotazione assoluta, se venisse inconsapevolmente trascinato nel movimento della barra **A**. Indichiamo, inoltre, con **B, b, C e c** i raggi dei quattro ingranaggi **B, b, C e c**. <img align="right" src="https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tavVI(fig102)(zoom).png">
 
 Posto ciò, osserviamo che al contatto tra gli ingranaggi **b** e **B**, il punto **T**, considerato come appartenente all'ingranaggio **b**, ha la sua velocità lineare assoluta espressa dalla risultante, che è qui una somma algebrica della sua velocità di trasmissione **wa * B** e della sua velocità relativa **-W * b**, mentre lo stesso punto **T**, considerato come appartenente all'ingranaggio **B**, ha la sua velocità lineare assoluta uguale a **wb * B**. Allo stesso modo, al contatto tra i due ingranaggi **c** e **C**, il punto **S**, appartenente all'ingranaggio **c**, ha la sua velocità lineare assoluta uguale a **wa *  C - W * c**, mentre questo punto, appartenente all'ingranaggio **C**, è immobile. Pertanto, abbiamo le due equazioni:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9891998f-9d82-4017-867f-b3752b6667e9)
 
-Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo:
+
+Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo: 
 
 -------------
 
@@ -46,7 +47,7 @@ e adottiamo per le quattro ruote b, B, C e c i numeri di denti 18, 19, 39 e 37, 
 
 È grazie a questa proprietà che il meccanismo in questione viene chiamato _ingranaggio differenziale_.
 
-Una delle ruote **B** e **C**, o entrambe, potrebbe essere a dentatura interna. Ad esempio, il raggio primitivo della ruota immobile **C** può estendersi dall'asse **MN** fino a **S'**, dove avviene il contatto tra questa ruota e l'ingranaggio **c**. Ripetendo in quest'ipotesi il ragionamento precedente, si può notare che le equazioni ottenute in precedenza si applicano, con l'unica differenza che il rapporto **C/c** cambia segno, quindi abbiamo 
+Una delle ruote **B** e **C**, o entrambe, potrebbe essere a dentatura interna. Ad esempio, il raggio primitivo della ruota immobile **C** può estendersi dall'asse **MN** fino a **S'**, dove avviene il contatto tra questa ruota e l'ingranaggio **c**. Ripetendo in quest'ipotesi il ragionamento precedente, si può notare che le equazioni ottenute in precedenza si applicano, con l'unica differenza che il rapporto **C/c** cambia segno, quindi abbiamo   <img align="right"  src="https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tavVI(fig103)(zoom).png">
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/37dc0538-55b6-47c9-b970-12d2f2fa4742) [2]
 
