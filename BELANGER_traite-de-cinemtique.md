@@ -6,6 +6,7 @@ Paragrafo 149 - Movimento epicicloidale piano
 
 - [Link 1](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) (Gallica)
 - [Link 2](https://books.google.it/books?id=38o2AAAAMAAJ&vq=epycycloidal&hl=de&pg=PA198#v=snippet&q=movement%20epicycloidal&f=false) (Google books)
+- [Link 3](https://www.digitale-sammlungen.de/en/view/bsb10080521?page=226)  (Digitale Sammlungen) (Immagini complete)
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9baa2f4d-ded9-43a4-90f4-e421bf7573ac)
 
