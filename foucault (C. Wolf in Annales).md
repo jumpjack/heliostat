@@ -149,40 +149,41 @@ L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fi
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e465a564-f263-48c9-a12b-ceb884a06646)
 
-I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
+I noni si trovano su un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
 
-L'asse dell'orologio non ha movimenti di rettifica diversi da quelli che l'intera base può accogliere utilizzando le sue viti di livellamento. L'artista ne ha adattato l'inclinazione alla latitudine del luogo, prendendo come piano orizzontale il piano su cui rotola la piattaforma.
-Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà modo di correggerla se non agendo sulle viti **U** e, conseguentemente, sacrificando la verticalità dei montanti dello specchio, e cambiando la direzione del **OM** o del raggio riflesso e del telescopio che deve riceverlo. Ma il principio/teorico dell'apparato non impone ai supporti dello specchio altra condizione che l'immobilità del punto di intersezione della coda dello specchio con l'asse  di rotazione dello specchio passante per i suoi supporti; e questa immobilità è assicurata qualunque sia la posizione dei sostegni rispetto all'orizzonte. Il cannocchiale invece deve avere tutti i movimenti di raddrizzamento in azimut e inclinazione. Una leggera deviazione del piano della base fuori dal piano orizzontale non presenta quindi alcun inconveniente. Sarebbe stato inoltre impossibile imprimere ai sostegni dell'asse orario un particolare movimento di oscillazione, poiché questo movimento, che non poteva essere effettuato intorno ad un asse orizzontale passante per il punto **O**, avrebbe alterato la distanza **OM**. D'altra parte ancora, non si è voluto rendere indipendenti il supporto dello specchio e quello dell'asse delle ore, e lasciare all'osservatore la cura di regolare la distanza **OM** sul pilastro che deve sostenere l'intero dispositivo. La 
+L'asse dell'orologio non ha movimenti di rettifica diversi da quelli che è possibili applicare all'intera base utilizzando le sue viti di livellamento. Il costruttore ne ha adattato l'inclinazione alla latitudine del luogo, prendendo come piano orizzontale il piano su cui ruota la piattaforma.
+Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà modo di correggerla se non agendo sulle viti **U** e, conseguentemente, sacrificando la verticalità dei montanti dello specchio, e cambiando la direzione del segmento **OM** o del raggio riflesso, e del telescopio che deve riceverlo. Ma il principio teorico [di funzionamento] dell'apparato non impone ai supporti dello specchio altra condizione che l'immobilità del punto di intersezione della coda dello specchio con l'asse  di rotazione dello specchio passante per i suoi supporti; e questa immobilità è assicurata qualunque sia la posizione dei sostegni rispetto all'orizzonte. Il cannocchiale invece deve avere tutti i movimenti di raddrizzamento in azimut e inclinazione. Una leggera deviazione del piano della base fuori dal piano orizzontale non presenta quindi alcun inconveniente. Sarebbe stato inoltre impossibile imprimere ai sostegni dell'asse orario un particolare movimento di rotazione, poiché questo movimento, che non poteva essere effettuato intorno ad un asse orizzontale passante per il punto **O**, avrebbe alterato la distanza **OM**. D'altra parte ancora, non si è voluto rendere indipendenti il supporto dello specchio e quello dell'asse delle ore, e lasciare all'osservatore la cura di regolare la distanza **OM** sul pilastro che deve sostenere l'intero dispositivo. La 
 
 ------
 
 P. 61
 
 difficoltà di questa regolazione richiede che venga eseguita una volta per tutte, e la sua manutenzione richiede inoltre che parti metalliche della stessa natura uniscano il punto **O** ai punti **M** e **F** .
-Vedremo come rettificare la lunghezza della forcella, se l'osservazione mostra che *\[la sua distanza OF dal centro del cerchio di declinazione\]* non è uguale alla distanza **OM**.
+Vedremo [TBW] come rettificare la lunghezza della forcella, se l'osservazione mostra che non è uguale alla distanza **OM**. [*intendedosi con "forcella" tutta la struttura collegata al cerchio di declinazione, cioè i due bracci e la coda che li unisce e che la fa ruotare*]
 
 Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena parlato, e cioè: 
 
-- l'asse polare coincidente con l'asse del mondo, 
-- lo zero del cerchio orario corrispondente al riflesso nel meridiano, 
-- il cerchio di declinazione ha zero quando la forcella è dentro l'estensione dell'asse polare, 
-- la lunghezza della forcella pari alla distanza **OM**, 
-- lo specchio perpendicolare all'asta di orientamento, 
-- ed infine l'asse del cannocchiale coincidente col prilungamento della retta **OM**  
+- l'asse polare coincide con l'asse del mondo, 
+- il cerchio orario segna zero quando il riflesso giace sul piano del meridiano,
+- il cerchio di declinazione è a zero quando la forcella è allineata con l'asse polare, 
+- la lunghezza della forcella è pari alla distanza **OM**, 
+- lo specchio è perpendicolare alla sua asta di orientamento, 
+- ed infine l'asse del cannocchiale coincide col prolungamento della retta **OM**  
 
-Se tutte queste condizioni sono soddisfatte, basta portare nell'asse di questo telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, portando sotto l'indice del cerchio orario la scala corrispondente all'angolo orario, sotto l'indice del cerchio di declinazione la scala corrispondente alla distanza polare, e fissando i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
+Se tutte queste condizioni sono soddisfatte, è sufficiente, per indirizzare verso l'asse di un telescopio i raggi provenienti da una stella di cui sono dati la distanza polare e l'angolo orario attuale, impostare sull'indice del cerchio orario il valore corrispondente all'angolo orario, e sull'indice del cerchio di declinazione il valore corrispondente alla distanza polare, e bloccare i due cerchi. Se, inoltre, da questo istante, un motore comunica all'asse orario un movimento rotatorio uniforme, al ritmo di un giro in un giorno siderale, l'astro rimarrà immobile al centro del campo del telescopio.
 
-Il regolatore **R** che comunica il movimento all'asse è posto sotto una gabbia con pareti trasparenti proprio alla base dello strumento. \[Esso\] riceve movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che porta il siderostato; e questo movimento è uniformato da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega, può trovare posto qui. 
-Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
+Il regolatore **R** che comunica il movimento all'asse è posto dentro una gabbia con pareti trasparenti proprio alla base dello strumento. \[Esso\] è messo in movimento dall'azione di un peso che scende in un pozzo scavato attraverso il pilastro che sorregge il siderostato; e questo movimento è mantenuto uniforme da un regolatore isocrono di L. Foucault. La descrizione di questo regolatore, le cui varie forme e applicazioni costituiscono una parte importante del lavoro del nostro defunto collega, non può trovare posto qui. 
+Ricorderò solo che questo regolatore, applicato dal Sig. Eichens a parecchie grandi [montature] equatoriali, dà un movimento di perfetta regolarità, e che, all'Esposizione Universale del 1867, valse al suo valente costruttore il Grand Prix des Arts Mécaniques.
 
-Qui, come in un equatoriale, è necessario disporre di metodi  di regolazione, variare piccole quantità o l'angolo 
+Qui, come in un equatoriale, è necessario disporre di metodi di regolazione, per variare di piccole quantità o l'angolo 
 
 ------
 
 P. 62
 
-orario o la distanza polare, senza fermare la marcia del movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un ruotismo satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò in poche parole questo ingranaggio, che ritroveremo più avanti nel promemoria della distanza polare.
-Sull'albero XX' (fig. 3), che riceve il movimento del rotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
+orario o la distanza polare, senza fermare il movimento dell'orologio. La variazione dell'angolo orario si ottiene per mezzo di un ruotismo satellitare simile a quello che il signor Eichens ha da tempo adattato alle equatoriali. Descriverò ora  in poche parole questo meccanismo, che ritroveremo [anche] più avanti nel paragrafo sulla distanza polare.
+
+Sull'albero XX' (fig. 3), che riceve il movimento del ruotismo per trasmetterlo all'asse dell'orologio, sono montate tre ruote di cui due
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9b013f42-1162-4e23-bdf4-42d2e1bc349c)
 
