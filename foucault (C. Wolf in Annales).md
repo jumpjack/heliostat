@@ -74,7 +74,13 @@ Lo specchio è tenuto nel suo barilotto (fig. 3, Tav. 1) da tre ramponi esterni 
 
 La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. 
 
-L'asse **XX** in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo **g** che è tutt'uno con esso e che funge da supporto per il cerchio di declinazione **dd**. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
+L'asse **XX** in acciaio è prolungato al di sotto del cuscinetto inferiore da un pezzo di bronzo **g** che è tutt'uno con esso [*nota: l'asse però è interno e concentrico al "tubo" XX' visibile in figura, e si muove indipendentemente da esso, mentre il tubo è solidale con la ruota dentata angolata*] e che funge da supporto per il cerchio di declinazione **dd**. Questo cerchio non è intero, ma ridotto a poco più della metà, per non interferire con i movimenti dello specchio. Porta, lungo un diametro e sulla faccia opposta al pezzo di bronzo, due collari nei quali si innesta e ruota con leggero attrito, senza sciabordare in nessuna direzione, la coda della forcella **f** che guiderà l'asta di guida del specchio.
+
+Moderna ricostruzione 3d della ruota declinazione coi due "collari":
+
+![ruota1](https://user-images.githubusercontent.com/1620953/253024697-ab078b9e-b735-4455-accc-8e3c7f8659bb.png)
+
+![ruota2](https://user-images.githubusercontent.com/1620953/253024988-4a85415d-b9ea-4978-ab22-9fdb6e93c7e5.png)
 
 --------
 
@@ -83,34 +89,47 @@ P. 58
 ![fig 1 in testo](https://github.com/jumpjack/heliostat/assets/1620953/20422ab4-9a20-4ef5-a073-c006783f954e)
 
 
-L'estensione matematica dell'asse orario e quella dell'asse del cerchio di declinazione si incontrano proprio sull'asse della coda della forcella. È da questo punto che si devono contare le due lunghezze uguali **OF** e **OM** (fig. 1). Il punto **M** è già definito dall'intersezione dei due assi, uno orizzontale, l'altro verticale, attorno ai quali lo specchio può oscillare. Resta da definire il punto **F** che delimita la lunghezza della forcella.
-L'articolazione della forcella e dell'asta di guida è realizzata mediante un manicotto cilindrico **m**, in cui l'asta passa liberamente senza sballottamenti, e che oscilla attorno ad un asse compreso tra i due denti della forcella.
+L'estensione matematica dell'asse orario e quella dell'asse del cerchio di declinazione si incontrano proprio sull'asse della coda della forcella. 
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/5f2a5732-ff5a-4a00-af5b-bd84a9948bf7)
+
+È da questo punto che si devono contare le due lunghezze uguali **OF** e **OM** (fig. 1). Il punto **M** è già definito dall'intersezione dei due assi, uno orizzontale, l'altro verticale, attorno ai quali lo specchio può oscillare. Resta da definire il punto **F** che delimita la lunghezza della forcella.
+L'articolazione della forcella e dell'asta di guida [dello specchio] è realizzata mediante un manicotto cilindrico **m**, in cui l'asta passa liberamente senza gioco, e che ruota intorno ad un asse compreso tra i due rami della forcella.
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/02f81ad6-0d67-43b8-8320-75fa42229c4b)
 
 
 È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. 
 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/80d8ae08-f893-4e51-8424-03f78356b203)
+
+
 ![sovrapposizione schema/disegno](https://github.com/jumpjack/heliostat/assets/1620953/8ab63057-0469-4274-af28-373751b0dcdf)
 
 
 L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
-Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, bilanciata allo stato puro rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza la quale non segue alcun cambiamento nella direzione matematica dei raggi.
-Solo l'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di regia, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed 
+
+Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, perfettamente bilanciata rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza che ne consegua alcun cambiamento nella direzione matematica dei raggi.
+L'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di guida, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed 
 
 ---------
 
 P. 59
 
 era sufficiente abbassare i perni un po' sotto la metà dello spessore della canna per ottenere l'equilibrio.
+
 Il pezzo di bronzo che prolunga l'asse polare, molto poco eccentrico rispetto all'asse polare, è sufficientemente equilibrato attorno a questo asse dai pezzi che stanno dall'altra parte e di cui parleremo più avanti. Ma l'equilibrio del cerchio ridotto a settore circolare e quello della forcella erano estremamente difficili da ottenere, dato lo spazio ristretto in cui queste parti devono muoversi.
 Quindi ci siamo dovuti limitare a renderli il più leggeri possibile; e anche, a questo scopo, la forcella è stata realizzata in alluminio: ne sarebbero derivati alcuni inconvenienti, come diremo in seguito; ma bisognava pensare prima di assicurare la regolarità del movimento dell'asse polare.
 
-Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di declinazione (vedremo presto come si ottiene questa relativa immobilità), la sua estremità **f** descrive un piccolo cerchio perpendicolare all'asse orario e di raggio variabile pari a l\*sinP, dove **l** è la lunghezza della forcella e **P** l'angolo che forma con l'asse dell'orologio. È su questo cerchio che si appoggia costantemente nel suo movimento la coda direttrice dello specchio, che di conseguenza descrive un cono obliquo.
+Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di declinazione (vedremo presto come si ottiene questa relativa immobilità), la sua estremità **f** descrive un piccolo cerchio perpendicolare all'asse orario e di raggio variabile pari a l\*sin(P), dove **l** è la lunghezza della forcella e **P** l'angolo che forma con l'asse dell'orologio. È su questo cerchio che si appoggia costantemente nel suo movimento la coda direttrice dello specchio, che di conseguenza descrive un cono obliquo.
 
 ![Cono](https://github.com/jumpjack/heliostat/assets/1620953/7c9439b4-13dd-4173-9aa2-fa314a98b687)
 
-Ne consegue che il canotto deve poter non solo girare attorno a questa coda, ma anche scorrere lungo la sua lunghezza, compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella.
+Ne consegue che il barilotto [m] deve poter non solo girare attorno a questa coda, ma anche scorrere lungo la sua lunghezza, 
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/91c1c161-1f4d-4ef4-9716-6c48a9f85e38)
+
+compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella.
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/96e8c0cd-3b52-4227-a1dc-c52c4eaffa7e)
 
