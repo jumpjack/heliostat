@@ -68,9 +68,7 @@ Lo specchio (Fig. 2, Tav. 1) è sostenuto da un asse orizzontale **xx** fissato 
 
 Lo specchio è tenuto nel suo barilotto (fig. 3, Tav. 1) da tre ramponi esterni **t** e da una molla a tre rami che lo preme contro di essi senza deformarlo. La condizione di perpendicolarità della coda di guida alla superficie riflettente è così assicurata da un'esatta lappatura della corona della canna.
 
-![fig 1 tav 1](https://github.com/jumpjack/heliostat/assets/1620953/ffb31482-72ee-4f32-8c2c-0dd702f01d26)
-
-
+<img src="https://github.com/jumpjack/heliostat/assets/1620953/ffb31482-72ee-4f32-8c2c-0dd702f01d26" width="400">
 
 La fig.I (tav. I) fa comprendere la disposizione dell'asse orario e la sua modalità di raccordo con la coda direttrice dello specchio. 
 
@@ -78,9 +76,9 @@ L'asse **XX** in acciaio è prolungato al di sotto del cuscinetto inferiore da u
 
 Moderna ricostruzione 3d della ruota declinazione coi due "collari":
 
-![ruota1](https://user-images.githubusercontent.com/1620953/253024697-ab078b9e-b735-4455-accc-8e3c7f8659bb.png)
+<img src="https://user-images.githubusercontent.com/1620953/253024697-ab078b9e-b735-4455-accc-8e3c7f8659bb.png" alt="ruota1" width = 200>
 
-![ruota2](https://user-images.githubusercontent.com/1620953/253024988-4a85415d-b9ea-4978-ab22-9fdb6e93c7e5.png)
+<img src="https://user-images.githubusercontent.com/1620953/253024988-4a85415d-b9ea-4978-ab22-9fdb6e93c7e5.png" alt="ruota2" width = 200>
 
 --------
 
@@ -101,13 +99,11 @@ L'articolazione della forcella e dell'asta di guida [dello specchio] è realizza
 
 È l'intersezione di questo asse con l'asse della coda di guida dello specchio che determina il punto **F**. 
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/80d8ae08-f893-4e51-8424-03f78356b203)
+<img src="https://github.com/jumpjack/heliostat/assets/1620953/80d8ae08-f893-4e51-8424-03f78356b203" width="200">
 
+<img src="https://github.com/jumpjack/heliostat/assets/1620953/8ab63057-0469-4274-af28-373751b0dcdf" width="600">
 
-![sovrapposizione schema/disegno](https://github.com/jumpjack/heliostat/assets/1620953/8ab63057-0469-4274-af28-373751b0dcdf)
-
-
-L'artista ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
+Il costruttore ha dovuto quindi porre ogni cura per rendere rigorosamente uguali e costanti le due distanze appena definite. Vedremo presto che influenza avrebbe un errore sulla reale lunghezza della forcella, e quanto sarà facile riconoscerlo.
 
 Le varie parti che stabiliscono il collegamento dell'asse delle ore allo specchio potranno assumere attorno a questo asse le più svariate posizioni; era essenziale, per la regolarità dei movimenti, che ogni parte fosse, per quanto possibile, perfettamente bilanciata rispetto agli assi che la sorreggono. L'equilibrio dello specchio provvisto della sua asta di guida non sarebbe stato possibile attorno al suo asse orizzontale, se questo asse fosse stato lasciato sullo stesso piano della superficie riflettente, come suppone la figura teorica (fig. I). Ma vediamo da questa stessa costruzione che la superficie dello specchio può essere spostata parallelamente a se stessa, senza che ne consegua alcun cambiamento nella direzione matematica dei raggi.
 L'obiettivo fisso del telescopio utilizza quindi porzioni dello specchio leggermente diverse nelle sue varie posizioni; donde seguirebbe la necessità di aumentare il diametro dello specchio se dovesse essere mosso di una quantità notevole. Ma l'asta di guida, essendo formata da un tubo cavo, è molto leggera rispetto allo specchio e alla canna, ed 
@@ -121,7 +117,7 @@ era sufficiente abbassare i perni un po' sotto la metà dello spessore della can
 Il pezzo di bronzo che prolunga l'asse polare, molto poco eccentrico rispetto all'asse polare, è sufficientemente equilibrato attorno a questo asse dai pezzi che stanno dall'altra parte e di cui parleremo più avanti. Ma l'equilibrio del cerchio ridotto a settore circolare e quello della forcella erano estremamente difficili da ottenere, dato lo spazio ristretto in cui queste parti devono muoversi.
 Quindi ci siamo dovuti limitare a renderli il più leggeri possibile; e anche, a questo scopo, la forcella è stata realizzata in alluminio: ne sarebbero derivati alcuni inconvenienti, come diremo in seguito; ma bisognava pensare prima di assicurare la regolarità del movimento dell'asse polare.
 
-Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di declinazione (vedremo presto come si ottiene questa relativa immobilità), la sua estremità **f** descrive un piccolo cerchio perpendicolare all'asse orario e di raggio variabile pari a l\*sin(P), dove **l** è la lunghezza della forcella e **P** l'angolo che forma con l'asse dell'orologio. È su questo cerchio che si appoggia costantemente nel suo movimento la coda direttrice dello specchio, che di conseguenza descrive un cono obliquo.
+Quando la forcella è guidata dall'asse orario, essendo fisso il cerchio di declinazione (vedremo presto [TBW] come si ottiene questa relativa immobilità), la sua estremità **f** descrive un piccolo cerchio perpendicolare all'asse orario e di raggio variabile pari a l\*sin(P), dove **l** è la lunghezza della forcella e **P** l'angolo che forma con l'asse dell'orologio. È su questo cerchio che si appoggia costantemente nel suo movimento la coda direttrice dello specchio, che di conseguenza descrive un cono obliquo.
 
 ![Cono](https://github.com/jumpjack/heliostat/assets/1620953/7c9439b4-13dd-4173-9aa2-fa314a98b687)
 
@@ -143,11 +139,9 @@ P.60
 monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. 
 Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/232f8dc4-ab81-4315-9228-9e065b11156b)
+<img src="https://github.com/jumpjack/heliostat/assets/1620953/232f8dc4-ab81-4315-9228-9e065b11156b" width = 600>
 
-L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. 
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/e465a564-f263-48c9-a12b-ceb884a06646)
+L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse.  <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png" align="right" alt="fig.4 colorata" width="400">
 
 I noni si trovano su un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
 
@@ -197,15 +191,15 @@ Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote denta
 P. 63
 
 con V la velocità di rotazione della ruota A, con v quella di B, avremo
-tra queste quantità il rapporto ([BÉLANGER, Traité de Cinématique, P. 198](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage))
+tra queste quantità il rapporto ([BÉLANGER, Traité de Cinématique, P. 198](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) - V. [mia traduzione](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md))
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
 
-Le due velocità hanno lo stesso verso se **B/b** è maggiore di **C/c**, questo è il caso che adotteremo. Inoltre, per stabilire tra la velocità del regolatore e quella dell'asse dell'orologio l'opportuna relazione, è necessario che v sia 9 decimi di V; pertanto:
+Le due velocità hanno lo stesso verso se **B/b** è maggiore di **C/c**, questo è il caso che adotteremo. Inoltre, per stabilire tra la velocità del regolatore e quella dell'asse dell'orologio l'opportuna relazione, è necessario che **v** sia 9/10 di **V**; pertanto:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/71e6df08-acde-4d8c-bb96-13e0dcf2f28a)
 
-relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
+relazione che è soddisfatta prendendo **B = 5b** e **C = 1/2 c** .
 
 \[dimostrazione:
 
@@ -224,31 +218,22 @@ relazione che è soddisfatta prendendo B = 5b, C = 1/2 c.
 
 *\]*
 
-Abbiamo ipotizzato che la ruota C sia ferma, ma se durante il movimento di A essa gira su se stessa tramite una ruota d'angolo D fissata sullo stesso manicotto, il ruotismo satellite \[(i pignoni b e c)\] riceverà un aumento o una diminuzione della velocità che, senza  influenzare in alcun modo la velocità di A, saranno trasmessi alla ruota **B** e all'albero **XX'**. 
+Abbiamo ipotizzato che la ruota **C** sia ferma, ma se durante il movimento di **A** essa viene fatta girare tramite una ruota d'angolo **D** fissata sullo stesso manicotto, il ruotismo satellite \[(i pignoni b e c)\] riceverà un aumento o una diminuzione della velocità che, senza  influenzare in alcun modo la velocità di **A**, sarà trasmesso alla ruota **B** e all'albero **XX'**. 
 
 Questa ruota angolare ha quindi una duplice funzione:
 
 - 1 Mantenere ferma la ruota **C** durante il movimento uniforme di **A** e dell'albero;
 - 2 Comunicargli la velocità additiva o sottrattiva che riceve dall'esterno. *\[= regolare l' angolo orario\]*
 
-È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; giriamo **D**, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
+È sempre possibile soddisfare la prima condizione, grazie all'attrito esercitato sulla parte esterna del manicotto e sulle parti che si collegano alla ruota angolare; la ruota **D** potrà essere girata, quando necessario, con l'ausilio di una ruota ad angolo e di una lunga leva, il cui manico è alla portata dell'osservatore. 
 
-![immagine](https://github.com/jumpjack/heliostat/assets/1620953/1638f4ea-edc3-4a79-a45f-7759daf5fede)
+<img src="https://github.com/jumpjack/heliostat/assets/1620953/1638f4ea-edc3-4a79-a45f-7759daf5fede" width="600">
 
-L'albero **XX'**  *\[inferiore\]* di fig. 3, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una a 20 denti e l'altra a  18; quella a 20 denti ingrana con una a 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quandi si blocca la pinza **P**; da questo momento in poi, l'asse **XX'** *\[superiore\]* obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a tutti quelli, aggiuntivi o sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite i sistemi di ingranaggi satellite *\[uno posto accanto al regolatore, e uno nella parte superiore dello strumento\].*
-
-*(3e: ...
-L'albero **XX'**  (fig. 3) , tramite ruote angolari e un'asta verticale, trasmette il suo movimento a una vite tangente che si ingrana con la ruota **K** (fig. 4). Sull'albero di quest'ultima sono anche fissate due ruote dentate, una con 20 denti e l'altra con 18. La ruota dentata da 20 denti ingrana con una grande ruota A, con 200 denti, che ruota liberamente sull'asse, ma si blocca ad esso quando la pinza P la collega al cerchio orario **H**. Da quel momento in poi, l'asse polare **XX'** obbedisce al movimento che gli viene trasmesso dal regolatore e a tutti quelli, sia aggiuntivi che sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite il sistema di ingranaggi satellite. )*
-
+L'albero **XX'**  *\[inferiore\]* di fig. 3 *(indicato a sinistra nella figura qui sopra)*, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una a 20 denti e l'altra a  18; quella a 20 denti ingrana con una a 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quando si blocca la pinza **P**; da questo momento in poi, l'asse **XX'** *\[superiore\]* obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a tutti quelli, aggiuntivi o sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite i sistemi di ingranaggi satellite *\[uno posto accanto al regolatore, e uno nella parte superiore dello strumento\].*
 
 ------
 
 P. 64
-
-![fig.4 ](https://github.com/jumpjack/heliostat/assets/1620953/f601fd99-374b-4df3-8920-fded0d659fd4)
-
-![fig.4 colorata](https://github.com/jumpjack/heliostat/assets/1620953/46cc437e-1251-41ce-899a-173f71ac50a0)
-
 
 Il secondo problema che il costruttore del siderostato doveva risolvere era più difficile del primo: si trattava di produrre, con l'ausilio di una leva immobile, un movimento del cerchio di declinazione, posto all'estremità di un asse mobile, senza alterare il movimento di questo asse. Foucault aveva solo indicato il problema, e aveva accennato alla soluzione con l'ausilio di un ingranaggio satellitare, ma senza dare o lasciare nelle sue carte alcuna descrizione del sistema che pretendeva di applicare. 
 
@@ -260,11 +245,11 @@ L'asse polare **XX'** (fig. 1, Tavola 1) è avvolto, per la parte della sua lung
 
 P. 65
 
-che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il canotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. 
+che è stata tagliata su tutta la circonferenza del cerchio di declinazione. Se il manicotto ruota con l'asse polare, queste ruote rimangono a riposo relativo e immobilizzano il cerchio rispetto all'asse. Se il manicotto prende un anticipo o un ritardo sul movimento dell'asse, le ruote spostano di una quantità proporzionale la dentatura del cerchio, e di conseguenza la direzione della forcella. Occorre quindi stabilire tra il manicotto e l'asse polare una solidarietà tale che il movimento orario li spinga entrambi con la stessa velocità, ma che si possa comunque ruotare questo manicotto isolatamente senza alterare il movimento dell'asse. 
 
-Basterà un ingranaggio satellitare identico a quello appena descritto per ottenere questo duplice effetto.
+Basterà un ingranaggio satellitare identico a quello descritto in precedenza per ottenere questo duplice effetto.
 
-L'intero meccanismo è rappresentato in sezione verticale [fig. 4].
+L'intero meccanismo è rappresentato in sezione verticale [fig. 4]. <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png"  width="400" align = "right" alt="fig.4 oiginale"> <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png" align="right" alt="fig.4 colorata" width="400">
 In questa figura, come nella precedente, le linee tratteggiate indicano, attraverso la loro direzione, l'interconnessione o l'indipendenza delle parti in contatto: due parti vicine, dove le linee tratteggiate hanno la stessa direzione, sono collegate tra loro; sono indipendenti se le linee tratteggiate hanno direzioni opposte. 
 
 Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**,  segue il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. Ma il pignone **a** ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare. Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza (B = 5b, C = 1/2 c), sarà ridotta di un decimo e di conseguenza il manicotto girerà nello stesso senso e alla stessa velocità dell'asse.  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
