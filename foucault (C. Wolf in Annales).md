@@ -197,7 +197,7 @@ Indichiamo con **B**, **C**, **b** e **c** i raggi di queste quattro ruote denta
 P. 63
 
 con V la velocità di rotazione della ruota A, con v quella di B, avremo
-tra queste quantità il rapporto (BÉLANGER, Traité de Cinématique, P. 198)
+tra queste quantità il rapporto ([BÉLANGER, Traité de Cinématique, P. 198](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage))
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
 
