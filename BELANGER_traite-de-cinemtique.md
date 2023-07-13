@@ -51,6 +51,18 @@ La formula diventa in questo caso:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/3552b147-c15e-4dfa-9598-630c7549dffc)
 
 
+Tavola VI:
+
 ![image](https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tav.VI(fig102).JPEG)
 
+
+
+Figura 102:
+
 ![image](https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tavVI(fig102)(zoom).png)
+
+
+
+Figura 103:
+
+![image](https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tavVI(fig103)(zoom).png)
