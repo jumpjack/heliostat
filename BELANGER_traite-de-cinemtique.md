@@ -17,11 +17,11 @@ Posto ciò, osserviamo che al contatto tra gli ingranaggi **b** e **B**, il punt
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9891998f-9d82-4017-867f-b3752b6667e9)
 
-Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo b/B = 18, c/C = 39/37 
+Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo:
 
 b/B = 18/19
 
-c/C = 37/39
+c/C = 39/37
 
 e adottiamo per le quattro ruote b, B, C e c i numeri di denti 18, 19, 39 e 37, otteniamo: 
 
