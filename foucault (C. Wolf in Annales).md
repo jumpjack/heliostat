@@ -131,20 +131,25 @@ Ne consegue che il barilotto [m] deve poter non solo girare attorno a questa cod
 
 compiendo così attorno al proprio asse un movimento elicoidale, talvolta molto lento, quando il piano della forcella e della coda coincide quasi con il piano verticale mediano di tutto l'apparato, talvolta molto rapido e ridotto quasi ad uno scorrimento longitudinale, quando questi due piani sono alla loro massima separazione. Nessun'altra articolazione se non un manicotto poteva soddisfare queste svariate condizioni: dovevamo quindi adottarla e darle anche una lunghezza tale da rendere impossibile ogni sbandata dell'asta di guida. Ma l'attrito è stato ridotto il più possibile riducendo le superfici di contatto a due anelli alle estremità del manicotto. L'osservatore, dal canto suo, deve aver cura di mantenere sempre ben lubrificata la superficie dell'asta, e di non toccarla mai con le dita: per guidare lo specchio a mano deve agire sull'estremità della forcella.
 
+Il cerchio di declinazione è graduato in terzi di grado, e l'alidada **e** 
+
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/96e8c0cd-3b52-4227-a1dc-c52c4eaffa7e)
 
-Il cerchio di declinazione è graduato in terzi di grado, e l'alidada **e** 
 
 -------
 
 P.60 
 
-monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
+monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. 
+Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/232f8dc4-ab81-4315-9228-9e065b11156b)
+
+L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. 
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e465a564-f263-48c9-a12b-ceb884a06646)
 
-
-L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse. I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
+I noni sono portati da un cerchio alidada **VV** concentrico al primo, montato su un manicotto mobile attorno all'asse. A tale manicotto è fissato un braccio **I** tenuto in posizione da due viti attestate, i cui dadi sono solidali al supporto del dispositivo; possiamo quindi regolare i noni in modo da segnare 0h 0m 0s sul cerchio orario quando la riflessione è fatta nel piano del meridiano.
 
 L'asse dell'orologio non ha movimenti di rettifica diversi da quelli che l'intera base può accogliere utilizzando le sue viti di livellamento. L'artista ne ha adattato l'inclinazione alla latitudine del luogo, prendendo come piano orizzontale il piano su cui rotola la piattaforma.
 Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà modo di correggerla se non agendo sulle viti **U** e, conseguentemente, sacrificando la verticalità dei montanti dello specchio, e cambiando la direzione del **OM** o del raggio riflesso e del telescopio che deve riceverlo. Ma il principio/teorico dell'apparato non impone ai supporti dello specchio altra condizione che l'immobilità del punto di intersezione della coda dello specchio con l'asse  di rotazione dello specchio passante per i suoi supporti; e questa immobilità è assicurata qualunque sia la posizione dei sostegni rispetto all'orizzonte. Il cannocchiale invece deve avere tutti i movimenti di raddrizzamento in azimut e inclinazione. Una leggera deviazione del piano della base fuori dal piano orizzontale non presenta quindi alcun inconveniente. Sarebbe stato inoltre impossibile imprimere ai sostegni dell'asse orario un particolare movimento di oscillazione, poiché questo movimento, che non poteva essere effettuato intorno ad un asse orizzontale passante per il punto **O**, avrebbe alterato la distanza **OM**. D'altra parte ancora, non si è voluto rendere indipendenti il supporto dello specchio e quello dell'asse delle ore, e lasciare all'osservatore la cura di regolare la distanza **OM** sul pilastro che deve sostenere l'intero dispositivo. La 
