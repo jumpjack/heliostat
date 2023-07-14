@@ -278,20 +278,125 @@ P. 66
 
 per il posizionamento dell'strumento in declinazione. A tale scopo, la barra della leva è dotata di una manopola di legno che si trova alla portata dell'osservatore che legge la scala del cerchio di declinazione. Se si desidera operare molto rapidamente, è necessario disinnestare la ruota ad angolo laterale **r**, cosa che si fa allentando il pulsante che la tiene in posizione sul suo quadrato.
 
+L'installazione preparata per il siderostato nel giardino dell'Osservatorio è stata costruita secondo i piani che avevo discusso con L. Foucault e curata dall'Amministrazione dei Beni Civili. Il pilastro, destinato ad accogliere l'apparecchio, è un monolite di forma triangolare come la base in ghisa; è intagliato nella sua parte nord da un canale verticale che forma l'apertura del pozzo in cui scende il peso motore. Due muri paralleli di lastre, posti di fronte da sud a nord di ciascun lato di questo pilastro senza toccarlo, sostengono rotaie in ferro su cui scorre una piccola casetta di legno, rivestita di cartone bituminato, che forma il rifugio dell'strumento. Prima dell'osservazione, la casetta viene spostata verso nord, in modo da lasciare completamente scoperto il siderostato. Colline di erba coprono la parte esterna di questi muri.
 
-------
+Il telescopio sarà sostenuto da due pilastri e fissato con l'ausilio di morsetti a vite e cerniere che permettono i movimenti di correzione. La distanza tra l'obiettivo e lo specchio è di 3 metri. Questo telescopio sarà protetto da un semplice tetto composto da due tavole. L'estremità oculare del telescopio penetrerà attraverso una persiana di legno nel gabinetto di osservazione, una piccola struttura di 3 metri per lato e solo 2 metri di altezza, al fine di coprire il meno possibile la parte sud del cielo. L'oculare o i dispositivi che terminano il telescopio all'interno della persiana devono essere collegati a essa tramite una borsa di stoffa spessa, al fine di intercettare qualsiasi comunicazione tra l'aria interna e l'atmosfera.
 
-P. 67
+Ora dobbiamo posizionare il siderostato sul suo pilastro, il telescopio sui suoi supporti e regolare i due strumenti l'uno sull'altro, quindi rispetto al meridiano e all'asse del mondo. Utilizzando un teodolite posizionato sul pilastro del siderostato, in modo che il centro di rotazione del telescopio occupi la posizione del centro 
 
-------
 
-P. 68
+---------
 
-------
+p.67
 
-P. 69
+dello specchio, si determina, tramite il metodo delle altezze assolute, l'azimut di un collimatore posizionato all'interno della capanna di osservazione. Poi, puntando con il telescopio del teodolite nel telescopio del siderostato, si rettifica la sua posizione finché il suo asse è nel meridiano e la sua inclinazione è uguale a quella che dovrebbe risultare dalla costruzione dello strumento.
 
-....
+Fatto ciò, si rimuove il teodolite e si posiziona il siderostato. Utilizzando i piedini regolabili della base e i due livelli rettangolari, si regola l'orizontalità del piano su cui scorre la piattaforma che sostiene lo specchio. L'asse dello specchio deve quindi essere orizzontale, l'asse polare deve trovarsi in un piano verticale e avere un'inclinazione sull'orizzonte uguale alla latitudine del luogo. Utilizzando un livello a forchetta posizionato sui perni dello specchio, è opportuno assicurarsi che l'asse di questi perni rimanga orizzontale durante la rotazione della piattaforma e verificare così la regolazione dei livelli della base.
+
+Tra tutte le posizioni che lo specchio può assumere intorno al suo centro di figura, ce ne sono alcune molto notevoli alle quali faremo spesso ricorso e che devono essere definite prima di tutto. Rifacendoci al teorema enunciato a pagina 52, vediamo che quando la forcella ruota attorno all'asse polare facendo con esso un angolo costante, la stanghetta guida traccia sul piano perpendicolare alla direzione del raggio riflesso dei cerchi che si riducono a un punto in due casi: il primo, l'unico realizzabile, è quello in cui la forcella coincide con il prolungamento dell'asse polare, lo specchio riflette quindi il raggio incidente che segue quest'asse; il secondo caso sarebbe quello in cui la forcella si ripiegherebbe sull'asse fino a coincidere con esso. In queste due posizioni, l'asse polare può ruotare su se stesso senza impartire alcun movimento allo specchio. La prima è quindi facile da trovare meccanicamente, poiché sarà sufficiente, per riconoscere di averla raggiunta, puntare, per riflesso, con un telescopio fisso un punto fisso distante e constatare che la sua immagine rimane immobile mentre l'asse polare compie un giro completo.
+
+Ora, se la forcella descrive una serie di piani meridiani, la coda dello specchio traccia sul piano perpendicolare al raggio riflesso la corrispondente serie di cerchi, proiezioni stereografiche dei primi, che si intersecano tutti nei due punti definiti nel para-
+
+---------------
+
+p.68
+
+grafo precedente. A un solo dei piani meridiani tracciati dalla forcella corrisponde un piano descritto dalla stanghetta guida: è quello la cui traccia sul piano di proiezione è la linea che unisce i due poli della proiezione e che corrisponde al caso in cui il piano descritto dalla forcella passa per il punto di osservazione o per il centro dello specchio, cioè è il piano mediano del siderostato. A piani orari inclinati in entrambe le direzioni rispetto a questo, corrispondono spostamenti massimi del supporto dello specchio uguali e di segno contrario. Questo piano meridiano è quindi ancora facile da definire meccanicamente: è quello per il quale la rotazione del cerchio di declinazione non provoca alcuno spostamento del supporto dello specchio. Si determinerà tale piano mediante questa condizione, tracciando un punto di riferimento sulla piattaforma dei montanti dello specchio e puntando tale punto con un microscopio fisso: l'asse orario essendo bloccato dalla pinza, si farà ruotare il cerchio di declinazione utilizzando la leva di richiamo, e si dovrà constatare l'immobilità del punto. Rotazioni uguali dell'asse orario in entrambe le direzioni rispetto alla posizione così determinata dovranno produrre spostamenti uguali e di segno contrario del supporto, per lo stesso arco percorso dalla forcella.
+
+Prima di procedere oltre, è necessario fermarci un attimo e studiare più in dettaglio le due posizioni singolari che sono state definite. Ho detto che, per determinare la posizione dello zero del cerchio di declinazione, si dovrà puntare con un telescopio un punto distante riflettendolo sullo specchio e portare la forcella in una posizione tale che una rotazione completa dell'asse orario non produca alcuno spostamento dell'immagine. È possibile utilizzare, a tale scopo, lo stesso telescopio del siderostato e prendere come mirino un collimatore la cui asse sia rigorosamente parallelo all'asse polare. Si tratta di un telescopio, dotato di un reticolo di fili nel suo fuoco, che poggia su due supporti a forma di V fissati alle estremità di una barra metallica. Questa barra, della stessa lunghezza dell'asse polare, è montata su due piedi terminanti con delle forcelle che si appoggiano su supporti cilindrici uguali praticati intorno all'asse polare vicino alle sue estremità. Un braccio metallico che può essere fissato contro il
+
+-------------
+
+p.69
+
+supporto del cuscinetto inferiore dell'asse polare tiene l'apparecchio in posizione, lasciandogli la sua mobilità. Attraverso una regolazione identica a quella di un teodolite di un livello topografico, si porta i supporti del collimatore all'uguaglianza. Fatto ciò, si posiziona l'apparecchio sull'asse polare, avendo cura che lo specchio sia nella posizione in cui la rotazione dell'asse polare non gli imprima più uno spostamento visibile all'occhio. Quindi si muove il telescopio nel piano verticale e si sposta la base del siderostato in azimut fino a ottenere la coincidenza del reticolo di fili del telescopio con l'immagine del reticolo del collimatore. La forcella occupa la posizione cercata, è sul prolungamento dell'asse polare, quando una rotazione completa dell'asse polare non disturba la sovrapposizione dei due reticoli di fili.
+
+Ma questa regolazione ci fornisce contemporaneamente altri due elementi importanti. Se l'asse del collimatore è esattamente parallelo all'asse polare, la coincidenza dei reticoli di fili ci permette di riconoscere:
+
+1° che l'asse del telescopio si trova nel piano verticale passante per l'asse polare;
+2° che l'asse del telescopio ha l'inclinazione desiderata per ricevere un raggio riflesso proveniente da un raggio parallelo alla forcella.
+
+Ora, la condizione del parallelismo del collimatore all'asse polare viene eliminata ribaltando l'apparecchio. Dopo la prima operazione, si inverte completamente il supporto sull'asse polare e il collimatore sul suo supporto, e si punta nuovamente i due reticoli di fili l'uno sull'altro. La media delle due posizioni del telescopio è quella che deve avere per puntare il polo dell'strumento. Quindi, rispetto all'orizzonte, ha l'inclinazione determinata dalla costruzione dell'apparecchio di guida dello specchio. Allo stesso tempo, poiché il telescopio è stato posizionato quasi esattamente nel meridiano durante l'operazione preliminare, si può notare che il siderostato stesso è portato in tale posizione; e tutto l'apparecchio è regolato con una precisione sufficiente per considerare questa regolazione come adeguata per l'uso ordinario del siderostato. Potremmo fermarci qui, se non fosse necessario studiare l'influenza dei difetti di costruzione dell'apparecchio.
+
+L'esperimento appena compiuto potrebbe rivelarci uno di questi difetti: potrebbe accadere che in nessuna posizione della forcella una rotazione completa dell'asse polare lasci lo specchio completamente immobile. Ciò accade se l'asse della forcella non incontra
+
+-----------
+
+p.70
+
+l'asse polare, ma è posto eccentricamente in modo da poter diventare semplicemente parallelo ad esso senza coincidere con esso. In tal caso, durante il movimento dell'asse, l'estremità della forcella descrive un cerchio su cui ruota la coda direttiva. Lo specchio non può essere portato, mediante alcuno spostamento del cerchio di declinazione, a dare l'immagine del polo al centro del campo del telescopio: il polo non esiste come punto. È sostituito da un piccolo cerchio sulla proiezione stereografica che guida la coda direttiva dello specchio, e tutti i cerchi di distanza polare sono ingranditi allo stesso modo. Da ciò si deduce che lo strumento, pur essendo ben regolato, quando è puntato verso una stella, l'azione del movimento orario non manterrà questa stella immobile al centro del campo, ma la farà percorrere una curva chiusa intorno alla sua posizione di immobilità teorica. Solo l'artista può rimediare a questo difetto di costruzione.
+
+La determinazione dello zero del cerchio orario, mediante il procedimento indicato, richiede anche il soddisfacimento di una condizione importante nella costruzione dello strumento, ovvero che il piano verticale passante per l'asse polare contenga anche il centro dello specchio. Se così non fosse nella proiezione stereografica tracciata dalla coda dello specchio sul piano perpendicolare al raggio riflesso, nessun piano meridiano avrebbe come traccia una linea verticale, e l'unica linea obliqua corrisponderebbe non più al piano mediano del siderostato, ma al piano orario che passa per il punto di osservazione. Di conseguenza, non esisterebbe una posizione del piano orario tale che la stanghetta guida possa percorrerlo senza che ne derivi uno spostamento orizzontale del supporto dello specchio. Il carattere meccanico al quale abbiamo riconosciuto il piano meridiano del siderostato è quindi di grande importanza: non solo ci fornisce lo zero del cerchio orario, ma, con la sua assenza, ci mostra un difetto di costruzione dell'apparecchio che renderebbe impossibile la regolazione nelle condizioni in cui intendiamo farlo. Infatti, un siderostato che presenta questa deviazione del centro dello specchio riflette il raggio non nel piano meridiano, ma nel piano verticale che passa per il centro dello specchio e il punto di giuntura della forcella con l'asse polare. Pertanto, se dopo aver riconosciuto il difetto non si desidera correggerlo (cosa che sarebbe possibile tramite uno spostamento laterale del supporto dell'asse orario), è necessario posizionare il telescopio di osservazione non più nel piano
+
+
+----------------
+
+p.71
+
+meridiano, ma nel piano appena definito. A tal fine, si regolerebbe innanzitutto il siderostato stesso nel meridiano, utilizzando il teodolite e il collimatore parallelo all'asse polare; quindi si regolerebbe il telescopio sul siderostato, facendolo assumere la posizione in cui punta al reticolo di fili del collimatore per riflesso sullo specchio portato nella posizione in cui una rotazione completa dell'asse polare non gli imprime alcuno spostamento. Questo procedimento si applica a un'apparecchiatura che riflette in un qualsiasi piano verticale al di fuori del meridiano. In tutto ciò che seguirà, supporremo che il siderostato rifletta i raggi nel piano meridiano.
+
+Tutta l'apparecchiatura, il telescopio e il siderostato, essendo posizionata in modo molto approssimativo nel piano del meridiano, può essere considerata come uno strumento meridiano, in grado di fornire le ascensioni rette e le distanze polari una volta che il cerchio orario è fissato allo zero determinato come appena descritto e il supporto dello specchio è immobilizzato mediante la pinza. Osservazioni di passaggi e determinazioni di distanze polari di stelle conosciute ci permetteranno di correggere la prima regolazione dello strumento.
+
+Si osservano, su un pendolo il cui errore assoluto e il movimento orario sono determinati altrove, i tempi dei passaggi di una serie di stelle conosciute attraverso un filo verticale teso nel telescopio. Siano **t, t'...** le differenze tra l'ascensione retta di ciascuna di queste stelle e il tempo del passaggio corretto dall'errore del pendolo. Attraverso l'asse del telescopio, tracciamo un piano perpendicolare al meridiano: è questo piano che svolgerà per noi il ruolo dell'orizzonte. Essendo la latitudine del luogo PHI, quella che introdurremo nelle nostre formule sarà **PHI - i**, dove **i** è l'inclinazione del telescopio al di sotto dell'orizzonte.
+
+Dobbiamo determinare le quantità che, nel nostro strumento, svolgono lo stesso ruolo dell'azimut, dell'inclinazione e dell'errore di collimazione di un telescopio meridiano. Notiamo innanzitutto che mentre il raggio incidente e la forcella percorrono la porzione visibile del meridiano, dall'orizzonte sud all'orizzonte nord, la coda dello specchio percorre solo un angolo retto, dall'orizzontale alla verticale.
+
+Se l'asse del telescopio forma con il meridiano, sul lato ovest, un angolo **GAMMA** nel piano dell'orizzonte ipotetico, il raggio incidente che 
+
+
+------------------
+
+p.72
+
+si rifletterà lungo questo asse formerà costantemente con il meridiano lo stesso angolo **GAMMA** sul lato est. Questa deviazione del telescopio svolge lo stesso ruolo dell'errore di collimazione nello strumento dei passaggi; in altre parole, il raggio incidente è quello che verrebbe ricevuto da un telescopio meridiano con un errore di collimazione di **GAMMA**.
+
+Se l'asse dei perni dello specchio non è perpendicolare al meridiano, ma la sua parte occidentale devia verso sud di un angolo **ALFA**, la normale allo specchio durante la sua rotazione descriverà un piano verticale inclinato dello stesso angolo **ALFA** sul meridiano. Il raggio incidente corrispondente a un raggio costantemente riflesso lungo l'orizzontale nel meridiano descriverà quindi un cono, il cui asse sarà proprio la linea dei perni, e il cui angolo al vertice sarà **90° - ALFA**. Questo raggio è quello che verrebbe ricevuto da un telescopio meridiano affetto contemporaneamente da un errore di collimazione **ALFA** e da un errore azimutale **ALFA**.
+
+La superficie riflettente dello specchio potrebbe non essere parallela all'asse dei perni; sia **BETA** l'angolo che forma verso sud con la parte occidentale di quest'asse. La normale descriverà intorno a questo asse, durante la rotazione, un cono il cui angolo al vertice sarà **90° - BETA**; e dalla posizione verticale alla posizione orizzontale dello specchio, il raggio incidente che produce un raggio orizzontale riflesso nel meridiano descrive un cono con lo stesso angolo intorno a un asse inclinato di un angolo **BETA** rispetto all'asse dei perni. Questo raggio è quindi quello che verrebbe ricevuto da un telescopio meridiano affetto da un errore di collimazione **BETA** e contemporaneamente da un errore azimutale **BETA**.
+
+Infine, se l'asse dei perni è inclinato di un angolo **EPSILON** rispetto all'orizzontale, con l'estremità occidentale più elevata, la normale allo specchio descrive, durante la rotazione, un piano che interseca il piano meridiano con un orizzontale ed è inclinato verso est di un angolo **EPSILON**. Il raggio incidente corrispondente al raggio riflesso orizzontalmente da nord a sud nel meridiano descrive quindi, dall'orizzonte sud all'orizzonte nord, lo stesso piano mentre la normale passa dalla posizione orizzontale alla posizione verticale. Il raggio incidente è quindi quello che verrebbe ricevuto da un telescopio meridiano con un'inclinazione dell'asse dei perni di **EPSILON**.
+
+In sintesi, il raggio incidente che produce il raggio riflesso da nord a sud lungo l'asse del telescopio, è quello che verrebbe ricevuto da un telescopio meridiano con un errore azimutale di **ALFA + BETA**, un errore di collimazione
+
+
+---------------
+
+p.73
+
+**ALFA + BETA + GAMMA**, e l'inclinazione e tutti questi angoli vengono contati positivamente come ho definito, cioè in modo da far entrare nel telescopio una stella che non ha ancora raggiunto il meridiano. Di conseguenza, la formula di riduzione dello strumento dei passaggi si applica al siderostato e, utilizzando quella di Tobias Mayer, si ha:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/02800ad5-9893-43f8-a9a8-76e75699b0bf)
+
+
+Inoltre, possiamo osservare solo passaggi superiori.
+
+La determinazione delle costanti non presenta alcuna difficoltà. Otterremo EPSILON tramite un livellamento eseguito nelle normali condizioni, dopo aver misurato preventivamente l'ineguaglianza dei perni liberando la tige directrice dalla forcella e ribaltando lo specchio.
+
+Se determiniamo il passaggio di una stella al zenit ipotetico del nostro strumento, otterremo, poiché **DELTA = PHI - i**,
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a6b06876-0c27-42ed-8db7-645ac88c47c4)
+
+
+Una stella all'orizzonte sud, per la quale **DELTA = -90° + (PHI-i)**, fornirebbe
+
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/43d1e4f5-5e0d-4c2c-a47a-5766f53f1790)
+
+
+L'osservazione dei passaggi di due gruppi di stelle, alcune vicine allo zenit e altre vicine all'orizzonte, consentirà quindi di ottenere valori sufficientemente precisi di **ALFA + BETA** e di **GAMMA**. Inoltre, qui non è possibile separare le due costanti **ALFA** e **BETA**, che infatti svolgono lo stesso ruolo rispetto allo strumento. Tuttavia, sarà possibile determinare in anticipo l'angolo **BETA** tramite osservazioni effettuate sullo specchio separato dalla sua connessione con la forcella. Infatti, portando lo specchio successivamente nelle due posizioni verticali ai lati dell'asse, queste due posizioni della superficie riflettente comprenderanno l'angolo **2 * BETA**, che dovrà essere misurato. Tale misurazione verrà effettuata utilizzando un teodolite, utilizzando gli stessi metodi utilizzati per misurare l'angolo di rifrazione di un prisma. Si potrebbe pensare che sia sempre possibile per il costruttore annullare l'angolo BETA: infatti la superficie dello specchio coincide rigorosamente con il piano che passa per i bordi del
+
+
+---------------
+
+p.74
+
+
+
+barilotto, e si potrebbe levigare questi fino a quando una livella posta sui perni e sui bordi del bariletto dà la stessa inclinazione. Tuttavia, è necessario notare che una levigatura è stata effettuata per garantire la perpendicolarità molto più importante del collare rispetto alla superficie dello specchio; l'errore di posizione della superficie rispetto ai perni è quindi di quelli che bisogna accettare senza poterlo correggere: è sufficiente che non sia troppo considerevole.
+
+
+
+
 
 -------
 
@@ -436,6 +541,129 @@ L'axe polaire **XX'** {Pl. I, fig. 1) est enveloppé, sur la portion de sa longu
 qu'on a taillée sur tout le pourtour du cercle de déclinaison. Si le manchon tourne avec l'axe polaire, ces roues restent en repos  elatif et immobilisent le cercle par rapport à l'axe. Si le manchon prend une avance ou un retard sur le mouvement de l'axe, les roues déplacent d'une quantité proportionnelle la denture du cercle, et par conséquent la direction de la fourchette. Il faut donc établir entre le manchon et l'axe polaire une solidarité telle que le mouvement horaire les entraîne tous deux avec la même vitesse, mais que l'on puisse neanmoins faire tourner ce manchon isolément sans altérer le mouvement de l'axe. Un rouage satellite identique à celui que je viens de décrire va suffire à obtenir ce double effet.
 
 ....
+----
+
+p.66
+
+[...]
+
+
+
+
+
+
+L installation préparée pour le sidérostat dans le jardin de l Obser vatoire a été construite d après les plans que j'avais discutés avec L. Foucault, et par les soins de l'Administration des bâtiments civils. Le pilier, destiné à recevoir l'appareil, est un monolithe de forme triangulaire comme le socle en fonte; il est entaillé dans sa partie nord d'une gouttière verticale qui forme l'orifice du puits dans lequel descend le poids moteur. Deux murs parallèles en dalles placées de champ courent du sud au nord de chaque côté de ce pilier sans le toucher; ils portent des rails en fer sur lesquels roule une petite maisonnette en bois, recouverte en carton bitumé, qui forme l'abri de l instrument. Avant l'observation, on fait rouler la maisonnette vers le nord, de manière à laisser le sidérostat complétement à découvert. Des talus en gazon recouvrent la partie extérieure de ces murs.
+
+La lunette d'observation sera portée par deux piliers et fixée à l'aide de colliers à vis et à charnière qui permettent les mouvements de rectification. La distance de l objectif au miroir est de 3 mètres. Cette lunette sera protégée par un simple toit formé de deux planches. L'extrémité oculaire de la lunette pénétrera à travers un volet en bois dans le cabinet d observation, petit bâtiment de 3 mètres de côté et de 2 mètres seulement d élévation, afin de cacher le moins possible la partie sud du ciel. L'oculaire ou les appareils qui terminent la lunette à l'intérieur du volet doivent être reliés à ce volet par une bourse en étoffe épaisse, afin d'intercepter toute communication entre l'air intérieur et l atmosphère.
+
+Nous avons maintenant à placer le sidérostat sur son pilier, la lunette ses supports, et à régler les deux instruments l'un sur l'autre, puis par rapport au méridien et à l axe du monde.
+ Au moyen d'un théodolite placé sur le pilier du sidérostat, de telle que le centre de rotation de la lunette occupe la place du centre
+
+---------
+
+p.67
+
+du miroir, on détermine, par la méthode des hauteurs absolues, l'azimut d un collimateur placé dans l'intérieur de la cabane d'observation. Puis visant avec la lunette du théodolite dans la lunette du sidérostat, on rectifie la position de celle-ci jusqu'à ce que son axe soit dans le méridien et son inclinaison égale à celle qui doit résulter de la con struction de l'instrument.
+
+Cela fait, on enlève le théodolite, et l'on met le sidérostat en place. Au moyen des vis calantes du socle et des deux niveaux rectangulaires on règle l horizontalité du plan sur lequel roule la plateforme qui porte le miroir. L'axe du miroir doit alors être horizontal, l'axe polaire doit se trouver dans un plan vertical et avoir sur l'horizon une inclinaison égale à la latitude du lieu. Au moyen d'un niveau à fourchettes posé sur les tourillons du miroir, il sera bon de s'assurer que l'axe de ces tourillons reste horizontal pendant la rotation de la plateforme, et vérifier ainsi le réglage des niveaux du socle.
+
+Parmi toutes les positions que peut prendre le miroir autour de son centre de figure, il en est quelques-unes très-remarquables auxquelles nous aurons souvent recours et qu il faut d abord définir. En nous reportant au théorème énoncé page 52. nous voyons que lorsque la fourchette tourne autour de l'axe polaire en faisant avec lui un angle constant, la tige directrice trace sur le plan perpendiculaire à la direction du rayon réfléchi des cercles qui se réduisent à un point dans deux cas: le premier, seul réalisable, est celui où la fourchette coin cide avec le prolongement de l'axe polaire, le miroir réfléchit alors le rayon incident venant suivant cet axe; le second serait le cas où la fourchette se replierait sur l axe jusqu à coïncider avec lui. Dans ces deux positions l'axe polaire peut tourner sur lui même sans imprimer au miroir aucun mouvement. La première est donc facile à trouver mécaniquement, puisqu il suffira, pour reconnaître qu'elle est atteinte, de viser par réflexion, avec une lunette fixe, un point fixe éloigné, et de constater que son image reste immobile pendant que l axe polaire fait un tour entier.
+
+Si maintenant la fourchette décrit une série de plans méridiens, la queue du miroir trace sur le plan perpendiculaire au rayon réfléchi la série correspondante des cercles, projections stéréographiques des premiers, lesquels se coupent tous aux deux points définis par le para-
+
+---------------
+
+p.68
+
+graphe précédent. A un seul des plans méridiens tracés par la fourchette correspond un plan décrit par la tige directrice: c'est celui dont la trace sur le plan de projection est la droite qui joint les deux pôles de la projection, et qui répond au cas où le plan décrit par la fourchette passe par le point de vue ou par le centre du miroir, c'est à dire est le plan médian du sidérostat. A des plans horaires également inclinés de part et d autre sur celui-ci, correspondent des déplacements maxima du support du miroir égaux et de sens contraires. Ce plan méridien est donc encore facile à définir mécaniquement: c'est celui pour lequel la rotation du cercle de déclinaison n'entraîne aucun déplacement du sup port du miroir. On le déterminera par cette condition, en traçant un point de repère sur la plate-forme des montants du miroir et visant ce point avec un microscope fixe: l'axe horaire étant arrêté par la pince, on fera tourner le cercle de déclinaison à l aide de la manette de rappel, et l'on devra constater l'immobilité du point. Des rotations égales de l'axe horaire de part et d'autre de la position ainsi déterminée devront donner des déplacements égaux et de sens contraires du support, pour un même arc parcouru par la fourchette.
+
+Les deux positions ainsi déterminées, fixent l'une le zéro du cercle des distances polaires l'autre le zéro du cercle horaire. On y amènera les verniers au moyen des vis de rappel.
+
+Avant d'aller plus loin, il est nécessaire de nous arrêter un moment et d'étudier plus en détail les deux positions singulières qui viennent d'être définies. J'ai dit que, pour déterminer la position du zéro du cercle de déclinaison, on devra viser, avec une lunette, un point éloigné par réflexion sur le miroir, et amener la fourchette à une position telle qu une rotation complète de l'axe horaire n'imprime à l'image aucun déplacement. On peut utilement employer, dans ce but, la lunette même du sidérostat, et prendre pour mire un collimateur dont l axe soit ri goureusement parallèle à l'axe polaire. C'est une lunette, munie d une croisée de fils en son foyer, qui repose par deux collets cylindriques égaux sur deux appuis en forme de V fixés aux extrémités d'une règle métallique. Cette règle, de même longueur que l'axe polaire, est montée sur deux pieds terminés par des fourches, qui viennent se poser sur des collets cylindriques égaux qu on a ménagés autour de l axe polaire près de ses extrémités. Un bras métallique qui peut se fixer contre le
+
+-------------
+
+p.69
+
+support du coussinet inférieur de l'axe polaire, maintient en place cet appareil, tout en lui laissant sa mobilité. Par un réglage identique à celui de la lunette d un niveau topographique, on amène les collets du collimateur à l égalité. Cela fait, on place l appareil sur l axe polaire le miroir étant dans la position où la rotation de l axe polaire ne lui imprime plus de déplacement sensible à l œil. Alors on fait mouvoir la lunette *dans le plan vertical*, et l on déplace le socle du sidérostat en azimut, jusqu à ce que l on ait obtenu la coïncidence de la croisée des fils de la lunette avec l image de celle du collimateur. La fourchette occupe la position cherchée, elle est sur le prolongement de l axe polaire, lorsqu une rotation complète de l axe polaire ne détruit pas la super position des deux croisées de fils.
+
+Mais ce réglage nous fournit en même temps deux autres éléments importants. Si l axe du collimateur est bien exactement parallèle à l axe polaire, la coïncidence des croisées de fils nous fait reconnaître:
+
+- 1° que l axe de la lunette se trouve dans le plan vertical passant par l axe polaire;
+
+- 2° que l axe de la lunette possède l inclinaison voulue pour rece voir un rayon réfléchi provenant d un rayon parallèle à la fourchette.
+
+ Or la condition du parallélisme du collimateur à l axe polaire s élimine par un retournement de l appareil. Après la première opération, on retourne bout pour bout le support sur l axe polaire et le collimateur sur son support, et l on pointe de nouveau les deux croisées de fils l une sur l autre. La moyenne des deux positions de la lunette est celle qu elle doit avoir pour viser le pôle de l instrument. Elle a donc, par rapport à l horizon, l inclinaison déterminée par la construction de l appareil directeur du miroir. En même temps, puisque cette lunette a été placée presque exactement dans le méridien par l opération préliminaire, on voit que le sidérostat lui même s y trouve amené; et tout l appareil est réglé avec assez de précision pour que l on puisse considérer ce réglage comme suffisant pour l usage ordinaire du sidérostat. Nous pourrions nous arrêter ici, s il n était nécessaire d étudier l influence des défauts de construction de l appareil.
+
+L expérience que nous venons de faire pourra nous en révéler un: il pourra arriver que, dans aucune position de la fourchette, une rotation complète de l axe polaire ne laisse le miroir complétement immobile. C est ce qui aura lieu si l axe de la fourchette ne rencontre pas
+
+-----------
+
+p.70
+
+l axe polaire, mais se trouve placé excentriquement, de manière à pouvoir lui devenir simplement parallèle sans coïncider avec lui. Alors, pendant le mouvement de l axe, l extrémité de la fourchette décrit un cercle sur lequel tourne la queue directrice. Le miroir ne peut être amené, par aucun déplacement du cercle de déclinaison, à donner l image du pôle au centre du champ de la lunette: le pôle n existe pas comme point. Il est remplacé par un petit cercle sur la projection sté réographique qui guide la queue directrice du miroir, et tous les cercles de distance polaire se trouvent agrandis de la même manière. D'où il suit que l instrument, bien réglé d ailleurs, étant dirigé vers une étoile, l action du mouvement d horlogerie ne conservera pas cette étoile immobile au milieu du champ, mais lui fera parcourir une courbe fermée autour de sa position d immuabilité théoriqu.e L artiste peut seul re médier à ce défaut de construction.
+
+La détermination du zéro du cercle horaire, par le procédé qui a été indiqué, suppose de même remplie une condition importante dans la construction de l instrument, savoir, que le plan vertical passant par l axe polaire contient aussi le centre du miroir. S il n en était pas ainsi dans la projection stéréographique tracée par la queue du miroir sur le plan perpendiculaire au rayon réfléchi, aucun plan méridien n aurait pour trace une droite *verticale*, et la seule droite *oblique* correspondrait non plus au plan médian du sidérostat, mais au plan horaire qui passe par le point de vue. Dès lors, il n existe plus de position du plan ho raire telle que la tige directrice puisse le parcourir sans qu il en résulte de déplacement horizontal du support du miroir. Le caractère mécanique auquel nous avons reconnu le plan méridien du sidérostat est donc d une grande importance: non seulement il nous donne le zéro du cercle horaire, mais, par son absence, il nous manifeste un défaut de construction de l appareil qui rendrait impossible le réglage dans les conditions où nous voulons le faire. En effet, un sidérostat présentant cette déviation du centre du miroir, réfléchit le rayon non pas dans le plan méridien, mais dans le plan vertical qui passe par le centre du miroir et le centre d articulation de la fourchette avec l axe polaire. Si donc, après avoir reconnu le défaut on ne veut pas le faire corriger (ce qui serait possible par un déplacement latéral du support de l axe horaire), il faut placer la lunette d observation, non plus dans le plan
+
+----------------
+
+p.71
+
+méridien, mais dans le plan qui vient d être défini. A cet effet, on ré glerait d abord le sidérostat lui même dans le méridien, par l emploi du théodolite et du collimateur parallèle à l axe polaire: puis on réglerait la lunette sur le sidérostat, en lui donnant la position où elle vise la croisée des fils du collimateur par réflexion sur le miroir amené dans la position où une rotation complète de l axe polaire ne lui imprime aucun déplacement. Ce procédé s applique à un appareil réfléchissant dans un plan vertical quelconque, en dehors du méridien. Dans tout cel qui va suivre nous supposerons le sidérostat réfléchissant les rayons dans le plan méridien.
+
+
+Tout l appareil, lunette et sidérostat, ayant été placé très approximativement dans le plan du méridien, pourra être considéré comme un instrument méridien, propre à donner les ascensions droites et les distances polaires une fois le cercle horaire fixé au zéro déterminé comme il vient d être dit, et le support du miroir immobilisé au moyen de la pince. Des observations de passages et des déterminations de distances polaires d étoiles connues vont nous permettre de rectifier le premier réglage de l instrument.
+
+On observe, sur une pendule dont la correction absolue et la marche horaire sont déterminées d ailleurs, les temps des passages d une série d étoiles connues à un fil vertical tendu dans la lunette. Soient t, t'... les différences entre l ascension droite de chacune de ces étoiles et le temps du passage corrigé de l erreur de la pendule. Par l axe de la lunette, menons un plan perpendiculaire au méridien: c est ce plan qui va, pour nous, jouer le rôle d horizon. La latitude du lieu étant *PHI*, celle que nous introduirons dans nos formules serai *PHI - i*, *i* etant l'inclinaison de la lunette au dessous de l horizon.
+
+Nous avons à déterminer les quantités qui, dans notre instrument, jouent le même rôle que l azimut, l inclinaison et l erreur de collimation d une lunette méridienne. Remarquons d abord que, pendant que le rayon incident et la fourchette parcourent la portion visible du méridien, de l horizon sud à l horizon nord, la queue directrice du miroir ne parcourt qu un angle droit, depuis l horizontale jusqu à la verticale.
+
+Si l axe de la lunette fait avec le méridien, du côté de l ouest, un angle *GAMMA* dans le plan de l horizon hypothétique, le rayon incident qui
+
+
+------------------
+
+p.72
+
+viendra se réfléchir suivant cet axe fera constamment avec le méridien le même angle *GAMMA* du côté de l est. Cette déviation de la lunette joue le même rôle que l erreur de collimation dans l instrument des passages; en d autres termes, le rayon incident est celui que recevrait une lunette méridienne dont l erreur de collimation serait *GAMMA*.
+
+Si l axe des tourillons du miroir n est pas perpendiculaire au méridien, mais que sa partie ouest dévie vers le sud de l angle *ALFA*, la normale au miroir pendant sa rotation décrira un plan vertical incliné du même angle *ALFA* sur le méridien. Le rayon incident correspondant à un rayon constamment réfléchi suivant l horizontale dans le méridien décrira donc un cône, dont l axe sera la ligne même des tourillons, et dont le demi angle au sommet sera *90° - ALFA*. Ce rayon est celui que recevrait une lunette méridienne affectée à la fois d une erreur de collimation *ALFA* et d une erreur azimutale *ALFA*.
+
+La surface réfléchissante du miroir peut n être pas parallèle à l axe des tourillons; soit *BETA* l angle qu elle fait vers le sud avec la partie ouest de cet axe. La normale décrira, autour de cet axe, pendant la rotation, un cône dont le demi angle au sommet sera *90° - BETA*; et de la position verticale à la position horizontale du miroir, le rayon incident qui donne un rayon horizontal réfléchi dans le méridien, décrit un cône de même angle autour d un axe incliné de l angle *BETA* sur l axe des tourillons. Ce rayon est donc celui que recevrait une lunette méridienne affectée d une erreur de collimation *BETA* et en même temps d une erreur azimutale *BETA*.
+
+Enfin si l axe des tourillons est incliné de l angle *EPISLON* sur l horizontale, l extrémité ouest étant la plus élevée, la normale au miroir décrit, pendant la rotation, un plan qui coupe le plan méridien suivant une hori zontale et est incliné vers l est d un angle *EPISLON*. Le rayon incident correspondant au rayon réfléchi horizontalement du nord au sud dans le méridien décrit donc, de l horizon sud à l horizon nord, le même plan pendant que la normale passe de la position horizontale à la verticale. Le rayon incident est donc celui que recevrait une lunette méridienne dont l axe des tourillons aurait une inclinaison *EPISLON*.
+
+En résumé, le rayon incident qui donne le rayon réfléchi du nord au sud, suivant l axe de la lunette, est celui que recevrait une lunette méridienne dont l erreur azimutale serait *ALFA + BETA*, l erreur de collimation
+
+---------------
+
+p.73
+
+*ALFA + BETA + GAMMA*,  et l inclinaison e tous ces angles étant comptés positivement comme je l ai défini, c est à dire de manière à amener dans la lunette une étoile qui n a pas encore atteint le méridien.
+Dès lors, la formule de réduction de l instrument des passages s applique au sidérostat, et l on a, en employant celle de Tobie Mayer,
+
+FORMULA
+
+Nous ne pouvons d ailleurs observer que des passages supérieurs.
+
+La détermination des constantes n offre aucune difficulté. On obtiendra *EPSILON* par un nivellement exécuté dans les conditions ordinaires, l inégalité des tourillons ayant été mesurée préalablement en dégageant la tige directrice de la fourchette et retournant le miroir.
+
+Si l on détermine le passage d une étoile au zénith hypothétique de notre appareil, on obtiendra puisque di *DELTA = PHI - i*,
+
+FORMULA
+
+Unc etoile à l'horizon sud, pour l'aquelle *DELTA = - 90° + (PHI-i)* , donnerait
+
+FORMULA
+
+L observation des passages de deux groupes d étoiles, les unes voi sines du zenith, les autres voisines de l horizon, permettra donc d obtenir des valeurs suffisamment exactes de *ALFA + BETA*  et de *GAMMA*. Il est d ailleurs impossible de séparer ici les deux constantes *ALFA* et *BETA*, qui en effet jouent le même rôle par rapport à l instrument. Mais on pourra déterminer à l avance l angle *BETA* par des observations faites sur le miroir dégagé de sa liaison avec la fourchette. Si en effet on amène le miroir successivement dans les deux positions verticales de part et d autre de l axe, ces deux positions de la surface réfléchissante comprendront l angle *2 * BETA*, qu il s agira de mesurer. Or cette mesure s effectuera à l aide d un théodolite, par les mêmes procédés à l aide desquels on mesure l angle réfringent d un prisme. On pourrait croire qu il est tou jours possible au constructeur d annuler l angle *BETA*:  car la surface du miroir coïncide rigoureusement avec le plan qui passe par les bords du
+
+---------------
+
+p.74
+
+
+barillet, et l on pourrait roder ceux ci jusqu à ce qu un niveau, posé sur les tourillons et posé sur les bords du barillet, donnât la même inclinaison. Mais il faut remarquer qu un rodage a été effectué pour assurer la perpendicularité bien autrement importante de la trice à la surface du miroir; l erreur de position de la surface. par rapport aux tourillons, est donc de celles qu il faut subir sans pouvoir la corriger: il nous suffit qu elle ne soit pas trop considérable.
 
 ----------
 
