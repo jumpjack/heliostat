@@ -293,9 +293,17 @@ dello specchio, si determina, tramite il metodo delle altezze assolute, l'azimut
 
 Fatto ciò, si rimuove il teodolite e si posiziona il siderostato. Utilizzando i piedini regolabili della base e i due livelli rettangolari, si regola l'orizontalità del piano su cui scorre la piattaforma che sostiene lo specchio. L'asse dello specchio deve quindi essere orizzontale, l'asse polare deve trovarsi in un piano verticale e avere un'inclinazione sull'orizzonte uguale alla latitudine del luogo. Utilizzando un livello a forchetta posizionato sui perni dello specchio, è opportuno assicurarsi che l'asse di questi perni rimanga orizzontale durante la rotazione della piattaforma e verificare così la regolazione dei livelli della base.
 
-Tra tutte le posizioni che lo specchio può assumere intorno al suo centro di figura, ce ne sono alcune molto notevoli alle quali faremo spesso ricorso e che devono essere definite prima di tutto. Rifacendoci al teorema enunciato a pagina 52, vediamo che quando la forcella ruota attorno all'asse polare facendo con esso un angolo costante, la stanghetta guida traccia sul piano perpendicolare alla direzione del raggio riflesso dei cerchi che si riducono a un punto in due casi: il primo, l'unico realizzabile, è quello in cui la forcella coincide con il prolungamento dell'asse polare, lo specchio riflette quindi il raggio incidente che segue quest'asse; il secondo caso sarebbe quello in cui la forcella si ripiegherebbe sull'asse fino a coincidere con esso. In queste due posizioni, l'asse polare può ruotare su se stesso senza impartire alcun movimento allo specchio. La prima è quindi facile da trovare meccanicamente, poiché sarà sufficiente, per riconoscere di averla raggiunta, puntare, per riflesso, con un telescopio fisso un punto fisso distante e constatare che la sua immagine rimane immobile mentre l'asse polare compie un giro completo.
+**[Posizioni notevoli]**
 
-Ora, se la forcella descrive una serie di piani meridiani, la coda dello specchio traccia sul piano perpendicolare al raggio riflesso la corrispondente serie di cerchi, proiezioni stereografiche dei primi, che si intersecano tutti nei due punti definiti nel para-
+Tra tutte le posizioni che lo specchio può assumere intorno al suo centro di figura, ce ne sono alcune molto notevoli alle quali faremo spesso ricorso e che devono essere definite prima di tutto. 
+
+Rifacendoci al teorema enunciato a pagina 52, vediamo che quando la forcella ruota attorno all'asse polare facendo con esso un angolo costante, la stanghetta guida traccia sul piano perpendicolare alla direzione del raggio riflesso dei cerchi che si riducono a un punto in due casi:   <img src="https://github.com/jumpjack/heliostat/blob/main/images/forcella-allineata.png" align="right" width = 500>
+
+il primo, l'unico realizzabile, è quello in cui la forcella coincide con il prolungamento dell'asse polare, lo specchio riflette quindi il raggio incidente che segue quest'asse; il secondo caso sarebbe quello in cui la forcella si ripiegherebbe sull'asse fino a coincidere con esso. 
+
+In queste due posizioni, l'asse polare può ruotare su se stesso senza impartire alcun movimento allo specchio. La prima è quindi facile da trovare meccanicamente, poiché sarà sufficiente, per riconoscere di averla raggiunta, puntare, per riflesso, con un telescopio fisso un punto fisso distante e constatare che la sua immagine rimane immobile mentre l'asse polare compie un giro completo.
+
+Se invece la forcella descrive una serie di piani meridiani, la coda dello specchio traccia sul piano perpendicolare al raggio riflesso la corrispondente serie di cerchi, proiezioni stereografiche dei primi, che si intersecano tutti nei due punti definiti nel para-
 
 ---------------
 
