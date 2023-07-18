@@ -2,7 +2,9 @@
 di C. WOLF 
 (da "Annales Scientifiques de l'École Normale Supérieure", 2a serie, tomo 1 (1872)):
 - [Pagine 51-84](http://www.numdam.org/item/10.24033/asens.78.pdf), senza immagini
-- [Libro completo con immagini](https://github.com/jumpjack/heliostat/blob/main/Annales_Scientifiques_de_L_%C3%89cole_Normal.pdf)
+- [Libro completo con immagini, in questo repository](https://github.com/jumpjack/heliostat/blob/main/Annales_Scientifiques_de_L_%C3%89cole_Normal.pdf)
+- [Edizione su Archive.org](https://archive.org/details/annalesscientif29fragoog/page/n89/mode/2up)
+  
 
 Tavola 1 del testo:
 
@@ -355,7 +357,7 @@ p.71
 
 meridiano, ma nel piano appena definito. A tal fine, si regolerebbe innanzitutto il siderostato stesso nel meridiano, utilizzando il teodolite e il collimatore parallelo all'asse polare; quindi si regolerebbe il telescopio sul siderostato, facendolo assumere la posizione in cui punta al reticolo di fili del collimatore per riflesso sullo specchio portato nella posizione in cui una rotazione completa dell'asse polare non gli imprime alcuno spostamento. Questo procedimento si applica a un'apparecchiatura che riflette in un qualsiasi piano verticale al di fuori del meridiano. In tutto ciò che seguirà, supporremo che il siderostato rifletta i raggi nel piano meridiano. **[nota: in realtà questo disallineamento del centro dello specchio rispetto al piano meridiano può essere sfruttato in modo utile: fintanto che il centro dello specchio resta comunque distante dal centro del cerchui di declinazione quanto lo è il centro della forcella, l'eliostato funzionerà perfettamente, solo che direzionerà il riflesso secondo un azimuth diverso, ma comunque fisso, come fa l'altro tipo di eliostato di Foucalt]**
 
-Tutta l'apparecchiatura, il telescopio e il siderostato, essendo posizionata in modo molto approssimativo nel piano del meridiano, può essere considerata come uno strumento meridiano, in grado di fornire le ascensioni rette e le distanze polari una volta che il cerchio orario è fissato allo zero determinato come appena descritto e il supporto dello specchio è immobilizzato mediante la pinza. Osservazioni di passaggi e determinazioni di distanze polari di stelle conosciute ci permetteranno di correggere la prima regolazione dello strumento.
+Tutta l'apparecchiatura, il telescopio e il siderostato, essendo posizionata in modo molto approssimativo nel piano del meridiano, può essere considerata come uno strumento meridiano, in grado di fornire le ascensioni rette e le distanze polari una volta che il cerchio orario è fissato allo zero determinato come appena descritto e il supporto dello specchio **[possibile errore? forse è il cerchio orario a essere fissato con la pinza]** è immobilizzato mediante la pinza. Osservazioni di passaggi e determinazioni di distanze polari di stelle conosciute ci permetteranno di correggere la prima regolazione dello strumento.
 
 Si osservano, su un pendolo il cui errore assoluto e il movimento orario sono determinati altrove, i tempi dei passaggi di una serie di stelle conosciute attraverso un filo verticale teso nel telescopio. Siano **t, t'...** le differenze tra l'ascensione retta di ciascuna di queste stelle e il tempo del passaggio corretto dall'errore del pendolo. Attraverso l'asse del telescopio, tracciamo un piano perpendicolare al meridiano: è questo piano che svolgerà per noi il ruolo dell'orizzonte. Essendo la latitudine del luogo **PHI**, quella che introdurremo nelle nostre formule sarà **PHI - i**, dove **i** è l'inclinazione del telescopio al di sotto dell'orizzonte.
 
@@ -370,7 +372,7 @@ p.72
 
 si rifletterà lungo questo asse formerà costantemente con il meridiano lo stesso angolo **GAMMA** sul lato est. Questa deviazione del telescopio svolge lo stesso ruolo dell'errore di collimazione nello strumento dei passaggi; in altre parole, il raggio incidente è quello che verrebbe ricevuto da un telescopio meridiano con un errore di collimazione di **GAMMA**.
 
-**[Asse dello specchio non perpendicolare al meridiano]**
+**[Asse orizzontale dello specchio non perpendicolare al meridiano]**
 
 Se l'asse dei perni dello specchio non è perpendicolare al meridiano, ma la sua parte occidentale devia verso sud di un angolo **ALFA**, la normale allo specchio durante la sua rotazione descriverà un piano verticale inclinato dello stesso angolo **ALFA** sul meridiano. Il raggio incidente corrispondente a un raggio costantemente riflesso lungo l'orizzontale nel meridiano descriverà quindi un cono, il cui asse sarà proprio la linea dei perni, e il cui angolo al vertice sarà **90° - ALFA**. Questo raggio è quello che verrebbe ricevuto da un telescopio meridiano affetto contemporaneamente da un errore di collimazione **ALFA** e da un errore azimutale **ALFA**.
 
@@ -420,7 +422,44 @@ p.74
 
 barilotto, e si potrebbe levigare questi fino a quando una livella posta sui perni e sui bordi del bariletto dà la stessa inclinazione. Tuttavia, è necessario notare che una levigatura è stata effettuata per garantire la perpendicolarità molto più importante del collare rispetto alla superficie dello specchio; l'errore di posizione della superficie rispetto ai perni è quindi di quelli che bisogna accettare senza poterlo correggere: è sufficiente che non sia troppo considerevole.
 
+****
 
+Le determinazioni precedenti non hanno in realtà lo scopo di trasformare il siderostato in uno strumento di passaggi, pretesa che contrasta con il concetto con cui è stato costruito: devono solo fornirci i valori approssimati delle deviazioni del cannocchiale e dello specchio, al fine di consentirci di ridurle a errori sufficientemente piccoli in modo che, nell'uso ordinario dell'apparecchio, l'allineamento dei cerchi di angolo orario e delle distanze polari ci permetta di individuare immediatamente l'astro cercato e affinché le osservazioni micrometriche di due astri vicini forniscono le loro posizioni relative con un'approssimazione pari a quella richiesta per le osservazioni equatoriali. Un minuto d'arco in distanza polare, dieci o quindici secondi di tempo in ascensione retta, sono i limiti entro cui devono oscillare gli errori ampiamente accettabili. L'apparecchio, considerato come strumento meridiano, potrà, grazie alle osservazioni precedenti, presentare errori molto più piccoli per le ascensioni rette. Se inoltre fosse necessario ottenere le coordinate di un astro in modo più accurato, si determinerebbero le correzioni assolute dello strumento nella sua posizione attuale attraverso l'osservazione di una stella luminosa abbastanza vicina all'astro, come avviene con l'equatoriale.
+
+**[Regolazione dell'asse polare]**
+
+Una volta effettuata questa prima regolazione, il piano mediano del siderostato coincide approssimativamente con il meridiano; il cannocchiale stesso è in questo piano, e la normale allo specchio si discosta solo leggermente durante la sua rotazione attorno ai perni. Rimane da regolare l'inclinazione dell'asse polare e infine verificare se la condizione fondamentale della costruzione del siderostato, ossia l'uguaglianza delle lunghezze OM e OF, sia esattamente soddisfatta. Procederemo a queste determinazioni tramite osservazioni ancora effettuate nel piano del meridiano.
+
+Sia O (fig. 5) il centro del cerchio delle distanze polari, HH la traccia
+
+-------------
+
+p. 75
+
+
+dell'orizzonte sul piano del meridiano, OP l'asse del mondo, OH l'asse polare dello strumento, OL la direzione del cannocchiale, già regolato con precisione. Sia OF la forcella, ipotizzata troppo corta, con FF' = ALFA; la punta dello specchio prende la direzione F'L, che corrisponderebbe alla posizione OF di una forcella di lunghezza normale. Il raggio incidente che si riflette davanti a OL è quindi S'O, l'estensione di OF; mentre la lettura effettuata sul cerchio di declinazione corrisponde alla direzione OS, l'estensione di OF'.
+
+In queste condizioni, chiamiamo P la distanza polare, considerata con la rifrazione, dell'astro osservato nel cannocchiale, П la lettura corrispondente sul cerchio delle distanze polari, ovvero l'angolo SOП, con il zero di questo cerchio regolato come abbiamo detto. Chiamiamo:
+
+- LAMBDA l'angolo POП
+- i l'angolo HOL
+- OMEGA l'angolo SOS'
+- PHI la latitudine del luogo o l'angolo POH'
+
+tutti questi angoli sono misurati nel senso delle distanze polari; avremo
+
+P = П + LAMBDA + OMEGA
+
+------------
+
+p.76
+
+
+L'angolo OMEGA ha un'espressione sufficientemente approssimata
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/10dec96f-bb59-48a9-b73d-c81772d10cee)
+
+finché l'angolo FOL non diventa molto piccolo.
 
 
 
