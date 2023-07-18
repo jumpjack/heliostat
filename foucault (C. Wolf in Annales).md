@@ -422,7 +422,7 @@ p.74
 
 barilotto, e si potrebbe levigare questi fino a quando una livella posta sui perni e sui bordi del bariletto dà la stessa inclinazione. Tuttavia, è necessario notare che una levigatura è stata effettuata per garantire la perpendicolarità molto più importante del collare rispetto alla superficie dello specchio; l'errore di posizione della superficie rispetto ai perni è quindi di quelli che bisogna accettare senza poterlo correggere: è sufficiente che non sia troppo considerevole.
 
-****
+*
 
 Le determinazioni precedenti non hanno in realtà lo scopo di trasformare il siderostato in uno strumento di passaggi, pretesa che contrasta con il concetto con cui è stato costruito: devono solo fornirci i valori approssimati delle deviazioni del cannocchiale e dello specchio, al fine di consentirci di ridurle a errori sufficientemente piccoli in modo che, nell'uso ordinario dell'apparecchio, l'allineamento dei cerchi di angolo orario e delle distanze polari ci permetta di individuare immediatamente l'astro cercato e affinché le osservazioni micrometriche di due astri vicini forniscono le loro posizioni relative con un'approssimazione pari a quella richiesta per le osservazioni equatoriali. Un minuto d'arco in distanza polare, dieci o quindici secondi di tempo in ascensione retta, sono i limiti entro cui devono oscillare gli errori ampiamente accettabili. L'apparecchio, considerato come strumento meridiano, potrà, grazie alle osservazioni precedenti, presentare errori molto più piccoli per le ascensioni rette. Se inoltre fosse necessario ottenere le coordinate di un astro in modo più accurato, si determinerebbero le correzioni assolute dello strumento nella sua posizione attuale attraverso l'osservazione di una stella luminosa abbastanza vicina all'astro, come avviene con l'equatoriale.
 
@@ -439,11 +439,11 @@ Sia **O** (fig. 5) il centro del cerchio delle distanze polari, **HH** la tracci
 p. 75
 
 
-dell'orizzonte sul piano del meridiano, **OP** l'asse del mondo, **OП** l'asse polare dello strumento, **OL** la direzione del cannocchiale, già regolato con precisione. Sia **OF'** la forcella, ipotizzata troppo corta di **FF' = ALFA**; la coda dello specchio prende la direzione **F'L**, che corrisponderebbe alla posizione **OF** di una forcella di lunghezza normale. Il raggio incidente che si riflette davanti a **OL** è quindi **S'O**, l'estensione di **OF**; mentre la lettura effettuata sul cerchio di declinazione corrisponde alla direzione **OS**, l'estensione di **OF'**.
+dell'orizzonte sul piano del meridiano, **OP** l'asse del mondo, **OП** l'asse polare dello strumento, **OL** la direzione del cannocchiale, già regolato con precisione. Se ipotizziamo di avere una forcella **OF'** troppo corta di una quantità **FF'** che chiameremo **ALFA**, la coda dello specchio *[per passare per la forcella]* dovrà assumere la direzione **F'L**, che è quella che assumerebbe se la forcella avesse la lumghezza giusta ma passasse per **OF**. Il raggio incidente che corrisponde al raggio riflesso prolungamento di **OL**, quindi, sarà dato da **S'O**, che è appunto il prolungamento della *[forcella giusta]* **OF**, mentre la lettura effettuata sul cerchio di declinazione corrisponderà alla direzione *[sbagliata]* **OS**, che è il prolungamento della *[forcella sbagliata]* **OF'**.
 
 In queste condizioni, chiamiamo:
 
-- **P** la distanza polare, corretta per la rifrazione, dell'astro osservato nel cannocchiale
+- **P** la distanza polare *[(declinazione)]*, corretta per la rifrazione, dell'astro osservato nel cannocchiale
 - **П** la lettura corrispondente sul cerchio delle distanze polari, ovvero l'angolo **SOП**, con lo zero di questo cerchio regolato come abbiamo detto
 - **LAMBDA** l'angolo **POП**
 - **i** l'angolo **HOL**
@@ -471,7 +471,13 @@ Pertanto, se osserviamo nel meridiano una serie di stelle note, la correzione da
 
 Il criterio con cui si potrà verificare l'uguaglianza tra la lunghezza della forcella e la distanza **OL** **[essendo L il centro dello specchio M ruotato verso il basso intorno a O]** sarà quindi la capacità di riportare le distanze polari, lette sullo strumento, al loro valore corretto mediante l'uso di una correzione costante, che costituirà la correzione di collimazione del cerchio delle distanze polari al polo. Se ciò non avviene, se al contrario la correzione richiesta dalle osservazioni aumenta dal sud all'orizzonte fino al polo, limite delle osservazioni possibili, si potrà dedurre che la forcella è più corta della distanza degli assi **OL**; sarà più lunga se la correzione, presa con il suo segno, diminuisce e addirittura cambia segno.
 
-È quindi necessario avere un modo per riportare all'uguaglianza le due lunghezze **OF** e **OL**. Lo specchio e l'asse polare essendo fissati sulla stessa base di ghisa, sarà la lunghezza della forcella ad essere la quantità variabile. A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forcella alla lunghezza desiderata. Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero, e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto *α/l* con una precisione sufficiente per guidare le correzioni da apportare alla forcella.
+È quindi necessario avere un modo per riportare all'uguaglianza le due lunghezze **OF** e **OL**. Lo specchio e l'asse polare essendo fissati sulla stessa base di ghisa, sarà la lunghezza della forcella ad essere la quantità variabile. 
+
+**[Forcella regolabile]**
+
+A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forcella alla lunghezza desiderata.  <img src="https://github.com/jumpjack/heliostat/blob/main/images/forcella-regolabile.png" align="right" alt="forcella regolabile" width = 400>
+
+Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero, e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto *α/l* con una precisione sufficiente per guidare le correzioni da apportare alla forcella.
 
 -------------
 
@@ -489,7 +495,7 @@ Qui la differenza k'-k dei coefficienti di dilatazione è di 0,0000111. Di conse
 
 Quindi, al limite estremo delle osservazioni possibili, sarebbe necessaria una variazione di 12 gradi per produrre un errore di 1 minuto sulla posizione della stella. Allo zenit, la variazione di temperatura dovrebbe essere di circa 26 gradi. Da quel punto in poi, l'errore diminuisce molto rapidamente fino all'orizzonte, dove è nullo. In realtà, l'introduzione della forcella in alluminio non produrrà, nell'uso dell'apparecchio, errori superiori a quelli che ci si può aspettare dall'imperfezione della regolazione. Inoltre, essendo nota la legge delle variazioni della distanza polare, sarà facile, se necessario, costruire una tabella di correzione per le diverse temperature.
 
-Abbiamo notato che se tracciamo un piano **TT'** attraverso il centro di rotazione della forcella, perpendicolare alla direzione del raggio riflesso, la coda direttrice dello specchio, nel suo movimento, traccia su questo piano la proiezione stereografica del percorso sulla sfera **[quale sfera??]** tracciato dall'estremità della forcella, con il punto di vista al centro dello specchio. Se la lunghezza  **[[OF]** della forcella non è uguale alla distanza tra il suo centro di rotazione **[O]** e il centro dello specchio **[L]**, questa proprietà persiste ancora, con la differenza che il punto di vista si trova all'interno o all'esterno della sfera descritta dall'estremità della forcella, a seconda 
+Abbiamo notato che se tracciamo un piano **TT'** attraverso il centro di rotazione della forcella, perpendicolare alla direzione del raggio riflesso, la coda direttrice dello specchio, nel suo movimento, traccia su questo piano la proiezione stereografica del percorso sulla sfera descritta dall'estremità della forcella, con il punto di vista al centro dello specchio. Se la lunghezza  **[OF]** della forcella non è uguale alla distanza tra il suo centro di rotazione **[O]** e il centro dello specchio **[L]**, questa proprietà persiste ancora, con la differenza che il punto di vista si trova all'interno o all'esterno della sfera descritta dall'estremità della forcella, a seconda 
 
 ------------
 
