@@ -428,39 +428,46 @@ Le determinazioni precedenti non hanno in realtà lo scopo di trasformare il sid
 
 **[Regolazione dell'asse polare]**
 
-Una volta effettuata questa prima regolazione, il piano mediano del siderostato coincide approssimativamente con il meridiano; il cannocchiale stesso è in questo piano, e la normale allo specchio si discosta solo leggermente durante la sua rotazione attorno ai perni. Rimane da regolare l'inclinazione dell'asse polare e infine verificare se la condizione fondamentale della costruzione del siderostato, ossia l'uguaglianza delle lunghezze OM e OF, sia esattamente soddisfatta. Procederemo a queste determinazioni tramite osservazioni ancora effettuate nel piano del meridiano.
+Una volta effettuata questa prima regolazione, il piano mediano del siderostato coincide approssimativamente con il meridiano; il cannocchiale stesso è in questo piano, e la normale allo specchio si discosta solo leggermente durante la sua rotazione attorno ai perni. Rimane da regolare l'inclinazione dell'asse polare e infine verificare se la condizione fondamentale della costruzione del siderostato, ossia l'uguaglianza delle lunghezze **OM** e **OF**, sia esattamente soddisfatta. Procederemo a queste determinazioni tramite osservazioni ancora effettuate nel piano del meridiano.
 
-Sia O (fig. 5) il centro del cerchio delle distanze polari, HH la traccia
+Sia **O** (fig. 5) il centro del cerchio delle distanze polari, **HH** la traccia
 
 -------------
 
 p. 75
 
 
-dell'orizzonte sul piano del meridiano, OP l'asse del mondo, OH l'asse polare dello strumento, OL la direzione del cannocchiale, già regolato con precisione. Sia OF la forcella, ipotizzata troppo corta, con FF' = ALFA; la punta dello specchio prende la direzione F'L, che corrisponderebbe alla posizione OF di una forcella di lunghezza normale. Il raggio incidente che si riflette davanti a OL è quindi S'O, l'estensione di OF; mentre la lettura effettuata sul cerchio di declinazione corrisponde alla direzione OS, l'estensione di OF'.
+dell'orizzonte sul piano del meridiano, **OP** l'asse del mondo, **OП** l'asse polare dello strumento, **OL** la direzione del cannocchiale, già regolato con precisione. Sia **OF'** la forcella, ipotizzata troppo corta di **FF' = ALFA**; la coda dello specchio prende la direzione **F'L**, che corrisponderebbe alla posizione **OF** di una forcella di lunghezza normale. Il raggio incidente che si riflette davanti a **OL** è quindi **S'O**, l'estensione di **OF**; mentre la lettura effettuata sul cerchio di declinazione corrisponde alla direzione **OS**, l'estensione di **OF'**.
 
-In queste condizioni, chiamiamo P la distanza polare, considerata con la rifrazione, dell'astro osservato nel cannocchiale, П la lettura corrispondente sul cerchio delle distanze polari, ovvero l'angolo SOП, con il zero di questo cerchio regolato come abbiamo detto. Chiamiamo:
+In queste condizioni, chiamiamo:
 
-- LAMBDA l'angolo POП
-- i l'angolo HOL
-- OMEGA l'angolo SOS'
-- PHI la latitudine del luogo o l'angolo POH'
+- **P** la distanza polare, corretta per la rifrazione, dell'astro osservato nel cannocchiale
+- **П** la lettura corrispondente sul cerchio delle distanze polari, ovvero l'angolo **SOП**, con lo zero di questo cerchio regolato come abbiamo detto
+- **LAMBDA** l'angolo **POП**
+- **i** l'angolo **HOL**
+- **OMEGA** l'angolo **SOS'**
+- **PHI** la latitudine del luogo o l'angolo **POH'**
 
 tutti questi angoli sono misurati nel senso delle distanze polari; avremo
 
-P = П + LAMBDA + OMEGA
+**P = П + LAMBDA + OMEGA**
 
 ------------
 
 p.76
 
 
-L'angolo OMEGA ha un'espressione sufficientemente approssimata
+L'angolo **OMEGA** può essere esspresso in forma sufficientemente approssimata come
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/10dec96f-bb59-48a9-b73d-c81772d10cee)
 
-finché l'angolo FOL non diventa molto piccolo.
+finché l'angolo **FOL** non diventa molto piccolo.
 
+Pertanto, se osserviamo nel meridiano una serie di stelle note, la correzione da apportare alle letture effettuate sul cerchio delle distanze polari per ottenere la loro distanza dal polo sarà composta da una parte costante e da una parte variabile con **П**.
+
+Il criterio con cui si potrà verificare l'uguaglianza tra la lunghezza della forcella e la distanza **OL** sarà quindi la capacità di riportare le distanze polari, lette sullo strumento, al loro valore corretto mediante l'uso di una correzione costante, che costituirà la correzione di collimazione del cerchio delle distanze polari al polo. Se ciò non avviene, se al contrario la correzione richiesta dalle osservazioni aumenta dal sud all'orizzonte fino al polo, limite delle osservazioni possibili, si potrà dedurre che la forcella è più corta della distanza degli assi** **OL; sarà più lunga se la correzione, presa con il suo segno, diminuisce e addirittura cambia segno.
+
+È quindi necessario avere un modo per riportare all'uguaglianza le due lunghezze **OF** e **OL**. Lo specchio e l'asse polare essendo fissati sulla stessa base di ghisa, sarà la lunghezza della forchetta ad essere la quantità variabile. A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forchetta alla lunghezza desiderata. Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto **α/L** con una precisione sufficiente per guidare le correzioni da apportare alla forchetta.
 
 
 -------
