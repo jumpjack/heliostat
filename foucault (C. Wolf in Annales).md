@@ -426,9 +426,11 @@ barilotto, e si potrebbe levigare questi fino a quando una livella posta sui per
 
 Le determinazioni precedenti non hanno in realtà lo scopo di trasformare il siderostato in uno strumento di passaggi, pretesa che contrasta con il concetto con cui è stato costruito: devono solo fornirci i valori approssimati delle deviazioni del cannocchiale e dello specchio, al fine di consentirci di ridurle a errori sufficientemente piccoli in modo che, nell'uso ordinario dell'apparecchio, l'allineamento dei cerchi di angolo orario e delle distanze polari ci permetta di individuare immediatamente l'astro cercato e affinché le osservazioni micrometriche di due astri vicini forniscono le loro posizioni relative con un'approssimazione pari a quella richiesta per le osservazioni equatoriali. Un minuto d'arco in distanza polare, dieci o quindici secondi di tempo in ascensione retta, sono i limiti entro cui devono oscillare gli errori ampiamente accettabili. L'apparecchio, considerato come strumento meridiano, potrà, grazie alle osservazioni precedenti, presentare errori molto più piccoli per le ascensioni rette. Se inoltre fosse necessario ottenere le coordinate di un astro in modo più accurato, si determinerebbero le correzioni assolute dello strumento nella sua posizione attuale attraverso l'osservazione di una stella luminosa abbastanza vicina all'astro, come avviene con l'equatoriale.
 
-**[Regolazione dell'asse polare]**
+**[Regolazione dell'asse polare e calibrazione distanze OM e OF]**
 
 Una volta effettuata questa prima regolazione, il piano mediano del siderostato coincide approssimativamente con il meridiano; il cannocchiale stesso è in questo piano, e la normale allo specchio si discosta solo leggermente durante la sua rotazione attorno ai perni. Rimane da regolare l'inclinazione dell'asse polare e infine verificare se la condizione fondamentale della costruzione del siderostato, ossia l'uguaglianza delle lunghezze **OM** e **OF**, sia esattamente soddisfatta. Procederemo a queste determinazioni tramite osservazioni ancora effettuate nel piano del meridiano.
+
+**[Regolazione dell'asse polare (angolo OП)]**
 
 Sia **O** (fig. 5) il centro del cerchio delle distanze polari, **HH** la traccia
 
@@ -465,9 +467,46 @@ finché l'angolo **FOL** non diventa molto piccolo.
 
 Pertanto, se osserviamo nel meridiano una serie di stelle note, la correzione da apportare alle letture effettuate sul cerchio delle distanze polari per ottenere la loro distanza dal polo sarà composta da una parte costante e da una parte variabile con **П**.
 
-Il criterio con cui si potrà verificare l'uguaglianza tra la lunghezza della forcella e la distanza **OL** sarà quindi la capacità di riportare le distanze polari, lette sullo strumento, al loro valore corretto mediante l'uso di una correzione costante, che costituirà la correzione di collimazione del cerchio delle distanze polari al polo. Se ciò non avviene, se al contrario la correzione richiesta dalle osservazioni aumenta dal sud all'orizzonte fino al polo, limite delle osservazioni possibili, si potrà dedurre che la forcella è più corta della distanza degli assi** **OL; sarà più lunga se la correzione, presa con il suo segno, diminuisce e addirittura cambia segno.
+**[Calibrazione distanze OM e OF]**
 
-È quindi necessario avere un modo per riportare all'uguaglianza le due lunghezze **OF** e **OL**. Lo specchio e l'asse polare essendo fissati sulla stessa base di ghisa, sarà la lunghezza della forchetta ad essere la quantità variabile. A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forchetta alla lunghezza desiderata. Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto **α/L** con una precisione sufficiente per guidare le correzioni da apportare alla forchetta.
+Il criterio con cui si potrà verificare l'uguaglianza tra la lunghezza della forcella e la distanza **OL** **[essendo L il centro dello specchio M ruotato verso il basso intorno a O]** sarà quindi la capacità di riportare le distanze polari, lette sullo strumento, al loro valore corretto mediante l'uso di una correzione costante, che costituirà la correzione di collimazione del cerchio delle distanze polari al polo. Se ciò non avviene, se al contrario la correzione richiesta dalle osservazioni aumenta dal sud all'orizzonte fino al polo, limite delle osservazioni possibili, si potrà dedurre che la forcella è più corta della distanza degli assi **OL**; sarà più lunga se la correzione, presa con il suo segno, diminuisce e addirittura cambia segno.
+
+È quindi necessario avere un modo per riportare all'uguaglianza le due lunghezze **OF** e **OL**. Lo specchio e l'asse polare essendo fissati sulla stessa base di ghisa, sarà la lunghezza della forcella ad essere la quantità variabile. A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forcella alla lunghezza desiderata. Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero, e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto *α/l* con una precisione sufficiente per guidare le correzioni da apportare alla forcella.
+
+-------------
+
+p.77
+
+Una volta ottenuta l'uguaglianza, è necessario che essa si mantenga nonostante le variazioni di temperatura: la forchetta deve quindi essere costruita con lo stesso metallo della base stessa. L'impossibilità di bilanciare la forchetta nelle condizioni di costruzione imposte dal modello realizzato sotto gli occhi di L. Foucault ci ha portato a realizzare la forchetta in alluminio. È utile calcolare quale errore può derivarne per una data variazione di temperatura sulla distanza polare di una stella. Supponendo che il cannocchiale sia orizzontale, l'errore OMEGA sarà approssimativamente, per ogni grado di variazione di temperatura a partire dal punto in cui avviene l'uguaglianza,
+
+FORMULA
+
+Qui la differenza k'-k dei coefficienti di dilatazione è di 0,0000111. Di conseguenza, avremo
+
+Al polo..... OMEGA = 5°
+Al zenit.... OMEGA = 2°.3
+
+Quindi, al limite estremo delle osservazioni possibili, sarebbe necessaria una variazione di 12 gradi per produrre un errore di 1 minuto sulla posizione della stella. Al zenit, la variazione di temperatura dovrebbe essere di circa 26 gradi. Da quel punto in poi, l'errore diminuisce molto rapidamente fino all'orizzonte, dove è nullo. In realtà, l'introduzione della forchetta in alluminio non produrrà, nell'uso dell'apparecchio, errori superiori a quelli che ci si può aspettare dall'imperfezione della regolazione. Inoltre, essendo nota la legge delle variazioni della distanza polare, sarà facile, se necessario, costruire una tabella di correzione per le diverse temperature.
+
+Abbiamo notato che se tracciamo un piano TT' attraverso il centro di rotazione della forchetta, perpendicolare alla direzione del raggio riflesso, la guida del riflesso del miroir, nel suo movimento, traccia su questo piano la proiezione stereografica del percorso sulla sfera dell'estremità della forchetta, con il punto di vista al centro dello specchio. Quando la forchetta non è uguale alla distanza dal suo centro di rotazione al centro dello specchio, questa proprietà persiste ancora, con la differenza che il punto di vista si trova all'interno o all'esterno della sfera descritta dall'estremità della forchetta, a seconda 
+
+------------
+
+p.78 
+
+che essa sia troppo lunga o troppo corta. Da qui deriva l'errore generale risultante da questa disuguaglianza. Sia l-a la lunghezza della forchetta: tracciamo sul piano preso come tavola la proiezione prospettica dell'estremità della forchetta, prendendo il punto di vista a una distanza l. Le coordinate del punto del cielo che si trova sull'estensione della forchetta sono le letture effettuate sui due cerchi, ossia П e h (supponendo che lo strumento sia altrimenti ben regolato). Si tratta di trovare le coordinate P e H del punto del cielo che si trova attualmente nel cannocchiale. Ovviamente, queste coordinate sono simmetriche rispetto al centro di rotazione della forchetta rispetto all'estremità di una forchetta ideale di lunghezza l, che darebbe la posizione attuale della guida del riflesso. La proiezione stereografica di quest'estremità sul piano è quindi la stessa della proiezione prospettica appena determinata. Il problema è quindi ridotto a quello in cui tutti gli elementi sono noti. Date le coordinate 180° +П e 180° + h di un punto situato sulla sfera di raggio l-alfa, trovare le coordinate 180°+P e 180°+H del punto la cui proiezione stereografica coincide con la proiezione prospettica del primo sullo stesso piano e per lo stesso punto di vista situato a una distanza l dal centro di proiezione.
+
+Tuttavia, non è necessario risolvere questo problema nella sua generalità per riconoscere la legge degli errori commessi sulla posizione di una stella. Notiamo che la costruzione che abbiamo realizzato (fig. 5) per il piano del meridiano è sempre valida per un piano qualsiasi che passa attraverso la direzione costante OL del raggio riflesso e attraverso la forchetta OF'. In questo piano, indipendentemente dall'angolo che forma con il piano verticale, la stella osservata è sempre S', mentre le coordinate della stella S vengono lette; entrambe le stelle si trovano quindi nello stesso piano che passa attraverso OL, e in questo piano la variazione della loro distanza angolare SOS' è rappresentata dall'espressione
+
+FORMULA
+
+in modo sufficientemente approssimato fintanto che l'angolo FOL non diventi molto piccolo.
+
+L'errore quindi aumenta quando l'apertura dell'angolo tra la forchetta e il raggio riflesso diminuisce.
+
+-----------
+
+p.79 
 
 
 -------
