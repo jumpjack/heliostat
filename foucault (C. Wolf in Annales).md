@@ -484,13 +484,15 @@ Il criterio con cui si potrà verificare l'uguaglianza tra la lunghezza della fo
 
 A tale scopo, la coda cilindrica che ruota nei colletti fissati al cerchio delle distanze polari è mantenuta da due anelli che si premono in direzioni opposte contro questi colletti e che possono essere spostati di una piccola quantità facendoli ruotare su una vite. Un contro-dado li mantiene poi in posizione. Attraverso regolari tentativi, si potrà portare la forcella alla lunghezza desiderata.  <img src="https://github.com/jumpjack/heliostat/blob/main/images/forcella-regolabile.png" align="right" alt="forcella regolabile" width = 400>
 
-Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero, e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto *α/l* con una precisione sufficiente per guidare le correzioni da apportare alla forcella.
+Si faciliteranno questi tentativi con osservazioni effettuate vicino all'orizzonte sud; infatti, la correzione **OMEGA** si riduce sensibilmente a zero, e la differenza **P-П** fornisce un valore approssimativo di **LAMBDA**. Successivamente, dalle altre osservazioni effettuate il più vicino possibile al polo, si potranno dedurre valori per la correzione **OMEGA**, che consentiranno di calcolare il rapporto ***α/l*** con una precisione sufficiente per guidare le correzioni da apportare alla forcella.
 
 -------------
 
 p.77
 
-Una volta ottenuta l'uguaglianza, è necessario che essa si mantenga nonostante le variazioni di temperatura: la forcella deve quindi essere costruita con lo stesso metallo della base stessa. L'impossibilità di bilanciare la forcella nelle condizioni di costruzione imposte dal modello realizzato sotto gli occhi di L. Foucault ci ha portato a realizzare la forcella in alluminio. È utile calcolare quale errore può derivarne per una data variazione di temperatura sulla distanza polare di una stella. Supponendo che il cannocchiale sia orizzontale, l'errore OMEGA sarà approssimativamente, per ogni grado di variazione di temperatura a partire dal punto in cui avviene l'uguaglianza,
+Una volta ottenuta l'uguaglianza, è necessario che essa si mantenga nonostante le variazioni di temperatura: la forcella deve quindi essere costruita con lo stesso metallo della base stessa. L'impossibilità di bilanciare la forcella nelle condizioni di costruzione imposte dal modello realizzato sotto gli occhi di L. Foucault ci ha portato a realizzare la forcella in alluminio. È utile calcolare quale errore può derivarne per una data variazione di temperatura sulla distanza polare di una stella. 
+
+Supponendo ora che il cannocchiale sia orientato orizzontalmente *[(cioè **i = 0**)]* , l'errore **OMEGA** sarà approssimativamente, per ogni grado di variazione di temperatura a partire dal punto in cui avviene l'uguaglianza,
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/cc2a61df-fe5e-43fc-a60f-aa25c2921aa1)
 
