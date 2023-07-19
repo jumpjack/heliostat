@@ -439,18 +439,22 @@ Sia **O** (fig. 5) il centro del cerchio delle distanze polari, **HH** la tracci
 p. 75
 
 
-dell'orizzonte sul piano del meridiano, **OP** l'asse del mondo, **OП** l'asse polare dello strumento, **OL** la direzione del cannocchiale, già regolato con precisione. Se ipotizziamo di avere una forcella **OF'** troppo corta di una quantità **FF'** che chiameremo **ALFA**, la coda dello specchio *[per passare per la forcella]* dovrà assumere la direzione **F'L**, che è quella che assumerebbe se la forcella avesse la lumghezza giusta ma passasse per **OF**. Il raggio incidente che corrisponde al raggio riflesso prolungamento di **OL**, quindi, sarà dato da **S'O**, che è appunto il prolungamento della *[forcella giusta]* **OF**, mentre la lettura effettuata sul cerchio di declinazione corrisponderà alla direzione *[sbagliata]* **OS**, che è il prolungamento della *[forcella sbagliata]* **OF'**.
+dell'orizzonte sul piano del meridiano, **OP** l'asse del mondo, **OП** l'asse polare dello strumento, **OL** la direzione del cannocchiale, già regolato con precisione. Se ipotizziamo di avere una forcella **OF'** troppo corta di una quantità **FF'** che chiameremo **ALFA**, la coda dello specchio *[per passare per la forcella]* dovrà assumere la direzione **F'L**, che è quella che assumerebbe se la forcella avesse la lumghezza giusta ma passasse per **OF**. Il raggio incidente che corrisponde al raggio riflesso prolungamento di **OL**, quindi, sarà dato da **S'O**, che è appunto il prolungamento della *[forcella giusta]* **OF**, mentre la lettura effettuata sul cerchio di declinazione corrisponderà alla direzione *[sbagliata]* **OS**, che è il prolungamento della *[forcella sbagliata]* **OF'**. 
+
+<img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.5-ann.png" width = 300> <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.5-moderna.png" width=  500 align="right">
+
+![Passaggi](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.5-passaggi.png)
 
 In queste condizioni, chiamiamo:
 
-- **P** la distanza polare *[(declinazione)]*, corretta per la rifrazione, dell'astro osservato nel cannocchiale
+- **P** la distanza polare *[(declinazione)]*, corretta per la rifrazione, dell'astro osservato nel cannocchiale *[(quantità che vogliamo determinare)]*
 - **П** la lettura corrispondente sul cerchio delle distanze polari, ovvero l'angolo **SOП**, con lo zero di questo cerchio regolato come abbiamo detto
 - **LAMBDA** l'angolo **POП**
 - **i** l'angolo **HOL**
 - **OMEGA** l'angolo **SOS'**
 - **PHI** la latitudine del luogo o l'angolo **POH'**
 
-tutti questi angoli sono misurati nel senso delle distanze polari; avremo
+tutti questi angoli sono misurati nel senso delle distanze polari; la quantità **P** cercata asarà quindi data da:
 
 **P = П + LAMBDA + OMEGA**
 
@@ -466,6 +470,7 @@ L'angolo **OMEGA** può essere esspresso in forma sufficientemente approssimata 
 finché l'angolo **FOL** non diventa molto piccolo.
 
 *[Nota: moltiplicare per 206265 serve a convertire da radianti ad arcosecondi ([fonte](https://simonelochivisualarts.com/2021/04/10/formule-fov-estesa-e-fov-semplificata/))]*
+*[Nota 2: FOL non sembra in realtà valere PIGRECO + LAMBDA + PHI - i, che sembrerebbe esere invece il valore di F'OL], visto che PIGRECO è l'angolo con S, che però è il prolungamento di F', non di F]*
 
 Pertanto, se osserviamo nel meridiano una serie di stelle note, la correzione da apportare alle letture effettuate sul cerchio delle distanze polari per ottenere la loro distanza dal polo sarà composta da una parte costante e da una parte variabile con **П**.
 
