@@ -106,7 +106,7 @@ La disposizione abituale degli strumenti astronomici, come i cannocchiali o i te
 
 Il siderostato ha lo scopo di evitare questi inconvenienti e consentire all'astronomo di osservare la luce delle stelle esattamente come il fisico 
 
-*(1) Estratto da una nota letta all'Accademia delle scienze da M. H. Sainte-Claire Deville il 2 marzo 1868, Comptes rendus de l'Acad. des Sc, t. LXVI, p. 387. Non è stato possibile trovare alcuna nota di L. Foucault relativa a questo strumento.*
+*(1) Estratto da una nota letta all'Accademia delle scienze da M. H. Sainte-Claire Deville il 2 marzo 1868, [Comptes rendus de l'Acad. des Sc, t. LXVI, p. 387](https://archive.org/details/ComptesRendusAcademieDesSciences0066/page/n390/mode/1up?q=siderostat). Non è stato possibile trovare alcuna nota di L. Foucault relativa a questo strumento.*
 
 *(2) Sembra che da molto tempo L. Foucault si interessasse a questa idea, poiché tra le carte che ha lasciato ci sono vari schizzi datati novembre 1861 e intitolati "Sidérostat".*
 
