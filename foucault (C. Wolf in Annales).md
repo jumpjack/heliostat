@@ -523,7 +523,27 @@ in modo sufficientemente approssimato fintanto che l'angolo **FOL** non diventi 
 
 -----------
 
-p.79 
+p.79
+
+Ora, nella proiezione prospettica tracciata dalla coda direttrice sul piano **TT'**, perpendicolare al raggio riflesso, la retta **Of** è la proiezione della forcella, e questa proiezione ha anche il valore **OL * cot 1/2 FOL**: è quindi proporzionale all'errore commesso. Se la forcella o la sua estensione percorre un grande cerchio che passa per la direzione del raggio riflesso, l'errore aumenta da zero all'infinito. Se si forza la forcella a ruotare con un angolo costante rispetto a **OL**, l'errore rimane costante: le circonferenze tracciate sul piano del tavolo intorno al punto **O** come centro rappresentano quindi le curve *di eguale errore*. Il raggio di una circonferenza o la proiezione prospettica della forcella rappresenta l'errore che influisce sulle posizioni delle stelle nel piano passante per **OL**, le cui proiezioni stereografiche si trovano su questa circonferenza.
+
+Quando l'angolo tra la forcella e la direzione **OL** diventa molto piccolo, l'espressione dell'errore diventa inaccurata. Ma la costruzione precedente è sempre valida e mostra cosa succede.
+
+Supponiamo di avere una **forcella troppo lunga**: il raggio incidente che si avvicina all'orizzonte nord ipotetico, o la forcella nella direzione opposta a **OL**, arriva un momento in cui il raggio visivo è parallelo al piano del tavolo: le stelle che si trovano sul piccolo cerchio, base del cono che verrebbe descritto da questa posizione del raggio incidente ruotando attorno a **OL**, sono le ultime che possono essere viste nel cannocchiale. Continuando ad avvicinarsi a **OL**, la proiezione della forcella diventa immaginaria: solo l'estensione del raggio visivo incontra il tavolo. L'intero interno del cono sfugge all'azione riflettente dello specchio. Infatti, quest'ultimo si inclina in modo da girare verso il cannocchiale la faccia non riflettente e bascula molto rapidamente per raggiungere la posizione verticale che raggiunge quando la forcella coincide con **OL**.
+
+La **forcella troppo corta** produce un effetto inverso sullo specchio: c'è ancora intorno al punto dell'orizzonte nord, situato sul prolungamento del cannocchiale, un piccolo cerchio le cui stelle sono le ultime che lo specchio può far vedere; tutto ciò che è al di fuori sfugge alla sua visuale; ma a partire dalla posizione in cui il raggio visivo è tangente alla sfera **l-alfa**, lo specchio torna sulle posizioni che ha già occupato, le percorre tutte con estrema rapidità e, quando la forcella coincide con **OL**, invia al cannocchiale i raggi che seguono **LO**.
+
+----------
+
+p.80
+
+Non è inutile notare che queste posizioni singolari dello specchio sono puramente teoriche e che i piccoli cerchi di invisibilità appartengono a una regione del cielo impossibile da raggiungere.
+
+*
+
+Riprendiamo il sidorostato fissato nel meridiano e supponiamo di aver corretto la lunghezza della forcella come appena detto, o, equivalentemente, di aver determinato, mediante osservazioni fatte vicino al polo e vicino all'orizzonte, gli elementi di correzione.
+
+Una serie di osservazioni di distanze polari fatte su stelle conosciute nel meridiano determinerà l'errore di collimazione del cerchio delle distanze polari, cioè l'errore **LAMBDA** dell'inclinazione dell'asse. Si agirà sulla vite della base per correggere questo errore, poiché abbiamo visto che è di poco interesse mantenere la verticalità del supporto dello specchio. Ma questo cambiamento di inclinazione comporta un cambiamento equivalente nell'inclinazione del cannocchiale: quindi è necessario correggerlo nuovamente. **Fatto ciò, il siderostato dovrebbe essere completamente regolato e pronto per l'osservazione.**
 
 
 -------
@@ -792,6 +812,102 @@ p.74
 
 
 barillet, et l on pourrait roder ceux ci jusqu à ce qu un niveau, posé sur les tourillons et posé sur les bords du barillet, donnât la même inclinaison. Mais il faut remarquer qu un rodage a été effectué pour assurer la perpendicularité bien autrement importante de la trice à la surface du miroir; l erreur de position de la surface. par rapport aux tourillons, est donc de celles qu il faut subir sans pouvoir la corriger: il nous suffit qu elle ne soit pas trop considérable.
+
+
+Les déterminations qui précèdent n ont pas en effet pour but de transformer le sidérostat en un instrument des passages, prétention bien opposée à la pensée dans laquelle il a été construit: elles doivent seulement nous donner les valeurs approchées des déviations de la lunette et du miroir, afin de nous permettre de les réduire à des erreurs suffisamment petites pour que, dans l usage ordinaire de l appareil, le calage des cercles d angle horaire et de distances polaires permette de trouver immédiatement l astre cherché, et que les observations micrométriques de deux astres voisins donnent leurs positions relatives avec une approximation égale à celle que l on demande aux observations équatoriales. Une minute d arc en distance polaire, dix à quinze se condes de temps en ascension droite, telles sont les limites autour desquelles doivent osciller les erreurs largement acceptables. L appareil, considéré comme instrument méridien, pourra, par les observations précédentes, être amené à ne présenter pour les ascensions droites que des erreurs beaucoup moindres. Si d ailleurs il était nécessaire d obtenir plus rigoureusement les coordonnées d un astre, on déterminerait les corrections absolues de l instrument dans la position qu il occupe par l observation d une belle étoile suffisamment rapprochée de l astre, ainsi que cela se pratique avec l équatorial.
+
+Ce premier réglage effectué, le plan médian du sidérostat coïncide à fort peu près avec le méridien; la lunette est elle même dans ce plan ,et la normale au miroir ne s en écarte que fort peu pendant la rotation de celui ci autour de ces tourillons. Il reste à régler l inclinaison de l axe polaire, et enfin à vérifier si la condition fondamentale de la construction du sidérostat, savoir l égalité des longueurs OM et OF, est exactement remplie. Nous allons procéder à ces déterminations par des observations faites encore dans le plan du méridien.
+
+Soit O (fig. 5) le centre du cercle des distances polaires HH la
+
+-------------
+
+p.75
+
+trace de l horizon sur le plan du méridien, OP l axe du monde OH l axe polaire de l instrument, OL la direction de la lunette, déjà exactement réglée. Soit OF la fourchette, supposée trop courte de FF'= ALFA; la queue du miroir prend la direction F'L, qui répondrait à la position OF d une
+
+fourchette de longueur normale. Le rayon incident qui se réfléchit sui vant OL est donc S'O, prolongement de OF; tandis que la lecture faite sur le cercle de déclinaison correspond à la direction OS, prolongement de OF'.
+
+Dans ces conditions, appelons P la distance polaire, affectée de la réfraction, de l étoile vue dans la lunette, ? la lecture correspondante sur le cercle des distances polaires, c est à dire l angle SO?, le zéro de ce cercle ayant été réglé comme nous l avons dit. Appelons
+
+- LAMBDA l'angle PO?
+- i l angle HOL
+- OMEGA  l angle SOS'
+- PHI  la latitude du lieu ou l angle POH'
+
+ tous ces angles étant comptés dans le sens des distances polaires;  nous aurons
+
+P = ? + LAMBDA + OMEGA
+
+---------------
+
+p.76
+
+L angle OMEGA a pour expression suffisamment approchée
+
+FORMULA
+
+tant que l angle FOL ne devient pas très petit.
+
+Si donc on observe dans le méridien une série d étoiles connues la correction à apporter aux lectures faites sur le cercle des distances polaires, pour obtenir leur distance au pôle, se composera d une partie constante et d une partie variable avec ?.
+
+ Le caractère auquel on reconnaîtra l égalité de longueur de la four chette et de la distance OL sera donc la possibilité de ramener les distances polaires, lues sur l instrument à leur valeur vraie par l emploi d une correction constante, qui constituera la correction de collimation du cercle des distances au pôle. S il n en est pas ainsi, si au contraire la correction nécessitée par les observations va en croissant depuis l horizon sud jusqu au pôle, limite des observations possibles, on en conclura que la fourchette est plus courte que la distance des axes OL; elle sera plus longue si la correction prise avec son signe va en décroissant, et même change de signe.
+
+  Il faut alors avoir le moyen de ramener à l égalité les deux lon gueurs OF et OL. Le miroir et l axe polaire étant fixés sur le même socle en fonte c est la longueur de la fourchette qui doit être la quan tité variable. A cet effet, la queue cylindrique qui tourne dans les col lets portés par le cercle des distances polaires est maintenue par deux anneaux qui pressent en sens contraire contre ces collets et que l on peut déplacer d uue petite quantité en les faisant tourner sur un pas de vis. Un contre écrou les maihtient ensuite en place Par des tâtonnements réguliers on amènera ainsi la fourchette à la longueur voulue. On facilitera ces tâtonnements par des observations faites au voisi nage de l horizon sud; alors en effet la correction OMEGA se réduit sensi blement à zéro et la différence P-? fait connaître une valeur approchée de LAMBDA.  On peut ensuite des autres observations faites aussi près que possible du pôle déduire des valeurs de la correction OMEGA, qui permettront de calculer le rapport a/L avec une approximation suffisante pour guider les retouches à faire subir à la fourchette.
+
+-----------
+
+p.77
+
+Une fois l égalité obtenue, il est nécessaire qu elle se conserve malgré les variations de température: la fourchette doit donc être construite du même métal que le socle lui même. L impossibilité d équili brer la fourchette dans les conditions de construction que nous imposait le modèle exécuté sous les yeux de L Foucault nous a conduits à faire la fourchette en aluminium. Il est utile de calculer quelle erreur peut en résulter pour une variation de température donnée sur la distance polaire d une étoile. La lunette étant supposée horizontale l erreur OMEGA sera très approximativement, pour chaque degré de variation de température à partir du point où l égalité a lieu
+
+FORMULA
+
+Ici la différence k'-k des coefficients de dilatation est o 0.0000111. Par conséquent nous aurons
+
+Au pole..... OMEGA = 5°
+Au zenith.... OMEGA = 2°.3
+
+Ainsi à l extrême limite des observations possibles il faudrait une variation de 12 degrés pour produire une erreur de 1 minute sur la position de l étoile. Au zénith, la variation de température devrait être environ 26 degrés. A partir de ce point, l erreur diminue très rapide ment jusqu à l horizon, où elle est nulle. En réalité, l introduction de la fourchette en aluminium ne produira pas, dans l emploi de l appareil, d erreurs supérieures à celles qu on doit attendre de l imperfection du réglage. La loi des variations de la distance polaire étant d ailleurs connue, il sera facile, si l on en sent la nécessité, de construire une table de correction pour les diverses températures.
+
+Nous avons remarqué que si l on mène par le centre de rotation de la fourchette un plan TT' perpendiculaire à la direction du rayon réfléchi, la tige directrice du miroir, dans son mouvement, trace sur ce plan la projection stéréographique du lieu parcouru sur la sphère par l extrémité de la fourchette, le point de vue étant au centre du miroir. Lorsque la fourchette n est pas égale à la distance de son centre de rotation au centre du miroir, cette propriété subsiste encore, avec cette différence que le point de vue est situé en dedans ou en dehors de la sphère décrite par l extrémité de la fourchette, suivant
+
+--------
+
+p.78
+
+que celle ci est trop longue ou trop courte. De là la générale de l erreur résultant de cette inégalité Soit l-a la de la fourchette: on trace sur le plan pris comme tableau la projection *perspective* de l extrémité de la fourchette, en prenant le point de vue la distance 1. Les coordonnées du point du ciel qui se trouve sur le pro longement de la fourchette sont les lectures faites sur les deux cercles, savoir ? et h (l instrument étant supposé bien réglé d ailleurs). Il s agit de trouver les coordonnées P et H du point du ciel qui se actuellement dans la lunette. Or ces coordonnées sont évidemment symétriques par rapport au centre de rotation de la fourchette de de l extrémité d une fourchette idéale de longueur l, qui donnerait la tige directrice du miroir sa position actuelle. La projection *stéréographique* de cette extrémité sur le tableau est donc la même que la projection *perspectiv*e qu on vient de déterminer. Le problème est, par suite, ramené à celui ci dont tous les éléments sont connus. Étant données les coordonnées 180° +? et 180° + h d un point situé sur sphère de rayon l-alfa, trouver des coordonnées 180°+P et 180°+H du point dont la projection *stéréographique* coïncide avec la projection *perspective* du premier sur le même plan et pour le même point de vue situé à une distance l du centre de projection.
+
+Mais il n est pas nécessaire de résoudre ce problème dans toute sa généralité pour reconnaitre la loi des erreurs commises sur la position d une étoile. Remarquons que la construction que nous avons faite (fig 5) pour le plan du méridien est toujours valable pour un plan quelconque passant par la direction constante OL du rayon réfléchi et par la fourchette OF'. Dans ce plan, quel que soit son angle avec le plan vertical, l étoile vue est toujours S', tandis qu on lit les coordonnées de l étoile S: les deux étoiles sont donc toujours dans un même plan passant par OL; et dans ce plan la variation de leur distance angu laire SOS' est représentée par l expression
+
+FORMULA
+
+d une manière suffisamment approchée tant que l angle FOL ne devient pas très petit.
+
+L erreur va donc en croissant quand l ouverture de l angle de la fourchette et du rayon réfléchi va en diminuant.
+
+-------------
+
+p.79
+
+Or, dans la projection perspective que trace la tige directrice sur le plan TT' perpendiculaire au rayon réfléchi, la droite Of est la projection de la fourchette, et cette projection a aussi pour valeur OL * cot 1/2 FOL: elle est donc proportionnelle à l erreur commise. Si la fourchette ou son prolongement parcourt un grand cercle passant par la direction du rayon réfléchi, l erreur va en croissant de zéro à l infini. Si l on force la fourchette à tourner en faisant un angle constant avec OL, l erreur reste constante: des circonférences tracées sur le plan du tableau au tour du point O comme centre représentent donc les courbes *d égale erreur*. Le rayon d une circonférence ou la projection *perspective* de la fourchette représente l erreur dont sont affectées, dans le plan passant par OL les positions des étoiles dont les projections *stéréographiques* sont situées sur cette circonférence.
+
+Lorsque l angle de la fourchette avec la direction OL devient trèspetit, l expression de l erreur devient inexacte. Mais la construction précédente est toujours valable et fait voir ce qui se passe.
+
+ Soit une fourchette trop longue le rayon incident se rapprochant de l horizon nord hypothétique, ou la fourchette de la direction opposée OL, il arrive un moment où le rayon visuel est parallèle au plan du tableau: les étoiles qui se trouvent sur le petit cercle, base du cône que décrirait cette position du rayon incident en tournant autour de OL, sont les dernières qui puissent se voir dans la lunette. La fourchette continuant à se rapprocher de OL, sa projection devient imaginaire: le prolongement seul du rayon visuel rencontre le tableau. Tout l intérieur du cône échappe à l action réfléchissante du miroir. En effet, celui ci s incline de manière à tourner vers la lunette la face non rétléchissante, et bascule très rapidement pour arriver à la position verti cale qu il atteint quand la fourchette coïncide avec OL.
+
+ La fourchette trop courte produit sur le miroir un effet inverse. Il ya encore autour du point de l horizon nord, situé sur prolongement de la lunette, un petit cercle dont les étoiles sont dernières que puisse faire voir le miroir; tout ce qui est échappe à son action; mais à partir de la position où le rayon visuel tangent à la sphère l-alfa, le miroir revient sur les positions qu il a deja occupées, les parcourt toutes avec une rapidité extrême et, quand la fourchette coïncide avec OL, renvoie à la lunette les rayons venant suivant LO.
+
+ -------------
+
+ p.80
+
+ Il n est pas inutile de remarquer que ces positions singulières du miroir sont purement théoriques et que les petits cercles d invisibilité appartiennent à une région du ciel qu il est impossible d atteindre.
+
+ Reprenons le sidérostat fixé dans le méridien et supposons qu on ait rectifié la longueur de la fourchette comme nous venons de le dire, ou, ce qui revient au même, qu on ait déterminé, par des observations faites au voisinage du pôle et près de l horizon, les éléments de la correction.
+
+Une série d observations de distances polaires faites sur des étoiles connues, dans le méridien, déterminera alors l erreur de collimation du cercle des distances polaires, c est à dire l erreur LAMBDA  de l inclinaison de l axe. On agira sur la vis du socle de manière à corriger cette erreur: car nous avons vu qu il importe peu de conserver la verticalité du support du miroir. Mais ce changement d inclinaison entraîne un changement égal dans l inclinaison de la lunette: il faut donc de nou veau rectifier celle ci. Après quoi le sidérostat doit se trouver complé tement réglé et prêt pour l observation.
+
 
 ----------
 
