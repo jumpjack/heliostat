@@ -465,6 +465,8 @@ L'angolo **OMEGA** può essere esspresso in forma sufficientemente approssimata 
 
 finché l'angolo **FOL** non diventa molto piccolo.
 
+*[Nota: moltiplicare per 206265 serve a convertire da radianti ad arcosecondi ([fonte](https://simonelochivisualarts.com/2021/04/10/formule-fov-estesa-e-fov-semplificata/))]*
+
 Pertanto, se osserviamo nel meridiano una serie di stelle note, la correzione da apportare alle letture effettuate sul cerchio delle distanze polari per ottenere la loro distanza dal polo sarà composta da una parte costante e da una parte variabile con **П**.
 
 **[Calibrazione distanze OM e OF]**
