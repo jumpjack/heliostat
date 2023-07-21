@@ -4,11 +4,14 @@
 
  ![image](https://github.com/jumpjack/heliostat/assets/1620953/870733a4-e3c4-44d2-a6d0-aed70d4ab9c2)
 
+
 2) Il punto estremo dell'asse orario deve essere "molto" distante dalla base del meccanismo superiore, per evitare che la forcella, ruotando, ci sbatta contro:
 
  ![image](https://github.com/jumpjack/heliostat/assets/1620953/c3d262ee-6169-4d4d-a4e4-7a67fafb17c1)
 
  ![image](https://github.com/jumpjack/heliostat/assets/1620953/90986df0-ed50-4f97-b067-eb937871fe56)
+
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/11317685-ff53-4e7e-b6a0-729ef408c4b2)
 
 
 3) La "molla di aiuto" menzionata nella "[Raccolta di lavori](https://github.com/jumpjack/heliostat/blob/main/foucault%20(in%20Recueil%20des%20travaux).md)" è effettivamente indispensabile, perchè c'è un "punto morto" durante la notte,
