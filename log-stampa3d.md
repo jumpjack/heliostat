@@ -12,3 +12,8 @@ La **forcella** a destra non va bene:
 Tempo di stampa: 1:50m a 0.4
 
   
+Nuovo test di stampa:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/1694ba30-d72d-469c-8e43-408ce19939a1)
+
+Tempo previsto: 2h 13m
