@@ -17,3 +17,8 @@ Nuovo test di stampa:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/1694ba30-d72d-469c-8e43-408ce19939a1)
 
 Tempo previsto: 2h 13m
+
+Note:
+
+- da stampare con supporti!
+- Però forse i bracci si possono fare anche più stretti, se reggono lo sforzo di rotazione, allora il supporto non servirebbe
