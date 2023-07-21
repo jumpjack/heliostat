@@ -22,3 +22,4 @@ Note:
 
 - da stampare con supporti!
 - Però forse i bracci si possono fare anche più stretti, se reggono lo sforzo di rotazione, allora il supporto non servirebbe
+- i due buchi rettangolari intorno al buco da 11mm devono essere verticali
