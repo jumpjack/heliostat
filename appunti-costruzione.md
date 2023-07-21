@@ -8,6 +8,9 @@
 
  ![image](https://github.com/jumpjack/heliostat/assets/1620953/c3d262ee-6169-4d4d-a4e4-7a67fafb17c1)
 
+ ![image](https://github.com/jumpjack/heliostat/assets/1620953/90986df0-ed50-4f97-b067-eb937871fe56)
+
+
 3) La "molla di aiuto" menzionata nella "[Raccolta di lavori](https://github.com/jumpjack/heliostat/blob/main/foucault%20(in%20Recueil%20des%20travaux).md)" è effettivamente indispensabile, perchè c'è un "punto morto" durante la notte,
 quando il sole è nel punto più basso e quindi la forcella nel punto più in alto della sua corsa, quasi sulla verticale dello specchio; che l'eliostato
 funzioni anche di notte è necessario però solo se si riesce a implementare anche il meccanismo che lo adatta automaticamente al cambiamento giornaliero di declinazione, che varia da -23° a +23° tra estate e inverno.
