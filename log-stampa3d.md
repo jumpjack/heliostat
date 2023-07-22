@@ -25,3 +25,11 @@ Note:
 - i due buchi rettangolari intorno al buco da 11mm devono essere verticali
 - i buchi da 11 mm vengono troppo stretti stampati a filo, bisogna limare parecchio
 - il palo di alluminio da 6 mm preso da Leroy Marlin entra un po' a forza nel buco da 6mm, quindi va bene perchè deve essere fisso; ma una barra filettata da 6mm invece è un po' più stretta e ci sciacqua, mentre entra bene nel cuscinetto lineare, dove invece la barra di alluminio non entra.
+
+------------
+
+Dopo aver stampato quasi tutto... risulta tutto troppo enorme e pesante per essere sorretto dal meccanismo del timer! Ma questo spiega un altro dettaglio del progetto originale di Foucault:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/04ad34be-1eed-441f-8e42-629e7c856624)
+
+Il supporto indicato dalla freccia, oltre a servire a distanziare lo specchio dall'orologio per permettere il libero movimento della coda dello specchio, serve anche ad accollarsi tutto il peso del meccanismo della forcella, che così non deve gravare sull'orologio, che quindi deve solo occuparsi di far girare tutto, senza dover sostenere il peso di niente.
