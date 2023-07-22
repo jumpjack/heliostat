@@ -23,3 +23,5 @@ Note:
 - da stampare con supporti!
 - Però forse i bracci si possono fare anche più stretti, se reggono lo sforzo di rotazione, allora il supporto non servirebbe
 - i due buchi rettangolari intorno al buco da 11mm devono essere verticali
+- i buchi da 11 mm vengono troppo stretti stampati a filo, bisogna limare parecchio
+- il palo di alluminio da 6 mm preso da Leroy Marlin entra un po' a forza nel buco da 6mm, quindi va bene perchè deve essere fisso; ma una barra filettata da 6mm invece è un po' più stretta e ci sciacqua, mentre entra bene nel cuscinetto lineare, dove invece la barra di alluminio non entra.
