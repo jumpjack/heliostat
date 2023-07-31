@@ -1,4 +1,4 @@
-# Recueil des travaux scientifique de Leon Foucault
+# Recueil des travaux scientifique de Leon Foucault (Raccolta di lavori scientifici di Leon Foucault)
 
 di  C.-M. Gariel (Madre di Foucault), pubblicato postumo nel 1878
 
