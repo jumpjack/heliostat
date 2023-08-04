@@ -281,7 +281,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 ![image](https://user-images.githubusercontent.com/1620953/230619233-b9f71d2a-fa39-43b6-8332-737d838bc822.png)
 
 
-- Silbermann ([Annales de chimie et de physique](https://gallica.bnf.fr/ark:/12148/bpt6k6570842f/f306.item.r=silbermann) - )
+- Silbermann ([Annales de chimie et de physique](https://gallica.bnf.fr/ark:/12148/bpt6k6570842f/f306.item.r=silbermann) - p.300 e tavola III in fondo al libro)
 
 - George Johnston Stoney (1869)
 
