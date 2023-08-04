@@ -303,7 +303,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 - Gambey [Elementi di fisica sperimentale e di meteorologia,  M. Pouillet](https://archive.org/details/bub_gb_KKggwcLGp88C/page/n428/mode/1up?q=giovanni+santini+eliostata)  (figura parziale)
 
-
+- [Corso elementare di fisica](https://archive.org/details/bub_gb_9vh7jHkd3FkC/page/n33/mode/1up?q=santini+eliostata) di Ranieri Gerbi 3  (p.32)  (figure 5 e 7, non visibili)
 
 # Sites
 
