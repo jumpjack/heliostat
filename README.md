@@ -305,6 +305,8 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 - [Corso elementare di fisica](https://archive.org/details/bub_gb_9vh7jHkd3FkC/page/n33/mode/1up?q=santini+eliostata) di Ranieri Gerbi 3  (p.32)  (figure 5 e 7, non visibili)
 
+- Antonio Tessarolo - [Physics instrument makers in 19th-century Veneto: Two case-studies, by  Fanny Marcon](http://eprints.bice.rm.cnr.it/21406/1/ncc12224.pdf)
+
 # Sites
 
 - [Spiegazione dettagliata eliostato di Gambey](http://www.museodifisica.unito.it/index.phtml?Museo&id=582)
