@@ -301,14 +301,11 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 - Giovanni Santini ("[Teorica degli stromenti ottici destinati ad estendere i confini della visione naturale](https://archive.org/details/bub_gb_cSgh6SYxBQoC/page/n17/mode/2up?q=prandi+eliostato)" (figure parzialmente visibili))
 
-- Gambey [Elementi di fisica sperimentale e di meteorologia,  M. Pouillet](https://archive.org/details/bub_gb_KKggwcLGp88C/page/n428/mode/1up?q=giovanni+santini+eliostata)  (figura parziale), **Description de l'héliostat de M. Gambey, di Hachette (M., Jean Nicolas Pierre)** (versione digitale non disponibile), [Bulletin de la Société d'encouragement pour l'industrie nationale, Volume 23](https://books.google.fr/books?id=cDmxVZBY5poC&pg=PA105&lpg=PA105&dq=Description+de+l%27h%C3%A9liostat+de+M.+Gambey&source=bl&ots=viCIxFJYt-&sig=ACfU3U273adaI8RKhUKppLRxB2EtsS4PTA&hl=it&sa=X&ved=2ahUKEwi4ybGS_sKAAxXYVqQEHfgBA88Q6AF6BAgbEAM#v=onepage&q=heliostat&f=false), p.105 (figure non disponibili)
+- Gambey [Elementi di fisica sperimentale e di meteorologia,  M. Pouillet](https://archive.org/details/bub_gb_KKggwcLGp88C/page/n428/mode/1up?q=giovanni+santini+eliostata)  (figura parziale), **Description de l'héliostat de M. Gambey, di Hachette (M., Jean Nicolas Pierre)** (versione digitale non disponibile), [Bulletin de la Société d'encouragement pour l'industrie nationale, Volume 23](https://books.google.fr/books?id=cDmxVZBY5poC&pg=PA105&lpg=PA105&dq=Description+de+l%27h%C3%A9liostat+de+M.+Gambey&source=bl&ots=viCIxFJYt-&sig=ACfU3U273adaI8RKhUKppLRxB2EtsS4PTA&hl=it&sa=X&ved=2ahUKEwi4ybGS_sKAAxXYVqQEHfgBA88Q6AF6BAgbEAM#v=onepage&q=heliostat&f=false), p.105 (figure tavola 299 a p.108)
 
 - [Corso elementare di fisica](https://archive.org/details/bub_gb_9vh7jHkd3FkC/page/n33/mode/1up?q=santini+eliostata) di Ranieri Gerbi 3  (p.32)  (figure 5 e 7, non visibili)
 
 - Antonio Tessarolo - [Physics instrument makers in 19th-century Veneto: Two case-studies, by  Fanny Marcon](http://eprints.bice.rm.cnr.it/21406/1/ncc12224.pdf)
-
-
-- Gambey - Descrizione fatta da Hachette:[Bulletin de la Société d'encouragement pour l'industrie nationale, Volume 23](https://books.google.fr/books?id=cDmxVZBY5poC&pg=PA105&lpg=PA105&dq=Description+de+l%27h%C3%A9liostat+de+M.+Gambey&source=bl&ots=viCIxFJYt-&sig=ACfU3U273adaI8RKhUKppLRxB2EtsS4PTA&hl=it&sa=X&ved=2ahUKEwi4ybGS_sKAAxXYVqQEHfgBA88Q6AF6BAgbEAM#v=onepage&q&f=false)
 
 # Sites
 
