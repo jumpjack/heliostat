@@ -297,6 +297,12 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 - Alfonso Borrelli ()
 
+- Pietro Prandi ([Nuova Collezione d'Opuscoli scientifici -  Bologna , 1824](https://books.google.fr/books?id=8CJ4-jCC-UcC&pg=RA1-PA243&lpg=RA1-PA243&dq=Prandi+%22Nuova++collezione++d%E2%80%99Opuscoli++scienti%EF%AC%81ci%22+1824&source=bl&ots=_nrqc8zwT4&sig=ACfU3U3LjytyjYxLh7MsmvADLlA7rOjN_g&hl=it&sa=X&ved=2ahUKEwj8ktPC68KAAxWoVKQEHf8ECikQ6AF6BAgaEAM#v=onepage&q=Prandi%20%22Nuova%20%20collezione%20%20d%E2%80%99Opuscoli%20%20scienti%EF%AC%81ci%22%201824&f=false) )
+
+- Giovanni Santini ("[Teorica degli stromenti ottici destinati ad estendere i confini della visione naturale](https://archive.org/details/bub_gb_cSgh6SYxBQoC/page/n17/mode/2up?q=prandi+eliostato)" (figure parzialmente visibili))
+
+- Gambey [Elementi di fisica sperimentale e di meteorologia,  M. Pouillet](https://archive.org/details/bub_gb_KKggwcLGp88C/page/n428/mode/1up?q=giovanni+santini+eliostata)  (figura parziale)
+
 
 
 # Sites
