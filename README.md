@@ -330,7 +330,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 Literatur:
 
-* Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208)
+* Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208) (su Google books, ma non consultabile: [link](https://books.google.fr/books?hl=it&id=9T9MAAAAMAAJ&dq=%22Physikalische+Technik%22%2C+Frick-Lehmann&focus=searchwithinvolume&q=heliostat); edizione 1856 consultabile, pag. 213: [link](https://books.google.fr/books?id=VY85AAAAcAAJ&printsec=frontcover&dq=frick,+%22der+heliostat%22&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwif5Jqupe2AAxV_V6QEHYzNDgoQ6AF6BAgJEAI#v=onepage&q=heliostat&f=false))
 
 * [Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867)](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat), S. 1 ff. und S. 234 ff (pag.1 e successive, pag. 234 e successive)
 
