@@ -359,3 +359,5 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 - Caia - https://www.solenica.com  (Italy) (not yet on sale)
 
 - Heliostat on https://www.heliostaat.nl/products.html (just mechanics+electronics, no mirror: 539$)
+
+- Parans fiber optic solar collectors: https://parans.com/product/ (unknown price)
