@@ -269,29 +269,21 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ![image](https://user-images.githubusercontent.com/1620953/230623296-e4bbfe04-fb82-4985-8d6d-32ab5d9eb6a9.png)
 
-
-
 - Hilger (1919):
 
 ![image](https://user-images.githubusercontent.com/1620953/230622052-d6ca8a36-3ebe-40d1-9fed-cc4e05bcff20.png)
-
 
 - [Thomas Comber](https://www.biodiversitylibrary.org/item/196100#page/19/mode/1up) ():
 
 ![image](https://user-images.githubusercontent.com/1620953/230619233-b9f71d2a-fa39-43b6-8332-737d838bc822.png)
 
-
 - Silbermann ([Annales de chimie et de physique](https://gallica.bnf.fr/ark:/12148/bpt6k6570842f/f306.item.r=silbermann) - p.300 e tavola III in fondo al libro)
-
 - George Johnston Stoney (1869)
-
 - [Grassmann (inventor), Rudolf Fuess (builder)](http://hdl.handle.net/20.500.12460/111014) (1870-1872):
 
 ![image](https://user-images.githubusercontent.com/1620953/230617429-3c3b23f4-4e38-4ca4-961e-98e73c107a8d.png)
 
-
-
-[Brashear](https://www.uvm.edu/~dahammon/museum/heliostat.html) (1910):
+- [Brashear](https://www.uvm.edu/~dahammon/museum/heliostat.html) (1910):
 
 ![image](https://user-images.githubusercontent.com/1620953/230617302-64c2b4c2-5540-4789-a5a8-57cf561b1ca7.png)
 
@@ -311,16 +303,14 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 - [Spiegazione dettagliata eliostato di Gambey](http://www.museodifisica.unito.it/index.phtml?Museo&id=582)
 - [How Silbermann heliostat moves (video)](http://rhe.ish-lyon.cnrs.fr/instruments-scientifiques/instr_opt_heliostat.htm)
-
-
-- https://www.redrok.com/main.htm#gsc.tab=0
+- Silbermann's heliostat [explained](https://en.m.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Heliostat) by Encyclopedia Britannica
+- Silbermann's heliostat [explained](http://www.fondazionegalileogalilei.it/museo/collezioni/strumenti_scientifici/astronomia/schede_astronomia/eli_silbermann.html) at Fondazione Galileo Galilei (italian)
 - https://helioreflect.com/en/content/6-solar-reflectors-those-forgotten-inventions
 - Images/link: https://ro.pinterest.com/adimuraru11/heliostat/
 
 ![image](https://user-images.githubusercontent.com/1620953/226892902-a38785df-6b23-4803-b6e4-cced0a9ec8aa.png)
 
-- Some dozens of heliostats linked, with [pictures and patents](http://www.redrok.com/neat.htm) - [link](http://www.redrok.com/main.htm#gsc.tab=0):
-- Silbermann's heliostat [explained](http://www.fondazionegalileogalilei.it/museo/collezioni/strumenti_scientifici/astronomia/schede_astronomia/eli_silbermann.html) at Fondazione Galileo Galilei (italian)
+- Redrok site - Some dozens of heliostats linked, with [pictures and patents](http://www.redrok.com/neat.htm) - [link](http://www.redrok.com/main.htm#gsc.tab=0):
 - Sun path in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html
 
 ![image](https://user-images.githubusercontent.com/1620953/230616983-01ca00b8-52be-40d6-8f15-a6b119922a6f.png)
@@ -329,10 +319,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ![image](https://user-images.githubusercontent.com/1620953/230616952-a4db4afb-8420-49bd-9c90-374791eb7425.png)
 
-- Silbermann's heliostat [explained](https://en.m.wikisource.org/wiki/1911_Encyclop%C3%A6dia_Britannica/Heliostat) by Encyclopedia Britannica
 - Sun path simulator in 3d: http://andrewmarsh.com/apps/staging/sunpath3d.html and derived repo https://github.com/joaopedroalbq/helios :
-
-- http://www.redrok.com/main.htm#gsc.tab=0
 - [Linkage mechanism by Peaucellier–Lipkin](https://en.wikipedia.org/wiki/Peaucellier%E2%80%93Lipkin_linkage) to turn linear motion into circular, **and vicerversa** (could be used to force driver edge moving along mirror tail?)
 
 ![aa](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e3/Peaucellier-Lipkin_Inversor.gif/220px-Peaucellier-Lipkin_Inversor.gif)
@@ -343,9 +330,9 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 Literatur:
 
-- [1] Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904. 
-– [2] Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867), S. 1 ff. und S. 234 ff. - https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat
-– [3] Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln. - https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat
+- 1) Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904. 
+– 2) [Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867)](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat), S. 1 ff. und S. 234 ff.
+– 3) [Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat).
 
 
 
