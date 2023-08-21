@@ -252,6 +252,12 @@ Modern view:
 
 ## Inventors
 
+- Otto von Littrow, "Ueber einen Heliostaten nach August's  Principi", in "Repertorium für Experimental-Physik, für physikalische Technik ...", Volume 1, pp.46-56; full German text, with pictures: [link](https://books.google.fr/books?id=RqBFAQAAMAAJ&pg=PT44&dq=Repertorium+Experimental-Physik,+gambey%27s+Fahrenheit+heliostat+Gravesande&hl=it&source=gbs_selected_pages&cad=2#v=twopage&q=heliostat&f=false)
+
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/b1d955d2-e4e7-4bda-a014-efc2596da739)  ![immagine](https://github.com/jumpjack/heliostat/assets/1620953/c00f4377-7769-4ff2-839e-6d3a84c875c9)
+
+![immagine](https://github.com/jumpjack/heliostat/assets/1620953/ed05cc7a-1f12-428b-b646-8f7332eda46b)
+
 - Colonel Archibald Campbell (1865-1940) from Blythswood; device built by Adam Hilger.  [Link](https://www.superstock.com/asset/photograph-universal-heliostat-made-english-instrument-makers-adam-hilger-london/1895-25564)
 
 ![image](https://user-images.githubusercontent.com/1620953/231557793-b4f0f21b-1aa7-4899-95da-710428823ca0.png)
