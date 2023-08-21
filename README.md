@@ -175,6 +175,18 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 
 ## Documents
+
+- [Repertorium, vol. I](https://books.google.fr/books?id=RqBFAQAAMAAJ&pg=PT44&dq=Repertorium+Experimental-Physik,+gambey%27s+Fahrenheit+heliostat+Gravesande&hl=it&source=gbs_selected_pages&cad=2#v=onepage&q&f=false): Littrow's Heliostat (p.46-56)
+- [Repertorium, vol. II](https://books.google.fr/books?id=VugTAAAAQAAJ&pg=PA10&dq=Die+gebr%C3%A4uchlichen+Heliostaten+lassen+sich+auf+drei+Hauptarten+zur%C3%BCckf%C3%BChren+die+gew%C3%B6hnlich+die+Namen+Fraunhofer&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiLqqbnue2AAxXwUKQEHT5iDYkQ6AF6BAgEEAI#v=onepage&q&f=false): Carl Zech, "Gli eliostati"; interessante confronto matematico/geometrico fra tre tipi di eliostati: Fraunhofer, August e Silbermann.
+  
+-Zech, Ueber Heliostaten
+    - "Repertorium für physikalische Technik", Vol. II ("Rpertorio di Philipp Carl sulla fisica e la tecnologia sperimentale, vol. II"), pagina 10 e successive 
+    - "Katalog von Leybolds Nachfolger" ("Catalogo del successore di Leybold, Colonia")
+
+- Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208) (su Google books, ma non consultabile: [link](https://books.google.fr/books?hl=it&id=9T9MAAAAMAAJ&dq=%22Physikalische+Technik%22%2C+Frick-Lehmann&focus=searchwithinvolume&q=heliostat); edizione 1856 consultabile, pag. 213: [link](https://books.google.fr/books?id=VY85AAAAcAAJ&printsec=frontcover&dq=frick,+%22der+heliostat%22&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwif5Jqupe2AAxV_V6QEHYzNDgoQ6AF6BAgJEAI#v=onepage&q=heliostat&f=false))
+
+-  [Radau, "Zur Theorie der Heliostaten", in "Carls Repertorium für physikalische Technik", vol II (1867)](https://books.google.fr/books?id=VugTAAAAQAAJ&newbks=1&newbks_redir=0&dq=Die%20gebr%C3%A4uchlichen%20Heliostaten%20lassen%20sich%20auf%20drei%20Hauptarten%20zur%C3%BCckf%C3%BChren%20die%20gew%C3%B6hnlich%20die%20Namen%20Fraunhofer&hl=it&pg=PA234#v=onepage&q=radau&f=false), (pag.1 e successive, pag. 234 e successive)
+      
 - [Heliostats, Siderostats, and Coelostats: A Review of Practical Instruments for Astronomical Applications](https://articles.adsabs.harvard.edu/pdf/1985JBAA...95...89M), by A. A. Mills, 1985, in  Journal of the British Astronomical Association, Vol. 95, NO.3/APR, P. 89, 1985  (describing various types of heliostats, also taking into account declination change along the year)
 
 ![image](https://user-images.githubusercontent.com/1620953/235441506-1361cc0c-b14e-418d-8330-31d4dc1d35b7.png)
@@ -334,13 +346,8 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ![aa](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Watts_Linkage.gif/220px-Watts_Linkage.gif)
 
-Literatur:
 
-* Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208) (su Google books, ma non consultabile: [link](https://books.google.fr/books?hl=it&id=9T9MAAAAMAAJ&dq=%22Physikalische+Technik%22%2C+Frick-Lehmann&focus=searchwithinvolume&q=heliostat); edizione 1856 consultabile, pag. 213: [link](https://books.google.fr/books?id=VY85AAAAcAAJ&printsec=frontcover&dq=frick,+%22der+heliostat%22&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwif5Jqupe2AAxV_V6QEHYzNDgoQ6AF6BAgJEAI#v=onepage&q=heliostat&f=false))
 
-* [Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867)](https://books.google.fr/books?id=uww9g1Ur9EoC&pg=PP11&dq=Radau,+Zur+Theorie+der+Heliostaten,+Carls+Repertorium+f%C3%BCr+physikalische+Technik+II+(1867),&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwi42azmqO2AAxWsVaQEHTFPBZwQ6AF6BAgHEAI#v=onepage&q=Radau%2C%20Zur%20Theorie%20der%20Heliostaten%2C%20Carls%20Repertorium%20f%C3%BCr%20physikalische%20Technik%20II%20(1867)%2C&f=false), S. 1 ff. und S. 234 ff (pag.1 e successive, pag. 234 e successive)
-
-* [Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat) (Carl Zech, "A proposito degli eliostati", in "Carls Repertorium für physikalische Technik II" ("Rpertorio di Philipp Carl sulla fisica e la tecnologia sperimentale, vol. II"), pagina 10 e successive, e in "Katalog von Leybolds Nachfolger" ("Catalogo del successore di Leybold, Colonia"))
 
 
 ## Commercial products 
