@@ -330,13 +330,16 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 Literatur:
 
-- 1) Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904. 
-– 2) [Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867)](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat), S. 1 ff. und S. 234 ff.
-– 3) [Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat).
+* Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208)
 
+* [Radau, Zur Theorie der Heliostaten, Carls Repertorium für physikalische Technik II (1867)](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat), S. 1 ff. und S. 234 ff (pag.1 e successive, pag. 234 e successive)
+
+* [Zech, Ueber Heliostaten, ebend., S. 10 f. und Katalog von Leybolds Nachfolger, Köln](https://technik.de-academic.com/dic.nsf/technik/10800/Heliostat) (Carl Zech, "A proposito degli eliostati", in "Carls Repertorium für physikalische Technik II" ("Rpertorio di Philipp Carl sulla fisica e la tecnologia sperimentale, vol. II"), pagina 10 e successive, e in "Katalog von Leybolds Nachfolger" ("Catalogo del successore di Leybold, Colonia"))
 
 
 ## Commercial products 
 - Heliosfera - https://heliostat.pl/it/di-progetto  (Poland) (not yet on sale)
+
 - Caia - https://www.solenica.com  (Italy) (not yet on sale)
+
 - Heliostat on https://www.heliostaat.nl/products.html (just mechanics+electronics, no mirror: 539$)
