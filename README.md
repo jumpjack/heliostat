@@ -186,7 +186,10 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - Frick-Lehmann, Physikalische Technik I, 7. Aufl., S. 208 f., Braunschweig 1904 (Edizione 7, pag. 208) (su Google books, ma non consultabile: [link](https://books.google.fr/books?hl=it&id=9T9MAAAAMAAJ&dq=%22Physikalische+Technik%22%2C+Frick-Lehmann&focus=searchwithinvolume&q=heliostat); edizione 1856 consultabile, pag. 213: [link](https://books.google.fr/books?id=VY85AAAAcAAJ&printsec=frontcover&dq=frick,+%22der+heliostat%22&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwif5Jqupe2AAxV_V6QEHYzNDgoQ6AF6BAgJEAI#v=onepage&q=heliostat&f=false))
 
 -  [Radau, "Zur Theorie der Heliostaten", in "Carls Repertorium für physikalische Technik", vol II (1867)](https://books.google.fr/books?id=VugTAAAAQAAJ&newbks=1&newbks_redir=0&dq=Die%20gebr%C3%A4uchlichen%20Heliostaten%20lassen%20sich%20auf%20drei%20Hauptarten%20zur%C3%BCckf%C3%BChren%20die%20gew%C3%B6hnlich%20die%20Namen%20Fraunhofer&hl=it&pg=PA234#v=onepage&q=radau&f=false), (pag.1 e successive, pag. 234 e successive)
-      
+  
+- [Notice sur l'Héliostat](https://books.google.fr/books?id=TY85AAAAcAAJ&pg=PA1&lpg=PA1&dq=Notice+sur+un+h%C3%A9liostat+pr%C3%A9sent%C3%A9+%C3%A0+lAcad%C3%A9mie+des+sciences+par+Jean-Thi%C3%A9bault+Silbermann,+le+28+f%C3%A9vrier+1843&source=bl&ots=nZM2k_CjTK&sig=ACfU3U04e3tEZgj90XS20RlgZYGYtQ62kw&hl=it&sa=X&ved=2ahUKEwjysoaTwO2AAxW_SKQEHYd5CV8Q6AF6BAgJEAM#v=onepage&q&f=false
+), Di Jean Thiébault Silbermann - Eliostato di Silbermann spiegato in dettaglio da lui stesso, con figura completa
+
 - [Heliostats, Siderostats, and Coelostats: A Review of Practical Instruments for Astronomical Applications](https://articles.adsabs.harvard.edu/pdf/1985JBAA...95...89M), by A. A. Mills, 1985, in  Journal of the British Astronomical Association, Vol. 95, NO.3/APR, P. 89, 1985  (describing various types of heliostats, also taking into account declination change along the year)
 
 ![image](https://user-images.githubusercontent.com/1620953/235441506-1361cc0c-b14e-418d-8330-31d4dc1d35b7.png)
