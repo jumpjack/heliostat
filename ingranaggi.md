@@ -2,6 +2,7 @@
 
 ## Dimensionamento degli ingranaggi
 
+- Per calcolare il modulo di un ingranaggio conoscendo diametro esterno e numero di denti: m = D/(N+2)  (N = numero denti) (solo per angolo di 20°?)
 - L'angolo di pressione usato è praticamente sempre 20°
 - Più è grande il modulo, più è robusto l'ingranaggio
 - Per "diametro (di riferimento)" si intende quello della Circonferenza Primitiva (pitch circle, Pitch Circle Diameter, PCD), non la distanza tra gli estremi di due ingranaggi opposti, che invece vale PCD + 2*m
@@ -9,13 +10,13 @@
 
 ## Montaggio
 
-- Distanza assi = somma dei raggi delle 2 circonferenze primitive 
+- Distanza assi = somma dei raggi delle 2 circonferenze primitive (Rp1 + Rp2)
 
 ## Confronto terminologia italiana/inglese
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/522e44b2-b60e-4378-b441-adfee8d7489d)
 
-- Modulo = form  (= diametro / denti)
+- Modulo = form  (= Dp/N = diametro di pitch / numero di denti)
 - Passo = Pitch   (= pigreco * modulo) (due ruote coniugate, per ingranare, devono avere lo stesso passo)
 - Addendum = addendum (estensione del dente oltre la primitiva) (= _ad_ = modulo)
 - Dedendum = dedendum (estensione del dente sotto la primitiva) (= _de_ = 1.25 * modulo)
