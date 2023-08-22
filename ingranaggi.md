@@ -27,7 +27,7 @@
 - Cremagliera e pignone = Rack and pinion
 - Dentiera o cremagliera = Rack
 - Ingranaggio conico = Bevel gear
-- Circonferenza primitiva = pitch circle
+- Circonferenza primitiva = pitch circle  (=circonferenza teorica di contatto in assenza di denti)
    - Polare fissa (ruote a frizione)
    - Polare mmobile (ruote dentate)
 - Vano = width of space
@@ -39,4 +39,4 @@
 Riferimenti:
 - http://www.diim.unict.it/users/rsinatra/corsi/allegati_modellistica/10%20-%20Ruote%20dentate%20(gears).pdf
 - https://sites.unipa.it//giovanni.petrucci/Disp/Ruote.pdf
-- 
+- https://www.rcet.org.in/uploads/academics/rohini_82445618687.pdf
