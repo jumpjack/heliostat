@@ -4,8 +4,11 @@
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/522e44b2-b60e-4378-b441-adfee8d7489d)
 
-- Passo = Pitch   (=pigreco * m) (due ruote coniugate, per ingranare, devono avere lo stesso passo)
-- Angolo di pressione = pressure angle
+- Modulo = form  (= diametro / denti)
+- Passo = Pitch   (= pigreco * modulo) (due ruote coniugate, per ingranare, devono avere lo stesso passo)
+- Retta di azione o di pressione (generatrice) = ???
+- Angolo di pressione = pressure angle (angolo tra reta di pressione e tangente delle circonferenze primitive)
+- Circonferenza base = base circle   (il diametro della circonferenza di base è determinato dall'angolo di pressione)
 - Evolvente di cerchio = Involute profiles
 - Ruote dentate cilindriche = spur gears
 - Ruote dentate cilindriche ad evolvente = spur gears with involute
@@ -14,13 +17,13 @@
 - Cremagliera e pignone = Rack and pinion
 - Dentiera o cremagliera = Rack
 - Ingranaggio conico = Bevel gear
-- Circonferenza base = base circle
 - Circonferenza primitiva = pitch circle
-- Modulo = form  (=2R/z)
+   - Polare fissa (ruote a frizione)
+   - Polare mmobile (ruote dentate)
 - Vano = width of space
 - Segmento di contatto = line of contact
 - Arco di azione = arc of action
-- Retta di azione (generatrice) = ???
+
 
 
 Riferimenti:
