@@ -1,3 +1,15 @@
+Link a rappresentazione animata, geometricamente corretta, del ruotismo orario (senza ingranaggio satellite): [link](https://geargenerator.com/#175,350,50,10,1,3,3174.2999999999624,4,1,18,4.5,4,20,90,0,0,0,0,0,1,20,5,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-643)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/b8a8f0aa-ebb0-45f9-9ec7-f35bfc0d93bc)
+
+- Si può  notare come il rapporto tra le velocità di rotazione dei due ingranaggi grandi sia di 1/9, come descritto da Foucault.
+- Si può però anche notare che è impossibile che le due coppie di ingranaggi siano tutte coassiali, per via dei diversi diametri di quelli piccoli, che hanno 18 e 20 denti: se i due piccoli sono  coassiali, non lo sono i due grandi, di cui questo è un dettaglio dei centri:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/c3f4b877-ee0b-4584-ae66-7808e8d2f76e)
+
+
+-------------
+
 Il ruotismo-satellite di Foucalt-Eichens è così rappresentato negli scritti di Foucalt:
 
 - **Recueil de scientifique travaux**
