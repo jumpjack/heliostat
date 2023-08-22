@@ -2,7 +2,10 @@
 
 ## Dimensionamento degli ingranaggi
 
-- Per calcolare il modulo di un ingranaggio conoscendo diametro esterno e numero di denti: m = D/(N+2)  (N = numero denti) (solo per angolo di 20°?)
+- Per calcolare il modulo di un ingranaggio conoscendo diametro esterno e numero di denti: m = AD/(N+2)  (N = numero denti) (solo per angolo di 20°?)
+- Per calcolare a occhio le dimensioni di un ingranaggio:
+   - un dente è alto 2,25 volte il modulo
+   - il diametro esterno vale AD = m * (N+2), cioè all'incirca m volte il numero di denti
 - L'angolo di pressione usato è praticamente sempre 20°
 - Più è grande il modulo, più è robusto l'ingranaggio
 - Per "diametro (di riferimento)" si intende quello della Circonferenza Primitiva (pitch circle, Pitch Circle Diameter, PCD), non la distanza tra gli estremi di due ingranaggi opposti, che invece vale PCD + 2*m
@@ -10,7 +13,7 @@
 
 ## Montaggio
 
-- Distanza assi = somma dei raggi delle 2 circonferenze primitive (Rp1 + Rp2)
+- Distanza assi = Interasse = somma dei raggi delle 2 circonferenze primitive (Rp1 + Rp2 = (PD1 + PD2) /2)
 
 ## Confronto terminologia italiana/inglese
 
@@ -20,14 +23,15 @@
 - Passo = Pitch   (= pigreco * modulo) (due ruote coniugate, per ingranare, devono avere lo stesso passo)
 - Addendum = addendum (estensione del dente oltre la primitiva) (= _ad_ = modulo)
 - Dedendum = dedendum (estensione del dente sotto la primitiva) (= _de_ = 1.25 * modulo)
-- Circonferenza base = base circle    o   root circle   o   dedendum circle  (il diametro della circonferenza di base è determinato dall'angolo di pressione)
-- Circonferenza di testa = outside circle (Rt = R + ad)
-- Circonferenza esterna = outside circle (Rt = R + ad)
-- Diametro esterno = outside circle diameter
+- Circonferenza radice =  root circle   o   dedendum circle  (circonferenza base meno il gioco?)
+- Circonferenza base = base circle     (il diametro della circonferenza di base è determinato dall'angolo di pressione)
+- Circonferenza primitiva = pitch circle  (= circonferenza teorica di contatto in assenza di denti = circonferenza di riferimento per l'accoppiamento)  (PD = m * z)
+- Circonferenza di testa = Circonferenza esterna = outside circle = addendum circle (Rtot = R + ad = R + m) (AD = PD + 2*m) (circonferenza del disco iniziale ("blank") da cui viene ricavato per "scavo" l'ingranaggio)
+- Diametro esterno = outside circle diameter = addendum circle diameter = addendum diameter (AD = PD + 2*m)
 - Gioco = clearance  (= _gi_)
 - Altezza totale dente = ad + de (= 2,25 * modulo)  (= distanza tra diametro esterno e diametro base)
 - Altezza profilo attivo = ad + de - gi (= altezza totale meno il gioco)
-- Interasse = centre to centre distance  (= distanza tra i centri delle primitive, o somma dei raggi delle primitive)
+- Interasse = centre to centre distance = Distance between centers (= distanza tra i centri delle primitive, o somma dei raggi delle primitive)  (= (PD1 + PD2 )/2 )
 - Retta di azione o di pressione (generatrice) = Line of action
 - Angolo di pressione = pressure angle (angolo tra reta di pressione e tangente delle circonferenze primitive)
 - Larghezza = face width (=spessore)
@@ -41,12 +45,10 @@
 - Cremagliera e pignone = Rack and pinion
 - Dentiera o cremagliera = Rack
 - Ingranaggio conico = Bevel gear
-- Circonferenza primitiva = pitch circle  (=circonferenza teorica di contatto in assenza di denti)
-   - Polare fissa (ruote a frizione)
-   - Polare mmobile (ruote dentate)
 - Vano = width of space
 - Segmento di contatto = line of contact
 - Arco di azione = arc of action
+- Disco iniziale = blank (quello da cui viene "scavato" l'ingranaggio, quindi il suo diametro è uguale al diametro esterno dell'ingranaggio finito)
 
 ## Siti
 
@@ -62,7 +64,8 @@
 - [STLgears](https://www.stlgears.com/generators/3dprint) (STL)
 - [me-bac.com](http://www.me-bac.com/index.php?task=gear (DXF))
 
-Riferimenti:
+# Riferimenti:
 - http://www.diim.unict.it/users/rsinatra/corsi/allegati_modellistica/10%20-%20Ruote%20dentate%20(gears).pdf
 - https://sites.unipa.it//giovanni.petrucci/Disp/Ruote.pdf
 - https://www.rcet.org.in/uploads/academics/rohini_82445618687.pdf
+- https://www.stlgears.com/generators/3dprint
