@@ -246,6 +246,9 @@ dall'interposizione di tre ruote **G** che ruotano tra la base e la piastra **P*
 
 Fig.2, Planche 14 (Figura 2, Tavola 14)
 
+
+
+
 All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale **FF** sostenuta da tre colonne **O** e sulla quale è fissato il telaio che regge l'asse polare.
 
 ![Figura 1, tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/3295790e-c857-4e42-b33b-468b5342d355)
@@ -347,6 +350,11 @@ Il movimento trasmesso dal sistema satellite alla ruota **B** aziona un manicott
 ![Figura 1, Tavola 14, dettaglio a destra](https://github.com/jumpjack/heliostat/assets/1620953/51df15ca-469b-4e53-8e57-00fad7ed6ce9)
 
 Fig.1, Planche 14 (Figura 1, Tavola 14, dettaglio a destra)
+
+Ipotesi su denti e diametri:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/97af5bce-2b11-422a-8d27-8003091d521a)
+
 
 lo spostamento di questa ruota è trasmesso al cerchio di declinazione tramite la ruota angolare **r'**, il pignone **i** e la dentatura **h** che è incisa sul bordo del cerchio (vedi anche fig. 4, tavola 15).
 
