@@ -8,7 +8,7 @@ di C. WOLF
 
 Tavola 1 del testo:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/6ac0eae9-4cc8-490c-9a9b-3d7ad6f46a38)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/03bba9b9-3fa7-4f49-a3e9-75b84c4355ef)
 
 (versione ad alta risoluzione [qui](https://github.com/jumpjack/heliostat/blob/main/images/tavola-I-Annales.png))
 
@@ -17,7 +17,7 @@ Altre immagini sono disponibili in "[Recueil des travaux scientifiques de Léon
 
 Tavola 14:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/03bba9b9-3fa7-4f49-a3e9-75b84c4355ef)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6ac0eae9-4cc8-490c-9a9b-3d7ad6f46a38)
 
 (versione ad alta risoluzione [qui](https://github.com/jumpjack/heliostat/blob/main/images/tav14-foucault-travaux.png))
 
