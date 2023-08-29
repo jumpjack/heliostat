@@ -141,6 +141,8 @@ P.60
 monta un nonio che dà i minuti. La posizione di questa alidada viene regolata tramite una vite di ritorno, che porta il cerchio esattamente a zero quando la forcella è in linea con l'asse polare. 
 Le letture danno quindi immediatamente le distanze polari del raggio incidente, se lo strumento è ben regolato.
 
+<img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png width = 600>
+
 <img src="https://github.com/jumpjack/heliostat/assets/1620953/232f8dc4-ab81-4315-9228-9e065b11156b" width = 600>
 
 L'asse delle ore reca nella sua parte superiore (Tav. I, Fig. 1, e nel testo, fig. 4) un cerchio **HH** diviso in 24 ore che, mediante due noni, dà i due secondi di tempo. Questo cerchio è tutt'uno con l'asse.  <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png" align="right" alt="fig.4 colorata" width="400">
