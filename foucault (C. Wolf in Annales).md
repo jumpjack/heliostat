@@ -254,7 +254,7 @@ Basterà un ingranaggio satellitare identico a quello descritto in precedenza pe
 L'intero meccanismo è rappresentato in sezione verticale [fig. 4]. <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png"  width="400" align = "right" alt="fig.4 oiginale"> <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png" align="right" alt="fig.4 colorata" width="400">
 In questa figura, come nella precedente, le linee tratteggiate indicano, attraverso la loro direzione, l'interconnessione o l'indipendenza delle parti in contatto: due parti vicine, dove le linee tratteggiate hanno la stessa direzione, sono collegate tra loro; sono indipendenti se le linee tratteggiate hanno direzioni opposte. 
 
-Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**,  segue il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. Ma il pignone **a** ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare. Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza (B = 5b, C = 1/2 c, p.63), sarà ridotta di un decimo [($V_B = 0.9 V_A$)] e di conseguenza il manicotto [**B**] girerà nello stesso senso e alla stessa velocità dell'asse [ ( $V_B = 0.9*V_A = 0.9 * \frac{V_{A}}{0.9} = 0.9 * \frac{V_{xx'}}{0.9}$ ) ].  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
+Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**,  segue il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. Ma il pignone **a** ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare.
 
 [
 
@@ -269,17 +269,15 @@ $$V_{A}=\frac{V_{A1}}{0.9}=\frac{V_{xx'}}{0.9}$$
 
 ]
 
-\[Quindi: Va = Va1 + 1/10 Va , ma V_asse = Va1 - 1/10 Va1 \]
+
+Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza (B = 5b, C = 1/2 c, p.63), sarà ridotta di un decimo [($V_B = 0.9 V_A$)] e di conseguenza il manicotto [**B**] girerà nello stesso senso e alla stessa velocità dell'asse [ ( $V_B = 0.9*V_A = 0.9 * \frac{V_{A}}{0.9} = 0.9 * \frac{V_{xx'}}{0.9}$ ) ].  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
 
 
-*\[Risulterà quindi:*
-- *V = 0.10 Vclock*
-- *v = 0.9 V = 0.09 * Vclock*
-- *V1 = 0.09 * Vclock*
+[
 
-*Cioè, in assenza di input aggiuntivi esterni tramite la ruota E che incide su D e quindi su C, la ruota r ha la tessa velocità (v) dell'asse XX' (V1), quindi è come se fossero solidali.*
+*Cioè, in assenza di input aggiuntivi esterni tramite la ruota E che incide su **D** e quindi su **C**, la ruota **r**, che è solidale con la ruota **B**, ha la tessa velocità (v) dell'asse **XX'** (VA1), quindi è come se fossero solidali, quindi tutto il blocco di ingranaggi della declinazione ruota intorno a **XX'** alla stessa velocità dell'asse orario.*
 
-\*]*
+]
 
 
 La ruota **D**, che deve immobilizzare **C**, ingrana con la ruota **E**, montata su un albero parallelo a quello dei pignoni **a** e **a1**, e quest'albero può essere messo in movimento mediante una leva lunga, ruote ad angolo e una barra verticale che si vedono nella fig. 1. 
