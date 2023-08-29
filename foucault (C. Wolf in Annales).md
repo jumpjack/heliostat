@@ -256,6 +256,19 @@ In questa figura, come nella precedente, le linee tratteggiate indicano, attrave
 
 Il pignone  **a**, che è fissato sull'albero stesso del pignone **a1**,  segue il movimento in senso orario, ingranando con una ruota **A** di 200 denti, simile quindi alla ruota **A1** e, come essa, libera sull'asse polare **XX'**. Ma il pignone **a** ha 20 denti, mentre **a1** ne ha solo 18: si nota quindi che la ruota **A** assume una velocità superiore di un decimo rispetto ad **A1** o all'asse polare. Questa velocità, trasferita al manicotto tramite una trasmissione ad ingranaggi satelliti, in cui le ruote e i pignoni hanno i rapporti stabiliti in precedenza (B = 5b, C = 1/2 c), sarà ridotta di un decimo e di conseguenza il manicotto girerà nello stesso senso e alla stessa velocità dell'asse.  Le stesse lettere indicano, nella fig. 4, le diverse ruote il cui ruolo è stato spiegato in precedenza. 
 
+[
+
+$$V_a = \frac{20}{200}Vc=\frac{10}{100}Vc$$
+
+$$V_{xx'}=V_{a1} = \frac{18}{200}Vc=\frac{9}{100}Vc$$
+
+
+$$\frac{V_{a}}{V_{a1}}=\frac{\frac{10}{100}Vc}{\frac{9}{100}Vc}=\frac{10}{9}=\frac{1}{\frac{9}{10}}=\frac{1}{0.9}$$
+
+$$V_{a}=\frac{V_{a1}}{0.9}=\frac{V_{xx'}}{0.9}$$
+
+]
+
 \[Quindi: Va = Va1 + 1/10 Va , ma V_asse = Va1 - 1/10 Va1 \]
 
 
@@ -663,7 +676,7 @@ onfait tourner D, quand il en est besoin, à l'aide d'une roue d'angle et d'une 
 L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
 communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4). 
 Surl'arbre de cettedernière sont également fixés deux pignons,
-l'un a de 20 dents, l'autre a, de 18. Le pignon de iS engrène avec une grande roue A, 
+l'un a de 20 dents, l'autre a, de 18. Le pignon de 18 engrène avec une grande roue A, 
 de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
 Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, 
 
@@ -672,13 +685,6 @@ Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateu
 
 que lui imprime la main de l'observateur par l'intermédiaire du rouage
 satellite.
-
-L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
-communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4). 
-Surl'arbre de cettedernière sont également fixés deux pignons,
-l'un a de 20 dents, l'autre a, de 18. Le pignon de 18 engrène avec une grande roue A, 
-de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
-Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, que lui imprime la main de l'observateur par l'intermédiaire du rouage satellite.
 
 Le second problème qu'avait à résoudre le constructeur du sidérostat était plus ardu que le premier : il sagissait de produire, à l'aide d'une manette immobile, un mouvement de rappel du cercle de déclinaison, à l'extrémité d'un axe mobile, sans altérer le mouvement de cet axe. L. Foucault avait seulement indiqué le problème, et en avait fait entrevoir la solution à l'aide d'un rouage satellit mais sans donner de vive voix ou laisser dans ses papiers aucune description da système qu'il prétendait appliquer. 
 Voici l'élégante construction à l'aide de laquelle M. Eichens a atteint le but proposé.
