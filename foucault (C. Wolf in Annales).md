@@ -241,9 +241,7 @@ Il secondo problema che il costruttore del siderostato doveva risolvere era più
 
 Ecco l'elegante costruzione con l'aiuto della quale il signor M. Eichens ha raggiunto lo scopo proposto.
 
-L'asse polare **XX'** (fig. 1, Tavola 1) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **r, r**, comanda un pignone la cui dentatura ingrana con quella <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.1-tav.I.png" alt="XX' (fig. 1, Tavola 1)" align = "right" width="300">  ([tav.I completa](https://raw.githubusercontent.com/jumpjack/heliostat/main/images/tavola-I-Annales.png))
-
-
+L'asse polare **XX'** ([fig. 1](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.1-tav.I.png), [Tavola 1](https://raw.githubusercontent.com/jumpjack/heliostat/main/images/tavola-I-Annales.png)) è avvolto, per la parte della sua lunghezza che nella figura appare nuda, da un manicotto in bronzo che attraversa il collare inferiore del supporto, e lì, mediante due ruote angolari **r, r**, comanda un pignone la cui dentatura ingrana con quella <img src="https://github.com/jumpjack/heliostat/blob/main/images/annales-fig.1-tav.I.png" alt="XX' (fig. 1, Tavola 1)" align = "right" width="300"> 
 
 ------
 
