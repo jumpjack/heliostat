@@ -89,7 +89,7 @@ Sulla quantità al numeratore possiamo porre due condizioni:
 
 **Condizione 1**
 
-Per avere **verso di $$v_B$$ uguale a quello di $$V_A$$ ** il numeratore dovrà essere maggiore di 0:
+Per avere verso di $v_B$ uguale a quello di $V_A$  il numeratore dovrà essere maggiore di 0:
 
 2: $$\frac{B}{b} - \frac{C}{c}>0$$
 
@@ -99,7 +99,7 @@ quindi:
 
 **Condizione 2**
 
-**Per avere esattamente** $$v_B = \frac{9}{10}V_A$$  **  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+Per avere esattamente $v_B = \frac{9}{10}V_A$   (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
 
 dovrà essere:
 
