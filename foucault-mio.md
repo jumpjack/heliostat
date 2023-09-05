@@ -69,41 +69,41 @@ Foucault (o forse Eichens?) calcolò queste formule:
 
 
 
-1:$${V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$$
+1: $${V_A}(\frac{B}{b} - \frac{C}{c}) = {v_B}\frac{B}{b}$$
 
 da cui:
 
-1a:$${v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}$$
+1a: $${v_B} = {V_A}\frac{(\frac{B}{b} - \frac{C}{c})}{\frac{B}{b}}$$
 
 che può essere espressa anche come:
 
-1b:$$v_B=\frac{Bc-Cb}{Bc}V_A$$
+1b: $$v_B=\frac{Bc-Cb}{Bc}V_A$$
 
 dove:
 
 
--$${v_B}$$= velocità di B
--$${V_A}$$= velocità di A
+- $${v_B}$$= velocità di B
+- $${V_A}$$= velocità di A
 
 Sulla quantità al numeratore possiamo porre due condizioni:
 
 **Condizione 1**
 
-Per avere **verso di$$v_B$$uguale a quello di$$V_A$$** il numeratore dovrà essere maggiore di 0:
+Per avere **verso di $$v_B$$ uguale a quello di $$V_A$$ ** il numeratore dovrà essere maggiore di 0:
 
-2:$$\frac{B}{b} - \frac{C}{c}>0$$
+2: $$\frac{B}{b} - \frac{C}{c}>0$$
 
 quindi:
 
-3:$$\frac{B}{b}>\frac{C}{c}$$
+3: $$\frac{B}{b}>\frac{C}{c}$$
 
 **Condizione 2**
 
-**Per avere esattamente$$v_B = \frac{9}{10}V_A$$**  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+**Per avere esattamente** $$v_B = \frac{9}{10}V_A$$  **  (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
 
 dovrà essere:
 
-4:$$\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10}$$
+4: $$\frac{\frac{B}{b} - \frac{C}{c}}{\frac{B}{b}} = \frac{9}{10}$$
 
 Cioè:
 
@@ -111,13 +111,13 @@ Cioè:
 
 da cui:
 
-6:$$\frac{b}{B}\frac{C}{c}=\frac{1}{10}$$
+6: $$\frac{b}{B}\frac{C}{c}=\frac{1}{10}$$
 
 Relazione che è soddisfatta, ad esempio, prendendo:
 
-7:$$B=5b$$
+7: $$B=5b$$
 
-8:$$C=\frac{1}{2}c$$
+8: $$C=\frac{1}{2}c$$
 
 Formule originali:
 
@@ -129,9 +129,9 @@ Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c
 
 Quindi abbiamo complessivamente queste 3 condizioni:
 
-- 3:$$\frac{B}{b} > \frac{C}{c}$$
-- 9:$$b + B = c + C$$
-- 5:$$\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}$$
+- 3: $$\frac{B}{b} > \frac{C}{c}$$
+- 9: $$b + B = c + C$$
+- 5: $$\frac{B}{b} - \frac{C}{c} = \frac{9}{10}\frac{B}{b}$$
 
 Le ho elencate in ordine diverso rispetto a quello in cui le ho prima mostrate perchè la (5) può forse essere modificata, a condizione di modificare anche quella su A-a-A1-a1, per eventualmente provare a ridurre le dimensioni delle ruote a 200 denti, che rendono il meccanismo un po' ingombrante.
 
