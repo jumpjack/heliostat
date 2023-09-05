@@ -99,7 +99,7 @@ quindi:
 
 **Condizione 2**
 
-Per avere esattamente $v_B = \frac{9}{10}V_A$   (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione pari a 9/10 di VA))
+Per avere esattamente $v_B = \frac{9}{10}V_A$   (per motivi che vedremo più avanti (TBW: l'accoppiamento A-a-A1-a1 causa anch'esso una velocità di rotazione di A1 pari a 9/10 di VA))
 
 dovrà essere:
 
