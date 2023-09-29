@@ -74,5 +74,16 @@ Oppure, per limitare tempo di stampa e costo del materiale, potrei provare a uti
 
 Provo 2  misure per i diametri dei buchi per valutare in quale buco il cuscinetto si incastra meglio, senza forzarlo ma allo stesso tempo senza che abbia gioco.
 
+---------------
+
+28/9/2023 - Dopo prima stampa SLS su JLPCB:
+- fare la ruota di declinazione molto più sottile (era 5mm!) - ok
+- togliere alcuni raggi dalla ruota, in modo da poter fare un sostegno che la regge anche da dietro - ok
+- spostare testi e frecce su ruota di declinazione per adattarli a nuovo layout - ok
+- fare più stretti i buchi dei cuscinetti da 11mm nel supporto (erano 11.40mm) - ok, 11.20
+- fare meno appuntito l'indicatore di declinazione sul supporto - ok
+- ingrandire un po' il pignone di declinazione, perchè è troppo piccolo/lontano e perde qualche passo - ok
+- il buco del supporto per il pignone è sbagliato da un lato, l'ho fatto da più di 5mm invece che da 4 - ok, 4.2
+- fare perno del pignone un po' meno di 4mm - ok 3.80 mm
 
 
