@@ -85,5 +85,7 @@ Provo 2  misure per i diametri dei buchi per valutare in quale buco il cuscinett
 - ingrandire un po' il pignone di declinazione, perchè è troppo piccolo/lontano e perde qualche passo - ok
 - il buco del supporto per il pignone è sbagliato da un lato, l'ho fatto da più di 5mm invece che da 4 - ok, 4.2
 - fare perno del pignone un po' meno di 4mm - ok 3.80 mm
-
-
+- la forcella è venuta pesantissima, con bracci da 5.6 mm e fondo da 10, ridurre i bracci a 4mm e il fondo a 5 - ok
+- rinforzare l'attacco del perno alla forcella - ok
+- fare pignone più spesso - ok
+- aggiungere ruota liscia per regolazione manuale declinazione e fissaggio declinazione - ok
