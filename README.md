@@ -365,16 +365,17 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 - Manufacturers list: https://lm.solar/heliostats/heliostat-manufacturers-selected-list/
 
 Heliosfera:
-![image](https://github.com/jumpjack/heliostat/assets/1620953/d0275485-ee8a-41a8-8a54-0287e29985f2)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f309951f-fd4a-4c81-a7fd-96f64a5325cf)
+
 
 
 Caia:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e4dfc616-9d26-4be3-a6e1-8c5d81cb4a8e)
 
 
-
 PuroSole:
-![image](https://github.com/jumpjack/heliostat/assets/1620953/1dc1008f-0336-45f0-b957-d81c9f84a565)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/d7279628-e07e-4c40-a2a8-8ced41cf885d)
+
 
 
 Sunflower: 
