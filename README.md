@@ -357,9 +357,27 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ## Commercial products 
 - Heliosfera - https://heliostat.pl/it/di-progetto  (Poland) (not yet on sale)
-
-- Caia - https://www.solenica.com  (Italy) (not yet on sale)
-
+- Caia - https://www.solenica.com  (Italy) (not yet on sale; proabaly 250,00 euro)
 - Heliostat on https://www.heliostaat.nl/products.html (just mechanics+electronics, no mirror: 539$)
-
 - Parans fiber optic solar collectors: https://parans.com/product/ (unknown price)
+- PuroSole - 950,00 euro + IVA: https://www.eliostati.com/acquista/
+- Wikoda SunFlower - 300,00 euro (dead project)
+- Manufacturers list: https://lm.solar/heliostats/heliostat-manufacturers-selected-list/
+
+Heliosfera:
+![image](https://github.com/jumpjack/heliostat/assets/1620953/d0275485-ee8a-41a8-8a54-0287e29985f2)
+
+
+Caia:
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e4dfc616-9d26-4be3-a6e1-8c5d81cb4a8e)
+
+
+
+PuroSole:
+![image](https://github.com/jumpjack/heliostat/assets/1620953/1dc1008f-0336-45f0-b957-d81c9f84a565)
+
+
+Sunflower: 
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6c7a4f20-8bfe-4f38-a6f7-6e83060915ac)
+
+
