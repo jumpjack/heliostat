@@ -369,6 +369,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 - Parans fiber optic solar collectors: https://parans.com/product/ (unknown price)
 - PuroSole - 950,00 euro + IVA: https://www.eliostati.com/acquista/
 - Wikoda SunFlower - 300,00 euro (dead project)
+- [SolarTracker](http://www.egis.org/helio_de.html#Preise) - 11976,20 euro!!!
 - Manufacturers list: https://lm.solar/heliostats/heliostat-manufacturers-selected-list/
 
 Heliosfera:
@@ -389,3 +390,6 @@ Sunflower:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6c7a4f20-8bfe-4f38-a6f7-6e83060915ac)
 
 
+SolarTracker:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/3320f5b4-f081-4e96-a49f-897a7f8ee97d)
