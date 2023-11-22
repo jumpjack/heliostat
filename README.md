@@ -248,6 +248,11 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Images
 
+- Grubb ([source](https://archive.org/details/bub_gb_a-ICTRqRgy8C/page/n337/mode/2up?q=heliostat) - Zeitschrift für Instrumentenkunde - 1881)
+
+- ![image](https://github.com/jumpjack/heliostat/assets/1620953/3603e4ed-3f99-4a73-9aff-4ef68c5fd2fc)
+
+
 - Meyerstein ([source](https://data.collectienederland.nl/detail/foldout/void_edmrecord/dcn_teylers-fysisch-kabinet_FK-0310), [source](https://data.collectienederland.nl/detail/foldout/void_edmrecord/dcn_teylers-fysisch-kabinet_FK-0310)):
     - ![image](https://github.com/jumpjack/heliostat/blob/main/images/Heliostat%20Meyerstein%20G%C3%B6ttingen.jpeg)
     -![image](https://github.com/jumpjack/heliostat/blob/main/images/Heliostat%20Meyerstein%202.jpeg?raw=true)
