@@ -248,6 +248,13 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 
 ## Images
 
+- in "Lehrbuch der Physik und Meteorologie; Theilweise nach Pouillet's Lehrbuch der Physik", by Pouillet, M. (Claude Servais Mathias), 1790-1868; Müller, Johann Heinrich Jacob, 1809-1875
+  
+- ![image](https://github.com/jumpjack/heliostat/assets/1620953/79966cfd-8305-4c15-a49d-6421ce55fab1)
+
+
+
+
 - Grubb ([source](https://archive.org/details/bub_gb_a-ICTRqRgy8C/page/n337/mode/2up?q=heliostat) - Zeitschrift für Instrumentenkunde - 1881)
 
 - ![image](https://github.com/jumpjack/heliostat/assets/1620953/3603e4ed-3f99-4a73-9aff-4ef68c5fd2fc)
