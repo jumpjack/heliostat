@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rotating Line</title>
+
+</head>
+<body>
+
+		<table>
+		<tr>
+			<td>
+				<canvas id="myCanvas" width="200" height="200" style="border:1px solid #000;"></canvas><br>
+				<center>1 turn / 24h, with sun<br>
+			    <label for="sun1">Sun:</label>
+			    <span id="sun1">0</span>&deg;<br>
+			    <label for="mirror1">Mirror:</label>
+			    <span id="mirror1">0</span>&deg;<br>
+			    <label for="refl1">Reflection:</label>
+			    <span id="refl1">0</span>&deg;</center>
+			</td>
+
+			<td>
+				<canvas id="myCanvas2" width="200" height="200" style="border:1px solid #000;"></canvas><br>
+			    <center>1 turn / 24h, opposite of sun<br>
+			    <label for="sun2">Sun:</label>
+			    <span id="sun2">0</span>&deg;<br>
+			    <label for="mirror2">Mirror:</label>
+			    <span id="mirror2">0</span>&deg;<br>
+			    <label for="refl2">Reflection:</label>
+			    <span id="refl2">0</span>&deg;</center>
+			</td>
+
+			<td>
+				<canvas id="myCanvas3" width="200" height="200" style="border:1px solid #000;"></canvas><br>
+				<center>1 turn / 48h, with sun<br>
+			    <label for="sun3">Sun:</label>
+			    <span id="sun3">0</span>&deg;<br>
+			    <label for="mirror3">Mirror:</label>
+			    <span id="mirror3">0</span>&deg;<br>
+			    <label for="refl3">Reflection:</label>
+			    <span id="refl3">0</span>&deg;</center>
+			</td>
+		</tr>
+		</table>
+		<label for="rotationSlider">Rotation:</label>
+		<input type="range" id="rotationSlider" min="10" max="110" value="20" step="1">
+		
+    <script>
+
+		const RAY_LENGTH = 80;
+		const SLIDER_MIN = "-225";
+		const SLIDER_MAX = "-45";
+		const SLIDER_VAL = "-225";
+        const rotationSlider = document.getElementById('rotationSlider');
+		rotationSlider.min = SLIDER_MIN;
+		rotationSlider.max = SLIDER_MAX;
+		rotationSlider.value = SLIDER_VAL;
+		
+        const sun1 = document.getElementById('sun1');
+        const mirror1 = document.getElementById('mirror1');
+        const refl1 = document.getElementById('refl1');
+
+        const sun2 = document.getElementById('sun2');
+        const mirror2 = document.getElementById('mirror2');
+        const refl2 = document.getElementById('refl2');
+
+        const sun3 = document.getElementById('sun3');
+        const mirror3 = document.getElementById('mirror3');
+        const refl3 = document.getElementById('refl3');
+		
+	    // Ottieni il riferimento al canvas e al suo contesto
+	    const canvas = document.getElementById('myCanvas');
+	    const context = canvas.getContext('2d');
+
+	    const canvas2 = document.getElementById('myCanvas2');
+	    const context2 = canvas2.getContext('2d');
+
+	    const canvas3 = document.getElementById('myCanvas3');
+	    const context3 = canvas3.getContext('2d');
+
+        // Esegui all'avvio della pagina
+        updateRotation();
+
+        rotationSlider.addEventListener('input', updateRotation);
+
+		
+        function updateRotation() {
+		      // Pulisci il canvas prima di disegnare la nuova linea
+		      context.clearRect(0, 0, canvas.width, canvas.height);
+		      context2.clearRect(0, 0, canvas.width, canvas.height);
+		      context3.clearRect(0, 0, canvas.width, canvas.height);
+			  
+            const rotationValue = rotationSlider.value*1.0;
+            const rotationValueSun = (rotationValue + 45) * Math.PI/180;	
+            const rotationValueSunInit = (SLIDER_VAL*1.0 + 45.0) * Math.PI/180;	
+            const rotationValueMirror = (rotationValue)* Math.PI/180;	
+            const rotationValueMirrorInit = (SLIDER_VAL*1.0)* Math.PI/180;	
+            const rotationValueReflected = (rotationValue * 1.0 + 45.0 + 90.0) * Math.PI/180;	
+            const rotationValueReflectedInit = (SLIDER_VAL*1.0 + 45.0 + 90.0) * Math.PI/180;	
+
+			raggio =   drawRotatedLine(context, 100, 100, RAY_LENGTH, rotationValueSun,        0, "orange", "circle");	
+			specchio = drawRotatedLine(context, 100, 100, 50,  rotationValueMirror,   -25, 'black', "null");	
+			riflesso = drawRotatedLine(context, 100, 100, RAY_LENGTH, rotationValueReflected,  0, 'red', "arrow");	
+
+// Disegna la bisettrice
+context.beginPath();
+context.moveTo(100,100);
+context.lineTo((raggio.x2 + riflesso.x2) / 2, (raggio.y2 + riflesso.y2) / 2);
+context.strokeStyle = 'green'; // Colore della bisettrice
+context.stroke();
+context.closePath();
+				
+            const rotationValue2 = rotationSlider.value*1.0;
+            const rotationValueMirror2 = -rotationValue * Math.PI/180;	
+            const rotationValueMirror2Init = (-SLIDER_VAL*1.0)* Math.PI/180;	
+            const rotationValueReflected2 = ( - 3.0 * rotationValue + 135 - 2*360) * Math.PI/180;	
+            const rotationValueReflected2Init = ( - 3.0 * SLIDER_VAL*1.0 + 135  - 2*360) * Math.PI/180;	
+
+			raggio2 =   drawRotatedLine(context2, 100, 100, RAY_LENGTH, rotationValueSun,        0, "orange", "circle");	
+			specchio2 = drawRotatedLine(context2, 100, 100, 50,  rotationValueMirror2,  -25, 'black', "null");	
+			riflesso2 = drawRotatedLine(context2, 100, 100, RAY_LENGTH, rotationValueReflected2, 0 , 'red', "arrow");	
+
+// Disegna la bisettrice
+context2.beginPath();
+context2.moveTo(100,100);
+context2.lineTo((raggio2.x2 + riflesso2.x2) / 2, (raggio2.y2 + riflesso2.y2) / 2);
+context2.strokeStyle = 'green'; // Colore della bisettrice
+context2.stroke();
+context2.closePath();
+				
+				            const rotationValue3 = rotationSlider.value*1.0;
+            const rotationValueMirror3 = (rotationValue/2) * Math.PI/180 + Math.PI/2;	
+            const rotationValueMirror3Init = (SLIDER_VAL*1.0/2)* Math.PI/180;	
+            const rotationValueReflected3 =  -Math.PI/4;	
+            const rotationValueReflected3Init = -Math.PI/4;	
+
+
+
+
+			raggio3 =   drawRotatedLine(context3, 100, 100, RAY_LENGTH,  rotationValueSun,        0, "orange", "circle");	
+			specchio3 = drawRotatedLine(context3, 100, 100, 50,   rotationValueMirror3 , -25, 'black', "null");	
+			riflesso3 = drawRotatedLine(context3, 100, 100, RAY_LENGTH,  rotationValueReflected3 ,0 , 'red', "arrow");	
+
+
+// Disegna la bisettrice
+context3.beginPath();
+context3.moveTo(100,100);
+context3.lineTo((raggio3.x2 + riflesso3.x2) / 2, (raggio3.y2 + riflesso3.y2) / 2);
+context3.strokeStyle = 'green'; // Colore della bisettrice
+context3.stroke();
+context3.closePath();
+				
+				
+			sun1.innerHTML = (rotationValueSun * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueSunInit - rotationValueSun)*180/Math.PI).toFixed(0) +  ")";
+			mirror1.innerHTML = (rotationValueMirror * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueMirrorInit - rotationValueMirror)*180/Math.PI).toFixed(0) +  ")";
+			refl1.innerHTML = (rotationValueReflected * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueReflectedInit - rotationValueReflected)*180/Math.PI).toFixed(0) +  ")";
+
+			sun2.innerHTML = (rotationValueSun * 180 / Math.PI).toFixed(0)+ " (Delta=" + ((rotationValueSunInit - rotationValueSun)*180/Math.PI).toFixed(0) +  ")";
+			mirror2.innerHTML = (rotationValueMirror2 * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueMirror2Init - rotationValueMirror2)*180/Math.PI).toFixed(0) +  ")";;
+			refl2.innerHTML = (rotationValueReflected2 * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueReflected2Init - rotationValueReflected2)*180/Math.PI).toFixed(0) +  ")";
+
+			sun3.innerHTML = (rotationValueSun * 180 / Math.PI).toFixed(0)+ " (Delta=" + ((rotationValueSunInit - rotationValueSun)*180/Math.PI).toFixed(0) +  ")";
+			mirror3.innerHTML = (rotationValueMirror3 * 180 / Math.PI).toFixed(0) + " (Delta=" + ((rotationValueMirror3Init - rotationValueMirror3)*180/Math.PI).toFixed(0) +  ")";
+			refl3.innerHTML = (rotationValueReflected3 * 180 / Math.PI).toFixed(0) + " (<b>Delta=" + ((rotationValueReflected3Init - rotationValueReflected3)*180/Math.PI).toFixed(0) +  "</b>)";
+       }
+
+
+        function drawRotatedLine(context, x0, y0, length, angle, distance, color, what) {
+
+            // Calcola le coordinate del punto finale della linea ruotata
+            const x1 = x0 + distance * Math.cos(angle);
+            const y1 = y0 + distance * Math.sin(angle);
+
+            // Calcola le coordinate del punto finale della linea lunga L
+            const x2 = x1 + length * Math.cos(angle);
+            const y2 = y1 + length * Math.sin(angle);
+
+			context.strokeStyle = color;
+
+            // Disegna la linea
+            context.beginPath();
+            context.moveTo(x1, y1);
+            context.lineTo(x2, y2);
+            context.stroke();
+		    context.closePath();
+			
+			if (what === "circle") {
+		        // Disegna il cerchio
+		        context.beginPath();
+		        context.arc(x2, y2, 3, 0, 2 * Math.PI);
+		        context.fillStyle = "yellow";
+		        context.strokeStyle = "black";
+		        context.lineWidth = 1;
+		        context.fill();
+		        context.stroke();
+		        context.closePath();
+			}
+
+		    if (what === "arrow") {
+		        // Disegna la freccia
+		        const arrowSize = 10;
+		        const arrowAngle = Math.PI / 6; // Angolo della freccia
+
+		        // Calcola le coordinate della punta della freccia
+		        const arrowX = x2 - arrowSize * Math.cos(angle + arrowAngle);
+		        const arrowY = y2 - arrowSize * Math.sin(angle + arrowAngle);
+
+		        // Disegna la linea della freccia
+		        context.beginPath();
+		        context.moveTo(x2, y2);
+		        context.lineTo(arrowX, arrowY);
+		        context.stroke();
+		        context.closePath();
+
+		        // Disegna le altre due linee della freccia
+		        context.beginPath();
+		        context.moveTo(x2, y2);
+		        context.lineTo(x2 - arrowSize * Math.cos(angle - arrowAngle), y2 - arrowSize * Math.sin(angle - arrowAngle));
+		        context.stroke();
+		        context.closePath();
+		    }
+			
+		return {x1,y1,x2,y2}
+
+        }
+		
+    // Chiamata alla funzione per disegnare una linea ruotata
+    //drawRotatedLine(context, 100, 100, 200, 100, 45);		
+    </script>
+
+</body>
+</html>
+
