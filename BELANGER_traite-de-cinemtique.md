@@ -14,7 +14,7 @@ Paragrafo 149 - Movimento epicicloidale piano
 
 p. 197
 
-**Moto epipicloidale planare**
+**Moto epicicloidale planare**
 
 Attorno a un asse geometrico fisso **MN**, che supporremo verticale (fig. 102), ruota un solido che può essere una ruota dentata o una puleggia, ma che può ridursi a una semplice barra **A**. Questo corpo, nel suo movimento, trasmette il moto a un bullone o albero cilindrico verticale **PQ**, su cui ruotano due ingranaggi **b** e **c** che formano un unico corpo solido. Questi due ingranaggi ingranano rispettivamente con due ruote dentate **B** e **C**, che hanno i loro centri su **MN**, e di cui una, ad esempio **C**, è immobile nello spazio, mentre l'albero che la attraversa ruota. Dei due corpi **A** e **B**, uno, ad esempio **B**, è fissato invariabilmente sull'albero di cui **MN** è l'asse geometrico, mentre la barra **A** ruota liberamente su quest'albero. Così i due corpi rotanti **A** e **B** sono collegati tra di loro mediante il sistema solido e mobile dei due ingranaggi **b** e **c**: si tratta di trovare il rapporto delle loro velocità angolari, che indicheremo con **wa** e **wb** e il cui verso positivo è quello indicato dalle frecce.
 
