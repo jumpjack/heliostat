@@ -1,3 +1,6 @@
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/foucault-disegno-03.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/foucault-disegno-03.jpg"  width=400> </a>
+
+
 # Recueil des travaux scientifique de Leon Foucault (Raccolta di lavori scientifici di Leon Foucault)
 
 di  C.-M. Gariel (Madre di Foucault), pubblicato postumo nel 1878
