@@ -10,7 +10,8 @@ Link a rappresentazione animata, geometricamente corretta, del ruotismo orario (
 
 -------------
 
-Il ruotismo-satellite di Foucalt-Eichens è così rappresentato negli scritti di Foucalt:
+Il ruotismo-satellite di Foucalt-Eichens ([originale](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) e [mia traduzione](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md)) è così rappresentato negli scritti di Foucalt:
+
 
 - **Recueil de scientifique travaux**
 
