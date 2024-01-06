@@ -1,3 +1,5 @@
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/foucault-disegno-03.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/foucault-disegno-03.jpg"  width=400> </a>
+
 # Description du sidérostat de L. Foucault
 di C. WOLF 
 (da "Annales Scientifiques de l'École Normale Supérieure", 2a serie, tomo 1 (1872)):
