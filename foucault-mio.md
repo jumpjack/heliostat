@@ -1,3 +1,12 @@
+# Siderostato di Foucault
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/foucault-foto-hires.png"><img src="https://github.com/jumpjack/heliostat/blob/main/images/foucault-foto-hires.png" width = 400></a>
+
+Questo siderostato costruito da Eichens e Foucault (descritto [negli Annales](https://github.com/jumpjack/heliostat/blob/main/foucault%20(C.%20Wolf%20in%20Annales).md) e nella "[Raccolta di Lavori](https://github.com/jumpjack/heliostat/blob/main/foucault%20(in%20Recueil%20des%20travaux).md)") ha la particolare caratteristica di poter regolare dall'esterno, senza turbare il movimento orario dello strumento, sia l'ora che la declinazione, tramite la sapiente applicazione di un sistema "a ruotismo satellite" ben descritto nel [Traite de Cinematique](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md) di Belanger ).
+
+Questo meccamismo è applicato due volte nel siderostato: nella sezione inferiore, che contiene il meccanismo ad orologeria, e nella sezione superiore, che fa compiere un giro ogni 24 ore alla semi-ruota di declinazione, la quale però può essere ruotata, grazie al suddetto meccanismo, anche perpendicolarmente all'asse orario.
+
+
 Link a rappresentazione animata, geometricamente corretta, del ruotismo orario (senza ingranaggio satellite): [link](https://geargenerator.com/#175,350,50,10,1,3,3174.2999999999624,4,1,18,4.5,4,20,90,0,0,0,0,0,1,20,5,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-643)
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/82d605ff-671f-4d1c-8bce-a0b5ccd06ecf)
