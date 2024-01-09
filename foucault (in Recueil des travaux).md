@@ -19,7 +19,7 @@ Eliostato - Modello 2 (Tavola 13 in fondo al libro):
 
 Siderostato (tavole 14 e 15 in fondo al libro)
 
-![tav. 14](https://github.com/jumpjack/heliostat/assets/1620953/b5ad90ad-3268-43d3-a4de-1eef143a11dc)
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/tav14-foucault-travaux-highres.jpg?raw=true"><img src="https://github.com/jumpjack/heliostat/blob/main/images/tav14-foucault-travaux-highres.jpg?raw=true" width = 500></a>  (clicca l'immagine per ingrandirla)
 
 ------------
 
