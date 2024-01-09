@@ -298,10 +298,6 @@ Abbiamo già accennato in precedenza a come il movimento di questo meccanismo vi
 
 p. 582
 
-![Figura 1, Tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/e2d23598-971b-43e5-bdb0-e442070a76d5)
-
-Fig. 1, Planche 14  (Figura 1, Tavola 14)
-
 Era necessario, per poter utilizzare il siderostato, disporre di un "sistema di input" per variare di piccole quantità:
 - l'angolo orario
 - la distanza polare
@@ -309,6 +305,15 @@ Era necessario, per poter utilizzare il siderostato, disporre di un "sistema di 
 senza fermare il movimento del meccanismo dell'orologio. 
 
 Questo risultato *(\[il primo punto\])* è stato ottenuto mediante l'uso di un meccanismo satellite **n**, **p** che si vede nella vista laterale in fig. 1, tav. 14; \[il meccanismo è \], simile a quello che il signor Eichens adotta da tempo negli strumenti equatoriali. Questo meccanismo è azionato tramite una leva **q**, la cui impugnatura è a portata dell'osservatore.
+
+![Figura 1, Tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/e2d23598-971b-43e5-bdb0-e442070a76d5)
+
+Fig. 1, Planche 14  (Figura 1, Tavola 14)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/786c3842-66f3-4f2f-a847-8ba5385e0b1c)
+
+(Fig1, Tavola 14, dettaglio delle aste per il controllo remoto)
+
 
 Inoltre *(\[il secondo punto\])*, era necessario produrre, mediante una leva immobile *(\[cioè che non ruota con l'asse orario\])*, un movimento del cerchio di declinazione posto all'estremità dell'asse mobile, senza alterare il movimento di quest'ultimo. L. Foucault aveva indicato che la soluzione doveva essere cercata nell'uso di un meccanismo satellite, ma non aveva fornito né spiegato il sistema che intendeva applicare. La disposizione ideata e applicata dal signor Eichens è indicata nella figura 1, tavola 14, e nella figura 3, tavola 15: 
 
