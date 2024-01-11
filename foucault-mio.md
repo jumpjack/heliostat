@@ -6,28 +6,6 @@ Questo siderostato costruito da Eichens e Foucault (descritto [negli Annales](ht
 
 Questo meccamismo è applicato due volte nel siderostato: nella sezione inferiore, che contiene il meccanismo ad orologeria, e nella sezione superiore, che fa compiere un giro ogni 24 ore alla semi-ruota di declinazione, la quale però può essere ruotata, grazie al suddetto meccanismo, anche perpendicolarmente all'asse orario.
 
-Secondo i miei calcoli (vedi in fondo alla pagina) le dimensioni assolute di a, a1, A e A1 non sono obbligatorie: quello che conta sono i rapporti, per l'esattezza:
-- A1 e A devono avere stesso numero di denti
-- a1 e a devono essere in rapporto 9:10
-
-Questo è vero per i valori forniti da Foucault:
-- A1 = A = 200
-- a1 = 18
-- a = 20
-
-Il risultato, come detto è che le velocità di A1 e A sono in rapporto 9:10, ma lo stesso risultato **pare** possano essere ottenuti con:
-- [a1=36, a=40, A1=200, A=200](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-26)
-
-Na è possibile anche ridurre le dimensioni di A1 e A:
-- [a1=36, a=40, A1=100, A=100](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,100,25,4,20,0,0,0,0,0,1,0,100,25,4,20,0,0,0,0,0,0,1,3,-276)
-
-
-C'è però da tener conto, nel ridurre A e A1, che A deve essere comunque abbastanza grande da poter ospitare il satellite:
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/6d4a0e1c-2498-4ed7-a209-c8b04af27c9d)
-
-Questo significa che C/2 + c/2 e B/2 + b/2 devono essere minori del raggio di A, e le dimensioni minime le decide C, che è la ruota più piccola, che probabilmente non può avere meno di 8 denti, e dovendo essere c = 2*C, significa C = 8 e c = 16, quindi la somma dei raggi verrebbe 4+8 = 12.
-Restano altri calcoli da fare...
 
 ## Simulazione
 
@@ -400,6 +378,30 @@ Quindi alla fine le condizioni  sarebbero:
 - 22: $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$$
 
 C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
+
+Secondo i miei calcoli le dimensioni assolute di a, a1, A e A1 non sono obbligatorie: quello che conta sono i rapporti, per l'esattezza:
+- A1 e A devono avere stesso numero di denti
+- a1 e a devono essere in rapporto 9:10
+
+Questo è vero per i valori forniti da Foucault:
+- A1 = A = 200
+- a1 = 18
+- a = 20
+
+Il risultato, come detto è che le velocità di A1 e A sono in rapporto 9:10, ma lo stesso risultato **pare** possano essere ottenuti con:
+- [a1=36, a=40, A1=200, A=200](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-26)
+
+Na è possibile anche ridurre le dimensioni di A1 e A:
+- [a1=36, a=40, A1=100, A=100](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,100,25,4,20,0,0,0,0,0,1,0,100,25,4,20,0,0,0,0,0,0,1,3,-276)
+
+
+C'è però da tener conto, nel ridurre A e A1, che A deve essere comunque abbastanza grande da poter ospitare il satellite:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6d4a0e1c-2498-4ed7-a209-c8b04af27c9d)
+
+Questo significa che C/2 + c/2 e B/2 + b/2 devono essere minori del raggio di A, e le dimensioni minime le decide C, che è la ruota più piccola, che probabilmente non può avere meno di 8 denti, e dovendo essere c = 2*C, significa C = 8 e c = 16, quindi la somma dei raggi verrebbe 4+8 = 12.
+Restano altri calcoli da fare...
+
 
 # Ruotismo 2 - Variazione della declinazione
 
