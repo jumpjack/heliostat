@@ -42,9 +42,13 @@ Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori)
 
 Versione ricavata invece dalla Fig. 4 degli Annales, usando invece delle "spine" la colorazione uniforme di ingranaggi e flange:
 
-![fig.4 Annales](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
+![fig.4 Annales org](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
 
 Un'ulteriore vantaaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immhgine.
+
+Versione originale:
+
+![fig.4 Anneles color](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png?raw=true)
 
 - **Annales**
 
