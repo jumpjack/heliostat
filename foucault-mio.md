@@ -92,8 +92,7 @@ Qui la colorazione ha una logica differente rispetto a prima:
 
 - Il colore giallo raggruppa gli ingranaggi che trasmettono il movimento orario principale.
 - Il colore celeste raggruppa quelli che permettono di aggiungere/togliere una componente rotazionale a quella di base.
-- Il colore verde raggruppa gli ingranaggi che sommano insieme i due contributi; questo movimento viene poi trasmesso a un meccanismo successivo che vedremo dopo (TBW - ruotismo superiore di declinaziope)
-- Il colore rosso raggruppa ingranaggi che non interagiscono con questo meccanismo, ma con quello superiore.
+- Il colore verde raggruppa gli ingranaggi che sommano insieme i due contributi; questo movimento viene poi trasmesso a un meccanismo successivo che vedremo dopo (TBW - ruotismo superiore di declinazione)
 
 Possiamo rappresentare questo primo meccanismo in forma più compatta:
 
