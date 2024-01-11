@@ -320,7 +320,7 @@ cioè
 
 20: $$\Large{\frac{a_1}{a}=\frac{Bc-Cb}{Bc}}$$
 
-Questo vorrebbe dire che dovrebbe essere possibile rendere uguali $$v_B$$ e $$V_{XX'}$$ a prescindere dalle dimensioni di $$A$$ e $$A_1$$, purchè sia rispettata la (20).
+Questo vorrebbe dire che dovrebbe essere possibile rendere uguali $v_B$ e $V_{XX'}$ a prescindere dalle dimensioni di $A$ e $A_1$, purchè sia rispettata la (20).
 
 Per i succitati valori:
 
