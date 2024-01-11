@@ -28,11 +28,23 @@ Il ruotismo-satellite di Foucalt-Eichens ([originale](https://gallica.bnf.fr/ark
 
 Fig.3, Planche 15  (Figura 3, tavola 15)
 
-Mia versione a colori:
+Notare che in questa versione del disegno, presente nel documento "Recueil de travaux...", è probabilmente presente un errore, che si può notare confrontandolo con un'altra versione del disegno presente negli "Annales":
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/dad494bd-fb8a-4649-8af7-f4c59bff6a5c)
+ !(errore)[https://github.com/jumpjack/heliostat/blob/main/images/errore%20satellite.jpg?raw=true]
+
+ Nella versione in alto è presente una "spina" o "vite" che fissa la ruota "c" all'asse Y, ma questa spina è assente nel disegno sotto; ma in assenza della spina, la ruota c si limiterebbe a ruotare intorno all'asse Y, senza poter trasmettere il movimento alla ruota B, risultando quindi completamente inutile.
+
+Mia versione a colori, con spina/vite asse Y presente:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/05de53a4-ce80-4203-8d6b-f98e3f8851ea)
 
 Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori)
+
+Versione ricavata invece dalla Fig. 4 degli Annales, usando invece delle "spine" la colorazione uniforme di ingranaggi e flange:
+
+![fig.4 Annales](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
+
+Un'ulteriore vantaaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immhgine.
 
 - **Annales**
 
