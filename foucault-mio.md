@@ -6,6 +6,7 @@ Questo siderostato costruito da Eichens e Foucault (descritto [negli Annales](ht
 
 Questo meccamismo è applicato due volte nel siderostato: nella sezione inferiore, che contiene il meccanismo ad orologeria, e nella sezione superiore, che fa compiere un giro ogni 24 ore alla semi-ruota di declinazione, la quale però può essere ruotata, grazie al suddetto meccanismo, anche perpendicolarmente all'asse orario.
 
+## Simulazione
 
 Link a rappresentazione animata, geometricamente corretta, del ruotismo orario (senza ingranaggio satellite): [link](https://geargenerator.com/#175,350,50,10,1,3,3174.2999999999624,4,1,18,4.5,4,20,90,0,0,0,0,0,1,20,5,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-643)
 
@@ -19,18 +20,24 @@ Link a rappresentazione animata, geometricamente corretta, del ruotismo orario (
 
 -------------
 
-Il ruotismo-satellite di Foucalt-Eichens ([originale](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) e [mia traduzione](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md)) è così rappresentato negli scritti di Foucalt:
+## Il ruotismo satellite
+
+Il ruotismo-satellite di Foucalt-Eichens ([originale](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) e [mia traduzione](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md)) è utilizzato in questo stesso strumento due volte:
+- una nel meccanismo in alto, per appoggiarsi a uno stesso asse (XX') sia per trasmettere il moto orario di 24 ore che per trasmettere, tramite il tubo esterno all'asse, i cambiamenti manuali di declinazione operati dall'utilizzatore tramite una leva esterna.
+- un'altra nel meccanismo in basso, per sommare il moto dell'orologio al movimento manuale comandato dall'utlizzatore tramite una seconda leva esterna.
+
+Il meccanismo viene descritto, menzionato e illustrato in modi diversi nella "Recueil de travaux" e negli "Annales", introducendo anche errori in un testo ed errori diversi in un altro, rendendone piuttosto complicata la comprensione. In più, lo stesso meccanismo viene utilizzato con una piccolissima differenza, a seconda se usato nel meccanismo superiore o inferiore; la variante superiore permette di **trasmettere** due moti diversi lungo uno stesso asse, in modo indipendente l'uno dall'altro, mentre la variante inferiore permette di **sommare** due moti diversi usando uno stesso asse.
 
 
-- **Recueil de scientifique travaux**
+### Impiego in meccanismo superiore: combinazione di moto orario automatico e declinazione manuale.
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
 
-Fig.3, Planche 15  (Figura 3, tavola 15)
+Fig.3, Planche 15  (Figura 3, tavola 15), Recueil des Travaux
 
 Notare che in questa versione del disegno, presente nel documento "Recueil de travaux...", è probabilmente presente un errore, che si può notare confrontandolo con un'altra versione del disegno presente negli "Annales":
 
- !(errore)[https://github.com/jumpjack/heliostat/blob/main/images/errore%20satellite.jpg?raw=true]
+ ![(errore](https://github.com/jumpjack/heliostat/blob/main/images/errore%20satellite.jpg?raw=true)
 
  Nella versione in alto è presente una "spina" o "vite" che fissa la ruota "c" all'asse Y, ma questa spina è assente nel disegno sotto; ma in assenza della spina, la ruota c si limiterebbe a ruotare intorno all'asse Y, senza poter trasmettere il movimento alla ruota B, risultando quindi completamente inutile.
 
@@ -38,7 +45,7 @@ Mia versione a colori, con spina/vite asse Y presente:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/05de53a4-ce80-4203-8d6b-f98e3f8851ea)
 
-Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori)
+Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori),  Recueil des Travaux
 
 Versione ricavata invece dalla Fig. 4 degli Annales, usando invece delle "spine" la colorazione uniforme di ingranaggi e flange:
 
@@ -50,7 +57,9 @@ Versione originale:
 
 ![fig.4 Anneles color](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png?raw=true)
 
-- **Annales**
+### Impiego in meccanismo inferiore, per sommare moto orario automatico e moto orario manuale
+
+La figura 3 all'interno del testo degli "Annales" (anzichè in una tavola fuori testo), rappresenta la variante di meccanismo usata per **introdurre una variazione positiva o negativa della rotazione oraria** senza però influenzare il movimento orario di base.
 
 ![Figura 3 nel testo](https://github.com/jumpjack/heliostat/assets/1620953/51a99e59-55a9-4272-bbc1-590e049233b9)
 
@@ -58,12 +67,10 @@ Mia versione a colori:
 
 ![Figura 3 nel testo - a colori](https://github.com/jumpjack/heliostat/assets/1620953/8525410f-2dee-499e-a6b6-54aae722f29e)
 
+La differenza consiste nell'ultima parte, quella a destra: qui, al contrario dell'implementazione precedente, è presente una "spina" che collega la ruota di uscita **B** all'asse interno **XX'**, con il quale diventa solidale. Non essendo presente la ruota **A1** presente invece sulla sinistra dell'implementazione superiore, risulterà che l'asse uscente **XX'** sarà guidato solo dalla ruota **B**, il cui moto risulta dalla combinazione della rotazione della ruota **A**, guidata dall'orologio, e della ruota conica **D**, solidale con la ruota **C**.
 
-La figura 3 della tavola 15 della "Recueil" (prime due figure) rappresenta il meccanismo che permette di **far ruotare la semi-ruota di declinazione** del siderostato senza influenzare la rotazione oraria dell'asse.
 
-La figura 3 all'interno del testo degli "Annales", invece (successive 2 figure) rappresenta la variante di meccanismo usata per **introdurre una variazione positiva o negativa della rotazione oraria** senza però influenzare il movimento orario di base.
-
-# Impieghi del ruotismo satelllite
+## Impieghi del ruotismo satelllite
 
 Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione è inserito nella ruota **A** e si muove con essa, ma sono leggermente diversi:
 
