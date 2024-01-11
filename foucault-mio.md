@@ -39,21 +39,29 @@ Mia versione a colori:
 
 ![Figura 3 nel testo - a colori](https://github.com/jumpjack/heliostat/assets/1620953/8525410f-2dee-499e-a6b6-54aae722f29e)
 
-La differenza consiste nell'ultima parte, quella a destra: qui, al contrario dell'implementazione precedente, è presente una "spina" che collega la ruota di uscita **B** all'asse interno **XX'**, con il quale diventa solidale. Non essendo presente la ruota **A1** presente invece sulla sinistra dell'implementazione superiore, risulterà che l'asse uscente **XX'** sarà guidato solo dalla ruota **B**, il cui moto risulta dalla combinazione della rotazione della ruota **A**, guidata dall'orologio, e della ruota conica **D**, solidale con la ruota **C**.
+A destra è presente una "spina" che collega la ruota di uscita **B** all'asse interno **XX'**, con il quale diventa solidale; di conseguenza l'asse uscente **XX'** sarà guidato dalla ruota **B**, il cui moto risulta dalla combinazione della rotazione della ruota **A**, guidata dall'orologio, e della ruota conica **D**, solidale con la ruota **C**.
 
 ### Impiego in meccanismo superiore: combinazione di moto orario automatico e declinazione manuale.
+
+Questa variante è illustrata in due modi diversi in due documenti diversi:
+
+Annales:
+
+![fig.4 Anneles color](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png?raw=true)
+
+Recueil des travaux:
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
 
 Fig.3, Planche 15  (Figura 3, tavola 15), Recueil des Travaux
 
-Notare che in questa versione del disegno, presente nel documento "Recueil de travaux...", è probabilmente presente un errore, che si può notare confrontandolo con un'altra versione del disegno presente negli "Annales":
+Notare che in nella seconda versione del disegno, presente nel documento "Recueil de travaux...", è probabilmente presente un errore, che si può notare confrontandolo con un'altra versione del disegno presente negli "Annales":
 
  ![(errore](https://github.com/jumpjack/heliostat/blob/main/images/errore%20satellite.jpg?raw=true)
 
- Nella versione in alto è presente una "spina" o "vite" che fissa la ruota "c" all'asse Y, ma questa spina è assente nel disegno sotto; ma in assenza della spina, la ruota c si limiterebbe a ruotare intorno all'asse Y, senza poter trasmettere il movimento alla ruota B, risultando quindi completamente inutile.
+ Nella versione degli _Annales_ è presente una "spina" o "vite" che fissa la ruota **c** all'asse satellite **Y**, ma questa spina è assente nel disegno sotto; ma in assenza della spina, la ruota **c** si limiterebbe a ruotare intorno all'asse **Y**, senza poter trasmettere il movimento alla ruota **B**, risultando quindi completamente inutile.
 
-Mia versione a colori, con spina/vite asse Y presente:
+Mia versione a colori, con spina/vite asse Y presente, del disegno di _Recueil_:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/05de53a4-ce80-4203-8d6b-f98e3f8851ea)
 
@@ -63,18 +71,15 @@ Versione ricavata invece dalla Fig. 4 degli Annales, usando invece delle "spine"
 
 ![fig.4 Annales org](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
 
-Un'ulteriore vantaaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immhgine.
+Un'ulteriore vantaaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immagine.
 
-Versione originale:
-
-![fig.4 Anneles color](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png?raw=true)
 
 
 ## Spiegazione dettagliata
 
-Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione è inserito nella ruota **A** e si muove con essa, ma sono leggermente diversi:
+Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione **Y** è inserito nella ruota **A** e si muove con essa, ma sono leggermente diversi:
 
-- un primo meccanismo, più semplice, prende il movimento principale solo dalla ruota A, azionata da un "regolatore isocrono di precisione" (un orologio), a cui aggiunge/toglie una certa velocità rotazionale tramite una ruota esterna controllata dall'utilizzatore
+- un primo meccanismo, più semplice, prende il movimento principale solo dalla ruota **A**, azionata da un "regolatore isocrono di precisione" (un orologio), a cui aggiunge/toglie una certa velocità rotazionale tramite una ruota esterna controllata dall'utilizzatore
 - un secondo meccanismo, più complesso, aggiunge una ruota **A1**, coassiale alla ruota **A**, e un ruotino **a1**, coassiale al ruotino **a** che nell'altro meccanismo aziona la ruota **A**; queste due ruote aggiuntive **A1** e **a1**, unitamente a un differente tipo di fissaggio delle ruote all'asse **XX'**, permettono di far ruotare la ruota finale **B** alla stessa velocità dell'asse **XX'** in assenza di intervento dall'esterno, ma di muoverla all'occorrenza **temporaneamente** più avanti o più indietro, in modo che la semiruota di declinazione ad essa collegata, che ruota con l'asse **XX'**, possa anche ruotare **perpendicolarmente** all'asse **XX'**, in modo da variare il puntamentro dello strumento (variazione della declinazione).
 
 ## Ruotismo 1 - variazione oraria
