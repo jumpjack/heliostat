@@ -29,6 +29,18 @@ Il ruotismo-satellite di Foucalt-Eichens ([originale](https://gallica.bnf.fr/ark
 Il meccanismo viene descritto, menzionato e illustrato in modi diversi nella "Recueil de travaux" e negli "Annales", introducendo anche errori in un testo ed errori diversi in un altro, rendendone piuttosto complicata la comprensione. In più, lo stesso meccanismo viene utilizzato con una piccolissima differenza, a seconda se usato nel meccanismo superiore o inferiore; la variante superiore permette di **trasmettere** due moti diversi lungo uno stesso asse, in modo indipendente l'uno dall'altro, mentre la variante inferiore permette di **sommare** due moti diversi usando uno stesso asse.
 
 
+### Impiego in meccanismo inferiore, per sommare moto orario automatico e moto orario manuale
+
+La figura 3 all'interno del testo degli "Annales" (anzichè in una tavola fuori testo), rappresenta la variante di meccanismo usata per **introdurre una variazione positiva o negativa della rotazione oraria** senza però influenzare il movimento orario di base.
+
+![Figura 3 nel testo](https://github.com/jumpjack/heliostat/assets/1620953/51a99e59-55a9-4272-bbc1-590e049233b9)
+
+Mia versione a colori:
+
+![Figura 3 nel testo - a colori](https://github.com/jumpjack/heliostat/assets/1620953/8525410f-2dee-499e-a6b6-54aae722f29e)
+
+La differenza consiste nell'ultima parte, quella a destra: qui, al contrario dell'implementazione precedente, è presente una "spina" che collega la ruota di uscita **B** all'asse interno **XX'**, con il quale diventa solidale. Non essendo presente la ruota **A1** presente invece sulla sinistra dell'implementazione superiore, risulterà che l'asse uscente **XX'** sarà guidato solo dalla ruota **B**, il cui moto risulta dalla combinazione della rotazione della ruota **A**, guidata dall'orologio, e della ruota conica **D**, solidale con la ruota **C**.
+
 ### Impiego in meccanismo superiore: combinazione di moto orario automatico e declinazione manuale.
 
 ![Figura 3, tavola 15](https://github.com/jumpjack/heliostat/assets/1620953/4dfca861-417b-4bef-b047-baa681083219)
@@ -57,20 +69,8 @@ Versione originale:
 
 ![fig.4 Anneles color](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-org.png?raw=true)
 
-### Impiego in meccanismo inferiore, per sommare moto orario automatico e moto orario manuale
 
-La figura 3 all'interno del testo degli "Annales" (anzichè in una tavola fuori testo), rappresenta la variante di meccanismo usata per **introdurre una variazione positiva o negativa della rotazione oraria** senza però influenzare il movimento orario di base.
-
-![Figura 3 nel testo](https://github.com/jumpjack/heliostat/assets/1620953/51a99e59-55a9-4272-bbc1-590e049233b9)
-
-Mia versione a colori:
-
-![Figura 3 nel testo - a colori](https://github.com/jumpjack/heliostat/assets/1620953/8525410f-2dee-499e-a6b6-54aae722f29e)
-
-La differenza consiste nell'ultima parte, quella a destra: qui, al contrario dell'implementazione precedente, è presente una "spina" che collega la ruota di uscita **B** all'asse interno **XX'**, con il quale diventa solidale. Non essendo presente la ruota **A1** presente invece sulla sinistra dell'implementazione superiore, risulterà che l'asse uscente **XX'** sarà guidato solo dalla ruota **B**, il cui moto risulta dalla combinazione della rotazione della ruota **A**, guidata dall'orologio, e della ruota conica **D**, solidale con la ruota **C**.
-
-
-## Impieghi del ruotismo satelllite
+## Spiegazione dettagliata
 
 Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli ingranaggi **b** e **c**, il cui asse di rotazione è inserito nella ruota **A** e si muove con essa, ma sono leggermente diversi:
 
