@@ -179,6 +179,7 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 - [Repertorium, vol. I](https://books.google.fr/books?id=RqBFAQAAMAAJ&pg=PT44&dq=Repertorium+Experimental-Physik,+gambey%27s+Fahrenheit+heliostat+Gravesande&hl=it&source=gbs_selected_pages&cad=2#v=onepage&q&f=false): Littrow's Heliostat (p.46-56)
 - [Repertorium, vol. II](https://books.google.fr/books?id=VugTAAAAQAAJ&pg=PA10&dq=Die+gebr%C3%A4uchlichen+Heliostaten+lassen+sich+auf+drei+Hauptarten+zur%C3%BCckf%C3%BChren+die+gew%C3%B6hnlich+die+Namen+Fraunhofer&hl=it&newbks=1&newbks_redir=0&sa=X&ved=2ahUKEwiLqqbnue2AAxXwUKQEHT5iDYkQ6AF6BAgEEAI#v=onepage&q&f=false): Carl Zech, "Gli eliostati"; interessante confronto matematico/geometrico fra tre tipi di eliostati: Fraunhofer, August e Silbermann.
 - "**Le siderostat**", by M.A. Laussedat, in "[Revue des cours scientifiques de la France et de l'étranger](https://babel.hathitrust.org/cgi/pt?id=njp.32101078255211&seq=269&q1=siderostat)". 1867-68, pp.259-264 - How Foucault siderostat was used to observe solar eclipses
+- "[La lunette astronomique horizontale destinée a l'observation du soleil, de ses éclipses et des passages de Vénus sur cet astre](https://babel.hathitrust.org/cgi/pt?id=uc1.b4251028&seq=3&q1=siderostat)" ("Il  telescopio orizzontale astronomico destinato all'osservazione del sole, delle sue eclissi e del passaggio di Venere su di esso", by M.A. Laussedat
 
   
 -Zech, Ueber Heliostaten
