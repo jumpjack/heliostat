@@ -248,6 +248,12 @@ Non-symmetric paraboloid, reflecting parallel rays into "something else" (catena
 ![immagine](https://user-images.githubusercontent.com/1620953/235970330-5cfe554f-a1d5-4675-8156-4102aa1cb969.png) (source: [Sur la théorie des héliostats](https://www.persee.fr/doc/bastr_0572-7405_1884_num_1_1_9783), R. Radau
 "Bulletin astronomique, Observatoire de Paris", 1884,1 pp. 153-160 )
 
+## Documents archives/sources
+- [Hathitrust](https://babel.hathitrust.org/cgi/ls?q1=siderostat+alidada&field1=ocr&a=srchls&ft=ft&lmt=ft)
+- [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k2150772)
+- [Archive.org](https://archive.org/search?query=Revue+des+cours+scientifiques&and%5B%5D=year%3A%5B1860+TO+1875%5D)
+- [Google books](https://www.google.com/search?q=siderostat+foucault&sca_esv=597798541&biw=1309&bih=695&tbs=bkv%3Ap&tbm=bks&sxsrf=ACQVn0-h08jlvimTvnH7IxQjR0iwk_3erA%3A1705064658296&ei=0jihZZzcEYXAi-gP0I6EkAg&ved=0ahUKEwicjZvq9NeDAxUF4AIHHVAHAYIQ4dUDCAk&uact=5&oq=siderostat+foucault&gs_lp=Eg1nd3Mtd2l6LWJvb2tzIhNzaWRlcm9zdGF0IGZvdWNhdWx0SLITUM0GWMMQcAB4AJABAJgBnwGgAfUKqgEDMi45uAEDyAEA-AEBwgIEECEYCogGAQ&sclient=gws-wiz-books)
+  
 
 ## Images
 
