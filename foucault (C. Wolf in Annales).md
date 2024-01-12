@@ -233,7 +233,7 @@ Questa ruota angolare ha quindi una duplice funzione:
 
 <img src="https://github.com/jumpjack/heliostat/assets/1620953/1638f4ea-edc3-4a79-a45f-7759daf5fede" width="600">
 
-L'albero **XX'**  *\[inferiore\]* di fig. 3 *(indicato a sinistra nella figura qui sopra)*, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una a 20 denti e l'altra a  18; quella a 20 denti ingrana con una a 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quando si blocca la pinza **P**; da questo momento in poi, l'asse **XX'** *\[superiore\]* obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a tutti quelli, aggiuntivi o sottrattivi, che gli vengono impressi dalla mano dell'osservatore tramite i sistemi di ingranaggi satellite *\[uno posto accanto al regolatore, e uno nella parte superiore dello strumento\].*
+ L'albero **XX'**  *\[inferiore\]* di fig. 3 *(indicato a sinistra nella figura qui sopra)*, tramite ruote angolari e un'asta verticale, trasmette il moto del regolatore al ruotismo superiore, grazie a una vite senza fine che ingrana con la ruota **K** di fig. 4, col cui asse sono solidali anche altre due ruote dentate, una *a* da 20 denti e l'altra *a1*  da 18; il pignone da 18 denti ingrana con una grande ruota *A1* da 200 denti, che ruota liberamente sull'asse ma che può essere resa solidale col cerchio orario **HH'** quando si blocca la pinza **P**; da questo momento in poi, l'asse **XX'**  __**polare**__ \[quindi quello superiore\] obbedisce sia al movimento che gli viene trasmesso dal regolatore, sia a quello, aggiuntivo o sottrattivo, che gli viene impresso dalla mano dell'osservatore tramite il sistema di ingranaggi satellite.
 
 ------
 
@@ -673,12 +673,12 @@ influencer en rien la vitesse de A, se transmettra à la roue B et à l'arbre XX
 puisquon dispose des frottements exercés sur l'extérieur du manchon et sur les pièces qui se relient à la roue d'angle; 
 onfait tourner D, quand il en est besoin, à l'aide d'une roue d'angle et d'une longue manette dont la poignée se trouve à portée de l'observateur.
 
-L'arbre XX' {fig. 3), au moyen de roues d'angle et d'une tige verticale,
+L'arbre XX' (fig. 3), au moyen de roues d'angle et d'une tige verticale,
 communique son mouvement à une vis tangente qui engrène avec la roue K {fig. 4). 
-Surl'arbre de cettedernière sont également fixés deux pignons,
-l'un a de 20 dents, l'autre a, de 18. Le pignon de 18 engrène avec une grande roue A, 
-de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince P la rend solidaire du cercle horaire H.
-Dès lors l'axe polaire XX' obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, 
+Surl'arbre de cette dernière sont également fixés deux pignons,
+l'un *a* de 20 dents, l'autre *a1*, de 18. Le pignon de 18 engrène avec une grande roue *A1* 
+de 200 dents qui tourne librement sur l'axe mais qui fait corps avec lui lorsque la pince *P* la rend solidaire du cercle horaire *H*.
+Dès lors l'axe polaire *XX'* obéit au mouvement que lui communique le régulateur et à tous ceux, additifs ou soustractifs, 
 
 64
 
