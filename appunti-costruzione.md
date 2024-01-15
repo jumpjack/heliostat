@@ -48,4 +48,32 @@ Al posto di una molla forse si può usare un elastico avvolto intorno all'albero
 
 Come è fissato e come funziona?
 
+-----------
+
+Aggiornamento 15/1/204
+
+Svelato il "mistero" dell'alidada orario sull'asse principale  grazie a una [versione ad altissima risoluzione della tavola 15](https://github.com/jumpjack/heliostat/blob/main/images/tav-15-highres-6000x4000.jpg)https://github.com/jumpjack/heliostat/blob/main/images/tav-15-highres-6000x4000.jpg, di cui qui riporto un dettaglio:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f3bbb7e3-8041-4d60-a148-7f8fd0cd545b)
+
+Quindi le due "viti a battuta" in effetti "battono" contemporaneamente sul gambo verticale **I**, al  quale permettono quindi solo una lieve rotazione, forse di un grado o due, intorno all'asse orario.
+
+Essendo **I** solidale col "cerchio alidada **v**" a causa di questa "spina o vite"...
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/8b06a6c8-ebf0-4b99-8944-d33f35968d6b)
+
+, anche **v** ruoterà leggermente intorno all'asse orario quando si ruota **I**. A cosa serva, ancora non l'ho capito.
+
+Nella stessa immagine si vede un altro particolare interessante, relativo al cerchio **v**:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f775cef2-5de0-44d5-90c9-6b665de490d3)
+
+Esso non "striscia" contro il cerchio **H**, è leggermente staccato, in modo da non causare attrito; solo un anellino intorno all'asse lo tiene separato dal cerchio **H**.
+
+Nota: in questi giorno ho trovato su internet un artigiano/orologiaio che ha deciso di cimentarsi nell'impresa di costruire in metallo una replica di questo eliostato!
+
+io nel frattempo sono passato a un modello più semplice a doppio specchio, inizialmente testato con stampa "casalinga" con stampantina FDM, poi commissionato in stampa onlne su JLPCB.
+
+
+
 
