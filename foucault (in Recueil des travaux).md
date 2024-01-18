@@ -280,18 +280,25 @@ Vista posteriore (supporti "j" per coda "I" della forcella):
 
 Il cerchio di declinazione è diviso in terzi di grado e ha un nonio (\[alidada\]) **e** che indica i minuti. 
 
-Nella parte superiore \[dello strumento\], l'asse orario porta un cerchio **HH** diviso in 24 ore, attorno al quale ruota un cerchio con alidada **VV** sul quale sono presenti due noni che indicano i 2 secondi di tempo; 
+Nella parte superiore \[dello strumento\], l'asse orario porta un cerchio **HH** diviso in 24 ore, attorno al quale ruota un cerchio con alidada **VV** sul quale sono presenti due noni che indicano i 2 secondi di tempo:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a7b4def3-2df2-4306-acdc-d10cb2e31a81)
+
 
 ![Fig. 1,2,3](https://github.com/jumpjack/heliostat/blob/main/images/eliostato-foucault-spiegazione-alidada-orario.png)
 
-questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio **I** che è mantenuto tra due viti di battuta: è possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
+questo cerchio è montato su un manicotto mobile attorno all'asse, la cui posizione viene fissata utilizzando un braccio **I** che è mantenuto tra due viti di battuta:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/fbaa08d1-4bf0-421b-b51e-28dd8f234214)
+
+E' possibile regolare i noni in modo da far coincidere 0h 0m 0s con il cerchio orario quando la riflessione avviene nel piano del meridiano. 
 
 
-Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e un'elica senza fine alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a1** con 18 denti, che ingrana con una ruota **A1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
+Il movimento del motore **R** viene trasmesso tramite un'asta verticale e tramite ingranaggi angolari e unna vite senza fine solidale alla ruota **K**: sull'albero di quest'ultima è montata una ruota **a1** con 18 denti, che ingrana con una ruota **A1** a 200 denti, libera sull'asse, ma che può essere resa solidale con il cerchio orario **H** utilizzando il morsetto **P**: quando quest'ultimo viene serrato, il movimento del motore viene quindi trasmesso all'asse orario e di conseguenza al cerchio di declinazione.
 
 Ci sono altre varie ruote, libere sull'asse; ne indicheremo l'uso più avanti. *\[Nota: più avanti, a p.582, viene spiegato che l'asse orario XX' **non** è solidale con la ruota **r**: gli passa attraverso e si connette con la forcella **g**, la quale invece gira insieme all'asse orario; la ruota **r** gira alla stessa identica velocità di **XX'**, pur non essendo solidale con esso, **solo se nessuno agisce esernamente su un perno** che attiva il meccanismo satellite descritto più avanti, meccanismo che  permette di far avanzare o retrocedere a piacimento la forcella **g** rispetto all'asse orario facendo ruotare la ruota **r** indipendentemente dall'asse orario **XX'**\]*
 
-Il meccanismo **R** che trasmette il movimento all'asse è posto all'interno di una gabbia con pareti di vetro alla base dell'apparecchio: viene messo in movimento da un peso che scende in un pozzo attraverso un foro praticato nella colonna di pietra su cui poggia il siderostato; il movimento viene reso uniforme grazie a un regolatore alette e contrappesi di L. Foucault (pagina 505), che era stato precedentemente utilizzato da M. Eichens su vari strumenti equatoriali e che fornisce un movimento estremamente regolare.
+Il meccanismo **R** che trasmette il movimento all'asse è posto all'interno di una gabbia con pareti di vetro alla base dell'apparecchio: viene messo in movimento da un peso che scende in un pozzo attraverso un foro praticato nella colonna di pietra su cui poggia il siderostato; il movimento viene reso uniforme grazie a un regolatore ad alette e contrappesi di L. Foucault (pagina 505), che era stato precedentemente utilizzato da M. Eichens (*o **W.** Eichens?*) su vari strumenti equatoriali, e che fornisce un movimento estremamente regolare.
 
 Abbiamo già accennato in precedenza a come il movimento di questo meccanismo viene trasmesso all'asse orario.
 
