@@ -395,7 +395,13 @@ Les planches 14 et 15 représentent l'appareil et les détails divers qui s'y ra
 Pl . 14. – Fig. 1 , élévation latérale ; fig. 2 , vue de face du miroir et coupe verticale du support; fig . 3 , coupe du miroir .
 Pl . 15. — Fig. 1 , élévation de la tête de l'axe polaire ; fig. 2 , vue par -dessus de la transmission de mouvement; fig . 3 , coupe et élévation latérales de l'axe polaire, mon trant le mouvement de rappel du cercle de déclinaison ; fig . 4. vue de face de la fourchette directrice ; fig . 5 , vue pardessus du cercle de déclinaison et de la transmission de mouvement; fig. 6, plan général du support du sidérostat .
 Dans ces diverses figures, les mêmes lettres se rapportent aux mêmes objets.
-L'appareil repose sur un socle en fonte porté par trois vis calantes U , L'I " , avecdeux niveaux rectangulaires et mouvement de réglage en azimut, le galet sur lequel s'appuie l'une des vis étant muni d'une coulisse mobile à l'aide d'une vis à tête . N N est un support en fonte mobile autour d'un axe vertical et dont la rotation est facilitée par l'interposition de trois galets G qui roulent en tournant entre la base et le plateau P.
+L'appareil repose sur un socle en fonte porté par trois vis calantes U , L'I " , avecdeux niveaux rectangulaires et mouvement de réglage en azimut, le galet sur lequel s'appuie l'une des vis étant muni d'une coulisse mobile à l'aide d'une vis à tête . N N est un support en fonte mobile autour d'un axe vertical et dont la rotation est facilitée par
+
+---------
+
+p.581
+
+l'interposition de trois galets G qui roulent en tournant entre la base et le plateau P.
 A l'autre extrémité se trouve le moteur au - dessus duquel est une pièce horizontale FF portée par trois colonnes 0 et sur laquelle est fixée la monture qui porte l'axe polaire.
 
 M est le miroir de 0,30m  de diamètre sur 0,05 m d'épaisseur ; il a été fondu à Saint Gobain et travaillé par M. Ad. Martin ; il est fixé dans le barillet Q à l'aide de trois taquets extérieurs t contre lesquels l'appuie un ressort à trois branches h . Le miroir est porté par l'axe horizontal xx au sommet du montant N : la queue directrice est solidement fixée à la partie inférieure de ce barillet, elle est constituée par un tube creux.
@@ -406,6 +412,10 @@ Le cercle de déclinaison est divisé en tiers de degré et porte un vernier **e
 Diverses autres roues existent encore, folles sur l'axe ; nous en indiquerons l'usage plus loin .
 Le rouage R qui communique le mouvement à l'axe est placé sous une cage à parois de glace dans le pied même de l'instrument : il est mis en mouvement par un poids qui descend dans un puits à travers un trou percé dans le pilier de pierre sur lequel reposeles idérostat ; le mouvement est rendu uniforme à l'aide d'un régulateur à ailettes et à contrepoids de L. Foucault ( page 505) , qui avait été appliqué antérieurement par M. Eichens à divers équatoriaux et qui donne un mouvement d'une régularité parfaite :
 nous avons dit plus haut comment le mouvement de ce rouage était communiqué à l'axe horaire .
+
+---------
+
+p.582
 
 Il était nécessaire pour l'usage du sidérostat de disposer de moyens de rappel pour faire varier de petites quantités l'angle horaire ou la distance polaire, sans arrêter la marche du rouage d'horlogerie. Ce résultat a été obtenu par l'emploi d'un rouage satellite que l'on voit en élévation en 1 , p ( fig . 1 , pl. 14) , et qui est semblable à celui que M. Eichens adapte depuis longtemps aux équatoriaux. Ce rouage est mů à l'aide d'une manette q dont la poignée est à portée de l'observateur.
 Il fallait , d'autre part, produire , à l'aide d'une manette immobile, un mouvement de rappel du cercle de déclinaison placé à l'extrémité d'un are mo bile, sans altérer le mouvement de cet axe . L. Foucault avait indiqué que la solution devait en être cherchée dans l'emploi d'un rouage satellite, mais il n'avait donné ni laissé aucune explication du système qu'il comptait appliquer. La disposition imaginée et appliquée par M. Eichens est indiquée figure 1 , planche 14 , et figure 3, planche 15 : dans la coupe ( fig . 3, pl. 15) les pièces qui sont solidaires sont indiquées par des hachures dirigées dans le même sens et celles qui sont indépendantes présentent des hachures en sens contraire. Nous n'avons pas à insister sur le fonctionnement de ce dispositif qui satisfait aux conditions imposées et nous nous bornerons à indiquer les données numériques qui permettent de se rendre compte des effets qu'il produit.
