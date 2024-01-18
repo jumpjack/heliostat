@@ -251,8 +251,6 @@ dall'interposizione di tre ruote **G** che ruotano tra la base e la piastra **P*
 Fig.2, Planche 14 (Figura 2, Tavola 14)
 
 
-
-
 All'estremità opposta si trova il motore sopra il quale si trova una parte orizzontale **FF** sostenuta da tre colonne **O** e sulla quale è fissato il telaio che regge l'asse polare.
 
 ![Figura 1, tavola 14](https://github.com/jumpjack/heliostat/assets/1620953/3295790e-c857-4e42-b33b-468b5342d355)
@@ -269,16 +267,20 @@ L'asse orario **XX'**, in acciaio, è mantenuto in una posizione fissa grazie a 
 
 ![Fig. 1,2,3](https://github.com/jumpjack/heliostat/blob/main/images/tav14-fig1,2,3.png)
 
-Ipotsi di ricostruzione 3d (dubbi sull'alidada/nonio **e**):
+*(Ipotesi di ricostruzione 3d (dubbi sull'alidada **e** su cui è disegnato il nonio))*
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/ab078b9e-b735-4455-accc-8e3c7f8659bb)
 
-Vista posteriore (supporti "j" per coda "I" della forcella):
+*(Vista posteriore (supporti "j" per coda "I" della forcella):)*
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/4a85415d-b9ea-4978-ab22-9fdb6e93c7e5)
 
 
-Il cerchio di declinazione è diviso in terzi di grado e ha un nonio (\[alidada\]) **e** che indica i minuti. 
+Il cerchio di declinazione è diviso in terzi di grado e ha un nonio **e** che indica i minuti:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/aa786556-f1b3-4ace-851a-1dd760a03c68)
+
+
 
 Nella parte superiore \[dello strumento\], l'asse orario porta un cerchio **HH** diviso in 24 ore, attorno al quale ruota un cerchio con alidada **VV** sul quale sono presenti due noni che indicano i 2 secondi di tempo:
 
@@ -400,7 +402,7 @@ M est le miroir de 0,30m  de diamètre sur 0,05 m d'épaisseur ; il a été fond
 L'axe horaire XX' , en acier , est maintenu dans une position invariable dans des coussinets fixés aux montants TT ; cet axe se prolonge par une pièce en bronze g qui fait corps avec lui et qui sert de support au cercle de déclinaison dd qui est réduit à un peuplus de la moitié pour ne pas gêner le miroir dans son mouvement; il porte, suivant un diamètre, à l'aide de deux colliers j , la queue I de la fourchetle directrice en aluminium
 f qui va guider la tige directrice du miroir S. La liaison de ces deux pièces se fait à l'aide du manchon m que l'on a fait assez long , mais dont la surface frottante est réduite à deux colliers conservés à ses extrémités.
 
-Le cercle de déclinaison est divisé en tiers de degré et porte un vernier e qui donnela minute. A la partie supérieure, l'axe horaire porte un cercle HH divisé en 24 heures, concentriquement auquel tourne un cercle alidade VV sur lequel se trouvent deux verniers donnant les 2 secondes de temps ; ce cercle est monté sur un manchon mobile autour de l'axe dont on fixe la position à l'aide d'un bras I qui est maintenu entre deux vis butantes : on peut régler les verniers de manière à faire marquer On Om 0 ' au cercle horaire lorsque la réflexion se fait dans le plan du méridien . Le mouvement du moteur R est communiqué par une tige verticale et par l'intermédiaire de roues d'angle et d'une vis sans fin à la roue K : sur l'arbre de celle -ci est monté un pignon a , de 18 dents, qui engrène avec une roue A , de 200 dents, folle sur l'axe , mais pouvant être rendue soli daire du cercle horaire H à l'aide de la pince P : lorsque celle -ci est serrée, le mouvement du moteur est donc transmis à l'axe horaire et par suite au cercle de déclinaison .
+Le cercle de déclinaison est divisé en tiers de degré et porte un vernier **e** qui donne la minute. A la partie supérieure, l'axe horaire porte un cercle HH divisé en 24 heures, concentriquement auquel tourne un cercle alidade VV sur lequel se trouvent deux verniers donnant les 2 secondes de temps ; ce cercle est monté sur un manchon mobile autour de l'axe dont on fixe la position à l'aide d'un bras I qui est maintenu entre deux vis butantes : on peut régler les verniers de manière à faire marquer 0n 0m 0'' au cercle horaire lorsque la réflexion se fait dans le plan du méridien . Le mouvement du moteur R est communiqué par une tige verticale et par l'intermédiaire de roues d'angle et d'une vis sans fin à la roue K : sur l'arbre de celle -ci est monté un pignon a , de 18 dents, qui engrène avec une roue A , de 200 dents, folle sur l'axe , mais pouvant être rendue soli daire du cercle horaire H à l'aide de la pince P : lorsque celle -ci est serrée, le mouvement du moteur est donc transmis à l'axe horaire et par suite au cercle de déclinaison .
 Diverses autres roues existent encore, folles sur l'axe ; nous en indiquerons l'usage plus loin .
 Le rouage R qui communique le mouvement à l'axe est placé sous une cage à parois de glace dans le pied même de l'instrument : il est mis en mouvement par un poids qui descend dans un puits à travers un trou percé dans le pilier de pierre sur lequel reposeles idérostat ; le mouvement est rendu uniforme à l'aide d'un régulateur à ailettes et à contrepoids de L. Foucault ( page 505) , qui avait été appliqué antérieurement par M. Eichens à divers équatoriaux et qui donne un mouvement d'une régularité parfaite :
 nous avons dit plus haut comment le mouvement de ce rouage était communiqué à l'axe horaire .
