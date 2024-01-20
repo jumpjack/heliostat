@@ -111,6 +111,39 @@ https://www.virtualtelescope.eu/2016/09/29/montatura-del-telescopio/
 
 If you use equatorial mount, where the telescope rotates around an axis pointed to North, declination changes will make telescope move toward North or South, Hour Angle changes will make it rotate clockwise or counterclockwise, or accelerate/decelerate w.r.t its 24h rotation.
 
+#### Turning math into mechanics
+
+The declination change along the year follows this plot:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/448c40a1-f484-432c-99b0-f3091b3ddbd5)
+
+It's easy to implement this plot by converting it into polar coordinates to get a cam:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/399f67e0-00a7-41e9-8e75-8e1f94625e72)
+
+The hour angle along the year is much more complex:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f9c90fa2-228f-476f-8e93-d739e0632318)
+
+It is possible to obtain this profile combining the two factors which contribute to Equation Of time, using 2 cams:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ed0cf259-6eca-4925-803b-1e0973c251e4) 
+
+or you can combine the two contributions into a sinlgle cam; there are two possibilities: the "kidney" cam, and the Greubel/Forsey cam:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e8611117-980d-4b93-b002-61d8f6a6e41c)
+
+Applying a rotating follower to a declination cam and another rotating follower to kidney cam, you get two mechanisms which produce the angular changes for declination and hour angle, i.e. you turn each constant angular rotation into an oscillating movement, which combined make the sun pointer follow the analemma path around the polar axis:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/f80adfd3-417b-4664-b6ba-c019e42a2b8f)
+
+
+
+
+
+
+
+
 An heliostat could be seen as a peculiar type of polar-mounted telescope, which always points the same "star": the Sun; to properly follow the sun all along the year, rotating the mirror driver around polar axis one turn every 24 hours is not enough: corrections to sun declination and hour angle must be added to the instrument.
 
 One of Foucault's heliostat designs apparently could do the trick, being it equipped with two gears which allow external inputs:
