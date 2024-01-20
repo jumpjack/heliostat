@@ -97,9 +97,21 @@ Seen from ground, with observer always in same position along the year, and sun 
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/e0d2a736-d71c-47f1-a27a-036ef048700d)
 
-In Alt/Az coordinates, analemma has an "8" shape.
+Analemma has an "8" shape, both if plotted in Alt/Az coordinates and Declination/Hour coordinates; the big difference is that if plotted in Alt/Az, the curve is different for any different latitude of the observer; instead, if plotted in terms of Declination and Hour Angle changes, the curve is costant.
 
-To properly follow the sun all along the year, rotating a mirror around an axis one turn every 24 hours is not enough: corrections to sun declination and hour angle must be added to the instrument.
+Above plot is in Declination/HourAngle coordinates; following one is in Altitude/Azimuth coordinates:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/27a1c074-1acc-43e0-be95-1be0aef33ddd)
+
+How does this apply to real life? You must consider the 2 possible mounts of telescopes:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/ac803e27-2808-4fb1-9151-2e3918815ec7)
+
+https://www.virtualtelescope.eu/2016/09/29/montatura-del-telescopio/
+
+If you use equatorial mount, where the telescope rotates around an axis pointed to North, declination changes will make telescope move toward North or South, Hour Angle changes will make it rotate clockwise or counterclockwise, or accelerate/decelerate w.r.t its 24h rotation.
+
+An heliostat could be seen as a peculiar type of polar-mounted telescope, which always points the same "star": the Sun; to properly follow the sun all along the year, rotating the mirror driver around polar axis one turn every 24 hours is not enough: corrections to sun declination and hour angle must be added to the instrument.
 
 One of Foucault's heliostat designs apparently could do the trick, being it equipped with two gears which allow external inputs:
 
