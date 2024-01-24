@@ -7,7 +7,7 @@ Immagini ad alta risoluzione prese da [questa edizione](https://gallica.bnf.fr/a
 
 
 ------------- pagina 437 -----------
-## TEORIA E DESCRIZIONE DEL MODERATORE ISOCHRONO A FORZA CENTRIFUGA
+## TEORIA E DESCRIZIONE DEL MODERATORE ISOCRONO A FORZA CENTRIFUGA
 
 Come punto di partenza, adotto, con poche variazioni, il moderatore di Watt (fig. 1, tav. 16), e lo collego a un meccanismo il cui scopo principale è mantenere costante la velocità in tutte le posizioni del sistema.
 
