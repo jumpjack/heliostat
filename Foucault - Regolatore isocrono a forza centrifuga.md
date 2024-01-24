@@ -11,6 +11,8 @@ Immagini ad alta risoluzione prese da [questa edizione](https://gallica.bnf.fr/a
 
 Come punto di partenza, adotto, con poche variazioni, il moderatore di Watt (fig. 1, tav. 16), e lo collego a un meccanismo il cui scopo principale è mantenere costante la velocità in tutte le posizioni del sistema.
 
+![fig. 1, tav. 16](https://github.com/jumpjack/heliostat/blob/main/images/tav16-fig.1.jpg?raw=true)
+
 L'albero verticale SB fornisce l'attacco ai due bracci SM, SM', sospesi nello stesso punto e che portano alle loro estremità le masse M e M'. Nel mezzo dei due bracci si articolano le estremità dei due lati uguali che
 
 ------------- pagina 438 -----------
@@ -42,6 +44,8 @@ Ora, moltiplicare g per cos α, in pratica, significa agire verticalmente sulle 
 Non resta che dimostrare che, in effetti, il meccanismo precedentemente descritto porta identicamente a questo risultato.
 
 Per aiutare alla dimostrazione, riduciamo l'apparecchio ai suoi elementi geometrici e conserviamo nella nuova figura le stesse lettere della figura precedente (fig. 2).
+
+![fig. 2](https://github.com/jumpjack/heliostat/blob/main/images/tav16-fig.2.jpg?raw=true)
 
 Prendiamo AC = BS = SM = l; chiamiamo φ l'angolo BAC, AB diventa l * cos φ
 
