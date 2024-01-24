@@ -27,13 +27,14 @@ La barretta AC ha una lunghezza arbitraria che, per maggiore semplicità, si ass
 
 Come il semplice pendolo circolare, anche il moderatore di Watt, avendo i suoi due bracci sospesi nello stesso punto, compie la sua intera rivoluzione in un tempo che ha l'espressione:
 
-t = 2 * pi * RADQ(l * cos (α) / g)
+$t = 2 \pi \sqrt{\frac{l \cdot \cos(\alpha)}{g}}$
 
 ------------- pagina 439 -----------
 
 t, il tempo della rivoluzione, dipende quindi dall'angolo α; ma se anche il denominatore g fosse moltiplicato per cos α, la formula si ridurrebbe a
 
-t = 2 * pi * RADQ(l/g)
+
+$t = 2 \pi \sqrt{\frac{l}{g}}$
 
 e in questo caso, essendo t indipendente da α, l'isocronismo sarebbe realizzato.
 
@@ -62,7 +63,7 @@ Ma affinché la retta AC sia sollecitata da una forza costante P
 
 e lungo la direzione variabile AC, è ovvio che il punto A debba essere sollecitato nella direzione costante AB dalla forza variabile P * cos φ.
 
-Se la retta AC avesse una lunghezza n diversa da l, si troverebbe allo stesso modo che la forza applicata in A dovrebbe avere il valore P * (n/l) cos φ.
+Se la retta AC avesse una lunghezza n diversa da l, si troverebbe allo stesso modo che la forza applicata in A dovrebbe avere il valore $P * \frac{n}{l} cos \phi$.
 
 Quindi, qualunque sia la lunghezza della retta AC, è necessario che la forza applicata alla base di questa retta e perpendicularmente all'asse sia uguale al peso delle masse moltiplicato per la proiezione orizzontale di questa retta rapportata alla lunghezza dei bracci.
 
@@ -71,14 +72,13 @@ Nell'esecuzione rappresentata nella figura 1, questa pressione è comunicata dal
 Incliniamo i bracci del modulatore sotto l'angolo di 45°, che sarà nell'applicazione la posizione più favorevole alla funzione del regolatore (fig. 1); prendiamo su una verticale dal punto A un punto fisso F a una distanza arbitraria AF, e da questo punto tracciamo una retta in B, otteniamo un angolo ω = AFB che determina l'inclinazione da dare al braccio obliquo Fu;
 
 infine, essendo l' e l'' le lunghezze dei due bracci FA e Fu del leveraggio piegato,
-fissiamo in u una massa di un peso pari a P/(sin ω) * (l'/l'') * cos φ, la pressione orizzontale trasmessa in A avrà ovviamente il valore P * cos φ.
+fissiamo in u una massa di un peso pari a $\frac{P}{sin \omega}  \frac{l'}{l''}  cos \phi$, la pressione orizzontale trasmessa in A avrà ovviamente il valore P * cos φ.
 
 Ma è ancora necessario giustificare la scelta dell'angolo ω, che ha appunto lo scopo di fare in modo che, nei cambiamenti di posizione del sistema, la componente trasmessa in A dal braccio verticale conservi approssimativamente questo valore variabile P * cos φ.
 
-Cerchiamo quindi il valore da dare all'angolo ω dell'inclinazione di Fu sul prolungamento di FA, in modo che la componente utile del peso u vari come la distanza AB. Questa condizione si esprime ponendo:
+Cerchiamo quindi il valore da dare all'angolo x dell'inclinazione di Fu sul prolungamento di FA, in modo che la componente utile del peso u vari come la distanza AB. Questa condizione si esprime ponendo:
 
-d(ω)/tan(ω) = (d sin (x)) / sin(x) = dx / tan(x)
-
+$$\frac{d\omega}{tan(\omega)} = \frac{d sin (x)}{sin(x)}  = \frac{dx}{tan(x)}$$
 
 Ma, poiché AF e Fu sono solidali,
 
