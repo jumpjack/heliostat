@@ -89,3 +89,15 @@ Provo 2  misure per i diametri dei buchi per valutare in quale buco il cuscinett
 - rinforzare l'attacco del perno alla forcella - ok
 - fare pignone più spesso - ok
 - aggiungere ruota liscia per regolazione manuale declinazione e fissaggio declinazione - ok
+
+
+----------
+
+12/2/2024
+
+Mi sono reso conto che la stampa fatta su JLCPCB è completamente inutile, perchè pensata per collegarsi direttamente al timer da 24 ore; però questo timer è puntato verso il basso, quindi guardando verso il timer, cioè verso nord, il timer gira in senso orario; ma guardando verso nord.... il sole gira in senso ANTIorario, visto che sorge a EST! Quindi il meccanismo va completamente ripensato, introducendo un ingranaggio invertitore, il che complica moltissimo le cose.
+
+Intanto, sto provando a realizzare il meccanismo di Foucault usando ingranaggi comprati, perchè sicuramente più precisi anche se più piccoli; ho comprato un sacchetto di ingranaggi casuali, venduto a pochi euro, sperando di riuscire a trovare la combinazione giusta di denti; purtroppo ingranaggi da 200 denti non li fa nessuno, ma ingegnandomi un po', ho scoperto che in realtà forse i 200 denti non sono così necessari: penso che le ruote debbano essere così larghe solo per poter contenere il meccanismo satellite; ma in realtà le ruote forse possono essere anche di larghezza qualunque, purchè la ruota A abbia un braccio aggiuntivo a cui attaccare i satelliti, e purchè ovviamente il supporto sia abbastanza lontano da permettere al tutto di ruotare senza sbattere.
+
+In questo caso l'unica cosa da stampare è il supporto per gli ingranaggi, ma la cosa è comunque complicata perchè bisogna assicurarsi che i perni non abbiano troppo gioco e che soprattutto gli interassi tra gli ingranaggi siano giusti; l'accoppiamento a-A e a1-A1 è molto complicato perchè gli interassi sarebbero due ma deve essere solo uno, quindi bisogna giocare sulle tolleranze di accoppiamento degli ingranaggi; le ruote che ho comprato sembrano avere modulo 0.5, quindi denti da 2mm, il che significa che devo giocare su una tolleranza di 0.5mm per permettere entrambi gli accoppiamenti, e con la mia stampante 3d da due soldi è molto difficile.
+Però ci sono riuscito: ci sono volute almeno 5 stampe diverse, diciamo 15 contando anche i pezzi più piccoli, ma alla fine a-A e a1-A1 accoppiano come si deve, anche usando un supporto finale unico (inizialmente l'ho fatto "a compasso", giusto per verificare se l'accoppiamento era possibile senza fare 80 prove). Scorrono anche molto agevolmente senza attriti.
