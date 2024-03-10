@@ -30,6 +30,7 @@
       - [Arduino Pellco-D library documentation](https://hackaday.io/project/183986-controlling-a-cctv-camera-with-arduino/log/203267-understanding-how-it-works#discussion-list)
       - The commands: use  **Camera1.send_command(SET_PAN, i**) and **Camera1.send_command(SET_TILT , i)**; SET_PAN is 0x4B, SET_TILT is 0x4D, "i" is any value between 0 and 35999  (35999?359.99 degrees).
       - [MAX485 wokwi simulator](https://wokwi.com/projects/388502574445130753)
+      - [MAX485 definition for WOKWI](https://github.com/iconnor/max485-chip)
       
 #### Spring loaded
 - See section dedicated to ancient siderostats/heliostats of 1800s'
