@@ -21,7 +21,8 @@
 - Pan-tilt ready-made head with Pelco-D control over RJ485
     - [Pan-tilt head supporting Pelco-D](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4) (40€)
     - RJ485 cable
-    - RS232 - RS485 adapter: [1](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (13€), [2](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (14€)
+    - Cabled RS232 - RS485 adapter: [1](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (13€), [2](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (14€)
+    - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
     - Source code
       - [Arduino Pelco-D Library source code](https://github.com/Pixelbo/Pelco_And_Arduino/)
