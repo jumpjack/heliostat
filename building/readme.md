@@ -10,15 +10,20 @@
 
 #### Electronic
 - Pan-tilt servo bracket with ESP32 driver
-    - 1 pan-tilt brackets
-    - 2 servos
-    - 1 ESP32
+    - 1 pan-tilt brackets ([with servos](https://www.amazon.it/SDENSHI-Pan-Tilt-Plastica-Assemblato-Servo/dp/B08CHJQVZB) (17€) , [without servos](https://www.amazon.it/elechawk-Staffa-Montaggio-Inclinazione-panoramica/dp/B07PQ12TXS) (15€))
+    - 2 [servos](https://www.amazon.it/s?k=servo&__mk_it_IT=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=FXL0JD3NAMXC&sprefix=servo%2Caps%2C100&ref=nb_sb_noss_1) - 10-100€
+    - 1 [ESP32](https://amzn.to/38aEtli)
+    - ESP32Servo Library by Kevin Harrington (check inside IDE)
     - Source code
+        -  [Project 1 (randomnerdtutorials)](https://randomnerdtutorials.com/esp32-cam-pan-and-tilt-2-axis/)
+        -  [Project 2 (Instructable)](https://www.instructables.com/DIY-Pan-Tilt-Control-Using-Servos-for-ESP32-Cam-Wi/) ([source code](https://github.com/un0038998/PanTiltCamera/blob/main/Pan_Tilt_Camera/Pan_Tilt_Camera.ino), [Github repo](https://github.com/un0038998/PanTiltCamera))
 - Pan-tilt ready-made head with Pelco-D control over RJ485
-    - Pan-tilt head supporting Pelco-D
+    - [Pan-tilt head supporting Pelco-D](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4) (40€)
     - RJ485 cable
-    - ESP32/Arduino
+    - [ESP32](https://amzn.to/38aEtli)/Arduino
     - Source code
+      - [Arduino Pelco-D Library source code](https://github.com/Pixelbo/Pelco_And_Arduino/)
+      - [Arduino Pelco-D library for installation in IDE](https://www.arduino.cc/reference/en/libraries/pelco_and_arduino/)
       
 #### Spring loaded
 - See section dedicated to ancient siderostats/heliostats of 1800s'
