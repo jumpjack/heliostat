@@ -19,7 +19,7 @@
         -  [Project 2 (Instructable)](https://www.instructables.com/DIY-Pan-Tilt-Control-Using-Servos-for-ESP32-Cam-Wi/) ([source code](https://github.com/un0038998/PanTiltCamera/blob/main/Pan_Tilt_Camera/Pan_Tilt_Camera.ino), [Github repo](https://github.com/un0038998/PanTiltCamera))
         -  Note: above source codes are written with an ESP32-CAM in mind, you will have remove parts related to camera if you are using a simple ESP32
 - Pan-tilt ready-made head with Pelco-D control over RS485
-    - [Pan-tilt head supporting Pelco-D](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4) (40€)
+    - Pan-tilt head supporting Pelco-D ([27€](https://www.amazon.it/gp/product/B07G8WK3HS), [40€](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4))
     - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X) (10€)
     - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
