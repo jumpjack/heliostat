@@ -20,9 +20,7 @@
         -  Note: above source codes are written with an ESP32-CAM in mind, you will have remove parts related to camera if you are using a simple ESP32
 - Pan-tilt ready-made head with Pelco-D control over RS485
     - [Pan-tilt head supporting Pelco-D](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4) (40€)
-    - RJ485 cable
-    - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X)
-    - Cabled RS232 - RS485 adapter: [1](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (13€), [2](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (14€)
+    - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X) (10€)
     - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
     - Source code
