@@ -33,6 +33,9 @@
     - [MAX485 wokwi simulator](https://wokwi.com/projects/388502574445130753)
     - [Another MAX485 WOKWI simulator](https://wokwi.com/projects/377014769065300993)
     - [MAX485 definition for WOKWI](https://github.com/iconnor/max485-chip)
+    - Windows software (requires [USB/RS485 adapter](https://www.amazon.it/Waveshare-USB-RS485-Converter-Lightningproof/dp/B0B87YJLJQ/))
+        - [Description](https://learn.linksprite.com/project/bracket/)
+        - Download [KMTronic_PelcoD_Tester](https://deepcam123.s3.amazonaws.com/KMTronic_PelcoD_Tester/KMTronic_PelcoD_Tester.zip) ([mirror](https://github.com/jumpjack/heliostat/blob/main/building/KMTronic_PelcoD_Tester.zip)) , no source code
  
       
       
