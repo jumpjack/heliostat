@@ -18,20 +18,24 @@
         -  [Project 1 (randomnerdtutorials)](https://randomnerdtutorials.com/esp32-cam-pan-and-tilt-2-axis/)
         -  [Project 2 (Instructable)](https://www.instructables.com/DIY-Pan-Tilt-Control-Using-Servos-for-ESP32-Cam-Wi/) ([source code](https://github.com/un0038998/PanTiltCamera/blob/main/Pan_Tilt_Camera/Pan_Tilt_Camera.ino), [Github repo](https://github.com/un0038998/PanTiltCamera))
         -  Note: above source codes are written with an ESP32-CAM in mind, you will have remove parts related to camera if you are using a simple ESP32
-- Pan-tilt ready-made head with Pelco-D control over RJ485
+- Pan-tilt ready-made head with Pelco-D control over RS485
     - [Pan-tilt head supporting Pelco-D](https://www.amazon.it/VBESTLIFE-Installazione-Supporto-Telecamera-Controllo/dp/B07NPGG5Z4) (40€)
     - RJ485 cable
     - Cabled RS232 - RS485 adapter: [1](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (13€), [2](https://www.amazon.it/DSD-TECH-SH-B13-Adattatore-morsettiera/dp/B082SC4CCW) (14€)
     - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
     - Source code
-      - [Arduino Pelco-D Library source code](https://github.com/Pixelbo/Pelco_And_Arduino/)
-      - [Arduino Pelco-D library for installation in IDE](https://www.arduino.cc/reference/en/libraries/pelco_and_arduino/)
-      - [Arduino Pellco-D library documentation](https://hackaday.io/project/183986-controlling-a-cctv-camera-with-arduino/log/203267-understanding-how-it-works#discussion-list)
-      - The commands: use  **Camera1.send_command(SET_PAN, i**) and **Camera1.send_command(SET_TILT , i)**; SET_PAN is 0x4B, SET_TILT is 0x4D, "i" is any value between 0 and 35999  (35999?359.99 degrees).
-      - [MAX485 wokwi simulator](https://wokwi.com/projects/388502574445130753)
-      - [Another MAX485 WOKWI simulator](https://wokwi.com/projects/377014769065300993)
-      - [MAX485 definition for WOKWI](https://github.com/iconnor/max485-chip)
+        -   [Project 1 - "Pelco_And_Arduino"](https://github.com/Pixelbo/Pelco_And_Arduino/)
+            - [Arduino Pelco-D library for installation in IDE](https://www.arduino.cc/reference/en/libraries/pelco_and_arduino/)
+            - [Arduino Pellco-D library documentation](https://hackaday.io/project/183986-controlling-a-cctv-camera-with-arduino/log/203267-understanding-how-it-works#discussion-list)
+            - The commands: use  **Camera1.send_command(SET_PAN, i**) and **Camera1.send_command(SET_TILT , i)**; SET_PAN is 0x4B, SET_TILT is 0x4D, "i" is any value between 0 and 35999  (35999?359.99 degrees).
+        -  [Project 2 - "Arduino and Pelco-D"](https://github.com/cakoch10/Arduino-and-PelcoD/blob/master/M1_D_controller.ino)
+        -  [Project 3 - "Pelco-D-PTZ-Camera-Control"](https://github.com/eziosoft/Pelco-D-PTZ-Camera-Control)
+    - [MAX485 wokwi simulator](https://wokwi.com/projects/388502574445130753)
+    - [Another MAX485 WOKWI simulator](https://wokwi.com/projects/377014769065300993)
+    - [MAX485 definition for WOKWI](https://github.com/iconnor/max485-chip)
+ 
+      
       
 #### Spring loaded
 - See section dedicated to ancient siderostats/heliostats of 1800s'
