@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+	<script>
+	var CameraIPaddress = "192.168.1.239";
+	var CameraPort = "2239";
+	var CameraPTZ_URL_PATTERN = "/decoder_control.cgi?command=#COMMAND#&degree=#DEGREES#&user=#USER#&pwd=#PASS#";
+	var CameraPTZ_UP = "0";
+	var CameraPTZ_DOWN = "2";
+	var CameraPTZ_CW = "6"; // Ruota in senso orario
+	var CameraPTZ_CCW = "4"; // Ruota in senso antiorario
+	var CameraRESET_TIME = 10000; // Secondi per passare da un estremo all'altro
+	var CameraCENTER_TIME = 5000; // Secondi necessari per centratura
+	var CamURL_BASE = "http://" + CameraIPaddress + ":" + CameraPort;
+	var CameraUser = "eliostato";
+	var CameraPwd = "eliostato";
+
+	CamURL_BASE = CamURL_BASE + CameraPTZ_URL_PATTERN;
+  CamURL_BASE = CamURL_BASE.replace("#USER#",CameraUser);
+  CamURL_BASE = CamURL_BASE.replace("#PASS#",CameraPwd);
+
+	function InitCamera() {
+	  document.getElementById('txtOutput').value = "Reset telecamera; fondo scala senso orario, attendere " + CameraRESET_TIME/1000 + " secondi...";
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CW, "300"); // Fondo scala a destra
+    setTimeout(function () {
+      // Aspetta che la telecamera arrivi a fondo scala e poi la sposta al centro:
+  		document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; CENTRATURA ORIZZONTALE, attendere prego...";
+      SendCommandToCam(CamURL_BASE, CameraPTZ_CCW, "120");
+      setTimeout(function () {
+        document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; FONDO SCALA IN ALTO, attendere " + CameraCENTER_TIME/1000 + " secondi...";
+        SendCommandToCam(CamURL_BASE, CameraPTZ_UP, "200"); // Fondo scala in alto
+        setTimeout(function () {
+          document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; CENTRATURA ORIZZONTALE, attendere prego...";
+          SendCommandToCam(CamURL_BASE, CameraPTZ_DOWN, "80"); // Orizzontale
+					setTimeout(function () {
+	          document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nCentratura completata. Premere pulsante START";
+        	}, CameraCENTER_TIME);
+        }, CameraCENTER_TIME);
+      }, CameraCENTER_TIME);
+    }, CameraRESET_TIME);
+
+	}
+
+
+	function sendCommand(CMD) {
+	if (CMD=="UP") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_UP, "10");
+	}
+	if (CMD=="DOWN") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_DOWN, "10");
+	}
+	if (CMD=="LEFT") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CCW, "10");
+	}
+	if (CMD=="RIGHT") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CW, "10");
+	}
+
+	if (CMD=="AUTO") {
+		InitCamera();
+	}
+
+	if (CMD=="UP_SMALL") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_UP, "3");
+	}
+	if (CMD=="DOWN_SMALL") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_DOWN, "3");
+	}
+	if (CMD=="LEFT_SMALL") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CCW, "3");
+	}
+	if (CMD=="RIGHT_SMALL") {
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CW, "3");
+	}
+	}
+
+	function SendCommandToCam(CamURL, CamCommand, CommandDegrees) {
+	  CamURLfinal = CamURL.replace("#COMMAND#",CamCommand)
+	  CamURLfinal = CamURLfinal.replace("#DEGREES#",CommandDegrees);
+	  console.log("Comando: " + CamURLfinal);
+	  window.open(CamURLfinal, "CamResponseWindow");
+	}
+
+	</script>
+  </head>
+  <body>
+<table border=2>
+<tr height="100"> <td width="100"></td> <td width="100"></td> <td  align="center" width="100" align="center"><a href="#" onclick="sendCommand('UP')"> <img src="UP.jpg" width="100" "height="100"></a></td> <td  width="100"></td> <td  width="100"></td> <td ><input type="submit" value="auto" onclick=sendCommand("AUTO");></td></tr>
+<tr height="100"><td></td><td></td><td align="center"><a href="#" onclick="sendCommand('UP_SMALL')"> <img src="UP.jpg" width="40" "height="40"></a></td><td></td><td></td><td></td></tr>
+<tr height="100"><td  align="center">
+<a href="#" onclick="sendCommand('LEFT')"> <img src="LEFT.jpg" width="100" "height="100"></a></td>
+<td  align="center">
+<a href="#" onclick="sendCommand('LEFT_SMALL')"> <img src="LEFT.jpg" width="40" "height="40"></a></td>
+<td  align="center"><font size=7>ipSun</font></td>
+<td  align="center">
+<a href="#" onclick="sendCommand('RIGHT_SMALL')"> <img src="RIGHT.jpg" width="40" "height="40"></a></td>
+<td  align="center">
+<a href="#" onclick="sendCommand('RIGHT')"> <img src="RIGHT.jpg" width="100" "height="100"></a></td><td></td></tr>
+<tr height="100"><td></td><td></td><td align="center">
+<a href="#" onclick="sendCommand('DOWN_SMALL')"> <img src="DOWN.jpg" width="40" "height="40"></a></td><td></td><td></td><td></td></tr>
+<tr height="100"><td></td><td></td><td align="center">
+<a href="#" onclick="sendCommand('DOWN')"> <img src="DOWN.jpg" width="100" "height="100"></a></td><td></td><td></td><td></td></tr>
+</table>
+<textarea cols="120" rows="10" width="500" height="150" id="txtOutput"></textarea>
+  </body>
+</html>
