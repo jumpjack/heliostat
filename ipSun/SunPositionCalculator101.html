@@ -1,0 +1,333 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!--
+v. 1.0.1: Corretto bug di data di test non impostabile
+v. 1.0.0: Prima versione funzionante (=0.0.6)
+V. 0.0.6: Implementato controllo verticale e disegno specchio di destra.
+v. 0.0.5: Funziona controllo azimuth telecamera con orari demo
+v. 0.0.4: Azimuth specchio funziona
+// Range telecamera nera:
+80° sopra
+10° sotto
+120° sinistra
+120° destra
+-->
+<html>
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1250">
+  <meta name="generator" content="PSPad editor, www.pspad.com">
+  <title></title>
+	<script src="suncalc-master/suncalc.js" type="text/javascript"></script>
+
+<script>
+	var notte;
+	var PrevAz=0;
+	var PrevAlt=0;
+	var TargetAzimuth = 124; // 180 = South
+	var TargetAlt = 0;
+	var MirrorAzimuth = 0;
+	var MirrorAlt=0;
+	var SunAzimuth=0;
+	var SunAltitude=0;
+	var CameraCurrentAngle = 180; // La posizione centrale è considerata 180°, cioè Sud.
+	var CameraCurrentAngleVert = 0;
+	
+	var CameraIPaddress = "192.168.1.239";
+	var CameraPort = "2239";
+	var CameraPTZ_URL_PATTERN = "/decoder_control.cgi?command=#COMMAND#&degree=#DEGREES#&user=#USER#&pwd=#PASS#";
+	var CameraPTZ_UP = "0";
+	var CameraPTZ_DOWN = "2";
+	var CameraPTZ_CW = "6"; // Ruota in senso orario
+	var CameraPTZ_CCW = "4"; // Ruota in senso antiorario
+	var CameraRESET_TIME = 10000; // Secondi per passare da un estremo all'altro
+	var CameraCENTER_TIME = 5000; // Secondi necessari per centratura
+	var CamURL_BASE = "http://" + CameraIPaddress + ":" + CameraPort;
+	var CameraUser = "eliostato";
+	var CameraPwd = "eliostato";
+	
+	CamURL_BASE = CamURL_BASE + CameraPTZ_URL_PATTERN;
+  CamURL_BASE = CamURL_BASE.replace("#USER#",CameraUser);
+  CamURL_BASE = CamURL_BASE.replace("#PASS#",CameraPwd);
+
+	
+
+
+	Date.prototype.addSeconds = function(h) {
+	   this.setTime(this.getTime() + (h*1000));
+	   return this;
+	}
+
+	function sleep(milliseconds) {
+	  var start = new Date().getTime();
+	  for (var i = 0; i < 1e7; i++) {
+	    if ((new Date().getTime() - start) > milliseconds){
+	      break;
+	    }
+	  }
+	}
+
+	function SendCommandToCam(CamURL, CamCommand, CommandDegrees) {
+	  CamURLfinal = CamURL.replace("#COMMAND#",CamCommand)
+	  CamURLfinal = CamURLfinal.replace("#DEGREES#",CommandDegrees);
+	  console.log("Comando: " + CamURLfinal);
+	  window.open(CamURLfinal, "CamResponseWindow");
+	}
+	
+	function InitCamera() {
+	  document.getElementById('txtOutput').value = "Reset telecamera; fondo scala senso orario, attendere " + CameraRESET_TIME/1000 + " secondi...";
+		SendCommandToCam(CamURL_BASE, CameraPTZ_CW, "300"); // Fondo scala a destra
+    setTimeout(function () {
+      // Aspetta che la telecamera arrivi a fondo scala e poi la sposta al centro:
+  		document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; CENTRATURA ORIZZONTALE, attendere prego...";
+      SendCommandToCam(CamURL_BASE, CameraPTZ_CCW, "120");
+      setTimeout(function () {
+        document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; FONDO SCALA IN ALTO, attendere " + CameraCENTER_TIME/1000 + " secondi...";
+        SendCommandToCam(CamURL_BASE, CameraPTZ_UP, "200"); // Fondo scala in alto
+        setTimeout(function () {
+          document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nReset telecamera; CENTRATURA ORIZZONTALE, attendere prego...";
+          SendCommandToCam(CamURL_BASE, CameraPTZ_DOWN, "80"); // Orizzontale
+					setTimeout(function () {
+	          document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "\nCentratura completata. Premere pulsante START";
+        	}, CameraCENTER_TIME);
+        }, CameraCENTER_TIME);
+      }, CameraCENTER_TIME);
+    }, CameraRESET_TIME);
+    
+	}
+
+
+
+	function Avvia() {
+	  console.log("Dopo init?");
+	  setPosition();
+	  }
+	  
+	  
+	function drawToAngle(CenterX, CenterY, Radius, Degrees, CanvasContext, DrawIt) {
+		Degrees = 90-Degrees; // Convert to clockwise/NorthUp notation from CCW/NorthRight notation
+       CanvasContext.beginPath();
+		if (DrawIt==true) {
+          CanvasContext.strokeStyle="black";
+		} else {
+          CanvasContext.strokeStyle="white";
+		}
+       CanvasContext.moveTo(CenterX, CenterY);
+       CanvasContext.lineTo(CenterX + Radius * Math.cos(Degrees*3.14/180), CenterY - Radius * Math.sin(Degrees*3.14/180));
+       CanvasContext.stroke();
+	}
+
+
+	function drawClock(c) {
+
+		for (var angle = 0; angle<=360; angle = angle + 15 ) {
+			drawToAngle(100,150,80,angle,c,true);
+			drawToAngle(300,150,80,angle,c,true);
+		}
+	 		
+	      c.arc(100, 150, 70, 0, 2 * Math.PI, false);
+	      c.fillStyle = 'white';
+			c.strokeStyle = 'white';
+	      c.fill();
+	      c.stroke();
+	 		c.beginPath();
+	      c.arc(300, 150, 70, 0, 2 * Math.PI, false);
+	      c.fillStyle = 'white';
+	      c.fill();
+	      c.stroke();
+	}
+
+
+	function DrawMirror(SunAz,SunAlt, TargetAz, TargetAl, ctxt, dr,ot) {
+		MirrorAz = TargetAz + (SunAz-TargetAz)/2;
+    drawToAngle(100,150,100,MirrorAz,ctxt,dr);
+		document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + MirrorAz.toFixed(2);
+	}
+
+	function setPosition() {
+			////////////////////////
+			// Posiziona la telecamera/specchio secondo l'angolo calcolato
+			////////////////////////
+			
+			// Prepara immagine dove disegnare per verificare i calcoli:
+			var CanvasContainer = document.getElementById('cnvTopView');
+			var CanvasContext = CanvasContainer.getContext("2d");
+
+//////////////////////////////
+var DataRichiesta=new Date(document.getElementById('testdate').value);
+//			DataRichiesta.addSeconds(3600);
+//////////////////////////////
+
+			// Memorizza posizione geografica dell'eliostato:
+			lat = document.getElementById('LAT').value;
+			lng = document.getElementById('LON').value;
+
+			// Inizia calcoli:
+			var pos=SunCalcGetPosition(DataRichiesta, lat, lng);
+
+			// Memorizza dati precedenti per cancellare disegno precedent:
+			PrevAz=SunAzimuth;
+			PrevAlt=SunAltitude;
+
+			// Calcola posizione angolare del sole:
+			var SunAzimuth = parseFloat(180+Math.round((pos.azimuth*180/3.14)*100)/100).toFixed(2); // Add 180 because suncalc returns "0°" for "South".
+			var SunAltitude = parseFloat(Math.round((pos.altitude*180/3.14)*100)/100).toFixed(2);
+
+			// Mostra risultati dei calcoli:
+			var OutputText = document.getElementById('txtOutput').value;
+			OutputText = "Time:" + DataRichiesta + "\nAz:" + SunAzimuth + "°\nAlt:" + SunAltitude + "°" + "\n";
+			if (notte) {
+             OutputText=OutputText + "\n NOTTE...";
+			}
+	    document.getElementById('txtOutput').value = OutputText;
+
+
+			if (SunAltitude>0) { // Lo specchio viene mosso solo durante il giorno
+            drawClock(CanvasContext);
+
+				// Delete previous Sun:
+				// drawToAngle(CenterX,CenterY,Len,Angle,Canvas,Draw)
+				drawToAngle(100,150,60,PrevAz,CanvasContext,false);
+				drawToAngle(300,150,60,90-PrevAlt,CanvasContext,false);
+
+				// Draw new Sun:
+				drawToAngle(100,150,60,SunAzimuth,CanvasContext,true);
+				drawToAngle(300,150,60,90-SunAltitude,CanvasContext,true);
+
+
+
+
+				////////////// Disegna specchio sinistro:
+      	drawToAngle(100,150,20,MirrorAzimuth+90,CanvasContext,true);
+      	drawToAngle(100,150,20,MirrorAzimuth-90,CanvasContext,true);
+
+				////////////// Disegna specchio destro
+				drawToAngle(300,150,20,90-(MirrorAlt+90),CanvasContext,true);
+				drawToAngle(300,150,35,90-(MirrorAlt-90),CanvasContext,true);
+
+				// Memorizza posizione attuale specchio per poterlo cancellare dopo:
+				PrevMirrorAz = MirrorAzimuth;
+				
+				
+				// Calcola prossima posizione specchio
+				MirrorAzimuth = TargetAzimuth + (SunAzimuth-TargetAzimuth)/2;
+				MirrorAlt = TargetAlt + (SunAltitude-TargetAlt)/2;
+				
+				///// Draw ray (constant):
+				// Azimuth 0° = top
+      	drawToAngle(100,150,100,TargetAzimuth,CanvasContext,true);
+
+				// Altitude 0° = right --> add 90°
+				drawToAngle(300,150,100,90+TargetAlt,CanvasContext,true);
+
+     		calcAzimuth(parseFloat(SunAzimuth),parseFloat(SunAltitude));
+				setTimeout(function () {calcAlt(parseFloat(SunAzimuth),parseFloat(SunAltitude));}, 3000);
+
+				notte = false;
+			} else {
+				notte = true;
+			}
+
+
+	}
+
+function calcAzimuth(SunAzimuth,SunAltitude) {
+	///// Azimuth /////
+	console.log("SunAZ="+SunAzimuth);
+	console.log("SunAlt="+SunAltitude);
+
+  document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Sun azimuth: " + SunAzimuth.toFixed(2) + "\n";
+  document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Target azimuth: " + TargetAzimuth.toFixed(2) + "\n";
+	document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Mirror azimuth: " + MirrorAzimuth.toFixed(2) + "\n";
+
+	// Calcola di quanto deve ruotare lo specchio (gradi in valore assoluto):
+	CameraAddAngle = parseFloat(MirrorAzimuth - CameraCurrentAngle); // (CameraCurrentAngle vale inizialmente 180°, cioè "Sud")
+	AbsoluteAngle = parseInt(CameraAddAngle);
+
+	console.log("Aggiungo " + AbsoluteAngle + " gradi...");
+
+	// Usa stesso angolo ma istruzioni diverse a seconda del senso di rotazione richiesto:
+	if (CameraAddAngle>=0) {
+	  console.log("In senso orario");
+	  SendCommandToCam(CamURL_BASE, CameraPTZ_CW, AbsoluteAngle);
+	} else {
+	  console.log("In senso ANTIorario");
+	  SendCommandToCam(CamURL_BASE, CameraPTZ_CCW, -AbsoluteAngle);
+	}
+	CameraCurrentAngle = MirrorAzimuth; // Memorizza posizione attuale, perchè al prossima ciclo MirrorAzimuth viene aggiornata.
+}
+
+function calcAlt(SunAzimuth,SunAltitude) {
+	///// ALTEZZA /////////
+	document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Sun alt: " + SunAltitude.toFixed(2) + "\n";
+	document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Target alt: " + TargetAlt.toFixed(2) + "\n";
+	document.getElementById('txtOutput').value = document.getElementById('txtOutput').value + "Mirror alt: " + MirrorAlt.toFixed(2) + "\n";
+
+	// Calcola di quanto deve ruotare lo specchio:
+	CameraAddAngleVert = parseFloat(MirrorAlt - CameraCurrentAngleVert); // (CameraCurrentAngleVert vale inizialmente 0°, cioè "orizzontale")
+	AbsoluteAngleVert = parseInt(CameraAddAngleVert);
+
+	console.log("Aggiungo " + AbsoluteAngleVert + " gradi di altezza...");
+
+	// Usa stesso angolo ma istruzioni diverse a seconda del senso di rotazione richiesto:
+	if (CameraAddAngleVert>=0) {
+	  console.log("Verso l'alto");
+	  SendCommandToCam(CamURL_BASE, CameraPTZ_UP, AbsoluteAngleVert);
+	} else {
+	  console.log("Verso il basso");
+	  SendCommandToCam(CamURL_BASE, CameraPTZ_DOWN, -AbsoluteAngleVert);
+	}
+	CameraCurrentAngleVert = MirrorAlt; // Memorizza posizione attuale, perchè al prossima ciclo MirrorAzimuth viene aggiornata.
+}
+			
+			
+	function Disegna() {
+		var CanvasContainer = document.getElementById('cnvTopView');
+		var CanvasContext = CanvasContainer.getContext("2d");
+
+console.log("testdate=" + document.getElementById('testdate').value);
+		var DataRichiesta=new Date(document.getElementById('testdate').value);
+console.log("Data Richiesta = " + DataRichiesta)
+		var pos=SunCalcGetPosition(DataRichiesta, 42, 12);
+		SunAzimuthOrg = parseFloat(Math.round((pos.azimuth*180/3.14)*100)/100).toFixed(2);
+		SunAzimuth180 = parseFloat(SunAzimuthOrg) + 180;
+		SunAzimuthSouth = 450 - parseFloat(SunAzimuth180);
+		SunAltitude = parseFloat(Math.round((pos.altitude*180/3.14)*100)/100).toFixed(2);
+
+		console.log("Suncalc ="+SunAzimuthOrg + "," + SunAltitude);
+		console.log("Sun180 ="+SunAzimuth180 + "," + SunAltitude);
+		console.log("SunSouth ="+SunAzimuthSouth + "," + SunAltitude);
+		console.log("Target="+(TargetAzimuth));
+	  MirrorAzimuth = TargetAzimuth + (SunAzimuthSouth-TargetAzimuth)/2;
+		console.log("Mirror="+(MirrorAzimuth));
+
+		drawToAngle(100,150,100,SunAzimuthSouth,CanvasContext,true);
+
+	}
+	
+	
+	//////////////////////////////////////////
+			  //InitCamera();
+
+	//////////////////////////////////////////
+</script>
+
+  </head>
+  <body>
+  versione 1.0.1 - Aprile 2016<br>
+	  Latitude: <input type="text" id="LAT" value="42.0"><br>
+	  Longitude: <input type="text" id="LON" value="12.0"><br>
+	  <br>
+	  <input type="submit" value="Start!" onclick="setInterval(setPosition, 10000);"><br>
+	  <br>
+	  <br>
+	  <input type="text" id="testdate" value="2016/07/08 06:00"><input type="submit" value="Test" onclick="Avvia();"><br>
+
+	  <textarea cols="120" rows="10" width="500" height="150" id="txtOutput"></textarea><br>
+	  <br>
+	  <canvas id="cnvTopView" width = "400" height = "300" style="border:1px solid #555555;"><br>
+	  <br>
+<script>
+var DataRichiesta=new Date(document.getElementById('testdate').value);
+InitCamera();
+</script>
+  </body>
+</html>
