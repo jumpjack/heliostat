@@ -12,7 +12,7 @@ Vecchio progetto presentato al makerfaire 2016: un eliostato elettronico wifi re
 
 ## Calcoli astronomici
 
-I calcoli astronomici per posizionare erano stati implementati  in una pagina di prova in HTML+javascript.
+I calcoli astronomici per posizionare erano stati implementati  in una [pagina di prova in HTML+javascript](https://github.com/jumpjack/heliostat/blob/main/ipSun/SunPositionCalculator101.html), che si appoggiava alla libreria suncalc, mentre una [pagina web dimostrativa](https://github.com/jumpjack/heliostat/blob/main/ipSun/interfaccia-001.html) permetteva di controllare la telecamera manualmente.
 
 ## Controllo telecamera tramite Arduino
 
