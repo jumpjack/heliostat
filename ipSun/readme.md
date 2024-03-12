@@ -5,6 +5,7 @@
 
 Vecchio progetto presentato al makerfaire 2016: un eliostato elettronico wifi realizzato tramite una ipcamera, un pennarello e un CD usato!
 
-- [Pagina ufficiale](https://jumpjack.wixsite.com/progetti/ipsun)
+- [Mia pagina ufficiale](https://jumpjack.wixsite.com/progetti/ipsun)
 - [Vecchia pagina dei sorgenti](https://jumpjack.wixsite.com/progetti/sorgenti-ipsun)
+- [Vecchia pagina makerfaire 2016 (con immagine sbagliata)](https://makerfairerome.eu/it/espositori/?edition=2016&exhibit=626)
 - [Video](https://www.youtube.com/watch?v=MaHDBx17t8A)
