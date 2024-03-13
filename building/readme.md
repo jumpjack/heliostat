@@ -4,6 +4,7 @@
 
 ### Static
 - Concave parabolic mirror
+- Convex circular mirror
 - Light tube (optical fiber)
 
 ### Moving
