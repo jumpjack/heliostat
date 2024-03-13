@@ -44,5 +44,5 @@
 - See section dedicated to ancient siderostats/heliostats of 1800s'
 
 ## Real projects
-- ...
-- ...
+- [Lego techinc heliostat](https://github.com/diabad/EV3-Solar-Station/tree/master)
+- "Cleardome" [static heliostat](http://cleardomesolar.com/solareflexpanels.html)
