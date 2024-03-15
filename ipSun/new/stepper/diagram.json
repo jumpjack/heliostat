@@ -1,0 +1,141 @@
+{
+  "version": 1,
+  "author": "Jumpjack",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 4, "left": -37.33, "attrs": {} },
+    { "type": "wokwi-ds1307", "id": "rtc1", "top": 205.8, "left": 259.3, "attrs": {} },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper1",
+      "top": -293.99,
+      "left": -57.17,
+      "attrs": { "size": "17", "arrow": "yellow", "display": "angle", "gearRatio": "16:1" }
+    },
+    {
+      "type": "wokwi-stepper-motor",
+      "id": "stepper2",
+      "top": -300,
+      "left": 145.51,
+      "rotate": 270,
+      "attrs": { "size": "17", "arrow": "yellow", "display": "angle", "gearRatio": "16:1" }
+    },
+    { "type": "wokwi-a4988", "id": "drv1", "top": -91, "left": -14, "rotate": 270, "attrs": {} },
+    {
+      "type": "wokwi-a4988",
+      "id": "drv2",
+      "top": -100.6,
+      "left": 197.2,
+      "rotate": 270,
+      "attrs": {}
+    },
+    {
+      "type": "wokwi-text",
+      "id": "azLabel",
+      "top": -345.6,
+      "left": -19.2,
+      "attrs": { "text": "Azimuth" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "elLabel",
+      "top": -345.6,
+      "left": 192,
+      "attrs": { "text": "Elevation" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "Title",
+      "top": -432,
+      "left": 19.2,
+      "attrs": { "text": "HELIOSTAT\nPoint mirror to reflect sun in static position." }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "txtBtnSun",
+      "top": -9.6,
+      "left": 441.6,
+      "attrs": { "text": "Calibration" }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "txtBtnTarget",
+      "top": -9.6,
+      "left": 326.4,
+      "attrs": { "text": "Working" }
+    },
+    { "type": "wokwi-slide-switch", "id": "sw1", "top": -5.2, "left": 396.7, "attrs": {} },
+    {
+      "type": "wokwi-text",
+      "id": "wait",
+      "top": -297.6,
+      "left": 480,
+      "attrs": { "text": "PLEASE WAIT..." }
+    },
+    {
+      "type": "wokwi-text",
+      "id": "ready",
+      "top": -249.6,
+      "left": 480,
+      "attrs": { "text": "READY." }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led1",
+      "top": -310.8,
+      "left": 435.8,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "led2",
+      "top": -262.8,
+      "left": 435.8,
+      "attrs": { "color": "yellow" }
+    },
+    {
+      "type": "wokwi-analog-joystick",
+      "id": "joystick1",
+      "top": -432.6,
+      "left": -186.6,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "uno:A5", "rtc1:SCL", "green", [ "v0" ] ],
+    [ "uno:A4", "rtc1:SDA", "green", [ "v0" ] ],
+    [ "uno:5V", "rtc1:5V", "red", [ "v0" ] ],
+    [ "rtc1:GND", "uno:GND.2", "black", [ "h0" ] ],
+    [ "drv2:DIR", "uno:3", "green", [ "v28.72", "h-68.68" ] ],
+    [ "drv2:STEP", "uno:4", "green", [ "v21.44", "h-69.01" ] ],
+    [ "drv1:DIR", "uno:5", "green", [ "v19.31", "h115.96" ] ],
+    [ "drv1:STEP", "uno:6", "green", [ "v28.21", "h118.27" ] ],
+    [ "drv2:SLEEP", "drv2:RESET", "green", [ "v13.2", "h-7.65" ] ],
+    [ "drv1:SLEEP", "drv1:RESET", "green", [ "v11.81", "h-4.6" ] ],
+    [ "uno:8", "drv2:ENABLE", "green", [ "v-35.74", "h42.12" ] ],
+    [ "drv1:ENABLE", "uno:8", "green", [ "v32.83", "h131.33" ] ],
+    [ "drv1:MS1", "drv1:MS2", "green", [ "v10.38", "h6.54" ] ],
+    [ "drv1:MS3", "drv1:MS2", "green", [ "v8.7", "h-8.63" ] ],
+    [ "drv2:MS1", "drv2:MS2", "green", [ "v9.61", "h4.14" ] ],
+    [ "drv2:MS3", "drv2:MS2", "green", [ "v9.61", "h-7.77" ] ],
+    [ "drv1:2B", "stepper1:B-", "green", [ "v-23.95", "h23.17" ] ],
+    [ "drv1:1B", "stepper1:A-", "green", [ "v-15.63", "h-34.82" ] ],
+    [ "drv2:2B", "stepper2:B-", "green", [ "v-68.77", "h114.95", "v-72.45" ] ],
+    [ "drv2:2A", "stepper2:B+", "green", [ "v-56.7", "h119.44", "v-106.66" ] ],
+    [ "drv2:1A", "stepper2:A+", "green", [ "v-45.63", "h118.9", "v-106.66" ] ],
+    [ "drv2:1B", "stepper2:A-", "green", [ "v-33.56", "h120.37", "v-104.65" ] ],
+    [ "stepper1:A+", "drv1:1A", "green", [ "v45.93", "h17.64" ] ],
+    [ "stepper1:B+", "drv1:2A", "green", [ "v35.11", "h-2.41" ] ],
+    [ "uno:9", "sw1:2", "gold", [ "v73.4", "h277.53" ] ],
+    [ "sw1:3", "uno:GND.3", "black", [ "v268.8", "h-278.2", "v-19.2" ] ],
+    [ "uno:GND.1", "led2:C", "black", [ "v-32.2", "h334.63", "v-192", "h38" ] ],
+    [ "uno:GND.1", "led1:C", "black", [ "v-32.2", "h315.43", "v-240", "h57.2" ] ],
+    [ "uno:7", "led2:A", "gold", [ "v-118.6", "h309.13", "v-124.8" ] ],
+    [ "uno:10", "led1:A", "red", [ "v-137.8", "h469.43", "v-163.2" ] ],
+    [ "uno:5V", "joystick1:VCC", "red", [ "v25.3", "h-285.87", "v-537.6" ] ],
+    [ "uno:GND.2", "joystick1:GND", "black", [ "v54.1", "h-247.37", "v-566.4" ] ],
+    [ "uno:A0", "joystick1:VERT", "blue", [ "v92.5", "h-401.07" ] ],
+    [ "uno:A1", "joystick1:HORZ", "gold", [ "v111.7", "h-304.97" ] ]
+  ],
+  "dependencies": {}
+}
