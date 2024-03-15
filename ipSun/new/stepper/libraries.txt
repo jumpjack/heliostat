@@ -1,0 +1,7 @@
+# Wokwi Library List
+# See https://docs.wokwi.com/guides/libraries
+
+DS1307RTC
+AccelStepper
+SolarCalculator
+Time
