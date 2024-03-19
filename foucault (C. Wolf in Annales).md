@@ -197,11 +197,33 @@ P. 63
 con V la velocità di rotazione della ruota A, con v quella di B, avremo
 tra queste quantità il rapporto ([BÉLANGER, Traité de Cinématique, P. 198](https://gallica.bnf.fr/ark:/12148/bpt6k99703z/f225.item.texteImage) - V. [mia traduzione](https://github.com/jumpjack/heliostat/blob/main/BELANGER_traite-de-cinemtique.md))
 
+
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/47ae356d-8002-4a4c-b449-d952588cc891)
 
-Le due velocità hanno lo stesso verso se **B/b** è maggiore di **C/c**, questo è il caso che adotteremo. Inoltre, per stabilire tra la velocità del regolatore e quella dell'asse dell'orologio l'opportuna relazione, è necessario che **v** sia 9/10 di **V**; pertanto:
+$$V(\frac B b - \frac C c) = v \frac B b$$
+
+*[*
+*che possiamo anche riscrivere:*
+
+$$V_A(\frac B b - \frac C c) = v_B \frac B b$$
+
+*da cui:*
+
+$$v_B=V_A \frac bB (\frac B b - \frac C c)$$
+
+*]*
+
+Le due velocità hanno lo stesso verso se **B/b** è maggiore di **C/c**, questo è il caso che adotteremo. Inoltre, per stabilire tra la velocità del regolatore e quella dell'asse dell'orologio l'opportuna relazione, è necessario che sia:
+
+$$v = \frac 9 {10} V$$
+
+$$v_B = \frac 9 {10} V_A$$
+
+pertanto:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/71e6df08-acde-4d8c-bb96-13e0dcf2f28a)
+
+$(\frac B b - \frac C c) = \frac 9 {10} \frac B b$  cioè   $\frac bB \frac Cc = \frac 1 {10}$
 
 relazione che è soddisfatta prendendo **B = 5b** e **C = 1/2 c** .
 
@@ -214,6 +236,7 @@ relazione che è soddisfatta prendendo **B = 5b** e **C = 1/2 c** .
 
 *\[Risulterà:*
 - *v = 0.9 V*
+- $v_B = 0.9 V_a$
 
 *Cioè l'asse XX' di uscita avrà una velocità pari a 0.9 volte quella della ruota A [(che riceve il movimento direttamente dal regolatore)]. Tramite la ruota **n**, a sua volta pilotata dall'esterno tramite l'asse **q** (fig.1 della tavola I degli "Annales"), sarà possibile aggiungere/sottrrarre all'asse la velocità desiderata, rendendo così possibile regolare l'**angolo orario**.*
 
