@@ -1,6 +1,6 @@
 Da "[Recueil des travaux scientifiques des Leon Foucault](https://archive.org/details/recueildestrava01lissgoog/page/437/mode/1up)", pp.437-441.
 
-Immagini ad alta risoluzione prese da [questa edizione](https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f77.item.zoom)https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f77.item.zoom.
+Immagini ad alta risoluzione prese da [questa edizione](https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f77.item.zoom)
 
 
 # Italiano (ChatGPT + edit)
