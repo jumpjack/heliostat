@@ -3,7 +3,7 @@ Da "[Recueil des travaux scientifiques des Leon Foucault](https://archive.org/de
 Immagini ad alta risoluzione prese da [questa edizione](https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f77.item.zoom)https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f77.item.zoom.
 
 
-# Italiano
+# Italiano (ChatGPT + edit)
 
 
 ------------- pagina 437 -----------
@@ -100,7 +100,7 @@ Questi sono i dati su cui si può fare affidamento per ottenere in modo sicuro d
 -- FINE --
 
 
-# Francese  (ChatgPT)
+# Francese (OCR)
 
 ------------- pagina 437 -----------
 
