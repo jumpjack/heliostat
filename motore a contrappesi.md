@@ -41,24 +41,24 @@ Secondo i miei calcoli:
 
 La velocità finale dell'asse XX' superiore sarà quindi pari a:
 
-$$V_{xx'} = V_L * \frac{9}{100} * \frac 1K *  \frac{9}{100}$$
+$$V_{xx'} = V_L * \frac{L}{200} * \frac 1K *  \frac{9}{100}$$
 
 cioè
 
-$$V_{xx'} = V_L * \frac{81}{10000} * \frac 1K$$
+$$V_{xx'} = V_L * \frac{L*9}{20000} * \frac 1K$$
 
 
 Questo asse XX' dovrà compiere 1 giro ogni 24 ore, ossia 1 giro ogni 1440 minuti, cioè avere una velocità di 0.000694444 RPM:
 
-$$\frac1{1440}  = V_L * \frac{81}{10000} * \frac 1K$$
+$$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
 
 Questo significa che L deve  avere velocità pari a:
 
-$$V_L = \frac1{1440} * \frac{10000}{81} * K$$
+$$V_L = \frac1{1440} * \frac{20000}{L*9} * K$$
 
 Quindi il numero di denti K deve essere:
 
-$$K = V_L * 1440* \frac{81}{10000}$$
+$$K = V_L * 1440* \frac{L*9}{20000}$$
 
 
 Ora, che velocità hanno le lancette di un orologio?
@@ -69,9 +69,9 @@ Ora, che velocità hanno le lancette di un orologio?
 
 Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
 
-- Ore: $K = \frac{2}{1440} * 1440* \frac{81}{10000} = 0.0162$
-- Minuti: $K = \frac{1}{60} * 1440* \frac{81}{10000} = 0.1944$
-- Secondi: $K = 1 * 1440 * \frac{81}{10000} = 11.664$
+- Ore: $K = \frac{2}{1440} * 1440* \frac{L*9}{20000} = \frac{2}{1440} * 0.648 * L = 0.0009 * L$
+- Minuti: $K = \frac{1}{60} * 1440* \frac{L*9}{20000} =  \frac{1}{60} * 0.648 * L = 0.0108 * L$
+- Secondi: $K = 1 * 1440 * \frac{L*9}{20000} =  0.648 * L$
 
 -------
 
