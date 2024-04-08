@@ -78,7 +78,7 @@ Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
 - Minuti: $K = L * \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}$
 - Secondi: $K = L *  \frac {3^4 * 2^3}{1000}$
 
-$$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000} = \frac{9}{20000} = 0,00045$$
+$$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000} = \frac{9}{10000} = 0.0009$$
 
 $$\frac{K}{L} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000} = \frac{18}{5000} = 0.0036$$
 
