@@ -58,20 +58,29 @@ $$V_L = \frac1{1440} * \frac{20000}{L*9} * K$$
 
 Quindi il numero di denti K deve essere:
 
-$$K = V_L * 1440* \frac{L*9}{20000}$$
+$$K = L * V_L * \frac{1440*9}{20000}$$
 
+$$K = L * V_L * 0.648$$
+
+$$K = L * V_L * \frac {648}{1000}$$
+
+$$K = L * V_L * \frac {3^4 * 2^3}{1000}$$
 
 Ora, che velocità hanno le lancette di un orologio?
 
-- ore: 2 giri / giorno = 2 giri / 24 ore = 2 giri / 1440 minuti
-- minuti: 1 giro / 1 ora = 1 giro / 60 minuti
+- ore: 2 giri / giorno = 2 giri / 24 ore = 2 giri / 1440 minuti = $\frac{2}{3^2 * 2^5 * 5}$
+- minuti: 1 giro / 1 ora = 1 giro / 60 minuti = $\frac{1}{3 * 2^2 * 5}$
 - secondi: 1 giro / 1 minuto
 
 Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
 
-- Ore: $K = \frac{2}{1440} * 1440* \frac{L*9}{20000} = \frac{2}{1440} * 0.648 * L = 0.0009 * L$
-- Minuti: $K = \frac{1}{60} * 1440* \frac{L*9}{20000} =  \frac{1}{60} * 0.648 * L = 0.0108 * L$
-- Secondi: $K = 1 * 1440 * \frac{L*9}{20000} =  0.648 * L$
+- Ore: $K = L *  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}$
+- Minuti: $K = L * \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}$
+- Secondi: $K = L *  \frac {3^4 * 2^3}{1000}$
+
+$$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000} = \frac{9}{20000} = 0,00045$$
+
+$$\frac{K}{L} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000} = \frac{18}{5000} = 0.0036$$
 
 -------
 
