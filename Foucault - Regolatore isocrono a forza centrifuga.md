@@ -48,14 +48,14 @@ Per aiutare alla dimostrazione, riduciamo l'apparecchio ai suoi elementi geometr
 
 ![fig. 2](https://github.com/jumpjack/heliostat/blob/main/images/tav16-fig.2.jpg?raw=true)
 
-Prendiamo AC = BS = SM = l; chiamiamo φ l'angolo BAC, AB diventa l * cos φ
+Prendiamo AC = BS = SM = l; chiamiamo φ l'angolo BAC, AB diventa _l * cos φ_
 
 Continuiamo a chiamare P il peso totale delle masse M e M'.
-Essendo tutti i lati del parallelogramma uguali a 1/2 * l, i tre punti M, M', C rimangono contenuti in un piano orizzontale, qualunque sia la posizione del sistema; ne consegue che una forza applicata in C e agente dal basso verso l'alto si trasmette interamente alle masse M e M'.
+Essendo tutti i lati del parallelogramma uguali a _1/2 * l_, i tre punti M, M', C rimangono contenuti in un piano orizzontale, qualunque sia la posizione del sistema; ne consegue che una forza applicata in C e agente dal basso verso l'alto si trasmette interamente alle masse M e M'.
 
-Supponiamo ora che una forza P uguale al peso delle masse e applicata sulla retta AC agisca lungo la direzione stessa di questa retta, la forza decomposta dalla resistenza che essa incontra perpendicularmente all'asse BS dà una componente verticale ascendente uguale a P * sin φ.
+Supponiamo ora che una forza P uguale al peso delle masse e applicata sulla retta AC agisca lungo la direzione stessa di questa retta, la forza decomposta dalla resistenza che essa incontra perpendicularmente all'asse BS dà una componente verticale ascendente uguale a _P * sin φ_.
 
-Ma l * sin φ = BC = l * (1 — cos α), quindi P * sin φ = P(l — cos α). Questa è la forza che sollecita verticalmente il punto C e che, agendo allo stesso modo sulle masse M e M', soddisfa alla condizione (1) necessaria per realizzare l'isocronismo.
+Ma _l * sin φ = BC = l * (1 — cos α)_, quindi _P * sin φ = P(l — cos α)_. Questa è la forza che sollecita verticalmente il punto C e che, agendo allo stesso modo sulle masse M e M', soddisfa alla condizione (1) necessaria per realizzare l'isocronismo.
 
 Ma affinché la retta AC sia sollecitata da una forza costante P
 
