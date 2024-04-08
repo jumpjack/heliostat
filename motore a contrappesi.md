@@ -23,6 +23,11 @@ La ruota D trasmette il movimento a una moltiplica formata da una catena di ingr
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a6089b82-908c-444a-9e11-279f547a2d88)
 
+Nel frattempo, però, la ruotina L trasmette il movimento al sistema di regolazione dell'anticipo orario, che infine  trasmette il suo movimento al meccanismo superiore tramite una ruota posteriore:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/61992483-ea00-47ab-a56a-d58c6131e8ed)
+
+
 
 -------
 
