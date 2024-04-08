@@ -32,7 +32,7 @@ Il meccanismo anticipatore è illustrato nella figura 3 all'interno del testo de
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6e2e6123-3cb5-424b-825a-afb5fad895be)
 
 Secondo i miei calcoli:
-- l'asse XX' di uscita dell'anticipatore ha una velocità pari a 9/100 di quella della ruota L
+- l'asse XX' di uscita dell'anticipatore ha una velocità pari a L/200 di $V_L$
 - questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/899cc279-9b54-4c2a-aab2-f3d74608b798)
