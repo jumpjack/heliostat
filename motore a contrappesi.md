@@ -27,6 +27,38 @@ Nel frattempo, però, la ruotina L trasmette il movimento al sistema di regolazi
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/61992483-ea00-47ab-a56a-d58c6131e8ed)
 
+Il meccanismo anticipatore è illustrato nella figura 3 all'interno del testo degli annales, qui modificate per mostrare come ingrana la ruota L:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6e2e6123-3cb5-424b-825a-afb5fad895be)
+
+Secondo i miei calcoli:
+- l'asse XX' di uscita dell'anticipatore ha una velocità pari a 9/100 di quella della ruota L
+- questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/899cc279-9b54-4c2a-aab2-f3d74608b798)
+
+- Il perno che supporta le ruote K, a e a1 imprime il suo moto alle ruote A e A1, col risultato finale che l'asse XX' finale dell'eliostato avrà una velocità pari a 9/100 dell'asse K.
+
+La velocità finale dell'asse XX' superiore sarà quindi pari a:
+
+$$V_{xx'} = V_L * \frac{9}{100} * \frac 1K *  \frac{9}{100}$$
+
+cioè
+
+$$V_{xx'} = V_L * \frac{81}{10000} * \frac 1K$$
+
+Scegliendo una ruota K di 54 denti risulterebbe:
+
+$$V_{xx'} = V_L * \frac{81}{10000} * \frac 1{54}$$
+
+$$V_{xx'} = V_L * \frac{3}{20000}$$
+
+$$V_{xx'} = 0.00015 * V_L$$
+
+
+Questo asse XX' dovrà compiere 1 giro ogni 24 ore.
+
+
 
 
 -------
