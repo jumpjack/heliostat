@@ -460,6 +460,9 @@ K = 162 e L = 25:
 
 $$V_L =  \frac KL * \frac{125}{81} = \frac {162}{25} * \frac{125}{81} = 10 rpm$$
 
+K = 81 e L = 18:
+
+$$V_L =  \frac KL * \frac{125}{81} = \frac {81}{18} * \frac{125}{81} = 6.944 = 0.001389 * 1000/2 = 0.001389 * 500 rpm = ore * 500$$
 
 
 
@@ -476,7 +479,7 @@ $$K = L * V_L * \frac {3^4 * 2^3}{1000}$$
 Ora, che velocità hanno le lancette di un orologio?
 
 - ore: 2 giri / giorno = 2 giri / 24 ore = 2 giri / 1440 minuti = $\frac{2}{3^2 * 2^5 * 5} = 0.001389 RPM$
-- minuti: 1 giro / 1 ora = 1 giro / 60 minuti = $\frac{1}{3 * 2^2 * 5} = 0,0167 RPM$
+- minuti: 1 giro / 1 ora = 1 giro / 60 minuti = $\frac{1}{3 * 2^2 * 5} = 0.0167 RPM$
 - secondi: 1 giro / 1 minuto = 1RPM
 
 Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
