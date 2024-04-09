@@ -453,12 +453,12 @@ $$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \fra
 
 Se assumiamo K = 81 e L = 25:
 
-$$V_L =  \frac KL * \frac{125}{81} =  5 rpm$$
+$$V_L =  \frac KL * \frac{125}{81} = \frac {81}{25} * \frac{125}{81} =  5 rpm$$
 
 
 K = 162 e L = 25:
 
-$$V_L =  \frac KL * \frac{5}{1/2} =  10 rpm$$
+$$V_L =  \frac KL * \frac{125}{81} = \frac {162}{25} * \frac{125}{81} = 10 rpm$$
 
 
 
