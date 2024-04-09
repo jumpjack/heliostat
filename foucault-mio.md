@@ -445,9 +445,25 @@ $$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
 
 Questo significa che L deve  avere velocità pari a:
 
-$$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321$$
+$$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321 rpm$$
 
-Quindi il numero di denti K deve essere:
+## Ipotesi su numero di denti K e L
+
+### Caso 1: numeri "a caso"
+
+Se assumiamo K = 81 e L = 25:
+
+$$V_L =  \frac KL * \frac{125}{81} =  5 rpm$$
+
+
+K = 162 e L = 25:
+
+$$V_L =  \frac KL * \frac{5}{1/2} =  10 rpm$$
+
+
+
+
+### Caso 2: orologio
 
 $$K = L * V_L * \frac{1440*9}{20000}$$
 
