@@ -31,56 +31,7 @@ Il meccanismo anticipatore è illustrato nella figura 3 all'interno del testo de
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6e2e6123-3cb5-424b-825a-afb5fad895be)
 
-Secondo i miei calcoli:
-- l'asse XX' di uscita dell'anticipatore ha una velocità pari a L/200 di $V_L$
-- questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/899cc279-9b54-4c2a-aab2-f3d74608b798)
-
-- Il perno che supporta le ruote K, a e a1 imprime il suo moto alle ruote A e A1, col risultato finale che l'asse XX' finale dell'eliostato avrà una velocità pari a 9/100 dell'asse K.
-
-La velocità finale dell'asse XX' superiore sarà quindi pari a:
-
-$$V_{xx'} = V_L * \frac{L}{200} * \frac 1K *  \frac{9}{100}$$
-
-cioè
-
-$$V_{xx'} = V_L * \frac{L*9}{20000} * \frac 1K$$
-
-
-Questo asse XX' dovrà compiere 1 giro ogni 24 ore, ossia 1 giro ogni 1440 minuti, cioè avere una velocità di 0.000694444 RPM:
-
-$$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
-
-Questo significa che L deve  avere velocità pari a:
-
-$$V_L = \frac1{1440} * \frac{20000}{L*9} * K$$
-
-Quindi il numero di denti K deve essere:
-
-$$K = L * V_L * \frac{1440*9}{20000}$$
-
-$$K = L * V_L * 0.648$$
-
-$$K = L * V_L * \frac {648}{1000}$$
-
-$$K = L * V_L * \frac {3^4 * 2^3}{1000}$$
-
-Ora, che velocità hanno le lancette di un orologio?
-
-- ore: 2 giri / giorno = 2 giri / 24 ore = 2 giri / 1440 minuti = $\frac{2}{3^2 * 2^5 * 5}$
-- minuti: 1 giro / 1 ora = 1 giro / 60 minuti = $\frac{1}{3 * 2^2 * 5}$
-- secondi: 1 giro / 1 minuto
-
-Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
-
-- Ore: $K = L *  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}$
-- Minuti: $K = L * \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}$
-- Secondi: $K = L *  \frac {3^4 * 2^3}{1000}$
-
-$$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}  = \frac{3^2}{2 * 5 * 1000}= \frac{9}{10000}  = 0.0009$$
-
-$$\frac{K}{L} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}    = \frac{3^3 * 2}{5 * 1000} = \frac{54}{5000} = 0.0108$$
 
 -------
 
