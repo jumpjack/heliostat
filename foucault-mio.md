@@ -445,7 +445,7 @@ $$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
 
 Questo significa che L deve  avere velocità pari a:
 
-$$V_L = \frac1{1440} * \frac{20000}{L*9} * K$$
+$$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321$$
 
 Quindi il numero di denti K deve essere:
 
