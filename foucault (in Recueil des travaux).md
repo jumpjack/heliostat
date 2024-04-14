@@ -7,6 +7,7 @@ di  C.-M. Gariel (Madre di Foucault), pubblicato postumo nel 1878
 
 - [Link 1](https://archive.org/details/recueildestrava00lissgoog/page/n545/mode/1up)
 - [Link 2](https://archive.org/details/recueildestrava01lissgoog/page/427/mode/1up)
+- [Volume 2 separato con tavole ad altissima risoluzione](https://gallica.bnf.fr/ark:/12148/bpt6k9614580j/f74.planchecontact)
 - Riferimento a pag. 422 al report di Duboscq sull'eliostato nel ["Comptes_rendus_hebdomadaires_des_séance" del 1862 (volume LIV)](https://www.biodiversitylibrary.org/item/23743#page/624/mode/1up)
 
 Eliostato - Modello 1 (fig. 24 nel testo):
