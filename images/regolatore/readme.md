@@ -1,4 +1,3 @@
-Immagiini del regolatore di Foucault/Eichens (e simili)
 
 Recueil des travaux scientifiques de Léon Foucault
 
