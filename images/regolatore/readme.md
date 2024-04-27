@@ -26,4 +26,8 @@ Il "Giornale generale della Libreria e della Tipografia" è stato creato per dec
 
 Forse: Memoires de la Société des sciences naturelles de Cherbourg, Cherbourg Feuardent et Bedelfontaine 1852 1861 8 vol in-8 
 
+oppure:
+
+Bulletin de la Société artistique et industrielle de Cherbourg, Cherbourg, Feuardent, 1873, in 8, de 68 pages 
+
 
