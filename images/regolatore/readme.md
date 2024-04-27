@@ -8,7 +8,9 @@ Recueil des travaux scientifiques de Léon Foucault
 
 - [Sur une horloge à pendule conique, par M. Léon Focault](https://gallica.bnf.fr/ark:/12148/bpt6k2982c/f158.item) (niente immagini) - Comptes Rendu 1/7/1847, n.25
 - [Note sur le régulateur isochrone costruit par M. Breguet , pour l'observation du passage de Vénus à Yokohama](https://gallica.bnf.fr/ark:/12148/bpt6k3034n/f80.item) (niente immagini) - Comptes Rendu 1/7/1873
-- Note sur un nouveau régulateur isochrone par M. Andrade, ingénieur des constructions navales In 8°, 18 p. et 2 pl.,  Cherbourg, lith. Feuardent, 11292
+- Note sur un nouveau régulateur isochrone par M. Andrade, ingénieur des constructions navales In-8°, 18 p. et 2 pl.,  Cherbourg, lith. Feuardent, 11292
+    - ([fig.4](https://patrimoine.minesparis.psl.eu/items/viewer/202#page/Image+318/mode/1up) in [Annales des Mines](https://patrimoine.minesparis.psl.eu/items/viewer/202#page/Image+168/mode/2up) (1878, série 7, volume 13), 1878)
+    - ([fig. 11](https://patrimoine.minesparis.psl.eu/document/Annales_Mines_1878_S07_14#?c=0&m=0&s=0&cv=330&z=-568.3903%2C0%2C4739.7806%2C2307)) in Annales des Mines (1878, série 7, volume 14) (**MOLTI DISEGNI DI REGOLATORI VARI**)
 - [Nouveau régulateur isochrone pour les machines à vapeur](https://books.google.it/books?id=ZoVpAAAAcAAJ&pg=PA1546),  par M. Andrade - Comptes Rendu 1/1/1876, p.550 (poche righe)
 - [Régulateur isochrone](https://cnum.cnam.fr/pgi/fpage.php?P931.37/62/100/418/15/416), M. Andrade -  Le Technologiste: ou Archives des progrès de l'industrie française et étrangère, 1876, Nouvelle série, Tome second, (XXXVII volume de la publication), p.57-63 (**schemi e formule**)
 - [RÉGULATEURS DE VITESSE POUR LES INSTRUMENTS ÉLECTRIQUES DE PRÉCISION](https://cnum.cnam.fr/pgi/fpage.php?P84.9/69/100/560/0/0) - in La Lumière Électrique, Journal universel d'Électricité - 8° Anne, Tome IX, Samedi 19 MAY 1893, n.20, Th Du Moncel  - **SCHEMI E FORMULE DETTAGLIATE**
