@@ -7,4 +7,5 @@ Recueil des travaux scientifiques de Léon Foucault
 Articoli vari
 
 - [Sur une horloge à pendule conique, par M. Léon Focault](https://gallica.bnf.fr/ark:/12148/bpt6k2982c/f158.item) (niente immagini) - Comptes Rendu 1/7/1847, n.25
+- [Note sur le régulateur isochrone costruit par M. Breguet , pour l'observation du passage de Vénus à Yokohama](https://gallica.bnf.fr/ark:/12148/bpt6k3034n/f80.item) (niente immagini) - Comptes Rendu 1/7/1873
 - 
