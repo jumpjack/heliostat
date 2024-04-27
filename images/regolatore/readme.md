@@ -17,7 +17,15 @@ Recueil des travaux scientifiques de Léon Foucault
 
 
 # [Catalogue of scientific papers, 1800-1900](https://www.biodiversitylibrary.org/item/65248#page/215/mode/1up) : subject index
-- 
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/2b5ae234-95f9-4b3a-b974-0561a8c6c17b)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/4f656d9f-539c-4c65-a640-b76a546cd833)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/d1a9f769-8af0-49cd-bb98-38de8415c463)
+
+
+
 
 # [Journal général de l'imprimerie et de la librairie, Volume 63](https://books.google.it/books?id=7oxHAAAAYAAJ&pg=PA691) - DEUXIÈME SÉRIE, TOME XVIII, ANNÉE 1874 
 Le Journal général de la Librairie et de l Imprimeric a été créé par décret impérial du 11 octobre 1811. La première Série de ce journal forme 45 vol in-8 de l Année 1811 à l Année 1856; la seconde Série se compose des Années 1857 1858 1859 1860 1861 1862 1863 1861 1865 1866 1867 1868 1869 1870 1871 1872 1873 et 1874.
