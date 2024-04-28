@@ -6,6 +6,14 @@ https://books.google.it/books?id=bJhaAAAAcAAJ&pg=PA1
 
 <a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-ingranaggi.png"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-ingranaggi.png" width = ""></a>
 
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens.jpg" width = "300"></a>
+
+
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens2.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens2.jpg" width = "300"></a>
+
+
 **Il meccanismo dell'orologio sul grande rifrattore**
  
  L'orologio è parzialmente racchiuso in una scatola di vetro larga 22,5 centimetri, alta 37,5 centimetri e profonda 29 centimetri. Questa scatola è fissata su una piastra di ferro, che è montata sulla base a forma di colonna dello strumento. Dalla vista d'insieme 
