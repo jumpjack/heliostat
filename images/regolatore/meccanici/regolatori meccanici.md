@@ -1,7 +1,9 @@
 [La Lumière électrique -  1e série, vol. 9, n. 18-34, 1883 -  p.67](https://cnum.cnam.fr/pgi/fpage.php?P84.9/71/160/560/0/0)
 
 
-REGOLATORI PURAMENTE MECCANICI
+REGOLATORI PURAMENTE MECCANICI 
+
+([versione HTML](https://jumpjack.github.io/heliostat/images/regolatore/meccanici/regolatori%20puramente%20meccanici.html))
 
 I regolatori di cui ci occuperemo ora si basano su un'azione di regolazione, esercitata direttamente e meccanicamente sul motore stesso, sia a causa degli effetti della forza centrifuga, sia a causa delle reazioni esercitate su un mezzo gassoso o liquido.
 
