@@ -66,6 +66,58 @@ Nella Figura 2 è visibile l'estremità dell'asse 3 al di fuori della scatola di
 
 Se si trasmette un movimento da M a N, come se si pensasse di tenere fermo l'asse c, la ruota P si muoverà intorno a Q; ma dato che P e O sono solidamente connessi, il movimento di O sarà trasmesso a S e così via. Se, tuttavia, si muove l'asse c e quindi la ruota Q, tale movimento sarà trasmesso, sia che N sia in rotazione o meno, attraverso gli ingranaggi P e O. Un tale movimento dell'asse c può essere prodotto dalla chiave AR; se non viene azionata dall'osservatore, il suo peso serve a tenere fermo l'asse c. Presso u si trova un freno per arrestare l'orologio; T è un contrappeso per bilanciare le ruote P e O.
 
+La regolazione del meccanismo dell'orologio si basa su uno studio di Foucault (1), il quale dimostra che è possibile rendere isocroni i movimenti di un comune regolatore di Watt per ogni apertura dell'angolo formato dalle due braccia del regolatore, applicando una pressione contro le parti mobili del regolatore che cresce proporzionalmente all'alzata del manicotto nella figura sottostante g attraverso un'ulteriore espansione dei bracci ad essa associati. La forza che produce questa pressione è calibrata in modo tale che nella posizione del regolatore 
+
+(1) Comptes rendus Bd. 55 p. 135. Sur une solution de l'isochronisme du pendule conique .
+
+
+p.4
+
+in cui i punti di articolazione degli elementi sono in una posizione verticale, la loro azione sia nulla, mentre nella posizione del regolatore in cui i punti di articolazione sono in posizione orizzontale, esercitano una pressione.
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/b5512133-707a-44ff-8e37-83424fabc887)
+
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a0408449-e1de-40e0-933b-f97b9647f02d)
+
+
+
+Le sezioni dei collegamenti in una posizione verticale, la loro azione è nulla, mentre in una posizione orizzontale, esercitano una pressione sugli elementi mobili del regolatore che mantiene l'equilibrio. Nella pratica, i due estremi pensati non consentono di eseguire l'implementazione, tuttavia è possibile applicare questo principio per le posizioni intermedie e rendere così i movimenti del regolatore molto vicini all'isocronia. 
+Il modo in cui il signor EICHENS ha praticamente messo in atto il principio sopra accennato è evidente dalle figure allegate. La figura 3 mostra la posizione del regolatore e del sistema a leve che agisce su di esso quando l'orologio è in movimento. La figura 4, invece, mostra la situazione quando lo stesso è fermo. A e B sono due punti di rotazione fissi, C e D sono pesi di piombo fissati su due bracci perpendicolari l'uno all'altro. Dalla posizione in cui i pesi sono contro la direzione della gravità AM, si evince che nella posizione di riposo, essi eserciteranno una pressione nella direzione ac, ma ciò sarà annullato dalla rigidità delle leve. Tuttavia, man mano che l'asse ruota e le ali si allontanano, sollevando il peso G con il manicotto ad esso associato, la forza prodotta dai pesi C e D attraverso il sistema a leve A a b B in g - dove la barra ac è in presa con il manicotto - si esprimerà e 
+
+p.5
+
+la componente verticale verso l'alto avrà il tentativo di ridurre il peso del peso G. All'interno dei limiti qui coinvolti, questa componente crescerà man mano che il peso G viene sollevato ulteriormente mediante l'ulteriore apertura delle ali.
+
+Il peso E serve per la regolazione fine e può essere spostato avanti e indietro su una vite; spingendolo verso c, si otterrà una velocità più elevata dell'orologio. F è un peso mobile tramite il quale, regolandolo su una barra graduata, è possibile far funzionare l'orologio secondo il tempo siderale o il tempo medio. Tali modifiche al funzionamento dell'orologio possono essere apportate facilmente anche durante il funzionamento. 
+Va notato che nelle illustrazioni allegate le dimensioni sono in proporzione l'una all'altra e sono date in 1/3 della dimensione naturale. I pesi delle masse di piombo sono approssimativamente i seguenti: C 620 gr; D 650 gr; G 230 gr; il piccolo peso mobile E è di ottone e pesa 25 gr. 
+Per dare un'idea approssimativa fino a che punto il signor EICHENS è riuscito a rendere uniforme il funzionamento dell'orologio per diverse resistenze, si può citare qui una serie di prove sul funzionamento dell'orologio con diverse posizioni dello strumento e uno con carichi differenti. Poiché la resistenza da superare durante il movimento del telescopio sotto le normali condizioni è sempre così grande che un sovrappeso di 1,5 kg alla fine del telescopio si nota appena, l'accuratezza del bilanciamento avrà un valore minimo pari a questa grandezza. Tuttavia, a causa delle inevitabili flessioni di singole parti dello strumento, la resistenza opposta all'orologio durante il movimento del telescopio sarà diversa a seconda delle diverse posizioni dello stesso.
+
+1) L'orologio è stato alimentato da un carico di 47,5 chilogrammi. Le letture sul cerchio AR, per determinare il funzionamento dell'orologio, sono state eseguite su tre tacche adiacenti per ridurre al minimo gli errori di divisione e di lettura.
+
+Telescopio vicino al meridiano
+All'equatore, movimento in 10 minuti: +0.5s
+Orientato verso il polo, movimento in 10 minuti: +1.25s
+
+Telescopio sotto un angolo orario di 6 ore
+All'equatore, movimento in 10 minuti: +1.8s
+Orientato verso il polo, movimento in 10 minuti: +1.3s
+
+2) Telescopio vicino al meridiano e all'equatore
+
+L'orologio era alimentato
+da 38.0 chili, movimento in 10 minuti: +3.13s
+da 47.5 chili, movimento in 10 minuti: +0.25s
+da 57.0 chili, movimento in 10 minuti: -2.50s
+
+
+p.6
+
+
+Con il carico normale di 47,5 kg, l'orologio era regolato secondo il tempo stellare.
+
+Come ho già menzionato sopra, purtroppo nel pignone di trasmissione realizzato dal signor SCHRÖDER gli errori periodici sono piuttosto significativi, tanto che se la velocità dell'orologio è regolata con precisione per una posizione della ruota dentata, ci si può aspettare una differenza nella velocità di 2s a 3s in 10 minuti quando dopo alcune ore un'altra posizione della ruota dentata viene coinvolta. Durante le riprese fotografiche delle stelle, dove spesso è necessario esporre per molto tempo e quindi è necessario avere una guida molto uniforme del telescopio, è essenziale regolare accuratamente in anticipo l'orologio per la posizione in questione. In queste circostanze, come l'esperienza insegna, ci sono variazioni nella velocità dell'orologio di al massimo 0,5s in 10 minuti di esposizione, periodo durante il quale solo le stelle di ottava grandezza diventano visibili sulla lastra fotografica, una variazione che sarebbe auspicabilmente più piccola solo per un tale utilizzo del telescopio.
+
 -------------
 
 **Das uhrwerk am grossen refractor**
@@ -91,4 +143,49 @@ Ehe ich zur Beschreibung derjenigen Vorrichtungen übergehe welche bestimmt sind
  In der Figur 2 ist das ausserhalb des Glaskastens be findliche Ende der Axe 3 siehe Fig 1 zu sehen an welcher wie schon erwähnt ein Trieb M von 25 Zähnen sich befindet welcher in ein Zahnrad N von 204 Zähnen eingreift Dieses 19 Cent grosse Rad trägt nun excentrisch eine Büchse durch welche eine Axe geht an deren einem Ende das Rad P von 62 Zähnen am anderen Ende der Trieb O von 16 Zähnen sich befinden P greift in Q von 31 Zähnen ein mit Q steht ein Zahnrad R von 50 Zähnen in Verbindung welches in ein gleich grosses Rad eingreift das an einer langen Axe a in der Figur punktirt deren beide Enden quadratischen Querschnitt zum Anstecken des AR Schlüssels haben aufgesetzt ist Der Trieb O greift in ein Zahnrad S von 80 Zähnen ein an derselben Axe b befindet sich noch ein Rad mit 66 Zähnen welches nach noch zweimaliger Uebersetzung die Bewegung auf die Schraube und durch diese auf die AR Axe des Instruments überträgt 
 
  Die Axe des Rades N dreht sich frei in den durchbohrten Axen c und b wird nun eine Bewegung von M aus nach N übertragen so wird sich wenn man sich die Axe c fest gehalten denkt das Rad P um Q herum bewegen da aber P und O fest verbunden sind wird dadurch die Bewegung von O auf S u. s. f. übertragen werden. Wird aber die Axe c und damit das Rad Q bewegt so wird diese Bewegung mag N in Drehung begriffen sein oder nicht sich ebenfalls durch die Räder P und O nach fortsetzen Eine solche Bewegung der Axe c kann man durch den AR Schlüssel bewirken wird derselbe nicht vom Beobachter gehandhabt so dient sein Gewicht dazu die Axe c festzuhalten Bei u befindet sich eine Bremse zum Anhalten des Uhrwerkes T ist ein Gegengewicht zur Ausbalancirung der Räder P und O.
+
+ Die Regulirung des Uhrwerks basirt auf einer Untersuchung FOUCAULTS (1) durch welche nachgewiesen wird dass man die Umdrehungen eines gewöhnlichen WATT schen Re gulators für jede Oeffnung des Winkels den die beiden Arme des Regulators bilden dadurch isochron machen kann dass man einen Druck gegen die beweglichen Theile des Regulators ausübt der proportional mit der Erhebung des Muffs in der unten stehenden Figur g durch weitere Ausbreitung der damit verbundenen Arme wächst Die Kraft die diesen Druck her vorbringt ist so bemessen dass in der Stellung des Regulators wo die Charnirpunkte der 
+
+(1) Comptes rendus Bd. 55 p. 135. Sur une solution de l'isochronisme du pendule conique .
+
+p.4
+
+Gliederungen in einer Verticalen liegen ihre Wirkung Null ist während sie in der Stellung des Regulators wo die Charnirpunkte in einer Horizontalen liegen einen Druck hervorbringt  
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/b5512133-707a-44ff-8e37-83424fabc887)
+
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a0408449-e1de-40e0-933b-f97b9647f02d)
+
+liegen einen Druck hervorbringt der den beweglichen Massen des Re gulators das Gleichgewicht hält In der Praxis lassen die beiden ebenge dachten extremsten Fälle keine Aus führung zu immerhin kann man aber für die Zwischenlagen dieses Princip zur Anwendung bringen und die Um drehungen des Regulators dadurch sehr nahe isochron machen Die Art und Weise wie Herr EICHENS das oben angedeutete Prin cip practisch zur Ausführung gebracht hat wird aus den nebenstehenden Figuren ersichtlich Figur 3 zeigt die Stellung des Regulators und des dar auf wirkenden Hebelsystems wenn das Uhrwerk in Bewegung ist Figur 4 dagegen wenn sich dasselbe in Ruhe befindet A und B sind zwei feste Drehpunkte C und D Bleige wichte welche an zwei Armen die rechtwinklig gegen einander stehen befestigt sind Aus der Stellung bei der Gewichte gegen die Richtung der Schwere AM ist ersichtlich dass die selben in der Ruhelage einen Druck in der Richtung ac ausüben werden der aber durch die Steifheit der Hebel aufgehoben wird So wie jedoch durch die Drehung der Axe die Flü gel weiter auseinandergehen und da mit das Gewicht G mit dem daran befindlichen Muff g gehoben wird wird sich die durch die Gewichte C und D hervorgebrachte Kraft durch das Hebelsystem Aab B bei g wo die Stange ac mit dem Muff in Eingriff steht äussern und zwar 
+
+
+P.5
+
+wird die zur Wirkung kommende vertical aufwärts gerichtete Componente das Bestreben haben, die Schwere des Gewichts G zu vermindern Innerhalb der hier vorkommenden Grenzen wird diese Componente wachsen, je höher das Gewicht G durch weitere Ausbreitung der Flügel gehoben wird .
+	Zur feineren Justirung dient das Gewicht E, welches sich auf einer Schraube vor und rückwärts bewegen lässt; ein Vorschieben (nach c) bedingt einen schnelleren Gang des Uhr werks .
+F ist ein Laufgewicht durch dessen Verstellung auf einem getheilten Stabe man das Uhrwerk nach Sternzeit oder nach mittlerer Zeit gehen lassen kann. Derartige Veränderungen im Gange der Uhr lassen sich auch während des Ganges leicht bewirken.
+	 Ich erwähne noch dass in den beistehenden Abbildungen die Dimensionen im richtigen Verhältniss zu einander und in 1/3, natürlicher Grösse gegeben sind. Die Gewichte der Bleimassen sind, approximativ bestimmt, folgende: C 620 Gr; D 650 Gr; G 230 Gr; das kleine Laufgewicht E ist von Messing und wiegt 25 Gr.
+	 Um eine ungefähre Vorstellung zu geben in wie weit es Herrn EICHENS gelungen ist, den Gang des Uhrwerks für verschiedene Widerstände gleich zu machen, mag hier eine Versuchsreihe über den Gang der Uhr bei verschiedenen Lagen des Instruments und eine bei verschiedener Belastung Platz finden. Da der Widerstand, der bei der Bewegung des Fern rohrs zu überwinden ist, unter den gewöhnlichen Umständen doch immer so gross ist, dass ein Uebergewicht von 1.5 Klgr. am Ende des Fernrohrs sich eben erst bemerkbar macht, wird die Genauigkeit der Ausbalancirung als untere Grenze die genannte Grösse haben. Bei verschiedenen Lagen des Fernrohrs wird einestheils deshalb dann aber durch nicht zu ver meidende Durchbiegungen einzelner Instrumenttheile, der Widerstand, der dem Uhrwerk bei der Bewegung des Fernrohrs entgegensteht, ein verschiedener sein. 
+
+1 Das Uhrwerk wurde getrieben durch eine Last von 47.5 Klgr. Die Ablesungen am AR Kreise, um den Gang der Uhr dadurch zu ermitteln, wurden an drei nebeneinanderliegenden Theilstrichen ausgeführt um von den Theilungs und Ablesungsfehlern möglichst befreit zu sein 
+
+	Fernrohr in der Nähe des Meridians 
+		im Aequator Gang in 10 Minuten +0.5
+		nach dem Pole gerichtet 		+1.25 
+	Fernrohr unter 6h Stundenwinkel 
+		im Aequator Gang in 10 Minuten +1.8
+		nach dem Pole gerichtet 	+1.3
+
+	Fernrohr in der Nähe des Meridians und im Aequator 
+
+Das hrwerk wurde getrieben
+	durch 38.0 Klgr Gang in 10 Minuten 	+3.13 
+	"    47.5 				+0.25 
+	"    57.0 				-2.50 
+
+p.6
+
+Bei der gewöhnlichen Belastung von 47.5 Klgr war das Uhrwerk nach Sternzeit regulirt.
+	 Wie ich schon oben erwähnte sind leider bei dem von Herrn SCHRÖDER gefertigten Uebertragungskranze die periodischen Fehler ziemlich beträchtlich, so dass man, wenn der Gang der Uhr für eine Stelle des Zahnkranzes genau regulirt ist, nach einigen Stunden, wo eine andere Stelle des Zahnkranzes zum Angriff kommt, einen Unterschied im Gang von 2s bis 3s in 10 Minuten erwarten kann. Bei photographischen Aufnahmen von Sternen, wo man oft sehr lange zu exponiren genöthigt ist und deshalb eine sehr gleichmässige Führung des Fern rohrs haben muss, ist es unerlässlich, vorher das Uhrwerk möglichst genau für die betreffende Lage zu justiren. Es kommen dann wie die Erfahrung gelehrt hat, bei 10 Minuten Expositions zeit (in welcher Zeit erst Sterne 8ter Grösse auf der photographischen Platte kenntlich werden), Veränderungen von höchstens 0.5s im Gange der Uhr vor, eine Grösse, die eben nur bei einer solchen Verwendung des Fernrohrs kleiner gewünscht werden möchte.
 
