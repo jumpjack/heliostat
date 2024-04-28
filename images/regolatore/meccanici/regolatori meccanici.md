@@ -3,7 +3,7 @@
 
 REGOLATORI PURAMENTE MECCANICI 
 
-([versione HTML](https://jumpjack.github.io/heliostat/images/regolatore/meccanici/regolatori%20puramente%20meccanici.html))
+([versione HTML](index.html))
 
 I regolatori di cui ci occuperemo ora si basano su un'azione di regolazione, esercitata direttamente e meccanicamente sul motore stesso, sia a causa degli effetti della forza centrifuga, sia a causa delle reazioni esercitate su un mezzo gassoso o liquido.
 
