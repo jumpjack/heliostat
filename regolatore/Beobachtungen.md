@@ -13,6 +13,13 @@ https://books.google.it/books?id=bJhaAAAAcAAJ&pg=PA1
 
 <a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens2.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore-eichens2.jpg" width = "300"></a>
 
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore su telescopio-2.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore su telescopio-2.jpg" width = "200"></a>
+
+
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore su telescopio-3.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore su telescopio-3.jpg" width = "200"></a>
+
+
 
 **Il meccanismo dell'orologio sul grande rifrattore**
  
