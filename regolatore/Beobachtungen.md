@@ -81,8 +81,7 @@ in cui i punti di articolazione degli elementi sono in una posizione verticale, 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a0408449-e1de-40e0-933b-f97b9647f02d)
 
 
-
-Le sezioni dei collegamenti in una posizione verticale, la loro azione è nulla, mentre in una posizione orizzontale, esercitano una pressione sugli elementi mobili del regolatore che mantiene l'equilibrio. Nella pratica, i due estremi pensati non consentono di eseguire l'implementazione, tuttavia è possibile applicare questo principio per le posizioni intermedie e rendere così i movimenti del regolatore molto vicini all'isocronia. 
+sugli elementi mobili del regolatore che mantiene l'equilibrio. Nella pratica, i due estremi pensati non consentono di eseguire l'implementazione, tuttavia è possibile applicare questo principio per le posizioni intermedie e rendere così i movimenti del regolatore molto vicini all'isocronia. 
 Il modo in cui il signor EICHENS ha praticamente messo in atto il principio sopra accennato è evidente dalle figure allegate. La figura 3 mostra la posizione del regolatore e del sistema a leve che agisce su di esso quando l'orologio è in movimento. La figura 4, invece, mostra la situazione quando lo stesso è fermo. A e B sono due punti di rotazione fissi, C e D sono pesi di piombo fissati su due bracci perpendicolari l'uno all'altro. Dalla posizione in cui i pesi sono contro la direzione della gravità AM, si evince che nella posizione di riposo, essi eserciteranno una pressione nella direzione ac, ma ciò sarà annullato dalla rigidità delle leve. Tuttavia, man mano che l'asse ruota e le ali si allontanano, sollevando il peso G con il manicotto ad esso associato, la forza prodotta dai pesi C e D attraverso il sistema a leve A a b B in g - dove la barra ac è in presa con il manicotto - si esprimerà e 
 
 p.5
