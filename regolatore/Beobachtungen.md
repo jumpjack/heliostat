@@ -1,4 +1,4 @@
-Beobachtungen angestellt auf der Sternwarte des Kammerherrn, volume 2
+Beobachtungen angestellt auf der Sternwarte des Kammerherrn von Bülow in Bothkamp, volume 2, by H.C. Vogel
 
 https://books.google.it/books?id=bJhaAAAAcAAJ&pg=PA1
 
