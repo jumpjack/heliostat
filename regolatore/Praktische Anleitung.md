@@ -1,12 +1,19 @@
 
 Praktische Anleitung zur Anstellung astronomischer Beobachtungen mit besonderer Rücksicht auf die Astrophysik nebst einer modernen Instrumentenkunde, Di Miklós Konkoly Thege · 1883
 
+Guida pratica per condurre osservazioni astronomiche con particolare attenzione all'astrofisica, con aggiornamenti sulla strumentazione moderna, Di Miklós Konkoly Thege · 1883
+
 https://www.google.it/books/edition/Praktische_Anleitung_zur_Anstellung_astr/22AtAAAAYAAJ?hl=it&gbpv=1
   
-  
+----------------
+
   italiano
+
+  
   
 p.470
+
+[...]
 
 Naturalmente, questo è solo teoricamente corretto, poiché anche se la soluzione di questo problema è avvicinata da molti regolatori costruiti in modo simile, questa soluzione si verifica praticamente solo nei regolatori di Foucault e Villarceau, per cui vengono chiamati "Regulateurs isochrons". Tuttavia, a causa della loro struttura estremamente complicata e delicata, questi ultimi non sono diventati di uso generale e vengono utilizzati principalmente da meccanici stranieri, che preferiscono non occuparsi della costruzione di un orologio e optano per acquistarlo già realizzato da Eichens, Secrétan o recentemente da Breguet a Parigi. In Germania e in Austria ci sono anche alcuni di questi regolatori, tra gli altri, nel famoso rifrattore a Bothkamp e nell'osservatorio di ÓGyalla in Ungheria con regolazione del peso, negli osservatori di Kiel e Graz con regolazione a molla. Vogliamo esaminare più da vicino questi orologi di precisione estremamente interessanti.
 
