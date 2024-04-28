@@ -15,3 +15,4 @@
 - https://www.digitale-sammlungen.de/de/view/bsb11032059?page=5  (biblioteca monaco)
 - https://www.persee.fr/
 - https://patrimoine.minesparis.psl.eu/
+- https://patrimoine.ensam.eu/ - Bibliothèque patrimoniale numériquearts et metiers
