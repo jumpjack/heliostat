@@ -11,21 +11,21 @@ I primi sono ben noti con il nome di regolatori a forza centrifuga, di cui il re
 
 Il regolatore di Watt è composto, come si sa, da quattro barre articolate disposte a rombo (vedi fig. 15), di cui due articolate sull'asse del motore si estendono oltre la loro articolazione con le altre due, e portano due pesanti sfere che, ruotando, possono allontanarsi più o meno dall'asse del motore a causa della forza centrifuga, e quindi spingono o attraggono le altre due braccia che fanno salire o scendere un collare o manicotto al quale è adattata una barra che comanda il movimento della valvola di introduzione del vapore.
 
-Per ogni velocità, la forma di questo moderatore è determinata e può essere calcolata matematicamente. Supponiamo, per semplicità, che la sfera sia ridotta a un punto materiale. Nella posizione di equilibrio, le due componenti perpendicolari a AC, fig. 16, devono essere in equilibrio, e quelle che corrispondono a questa direzione sono distrutte dalla resistenza del pendolo. Quindi, se rappresentiamo la forza centrifuga esercitata lungo CD con v^2/r e se la velocità di rotazione v è uguale a $(r * \omega)$, con $\omega$ l'angolo di rotazione :
+Per ogni velocità, la forma di questo moderatore è determinata e può essere calcolata matematicamente. Supponiamo, per semplicità, che la sfera sia ridotta a un punto materiale. Nella posizione di equilibrio, le due componenti perpendicolari a AC, fig. 16, devono essere in equilibrio, e quelle che corrispondono a questa direzione sono distrutte dalla resistenza del pendolo. Quindi, se rappresentiamo la forza centrifuga esercitata lungo CD con v^2/r e se la velocità di rotazione v è uguale a $(r * \omega)$, con $\$ l'angolo di rotazione :
 
 1) $\frac{v^2}{r} * cos(\alpha) = r  {\omega}^2 * cos(\alpha)    =    g * cos(90°-\alpha) = g * sin(\alpha)$,
 
 da cui
 
-2) $r = \frac{g}{{\omega}^2} * tan(\alpha)$
+2) $r = \frac{g}{\omega^2} * tan(\alpha)$
 
-Poiché $r = AD * tan(\alpha)$, si conclude che $AD = \frac{g}{{\omega}^2}$ . Quindi le sfere saranno posizionate sul punto C della linea CD determinata da questa equazione.
+Poiché $r = AD * tan(\alpha)$, si conclude che $AD = \frac{g}{\omega^2}$ . Quindi le sfere saranno posizionate sul punto C della linea CD determinata da questa equazione.
 
 La lunghezza AD, per una data velocità, è facile da ottenere sperimentalmente. Sia t il tempo di una singola rivoluzione del regolatore alla velocità di regime che si vuole mantenere nella macchina, 2π il percorso coperto da un giro all'unità di distanza, $\frac{2π}{t} = \omega$.
 
 Quindi:
 
-3) $AD = \frac{g}{{\omega}^2} = \frac{g*t^2}{4{\pi}^2}$
+3) $AD = \frac{g}{\omega^2} = \frac{g*t^2}{4{\pi}^2}$
 
 da cui
 
