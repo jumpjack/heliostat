@@ -4,7 +4,7 @@ Il meccanismo ad orologeria che pilota il siderostato di Foucault fu costruito d
 - https://web.astronomicalheritage.net/index.php/show-entity?identity=146&idsubentity=1
 
 
-Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault nel [Comptes Rendus n.57 del 1863](https://gallica.bnf.fr/ark:/12148/bpt6k30143/f743.item.r=foucault#), dove dice:
+Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault nel [Comptes Rendus n.55 del 1862 (p.135)](https://gallica.bnf.fr/ark:/12148/bpt6k3012g/f134.item) e nel [Comptes Rendus n.57 del 1863](https://gallica.bnf.fr/ark:/12148/bpt6k30143/f743.item.r=foucault#), dove dice:
 
 *Ainsi la condition de l'isochronisme, considéré indépendamment de la
 durée de révolution, est que, au lieu d'une force constante P agissant verticalement 
