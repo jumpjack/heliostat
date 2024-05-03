@@ -4,7 +4,11 @@ Il meccanismo ad orologeria che pilota il siderostato di Foucault fu costruito d
 - https://web.astronomicalheritage.net/index.php/show-entity?identity=146&idsubentity=1
 
 
-Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault nel [Comptes Rendus n.55 del 1862 (p.135)](https://gallica.bnf.fr/ark:/12148/bpt6k3012g/f134.item) e nel [Comptes Rendus n.57 del 1863](https://gallica.bnf.fr/ark:/12148/bpt6k30143/f743.item.r=foucault#), e successivamente anche nel C.R. volume 61, sia a [pagina 278](https://gallica.bnf.fr/ark:/12148/bpt6k3018b/f278.item) che a [pag. 430](https://gallica.bnf.fr/ark:/12148/bpt6k3018b/f411.vertical) (come menzioanto in ["Regolatori a forza centrifuga" di Padelletti, a pagina 8](https://books.google.it/books?id=H3MdepX6VjwC&pg=PA57)):
+Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault a pià riprese nel Comptes Rendus:
+- [Comptes Rendus vol. 25, secondo semestre 1843, p.154](https://gallica.bnf.fr/ark:/12148/bpt6k2982c/f158.item.r=foucault) (citato in [VICTORIAN PHYSICISTS AND SPEED REGULATION: AN ENCOUNTER BETWEEN SCIENCE AND TECHNOLOGY](https://web.archive.org/web/20180721173433/http://rsnr.royalsocietypublishing.org/content/roynotesrec/26/2/205.full.pdf), By Otto Mayr)
+- [Comptes Rendus vol. 55 del 1862 (p.135)](https://gallica.bnf.fr/ark:/12148/bpt6k3012g/f134.item)
+- [Comptes Rendus vol. 57 del 1863](https://gallica.bnf.fr/ark:/12148/bpt6k30143/f743.item.r=foucault#)
+- Comptes rendus vol. 61, (pag. [278](https://gallica.bnf.fr/ark:/12148/bpt6k3018b/f278.item) e pag. [430](https://gallica.bnf.fr/ark:/12148/bpt6k3018b/f411.vertical)) (come menzionato in ["Regolatori a forza centrifuga" di Padelletti, a pagina 8](https://books.google.it/books?id=H3MdepX6VjwC&pg=PA57)):
 
 *Ainsi la condition de l'isochronisme, considéré indépendamment de la
 durée de révolution, est que, au lieu d'une force constante P agissant verticalement 
