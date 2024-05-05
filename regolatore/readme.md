@@ -1,10 +1,26 @@
-Il meccanismo ad orologeria che pilota il siderostato di Foucault fu costruito da Willliam Eichens, che lo aveva già utilizzato con successo su telescopi a montatura equatoriale, come ad esempio quello di Friedrich Gustav von Bülow, nell'osservatorio di Bothkamp, vicino a  Kiel:   
+![image](https://github.com/jumpjack/heliostat/blob/main/images/regolatore/tav14-(solo%20regolatore)-b-mini.jpg)
+
+Il meccanismo ad orologeria che pilota il siderostato di Foucault fu costruito da Willliam Eichens, che lo aveva già utilizzato con successo su telescopi a montatura equatoriale, come ad esempio quello di Friedrich Gustav von Bülow, nell'osservatorio di Bothkamp, vicino a  Kiel, di cui appunto si parla in "[Beobachtungen angestellt auf der Sternwarte des Kammerherrn von Bülow in Bothkamp, volume 2](https://github.com/jumpjack/heliostat/blob/main/regolatore/Beobachtungen.md), by H.C. Vogel":  
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore%20su%20telescopio-2.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore%20su%20telescopio-2.jpg" width = 300></a>
+
+<a href="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore%20su%20telescopio-3.jpg"><img src="https://github.com/jumpjack/heliostat/blob/main/images/regolatore/regolatore%20su%20telescopio-3.jpg" width = 300></a>
+
 
 - https://www.akg-images.com/archive/The-large-telescope-at-the-observa--tory-in-Bothkamp-2UMDHUHXN509.html
 - https://web.astronomicalheritage.net/index.php/show-entity?identity=146&idsubentity=1
 
+Un altro telescopio su cui fu utilizzato, però forse in un'altra forma, è quello dell'osservatorio di Marsiglia, qui rappresentato:
 
-Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault a pià riprese nel Comptes Rendus:
+![image](https://github.com/jumpjack/heliostat/assets/1620953/8fa40bf4-413d-429e-8689-c1e04c4fd5b6) ![image](https://github.com/jumpjack/heliostat/assets/1620953/ec740946-1ba5-4c80-9225-e7a2ea30e0b3)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/eced900b-c8e9-42db-976a-7a40497d59c1)
+
+
+
+
+
+Pare che il primo accenno alla condizione di iscocronismo realizata da questo regolatore sia stata fatta da Foucault a più riprese nel Comptes Rendus:
 - [Comptes Rendus vol. 25, secondo semestre 1843, p.154](https://gallica.bnf.fr/ark:/12148/bpt6k2982c/f158.item.r=foucault) (citato in [VICTORIAN PHYSICISTS AND SPEED REGULATION: AN ENCOUNTER BETWEEN SCIENCE AND TECHNOLOGY](https://web.archive.org/web/20180721173433/http://rsnr.royalsocietypublishing.org/content/roynotesrec/26/2/205.full.pdf), By Otto Mayr)
 - [Comptes Rendus vol. 55 del 1862 (p.135)](https://gallica.bnf.fr/ark:/12148/bpt6k3012g/f134.item)
 - [Comptes Rendus vol. 57 del 1863](https://gallica.bnf.fr/ark:/12148/bpt6k30143/f743.item.r=foucault#) (pp.738-740)
@@ -19,7 +35,7 @@ cioè:
 
 La condizione dell'isocronismo, considerata indipendentemente dalla durata della rivoluzione, è che, invece di una forza costante P agente verticalmente su M, si abbia una forza variabile $p = P cos \alpha$, proporzionale alla distanza verticale del centro delle masse M dal punto di sospensione.
 
-Anche se nel testo non ci sono figure, lo schema di riferimento dovrebbe essere quello del generico pendolo di Watt, con due pesi P di massa M uniti da un parallelogramma che ruotano intorno a un asse, come illustratìo nella Recueil des Travaux:
+Anche se nel testo non ci sono figure specifiche di questo modello a due contrappesi ortogonali, lo schema di riferimento dovrebbe essere quello del generico pendolo di Watt, con due pesi P di massa M uniti da un parallelogramma che ruotano intorno a un asse, come illustrato nella _Recueil des Travaux_:
 
 ![image](https://github.com/jumpjack/heliostat/blob/main/images/tav16-fig.2.jpg)
 
