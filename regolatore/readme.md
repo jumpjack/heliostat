@@ -46,6 +46,13 @@ Nella stessa "Recueil" il testo esplicativo dice:
 
 Trattandosi di masse simmetriche, chiaramente il "centro delle masse" si trova proprio sull'asse di rotazione.
 
+Gli ingranaggi interni del regolatore sono anch'essi descritti in "[Beobachtungen angestellt auf der Sternwarte des Kammerherrn von Bülow in Bothkamp, volume 2](https://github.com/jumpjack/heliostat/blob/main/regolatore/Beobachtungen.md), by H.C. Vogel", da cui è tratta questa figura:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/4996080d-1704-4c15-a590-19bfd3c78a74)
+
+
+Notare il probabile refuso sul numero dei denti della ruota D, che devono essere 156 anzichè 165 affinchè tornino i conti rispetto a quanto spiegato nel testo.
+
 --------
 
 Recueil des travaux scientifiques de Léon Foucault
