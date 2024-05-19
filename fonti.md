@@ -16,3 +16,4 @@
 - https://www.persee.fr/
 - https://patrimoine.minesparis.psl.eu/
 - https://patrimoine.ensam.eu/ - Bibliothèque patrimoniale numériquearts et metiers
+- https://www.e-rara.ch/ (scansioni complete e ad alta risoluzione)
