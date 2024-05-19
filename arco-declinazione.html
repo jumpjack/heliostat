@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calcolo scala graduata declinazione per eliostati di Foucault e Silbermann</title>
+    <style>
+
+    </style>
+</head>
+<body>
+<h1>Calcolo scala graduata declinazione per eliostato di Foucault e Silbermann<br></h1>
+Apparentemente è presente anche una scala graduata sul lato opposto dell'arco, 
+ma non sono riuscito a capire che scala sia; ipotizzo siano semplici gradi da -25 a +25.
+<br>
+    <canvas id="canvas" width="800" height="400"></canvas>
+    <a href="https://raw.githubusercontent.com/jumpjack/heliostat/main/images/foucault_tipo1/declinazione.png"><img src="https://raw.githubusercontent.com/jumpjack/heliostat/main/images/foucault_tipo1/declinazione.png" width = 600></a>
+
+    <script>
+        // Funzione per calcolare la declinazione solare
+        function calcolaDeclinazioneGiorno(N) {
+            return 23.45 * Math.sin((360 * (N + 284)/ 365)  * Math.PI / 180) ;
+        }
+
+        // Funzione per ottenere la data corrispondente al giorno dell'anno
+        function getDataGiorno(N) {
+            const startDate = new Date(new Date().getFullYear(), 0, 1); // Inizio dell'anno corrente
+            const data = new Date(startDate);
+            data.setDate(startDate.getDate() + N); // Aggiunge N giorni
+            return data.toLocaleDateString("it-IT", { day: "2-digit", month: "2-digit" });
+        }
+
+        // Array per memorizzare i valori di declinazione
+        let declinazioni = [];
+
+        // Calcola la declinazione solare per ogni intervallo di 10 giorni per tutto l'anno
+        for (let giorno = 0; giorno <= 365; giorno += 10) {
+            let declinazione = calcolaDeclinazioneGiorno(giorno);
+console.log( getDataGiorno(giorno),declinazione.toFixed(2))            
+            declinazioni.push({
+                giorno: giorno,
+                data: getDataGiorno(giorno),
+                declinazione: declinazione.toFixed(2) // Arrotonda a due cifre decimali
+            });
+        }
+
+        // Funzione per disegnare le linee lungo il bordo di una circonferenza e le date corrispondenti
+        function disegnaLineeCirconferenza() {
+            // Seleziona l'elemento del documento in cui disegnare le linee
+            const canvas = document.getElementById("canvas");
+            const ctx = canvas.getContext("2d");
+
+            // Larghezza e altezza del canvas
+            const width = canvas.width;
+            const height = canvas.height;
+
+            // Raggio della circonferenza
+            const radius = 700;
+            const segmentLength = 20;
+            const XOFFSET = -70;
+            const YOFFSET = 800;
+
+            // Colore e spessore della linea
+            ctx.strokeStyle = "black";
+            ctx.lineWidth = 2;
+            ctx.fillStyle = "black";
+            ctx.font = "12px Arial";
+
+            // Disegna le linee lungo il bordo di una circonferenza e le date corrispondenti per valori positivi
+            declinazioni.filter(item => ((item.giorno >= 180) && (item.giorno < 360))).forEach(item => {
+                // Calcola l'angolo in base al valore di declinazione
+                const angle = Math.PI-((item.declinazione-90 / 1) * Math.PI /180);
+
+                // Calcola le coordinate del punto sul bordo della circonferenza
+                const x = width / 2 + (radius-50) * Math.cos(angle);
+                const y = height / 2 - (radius-50) * Math.sin(angle);
+
+                // Calcola le coordinate del punto finale della linea
+                const endX = x + segmentLength * Math.cos(angle);
+                const endY = y - segmentLength * Math.sin(angle);
+
+                const endX2 = x - 10 * Math.cos(angle);
+                const endY2 = y - 0 * Math.sin(angle);
+
+                // Disegna la linea
+                ctx.beginPath();
+                ctx.moveTo(x+10 + XOFFSET, y - YOFFSET +0);
+                ctx.lineTo(endX+10 + XOFFSET, endY - YOFFSET +0);
+                ctx.stroke();
+
+                // Disegna la data corrispondente accanto alla linea
+                ctx.fillText(item.data, endX + XOFFSET , endY - YOFFSET +20);
+                //console.log(item, angle*180/3.14);                
+            });
+
+            // Disegna le linee lungo il bordo di una circonferenza e le date corrispondenti per valori negativi
+            declinazioni.filter(item => ((item.giorno >=0) && (item.giorno < 180))).forEach(item => {
+                // Calcola l'angolo in base al valore di declinazione
+                const angle = Math.PI-(item.declinazione-90 / 1) * Math.PI /180;
+
+                // Calcola le coordinate del punto sul bordo della circonferenza
+                const x = width / 2 + (radius+10) * Math.cos(angle);
+                const y = height / 2 - (radius+10) * Math.sin(angle);
+
+                // Calcola le coordinate del punto finale della linea
+                const endX = x + segmentLength * Math.cos(angle);
+                const endY = y - segmentLength * Math.sin(angle);
+
+                const endX2 = x - 0 * Math.cos(angle);
+                const endY2 = y - 0 * Math.sin(angle);
+
+                // Disegna la linea
+                ctx.beginPath();
+                ctx.moveTo(x + XOFFSET, y  - YOFFSET +20);
+                ctx.lineTo(endX + XOFFSET, endY  - YOFFSET+20);
+                ctx.stroke();
+
+                // Disegna la data corrispondente accanto alla linea
+                ctx.fillText(item.data, endX2 + XOFFSET-10 , endY2+10 - YOFFSET);
+                //console.log(item, angle*180/3.14);       
+            });
+            
+ // Chiama la funzione per disegnare gli angoli
+    disegnaAngoli(ctx, width, height);
+                
+        }
+
+// Funzione per disegnare gli angoli da -24° a +24° con linee più lunghe ogni 5 gradi
+function disegnaAngoli(ctx, width, height) {
+    // Raggio della circonferenza degli angoli
+    const radiusAngle = 600;
+
+    // Lunghezza del segmento delle linee degli angoli
+    const segmentLengthMain = 10; // Lunghezza della linea principale
+    const segmentLengthSub = 40; // Lunghezza delle linee secondarie
+
+    // Offset per il posizionamento degli angoli
+    const XOFFSET = -70;
+    const YOFFSET = -500;
+
+    // Disegna gli angoli da -24° a +24°
+    for (let angle = -25; angle <= 25; angle += 1) {
+        // Calcola l'angolo in radianti
+        const angleRad = (270 - angle) * Math.PI / 180;
+
+        // Calcola le coordinate del punto iniziale della linea principale degli angoli
+        const startXMain = width / 2 + radiusAngle * Math.cos(angleRad);
+        const startYMain = height / 2 - radiusAngle * Math.sin(angleRad);
+
+        // Calcola le coordinate del punto finale della linea principale degli angoli
+        const endXMain = startXMain + segmentLengthMain * Math.cos(angleRad);
+        const endYMain = startYMain - segmentLengthMain * Math.sin(angleRad);
+
+        // Disegna la linea principale degli angoli
+        ctx.beginPath();
+        ctx.moveTo(startXMain + XOFFSET, startYMain + YOFFSET);
+        ctx.lineTo(endXMain + XOFFSET, endYMain + YOFFSET);
+        ctx.stroke();
+
+        // Disegna le linee secondarie ogni 5 gradi
+        if (angle % 5 === 0) {
+            // Calcola le coordinate del punto finale della linea secondaria degli angoli
+            endXSub = startXMain + segmentLengthSub * Math.cos(angleRad);
+            endYSub = startYMain - segmentLengthSub * Math.sin(angleRad);
+
+            // Disegna la linea secondaria degli angoli
+            ctx.beginPath();
+            ctx.moveTo(startXMain + XOFFSET, startYMain + YOFFSET);
+            ctx.lineTo(endXSub + XOFFSET, endYSub + YOFFSET);
+            ctx.stroke();
+
+            // Disegna l'angolo corrispondente accanto alla linea secondaria
+            ctx.fillText(-angle, endXSub + XOFFSET, endYSub + YOFFSET + 15);
+        } else {
+            //
+        }
+console.log(endXMain, endXSub);        
+    }
+}
+
+
+        // Chiama la funzione per disegnare le linee lungo il bordo di una circonferenza e le date quando il documento è pronto
+        document.addEventListener("DOMContentLoaded", disegnaLineeCirconferenza);
+    </script>
+</body>
+</html>
+
+
