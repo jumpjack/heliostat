@@ -99,7 +99,12 @@ Seen from ground, with observer always in same position along the year, and sun 
 
 Analemma has an "8" shape, both if plotted in Alt/Az coordinates and Declination/Hour coordinates; the big difference is that if plotted in Alt/Az, the curve is different for any different latitude of the observer; instead, if plotted in terms of Declination and Hour Angle changes, the curve is costant.
 
-Above plot is in Declination/HourAngle coordinates; following one is in Altitude/Azimuth coordinates:
+In Declination/HourAngle coordinates:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/05f32589-3d3e-48ff-8d6c-0b9a03615ef2)
+([source](https://ben8photo.altervista.org/en/equation-of-time))
+
+In Altitude/Azimuth coordinates:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/27a1c074-1acc-43e0-be95-1be0aef33ddd)
 
