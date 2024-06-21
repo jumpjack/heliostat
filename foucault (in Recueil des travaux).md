@@ -27,7 +27,8 @@ Siderostato (tavole 14 e 15 in fondo al libro)
 ------------
 
 P. 427
-# Descrizione dell'eliostato (V. nota (1) )
+# Descrizione dell'eliostato 
+(V. nota (1) )
 
 ## Primo modello
 
@@ -35,7 +36,7 @@ Lo specchio **M** (fig. 24) di forma allungata si appoggia su una colonna vertic
 
 La colonna **V**, che sostiene lo specchio, è in grado di ricevere due diversi movimenti: un movimento di traslazione e un movimento di abbassamento o sollevamento; tuttavia, qualunque sia la sua posizione, è necessario che il punto medio **C'** della retta che forma l'asse dei perni del disco si mantenga a una distanza invariabile dal punto **C** dell'asse orario situato al centro dell'arco di declinazione.
 
-*(1).  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.*
+*(1)  Memoria in supporto di una domanda di brevetto (17 marzo 1862) e di una domanda di integrazione (18 ottobre 1862). - Vedi Collezione dei Brevetti, n. 48,900.*
 
 P.428:
 
