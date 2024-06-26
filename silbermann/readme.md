@@ -6,26 +6,44 @@ Progettato da Jean-Thiébault Silbermann, costruito da Jean-Baptiste Soleil.
 
 # Particolari
 
+Pinza di serraggio del tubo di direzionamento orizzontale del riflesso:
+
 ![image](pinza-superiore.jpg)
-Pinza di serraggio del tubo di direzionamento orizzontale del riflesso
+
+
+
+Pinza di fissaggio del piatto girevole, usato per orientare l'apparecchio sul piano meridiano:
 
 ![image](pinza-base.jpg)
-Pinza di fissaggio del piatto girevole, usato per orientare l'apparecchio sul piano meridiano
+
+
+
+Scala riportata sull'arco di declinazione, per regolare lo strumento sulla data corretta:
 
 ![image](scala-declinazione.jpg)
-Scala riportata sull'arco di declinazione, per regolare lo strumento sulla data corretta
+
+
+Pinze di fissaggio, e manopola non identificata:
 
 ![image](pinze.jpg)
-Pinze di fissaggio, e manopola non identificata
+
+
+
+Pinnula per collimare lo strumento coi raggi solari:
 
 ![image](pinnula.jpg)
-Pinnula per collimare lo strumento coi raggi solari
+
+
+
+Quadrante orario:
 
 ![image](quadrante-superiore.jpg)
-Quadrante orario
+
+
+
+Quadrante per lettura declinazione:
 
 ![image](quadrante-inferiore.jpg)
-Quadrante per lettura declinazione
 
 
 
