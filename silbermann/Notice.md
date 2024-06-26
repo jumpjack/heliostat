@@ -101,9 +101,78 @@ P.10
 scanalatura NS perpendicolare alla superficie dello specchio; in questa scanalatura scivola una spina che serve anche da cerniera ai due steli obliqui uguali, che sono fissati allo stesso modo a cerniera a distanza perfettamente uguale dall'asse della cerniera SS' delle forchette, per costituire il parallelogramma descritto in precedenza.
 Infine, su uno dei lati IS della forchetta di incidenza S'IS, si trova un piccolo telescopio o cercatore TT', il cui asse ottico è parallelo all'asse di rotazione della sua coda I' o del raggio incidente; durante l'esperimento, mira sempre al sole. La forchetta fissa o di riflessione SRS' non ha mirino, è l'immagine stessa del sole che viene diretta sul punto desiderato; questa immagine è sempre nel piano del cerchio R'R".
 
+-----------
 
+P.11
 
+### MESSA IN OPERA DELL'ELIOSTATO
 
+Per prima cosa si carica l'orologio e lo si avvia imprimendogli movimenti di rotazione bruschi e opposti nel piano orizzontale, come si è obbligati a fare per mettere in movimento i cronometri e gli orologi marini, e talvolta anche gli orologi ordinari. Se successivamente l'orologio ritarda, il piccolo quadrante sull'orologio ha una lancetta che si può spingere verso "A" per avanzare, e viceversa, verso "R" se avanza.
+
+#### Calibrazione
+
+Si potrà inizialmente allentare la vite di pressione / che trattiene il quarto di cerchio L L' delle latitudini, in modo da posizionare verticalmente l'orologio e la colonna che sostiene lo specchio: si stringerà poi la vite 7. In questa posizione dello strumento, la calibrazione risulterà più semplice. Si dirigerà la lunghezza del livello parallelamente alla linea retta che unisce due delle viti calanti, ad esempio V' e V", mediante il piano orizzontale A A' che si renderà libero allentando la sua vite di pressione a. Per facilitare la calibrazione, ho diviso questo piano in quattro parti uguali mediante due diametri perpendicolari; si collegherà una delle estremità del diametro perpendicolare alla direzione del livello con il segno fatto sulla pinza della vite di pressione. Si avviterà o sviterà poi una o l'altra di queste due viti calanti, in modo da portare la bolla d'aria a occupare esattamente il centro del livello. Fatto ciò, si ruoterà questo cerchio di un quarto di giro; in questo modo il livello avrà una posizione perpendicolare alla precedente, o nella direzione della terza vite calante v; quindi, a seconda della posizione della bolla, si girerà o si allenterà solo questa vite fino a che la bolla occupi il centro delle sue divisioni. Sarà opportuno ripetere questa stessa operazione portando il livello a 180° dalle posizioni precedenti, immediatamente dopo ogni operazione, per assicurarsi che il livello sia ben 
+
+---------
+
+P.12
+
+parallelo al piano che lo trattiene. Se accadesse che ruotandolo così di una semicirconferenza non tornasse allo stesso punto, allora il livello sarebbe stato disturbato, e si dovrà dividere la differenza in due, sollevando prima la vite che richiederebbe di essere sollevata solo della metà della differenza indicata dal livello; l'altra metà dell'errore verrà corretta dalle tre viti che trattengono uno dei capi del livello, e delle quali una trattiene le due laterali che contrastano con il cerchio.
+
+#### Messa a Punto della Latitudine del Luogo
+
+Una volta che la base è ben calibrata, si girerà verso il tramonto del sole o verso ovest il lato dell'apparecchio che porta il quarto di cerchio delle latitudini L L' fissato all'orologio; si farà coincidere il vernier che si trova sul supporto dell'orologio con il grado di latitudine del luogo dell'esperimento. Allora lo strumento riceverà un'inclinazione nel senso di quella del disegno. L'asse dell'orologio sarà parallelo all'asse terrestre, se il piano di inclinazione sarà nel piano del meridiano del luogo. Questa posizione, che è necessaria, si otterrà molto facilmente nel seguente modo.
+
+#### Messa a Punto del Meridiano
+
+Per mettere a punto il meridiano, si allenta la vite di pressione che trattiene l'arco superiore sull'asse dell'orologio, per poter girare questo arco in modo da allineare il segno sull'ago all'ora del quadrante solare, cioè all'ora vera al momento della posa; poiché l'orologio è caricato e funziona, si stringerà fortemente il pulsante che trattiene la scatola di questo cerchio sull'asse dell'orologio e 
+
+----------
+
+P.13
+
+trascina il suo cerchio nel suo movimento di rotazione; si allenta il pulsante del cerchio diviso, si spingerà questo arco fino a che l'indice indicherà il giorno dell'esperimento su una o l'altra divisione: 1º sui gradi, il numero indicato nell'Annuario del bureau delle longitudini, o nella Conoscenza dei Tempi, e segnato accanto alla data dell'esperimento. Se questa declinazione è boreale come in estate, sarà la divisione più vicina all'asse della forchetta a servire; e in inverno, dove la declinazione è australe, sarà la divisione verso l'altra estremità dell'arco che si dovrà prendere. Allora, con la lancetta all'ora e l'arco alla declinazione, non rimarrà che mettere a punto il piccolo telescopio tirando il suo oculare, e dirigerlo verso il sole facendo ruotare tutto lo strumento con il cerchio orizzontale, senza disturbare le viti calanti, e poi fermare questo cerchio, e lo strumento sarà orientato rispetto al meridiano del luogo, e inoltre il raggio incidente sarà diretto, poiché quello nell'asse del telescopio è parallelo a questo raggio.
+
+2º Se non si dispone della declinazione vera, si cercherà nella divisione in giorni la data del giorno dell'esperimento, che si metterà sotto il segno del riferimento; e poiché i giorni sono segnati solo di cinque in cinque, si dividerà ad occhio l'intervallo in cinque parti, e poiché può capitare che dal 25 al 28, 29, 30 o 31 a seconda del mese ci siano 4, 5, 6 o 7 giorni fino al 1º successivo, si terrà conto di ciò, e lo strumento orientato come precedentemente sarà orientato.
+
+Infine, se non si conosce né la declinazione né la data del giorno, purché si conosca l'ora vera, necessariamente, all'ora indicata, il sole si troverà nel piano di questo arco, qualunque sia la sua declinazione; si mirerà quindi al sole dirigendo l'arco e il piano orizzontale simultaneamente, e quando il telescopio mirerà al sole lo strumento sarà orientato. Questo metodo, molto semplice, è forse il più preciso. 
+Si potrà dirigere lo strumento anche facendo cadere l'ombra proiettata dall'estremità R''' su questo stesso arco: un solo segno servirà sempre da coincidenza.
+
+----------
+
+P.14
+
+#### Riflesso dell'Immagine Solare
+Per riflettere il raggio incidente sullo schermo, si allentano le due viti di pressione che trattengono la douille e l'arco del cerchio della riflessione, e si dirige l'asse della forchetta verso il punto dove si vuole avere la riflessione, girando l'arco della riflessione, prima con la sua douille o asse, e poi inserendo o estraendo l'arco più o meno dalla sua scatola che lo guida. Una volta riflessa l'immagine sul punto desiderato, si stringe la vite di pressione che è sulla base dell'orologio, poi quella dell'arco, e la riflessione è diretta e rimane in questa direzione che si trova nel piano del cerchio.
+
+----------
+
+P.15
+
+### RIASSUNTO
+
+Per riassumere in poche parole la procedura di orientamento,
+
+1° Caricare l'orologio: L'orologio viene caricato e funziona per 24 ore.
+2° Calibrare lo strumento: Lo strumento viene messo in calibrazione.
+3° Impostare la latitudine: Si imposta il quarto di cerchio laterale sulla latitudine.
+4° Regolare l'orologio: Si imposta la lancetta dell'orologio sull'ora corretta e si fissa l'orologio all'asse tramite la sua vite di pressione.
+5° Impostare la declinazione: Si imposta il cerchio sulla declinazione del giorno o sulla data, oppure si utilizza il metodo finale per impostare la declinazione insieme al meridiano.
+6° Allineare al meridiano: Si allinea l'asse dell'orologio al meridiano.
+7° Dirigere il raggio riflesso: Si dirige il raggio riflesso e lo strumento inizia a funzionare.
+
+++++++++++
+
+Per garantire la buona realizzazione del mio Eliostato, posso affermare che ne ho affidato l'esecuzione al signor Soleil, ottico, in rue de l'Odéon, per *l'insieme*, e al signor Neumann, orologiaio, in rue de Seine-Saint-Germain, per l'orologio, entrambi artisti molto distinti, ognuno nel proprio campo, e ben conosciuti dagli uomini di scienza.
+
+Al Conservatoire royal des Arts et Métiers,
+il 27 febbraio 1843.
+
+J.-T. SILBERMANN,
+Preparatore di Fisica presso il Conservatoire des Arts
+et Métiers e presso la Facoltà delle Scienze di Parigi.
+
+--------------------------------
 
 ## Originale francese
 
