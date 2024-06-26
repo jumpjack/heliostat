@@ -2,6 +2,8 @@
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/dca90838-7107-4b1f-8dc5-90c478007dcb)
 
+https://www.digitale-sammlungen.de/en/view/bsb10135195?page=,1
+
 ## Italiano by ChatGPT
 
 P.3
