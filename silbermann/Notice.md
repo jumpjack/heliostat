@@ -74,7 +74,7 @@ Orologio:
 
 ----------
 
-figura
+<a href="notice-figg1-2.jpg"><img src="notice-figg1-2.jpg" width = 500></a>
 
 ----------
 
