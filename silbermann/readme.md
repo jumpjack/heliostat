@@ -4,6 +4,9 @@ Progettato da Jean-Thiébault Silbermann, costruito da Jean-Baptiste Soleil.
 
 ![image](001.jpg)
 
+[https://www.horiba.com/bra/scientific/resources/jobin-yvon-history-200-years-of-optical-innovation/instrumentation-1819-1874/silbermanns-heliostat-1843
+](https://www.horiba.com/bra/scientific/resources/jobin-yvon-history-200-years-of-optical-innovation/instrumentation-1819-1874/silbermanns-heliostat-1843)
+
 # Particolari
 
 Pinza di serraggio del tubo di direzionamento orizzontale del riflesso:
