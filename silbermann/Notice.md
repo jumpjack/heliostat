@@ -4,6 +4,104 @@
 
 ## Italiano by ChatGPT
 
+P.3
+
+Ho l'onore di sottoporre al giudizio dell'Accademia uno strumento che, pur non essendo nuovo nella sua specie, è tuttavia basato su principi che differiscono completamente da quelli applicati fino ad oggi da grandi fisici e artisti che hanno creato e semplificato l'eliostato, strumento di cui si tratta. Ho dovuto temere di proporvi uno strumento così delicato nel suo insieme, e di cui si sono occupati uomini così illustri; ma, fiducioso nella mia opera, che ha già ricevuto l'approvazione di molti degli onorevoli membri di questa assemblea, nonché di alcuni altri scienziati, mi era dovere presentarvelo, poiché la sua costruzione semplice, il facile orientamento e il prezzo che non raggiungerà di gran lunga quello degli altri, lo renderanno accessibile a tutti i gabinetti di fisica così come agli sperimentatori, il cui numero cresce costantemente e le cui importanti ricerche necessitano di un simile strumento.
+
+Fahrenheit, intorno al 1700, che per primo per le esperienze ottiche continue, realizzò uno strumento per fissare il raggio riflesso sempre nello stesso punto, impiegò due specchi; ma la perdita di luce causata da questa doppia riflessione ne elimina l'impiego 
+
+---------
+
+P.4
+
+nei casi in cui è necessaria molta luce. Si cercò quindi di eliminare uno degli specchi, cosa che fece S'Grawsend, applicando un altro principio di movimento; il suo strumento, di difficile impiego, fu perfezionato dapprima da Charles, che ne rese la pratica più comoda con il suo posizionatore; poi da Malus, che apportò alcune modifiche per diminuire la deviazione del raggio di luce riflesso dallo specchio. Infine, il signor Gambey, uno dei vostri illustri colleghi, adottò ancora un altro principio che rese questo utile strumento di un uso più comodo, proteggendolo dai calcoli o dai tracciati richiesti da quello di S'Grawsend, e porta, oltre alla sua eleganza, il marchio della grande perfezione di costruzione che il signor Gambey applica a tutti gli strumenti eseguiti sotto la sua direzione.
+
+Tutti questi strumenti sono di difficile orientamento rispetto al meridiano del luogo, che deve essere conosciuto in anticipo per posizionare lo strumento. Adottando i principi dell'astronomia comuni agli altri, ma traducendoli diversamente in meccanica, credo di essere al riparo da tutte queste difficoltà di orientamento, di calcolo o di tracciato geometrico, senza allontanarmi dalla precisione; inoltre, il mio specchio, potendo assumere quasi tutte le posizioni possibili attorno al suo centro di figura, può quindi anche riflettere un raggio riflesso costante in qualsiasi direzione.
+
+In tutti gli eliostati, lo specchio è guidato da una lancetta d'orologio il cui asse di rotazione è diretto parallelamente all'asse del mondo. Questa lancetta segue il movimento diurno del sole, e quindi compie come lui un giro in 24 ore. Ne risulta da questa situazione dell'asse di rotazione della lancetta, che il quadrante dell'orologio è parallelo all'equatore terrestre e orientato in modo tale che la lancetta che indica mezzogiorno e mezzanotte sia esattamente nel piano del meridiano del luogo. Gli eliostati differiscono tra loro per il rinvio del movimento della lancetta allo specchio riflettente e per l'applicazione diversa delle 
+
+---------
+
+P.5
+
+
+condizioni meccaniche imposte dal movimento apparente del sole.
+
+Queste condizioni sono, 1° l'angolo orario, cioè l'angolo che formano tra loro il piano del meridiano del luogo e un secondo piano che interseca il primo seguendo l'asse della Terra e passando per il centro del sole; e 2° l'angolo polare del sole, cioè l'angolo che la direzione verso il sole forma con l'asse terrestre. Il mio eliostato è quindi necessariamente composto da un orologio H, fig. 1, il cui asse QQ' e il quadrante CC' possono essere orientati come detto in precedenza. A tal fine, è sospeso a rotazione dalle estremità di un diametro orizzontale YY', perpendicolare a quello da mezzogiorno a mezzanotte CC', o perpendicolare al meridiano; l'asse di questa rotazione passa per il centro Y di un quarto di cerchio diviso LL' che serve per inclinare l'orologio secondo la latitudine del luogo, cioè per rendere l'asse della lancetta XX' parallelo a quello della Terra. Vedi anche la figura 1'.
+
+Il prolungamento dell'asse di rotazione della lancetta porta due archi di cerchio I'I" I""', R'R''R concentrici; mobili attorno al loro diametro comune che coincide con l'asse della lancetta XX. Uno di questi archi I'I''' fissato a volontà sull'asse materiale della lancetta, contiene il sole I nel suo piano. La grandezza variabile di questi archi dipende da quella dell'angolo polare; dapprima per uno R'R'' da quello che il raggio riflesso ROR' forma con l'asse della lancetta XX'; e per l'altro quello II' che il raggio incidente IOI' forma con lo stesso asse XX'; questo arco variabile in grandezza secondo la declinazione del sole, è diviso da un lato in gradi, e numerato per indicare verso I' le declinazioni boreali e verso I''' quelle australi del sole; questi angoli si trovano iscritti nella Connaissance des Temps e nell'Annuaire del Bureau des Longitudes per ogni giorno dell'anno. Sull'altra faccia di questo stesso arco c'è una divisione di 5 in 5 giorni, indicando la declinazione media del giorno o quella dell'anno a uguale distanza da 2 bisestili: ho preso le declinazioni del 1842 come media; la divisione corrisponde ai giorni 1, 5, 10, 15, 20 e 25 di ogni mese indicato dalla sua iniziale e dalle date precedenti. Questa divisione 
+
+-----
+
+P.6
+
+servirà solo come un'approssimazione sufficiente per esperimenti senza precisione e di breve durata, come generalmente per quelli dei corsi di fisica. Basterà far scorrere il cerchio nella sua guida fino a quando la declinazione o la data del giorno coinciderà con il riferimento o il vernier, per fissare la grandezza variabile dell'arco I'I'. Vedremo che si può anche fare a meno di queste due divisioni, e forse con vantaggio; ognuno sceglierà uno dei tre mezzi che sarà più a sua disposizione.
+
+L'arco R'R''R, che deve contenere la riflessione nel suo piano, non ha bisogno di divisione; lo si farà ruotare sul suo asse mobile QQ' e lo si farà scorrere nella sua guida secondo la direzione assegnata al raggio da riflettere, e di cui si dirigerà direttamente l'immagine nel luogo desiderato, tramite i suoi due movimenti di scorrimento e di rotazione. Allora i due archi di cerchio saranno in una posizione tale che, se dall'estremità libera I' del cerchio di declinazione si traccia una linea retta al loro centro comune O, cioè un raggio I'O, questo raggio prolungato IOI passerà costantemente attraverso il sole I, poiché questo arco è trascinato dall'orologio che gli fa compiere una rivoluzione in 24 ore seguendo il sole; e per il secondo, la linea tracciata allo stesso modo dalla sua estremità R' e dal centro comune O, passerà per il punto R dove è riflessa l'immagine solare.
+
+Abbiamo quindi due raggi distinti: uno OI' è costantemente sul prolungamento del raggio incidente IOI' che passa per il centro O, e l'altro OR' è sul prolungamento del raggio riflesso ROR' che passa allo stesso modo per il centro comune O dei due archi. È questo centro comune dove si incontrano il raggio incidente, il raggio riflesso e l'asse di rotazione della lancetta, che è allo stesso tempo il centro della figura dello specchio M.
+
+Per capire come lo specchio è legato a questi due raggi, consideriamo dapprima questi due raggi o linee rette IOI', ROR', fig. 2. Ora, due linee rette che si intersecano sotto qualsiasi angolo e in qualsiasi direzione, potranno sempre essere comprese in un piano. È un risultato della definizione del piano in geometria. 
+
+---------
+
+P.7
+
+Inoltre, poiché queste due direzioni II', RR' sono una l'incidenza, l'altra la riflessione, e poiché questo piano le contiene, sarà sempre il piano in cui avvengono l'incidenza e la riflessione. Se ora tracciamo in questo piano una linea retta che divide in due parti uguali l'angolo formato dall'incidenza e dalla riflessione, avremo così la normale allo specchio riflettente. Fig. 3.
+
+Dato ciò, se, a uguale distanza dal punto di intersezione O di queste linee, segniamo due punti d e d', uno sul raggio incidente, l'altro sul raggio riflesso, oppure sul loro prolungamento d'' d''' o anche lateralmente d d'', d' d'', e se da ciascuno di questi punti tracciamo una parallela all'altro raggio, avremo due linee che completeranno un parallelogramma O d D d', o O d'' D' d'', o O d M d', e se attraverso il punto di incontro di queste due linee n, n', M o M', tracciamo la diagonale del parallelogramma, essa dividerà in due parti uguali l'angolo formato dai due raggi: sarà quindi anche la normale alla superficie riflettente o la superficie stessa. Non importa l'angolo che formeranno tra loro le nostre due direzioni, sempre il parallelogramma sarà formato, e sempre una delle sue diagonali dividerà il loro angolo in due parti uguali, cioè che sempre lo specchio m m' sarà convenientemente posizionato per compiere i fenomeni di riflessione che avvengono nel piano di questo parallelogramma.
+
+È questa condizione del parallelogramma che è stata impiegata nel mio strumento; solo che, invece di completare il parallelogramma come detto, ho preferito prendere due lati uguali più lunghi di quelli del parallelogramma, il che non cambia affatto la direzione della normale rispetto ai due raggi, e che facilita questa condizione nella realizzazione. Sarà molto facile realizzare meccanicamente questa condizione geometrica. Ma poiché il centro dello specchio deve anche occupare questo centro comune, è stato necessario biforcare una porzione del raggio per mantenere lo specchio tra due forchette a cerniera e il cui asse di rotazione, sempre perpendicolare a ciascuno dei due raggi, passa anche per il centro comune O.
+
+Dopo aver dettagliato l'apparecchio in qualche modo geometricamente, descriviamolo più meccanicamente.
+
+----------
+
+P.8
+
+### Descrizione dell'eliostato
+
+L'eliostato è composto da:
+
+1° Un piede triangolare orizzontale V V' V" dotato di viti di regolazione v v' v''. Al suo centro ruota l'asse di un disco orizzontale A A, che porta un livello a' a" e due piedi P P' che supportano l'orologio H e lo specchio. Questo disco può essere fissato in un qualsiasi azimut mediante una pinza a vite a tenuta su una delle gambe del treppiede. La rotazione di questo disco, che trascina il livello, permette di posizionarlo in modo perfettamente orizzontale.
+Orologio:
+
+2° L'orologio è sospeso e può basculare tra i due supporti verticali P P' in modo che il suo asse di rotazione YY' rimanga sempre parallelo al disco orizzontale inferiore. L'arco di cerchio L L', che serve a mantenere il quadrante dell'orologio, è diviso in gradi con la divisione 0° sul raggio parallelo a questo quadrante in L, e 90° parallelo all'asse dell'orologio o all'asse della colonna che supporta lo specchio. Vicino al piede P si trova il punto di riferimento e un vernier; questo cerchio e il vernier servono a fissare il quadrante dell'orologio parallelamente all'equatore, utilizzando il grado di latitudine del luogo di osservazione. Una pinza a vite i serve a trattenere questo arco che è fissato all'orologio. 
+
+**Nota**: L'orologio batte i quarti di secondo; alla sua base inferiore si muovono due lancette, una che compie un giro in 1 ora, l'altra in 300 secondi o 5 minuti; è diviso in secondi, ed è lì che si trova l'asse della molla; la lancetta dell'anticipo o del ritardo è sulla base superiore.
+
+3° Sulla base superiore dell'orologio è fissata saldamente una colonna cava QQ' che, nella sua parte superiore, trattiene un quadrante C C' diviso in 24 ore, il cui piano è parallelo a quello della 
+
+----------
+
+figura
+
+----------
+
+pagina vuota
+
+----------
+
+P.9
+
+base superiore dell'orologio, e la cui linea diametrale 6 e 18, che indica le 6 del mattino e le 6 del pomeriggio, è esattamente parallela all'asse orizzontale YY'. 
+
+4° All'interno della colonna cava passa un asse che, collegato all'orologio, compie un giro in 24 ore. Su questo asse e sopra il quadrante orario ruota liberamente o con l'asse una scatola cubica I', secondo che il colletto di pressione venga spinto o tirato dalla sua vite I". A questa scatola è attaccata dapprima la lancetta o vernier c che indica l'ora, poi l'arco di declinazione I' I"I" che è diviso da un lato in giorni medi di 5 in 5: ho preso la declinazione del 1842. Dall'altro lato si trova la divisione in gradi partendo a destra e a sinistra dallo 0 del vernier; la corrispondenza dello 0 del vernier e della divisione è presa a partire dalla posizione in cui l'asse I' della forchetta che esso tiene è perfettamente parallelo alla base dell'orologio.
+
+5° Attorno all'asse o colonna fissata sull'orologio si muove una douille QQ' che, nella sua parte inferiore Q', porta un cerchio che permette, mediante una pinza a vite r, di trattenere questa douille in una posizione determinata. Nella sua parte superiore e sotto il quadrante orario è fissato un cubo R" che serve da scatola per un arco di cerchio solido K'R" R"" che trattiene l'altra estremità R' dello specchio nella direzione della riflessione; questo arco di cerchio può scorrere nella scatola R'' o essere trattenuto mediante una vite di pressione r. Con questi due movimenti, il raggio riflesso può essere inviato in una qualsiasi direzione su tutti i punti della sfera che avrebbero per centro il centro dello specchio stesso.
+Fourchette e Miroir:
+
+6° Infine, due forchette S'IS e SRS', che si muovono a cerniera, secondo una direzione SS' che passa per il centro O dello specchio, al livello della sua superficie riflettente, taglia in questo punto sia l'asse delle code I'O, R'O delle due forchette, alle quali è sempre perfettamente perpendicolare, sia l'asse di rotazione XX' della lancetta dell'orologio. 
+Lo specchio M ruota attorno all'asse SS' della cerniera delle forchette, dove da un lato è fissato a una solida asta che porta una 
+
+----------
+
+P.10
+
+scanalatura NS perpendicolare alla superficie dello specchio; in questa scanalatura scivola una spina che serve anche da cerniera ai due steli obliqui uguali, che sono fissati allo stesso modo a cerniera a distanza perfettamente uguale dall'asse della cerniera SS' delle forchette, per costituire il parallelogramma descritto in precedenza.
+Infine, su uno dei lati IS della forchetta di incidenza S'IS, si trova un piccolo telescopio o cercatore TT', il cui asse ottico è parallelo all'asse di rotazione della sua coda I' o del raggio incidente; durante l'esperimento, mira sempre al sole. La forchetta fissa o di riflessione SRS' non ha mirino, è l'immagine stessa del sole che viene diretta sul punto desiderato; questa immagine è sempre nel piano del cerchio R'R".
+
+
 
 
 
