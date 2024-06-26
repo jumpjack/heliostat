@@ -2,10 +2,15 @@ Progettato da Jean-Thiébault Silbermann, costruito da Jean-Baptiste Soleil.
 
 ![image](002.jpg)
 
-![image](001.jpg)
-
 [https://www.horiba.com/bra/scientific/resources/jobin-yvon-history-200-years-of-optical-innovation/instrumentation-1819-1874/silbermanns-heliostat-1843
 ](https://www.horiba.com/bra/scientific/resources/jobin-yvon-history-200-years-of-optical-innovation/instrumentation-1819-1874/silbermanns-heliostat-1843)
+
+
+
+![image](001.jpg)
+
+[https://www.dmg-lib.org/dmglib/main/portal.jsp?mainNaviState=browsen.docum.viewer&phyPageNo=1&id=29645009](https://www.dmg-lib.org/dmglib/main/portal.jsp?mainNaviState=browsen.docum.viewer&phyPageNo=1&id=29645009)
+
 
 # Particolari
 
