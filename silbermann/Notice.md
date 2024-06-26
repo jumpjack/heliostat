@@ -473,3 +473,156 @@ P.11
 
 HÉLIOSTAT MIS EN EXPÉRIENCE.
 
+On remonte d'abord l'horloge, on la fait marcher en lui impri-
+mant des mouvements de rotation brusques et opposés dans le plan
+horizontal, comme on est obligé de le faire pour mettre en mouve-
+vement les chronomètres et les montres marines, et quelquefois les
+montres ordinaires. Si par la suite l'horloge retardait, le petit cadran
+sur l'horloge porte une aiguille que l'on pousserait vers A avance,
+et vice versa; vers R si elle avançait.
+CALAGE.
+On pourra d'abord lâcher la vis de pression / qui retient le quart
+de cercle L L' des latitudes, afin de dresser verticalement l'horloge
+et la colonne qui supporte le miroir: on serrera alors la vis 7.
+Dans cette position de l'instrument, le calage paraîtra plus facile.
+On dirigera la longueur du niveau parallèlement à la ligne droite
+qui joint deux des vis calantes, par exemple V' et V", au moyen du
+plateau horizontal A A' qu'on rendra libre en desserrant sa vis de
+pression a. Pour faciliter le calage, j'ai fait diviser ce plateau en
+quatre parties égales par deux diamètres perpendiculaires; on rac-
+cordera l'une des extrémités du diamètre perpendiculaire à la di-
+rection du niveau avec le trait fait sur la pince de la vis de pres-
+sion. On vissera ou dévissera ensuite l'une ou l'autre de ces deux
+vis calantes, afin d'amener la bulle d'air à occuper le milieu du ni-
+veau très exactement. Cela fait, on tournera ce cercle d'un quart
+de tour; de cette manière le niveau aura une situation perpendicu-
+laire à la précédente, ou dans la direction de la troisième vis ca-
+lante v; alors, suivant la position de la bulle, on tournera ou dé-
+tournera cette vis seule jusqu'à ce que la bulle occupe le milieu de
+ses divisions. On fera bien de répéter cette même opération en
+portant le niveau à 180° des positions précédentes, immédiatement
+après chaque opération, pour s'assurer si le niveau est bien pa- 
+
+
+------------
+
+P.12
+
+allèle au plan qui le retient. S'il arrivait qu'en le tournant ainsi
+d'une demi-circonférence il ne revint au même point, alors le ni-
+veau aurait été dérangé, on aurait à partager la différence en deux,
+en élevant d'abord la vis qui demanderait à être élevée seulement
+de la moitié de la différence qu'accuse le niveau; l'autre moitié de
+l'erreur se rachèterait par les trois vis qui retiennent l'un des bouts
+du niveau, et dont l'une retient les deux latérales buttant contre
+le cercle.
+
++++++++++
+
+MISE A LA LATITUDE DU LIEU.
+Le pied étant bien calé, on tournera vers le couchant du soleil
+´ou vers l'ouest, le côté de l'appareil qui porte le quart de cercle
+des latitudes L L' fixé à l'horloge; on fera coïncider le vernier
+qui est sur le support de l'horloge avec le degré de latitude du
+lieu de l'expérience. Alors l'instrument recevra une inclinaison
+dans le sens de celle sur le dessin. L'axe de l'horloge serait paral-
+lèle à l'axe terrestre, si le plan d'inclinaison était dans le plan du
+méridien du liea. Cette position de toute nécessité, on l'obtiendra
+très facilement de la manière suivante.
+
+++++++++
+
+MISE AU MÉRIDIEN,
+Pour mettre au méridien, on desserre la vis de pression qui retient
+l'arc supérieur sur l'axe de l'horloge, pour pouvoir tourner cet arc
+de sorte à mettre le trait sur l'aiguille à l'heure du cadran solaire,
+c'est-à-dire à l'heure vraie au moment de la pose; comme l'hor-
+loge est remontée et qu'elle marche, on serrera fortement le bou-
+ton qui retient la boîte de ce cercle sur l'axe de l'horloge et en- 
+
+
+
+-----------
+
+P.13
+
+raîne son cercle dans son mouvement de rotation; on desserre le
+bouton du cercle divisé, on poussera cet arc jusqu'à ce que l'index
+marque le jour de l'expérience sur l'une ou l'autre division: 1º sur
+les degrés, le nombre indiqué dans l'Annuaire du bureau des longi-
+tudes, ou dans la Connaissance des Temps, et inscrit vis-à-vis la date
+de l'expérience. Si cette déclinaison est boréale comme en été, c'est
+la division la plus proche vers l'axe de la fourchette qui servira; et
+en hiver, où la déclinaison est australe, c'est la division vers l'autre
+extrémité de l'arc qu'il faut prendre.
+Alors l'aiguille étant à l'heure et l'arc étant à la déclinaison, on
+n'aura plus qu'à mettre la petite lunette au point en tirant son ocu-
+laire, et la diriger sur le soleil en faisant tourner tout l'instrument
+avec le cercle horizontal, sans déranger les vis calantes, et ensuite
+arrêter ce cercle, et l'instrument est orienté par rapport au méri-
+dien du lieu, et de plus le rayon incident est dirigé, puisque celui
+dans l'axe de la lunette est parallèle à ce rayon.
+2º Si on n'a pas la déclinaison vraie, on cherchera dans la divi-
+sion en jour la date du jour de l'expérience, qu'on mettra sous le
+trait du repère; et comme les jours ne sont marqués que de cinq en
+cinq seulement, on divisera à l'œil l'entredeux en cinq parties, et
+comme il arrive que du 25 au 28, 29, 30 ou 31 suivant le mois qu'il
+y a 4, 5, 6 ou 7 jours jusqu'au 1er suivant, on y aura égard, et l'ins-
+trument dirigé ensuite comme précédemment sera orienté.
+Enfin s'il se pouvait qu'on ne connût ni la déclinaison ni même la
+date du jour, pourvu qu'on connaisse l'heure vraie, nécessairement,
+à l'heure dite, le soleil devra se trouver dans le plan de cet arc,
+quelle que soit sa déclinaison; on visera donc sur lui en dirigeant
+l'arc et le plateau horizontal simultanément, et quand la lunette
+visera sur le soleil l'instrument sera orienté. Ce moyen, qui est très
+simple, est peut-être le plus juste.
+On pourra diriger l'instrument même en faisant tomber l'ombre
+portée du bout R" sur cet arc lui-même: un seul trait servira de
+coïncidence pour toujours.
+
+------------
+
+P.14
+
+
+REFLECTION DE L'IMAGE SOLAIRE.
+Pour réfléchir le rayon incident sur l'écran, on desserre les deux
+vis de pression qui retiennent la douille et l'arc du cercle de la ré-
+flection, et on dirige l'axe de la fourchette vers le point où on veut
+avoir la réflection, en tournant l'arc de la réflection, d'abord par sa
+douille ou axe, et ensuite en rentrant ou sortant l'arc plus ou moins
+de sa boîte qui le guide. L'image une fois réfléchie sur le point dé-
+siré, on serre la vis de pression qui est sur la base de l'horloge, puis
+celle de l'arc, et la réflection est dirigée et reste dans cette di-
+rection qui se trouve dans le plan du cercle.
+
+-----------
+
+P.15
+
+### RESUME
+
+Pour nous résumer en peu de mots sur l'orientation,
+1º On remontera l'horloge, qui marche 24 heures;
+2º On calera l'instrument;
+3. On mettra le quart de cercle latéral à la latitude;
+4º On mettra l'aiguille de l'horloge à l'heure, on la fixera à l'axe
+par sa vis de pression;
+5º On mettra son cercle à la déclinaison du jour, ou à la date, ou
+bien on se servira du dernier moyen pour mettre à la déclinaison
+en même temps qu'au méridien ;
+6º On mettra au méridien, c'est-à-dire on oriente l'axe de l'hor-
+loge;
+7° On dirigera le rayon réfléchi et l'instrument fonctionnera.
+Pour garantie de la bonne confection de mon Héliostat, je dirai
+que j'en ai confié l'exécution à M. Soleil, opticien, rue de l'Odéon,
+pour tout l'ensemble, et à M. Neumann, horloger, rue de Seine-
+Saint-Germain, pour l'horloge, tous deux artistes très distingués,
+chacun en ce qui le concerne, et tous deux bien connus des hommes de sciences.
+
+
+Au Conservatoire royal des Arts et Métiers,
+ee 27 février 1843.
+J.-T. SILBERMANN,
+Préparateur de Physique au Conservatoire des Aris
+et Métiers, et à la Faculté des Sciences de Paris.
