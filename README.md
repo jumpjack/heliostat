@@ -194,7 +194,10 @@ Paraboloid customizable by user. No mirrors, because Three.js has so many versio
 
 How sun trajectories at solstices and equinox are reflected in spherical mirrors of different diameters:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/8112b48b-14d9-4741-8319-d2f0126c3a66)
+![image](https://github.com/jumpjack/heliostat/assets/1620953/2c9196dc-2552-40b6-bf83-a8a5fb4a8afb)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/994c11d5-a7cd-4603-a76a-b949ed7b20b9)
+
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/a697f1a1-7bb5-4ef1-b696-20ff391133c0)
 
@@ -202,6 +205,9 @@ https://playground.babylonjs.com/#FEEK7G#1033
 
 The larger is the curvature radius, the bigger appears the sun; **but** the larger is such radius, the **shorter** path of the sun is visible in the mirror; so, to have whole sun path visible in a mirror, the curvature radius must be small, but the sun will appear small too.
 A matrix of small mirror could cover whole sun path, compensating the small appearance by multypling the number of reflections?
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/6c83beb8-eb7e-475e-9b5b-b18b76c2a867)
+
 
 #### Parabolic mirror 001 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-001.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-001.html))
 
