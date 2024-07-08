@@ -200,6 +200,9 @@ How sun trajectories at solstices and equinox are reflected in spherical mirrors
 
 https://playground.babylonjs.com/#FEEK7G#1033
 
+The larger is the curvature radius, the bigger appears the sun; **but** the larger is such radius, the **shorter** path of the sun is visible in the mirror; so, to have whole sun path visible in a mirror, the curvature radius must be small, but the sun will appear small too.
+A matrix of small mirror could cover whole sun path, compensating the small appearance by multypling the number of reflections?
+
 #### Parabolic mirror 001 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-001.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-001.html))
 
 It displays in 3d space a paraboloid with one hexagon parallel to each face; ideally the cylinder should be turned into a real reflector capable of reflecting surrounding objects, to simulate how moving sun appears in the mirror.
