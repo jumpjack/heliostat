@@ -190,6 +190,16 @@ Paraboloid customizable by user. No mirrors, because Three.js has so many versio
 
 ### Made with [BabylonJS](https://www.cdnpkg.com/babylonjs?id=22051)
 
+### Spherical mirrors
+
+How sun trajectories at solstices and equinox are reflected in spherical mirrors of different diameters:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/8112b48b-14d9-4741-8319-d2f0126c3a66)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/a697f1a1-7bb5-4ef1-b696-20ff391133c0)
+
+https://playground.babylonjs.com/#FEEK7G#1033
+
 #### Parabolic mirror 001 ([source](https://github.com/jumpjack/heliostat/blob/main/parabolic-001.html), [live demo](https://jumpjack.github.io/heliostat/parabolic-001.html))
 
 It displays in 3d space a paraboloid with one hexagon parallel to each face; ideally the cylinder should be turned into a real reflector capable of reflecting surrounding objects, to simulate how moving sun appears in the mirror.
