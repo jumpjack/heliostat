@@ -23,4 +23,4 @@ Su queste basi è possibile fare vari esperimenti di "eliostato stazionario":
 
 - Video inglese: https://www.youtube.com/watch?v=RzW0xB5Ns_8
 - Video tedesco: https://www.youtube.com/watch?v=AzzKFYYmkUU
-- ...
+- Eliostato stazionario "[Cleardome](http://cleardomesolar.com/solareflexpanels.html)"
