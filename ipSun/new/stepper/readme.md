@@ -12,5 +12,7 @@ Libraries:
 
 Found a similar project, ESPhome-powered and 3d printed: https://www.instructables.com/Heliostat-Reflects-Sunlight-Inside/ ; the code is here: https://github.com/JustMakeAnything/HeliostatV2
 
+![image](https://github.com/user-attachments/assets/18d1c8bb-dc67-403c-aca9-d958183fc7ae)
+
 
 
