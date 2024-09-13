@@ -8,4 +8,9 @@ Libraries:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/489013b3-e704-4e08-a782-8f857ef229c1)
 
 
+----------
+
+Found a similar project, ESPhome-powered and 3d printed: https://www.instructables.com/Heliostat-Reflects-Sunlight-Inside/ ; the code is here: https://github.com/JustMakeAnything/HeliostatV2
+
+
 
