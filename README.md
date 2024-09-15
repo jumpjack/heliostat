@@ -4,8 +4,7 @@ This page collects documents, images, source codes and formulas about "heliostat
 
 - [Ancient mechanisms: spring-loaded heliostats (no electricity, no sensors, no chips!)](https://github.com/jumpjack/heliostat/blob/main/springloaded.md)
 - [Whole year lasting heliostat](https://github.com/jumpjack/heliostat/blob/main/wholeyear.md)
-- Source codes
-- [Ancient documents](https://github.com/jumpjack/heliostat/blob/main/ancient_documents.md)
+x- [Ancient documents](https://github.com/jumpjack/heliostat/blob/main/ancient_documents.md)
 -  Sites archiving hundreds of ancient documents
     - [Hathitrust](https://babel.hathitrust.org/cgi/ls?q1=siderostat+alidada&field1=ocr&a=srchls&ft=ft&lmt=ft)
     - [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k2150772)
@@ -15,6 +14,7 @@ This page collects documents, images, source codes and formulas about "heliostat
 - [Inventors](https://github.com/jumpjack/heliostat/blob/main/ancient_inventors.md)
 - [Commercial products available for purchase](https://github.com/jumpjack/heliostat/blob/main/commercial.md)
 - Stationary heliostats - A pseudo-heliostat can also be built by using a stationary mirror: if the mirror is flat, the reflection will quickly move away from the target, but if the mirror is curved, somthing intriguing happens! [Read here the details](https://github.com/jumpjack/heliostat/blob/main/stattionary_simulations.md).
+https://github.com/jumpjack/heliostat/blob/main/stattionary_simulations.md
 - [My experiments ](https://github.com/jumpjack/heliostat/tree/main/building) at building an heliostat
 
 
