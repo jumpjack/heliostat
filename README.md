@@ -5,7 +5,7 @@ This page collects documents, images, source codes and formulas about "heliostat
 - [Ancient mechanisms: spring-loaded heliostats (no electricity, no sensors, no chips!)](https://github.com/jumpjack/heliostat/blob/main/springloaded.md)
 - [Whole year lasting heliostat](https://github.com/jumpjack/heliostat/blob/main/wholeyear.md)
 - Source codes
-- Ancient documents
+- [Ancient documents](https://github.com/jumpjack/heliostat/blob/main/ancient_documents.md)
 -  Sites archiving hundreds of ancient documents
     - [Hathitrust](https://babel.hathitrust.org/cgi/ls?q1=siderostat+alidada&field1=ocr&a=srchls&ft=ft&lmt=ft)
     - [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k2150772)
