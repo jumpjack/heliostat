@@ -23,3 +23,9 @@ PuroSole:
 Sunflower: 
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6c7a4f20-8bfe-4f38-a6f7-6e83060915ac)
+
+
+
+SolarTracker:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/3320f5b4-f081-4e96-a49f-897a7f8ee97d)
