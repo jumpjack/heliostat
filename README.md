@@ -396,8 +396,13 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ![aa](https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Watts_Linkage.gif/220px-Watts_Linkage.gif)
 
+## My experiments at building an heliostat
 
+I performed sevral studies on building heliostato: spring-loaded or motor-actuated, you can find them here.
 
+## Stationary heliostats
+
+A pseudo-heliostat can also be built by using a stationary mirror: if the mirror is flat, the reflection will quickly move away from the target, but if the mirror is curved, somthing intriguing happens! [Read here the details](https://github.com/jumpjack/heliostat/blob/main/stattionary_simulations.md).
 
 
 ## Commercial products 
@@ -423,8 +428,8 @@ PuroSole:
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/d7279628-e07e-4c40-a2a8-8ced41cf885d)
 
 
-
 Sunflower: 
+
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6c7a4f20-8bfe-4f38-a6f7-6e83060915ac)
 
 
