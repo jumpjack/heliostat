@@ -398,7 +398,7 @@ UNITED KINGDOM - JUNE 09: Photograph of a universal heliostat made by the Englis
 
 ## My experiments at building an heliostat
 
-I performed sevral studies on building heliostato: spring-loaded or motor-actuated, you can find them here.
+I performed sevral studies on building heliostato: spring-loaded or motor-actuated, you can find them [here](https://github.com/jumpjack/heliostat/tree/main/building).
 
 ## Stationary heliostats
 
