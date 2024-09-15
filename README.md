@@ -5,31 +5,12 @@ This page collects documents, images, source codes and formulas about "heliostat
 - [Ancient mechanisms: spring-loaded heliostats (no electricity, no sensors, no chips!)](https://github.com/jumpjack/heliostat/blob/main/springloaded.md)
 - [Whole year lasting heliostat](https://github.com/jumpjack/heliostat/blob/main/wholeyear.md)
 - Source codes
-
-### Made with Plotly.js
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/e4e21218-d761-4cd2-aaea-303fee05a1ac)
-
-Cams plotter - try it here: [link](https://jumpjack.github.io/heliostat/equation-of-time.html)
-
-Plotter for "kidney cam", [Greubel/Forsey cam](https://equation-of-time.info/copy-of-equation-clocks-forerunners), declination cam and analemma.
-
-You can download ready-made ownload cams from this folder: https://github.com/jumpjack/heliostat/tree/main/cams
-
-You can use CamFollowerJS to import JSON cams and simulate cam/follower mechanism: [link](https://jumpjack.github.io/CamFollowerJS/)
-
-You can use [Algodoo](http://www.algodoo.com/) to import cams as 3d images and build 3d mechanisms.
-
-
 - Ancient documents
-
-
-
-## Site archiving hundreds of ancient documents
-- [Hathitrust](https://babel.hathitrust.org/cgi/ls?q1=siderostat+alidada&field1=ocr&a=srchls&ft=ft&lmt=ft)
-- [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k2150772)
-- [Archive.org](https://archive.org/search?query=Revue+des+cours+scientifiques&and%5B%5D=year%3A%5B1860+TO+1875%5D)
-- [Google books](https://www.google.com/search?q=siderostat+foucault&sca_esv=597798541&biw=1309&bih=695&tbs=bkv%3Ap&tbm=bks&sxsrf=ACQVn0-h08jlvimTvnH7IxQjR0iwk_3erA%3A1705064658296&ei=0jihZZzcEYXAi-gP0I6EkAg&ved=0ahUKEwicjZvq9NeDAxUF4AIHHVAHAYIQ4dUDCAk&uact=5&oq=siderostat+foucault&gs_lp=Eg1nd3Mtd2l6LWJvb2tzIhNzaWRlcm9zdGF0IGZvdWNhdWx0SLITUM0GWMMQcAB4AJABAJgBnwGgAfUKqgEDMi45uAEDyAEA-AEBwgIEECEYCogGAQ&sclient=gws-wiz-books)
+-  Sites archiving hundreds of ancient documents
+    - [Hathitrust](https://babel.hathitrust.org/cgi/ls?q1=siderostat+alidada&field1=ocr&a=srchls&ft=ft&lmt=ft)
+    - [Gallica](https://gallica.bnf.fr/ark:/12148/bpt6k2150772)
+    - [Archive.org](https://archive.org/search?query=Revue+des+cours+scientifiques&and%5B%5D=year%3A%5B1860+TO+1875%5D)
+    - [Google books](https://www.google.com/search?q=siderostat+foucault&sca_esv=597798541&biw=1309&bih=695&tbs=bkv%3Ap&tbm=bks&sxsrf=ACQVn0-h08jlvimTvnH7IxQjR0iwk_3erA%3A1705064658296&ei=0jihZZzcEYXAi-gP0I6EkAg&ved=0ahUKEwicjZvq9NeDAxUF4AIHHVAHAYIQ4dUDCAk&uact=5&oq=siderostat+foucault&gs_lp=Eg1nd3Mtd2l6LWJvb2tzIhNzaWRlcm9zdGF0IGZvdWNhdWx0SLITUM0GWMMQcAB4AJABAJgBnwGgAfUKqgEDMi45uAEDyAEA-AEBwgIEECEYCogGAQ&sclient=gws-wiz-books)
   
 
 ## Images
