@@ -76,3 +76,18 @@ Maybe these sites could provide some hints (I am currently investigating):
 
 - [Mechanical implementation of Equation of Time](https://equation-of-time.info/gears) ([contact](https://equation-of-time.info/contact))
 - [Analemma calculator](https://mtirado.com/resources/analemma-calc/) ([contact](https://mtirado.com/about/))
+
+
+## How to build cams
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/e4e21218-d761-4cd2-aaea-303fee05a1ac)
+
+Cams plotter - try it here: [link](https://jumpjack.github.io/heliostat/equation-of-time.html)
+
+Plotter for "kidney cam", [Greubel/Forsey cam](https://equation-of-time.info/copy-of-equation-clocks-forerunners), declination cam and analemma.
+
+You can download ready-made ownload cams from this folder: https://github.com/jumpjack/heliostat/tree/main/cams
+
+You can use CamFollowerJS to import JSON cams and simulate cam/follower mechanism: [link](https://jumpjack.github.io/CamFollowerJS/)
+
+You can use [Algodoo](http://www.algodoo.com/) to import cams as 3d images and build 3d mechanisms.
