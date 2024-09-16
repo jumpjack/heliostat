@@ -16,7 +16,6 @@ This page collects documents, images, source codes and formulas about "heliostat
 - [Whole year lasting springloaded heliostat](https://github.com/jumpjack/heliostat/blob/main/wholeyear.md)
 - [Commercial products available for purchase](https://github.com/jumpjack/heliostat/blob/main/commercial.md)
 - Stationary heliostats - A pseudo-heliostat can also be built by using a stationary mirror: if the mirror is flat, the reflection will quickly move away from the target, but if the mirror is curved, somthing intriguing happens! [Read here the details](https://github.com/jumpjack/heliostat/blob/main/stationary_simulations.md).
-https://github.com/jumpjack/heliostat/blob/main/stattionary_simulations.md
 - [My experiments ](https://github.com/jumpjack/heliostat/tree/main/building) at building an heliostat
 
 
