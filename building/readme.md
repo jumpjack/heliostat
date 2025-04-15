@@ -76,7 +76,9 @@
   -  Protocol
  
 ![image](https://github.com/user-attachments/assets/f61325f1-cfb5-44a5-a4cb-7eb6ea8abdc8)
+  - Wiring
 
+![image](https://github.com/user-attachments/assets/8f847088-1b51-492a-a2ab-424520586063)
 
 
 
