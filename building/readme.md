@@ -30,7 +30,7 @@
     - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X) (10€)
     - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
-    - Source code
+    - Software
         -   [Project 1 - "Pelco_And_Arduino"](https://github.com/Pixelbo/Pelco_And_Arduino/)
             - [Arduino Pelco-D library for installation in IDE](https://www.arduino.cc/reference/en/libraries/pelco_and_arduino/)
             - [Arduino Pellco-D library documentation](https://hackaday.io/project/183986-controlling-a-cctv-camera-with-arduino/log/203267-understanding-how-it-works#discussion-list)
@@ -61,7 +61,10 @@
       dmx_send_num(dmxPort, DMX_PACKET_SIZE)
       dmx_wait_sent(dmxPort, DMX_TIMEOUT_TICK);
       ```
-   - Hardware:   
+   - Software
+      - [Project by FuturaShop](https://futuranet.it/progetti/2024/12/18/illuminazione-professionale-con-esp32-scopri-la-libreria-dmxasled-per-il-dmx/?srsltid=AfmBOorHAWwXGdnw358sgcN0aDeOVxNtbyF-d6kQlY0b4kQ75svhw_Yq) (only lights, but [useful schematic](https://futuranet.it/wp-content/uploads/2024/12/Schema.png))
+   - Hardware
+     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
      - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X) (10€)
      - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
      - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
