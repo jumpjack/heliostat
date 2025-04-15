@@ -47,6 +47,33 @@
 ![image](https://github.com/user-attachments/assets/ad9c3724-2f6d-44a7-b140-c3cd21213f3f)
 
 - Pan-tilt ready-made head with DMX512 protocol over RS485
+  - Pin mapping ([source](https://github.com/andyboeh/esphome-dmx512)):
+    - MAX3485 D+/A  ->   XLR 3 (DMX +)
+    - MAX3485 D-/B  ->   XLR 2 (DMX -)
+    - MAX3485 GND   ->   XLR 1 (DMX GND)
+  - Libraries:
+    - [ESP32-DMX](https://github.com/luksal/ESP32-DMX)
+      - Minimal command: `DMX::Write(channel, value);`
+    - [esp_dmx](https://github.com/someweisguy/esp_dmx)
+      - Minimal command (sequence required):
+      ```
+      dmx_write(dmxPort, data, DMX_PACKET_SIZE);
+      dmx_send_num(dmxPort, DMX_PACKET_SIZE)
+      dmx_wait_sent(dmxPort, DMX_TIMEOUT_TICK);
+      ```
+   - Hardware:   
+     - [TTL/RS485 adapter x 2](https://www.amazon.it/gp/product/B07KFKSS1X) (10€)
+     - ([wifi RS485 adapter](https://www.amazon.it/Bsowte-Multifunzionale-Seriale-Ricetrasmettitore-Fotocamera/dp/B0CD6SPH46), 2x18€)
+     - [ESP32](https://amzn.to/38aEtli)/[Arduino](https://www.hackster.io/arduino/products/arduino-nano-r3?ref=project-4fed3c)
+     - [DMX line terminator](https://www.amazon.it/Adam-Hall-DMXT-Connettore-terminator/dp/B00A7W4K3Y) (120 Ohm resistor between pin 2 and 3)
+     - [DMX shield RS485 for Arduino](https://www.amazon.it/CQRobot-Network-Management-Extended-Functions/dp/B01DUHZAT0/)
+     - [Whadda/Velleman VMA432 interface](https://www.velleman.eu/products/view/dmx512-module-vma432/?id=439222&lang=en) (old, no optocoupler), 17,00 euro
+     - [Whadda/Velleman WPM432 intrerface](https://www.amazon.it/Whadda-Modulo-DMX512-WPM432/dp/B09L4SNRYK) (replaces VMA432, adds optocoupler), 27,00 euro  ([14,90 euro](https://www.velleman.eu/products/view/dmx512-module-wpm432/?id=460570&lang=en))
+     - [Seedstudio Grove DMX512 interface](https://www.reichelt.com/it/it/shop/prodotto/arduino_-_grove_dmx512-191179?PROVID=2814&gad_source=1&gclid=Cj0KCQjwh_i_BhCzARIsANimeoGJvrNmybku25aTeVXd-lkDLyZVjTqX3aHlROX6igAxk_94NJhBsRgaAvXKEALw_wcB), 10,00 euro
+  -  Protocol
+ 
+![image](https://github.com/user-attachments/assets/f61325f1-cfb5-44a5-a4cb-7eb6ea8abdc8)
+
 
 
 
