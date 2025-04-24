@@ -12,3 +12,5 @@ Porte COM su RP2040-zero: pin 0,1 - 4,5 - 8,9 -  12,13:
 
 ![image](https://github.com/user-attachments/assets/5420d8d2-83be-4bdf-947b-c1b6f1af4bb4)
 
+
+![image](https://github.com/user-attachments/assets/837fdd4d-5983-49a2-917b-9f41bc21c17b)
