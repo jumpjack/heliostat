@@ -63,10 +63,22 @@
         <input type="checkbox" id="show-wireframe" >
     </div>
 
-    <div class="control-group">
-        <label for="continuity">3d printable:</label>
-        <input type="checkbox" id="continuity" checked>
+
+<div class="control-group">
+    <label for="disableContinuity">3d printable:</label>
+    <button id="disableContinuity" class="warning-button">Toggle printability</button>
+    <div id="progressContainer" style="display: none; margin-top: 10px;">
+        <progress id="creationProgress" value="0" max="100"></progress>
+        <span id="progressText">0%</span>
     </div>
+</div>
+
+<div class="control-group">
+    <label for="text3d">3d printable:</label>
+    <button id="text3d" class="warning-button" disabled>Toggle printable text</button>
+</div>
+
+
 
 
     </div>
@@ -79,7 +91,6 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/TransformControls.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/exporters/STLExporter.js"></script>
 -->
-
 <link rel="stylesheet" href="leaflet.css" />
 <script src="leaflet.js"></script>
 <script src="suncalc.js"></script>
@@ -122,8 +133,10 @@
     const material = new THREE.MeshPhongMaterial({
         color: 0xffffff,
         side: THREE.DoubleSide,
-        flatShading: false,
+//        flatShading: false,
         shininess: 100,
+//transparent: true,
+//opacity: 0.4,
         specular: 0xffffff
     });
 
@@ -135,9 +148,15 @@
     const sunSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
     scene.add(sunSphere);
 
+    // Configuration
+    const gridSize = 12; // debug
+    const mirrorSize = 1;
+    const segmentsPerMirror = 8; // Resolution per mirror
+
+
     // Grid parameters (12x12 grid on XY plane with Z=0)
-    const ROWS = 12;
-    const COLS = 12;
+    const ROWS = gridSize;
+    const COLS = gridSize;
     const BASE_SIZE = 1;
     const TOP_SIZE = 0.8;
     const HEIGHT = 0.2;
@@ -146,19 +165,20 @@
     const GRID_ALT = 6;
     const SUN_DIST = 100;
 
+const MY_MIRROR_SCALE = 0.8;
+const MY_MIRROR_THICKNESS = 0.2;
+const BOTTOM_THICKNESS = 0.2;
+
     let parabolaCurvature = 0.2;
     const arrows = [];
 
     let parabolicDepth = parabolaCurvature;
-    let extrusionAmount = 2;
+    let extrusionAmount = 1;
     let showVectors = false;
     let showWireframe = false;
     let surfaceContinuity = true;
-
-    // Configuration
-    const gridSize = 12; // debug
-    const mirrorSize = 1;
-    const segmentsPerMirror = 8; // Resolution per mirror
+    const gridCellSize = 1.0; // Puoi regolare questo valore per cambiare lo spazio tra gli specchi
+let showText3d = false;
 
     // Initial data (array of zeros)
     let mirrorsData = Array(gridSize).fill().map(() =>
@@ -174,22 +194,45 @@
     const surfaceGroup = new THREE.Group();
     scene.add(surfaceGroup);
 
-
+/*
     function doCSG(a,b,op,mat){
-
         let bspA = CSG.fromMesh( a );
         let bspB = CSG.fromMesh( b );
         let bspC = bspA[op]( bspB );
         let result = CSG.toMesh( bspC, a.matrix );
         result.material = mat;
         result.castShadow  = result.receiveShadow = true;
-console.log("Risultato:",result);
         return result;
     }
+*/
 
+function doCSG(a, b, op, mat) {
+    // 1. Clona le mesh per evitare modifiche agli originali
+    const meshA = a.clone();
+    const meshB = b.clone();
 
+    // 2. Aggiorna le matrici mondiali
+    meshA.updateMatrixWorld();
+    meshB.updateMatrixWorld();
+
+    // 3. Converti in BSP applicando le trasformazioni
+    const bspA = CSG.fromMesh(meshA);
+    const bspB = CSG.fromMesh(meshB);
+
+    // 4. Esegui l'operazione booleana
+    const bspC = bspA[op](bspB);
+
+    // 5. Converti il risultato in mesh usando la matrice di A
+    const result = CSG.toMesh(bspC, meshA.matrixWorld, mat);
+
+    // 6. Pulisci le geometrie temporanee
+    meshA.geometry.dispose();
+    meshB.geometry.dispose();
+
+    return result;
+}
 // Function to create mirrors - can be continuous or separate
-function createMirrorSurface(rotations, continuous = true) {
+async function createMirrorSurface(rotations, continuous = true) {
     // Clear previous surface
     while (surfaceGroup.children.length) {
         surfaceGroup.remove(surfaceGroup.children[0]);
@@ -198,7 +241,11 @@ function createMirrorSurface(rotations, continuous = true) {
     if (continuous) {
         return createContinuousSurface(rotations);
     } else {
-        return createSeparateMirrors(rotations);
+        let result = await createSeparateMirrorsWithProgress(rotations);
+        document.getElementById('disableContinuity').textContent = "Toggle printability";
+        document.getElementById('disableContinuity').disabled = false;
+
+        return result
     }
 }
 
@@ -215,57 +262,136 @@ function createSeparateMirrors(rotations) {
 }
 
 
+
+
+
+
+
+
+
+
+async function createSeparateMirrorsWithProgress(rotations) {
+    const total = gridSize * gridSize;
+    let completed = 0;
+    const progressBar = document.getElementById('creationProgress');
+    const progressText = document.getElementById('progressText');
+    const progressContainer = document.getElementById('progressContainer');
+
+    progressContainer.style.display = 'block';
+    progressBar.max = total;
+
+    surfaceGroup.clear(); // Pulisce il gruppo esistente
+
+    for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+            const rotation = rotations[y][x];
+            const mirror = await new Promise(resolve => {
+                setTimeout(() => {
+                    resolve(createSingleMirror(rotation, x, y));
+                }, 0);
+            });
+
+            surfaceGroup.add(mirror);
+            completed++;
+
+            // Aggiorna UI
+            progressBar.value = completed;
+            progressText.textContent = `${Math.round((completed/total)*100)}%`;
+
+            // Forza il rendering della UI
+            await new Promise(resolve => requestAnimationFrame(resolve));
+        }
+    }
+
+    return surfaceGroup;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 let font = null;
 const loader = new THREE.FontLoader();
 loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (response) {
     font = response;
 });
 
+
+
 function createSingleMirror(rotation, gridX, gridY) {
-    const bigMirror = createMyMirror(rotation, gridX, gridY, 0.8);
-    const smallMirror = createMyMirror(rotation, gridX, gridY, 0.6);
+    // 1. Crea lo specchio esterno pieno
+    const outerMirror = createMyMirror(rotation, gridX, gridY, MY_MIRROR_SCALE, false);
 
-    const innerPositions = smallMirror.geometry.attributes.position.array;
-    for (let i = 2; i < innerPositions.length; i += 3) {
-        // Moltiplica solo la componente Z (indici 2, 5, 8...)
-        innerPositions[i] *= 3;
-    }
-    smallMirror.geometry.attributes.position.needsUpdate = true;
-    smallMirror.geometry.computeVertexNormals();
+    // 2. Crea lo specchio interno (più piccolo) e decentralo su Z
+    const innerMirror = createMyMirror(rotation, gridX, gridY, MY_MIRROR_SCALE - MY_MIRROR_THICKNESS, false);
 
-    const finalMirror = doCSG(bigMirror, smallMirror, 'subtract',material)
-    return finalMirror;
-}
-
-function createHollowMirror(rotation, gridX, gridY) {
-    // Crea lo specchio esterno (dimensione normale)
-    const outerMirror = createMyMirror(rotation, gridX, gridY, 1.0);
-
-    // Crea lo specchio interno con:
-    // - Scala ridotta su X e Y (es. 0.9)
-    // - Scala aumentata su Z (es. 1.2)
-    const innerScaleXY = 0.9; // Riduci su X e Y
-    const innerScaleZ = 1.2;  // Aumenta su Z
-
-    const innerMirror = createMyMirror(rotation, gridX, gridY, innerScaleXY);
-
-    // Modifica manualmente la componente Z dei vertici per "allungarli"
+    // Decentramento sull'asse Z (sposta indietro lo specchio interno)
+    const zOffset = -BOTTOM_THICKNESS; // Regola questo valore
     const innerPositions = innerMirror.geometry.attributes.position.array;
     for (let i = 2; i < innerPositions.length; i += 3) {
-        // Moltiplica solo la componente Z (indici 2, 5, 8...)
-        innerPositions[i] *= innerScaleZ;
+        innerPositions[i] -= zOffset;
     }
     innerMirror.geometry.attributes.position.needsUpdate = true;
     innerMirror.geometry.computeVertexNormals();
 
-    // Esegui la sottrazione CSG
-    const hollowMirror = doCSG(outerMirror, innerMirror, 'subtract', mirrorMaterial);
+    // 3. Sottrai lo specchio interno per creare la cavità
+    let mirrorWithCavity = doCSG(outerMirror, innerMirror, 'subtract', material);
 
-    return hollowMirror;
+    // 4. Prepara il testo da sottrarre SOLO dal fondo
+    if (font && showText3d) {
+console.log("TEXT!")
+        const textGeometry = new THREE.TextGeometry(`${gridX},${gridY}`, {
+            font: font,
+            size: 0.2,
+            height: 8    //extrusionAmount * 2,  // Altezza sufficiente
+        });
+
+        const textMesh = new THREE.Mesh(textGeometry);
+
+        // Posiziona il testo sul fondo dello specchio esterno
+        const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
+        const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
+        const rightFaceX = worldX + (MY_MIRROR_SCALE * gridCellSize) / 2;
+
+        textMesh.position.set(
+            rightFaceX - 0.2,
+            worldY + 6,
+            -extrusionAmount/2 +2  // Appena sopra la superficie del fondo
+        );
+        textMesh.rotation.set(0, Math.PI, 0);  // Orientamento corretto
+
+        // 5. Crea un volume per la sottrazione (estendi il testo verso l'interno)
+        const textDepth = extrusionAmount * 0.8;  // Regola secondo necessità
+        const textPositions = textGeometry.attributes.position.array;
+        for (let i = 2; i < textPositions.length; i += 3) {
+            if (textPositions[i] > 0) {  // Se è nella parte superiore del testo
+                textPositions[i] -= textDepth;  // Estendi verso l'interno
+            }
+        }
+        textGeometry.attributes.position.needsUpdate = true;
+
+        // 6. Sottrai il testo DALLO SPECCHIO CON CAVITÀ
+        mirrorWithCavity = doCSG(mirrorWithCavity, textMesh, 'subtract', material);
+
+        // 7. (Opzionale) Aggiungi testo visibile
+        const visibleText = textMesh.clone();
+        visibleText.material = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+        //scene.add(visibleText);
+    }
+
+    return mirrorWithCavity;
 }
 
+
 // Function to create a single mirror
-function createMyMirror(rotation, gridX, gridY,mirrorScale) {
+function createMyMirror(rotation, gridX, gridY, mirrorScale, addText) {
     const geometry = new THREE.BufferGeometry();
     const segments = segmentsPerMirror;
     const vertices = [];
@@ -273,7 +399,6 @@ function createMyMirror(rotation, gridX, gridY,mirrorScale) {
     const indices = [];
     const uvs = [];
     // Aggiungi una nuova variabile per la dimensione della cella della griglia
-    const gridCellSize = 1.0; // Puoi regolare questo valore per cambiare lo spazio tra gli specchi
 let textMesh;
 
     // Fattore di scala per lo specchietto (0-1)
@@ -378,6 +503,8 @@ let textMesh;
 
 
     const mesh = new THREE.Mesh(geometry, material);
+    let finalMesh = new THREE.Mesh(geometry, material);
+
 
     if (showWireframe) {
         const wireframe = new THREE.LineSegments(
@@ -387,54 +514,11 @@ let textMesh;
         mesh.add(wireframe);
     }
 
-if (font) {
-    const textGeometry = new THREE.TextGeometry(`${gridX},${gridY}`, {
-        font: font,
-        size: 0.2,
-        height: 0.2,
-    });
-    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xaaaaaa });
-    textMesh = new THREE.Mesh(textGeometry, material);
-
-    const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
-    const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
-/*
-    const bottomFaceY = worldY + 6;// - (mirrorScale * gridCellSize) / 2;
-    const bottomFaceZ = -extrusionAmount/2; // Al centro dello spessore
-    textMesh.position.set(worldX + 0.2, bottomFaceY - 0.05, bottomFaceZ);
-*/
-
-    const rightFaceX = worldX + (mirrorScale * gridCellSize) / 2;
-    const rightFaceY = worldY + 6; // Mantieni l'offset Y originale
-    const rightFaceZ = 0; // Al centro dello spessore
-
-    textMesh.position.set(rightFaceX-0.2, rightFaceY, rightFaceZ+0.5);
-    textMesh.rotation.x = -Math.PI / 2; // Orientamento iniziale (es. per faccia inferiore)
-
-        // 3. Se lo specchio è ruotato, applica la stessa rotazione al testo
-        if (rotation.yaw !== 0 || rotation.pitch !== 0 || rotation.roll !== 0) {
-            const textRotation = new THREE.Euler(
-                THREE.MathUtils.degToRad(rotation.pitch),
-                THREE.MathUtils.degToRad(rotation.yaw),
-                THREE.MathUtils.degToRad(rotation.roll),
-                'XYZ'
-            );
-            textMesh.setRotationFromEuler(textRotation); // Allinea alla rotazione dello specchi
-        }
-
-    // Ruota il testo di 90 gradi attorno all'asse Y per farlo aderire alla faccia laterale
-    textMesh.rotation.y = Math.PI/2;
-
-
-
-    mesh.add(textMesh);
-}
-
     return mesh;
  }
 
     // Function to create a single continuous surface for the entire grid
-    function createContinuousSurface(rotations) {
+    async function createContinuousSurface(rotations) {
         // Clear previous surface
         while (surfaceGroup.children.length) {
             surfaceGroup.remove(surfaceGroup.children[0]);
@@ -604,7 +688,7 @@ if (font) {
 
 
         // Create material for the surface
-        const material = new THREE.MeshPhongMaterial({
+/*        const material = new THREE.MeshPhongMaterial({
             color: 0xffffff,
             side: THREE.DoubleSide,
             flatShading: false,
@@ -612,7 +696,7 @@ if (font) {
             specular: 0xffffff,
             transparent: false,
             opacity: 1
-        });
+        });*/
 
 
         if (showWireframe) {
@@ -644,21 +728,18 @@ if (font) {
     }
 
     // Funzione per aggiornare l'estrusione
-    function updateExtrusion(value) {
+    async function updateExtrusion(value) {
         extrusionAmount = value;
         // Ricrea la superficie con la nuova quantità di estrusione
-        //createContinuousSurface(mirrorsData);
-        createMirrorSurface(mirrorsData, surfaceContinuity);
+        await createMirrorSurface(mirrorsData, surfaceContinuity);
     }
 
 
 
 
     // Function to update the surface based on current rotation values
-    function updateSurface() {
-console.log(mirrorsData);
-        //createContinuousSurface(mirrorsData);
-        createMirrorSurface(mirrorsData, surfaceContinuity);
+    async function updateSurface() {
+        await createMirrorSurface(mirrorsData, surfaceContinuity);
     }
 
     // Create initial surface
@@ -945,7 +1026,8 @@ console.log(mirrorsData);
 
 
     // Rotation controls
-    function updateRotations() {
+    async function updateRotations() {
+        surfaceContinuity = true;
         const rotX = document.getElementById('rot-x').value * Math.PI / 180;
         const rotY = document.getElementById('rot-y').value * Math.PI / 180;
         const rotZ = document.getElementById('rot-z').value * Math.PI / 180;
@@ -962,7 +1044,7 @@ console.log(mirrorsData);
         }
 
         // Update surface with new rotations
-        updateSurface();
+        await updateSurface();
     }
 
 
@@ -993,7 +1075,7 @@ console.log(mirrorsData);
     }
 
     // Aggiornamento sincronizzato
-    function updateCurvature(value) {
+    async function updateCurvature(value) {
         parabolicDepth=value;
         parabolaCurvature = value;
         const validated = validateCurvature(value);
@@ -1014,52 +1096,123 @@ console.log(mirrorsData);
             }
         });
 
-        updateSurface();
+        await updateSurface();
     }
 
     // Event listeners
+
+document.getElementById('disableContinuity').addEventListener('click', async function() {
+    let authorizationRequired = false;
+    let authorized = false;
+    if (surfaceContinuity) {
+        if(confirm("ATTENZIONE: Disabilitare la continuità superficiale renderà il modello stampabile in 3D,\nma l'elaborazione sarà MOLTO lenta. Procedere?")) {
+            authorized = true;
+        }
+    } else {
+        authorized = true;
+    }
+
+    if (authorized) {
+        surfaceContinuity = !surfaceContinuity;
+document.getElementById('text3d').disabled = surfaceContinuity;
+
+        this.textContent = "Processing...";
+        this.disabled = true;
+        try {
+            updateMirrorOrientations();
+            await updateSurface();
+            this.textContent = "Toggle printability";
+            this.disabled = false;
+        } catch (error) {
+            console.error("Error during processing:", error);
+            this.textContent = "Error! Try Again";
+            this.disabled = false;
+        }
+    }
+});
+
+
+
+document.getElementById('text3d').addEventListener('click', async function() {
+console.log("text3d");
+    let authorizationRequired = false;
+    let authorized = false;
+
+    if (!showText3d) {
+        if(confirm("ATTENZIONE: Visualizzare il testo sul fondo richiede tempi di elaborazioni molto lunghi. Procedere?")) {
+            authorized = true;
+        }
+    } else {
+        authorized = true;
+    }
+console.log(showText3d, authorized);
+
+    if (authorized) {
+        showText3d = !showText3d;
+        this.textContent = "Processing...";
+        this.disabled = true;
+        try {
+            updateMirrorOrientations();
+            await updateSurface();
+            this.textContent = "Toggle 3d text";
+            this.disabled = false;
+        } catch (error) {
+            console.error("Error during processing:", error);
+            this.textContent = "Error! Try Again";
+            this.disabled = false;
+        }
+    }
+});
+
 
     document.getElementById('rot-x').addEventListener('input', updateRotations);
     document.getElementById('rot-y').addEventListener('input', updateRotations);
     document.getElementById('rot-z').addEventListener('input', updateRotations);
 
-    transformControls.addEventListener('dragging-changed', function (event) {
+    transformControls.addEventListener('dragging-changed', async function (event) {
 console.log("drag change");
         orbitControls.enabled = !event.value;
+        surfaceContinuity = true;
 //        if (!event.value) {
 //console.log("drag change !event",event.value);
             // Call updateMirrorOrientations when dragging stops
             updateMirrorOrientations();
-            updateSurface();
+            await updateSurface();
 //        }
     });
 
     document.getElementById('show-vectors').addEventListener('change', function(e) {
         showVectors = e.target.checked;
+        surfaceContinuity = true;
         updateVectorVisibility();
     });
 
-    document.getElementById('show-wireframe').addEventListener('change', function(e) {
+    document.getElementById('show-wireframe').addEventListener('change', async function(e) {
         showWireframe = e.target.checked;
-        updateSurface();
+        surfaceContinuity = true;
+        await updateSurface();
         //updateWireframeVisibility();
     });
 
-    document.getElementById('continuity').addEventListener('change', function(e) {
-        surfaceContinuity = e.target.checked;
-        updateSurface();
+    document.getElementById('text3d').addEventListener('change', async function(e) {
+        showText3d = e.target.checked;
+console.log("showText3d=",showText3d);
+        await updateSurface();
     });
 
     curvatureSlider.addEventListener('input', (e) => {
+        surfaceContinuity = true;
         updateCurvature(e.target.value);
     });
 
     curvatureInput.addEventListener('change', (e) => {
+        surfaceContinuity = true;
         updateCurvature(e.target.value);
     });
 
 
     document.getElementById('random-rotate').addEventListener('click', () => {
+        surfaceContinuity = true;
         document.getElementById('rot-x').value = (Math.random() * 180 - 90).toFixed(2);
         document.getElementById('rot-y').value = (Math.random() * 180 - 90).toFixed(2);
         document.getElementById('rot-z').value = (Math.random() * 180 - 90).toFixed(2);
@@ -1067,6 +1220,7 @@ console.log("drag change");
     });
 
     document.getElementById('reset-rotation').addEventListener('click', () => {
+        surfaceContinuity = true;
         document.getElementById('rot-x').value = 0;
         document.getElementById('rot-y').value = 0;
         document.getElementById('rot-z').value = 0;
@@ -1126,7 +1280,7 @@ console.log("drag change");
     updateMirrorOrientations()
 
     // Function to update mirror orientations
-    function updateMirrorOrientations() {
+    async function updateMirrorOrientations() {
         if (!showVectors) {
             arrows.forEach(arrow => {
                 scene.remove(arrow);
@@ -1190,7 +1344,7 @@ console.log("drag change");
 
         });
 
-        updateSurface();
+        await updateSurface();
     }
 
 
