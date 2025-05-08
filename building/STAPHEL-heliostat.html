@@ -1,0 +1,1245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vertical Mirror Grid</title>
+    <style>
+        body { margin: 0; overflow: hidden; font-family: Arial, sans-serif; }
+        canvas { display: block; }
+        #controls {
+            position: absolute; top: 10px; left: 10px;
+            background: rgba(255, 255, 255, 0.8); padding: 10px;
+            border-radius: 5px; z-index: 100;
+        }
+        .control-group { margin-bottom: 10px; }
+        label { display: inline-block; width: 80px; }
+        button { margin: 5px; padding: 5px 10px; }
+        input[type="range"] { width: 100px; }
+    </style>
+</head>
+<body>
+<div id="map" style="width: 400px; height: 300px; position: absolute; top: 10px; right: 10px; z-index: 100;"></div>
+<div id="datetime-controls" style="position: absolute; top: 320px; right: 10px; background: rgba(255, 255, 255, 0.8); padding: 10px; border-radius: 5px; z-index: 100;">
+    <label>Date: </label><input type="date" id="date-input"><br>
+    <label>Time: </label><input type="time" id="time-input"><br>
+</div>
+
+    <div id="controls">
+        <h3>Controls</h3>
+        <div class="control-group">
+            <label>X Rotation:</label>
+            <input type="range" id="rot-x" min="-90" max="90" value="0">
+        </div>
+        <div class="control-group">
+            <label>Y Rotation:</label>
+            <input type="range" id="rot-y" min="-90" max="90" value="0">
+        </div>
+        <div class="control-group">
+            <label>Z Rotation:</label>
+            <input type="range" id="rot-z" min="-90" max="90" value="0">
+        </div>
+<div class="control-group">
+    <label>Concavità:</label>
+
+    <input type="range" id="curvature" min="-1" max="1" step="0.1" value="0">
+    <input type="text" id="curvature-input" value="0.1" style="width: 60px;">
+    <span class="value-display">(-1.00 to 1.00)</span>
+</div>
+        <div class="control-group">
+            <button id="random-rotate">Random Rotate</button>
+            <button id="reset-rotation">Reset Rotation</button>
+        </div>
+        <div class="control-group">
+            <button id="toggle-axes">Toggle Axes</button>
+            <button id="exportSTL">Export STL</button>
+        </div>
+    <div class="control-group">
+        <label for="show-vectors">Toggle vectors:</label>
+        <input type="checkbox" id="show-vectors" >
+    </div>
+    <div class="control-group">
+        <label for="show-wireframe">Toggle wireframe:</label>
+        <input type="checkbox" id="show-wireframe" >
+    </div>
+
+    <div class="control-group">
+        <label for="continuity">3d printable:</label>
+        <input type="checkbox" id="continuity" checked>
+    </div>
+
+
+    </div>
+
+<!--<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/suncalc/1.8.0/suncalc.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/controls/TransformControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.132.2/examples/js/exporters/STLExporter.js"></script>
+-->
+<link rel="stylesheet" href="leaflet.css" />
+<script src="leaflet.js"></script>
+<script src="suncalc.js"></script>
+<script src="three.min.js"></script>
+<script src="OrbitControls.js"></script>
+<script src="TransformControls.js"></script>
+<script src="STLExporter.js"></script>
+<script src="csg-lib.js"></script>  <!-- Modded from https://github.com/manthrax/THREE-CSGMesh -->
+<script src="three-csg-mod.js"></script>  <!-- Modded from https://github.com/manthrax/THREE-CSGMesh -->
+
+<script>
+    // Scene setup
+    const scene = new THREE.Scene();
+    const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+    const renderer = new THREE.WebGLRenderer({ antialias: true });
+    renderer.setSize(window.innerWidth, window.innerHeight);
+    document.body.appendChild(renderer.domElement);
+
+    // Lighting
+    scene.add(new THREE.AmbientLight(0x404040));
+    const light = new THREE.DirectionalLight(0xffffff, 0.8);
+    //light.position.set(1, 1, 1);
+    //scene.add(light);
+
+    // Aggiungi piano verde (ground)
+    const groundGeometry = new THREE.PlaneGeometry(1000, 1000);
+    const groundMaterial = new THREE.MeshStandardMaterial({
+        color: 0x4CAF50,
+        side: THREE.DoubleSide
+    });
+    const ground = new THREE.Mesh(groundGeometry, groundMaterial);
+    ground.rotation.x = -Math.PI / 2; // Ruota per renderlo orizzontale
+    scene.add(ground);
+
+    // Aggiungi cielo azzurro (sfondo)
+    scene.background = new THREE.Color(0x87CEEB);
+
+
+    // Create material
+    const material = new THREE.MeshPhongMaterial({
+        color: 0xffffff,
+        side: THREE.DoubleSide,
+        flatShading: false,
+        shininess: 100,
+        specular: 0xffffff
+    });
+
+
+
+    // Sun sphere
+    const sphereGeometry = new THREE.SphereGeometry(0.5, 32, 32);
+    const sphereMaterial = new THREE.MeshBasicMaterial({ color: 0xffff00 });
+    const sunSphere = new THREE.Mesh(sphereGeometry, sphereMaterial);
+    scene.add(sunSphere);
+
+    // Grid parameters (12x12 grid on XY plane with Z=0)
+    const ROWS = 12;
+    const COLS = 12;
+    const BASE_SIZE = 1;
+    const TOP_SIZE = 0.8;
+    const HEIGHT = 0.2;
+    const pyramids = [];
+    const BOX_HEIGHT = 1;
+    const GRID_ALT = 6;
+    const SUN_DIST = 100;
+
+    let parabolaCurvature = 0.2;
+    const arrows = [];
+
+    let parabolicDepth = parabolaCurvature;
+    let extrusionAmount = 2;
+    let showVectors = false;
+    let showWireframe = false;
+    let surfaceContinuity = true;
+
+    // Configuration
+    const gridSize = 12; // debug
+    const mirrorSize = 1;
+    const segmentsPerMirror = 8; // Resolution per mirror
+
+    // Initial data (array of zeros)
+    let mirrorsData = Array(gridSize).fill().map(() =>
+        Array(gridSize).fill().map(() => ({
+            yaw: 0,
+            pitch: 0,
+            roll: 0
+        }))
+    );
+
+
+    // Create container for surface
+    const surfaceGroup = new THREE.Group();
+    scene.add(surfaceGroup);
+
+
+    function doCSG(a,b,op,mat){
+
+        let bspA = CSG.fromMesh( a );
+        let bspB = CSG.fromMesh( b );
+        let bspC = bspA[op]( bspB );
+        let result = CSG.toMesh( bspC, a.matrix );
+        result.material = mat;
+        result.castShadow  = result.receiveShadow = true;
+console.log("Risultato:",result);
+        return result;
+    }
+
+
+// Function to create mirrors - can be continuous or separate
+function createMirrorSurface(rotations, continuous = true) {
+    // Clear previous surface
+    while (surfaceGroup.children.length) {
+        surfaceGroup.remove(surfaceGroup.children[0]);
+    }
+
+    if (continuous) {
+        return createContinuousSurface(rotations);
+    } else {
+        return createSeparateMirrors(rotations);
+    }
+}
+
+
+function createSeparateMirrors(rotations) {
+    for (let y = 0; y < gridSize; y++) {
+        for (let x = 0; x < gridSize; x++) {
+            const rotation = rotations[y][x];
+            const mirror = createSingleMirror(rotation, x, y);
+            surfaceGroup.add(mirror);
+        }
+    }
+    return surfaceGroup;
+}
+
+
+let font = null;
+const loader = new THREE.FontLoader();
+loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (response) {
+    font = response;
+});
+
+function createSingleMirror(rotation, gridX, gridY) {
+    const bigMirror = createMyMirror(rotation, gridX, gridY, 0.8);
+    const smallMirror = createMyMirror(rotation, gridX, gridY, 0.6);
+
+    const innerPositions = smallMirror.geometry.attributes.position.array;
+    for (let i = 2; i < innerPositions.length; i += 3) {
+        // Moltiplica solo la componente Z (indici 2, 5, 8...)
+        innerPositions[i] *= 3;
+    }
+    smallMirror.geometry.attributes.position.needsUpdate = true;
+    smallMirror.geometry.computeVertexNormals();
+
+    const finalMirror = doCSG(bigMirror, smallMirror, 'subtract',material)
+    return finalMirror;
+}
+
+function createHollowMirror(rotation, gridX, gridY) {
+    // Crea lo specchio esterno (dimensione normale)
+    const outerMirror = createMyMirror(rotation, gridX, gridY, 1.0);
+
+    // Crea lo specchio interno con:
+    // - Scala ridotta su X e Y (es. 0.9)
+    // - Scala aumentata su Z (es. 1.2)
+    const innerScaleXY = 0.9; // Riduci su X e Y
+    const innerScaleZ = 1.2;  // Aumenta su Z
+
+    const innerMirror = createMyMirror(rotation, gridX, gridY, innerScaleXY);
+
+    // Modifica manualmente la componente Z dei vertici per "allungarli"
+    const innerPositions = innerMirror.geometry.attributes.position.array;
+    for (let i = 2; i < innerPositions.length; i += 3) {
+        // Moltiplica solo la componente Z (indici 2, 5, 8...)
+        innerPositions[i] *= innerScaleZ;
+    }
+    innerMirror.geometry.attributes.position.needsUpdate = true;
+    innerMirror.geometry.computeVertexNormals();
+
+    // Esegui la sottrazione CSG
+    const hollowMirror = doCSG(outerMirror, innerMirror, 'subtract', mirrorMaterial);
+
+    return hollowMirror;
+}
+
+// Function to create a single mirror
+function createMyMirror(rotation, gridX, gridY,mirrorScale) {
+    const geometry = new THREE.BufferGeometry();
+    const segments = segmentsPerMirror;
+    const vertices = [];
+    const backVertices = [];
+    const indices = [];
+    const uvs = [];
+    // Aggiungi una nuova variabile per la dimensione della cella della griglia
+    const gridCellSize = 1.0; // Puoi regolare questo valore per cambiare lo spazio tra gli specchi
+let textMesh;
+
+    // Fattore di scala per lo specchietto (0-1)
+//    const mirrorScale = 0.8;//mirrorSize; // Assumendo che mirrorSize sia ora un valore tra 0 e 1
+
+    // Generate vertices for a single mirror
+    for (let y = 0; y <= segments; y++) {
+        for (let x = 0; x <= segments; x++) {
+            const localX = x / segments;
+            const localY = y / segments;
+
+            // World position of this mirror (centro della cella della griglia)
+            const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
+            const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
+
+            // Local position within mirror (-0.5 to 0.5) scalato per mirrorScale
+            const normLocalX = (localX - 0.5) * mirrorScale;
+            const normLocalY = (localY - 0.5) * mirrorScale;
+
+            // Apply parabolic shape
+            let worldZ = parabolicDepth * (normLocalX * normLocalX + normLocalY * normLocalY);
+
+            // Create point and apply rotation
+            const point = new THREE.Vector3(
+                normLocalX * gridCellSize, // Moltiplicato per gridCellSize invece di mirrorSize
+                normLocalY * gridCellSize,
+                worldZ
+            );
+
+            if (rotation.yaw !== 0 || rotation.pitch !== 0 || rotation.roll !== 0) {
+                const radYaw = THREE.MathUtils.degToRad(rotation.yaw);
+                const radPitch = THREE.MathUtils.degToRad(rotation.pitch);
+                const radRoll = THREE.MathUtils.degToRad(rotation.roll);
+
+                const rotMatrix = new THREE.Matrix4();
+                rotMatrix.makeRotationFromEuler(
+                    new THREE.Euler(radPitch, radYaw, radRoll, 'XYZ')
+                );
+                point.applyMatrix4(rotMatrix);
+            }
+
+            // Final position
+            const finalX = worldX + point.x;
+            const finalY = worldY + point.y + 6; // +6 come nel tuo codice originale
+            const finalZ = point.z;
+
+
+
+            // Add vertices
+            vertices.push(finalX, finalY, finalZ + extrusionAmount/2);
+            backVertices.push(finalX, finalY, -extrusionAmount/2);
+            uvs.push(localX, localY);
+        }
+    }
+
+
+    // Generate indices for a single mirror (similar to your continuous version but for one mirror)
+    for (let y = 0; y < segments; y++) {
+        for (let x = 0; x < segments; x++) {
+            let v0 = y * (segments+1) + x;
+            let v1 = v0 + 1;
+            let v2 = v0 + (segments+1);
+            let v3 = v2 + 1;
+
+            // Front face
+            indices.push(v0, v1, v2);
+            indices.push(v1, v3, v2);
+
+            // Back face (with offset)
+            const backOffset = (segments+1)*(segments+1);
+            indices.push(backOffset + v0, backOffset + v2, backOffset + v1);
+            indices.push(backOffset + v1, backOffset + v2, backOffset + v3);
+
+            // Sides (only needed for border segments)
+            if (x === segments-1) { // right side
+                indices.push(v1, backOffset + v1, v3);
+                indices.push(v3, backOffset + v1, backOffset + v3);
+            }
+            if (x === 0) { // left side
+                indices.push(v0, v2, backOffset + v0);
+                indices.push(backOffset + v0, v2, backOffset + v2);
+            }
+            if (y === segments-1) { // top side
+                indices.push(v2, v3, backOffset + v2);
+                indices.push(backOffset + v2, v3, backOffset + v3);
+            }
+            if (y === 0) { // bottom side
+                indices.push(v0, backOffset + v0, v1);
+                indices.push(v1, backOffset + v0, backOffset + v1);
+            }
+        }
+    }
+
+    // Combine vertices
+    const allVertices = vertices.concat(backVertices);
+
+    // Set geometry attributes
+    geometry.setAttribute('position', new THREE.Float32BufferAttribute(allVertices, 3));
+    geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs.concat(uvs), 2));
+    geometry.setIndex(indices);
+    geometry.computeVertexNormals();
+
+
+    const mesh = new THREE.Mesh(geometry, material);
+
+    if (showWireframe) {
+        const wireframe = new THREE.LineSegments(
+            new THREE.WireframeGeometry(geometry),
+            new THREE.LineBasicMaterial({ color: 0x0000ff, linewidth: 1 })
+        );
+        mesh.add(wireframe);
+    }
+
+if (font) {
+    const textGeometry = new THREE.TextGeometry(`${gridX},${gridY}`, {
+        font: font,
+        size: 0.2,
+        height: 0.2,
+    });
+    const textMaterial = new THREE.MeshBasicMaterial({ color: 0xaaaaaa });
+    textMesh = new THREE.Mesh(textGeometry, material);
+
+    const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
+    const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
+/*
+    const bottomFaceY = worldY + 6;// - (mirrorScale * gridCellSize) / 2;
+    const bottomFaceZ = -extrusionAmount/2; // Al centro dello spessore
+    textMesh.position.set(worldX + 0.2, bottomFaceY - 0.05, bottomFaceZ);
+*/
+
+    const rightFaceX = worldX + (mirrorScale * gridCellSize) / 2;
+    const rightFaceY = worldY + 6; // Mantieni l'offset Y originale
+    const rightFaceZ = 0; // Al centro dello spessore
+
+    textMesh.position.set(rightFaceX-0.2, rightFaceY, rightFaceZ+0.5);
+    textMesh.rotation.x = -Math.PI / 2; // Orientamento iniziale (es. per faccia inferiore)
+
+        // 3. Se lo specchio è ruotato, applica la stessa rotazione al testo
+        if (rotation.yaw !== 0 || rotation.pitch !== 0 || rotation.roll !== 0) {
+            const textRotation = new THREE.Euler(
+                THREE.MathUtils.degToRad(rotation.pitch),
+                THREE.MathUtils.degToRad(rotation.yaw),
+                THREE.MathUtils.degToRad(rotation.roll),
+                'XYZ'
+            );
+            textMesh.setRotationFromEuler(textRotation); // Allinea alla rotazione dello specchi
+        }
+
+    // Ruota il testo di 90 gradi attorno all'asse Y per farlo aderire alla faccia laterale
+    textMesh.rotation.y = Math.PI/2;
+
+
+
+    mesh.add(textMesh);
+}
+
+    return mesh;
+ }
+
+    // Function to create a single continuous surface for the entire grid
+    function createContinuousSurface(rotations) {
+        // Clear previous surface
+        while (surfaceGroup.children.length) {
+            surfaceGroup.remove(surfaceGroup.children[0]);
+        }
+
+        // Create a geometry for the entire surface
+        const geometry = new THREE.BufferGeometry();
+
+        // Calculate total segments and vertices
+        const totalSegmentsX = gridSize * segmentsPerMirror;
+        const totalSegmentsY = gridSize * segmentsPerMirror;
+        const totalVerticesX = totalSegmentsX + 1;
+        const totalVerticesY = totalSegmentsY + 1;
+
+        // Create arrays for vertices and indices
+        const vertices = [];
+        const backVertices = [];
+        const indices = [];
+        const uvs = [];
+
+
+        // Generate grid of vertices for the entire surface
+        for (let y = 0; y < totalVerticesY; y++) {
+            for (let x = 0; x < totalVerticesX; x++) {
+                // Calculate position in grid coordinates (0-1 across entire grid)
+                const gridX = x / totalSegmentsX;
+                const gridY = y / totalSegmentsY;
+
+                // Calculate which mirror this vertex belongs to
+                const mirrorX = Math.floor(gridX * gridSize);
+                const mirrorY = Math.floor(gridY * gridSize);
+
+                // Calculate local position within this mirror (0-1)
+                const localX = (gridX * gridSize) % 1;
+                const localY = (gridY * gridSize) % 1;
+
+                // Apply mirror rotation to vertex
+                let rotation = { yaw: 0, pitch: 0, roll: 0 };
+
+                if (mirrorX < gridSize && mirrorY < gridSize) {
+                    rotation = rotations[mirrorY][mirrorX];
+                }
+
+                // Map to world space coordinates (XY plane)
+                const worldX = (gridX - 0.5) * gridSize * mirrorSize;
+                const worldY = (gridY - 0.5) * gridSize * mirrorSize;
+
+                // Apply parabolic shape (Z axis)
+                const normLocalX = localX - mirrorSize/2; //0.5;
+                const normLocalY = localY - mirrorSize/2; //0.5;
+
+                let worldZ = parabolicDepth * (normLocalX * normLocalX + normLocalY * normLocalY);
+
+                // Create a vector for the point (initial position parallel to XY)
+                const point = new THREE.Vector3(
+                    normLocalX * mirrorSize,
+                    normLocalY * mirrorSize,
+                    worldZ
+                );
+
+                // Apply rotation only if needed (keep parallel to XY when rotations are 0)
+                if (rotation.yaw !== 0 || rotation.pitch !== 0 || rotation.roll !== 0) {
+                    const radYaw = THREE.MathUtils.degToRad(rotation.yaw);
+                    const radPitch = THREE.MathUtils.degToRad(rotation.pitch);
+                    const radRoll = THREE.MathUtils.degToRad(rotation.roll);
+
+                    const rotMatrix = new THREE.Matrix4();
+                    rotMatrix.makeRotationFromEuler(
+                        new THREE.Euler(radPitch, radYaw, radRoll, 'XYZ')
+                    );
+                    point.applyMatrix4(rotMatrix);
+                }
+
+                // Calculate final position
+                const finalX = worldX + point.x - normLocalX * mirrorSize;
+                const finalY = worldY + point.y - normLocalY * mirrorSize;
+                const finalZ = point.z;
+
+                // Add vertex (front face)
+                vertices.push(finalX, finalY+6, finalZ + extrusionAmount/2);
+
+                // Add vertex (back face)
+                backVertices.push(finalX, finalY+6, -extrusionAmount/2);
+
+                // Add UV coordinates
+                uvs.push(gridX, gridY);
+            }
+        }
+
+        // Generate triangles for front face
+        for (let y = 0; y < totalSegmentsY; y++) {
+            for (let x = 0; x < totalSegmentsX; x++) {
+                let v0 = y * totalVerticesX + x;
+                let v1 = v0 + 1;
+                let v2 = v0 + totalVerticesX;
+                let v3 = v2 + 1;
+
+                indices.push(v0, v1, v2);  // Prima triangolo (ordine antiorario)
+                indices.push(v1, v3, v2);  // Secondo triangolo (ordine antiorario)
+            }
+        }
+
+
+        // Generate triangles for back face (inverse order)
+        const backFaceOffset = vertices.length / 3;
+        for (let y = 0; y < totalSegmentsY; y++) {
+            for (let x = 0; x < totalSegmentsX; x++) {
+                let v0 = backFaceOffset + y * totalVerticesX + x;
+                let v1 = v0 + 1;
+                let v2 = v0 + totalVerticesX;
+                let v3 = v2 + 1;
+
+                indices.push(v0, v2, v1);  // Prima triangolo (ordine antiorario)
+                indices.push(v1, v2, v3);  // Secondo triangolo (ordine antiorario)
+            }
+        }
+
+        // Generate triangles for sides
+        for (let y = 0; y < totalSegmentsY; y++) {
+            for (let x = 0; x < totalSegmentsX; x++) {
+                const frontV0 = y * totalVerticesX + x;
+                const frontV1 = frontV0 + 1;
+                const frontV2 = frontV0 + totalVerticesX;
+                const frontV3 = frontV2 + 1;
+
+                const backV0 = backFaceOffset + y * totalVerticesX + x;
+                const backV1 = backV0 + 1;
+                const backV2 = backV0 + totalVerticesX;
+                const backV3 = backV2 + 1;
+
+                // Right side
+                if (x === totalSegmentsX - 1) {
+                    indices.push(frontV1, backV1, frontV3);
+                    indices.push(frontV3, backV1, backV3);
+                }
+
+                // Left side
+                if (x === 0) {
+                    indices.push(frontV0, frontV2, backV0);
+                    indices.push(backV0, frontV2, backV2);
+                }
+
+                // Top side
+                if (y === totalSegmentsY - 1) {
+                    indices.push(frontV2, frontV3, backV2);
+                    indices.push(backV2, frontV3, backV3);
+                }
+
+                // Bottom side
+                if (y === 0) {
+                    indices.push(frontV0, backV0, frontV1);
+                    indices.push(frontV1, backV0, backV1);
+                }
+            }
+        }
+
+        // Combine front and back vertices
+        const allVertices = vertices.concat(backVertices);
+
+
+        // Create the geometry
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(allVertices, 3));
+        geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs.concat(uvs), 2)); // Duplica UVs per la faccia posteriore
+        geometry.setIndex(indices);
+        geometry.computeVertexNormals();
+
+
+
+        // Create material for the surface
+        const material = new THREE.MeshPhongMaterial({
+            color: 0xffffff,
+            side: THREE.DoubleSide,
+            flatShading: false,
+            shininess: 100,
+            specular: 0xffffff,
+            transparent: false,
+            opacity: 1
+        });
+
+
+        if (showWireframe) {
+          // Create wireframe material to highlight the mirror edges
+          const wireframeMaterial = new THREE.LineBasicMaterial({
+              color: 0x0000ff,
+              transparent: false,
+              vertexColors: false,
+              linewidth: 2,
+              opacity: 1
+          });
+
+
+          // Create wireframe for all faces
+          const wireframe = new THREE.LineSegments(
+              new THREE.WireframeGeometry(geometry),
+              new THREE.LineBasicMaterial({ color: 0x0000ff, linewidth: 1 })
+          );
+          surfaceGroup.add(wireframe);
+        }
+
+
+        // Create mesh and add to group
+        const mesh = new THREE.Mesh(geometry, material);
+        surfaceGroup.add(mesh);
+
+
+        return surfaceGroup;
+    }
+
+    // Funzione per aggiornare l'estrusione
+    function updateExtrusion(value) {
+        extrusionAmount = value;
+        // Ricrea la superficie con la nuova quantità di estrusione
+        //createContinuousSurface(mirrorsData);
+        createMirrorSurface(mirrorsData, surfaceContinuity);
+    }
+
+
+
+
+    // Function to update the surface based on current rotation values
+    function updateSurface() {
+console.log(mirrorsData);
+        //createContinuousSurface(mirrorsData);
+        createMirrorSurface(mirrorsData, surfaceContinuity);
+    }
+
+    // Create initial surface
+    updateSurface();
+
+    // Initialize Leaflet map
+    const map = L.map('map').setView([42, 12], 2);
+    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '&copy; OpenStreetMap contributors'
+    }).addTo(map);
+
+    // Marker for user-selected position
+    let marker = L.marker([42, 12], { draggable: true }).addTo(map);
+
+    // Update marker position on drag
+    marker.on('dragend', updateSunPosition);
+
+
+    // Funzione per creare la geometria del paraboloide
+    function createParaboloidWithTransition(size, curvature) {
+        const group = new THREE.Group();
+        const halfSize = size / 2;
+
+        // Materiali
+        const mirrorMat = new THREE.MeshPhongMaterial({
+            color: 0x111111,
+            specular: 0xffffff,
+            shininess: 100,
+            reflectivity: 1,
+            side: THREE.DoubleSide
+        });
+
+        const connectorMat = new THREE.MeshPhongMaterial({
+            color: 0x2ecc71,
+            transparent: true,
+            opacity: 0.7,
+            side: THREE.DoubleSide
+        });
+
+        // Crea il paraboloide e ottieni i vertici di bordo
+        const paraboloidGeo = createParaboloidGeometry(size, curvature);
+        const paraboloid = new THREE.Mesh(paraboloidGeo, mirrorMat);
+        paraboloid.position.y = 0.1;
+        group.add(paraboloid);
+
+        // Crea le superfici di connessione per ogni lato
+        createConnectionSurfaces(group, connectorMat);
+
+        return group;
+    }
+
+
+    function createConnectionSurfaces(group, material) {
+        // Crea superfici di connessione per ogni lato
+        createSideConnection(edgeVerticesLow, 'low', material, group);
+        createSideConnection(edgeVerticesHigh, 'high', material, group);
+        createSideConnection(edgeVerticesLeft, 'left', material, group);
+        createSideConnection(edgeVerticesRight, 'right', material, group);
+    }
+
+
+
+    function createSideConnection(edgeVertices, sideName, material, group) {
+        if (!edgeVertices || edgeVertices.length < 2) return;
+
+        const baseY = 0; // Altezza base della piramide
+        const vertices = [];
+        const indices = [];
+
+        // Crea i vertici per la superficie di connessione
+        edgeVertices.forEach((vertex, i) => {
+            // Vertice sul paraboloide (spostato in alto di 0.1)
+            vertices.push(vertex.x, vertex.y, vertex.z + 0.1);
+
+            // Vertice corrispondente sulla base della piramide
+            vertices.push(vertex.x, vertex.y, baseY);
+        });
+
+        // Crea gli indici per le facce triangolari
+        for (let i = 0; i < edgeVertices.length - 1; i++) {
+            const baseIdx = i * 2;
+            indices.push(baseIdx, baseIdx + 1, baseIdx + 2);
+            indices.push(baseIdx + 1, baseIdx + 3, baseIdx + 2);
+        }
+
+        // Crea la geometria e il mesh
+        const geometry = new THREE.BufferGeometry();
+        geometry.setIndex(indices);
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+        geometry.computeVertexNormals();
+
+        const mesh = new THREE.Mesh(geometry, material);
+        group.add(mesh);
+    }
+
+
+
+    function createParaboloidGeometry(size, curvature, segments = 8) {
+        const geometry = new THREE.BufferGeometry();
+        const vertices = [], normals = [], uvs = [];
+        const halfSize = size / 2;
+
+        // Dichiarazione globale degli array di vertici di bordo
+        window.edgeVerticesLow = [];
+        window.edgeVerticesHigh = [];
+        window.edgeVerticesLeft = [];
+        window.edgeVerticesRight = [];
+
+        for (let y = 0; y <= segments; y++) {
+            for (let x = 0; x <= segments; x++) {
+                const u = x / segments;
+                const v = y / segments;
+
+                const px = (u - 0.5) * size;
+                const py = (v - 0.5) * size;
+                const pz = curvature * (px*px + py*py);
+
+                vertices.push(px, py, pz);
+
+                // Aggiungi ai rispettivi array di bordo
+                if (x === 0) {
+                    edgeVerticesLow.push(new THREE.Vector3(px, py, pz));
+                } else if (x === segments) {
+                    edgeVerticesHigh.push(new THREE.Vector3(px, py, pz));
+                }
+
+                if (y === 0) {
+                    edgeVerticesLeft.push(new THREE.Vector3(px, py, pz));
+                } else if (y === segments) {
+                    edgeVerticesRight.push(new THREE.Vector3(px, py, pz));
+                }
+
+                // Normale
+                const nx = -2 * curvature * px;
+                const ny = -2 * curvature * py;
+                const nz = 1;
+                const len = Math.sqrt(nx*nx + ny*ny + nz*nz);
+                normals.push(nx/len, ny/len, nz/len);
+
+                uvs.push(u, v);
+            }
+        }
+
+        // Indici
+        const indices = [];
+        for (let y = 0; y < segments; y++) {
+            for (let x = 0; x < segments; x++) {
+                const a = y * (segments + 1) + x;
+                const b = a + 1;
+                const c = (y + 1) * (segments + 1) + x;
+                const d = c + 1;
+
+                indices.push(a, b, d);
+                indices.push(a, d, c);
+            }
+        }
+
+        geometry.setIndex(indices);
+        geometry.setAttribute('position', new THREE.Float32BufferAttribute(vertices, 3));
+        geometry.setAttribute('normal', new THREE.Float32BufferAttribute(normals, 3));
+        geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs, 2));
+
+        return geometry;
+    }
+
+
+
+
+    // Function to calculate sun position (azimuth and altitude)
+    function calculateSunPosition(date, lat, lon) {
+        const sunPosition = SunCalc.getPosition(date, lat, lon);
+        const azimuth = sunPosition.azimuth;
+        const altitude = sunPosition.altitude;
+        return { azimuth, altitude };
+    }
+
+
+    // Function to update the light position
+    function updateSunPosition() {
+        const dateInput = document.getElementById('date-input').value;
+        const timeInput = document.getElementById('time-input').value;
+        const date = new Date(`${dateInput}T${timeInput}`);
+        const position = marker.getLatLng();
+        const lat = position.lat;
+        const lon = position.lng;
+
+        const { azimuth, altitude } = calculateSunPosition(date, lat, lon);
+
+        const distance = SUN_DIST;
+        const x = distance * Math.cos(altitude) * Math.sin((Math.PI + azimuth));
+        const y = distance * Math.sin(altitude);
+        const z = -distance * Math.cos(altitude) * Math.cos((Math.PI + azimuth));
+
+        sunLight.position.set(x, y, z);
+        sunSphere.position.copy(sunLight.position);
+    }
+
+
+    // Create vertical open box (5 planes without thickness)
+    function createVerticalOpenBox(rows, cols, height) {
+        const group = new THREE.Group();
+        const material = new THREE.MeshPhongMaterial({
+            color: 0x3498db,
+            side: THREE.DoubleSide,
+            transparent: false,
+            opacity: 1
+        });
+
+        const bottom = new THREE.Mesh(
+            new THREE.PlaneGeometry(cols * BASE_SIZE, rows * BASE_SIZE),
+            material
+        );
+        bottom.rotation.x = +Math.PI / 2;
+        group.add(bottom);
+
+        const backWall = new THREE.Mesh(
+            new THREE.PlaneGeometry(cols * BASE_SIZE, height),
+            material
+        );
+        backWall.position.set(0, height / 2, -rows * BASE_SIZE / 2);
+        backWall.rotation.y = Math.PI;
+        group.add(backWall);
+
+        const frontWall = new THREE.Mesh(
+            new THREE.PlaneGeometry(cols * BASE_SIZE, height),
+            material
+        );
+        frontWall.position.set(0, height / 2, rows * BASE_SIZE / 2);
+        group.add(frontWall);
+
+        const leftWall = new THREE.Mesh(
+            new THREE.PlaneGeometry(rows * BASE_SIZE, height),
+            material
+        );
+        leftWall.position.set(-cols * BASE_SIZE / 2, height / 2, 0);
+        leftWall.rotation.y = -Math.PI / 2;
+        group.add(leftWall);
+
+        const rightWall = new THREE.Mesh(
+            new THREE.PlaneGeometry(rows * BASE_SIZE, height),
+            material
+        );
+        rightWall.position.set(cols * BASE_SIZE / 2, height / 2, 0);
+        rightWall.rotation.y = Math.PI / 2;
+        group.add(rightWall);
+
+        return group;
+    }
+
+
+    // Create grid of pyramids (mirrors) on XY plane
+    for (let x = 0; x < COLS; x++) {
+        for (let y = 0; y < ROWS; y++) {
+            const px = (x - COLS / 2) * BASE_SIZE + BASE_SIZE / 2;
+            const py = (y - ROWS / 2) * BASE_SIZE + BASE_SIZE / 2;
+            const pz = 0;
+
+            pyramids.push({
+                basePos: new THREE.Vector3(px, py+GRID_ALT, 0),
+                //top: top,
+                rotation: { x: 0, y: 0, z: 0 },
+                //sides: createPyramidSides(px, py+GRID_ALT,top),
+                row: y,
+                col: x
+            });
+        }
+    }
+
+    // Axes helper
+    const axesHelper = new THREE.AxesHelper(5);
+    scene.add(axesHelper);
+
+    // Camera position
+    camera.position.set(15, 15, 15);
+    camera.lookAt(0, 0, 0);
+
+    // Controls
+    const orbitControls = new THREE.OrbitControls(camera, renderer.domElement);
+    orbitControls.enableDamping = true;
+
+    // Transform controls for the target
+    const transformControls = new THREE.TransformControls(camera, renderer.domElement);
+    scene.add(transformControls);
+
+
+    // Rotation controls
+    function updateRotations() {
+        const rotX = document.getElementById('rot-x').value * Math.PI / 180;
+        const rotY = document.getElementById('rot-y').value * Math.PI / 180;
+        const rotZ = document.getElementById('rot-z').value * Math.PI / 180;
+
+        // Update mirror data with the correct property names
+        for (let row = 0; row < gridSize; row++) {
+            for (let col = 0; col < gridSize; col++) {
+                mirrorsData[row][col] = {
+                    yaw: rotY*180/3.14,   // Usa yaw invece di rotY
+                    pitch: rotX*180/3.14,  // Usa pitch invece di rotX
+                    roll: rotZ*180/3.14   // Usa roll invece di rotZ
+                };
+            }
+        }
+
+        // Update surface with new rotations
+        updateSurface();
+    }
+
+
+
+
+    function updateVectorVisibility() {
+        arrows.forEach(arrow => {
+            arrow.visible = showVectors;
+        });
+    }
+
+
+
+    const curvatureSlider = document.getElementById('curvature');
+    const curvatureInput = document.getElementById('curvature-input');
+
+    // Formatta il numero con 2 decimali
+    function formatFloat(value) {
+        return parseFloat(value).toFixed(2);
+    }
+
+    // Validazione input
+    function validateCurvature(value) {
+        let num = parseFloat(value);
+        if (isNaN(num)) return 0.1; // Valore di default se non è un numero
+        num = Math.max(-2, Math.min(2, num)); // Limita tra -2 e 2
+        return num;
+    }
+
+    // Aggiornamento sincronizzato
+    function updateCurvature(value) {
+        parabolicDepth=value;
+        parabolaCurvature = value;
+        const validated = validateCurvature(value);
+        const formatted = formatFloat(validated);
+
+        curvatureSlider.value = validated;
+        curvatureInput.value = formatted;
+
+        // Aggiornamento della scena
+        scene.children.forEach(child => {
+            if (child.isMesh && child.userData.isParaboloid) {
+                child.geometry.dispose();
+                if ((child.userData.y<4) || (child.userData.y>7) || (child.userData.x<1)|| (child.userData.x>10)) {
+                    child.geometry = createParaboloidGeometry(TOP_SIZE, 0);
+                } else {
+                    child.geometry = createParaboloidGeometry(TOP_SIZE, parseFloat(value));
+                }
+            }
+        });
+
+        updateSurface();
+    }
+
+    // Event listeners
+
+    document.getElementById('rot-x').addEventListener('input', updateRotations);
+    document.getElementById('rot-y').addEventListener('input', updateRotations);
+    document.getElementById('rot-z').addEventListener('input', updateRotations);
+
+    transformControls.addEventListener('dragging-changed', function (event) {
+console.log("drag change");
+        orbitControls.enabled = !event.value;
+//        if (!event.value) {
+//console.log("drag change !event",event.value);
+            // Call updateMirrorOrientations when dragging stops
+            updateMirrorOrientations();
+            updateSurface();
+//        }
+    });
+
+    document.getElementById('show-vectors').addEventListener('change', function(e) {
+        showVectors = e.target.checked;
+        updateVectorVisibility();
+    });
+
+    document.getElementById('show-wireframe').addEventListener('change', function(e) {
+        showWireframe = e.target.checked;
+        updateSurface();
+        //updateWireframeVisibility();
+    });
+
+    document.getElementById('continuity').addEventListener('change', function(e) {
+        surfaceContinuity = e.target.checked;
+        updateSurface();
+    });
+
+    curvatureSlider.addEventListener('input', (e) => {
+        updateCurvature(e.target.value);
+    });
+
+    curvatureInput.addEventListener('change', (e) => {
+        updateCurvature(e.target.value);
+    });
+
+
+    document.getElementById('random-rotate').addEventListener('click', () => {
+        document.getElementById('rot-x').value = (Math.random() * 180 - 90).toFixed(2);
+        document.getElementById('rot-y').value = (Math.random() * 180 - 90).toFixed(2);
+        document.getElementById('rot-z').value = (Math.random() * 180 - 90).toFixed(2);
+        updateRotations();
+    });
+
+    document.getElementById('reset-rotation').addEventListener('click', () => {
+        document.getElementById('rot-x').value = 0;
+        document.getElementById('rot-y').value = 0;
+        document.getElementById('rot-z').value = 0;
+        updateRotations();
+    });
+
+    document.getElementById('toggle-axes').addEventListener('click', () => {
+        axesHelper.visible = !axesHelper.visible;
+    });
+
+    document.getElementById('exportSTL').addEventListener('click', () => {
+        const exporter = new THREE.STLExporter();
+        const stlString = exporter.parse(surfaceGroup/*group*/);
+        const blob = new Blob([stlString], { type: 'text/plain' });
+        const link = document.createElement('a');
+        link.href = URL.createObjectURL(blob);
+        link.download = 'mirror_grid.stl';
+        link.click();
+    });
+
+    // Add event listeners to date and time inputs
+    document.getElementById('date-input').addEventListener('change', updateSunPosition);
+    document.getElementById('time-input').addEventListener('change', updateSunPosition);
+
+
+    // Animation loop
+    function animate() {
+        requestAnimationFrame(animate);
+        orbitControls.update();
+        renderer.render(scene, camera);
+    }
+    animate();
+
+    // Handle resize
+    window.addEventListener('resize', () => {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+    });
+
+
+    // Add point light to the scene
+    const sunLight = new THREE.PointLight(0xffffff, 0.1, 0);
+    sunLight.position.set(0, SUN_DIST, 0);
+    scene.add(sunLight);
+
+    // Add a target object
+    const targetGeometry = new THREE.SphereGeometry(0.1, 32, 32);
+    const targetMaterial = new THREE.MeshBasicMaterial({ color: 0xff0000 });
+    const target = new THREE.Mesh(targetGeometry, targetMaterial);
+    target.position.z = 13;
+    target.position.y = 6;
+    scene.add(target);
+
+    transformControls.attach(target);
+
+    updateMirrorOrientations()
+
+    // Function to update mirror orientations
+    function updateMirrorOrientations() {
+        if (!showVectors) {
+            arrows.forEach(arrow => {
+                scene.remove(arrow);
+            });
+            arrows.length = 0;
+           // return;
+        }
+
+        pyramids.forEach(pyramid => {
+            const mirrorPos = pyramid.basePos;
+            const month = pyramid.row + 1;
+            const hour = pyramid.col + 6;
+
+            const date = new Date();
+            date.setMonth(month - 1);
+            date.setHours(hour, 0, 0, 0);
+
+            const lat = 42;
+            const lon = 12;
+            const { azimuth, altitude } = calculateSunPosition(date, lat, lon);
+
+            const sunDirection = new THREE.Vector3(
+                Math.sin(azimuth) * Math.cos(altitude),
+                -Math.sin(altitude),
+                -Math.cos(azimuth) * Math.cos(altitude)
+            ).normalize();
+
+            const mirrorToTarget = new THREE.Vector3().subVectors(target.position, mirrorPos).normalize();
+
+            const incoming = sunDirection.clone().negate();
+            const outgoing = mirrorToTarget;
+
+            const normal = new THREE.Vector3().addVectors(incoming, outgoing).normalize();
+
+            const newArrow1 = visualizeVector(mirrorPos, incoming, 0xffff00, true);
+            newArrow1.visible = showVectors;
+            arrows.push(newArrow1);
+
+            const newArrow2 = visualizeVector(mirrorPos, outgoing, 0xffffff, false);
+            newArrow2.visible = showVectors;
+            arrows.push(newArrow2);
+
+            const newArrow3 = visualizeVector(mirrorPos, normal, 0xff0000, false);
+            newArrow3.visible = showVectors;
+            arrows.push(newArrow3);
+
+            const currentUp = new THREE.Vector3(0, 0, 1);
+            const rotationAxis = new THREE.Vector3().crossVectors(currentUp, normal).normalize();
+            const angle = currentUp.angleTo(normal);
+            const targetQuaternion = new THREE.Quaternion().setFromAxisAngle(rotationAxis, angle);
+
+            // Estrai gli angoli di rotazione (yaw, pitch, roll) direttamente dal quaternione
+            const euler = new THREE.Euler().setFromQuaternion(targetQuaternion, 'YXZ'); // Ordine: Yaw (Y), Pitch (X), Roll (Z)
+
+            // Converti in gradi e assegna
+            mirrorsData[pyramid.row][pyramid.col] = {
+                yaw: euler.y * 180 / Math.PI,
+                pitch: euler.x * 180 / Math.PI,
+                roll: euler.z * 180 / Math.PI
+            };
+
+        });
+
+        updateSurface();
+    }
+
+
+    // Function to visualize a vector using ArrowHelper
+    function visualizeVector(origin, direction, color, invert) {
+        // Remove any existing arrow
+        //scene.remove(window.currentArrow);
+        let arrow;
+
+        if (invert) {
+            // Calculate the new origin for the inverted arrow
+            const newOrigin = origin.clone().add(direction);
+            const invertedDirection = direction.clone().negate();
+            arrow = new THREE.ArrowHelper(
+                invertedDirection,
+                newOrigin,
+                1, // Length of the arrow
+                color
+            );
+        } else {
+            arrow = new THREE.ArrowHelper(
+                direction,
+                origin,
+                1, // Length of the arrow
+                color
+            );
+        }
+
+        // Add the arrow to the scene
+        scene.add(arrow);
+        return arrow;
+        //window.currentArrow = arrow; // Store the reference to remove it later
+    }
+
+    window.onload = function () {
+        const now = new Date("2025-12-22T11:00:00Z");
+        const year = now.getFullYear();
+        const month = String(now.getMonth() + 1).padStart(2, '0');
+        const day = String(now.getDate()).padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`;
+        const hours = String(now.getHours()).padStart(2, '0');
+        const minutes = String(now.getMinutes()).padStart(2, '0');
+        const formattedTime = `${hours}:${minutes}`;
+
+        document.getElementById('date-input').value = formattedDate;
+        document.getElementById('time-input').value = formattedTime;
+
+        updateSunPosition();
+    };
+
+</script>
+</body>
+</html>
