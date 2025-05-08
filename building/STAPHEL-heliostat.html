@@ -149,7 +149,7 @@
     scene.add(sunSphere);
 
     // Configuration
-    const gridSize = 12; // debug
+    const gridSize = 2; // debug
     const mirrorSize = 1;
     const segmentsPerMirror = 8; // Resolution per mirror
 
@@ -319,7 +319,7 @@ async function createSeparateMirrorsWithProgress(rotations) {
 
 let font = null;
 const loader = new THREE.FontLoader();
-loader.load('https://threejs.org/examples/fonts/helvetiker_regular.typeface.json', function (response) {
+loader.load('https://threejs.org/examples/fonts/helvetiker_bold.typeface.json', function (response) {
     font = response;
 });
 
@@ -344,28 +344,36 @@ function createSingleMirror(rotation, gridX, gridY) {
     // 3. Sottrai lo specchio interno per creare la cavità
     let mirrorWithCavity = doCSG(outerMirror, innerMirror, 'subtract', material);
 
+        const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
+        const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
+
+
+    const baseGeometry = new THREE.BoxGeometry(BASE_SIZE-0.2, BASE_SIZE-0.1, 0.2);
+    const baseMesh = new THREE.Mesh(baseGeometry , material);
+    baseMesh.position.set(worldX, worldY+6, -extrusionAmount + 0.5)
+
+ mirrorWithCavity = doCSG(mirrorWithCavity, baseMesh, 'union', material);
+
     // 4. Prepara il testo da sottrarre SOLO dal fondo
     if (font && showText3d) {
 console.log("TEXT!")
         const textGeometry = new THREE.TextGeometry(`${gridX},${gridY}`, {
             font: font,
             size: 0.2,
-            height: 8    //extrusionAmount * 2,  // Altezza sufficiente
+            height: 2    //extrusionAmount * 2,  // Altezza sufficiente
         });
 
         const textMesh = new THREE.Mesh(textGeometry);
 
         // Posiziona il testo sul fondo dello specchio esterno
-        const worldX = (gridX - (gridSize-1)/2) * gridCellSize;
-        const worldY = (gridY - (gridSize-1)/2) * gridCellSize;
         const rightFaceX = worldX + (MY_MIRROR_SCALE * gridCellSize) / 2;
 
         textMesh.position.set(
-            rightFaceX - 0.2,
+            rightFaceX - 0.6,
             worldY + 6,
-            -extrusionAmount/2 +2  // Appena sopra la superficie del fondo
+            -extrusionAmount/2 -0.5  // Appena sopra la superficie del fondo
         );
-        textMesh.rotation.set(0, Math.PI, 0);  // Orientamento corretto
+        //textMesh.rotation.set(0, Math.PI, 0);  // Orientamento corretto
 
         // 5. Crea un volume per la sottrazione (estendi il testo verso l'interno)
         const textDepth = extrusionAmount * 0.8;  // Regola secondo necessità
@@ -379,6 +387,7 @@ console.log("TEXT!")
 
         // 6. Sottrai il testo DALLO SPECCHIO CON CAVITÀ
         mirrorWithCavity = doCSG(mirrorWithCavity, textMesh, 'subtract', material);
+
 
         // 7. (Opzionale) Aggiungi testo visibile
         const visibleText = textMesh.clone();
@@ -398,8 +407,8 @@ function createMyMirror(rotation, gridX, gridY, mirrorScale, addText) {
     const backVertices = [];
     const indices = [];
     const uvs = [];
-    // Aggiungi una nuova variabile per la dimensione della cella della griglia
-let textMesh;
+
+    let textMesh;
 
     // Fattore di scala per lo specchietto (0-1)
 //    const mirrorScale = 0.8;//mirrorSize; // Assumendo che mirrorSize sia ora un valore tra 0 e 1
@@ -500,6 +509,8 @@ let textMesh;
     geometry.setAttribute('uv', new THREE.Float32BufferAttribute(uvs.concat(uvs), 2));
     geometry.setIndex(indices);
     geometry.computeVertexNormals();
+
+
 
 
     const mesh = new THREE.Mesh(geometry, material);
@@ -935,58 +946,6 @@ let textMesh;
 
         sunLight.position.set(x, y, z);
         sunSphere.position.copy(sunLight.position);
-    }
-
-
-    // Create vertical open box (5 planes without thickness)
-    function createVerticalOpenBox(rows, cols, height) {
-        const group = new THREE.Group();
-        const material = new THREE.MeshPhongMaterial({
-            color: 0x3498db,
-            side: THREE.DoubleSide,
-            transparent: false,
-            opacity: 1
-        });
-
-        const bottom = new THREE.Mesh(
-            new THREE.PlaneGeometry(cols * BASE_SIZE, rows * BASE_SIZE),
-            material
-        );
-        bottom.rotation.x = +Math.PI / 2;
-        group.add(bottom);
-
-        const backWall = new THREE.Mesh(
-            new THREE.PlaneGeometry(cols * BASE_SIZE, height),
-            material
-        );
-        backWall.position.set(0, height / 2, -rows * BASE_SIZE / 2);
-        backWall.rotation.y = Math.PI;
-        group.add(backWall);
-
-        const frontWall = new THREE.Mesh(
-            new THREE.PlaneGeometry(cols * BASE_SIZE, height),
-            material
-        );
-        frontWall.position.set(0, height / 2, rows * BASE_SIZE / 2);
-        group.add(frontWall);
-
-        const leftWall = new THREE.Mesh(
-            new THREE.PlaneGeometry(rows * BASE_SIZE, height),
-            material
-        );
-        leftWall.position.set(-cols * BASE_SIZE / 2, height / 2, 0);
-        leftWall.rotation.y = -Math.PI / 2;
-        group.add(leftWall);
-
-        const rightWall = new THREE.Mesh(
-            new THREE.PlaneGeometry(rows * BASE_SIZE, height),
-            material
-        );
-        rightWall.position.set(cols * BASE_SIZE / 2, height / 2, 0);
-        rightWall.rotation.y = Math.PI / 2;
-        group.add(rightWall);
-
-        return group;
     }
 
 
