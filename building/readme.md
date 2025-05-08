@@ -6,6 +6,7 @@
 - Concave parabolic mirror
 - Convex circular mirror
 - Light tube (optical fiber)
+- [Multimirror, printable](https://jumpjack.github.io/heliostat/building/STAPHEL-heliostat.html)
 
 ### Moving
 
