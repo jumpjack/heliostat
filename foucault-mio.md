@@ -209,6 +209,7 @@ La tabella che segue mostra le combinazioni possibili di ingranaggi che soddisfi
 
 |  c  |  C  | b  |  B  |
 |-----|-----|----|-----|
+|  24 |  12 |  6 |  30 |
 |  32 |  16 |  8 |  40 |
 |  40 |  20 | 10 |  50 |
 |  48 |  24 | 12 |  60 |
@@ -471,10 +472,10 @@ Oppure:
   <tbody>
     <tr>
       <td align="center">Denti (diametro)</td>
-      <td align="center">32</td>
-      <td align="center">16</td>
-      <td align="center">8</td>
-      <td align="center">40</td>
+      <td align="center">24</td>
+      <td align="center">12</td>
+      <td align="center">6</td>
+      <td align="center">30</td>
       <td align="center">200</td>
       <td align="center">20</td>
       <td align="center">200</td>
@@ -489,8 +490,8 @@ Oppure:
     </tr>
     <tr>
       <td colspan="1" align="center">Raggio</td>
-      <td colspan="2" align="center">48/2</td>
-      <td colspan="2" align="center">48/2</td>
+      <td colspan="2" align="center">24/2</td>
+      <td colspan="2" align="center">24/2</td>
       <td colspan="1" align="center">100</td>
       <td colspan="1" align="center"></td>
       <td colspan="1" align="center">100</td>
@@ -511,6 +512,7 @@ Resta "solo" da trovare quali sono i valori possibili di a e a1 per i vari valor
 
 |  c  |  C  | b  |  B  |
 |-----|-----|----|-----|
+|  24 |  12 |  6 |  30 |
 |  32 |  16 |  8 |  40 |
 |  40 |  20 | 10 |  50 |
 |  48 |  24 | 12 |  60 |
