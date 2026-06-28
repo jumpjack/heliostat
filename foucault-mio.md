@@ -503,6 +503,33 @@ Oppure:
 
 $$v_B = \frac{9}{10}V_A$$
 
+Dalla dimostrazione sopra risulterebbe:
+
+22) $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$$
+
+Resta "solo" da trovare quali sono i valori possibili di a e a1 per i vari valori possibili per b, B, c , e C:
+
+|  c  |  C  | b  |  B  |
+|-----|-----|----|-----|
+|  32 |  16 |  8 |  40 |
+|  40 |  20 | 10 |  50 |
+|  48 |  24 | 12 |  60 |
+|  56 |  28 | 14 |  70 |
+|  64 |  32 | 16 |  80 |
+|  72 |  36 | 18 |  90 |
+|  80 |  40 | 20 | 100 |
+|  88 |  44 | 22 | 110 |
+|  96 |  48 | 24 | 120 |
+| 104 |  52 | 26 | 130 |
+| 112 |  56 | 28 | 140 |
+| 120 |  60 | 30 | 150 |
+| 128 |  64 | 32 | 160 |
+| 136 |  68 | 34 | 170 |
+| 144 |  72 | 36 | 180 |
+| 152 |  76 | 38 | 190 |
+| 160 |  80 | 40 | 200 |
+
+
 # Ruotismo 2 - Variazione della declinazione
 
 L'altro meccanismo in cui è inserito il ruotismo satellite è quello superiore del siderostato di Foucault, quello che si occupa, principalmente, di far eseguire una rotazione ogni 24 ore all'asse dello strumento:
