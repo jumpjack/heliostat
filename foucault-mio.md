@@ -499,7 +499,9 @@ Oppure:
   </tbody>
 </table>
 
-**Il problema insormontabile è dimezzare ulteriormente il numero "9" di denti di "a1":** bisogna vedere quali combinazioni possibli di a/A/a1/A1 mantegnono il giusto rapporto di trasmissione della catena a prescindere dal numero di denti, come già trovato per b/B/c/C.
+**Il problema insormontabile è dimezzare ulteriormente il numero "9" di denti di "a1":** bisogna vedere quali combinazioni possibli di a/A/a1/A1 mantegnono il giusto rapporto di trasmissione della catena a prescindere dal numero di denti, come già trovato per b/B/c/C. Ricordiamoci che la necessità è che **la ruota finale B abbia velocità pari a 9/10 della velocità di A:**
+
+$$v_B = \frac{9}{10}V_A$$
 
 # Ruotismo 2 - Variazione della declinazione
 
