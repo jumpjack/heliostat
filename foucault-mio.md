@@ -388,10 +388,10 @@ Questo è vero per i valori forniti da Foucault:
 - a1 = 18
 - a = 20
 
-Il risultato, come detto è che le velocità di A1 e A sono in rapporto 9:10, ma lo stesso risultato **pare** possano essere ottenuti con:
+Il risultato, come detto è che le velocità di A1 e A sono in rapporto 9:10, ma lo stesso risultato **pare** possa essere ottenuto con:
 - [a1=36, a=40, A1=200, A=200](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,200,50,4,20,0,0,0,0,0,1,0,200,50,4,20,0,0,0,0,0,0,1,3,-26)
 
-Na è possibile anche ridurre le dimensioni di A1 e A:
+Ma è possibile anche ridurre le dimensioni di A1 e A:
 - [a1=36, a=40, A1=100, A=100](https://geargenerator.com/#175,350,30,1,0,3,0,4,1,36,9,4,20,90,0,0,0,0,0,1,40,10,4,20,-60,0,0,0,0,0,0,100,25,4,20,0,0,0,0,0,1,0,100,25,4,20,0,0,0,0,0,0,1,3,-276)
 
 
@@ -400,7 +400,10 @@ C'è però da tener conto, nel ridurre A e A1, che A deve essere comunque abbast
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/6d4a0e1c-2498-4ed7-a209-c8b04af27c9d)
 
 Questo significa che C/2 + c/2 e B/2 + b/2 devono essere minori del raggio di A, e le dimensioni minime le decide C, che è la ruota più piccola, che probabilmente non può avere meno di 8 denti, e dovendo essere c = 2*C, significa C = 8 e c = 16, quindi la somma dei raggi verrebbe 4+8 = 12.
-Restano altri calcoli da fare...
+
+## Conclusioni
+
+**Ancora niente di utilizzabile**: restano altri calcoli da fare per capire le dimensioni minime di A e A1; è importante cercare di ridurle, perchè un ingranaggio di 200 denti e modulo 1 ha un diametro di 20 cm, ma è difficile riuscire a stampare ingranaggi con modulo 1 funzionanti tramite stampanti 3d amatoriali; e portando il modulo a 2mm si arriverebbe a ingranaggi A e A1 larghi 40 cm! Praticamente invece che un eliostato toccherebbe stampare una bicicletta... ;-)
 
 
 # Ruotismo 2 - Variazione della declinazione
