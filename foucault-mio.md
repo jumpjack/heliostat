@@ -404,9 +404,7 @@ Questo significa che C/2 + c/2 e B/2 + b/2 devono essere minori del raggio di A,
 
 ## Conclusioni
 
-**Ancora niente di utilizzabile**: restano altri calcoli da fare per capire le dimensioni minime di A e A1; è importante cercare di ridurle, perchè un ingranaggio di 200 denti e modulo 1 ha un diametro di 20 cm, ma è difficile riuscire a stampare ingranaggi con modulo 1 funzionanti tramite stampanti 3d amatoriali; e portando il modulo a 2mm si arriverebbe a ingranaggi A e A1 larghi 40 cm! Praticamente invece che un eliostato toccherebbe stampare una bicicletta... ;-)
-
-Dati di base su cui lavorare:
+Secondo me questi valori dei vari ingranaggi soddisfano tutte le condizioni necessarie:
 
 <table>
   <thead>
@@ -417,55 +415,8 @@ Dati di base su cui lavorare:
       <th>b</th>
       <th>B</th>
       <th>A</th>
-      <th>a</th>
       <th>A1</th>
-      <th>a1</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td align="center">Denti (diametro)</td>
-      <td align="center">40</td>
-      <td align="center">20</td>
-      <td align="center">10</td>
-      <td align="center">50</td>
-      <td align="center">200</td>
-      <td align="center">20</td>
-      <td align="center">200</td>
-      <td align="center">18</td>
-    </tr>
-    <tr>
-      <td colspan="1" align="center">Rapporti</td>
-      <td colspan="2" align="center">2:1</td>
-      <td colspan="2" align="center">1:5</td>
-      <td colspan="2" align="center">100:10</td>
-      <td colspan="2" align="center"><b>100:9</b></td>
-    </tr>
-    <tr>
-      <td colspan="1" align="center">Raggio</td>
-      <td colspan="2" align="center">60/2</td>
-      <td colspan="2" align="center">60/2</td>
-      <td colspan="1" align="center">100</td>
-      <td colspan="1" align="center"></td>
-      <td colspan="1" align="center">100</td>
-      <td colspan="1" align="center"></td>
-    </tr>
-  </tbody>
-</table>
-
-Oppure:
-
-<table>
-  <thead>
-    <tr>
-      <th></th>
-      <th>c</th>
-      <th>C</th>
-      <th>b</th>
-      <th>B</th>
-      <th>A</th>
       <th>a</th>
-      <th>A1</th>
       <th>a1</th>
     </tr>
   </thead>
@@ -476,61 +427,20 @@ Oppure:
       <td align="center">12</td>
       <td align="center">6</td>
       <td align="center">30</td>
-      <td align="center">200</td>
-      <td align="center">20</td>
-      <td align="center">200</td>
-      <td align="center">18</td>
+      <td align="center">80</td>
+      <td align="center">80</td>
+      <td align="center">10</td>
+      <td align="center">9</td>
     </tr>
     <tr>
       <td colspan="1" align="center">Rapporti</td>
       <td colspan="2" align="center">2:1</td>
       <td colspan="2" align="center">1:5</td>
-      <td colspan="2" align="center">100:10</td>
-      <td colspan="2" align="center"><b>100:9</b></td>
-    </tr>
-    <tr>
-      <td colspan="1" align="center">Raggio</td>
-      <td colspan="2" align="center">24/2</td>
-      <td colspan="2" align="center">24/2</td>
-      <td colspan="1" align="center">100</td>
-      <td colspan="1" align="center"></td>
-      <td colspan="1" align="center">100</td>
-      <td colspan="1" align="center"></td>
+      <td colspan="2" align="center">=</td>
+      <td colspan="2" align="center"><b>10:9</b></td>
     </tr>
   </tbody>
 </table>
-
-**Il problema insormontabile è dimezzare ulteriormente il numero "9" di denti di "a1":** bisogna vedere quali combinazioni possibli di a/A/a1/A1 mantegnono il giusto rapporto di trasmissione della catena a prescindere dal numero di denti, come già trovato per b/B/c/C. Ricordiamoci che la necessità è che **la ruota finale B abbia velocità pari a 9/10 della velocità di A:**
-
-$$v_B = \frac{9}{10}V_A$$
-
-Dalla dimostrazione sopra risulterebbe:
-
-22) $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$$
-
-Resta "solo" da trovare quali sono i valori possibili di a e a1 per i vari valori possibili per b, B, c , e C:
-
-|  c  |  C  | b  |  B  |
-|-----|-----|----|-----|
-|  24 |  12 |  6 |  30 |
-|  32 |  16 |  8 |  40 |
-|  40 |  20 | 10 |  50 |
-|  48 |  24 | 12 |  60 |
-|  56 |  28 | 14 |  70 |
-|  64 |  32 | 16 |  80 |
-|  72 |  36 | 18 |  90 |
-|  80 |  40 | 20 | 100 |
-|  88 |  44 | 22 | 110 |
-|  96 |  48 | 24 | 120 |
-| 104 |  52 | 26 | 130 |
-| 112 |  56 | 28 | 140 |
-| 120 |  60 | 30 | 150 |
-| 128 |  64 | 32 | 160 |
-| 136 |  68 | 34 | 170 |
-| 144 |  72 | 36 | 180 |
-| 152 |  76 | 38 | 190 |
-| 160 |  80 | 40 | 200 |
-
 
 # Ruotismo 2 - Variazione della declinazione
 
