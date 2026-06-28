@@ -405,6 +405,101 @@ Questo significa che C/2 + c/2 e B/2 + b/2 devono essere minori del raggio di A,
 
 **Ancora niente di utilizzabile**: restano altri calcoli da fare per capire le dimensioni minime di A e A1; è importante cercare di ridurle, perchè un ingranaggio di 200 denti e modulo 1 ha un diametro di 20 cm, ma è difficile riuscire a stampare ingranaggi con modulo 1 funzionanti tramite stampanti 3d amatoriali; e portando il modulo a 2mm si arriverebbe a ingranaggi A e A1 larghi 40 cm! Praticamente invece che un eliostato toccherebbe stampare una bicicletta... ;-)
 
+Dati di base su cui lavorare:
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>c</th>
+      <th>C</th>
+      <th>b</th>
+      <th>B</th>
+      <th>A</th>
+      <th>a</th>
+      <th>A1</th>
+      <th>a1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">Denti (diametro)</td>
+      <td align="center">40</td>
+      <td align="center">20</td>
+      <td align="center">10</td>
+      <td align="center">50</td>
+      <td align="center">200</td>
+      <td align="center">20</td>
+      <td align="center">200</td>
+      <td align="center">18</td>
+    </tr>
+    <tr>
+      <td colspan="1" align="center">Rapporti</td>
+      <td colspan="2" align="center">2:1</td>
+      <td colspan="2" align="center">1:5</td>
+      <td colspan="2" align="center">100:10</td>
+      <td colspan="2" align="center"><b>100:9</b></td>
+    </tr>
+    <tr>
+      <td colspan="1" align="center">Raggio</td>
+      <td colspan="2" align="center">60/2</td>
+      <td colspan="2" align="center">60/2</td>
+      <td colspan="1" align="center">100</td>
+      <td colspan="1" align="center"></td>
+      <td colspan="1" align="center">100</td>
+      <td colspan="1" align="center"></td>
+    </tr>
+  </tbody>
+</table>
+
+Oppure:
+
+<table>
+  <thead>
+    <tr>
+      <th></th>
+      <th>c</th>
+      <th>C</th>
+      <th>b</th>
+      <th>B</th>
+      <th>A</th>
+      <th>a</th>
+      <th>A1</th>
+      <th>a1</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td align="center">Denti (diametro)</td>
+      <td align="center">32</td>
+      <td align="center">16</td>
+      <td align="center">8</td>
+      <td align="center">40</td>
+      <td align="center">200</td>
+      <td align="center">20</td>
+      <td align="center">200</td>
+      <td align="center">18</td>
+    </tr>
+    <tr>
+      <td colspan="1" align="center">Rapporti</td>
+      <td colspan="2" align="center">2:1</td>
+      <td colspan="2" align="center">1:5</td>
+      <td colspan="2" align="center">100:10</td>
+      <td colspan="2" align="center"><b>100:9</b></td>
+    </tr>
+    <tr>
+      <td colspan="1" align="center">Raggio</td>
+      <td colspan="2" align="center">48/2</td>
+      <td colspan="2" align="center">48/2</td>
+      <td colspan="1" align="center">100</td>
+      <td colspan="1" align="center"></td>
+      <td colspan="1" align="center">100</td>
+      <td colspan="1" align="center"></td>
+    </tr>
+  </tbody>
+</table>
+
+**Il problema insormontabile è dimezzare ulteriormente il numero "9" di denti di "a":** bisogna vedere quali combinazioni possibli di a/A/a1/A1 mantegnono il giusto rapporto di trasmissione della catena a prescindere dal numero di denti, come già trovato per b/B/c/C.
 
 # Ruotismo 2 - Variazione della declinazione
 
