@@ -56,23 +56,21 @@ Recueil des travaux:
 
 Fig.3, Planche 15  (Figura 3, tavola 15), Recueil des Travaux
 
-Notare che in nella seconda versione del disegno, presente nel documento "Recueil de travaux...", è probabilmente presente un errore, che si può notare confrontandolo con un'altra versione del disegno presente negli "Annales":
+Notare che  nella seconda versione del disegno, quella presente nel documento "Recueil de travaux...", la spina di fissaggio della ruota **b**  all'asse **Y** che la unisce alla ruota **c**  è a malapena visibile, a differenza del diseno negli "Annales", ma la sua presenza o assenza cambia drasticamente il funzionamento del meccanismo:
 
  ![(errore](https://github.com/jumpjack/heliostat/blob/main/images/errore%20satellite.jpg?raw=true)
 
- Nella versione degli _Annales_ è presente una "spina" o "vite" che fissa la ruota **c** all'asse satellite **Y**, ma questa spina è assente nel disegno sotto; ma in assenza della spina, la ruota **c** si limiterebbe a ruotare intorno all'asse **Y**, senza poter trasmettere il movimento alla ruota **B**, risultando quindi completamente inutile.
-
-Mia versione a colori, con spina/vite asse Y presente, del disegno di _Recueil_:
+Mia versione a colori, con spina/vite asse considerata Y presente, :
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/05de53a4-ce80-4203-8d6b-f98e3f8851ea)
 
 Fig.3, Planche 15  (Figura 3, tavola 15, versione a colori),  Recueil des Travaux
 
-Versione ricavata invece dalla Fig. 4 degli Annales, usando invece delle "spine" la colorazione uniforme di ingranaggi e flange:
+Versione equivalente, ottenuta usando invece delle "spine" la colorazione uniforme di ingranaggi e flange connessi insieme:
 
 ![fig.4 Annales org](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
 
-Un'ulteriore vantaaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immagine.
+Un'ulteriore vantaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immagine.
 
 
 
