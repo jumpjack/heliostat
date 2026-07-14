@@ -163,7 +163,25 @@ Infine, anche se Foucault non lo specifica, è necessario che le ruote **b, B, c
 
 9: b + B = c + C
 
-Quindi abbiamo complessivamente queste 3 condizioni:
+
+# Ruotismo 2 - Variazione della declinazione
+
+L'altro meccanismo in cui è inserito il ruotismo satellite è quello superiore del siderostato di Foucault, quello che si occupa, principalmente, di far eseguire una rotazione ogni 24 ore all'asse dello strumento:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/15e7c1ef-8b89-4bb8-93ab-88fa6191b9e3)
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/528a677c-1614-4ef5-9ec7-bf859abe4b62)
+
+Schematicamente:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/82dbec2b-d6e5-4dea-91a9-2659c5c7a8aa)
+
+
+.stl)
+
+# Cambiare i valori suggeriti da Foucault
+
+Abbiamo complessivamente queste 3 condizioni da rispettare:
 
 - 3: $$\frac{B}{b} > \frac{C}{c}$$
 - 9: $$b + B = c + C$$
@@ -242,15 +260,8 @@ Notare come per ogni riga risulta vera la (9) c+C = b+B, che vale 48. Ovviamente
     - $$\frac{9}{2} = \frac{45}{10}\$$
     - $$\frac{9}{2} = \frac{9}{2}\$$
  
-Foucault non  fornisce indicazioni sulle dimensioni degli ingranaggi del meccanismo di regolazione della declinazione, ma possiamo fare una stima:
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/c7921b14-ed3f-4eb1-a649-8c0afed78600)
 
 
-
-# Cambiare i valori suggeriti da Foucault
-
-Di queste 3 condizioni:
 
 - 3: $$\Large{\frac{B}{b} > \frac{C}{c}}$$
 - 9: $$b + B = c + C$$
@@ -440,26 +451,15 @@ Secondo me questi valori dei vari ingranaggi soddisfano tutte le condizioni nece
   </tbody>
 </table>
 
-# Ruotismo 2 - Variazione della declinazione
-
-L'altro meccanismo in cui è inserito il ruotismo satellite è quello superiore del siderostato di Foucault, quello che si occupa, principalmente, di far eseguire una rotazione ogni 24 ore all'asse dello strumento:
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/15e7c1ef-8b89-4bb8-93ab-88fa6191b9e3)
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/528a677c-1614-4ef5-9ec7-bf859abe4b62)
-
-Schematicamente:
-
-![image](https://github.com/jumpjack/heliostat/assets/1620953/82dbec2b-d6e5-4dea-91a9-2659c5c7a8aa)
-
-
-.stl)
-
 -----------
 
-Nuovi calcoli:
+# Tentativo di determinazione del numero di denti degli ingranaggi secondari
 
-Secondo i miei calcoli:
+Foucault non  fornisce indicazioni sulle dimensioni degli ingranaggi del meccanismo di regolazione della declinazione, ma possiamo fare una stima:
+
+![image](https://github.com/jumpjack/heliostat/assets/1620953/c7921b14-ed3f-4eb1-a649-8c0afed78600)
+
+Proviamo a fare un po' di calcoli:
 - l'asse XX' di uscita dell'anticipatore ha una velocità pari a L/200 di $V_L$
 - questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
 
