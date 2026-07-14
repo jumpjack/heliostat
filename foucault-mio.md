@@ -44,7 +44,12 @@ A destra è presente una "spina" che collega la ruota di uscita **B** all'asse i
 
 ### Impiego in meccanismo superiore: combinazione di moto orario automatico e declinazione manuale.
 
-Questa variante è illustrata in due modi diversi in due documenti diversi:
+Questa variante permette di far "passare" un "segnale" di declinazione attraverso il meccanismo di trasmissione del moto orario, senza alterarlo.
+
+<img width="2024" height="627" alt="image" src="https://github.com/user-attachments/assets/4ff695ac-577d-4823-9464-813becf57aaf" />
+
+
+E' illustrata in due modi diversi in due documenti diversi:
 
 Annales:
 
