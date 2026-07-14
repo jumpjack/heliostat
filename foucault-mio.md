@@ -46,7 +46,7 @@ A destra è presente una "spina" che collega la ruota di uscita **B** all'asse i
 
 Questa variante permette di far "passare" un "segnale" di declinazione attraverso il meccanismo di trasmissione del moto orario, senza alterarlo.
 
-<img width="2024" height="627" alt="image" src="https://github.com/user-attachments/assets/4ff695ac-577d-4823-9464-813becf57aaf" />
+<img width="2623" height="627" alt="image" src="https://github.com/user-attachments/assets/f8571372-8979-41ed-a3f3-f9c17a52b18f" />
 
 
 E' illustrata in due modi diversi in due documenti diversi:
