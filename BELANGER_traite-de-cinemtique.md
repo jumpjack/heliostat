@@ -38,15 +38,15 @@ Posto ciò, osserviamo che al contatto tra gli ingranaggi **b** e **B**, il punt
 
 Da cui:
 
-3) $$w_A(B/b - C/c) = w_B B/b$$
+3) $$w_A(\frac B b - \frac Cc) = w_B \frac B b$$
 
 O anche:
 
-4) $$w_A(1- bC/Bc) = w_B$$
+4) $$w_A(1- \frac b B \frac C c) = w_B$$
 
 _Spiegazione_
 
-la 3) si ottiene dalla 1) inserendoci il valore di W ricavato dalla 2:
+la 3) si ottiene dalla 1) inserendoci il valore di W ricavato dalla 2):
 
 Infatti dalla 2) $$w_A * C - W*c = 0$$
 
@@ -56,27 +56,26 @@ si ottiene facilmente:
 
 e quindi:
 
-6) $$w_A * C/c = W$$
+6) $$W = w_A * \frac C c$$
 
-Sostituendo la 6) $$w_A * C/c = W$$ nella 1) $$w_A * B - W * b = w_B * B$$ si ha:
+Sostituendo la 6)  $$W = w_A * \frac C c$$ nella 1) $$w_A * B - W * b = w_B * B$$ si ha:
 
-7) $$w_A * B - (w_A * C/c) * b = w_B * B$$
+7) $$w_A * B - (w_A * \frac C c) * b = w_B * B$$
 
 Raccogliendo $$w_A$$ si ottiene:
 
-8) $$w_A (B - Cb/c)  = w_B * B$$
+8) $$w_A (B -  \frac C c b)  = w_B * B$$
 
 Se poi dividiamo a sinistra e a destra per b otteniamo:
 
-9) $$w_A (B/b - Cb/cb)  = w_B * B/b$$
+9) $$w_A (\frac B b -  \frac C c \frac b b)  = w_B * \frac B b$$
 
 che si semplifica in:
 
-$$w_A (B/b - C/c)  = w_B * B/b$$
+$$w_A (\frac B b - \frac C c)  = w_B * \frac B b$$
 
-che è proprio la 3).
+che è proprio la 3) $$w_A(\frac B b - \frac Cc) = w_B \frac B b$$
 
-3) $$w_A(B/b - C/c) = w_B B/b$$
 
 Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo: 
 
