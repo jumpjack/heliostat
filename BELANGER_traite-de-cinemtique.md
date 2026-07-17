@@ -44,7 +44,6 @@ O anche:
 
 4) $$w_A(1- \frac b B \frac C c) = w_B$$
 
-_Spiegazione_
 
 | Dimostrazione |
 | :--- |
