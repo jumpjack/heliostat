@@ -26,10 +26,57 @@ p.198
 
 è quella che un osservatore percepirebbe, come una rotazione assoluta, se venisse inconsapevolmente trascinato nel movimento della barra **A**. Indichiamo, inoltre, con **B, b, C e c** i raggi dei quattro ingranaggi **B, b, C e c**. <img align="right" src="https://github.com/jumpjack/heliostat/blob/main/images/Trait%C3%A9_de_cin%C3%A9matique-tavVI(fig102)(zoom).png">
 
+
+
 Posto ciò, osserviamo che al contatto tra gli ingranaggi **b** e **B**, il punto **T**, considerato come appartenente all'ingranaggio **b**, ha la sua velocità lineare assoluta espressa dalla risultante, che è qui una somma algebrica della sua velocità di trasmissione **wa * B** e della sua velocità relativa **-W * b**, mentre lo stesso punto **T**, considerato come appartenente all'ingranaggio **B**, ha la sua velocità lineare assoluta uguale a **wb * B**. Allo stesso modo, al contatto tra i due ingranaggi **c** e **C**, il punto **S**, appartenente all'ingranaggio **c**, ha la sua velocità lineare assoluta uguale a **wa *  C - W * c**, mentre questo punto, appartenente all'ingranaggio **C**, è immobile. Pertanto, abbiamo le due equazioni:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/9891998f-9d82-4017-867f-b3752b6667e9)
 
+1) $$w_A * B - W * b = w_B * B$$
+
+2) $$w_A * C - W*c = 0$$
+
+Da cui:
+
+3) $$w_A(B/b - C/c) = w_B B/b$$
+
+O anche:
+
+4) $$w_A(1- bC/Bc) = w_B$$
+
+_Spiegazione_
+
+la 3) si ottiene dalla 1) inserendoci il valore di W ricavato dalla 2:
+
+Infatti dalla 2) $$w_A * C - W*c = 0$$
+
+si ottiene facilmente:
+
+5) $$w_A * C = W*c$$
+
+e quindi:
+
+6) $$w_A * C/c = W$$
+
+Sostituendo la 6) $$w_A * C/c = W$$ nella 1) $$w_A * B - W * b = w_B * B$$ si ha:
+
+7) $$w_A * B - (w_A * C/c) * b = w_B * B$$
+
+Raccogliendo $$w_A$$ si ottiene:
+
+8) $$w_A (B - Cb/c)  = w_B * B$$
+
+Se poi dividiamo a sinistra e a destra per b otteniamo:
+
+9) $$w_A (B/b - Cb/cb)  = w_B * B/b$$
+
+che si semplifica in:
+
+$$w_A (B/b - C/c)  = w_B * B/b$$
+
+che è proprio la 3).
+
+3) $$w_A(B/b - C/c) = w_B B/b$$
 
 Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo: 
 
