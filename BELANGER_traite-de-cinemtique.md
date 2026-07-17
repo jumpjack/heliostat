@@ -46,35 +46,10 @@ O anche:
 
 _Spiegazione_
 
-la 3) si ottiene dalla 1) inserendoci il valore di W ricavato dalla 2):
+| Dimostrazione |
+| :--- |
+| la 3) si ottiene dalla 1) inserendoci il valore di W ricavato dalla 2):<br><br>Infatti dalla 2) $w_A \cdot C - W \cdot c = 0$<br><br>si ottiene facilmente:<br><br>5) $w_A \cdot C = W \cdot c$<br><br>e quindi:<br><br>6) $W = w_A \cdot \frac C c$<br><br>Sostituendo la 6) $W = w_A \cdot \frac C c$ nella 1) $w_A \cdot B - W \cdot b = w_B \cdot B$ si ha:<br><br>7) $w_A \cdot B - (w_A \cdot \frac C c) \cdot b = w_B \cdot B$<br><br>Raccogliendo $w_A$ si ottiene:<br><br>8) $w_A (B -  \frac C c b)  = w_B \cdot B$<br><br>Se poi dividiamo a sinistra e a destra per b otteniamo:<br><br>9) $w_A (\frac B b -  \frac C c \frac b b)  = w_B \cdot \frac B b$<br><br>che si semplifica in:<br><br>$w_A (\frac B b - \frac C c)  = w_B \cdot \frac B b$<br><br>che è proprio la 3) $w_A(\frac B b - \frac C c) = w_B \frac B b$ |
 
-Infatti dalla 2) $$w_A * C - W*c = 0$$
-
-si ottiene facilmente:
-
-5) $$w_A * C = W*c$$
-
-e quindi:
-
-6) $$W = w_A * \frac C c$$
-
-Sostituendo la 6)  $$W = w_A * \frac C c$$ nella 1) $$w_A * B - W * b = w_B * B$$ si ha:
-
-7) $$w_A * B - (w_A * \frac C c) * b = w_B * B$$
-
-Raccogliendo $$w_A$$ si ottiene:
-
-8) $$w_A (B -  \frac C c b)  = w_B * B$$
-
-Se poi dividiamo a sinistra e a destra per b otteniamo:
-
-9) $$w_A (\frac B b -  \frac C c \frac b b)  = w_B * \frac B b$$
-
-che si semplifica in:
-
-$$w_A (\frac B b - \frac C c)  = w_B * \frac B b$$
-
-che è proprio la 3) $$w_A(\frac B b - \frac Cc) = w_B \frac B b$$
 
 
 Osservazioni: a seconda che B/b sia più grande o più piccolo di C/c, le due velocità angolari **wa** e **wb** del braccio **A** e della ruota **B** hanno lo stesso verso, come abbiamo supposto nella formulazione dell'equazione, o versi opposti. Se i due rapporti **B/b** e **C/c** fossero uguali, **wb** sarebbe zero; la ruota **B** sarebbe ferma come la ruota **C**. Senza aumentare eccessivamente il numero di denti delle quattro ruote, è possibile ottenere un rapporto molto piccolo tra le due rotazioni. Ad esempio, se prendiamo: 
