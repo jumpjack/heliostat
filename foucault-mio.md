@@ -376,7 +376,7 @@ Sviluppiamo la (9):
 e mettiamola la (9a) nella (20), tenendo conto anche della 3b:
 
 - 3b: $$\Large{b < \frac{cB}{C}}$$
-- 22: $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$$
+- 22: $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc} = 1 - \frac{Cc + C^2 - BC}{Bc} = 1 - \frac{Cc}{Bc} - \frac {C^2}{Bc} + \frac {BC}{Bc} = 1 - \frac{C}{B} - \frac {C^2}{Bc} + \frac {C}{c} $$
 
 Queste dovrebbero essere le uniche condizioni da rispettare, a prescindere dalle dimensioni di A e A1.
 
@@ -388,11 +388,15 @@ C'è però da considerare che il satellite deve essere attaccato alla ruota A, q
 Quindi alla fine le condizioni  sarebbero:
 
 - 3b: $$\Large{b < \frac{cB}{C}}$$
-- 23: $$A > b+B$$
-- 9: $$b + B = c + C$$
-- 22: $$\Large{\frac{a_1}{a} = \frac{Bc-C(c + C - B)}{Bc}} = 1-\frac{C(c + C - B)}{Bc}$$
+- 23: $$A > b+B$$  (**A in grado di contenere coppie satelliti**)
+- 9: $$b + B = c + C$$  (**satelliti ingranati**)
+- 22: $$\Large{\frac{a_1}{a} =  1-\frac{C(c + C - B)}{Bc}}$$
 
-C'è però un'altra condizione importante, che però non saprei come scrivere matematicamente: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! Quindi è vero che basta rispettare le 3 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi se vengono presi interi i valori di input B, C e c.
+C'è però un'altra condizione importante: tutti i numeri devono essere interi, perchè gli ingranaggi ovviamente non possono avere un numero frazionario di denti! 
+
+$(a, a1, A, A1, B, b, C, c) \in \mathbb{R}$
+
+Quindi è vero che basta rispettare le 4 condizioni qui sopra, ma solo se tutti i valori risultanti, cioè b, A, a1 e a, sono interi e se vengono presi interi i valori di input B, C e c.
 
 Secondo i miei calcoli le dimensioni assolute di a, a1, A e A1 non sono obbligatorie: quello che conta sono i rapporti, per l'esattezza:
 - A1 e A devono avere stesso numero di denti
