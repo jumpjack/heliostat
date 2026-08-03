@@ -160,7 +160,7 @@ Se l'osservazione mostra che questa inclinazione non è esatta, non ci sarà mod
 P. 61
 
 difficoltà di questa regolazione richiede che venga eseguita una volta per tutte, e la sua manutenzione richiede inoltre che parti metalliche della stessa natura uniscano il punto **O** ai punti **M** e **F** .
-Vedremo [TBW] come rettificare la lunghezza della forcella, se l'osservazione mostra che non è uguale alla distanza **OM**. [*intendedosi con "forcella" tutta la struttura collegata al cerchio di declinazione, cioè i due bracci e la coda che li unisce e che la fa ruotare*]
+Vedremo [(sezione "[Forcella regolabile]", p.76)] come rettificare la lunghezza della forcella [(si può fare realizzando la coda della forcella con una barra filettata e fissandola al semicerchio di declinazione tramite un dado solidale col semicerchio stesso, e usando un controdado per bloccarla su una certa lunghezza)], se l'osservazione mostra che non è uguale alla distanza **OM**. [*intendendosi con "forcella" tutta la struttura collegata al cerchio di declinazione, cioè i due bracci e la coda che li unisce e che la fa ruotare*]
 
 Supponiamo ora lo strumento soggetto alle varie condizioni di cui abbiamo appena parlato, e cioè: 
 
