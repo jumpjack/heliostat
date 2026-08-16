@@ -1,270 +1,539 @@
+```html
 <!DOCTYPE html>
 <html lang="it">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Foucault Tipo 1 - Galleria immagini</title>
+<title>Galleria immagini — Heliostat</title>
 
 <style>
-    * {
-        box-sizing: border-box;
-    }
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    background: #181818;
+    color: #eee;
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 25px;
+}
+
+#counter {
+    color: #aaa;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+#gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
+    gap: 15px;
+}
+
+.item {
+    background: #252525;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+    transition:
+        transform 0.15s,
+        box-shadow 0.15s;
+}
+
+.item:hover {
+    transform: scale(1.03);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+}
+
+.item img {
+    display: block;
+    width: 100%;
+    height: 170px;
+    object-fit: contain;
+    background: #111;
+}
+
+.filename {
+    padding: 9px;
+    font-size: 13px;
+    line-height: 1.3;
+    word-break: break-word;
+    color: #ccc;
+}
+
+/* Visualizzatore */
+
+#viewer {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0,0,0,0.94);
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+}
+
+#viewer.active {
+    display: flex;
+}
+
+#viewerImage {
+    max-width: 95vw;
+    max-height: 88vh;
+    object-fit: contain;
+}
+
+#close {
+    position: fixed;
+    top: 15px;
+    right: 25px;
+    font-size: 40px;
+    line-height: 40px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
+
+#prev,
+#next {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+
+    border: 0;
+    background: rgba(255,255,255,0.15);
+    color: white;
+
+    font-size: 35px;
+
+    width: 55px;
+    height: 70px;
+
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+#prev:hover,
+#next:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+#prev {
+    left: 15px;
+}
+
+#next {
+    right: 15px;
+}
+
+#caption {
+    position: fixed;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+
+    text-align: center;
+
+    color: #ccc;
+    font-size: 14px;
+
+    padding: 0 70px;
+}
+
+/* Filtro */
+
+#filter {
+    width: 100%;
+    max-width: 500px;
+
+    margin-bottom: 20px;
+
+    padding: 10px 12px;
+
+    border: 1px solid #444;
+    border-radius: 6px;
+
+    background: #222;
+    color: white;
+
+    font-size: 15px;
+}
+
+@media (max-width: 600px) {
 
     body {
-        margin: 0;
-        padding: 20px;
-        font-family: Arial, Helvetica, sans-serif;
-        background: #181818;
-        color: #eee;
-    }
-
-    h1 {
-        margin: 0 0 20px;
-        font-size: 24px;
+        padding: 10px;
     }
 
     #gallery {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
-        gap: 15px;
-    }
+        grid-template-columns:
+            repeat(auto-fill, minmax(140px, 1fr));
 
-    .item {
-        background: #252525;
-        border-radius: 8px;
-        overflow: hidden;
-        cursor: pointer;
-        transition: transform 0.15s, box-shadow 0.15s;
-    }
-
-    .item:hover {
-        transform: scale(1.03);
-        box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+        gap: 10px;
     }
 
     .item img {
-        display: block;
-        width: 100%;
-        height: 160px;
-        object-fit: contain;
-        background: #111;
+        height: 130px;
     }
 
-    .filename {
-        padding: 9px;
-        font-size: 13px;
-        word-break: break-word;
-        color: #ccc;
-    }
-
-    /* Visualizzatore */
     #viewer {
-        display: none;
-        position: fixed;
-        inset: 0;
-        z-index: 1000;
-        background: rgba(0,0,0,0.92);
-        align-items: center;
-        justify-content: center;
-        padding: 50px;
-    }
-
-    #viewer.active {
-        display: flex;
-    }
-
-    #viewer img {
-        max-width: 95vw;
-        max-height: 90vh;
-        object-fit: contain;
-    }
-
-    #close {
-        position: fixed;
-        top: 15px;
-        right: 25px;
-        font-size: 40px;
-        line-height: 40px;
-        color: white;
-        cursor: pointer;
-        user-select: none;
+        padding: 35px 10px;
     }
 
     #prev,
     #next {
-        position: fixed;
-        top: 50%;
-        transform: translateY(-50%);
-        border: 0;
-        background: rgba(255,255,255,0.15);
-        color: white;
-        font-size: 35px;
-        width: 55px;
-        height: 70px;
-        cursor: pointer;
-        border-radius: 8px;
+        width: 45px;
+        height: 55px;
+        font-size: 28px;
     }
-
-    #prev:hover,
-    #next:hover {
-        background: rgba(255,255,255,0.3);
-    }
-
-    #prev {
-        left: 15px;
-    }
-
-    #next {
-        right: 15px;
-    }
-
-    #caption {
-        position: fixed;
-        bottom: 10px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        color: #ccc;
-        font-size: 14px;
-    }
+}
 </style>
 </head>
 
 <body>
 
-<h1>Foucault Tipo 1</h1>
+<h1>Heliostat — immagini</h1>
+
+<div id="counter"></div>
+
+<input
+    id="filter"
+    type="search"
+    placeholder="Filtra per nome file..."
+    autocomplete="off"
+>
 
 <div id="gallery"></div>
+
+
+<!-- Visualizzatore -->
 
 <div id="viewer">
 
     <span id="close">&times;</span>
 
-    <button id="prev">&#10094;</button>
+    <button id="prev" title="Immagine precedente">
+        &#10094;
+    </button>
 
     <img id="viewerImage" src="" alt="">
 
-    <button id="next">&#10095;</button>
+    <button id="next" title="Immagine successiva">
+        &#10095;
+    </button>
 
     <div id="caption"></div>
 
 </div>
 
+
 <script>
 "use strict";
 
+
 /*
- * La pagina deve essere salvata nella stessa directory delle immagini.
+ * ELENCO DELLE IMMAGINI PRESENTI NELLA CARTELLA
+ *
+ * Le sottocartelle non vengono incluse.
  */
 
 const images = [
-    "assi.png",
-    "confronto.jpg",
-    "declinazione.png",
-    "foucault-dettaglio.png",
-    "freno.jpg",
-    "lancetta.jpg",
-    "noni.png",
-    "orologio.png",
-    "particolare.jpg",
-    "particolare10.jpg",
-    "particolare11.jpg",
-    "particolare12.jpg",
-    "particolare13.jpg",
-    "particolare14.jpg",
-    "particolare15.jpg",
-    "particolare17.jpg",
-    "particolare18-scala posteriore.jpg",
-    "particolare19-manopola1.jpg",
-    "particolare19-manopola2.jpg",
-    "particolare19-manopola3.jpg",
-    "particolare19-scala anteriore.jpg",
-    "particolare2.jpg",
-    "particolare3.jpg",
-    "particolare4.jpg",
-    "particolare5.jpg",
-    "particolare6.jpg",
-    "particolare7.jpg",
-    "particolare8.jpg",
-    "particolare9.jpg",
-    "particolari.jpg",
-    "perno.jpg",
-    "scala posteriore.JPG",
-    "scala-decli1.png",
-    "scala-decli2.png",
-    "silbermann.jpg",
-    "silbermann3.png",
-    "silbermann4.png",
-    "slitta.png",
-    "smalll.jpg",
-    "tipo1-disegno-small-particolare.jpg",
-    "tipo1.jpg"
+
+    "001.jpg",
+    "002.jpg",
+    "003.jpg",
+
+    "Heliostat Meyerstein 2.jpeg",
+    "Heliostat Meyerstein Göttingen.jpeg",
+
+    "Traité_de_cinématique-tav.VI(fig102).JPEG",
+    "Traité_de_cinématique-tavVI(fig102)(zoom).png",
+    "Traité_de_cinématique-tavVI(fig103)(zoom).png",
+
+    "alidada-declinazione.jpg",
+
+    "annales-fig.1-tav.I.png",
+    "annales-fig.5-ann.png",
+    "annales-fig.5-moderna.png",
+    "annales-fig.5-passaggi.png",
+    "annales-fig3-color.png",
+    "annales-fig3-org.png",
+    "annales-fig4-color.png",
+    "annales-fig4-org.png",
+
+    "eliostato-foucault-spiegazione-alidada-orario.png",
+    "eliostato-silberman-catania-hires.jpg",
+
+    "errore satellite.jpg",
+
+    "focault - primo tipo - Cours_de_physique_de_l'École - fig 670.jpg",
+    "focault - primo tipo - disegno SBAGLIATO.png",
+    "focault - primo tipo - disegno ok-ann.png",
+    "focault - primo tipo - disegno ok-big.png",
+    "focault - primo tipo - disegno ok.png",
+    "focault - primo tipo - hires(fig 24 recueil).jpg",
+
+    "focualt-siderostat-alternative-1.jpg",
+    "focualt-siderostat-alternative-2.jpg",
+
+    "focuault-multilatitude.jpg",
+
+    "forcella-allineata.png",
+    "forcella-disallineata.png",
+    "forcella-regolabile.png",
+
+    "foucault-cerchio-alidada.png",
+    "foucault-cooke-multilatitude-photo-hires.jpg",
+    "foucault-disegno-03.jpg",
+    "foucault-foto-02(ottima).png",
+    "foucault-foto-hires-cooke.png",
+    "foucault-foto-hires.png",
+    "foucault-hires-denti.jpg",
+    "foucault-hires-denti2.jpg",
+
+    "foucault-maxi-01.jpg",
+    "foucault-maxi-02.jpg",
+    "foucault-maxi-03.jpg",
+    "foucault-maxi-04.jpg",
+    "foucault-maxi-05.jpg",
+    "foucault-maxi-06-bn.jpg",
+    "foucault-maxi-07.jpg",
+    "foucault-maxi-08.jpg",
+
+    "foucault-reale-01.jpg",
+
+    "gambey-disegno-hires.png",
+    "gambey-tav301.png",
+    "gambey-tav302.png",
+
+    "heliostat-fuess.jpeg",
+
+    "regolatore-eichens-hires2.jpg",
+
+    "sideorstato-foucualt-foto-dettaglio-posteriore.jpg",
+
+    "tav13-fig1.png",
+    "tav13-fig2,2bis.png",
+    "tav13-fig2.png",
+    "tav13-fig3.png",
+    "tav13-fig3b.png",
+    "tav13-fig4.png",
+    "tav13-fig6.png",
+    "tav13.png",
+    "tav13mini.png",
+
+    "tav14+15-foucault-travaux.png",
+    "tav14-(solo regolatore)-b-mini.jpg",
+    "tav14-(solo regolatore)-b.jpg",
+    "tav14-fig1,2,3.png",
+    "tav14-fig1-travaux.png",
+    "tav14-fig2-travaux.png",
+    "tav14-fig3-travaux.png",
+    "tav14-foucault-travaux-highres.jpg",
+    "tav14-foucault-travaux.png",
+    "tav14-highres-6000x5000.jpg",
+
+    "tav15-foucault-travaux.png",
+    "tav15-highres-6000x4000.jpg",
+
+    "tav16-fig.1.jpg",
+    "tav16-fig.2.jpg",
+    "tav16-fig.2old.jpg",
+
+    "tavola 16 (schemi).JPEG",
+    "tavola 17.JPEG",
+    "tavola 18.JPEG",
+    "tavola 19.JPEG",
+
+    "tavola-I-Annales.png"
 ];
 
-const gallery = document.getElementById("gallery");
-const viewer = document.getElementById("viewer");
-const viewerImage = document.getElementById("viewerImage");
-const caption = document.getElementById("caption");
-const closeButton = document.getElementById("close");
-const prevButton = document.getElementById("prev");
-const nextButton = document.getElementById("next");
+
+/*
+ * Elementi DOM
+ */
+
+const gallery =
+    document.getElementById("gallery");
+
+const counter =
+    document.getElementById("counter");
+
+const filter =
+    document.getElementById("filter");
+
+const viewer =
+    document.getElementById("viewer");
+
+const viewerImage =
+    document.getElementById("viewerImage");
+
+const caption =
+    document.getElementById("caption");
+
+const closeButton =
+    document.getElementById("close");
+
+const prevButton =
+    document.getElementById("prev");
+
+const nextButton =
+    document.getElementById("next");
+
 
 let currentIndex = 0;
+let visibleImages = [...images];
 
 
-/* Crea la galleria */
-images.forEach((filename, index) => {
+/*
+ * Costruisce l'URL relativo.
+ *
+ * encodeURI() mantiene leggibili i nomi dei file
+ * ma codifica correttamente spazi e caratteri speciali.
+ */
 
-    const item = document.createElement("div");
-    item.className = "item";
+function imageURL(filename) {
 
-    const img = document.createElement("img");
+    return encodeURI(filename);
 
-    /*
-     * encodeURI preserva gli spazi nei nomi dei file,
-     * trasformandoli correttamente nell'URL.
-     */
-    const url = encodeURI(filename);
-
-    img.src = url;
-    img.alt = filename;
-    img.loading = "lazy";
-
-    const name = document.createElement("div");
-    name.className = "filename";
-    name.textContent = filename;
-
-    item.appendChild(img);
-    item.appendChild(name);
-
-    item.addEventListener("click", () => {
-        openViewer(index);
-    });
-
-    gallery.appendChild(item);
-});
-
-
-/* Apre il visualizzatore */
-function openViewer(index) {
-
-    currentIndex = index;
-
-    viewerImage.src = encodeURI(images[currentIndex]);
-    viewerImage.alt = images[currentIndex];
-
-    caption.textContent =
-        (currentIndex + 1) + " / " + images.length +
-        " — " + images[currentIndex];
-
-    viewer.classList.add("active");
-
-    document.body.style.overflow = "hidden";
 }
 
 
-/* Chiude il visualizzatore */
+/*
+ * Genera la galleria.
+ */
+
+function renderGallery(list) {
+
+    gallery.innerHTML = "";
+
+    counter.textContent =
+        list.length +
+        (list.length === 1
+            ? " immagine"
+            : " immagini");
+
+    list.forEach(function(filename) {
+
+        const originalIndex =
+            images.indexOf(filename);
+
+        const item =
+            document.createElement("div");
+
+        item.className = "item";
+
+        const img =
+            document.createElement("img");
+
+        img.src =
+            imageURL(filename);
+
+        img.alt =
+            filename;
+
+        img.loading =
+            "lazy";
+
+
+        /*
+         * Se un'immagine non viene trovata,
+         * la miniatura viene nascosta.
+         */
+
+        img.addEventListener(
+            "error",
+            function() {
+
+                item.style.display =
+                    "none";
+
+            }
+        );
+
+
+        const name =
+            document.createElement("div");
+
+        name.className =
+            "filename";
+
+        name.textContent =
+            filename;
+
+
+        item.appendChild(img);
+        item.appendChild(name);
+
+
+        item.addEventListener(
+            "click",
+            function() {
+
+                const index =
+                    visibleImages.indexOf(filename);
+
+                openViewer(index);
+
+            }
+        );
+
+
+        gallery.appendChild(item);
+
+    });
+
+}
+
+
+/*
+ * Apre il visualizzatore.
+ */
+
+function openViewer(index) {
+
+    if (!visibleImages.length) {
+        return;
+    }
+
+    currentIndex = index;
+
+    const filename =
+        visibleImages[currentIndex];
+
+    viewerImage.src =
+        imageURL(filename);
+
+    viewerImage.alt =
+        filename;
+
+    caption.textContent =
+        (currentIndex + 1) +
+        " / " +
+        visibleImages.length +
+        " — " +
+        filename;
+
+    viewer.classList.add("active");
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+/*
+ * Chiude il visualizzatore.
+ */
+
 function closeViewer() {
 
     viewer.classList.remove("active");
@@ -272,74 +541,155 @@ function closeViewer() {
     viewerImage.src = "";
 
     document.body.style.overflow = "";
+
 }
 
 
-/* Immagine precedente */
+/*
+ * Immagine precedente.
+ */
+
 function previousImage() {
+
+    if (!visibleImages.length) {
+        return;
+    }
 
     currentIndex--;
 
     if (currentIndex < 0) {
-        currentIndex = images.length - 1;
+        currentIndex =
+            visibleImages.length - 1;
     }
 
     openViewer(currentIndex);
+
 }
 
 
-/* Immagine successiva */
+/*
+ * Immagine successiva.
+ */
+
 function nextImage() {
+
+    if (!visibleImages.length) {
+        return;
+    }
 
     currentIndex++;
 
-    if (currentIndex >= images.length) {
+    if (currentIndex >= visibleImages.length) {
         currentIndex = 0;
     }
 
     openViewer(currentIndex);
+
 }
 
 
-/* Eventi */
-closeButton.addEventListener("click", closeViewer);
+/*
+ * Filtro.
+ */
 
-prevButton.addEventListener("click", previousImage);
+filter.addEventListener(
+    "input",
+    function() {
 
-nextButton.addEventListener("click", nextImage);
+        const text =
+            filter.value
+                .trim()
+                .toLowerCase();
 
+        visibleImages =
+            images.filter(function(filename) {
 
-/* Clic sullo sfondo = chiudi */
-viewer.addEventListener("click", function(event) {
+                return filename
+                    .toLowerCase()
+                    .includes(text);
 
-    if (event.target === viewer) {
-        closeViewer();
+            });
+
+        renderGallery(
+            visibleImages
+        );
+
     }
+);
 
-});
+
+/*
+ * Eventi del visualizzatore.
+ */
+
+closeButton.addEventListener(
+    "click",
+    closeViewer
+);
+
+prevButton.addEventListener(
+    "click",
+    previousImage
+);
+
+nextButton.addEventListener(
+    "click",
+    nextImage
+);
 
 
-/* Tastiera */
-document.addEventListener("keydown", function(event) {
+/*
+ * Clic sullo sfondo = chiudi.
+ */
 
-    if (!viewer.classList.contains("active")) {
-        return;
+viewer.addEventListener(
+    "click",
+    function(event) {
+
+        if (event.target === viewer) {
+            closeViewer();
+        }
+
     }
+);
 
-    if (event.key === "Escape") {
-        closeViewer();
+
+/*
+ * Tastiera.
+ */
+
+document.addEventListener(
+    "keydown",
+    function(event) {
+
+        if (!viewer.classList.contains("active")) {
+            return;
+        }
+
+        if (event.key === "Escape") {
+            closeViewer();
+        }
+
+        if (event.key === "ArrowLeft") {
+            previousImage();
+        }
+
+        if (event.key === "ArrowRight") {
+            nextImage();
+        }
+
     }
+);
 
-    if (event.key === "ArrowLeft") {
-        previousImage();
-    }
 
-    if (event.key === "ArrowRight") {
-        nextImage();
-    }
+/*
+ * Avvio.
+ */
 
-});
+renderGallery(images);
+
 </script>
 
 </body>
 </html>
+```
