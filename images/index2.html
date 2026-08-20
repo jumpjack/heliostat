@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -86,9 +85,11 @@ h1 {
 }
 
 #viewerImage {
-    max-width: 95vw;
-    max-height: 88vh;
-    object-fit: contain;
+    max-width: none;
+    max-height: none;
+    display: block;               /* ← aggiunto per evitare spazi indesiderati */
+    transform-origin: top left;    /* mantenuto per coerenza con i calcoli */
+    transition: transform 0.05s linear;
 }
 
 #close {
@@ -196,39 +197,18 @@ h1 {
     }
 }
 
-
+/* Contenitore dell'immagine nel viewer – ora senza flex centering */
 #imageContainer {
-
     max-width: 95vw;
     max-height: 88vh;
-
     overflow: auto;
-
     cursor: grab;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    /* rimosso display:flex, justify-content:center, align-items:center */
 }
 
 #imageContainer.dragging {
     cursor: grabbing;
 }
-
-#viewerImage {
-
-    transform-origin: top left;
-
-    transition: transform 0.05s linear;
-
-    max-width: none;
-    max-height: none;
-}    
-
-    
-
-
-    
 </style>
 </head>
 
@@ -723,7 +703,6 @@ viewer.addEventListener(
         event.preventDefault();
 
     }
-);
     
 
 imageContainer.addEventListener(
@@ -874,4 +853,3 @@ renderGallery(images);
 
 </body>
 </html>
-
