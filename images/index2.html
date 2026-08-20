@@ -227,27 +227,7 @@ h1 {
 
     
 
-#toggleSize {
 
-    position: fixed;
-
-    top: 15px;
-    left: 25px;
-
-    z-index: 1100;
-
-    border: 0;
-
-    padding: 8px 12px;
-
-    border-radius: 6px;
-
-    background: rgba(255,255,255,.15);
-
-    color: white;
-
-    cursor: pointer;
-}
     
 </style>
 </head>
@@ -881,37 +861,7 @@ document.addEventListener(
 
     }
 );
-toggleSize.addEventListener(
-    "click",
-    function() {
 
-        realSizeMode =
-            !realSizeMode;
-
-        if (realSizeMode) {
-
-            viewerImage.classList.add(
-                "realSize"
-            );
-
-            toggleSize.textContent =
-                "Fit";
-
-        } else {
-
-            viewerImage.classList.remove(
-                "realSize"
-            );
-
-            toggleSize.textContent =
-                "1:1";
-
-            imageContainer.scrollLeft = 0;
-            imageContainer.scrollTop = 0;
-        }
-
-    }
-);
     
 
 /*
