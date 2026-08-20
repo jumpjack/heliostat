@@ -196,7 +196,8 @@ h1 {
     }
 }
 
-    #imageContainer {
+
+#imageContainer {
 
     max-width: 95vw;
     max-height: 88vh;
@@ -204,20 +205,27 @@ h1 {
     overflow: auto;
 
     cursor: grab;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #imageContainer.dragging {
     cursor: grabbing;
 }
 
-#viewerImage.realSize {
+#viewerImage {
 
-    max-width: none !important;
-    max-height: none !important;
+    transform-origin: top left;
 
-    width: auto;
-    height: auto;
-}
+    transition: transform 0.05s linear;
+
+    max-width: none;
+    max-height: none;
+}    
+
+    
 
 #toggleSize {
 
@@ -270,9 +278,7 @@ h1 {
         &#10094;
     </button>
 
-<button id="toggleSize" title="Dimensione reale">
-    1:1
-</button>
+
 
 <div id="imageContainer">
     <img id="viewerImage" src="" alt="">
@@ -431,8 +437,6 @@ const viewerImage =
     const imageContainer =
     document.getElementById("imageContainer");
 
-const toggleSize =
-    document.getElementById("toggleSize");
 
     
 const caption =
@@ -449,6 +453,7 @@ const nextButton =
 
 
 let currentIndex = 0;
+    let zoom = 1;
 let visibleImages = [...images];
 let realSizeMode = false;
 
@@ -578,17 +583,17 @@ function openViewer(index) {
 
     viewerImage.src =
         imageURL(filename);
-realSizeMode = false;
 
-viewerImage.classList.remove(
-    "realSize"
-);
 
-toggleSize.textContent =
-    "1:1";
+    zoom = 1;
+
+viewerImage.style.transform =
+    "scale(1)";
 
 imageContainer.scrollLeft = 0;
 imageContainer.scrollTop = 0;
+
+    
     
     viewerImage.alt =
         filename;
@@ -731,13 +736,21 @@ viewer.addEventListener(
     }
 );
 
+    viewerImage.addEventListener(
+    "dragstart",
+    function(event) {
+
+        event.preventDefault();
+
+    }
+);
+    
+
 imageContainer.addEventListener(
     "mousedown",
     function(event) {
 
-        if (!realSizeMode) {
-            return;
-        }
+ 
 
         dragging = true;
 
@@ -787,6 +800,60 @@ window.addEventListener(
             (event.clientY - startY);
     }
 );
+
+imageContainer.addEventListener(
+    "wheel",
+    function(event) {
+
+        event.preventDefault();
+
+        const rect =
+            imageContainer.getBoundingClientRect();
+
+        const mouseX =
+            event.clientX - rect.left +
+            imageContainer.scrollLeft;
+
+        const mouseY =
+            event.clientY - rect.top +
+            imageContainer.scrollTop;
+
+        const oldZoom = zoom;
+
+        if (event.deltaY < 0) {
+
+            zoom *= 1.1;
+
+        } else {
+
+            zoom /= 1.1;
+
+        }
+
+        zoom =
+            Math.max(
+                0.1,
+                Math.min(20, zoom)
+            );
+
+        viewerImage.style.transform =
+            "scale(" + zoom + ")";
+
+        const ratio =
+            zoom / oldZoom;
+
+        imageContainer.scrollLeft =
+            mouseX * ratio -
+            (event.clientX - rect.left);
+
+        imageContainer.scrollTop =
+            mouseY * ratio -
+            (event.clientY - rect.top);
+
+    },
+    { passive: false }
+);
+    
     
 /*
  * Tastiera.
