@@ -68,16 +68,21 @@ h1 { margin: 0 0 8px; font-size: 25px; }
     max-height: 88vh;
     overflow: auto;
     cursor: grab;
-    /* NESSUN flex o centering */
+    /* non flex */
 }
 #imageContainer.dragging { cursor: grabbing; }
 
+#imageWrapper {
+    display: inline-block;  /* importante per adattarsi alla dimensione scalata */
+    transform-origin: 0 0;
+    transition: none;
+}
 #viewerImage {
     display: block;
-    transform-origin: 0 0;   /* fondamentale per i calcoli */
-    transition: transform 0.05s linear;
     max-width: none;
     max-height: none;
+    width: auto;
+    height: auto;
 }
 
 #close {
@@ -139,7 +144,9 @@ h1 { margin: 0 0 8px; font-size: 25px; }
     <span id="close">&times;</span>
     <button id="prev">&#10094;</button>
     <div id="imageContainer">
-        <img id="viewerImage" src="" alt="">
+        <div id="imageWrapper">
+            <img id="viewerImage" src="" alt="">
+        </div>
     </div>
     <button id="next">&#10095;</button>
     <div id="caption"></div>
@@ -204,6 +211,7 @@ const filter = document.getElementById('filter');
 const viewer = document.getElementById('viewer');
 const viewerImage = document.getElementById('viewerImage');
 const imageContainer = document.getElementById('imageContainer');
+const imageWrapper = document.getElementById('imageWrapper');
 const caption = document.getElementById('caption');
 const closeBtn = document.getElementById('close');
 const prevBtn = document.getElementById('prev');
@@ -250,7 +258,7 @@ function openViewer(index) {
     viewerImage.alt = filename;
     // Reset zoom e scroll
     zoom = 1;
-    viewerImage.style.transform = 'scale(1)';
+    imageWrapper.style.transform = 'scale(1)';
     imageContainer.scrollLeft = 0;
     imageContainer.scrollTop = 0;
     caption.textContent = (currentIndex + 1) + ' / ' + visibleImages.length + ' — ' + filename;
@@ -313,11 +321,11 @@ window.addEventListener('mousemove', e => {
 });
 
 // --- Zoom con rotellina (centrato sul mouse) ---
-imageContainer.addEventListener('wheel', e => {
+imageContainer.addEventListener('wheel', function(e) {
     e.preventDefault();
 
-    // Calcola le coordinate del mouse relative al contenuto (prima dello zoom)
     const rect = imageContainer.getBoundingClientRect();
+    // Coordinate del mouse relative al contenuto (prima dello zoom)
     const mouseX = e.clientX - rect.left + imageContainer.scrollLeft;
     const mouseY = e.clientY - rect.top + imageContainer.scrollTop;
 
@@ -325,13 +333,17 @@ imageContainer.addEventListener('wheel', e => {
     const delta = e.deltaY > 0 ? 0.9 : 1.1;
     zoom = Math.min(20, Math.max(0.1, zoom * delta));
 
-    // Applica la scala
-    viewerImage.style.transform = 'scale(' + zoom + ')';
+    // Applica scala al wrapper
+    imageWrapper.style.transform = 'scale(' + zoom + ')';
 
-    // Dopo lo zoom, calcola il nuovo scroll per mantenere il punto sotto il mouse
+    // Calcola il nuovo scroll per mantenere il punto sotto il mouse
     const ratio = zoom / oldZoom;
-    imageContainer.scrollLeft = mouseX * ratio - (e.clientX - rect.left);
-    imageContainer.scrollTop = mouseY * ratio - (e.clientY - rect.top);
+    const newScrollLeft = mouseX * ratio - (e.clientX - rect.left);
+    const newScrollTop = mouseY * ratio - (e.clientY - rect.top);
+
+    // Aggiorna lo scroll
+    imageContainer.scrollLeft = newScrollLeft;
+    imageContainer.scrollTop = newScrollTop;
 }, { passive: false });
 
 // --- Tastiera ---
