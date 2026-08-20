@@ -1,4 +1,4 @@
-```html
+
 <!DOCTYPE html>
 <html lang="it">
 <head>
@@ -195,6 +195,52 @@ h1 {
         font-size: 28px;
     }
 }
+
+    #imageContainer {
+
+    max-width: 95vw;
+    max-height: 88vh;
+
+    overflow: auto;
+
+    cursor: grab;
+}
+
+#imageContainer.dragging {
+    cursor: grabbing;
+}
+
+#viewerImage.realSize {
+
+    max-width: none !important;
+    max-height: none !important;
+
+    width: auto;
+    height: auto;
+}
+
+#toggleSize {
+
+    position: fixed;
+
+    top: 15px;
+    left: 25px;
+
+    z-index: 1100;
+
+    border: 0;
+
+    padding: 8px 12px;
+
+    border-radius: 6px;
+
+    background: rgba(255,255,255,.15);
+
+    color: white;
+
+    cursor: pointer;
+}
+    
 </style>
 </head>
 
@@ -224,7 +270,13 @@ h1 {
         &#10094;
     </button>
 
+<button id="toggleSize" title="Dimensione reale">
+    1:1
+</button>
+
+<div id="imageContainer">
     <img id="viewerImage" src="" alt="">
+</div>
 
     <button id="next" title="Immagine successiva">
         &#10095;
@@ -376,6 +428,13 @@ const viewer =
 const viewerImage =
     document.getElementById("viewerImage");
 
+    const imageContainer =
+    document.getElementById("imageContainer");
+
+const toggleSize =
+    document.getElementById("toggleSize");
+
+    
 const caption =
     document.getElementById("caption");
 
@@ -391,7 +450,15 @@ const nextButton =
 
 let currentIndex = 0;
 let visibleImages = [...images];
+let realSizeMode = false;
 
+let dragging = false;
+
+let startX;
+let startY;
+
+let startScrollLeft;
+let startScrollTop;
 
 /*
  * Costruisce l'URL relativo.
@@ -511,7 +578,18 @@ function openViewer(index) {
 
     viewerImage.src =
         imageURL(filename);
+realSizeMode = false;
 
+viewerImage.classList.remove(
+    "realSize"
+);
+
+toggleSize.textContent =
+    "1:1";
+
+imageContainer.scrollLeft = 0;
+imageContainer.scrollTop = 0;
+    
     viewerImage.alt =
         filename;
 
@@ -653,7 +731,63 @@ viewer.addEventListener(
     }
 );
 
+imageContainer.addEventListener(
+    "mousedown",
+    function(event) {
 
+        if (!realSizeMode) {
+            return;
+        }
+
+        dragging = true;
+
+        imageContainer.classList.add(
+            "dragging"
+        );
+
+        startX = event.clientX;
+        startY = event.clientY;
+
+        startScrollLeft =
+            imageContainer.scrollLeft;
+
+        startScrollTop =
+            imageContainer.scrollTop;
+
+        event.preventDefault();
+    }
+);
+
+window.addEventListener(
+    "mouseup",
+    function() {
+
+        dragging = false;
+
+        imageContainer.classList.remove(
+            "dragging"
+        );
+    }
+);
+
+window.addEventListener(
+    "mousemove",
+    function(event) {
+
+        if (!dragging) {
+            return;
+        }
+
+        imageContainer.scrollLeft =
+            startScrollLeft -
+            (event.clientX - startX);
+
+        imageContainer.scrollTop =
+            startScrollTop -
+            (event.clientY - startY);
+    }
+);
+    
 /*
  * Tastiera.
  */
@@ -680,7 +814,38 @@ document.addEventListener(
 
     }
 );
+toggleSize.addEventListener(
+    "click",
+    function() {
 
+        realSizeMode =
+            !realSizeMode;
+
+        if (realSizeMode) {
+
+            viewerImage.classList.add(
+                "realSize"
+            );
+
+            toggleSize.textContent =
+                "Fit";
+
+        } else {
+
+            viewerImage.classList.remove(
+                "realSize"
+            );
+
+            toggleSize.textContent =
+                "1:1";
+
+            imageContainer.scrollLeft = 0;
+            imageContainer.scrollTop = 0;
+        }
+
+    }
+);
+    
 
 /*
  * Avvio.
@@ -692,4 +857,4 @@ renderGallery(images);
 
 </body>
 </html>
-```
+
