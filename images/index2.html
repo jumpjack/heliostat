@@ -3,54 +3,32 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>Galleria immagini — Heliostat</title>
-
 <style>
-* {
-    box-sizing: border-box;
-}
-
+* { box-sizing: border-box; }
 body {
     margin: 0;
     padding: 20px;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Arial, sans-serif;
     background: #181818;
     color: #eee;
 }
-
-h1 {
-    margin: 0 0 8px;
-    font-size: 25px;
-}
-
-#counter {
-    color: #aaa;
-    margin-bottom: 20px;
-    font-size: 14px;
-}
+h1 { margin: 0 0 8px; font-size: 25px; }
+#counter { color: #aaa; margin-bottom: 20px; font-size: 14px; }
 
 #gallery {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(190px, 1fr));
     gap: 15px;
 }
-
 .item {
     background: #252525;
     border-radius: 8px;
     overflow: hidden;
     cursor: pointer;
-    transition:
-        transform 0.15s,
-        box-shadow 0.15s;
+    transition: transform 0.15s, box-shadow 0.15s;
 }
-
-.item:hover {
-    transform: scale(1.03);
-    box-shadow: 0 5px 20px rgba(0,0,0,0.5);
-}
-
+.item:hover { transform: scale(1.03); box-shadow: 0 5px 20px rgba(0,0,0,0.5); }
 .item img {
     display: block;
     width: 100%;
@@ -58,17 +36,21 @@ h1 {
     object-fit: contain;
     background: #111;
 }
+.filename { padding: 9px; font-size: 13px; word-break: break-word; color: #ccc; }
 
-.filename {
-    padding: 9px;
-    font-size: 13px;
-    line-height: 1.3;
-    word-break: break-word;
-    color: #ccc;
+#filter {
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    padding: 10px 12px;
+    border: 1px solid #444;
+    border-radius: 6px;
+    background: #222;
+    color: white;
+    font-size: 15px;
 }
 
 /* Visualizzatore */
-
 #viewer {
     display: none;
     position: fixed;
@@ -79,17 +61,23 @@ h1 {
     justify-content: center;
     padding: 50px;
 }
+#viewer.active { display: flex; }
 
-#viewer.active {
-    display: flex;
+#imageContainer {
+    max-width: 95vw;
+    max-height: 88vh;
+    overflow: auto;
+    cursor: grab;
+    /* NESSUN flex o centering */
 }
+#imageContainer.dragging { cursor: grabbing; }
 
 #viewerImage {
+    display: block;
+    transform-origin: 0 0;   /* fondamentale per i calcoli */
+    transition: transform 0.05s linear;
     max-width: none;
     max-height: none;
-    display: block;               /* ← aggiunto per evitare spazi indesiderati */
-    transform-origin: top left;    /* mantenuto per coerenza con i calcoli */
-    transition: transform 0.05s linear;
 }
 
 #close {
@@ -102,754 +90,260 @@ h1 {
     cursor: pointer;
     user-select: none;
 }
-
-#prev,
-#next {
+#prev, #next {
     position: fixed;
     top: 50%;
     transform: translateY(-50%);
-
     border: 0;
     background: rgba(255,255,255,0.15);
     color: white;
-
     font-size: 35px;
-
     width: 55px;
     height: 70px;
-
     cursor: pointer;
     border-radius: 8px;
 }
-
-#prev:hover,
-#next:hover {
-    background: rgba(255,255,255,0.3);
-}
-
-#prev {
-    left: 15px;
-}
-
-#next {
-    right: 15px;
-}
+#prev:hover, #next:hover { background: rgba(255,255,255,0.3); }
+#prev { left: 15px; }
+#next { right: 15px; }
 
 #caption {
     position: fixed;
     bottom: 10px;
     left: 0;
     right: 0;
-
     text-align: center;
-
     color: #ccc;
     font-size: 14px;
-
     padding: 0 70px;
 }
 
-/* Filtro */
-
-#filter {
-    width: 100%;
-    max-width: 500px;
-
-    margin-bottom: 20px;
-
-    padding: 10px 12px;
-
-    border: 1px solid #444;
-    border-radius: 6px;
-
-    background: #222;
-    color: white;
-
-    font-size: 15px;
-}
-
 @media (max-width: 600px) {
-
-    body {
-        padding: 10px;
-    }
-
-    #gallery {
-        grid-template-columns:
-            repeat(auto-fill, minmax(140px, 1fr));
-
-        gap: 10px;
-    }
-
-    .item img {
-        height: 130px;
-    }
-
-    #viewer {
-        padding: 35px 10px;
-    }
-
-    #prev,
-    #next {
-        width: 45px;
-        height: 55px;
-        font-size: 28px;
-    }
-}
-
-/* Contenitore dell'immagine nel viewer – ora senza flex centering */
-#imageContainer {
-    max-width: 95vw;
-    max-height: 88vh;
-    overflow: auto;
-    cursor: grab;
-    /* rimosso display:flex, justify-content:center, align-items:center */
-}
-
-#imageContainer.dragging {
-    cursor: grabbing;
+    body { padding: 10px; }
+    #gallery { grid-template-columns: repeat(auto-fill, minmax(140px,1fr)); gap:10px; }
+    .item img { height:130px; }
+    #viewer { padding: 35px 10px; }
+    #prev, #next { width:45px; height:55px; font-size:28px; }
 }
 </style>
 </head>
-
 <body>
 
 <h1>Heliostat — immagini</h1>
-
 <div id="counter"></div>
-
-<input
-    id="filter"
-    type="search"
-    placeholder="Filtra per nome file..."
-    autocomplete="off"
->
-
+<input id="filter" type="search" placeholder="Filtra per nome file..." autocomplete="off">
 <div id="gallery"></div>
 
-
 <!-- Visualizzatore -->
-
 <div id="viewer">
-
     <span id="close">&times;</span>
-
-    <button id="prev" title="Immagine precedente">
-        &#10094;
-    </button>
-
-
-
-<div id="imageContainer">
-    <img id="viewerImage" src="" alt="">
-</div>
-
-    <button id="next" title="Immagine successiva">
-        &#10095;
-    </button>
-
+    <button id="prev">&#10094;</button>
+    <div id="imageContainer">
+        <img id="viewerImage" src="" alt="">
+    </div>
+    <button id="next">&#10095;</button>
     <div id="caption"></div>
-
 </div>
-
 
 <script>
 "use strict";
 
-
-/*
- * ELENCO DELLE IMMAGINI PRESENTI NELLA CARTELLA
- *
- * Le sottocartelle non vengono incluse.
- */
-
+// -------------------- ELENCO IMMAGINI --------------------
 const images = [
-
-    "001.jpg",
-    "002.jpg",
-    "003.jpg",
-
-    "Heliostat Meyerstein 2.jpeg",
-    "Heliostat Meyerstein Göttingen.jpeg",
-
+    "001.jpg","002.jpg","003.jpg",
+    "Heliostat Meyerstein 2.jpeg","Heliostat Meyerstein Göttingen.jpeg",
     "Traité_de_cinématique-tav.VI(fig102).JPEG",
     "Traité_de_cinématique-tavVI(fig102)(zoom).png",
     "Traité_de_cinématique-tavVI(fig103)(zoom).png",
-
     "alidada-declinazione.jpg",
-
-    "annales-fig.1-tav.I.png",
-    "annales-fig.5-ann.png",
-    "annales-fig.5-moderna.png",
-    "annales-fig.5-passaggi.png",
-    "annales-fig3-color.png",
-    "annales-fig3-org.png",
-    "annales-fig4-color.png",
-    "annales-fig4-org.png",
-
+    "annales-fig.1-tav.I.png","annales-fig.5-ann.png","annales-fig.5-moderna.png",
+    "annales-fig.5-passaggi.png","annales-fig3-color.png","annales-fig3-org.png",
+    "annales-fig4-color.png","annales-fig4-org.png",
     "eliostato-foucault-spiegazione-alidada-orario.png",
     "eliostato-silberman-catania-hires.jpg",
-
     "errore satellite.jpg",
-
     "focault - primo tipo - Cours_de_physique_de_l'École - fig 670.jpg",
     "focault - primo tipo - disegno SBAGLIATO.png",
     "focault - primo tipo - disegno ok-ann.png",
     "focault - primo tipo - disegno ok-big.png",
     "focault - primo tipo - disegno ok.png",
     "focault - primo tipo - hires(fig 24 recueil).jpg",
-
-    "focualt-siderostat-alternative-1.jpg",
-    "focualt-siderostat-alternative-2.jpg",
-
+    "focualt-siderostat-alternative-1.jpg","focualt-siderostat-alternative-2.jpg",
     "focuault-multilatitude.jpg",
-
-    "forcella-allineata.png",
-    "forcella-disallineata.png",
-    "forcella-regolabile.png",
-
-    "foucault-cerchio-alidada.png",
-    "foucault-cooke-multilatitude-photo-hires.jpg",
-    "foucault-disegno-03.jpg",
-    "foucault-foto-02(ottima).png",
-    "foucault-foto-hires-cooke.png",
-    "foucault-foto-hires.png",
-    "foucault-hires-denti.jpg",
-    "foucault-hires-denti2.jpg",
-
-    "foucault-maxi-01.jpg",
-    "foucault-maxi-02.jpg",
-    "foucault-maxi-03.jpg",
-    "foucault-maxi-04.jpg",
-    "foucault-maxi-05.jpg",
-    "foucault-maxi-06-bn.jpg",
-    "foucault-maxi-07.jpg",
-    "foucault-maxi-08.jpg",
-
+    "forcella-allineata.png","forcella-disallineata.png","forcella-regolabile.png",
+    "foucault-cerchio-alidada.png","foucault-cooke-multilatitude-photo-hires.jpg",
+    "foucault-disegno-03.jpg","foucault-foto-02(ottima).png",
+    "foucault-foto-hires-cooke.png","foucault-foto-hires.png",
+    "foucault-hires-denti.jpg","foucault-hires-denti2.jpg",
+    "foucault-maxi-01.jpg","foucault-maxi-02.jpg","foucault-maxi-03.jpg",
+    "foucault-maxi-04.jpg","foucault-maxi-05.jpg","foucault-maxi-06-bn.jpg",
+    "foucault-maxi-07.jpg","foucault-maxi-08.jpg",
     "foucault-reale-01.jpg",
-
-    "gambey-disegno-hires.png",
-    "gambey-tav301.png",
-    "gambey-tav302.png",
-
+    "gambey-disegno-hires.png","gambey-tav301.png","gambey-tav302.png",
     "heliostat-fuess.jpeg",
-
     "regolatore-eichens-hires2.jpg",
-
     "sideorstato-foucualt-foto-dettaglio-posteriore.jpg",
-
-    "tav13-fig1.png",
-    "tav13-fig2,2bis.png",
-    "tav13-fig2.png",
-    "tav13-fig3.png",
-    "tav13-fig3b.png",
-    "tav13-fig4.png",
-    "tav13-fig6.png",
-    "tav13.png",
-    "tav13mini.png",
-
-    "tav14+15-foucault-travaux.png",
-    "tav14-(solo regolatore)-b-mini.jpg",
-    "tav14-(solo regolatore)-b.jpg",
-    "tav14-fig1,2,3.png",
-    "tav14-fig1-travaux.png",
-    "tav14-fig2-travaux.png",
-    "tav14-fig3-travaux.png",
-    "tav14-foucault-travaux-highres.jpg",
-    "tav14-foucault-travaux.png",
+    "tav13-fig1.png","tav13-fig2,2bis.png","tav13-fig2.png",
+    "tav13-fig3.png","tav13-fig3b.png","tav13-fig4.png","tav13-fig6.png",
+    "tav13.png","tav13mini.png",
+    "tav14+15-foucault-travaux.png","tav14-(solo regolatore)-b-mini.jpg",
+    "tav14-(solo regolatore)-b.jpg","tav14-fig1,2,3.png",
+    "tav14-fig1-travaux.png","tav14-fig2-travaux.png","tav14-fig3-travaux.png",
+    "tav14-foucault-travaux-highres.jpg","tav14-foucault-travaux.png",
     "tav14-highres-6000x5000.jpg",
-
-    "tav15-foucault-travaux.png",
-    "tav15-highres-6000x4000.jpg",
-
-    "tav16-fig.1.jpg",
-    "tav16-fig.2.jpg",
-    "tav16-fig.2old.jpg",
-
-    "tavola 16 (schemi).JPEG",
-    "tavola 17.JPEG",
-    "tavola 18.JPEG",
-    "tavola 19.JPEG",
-
+    "tav15-foucault-travaux.png","tav15-highres-6000x4000.jpg",
+    "tav16-fig.1.jpg","tav16-fig.2.jpg","tav16-fig.2old.jpg",
+    "tavola 16 (schemi).JPEG","tavola 17.JPEG","tavola 18.JPEG","tavola 19.JPEG",
     "tavola-I-Annales.png"
 ];
 
+// -------------------- DOM --------------------
+const gallery = document.getElementById('gallery');
+const counter = document.getElementById('counter');
+const filter = document.getElementById('filter');
+const viewer = document.getElementById('viewer');
+const viewerImage = document.getElementById('viewerImage');
+const imageContainer = document.getElementById('imageContainer');
+const caption = document.getElementById('caption');
+const closeBtn = document.getElementById('close');
+const prevBtn = document.getElementById('prev');
+const nextBtn = document.getElementById('next');
 
-/*
- * Elementi DOM
- */
-
-const gallery =
-    document.getElementById("gallery");
-
-const counter =
-    document.getElementById("counter");
-
-const filter =
-    document.getElementById("filter");
-
-const viewer =
-    document.getElementById("viewer");
-
-const viewerImage =
-    document.getElementById("viewerImage");
-
-    const imageContainer =
-    document.getElementById("imageContainer");
-
-
-    
-const caption =
-    document.getElementById("caption");
-
-const closeButton =
-    document.getElementById("close");
-
-const prevButton =
-    document.getElementById("prev");
-
-const nextButton =
-    document.getElementById("next");
-
-
-let currentIndex = 0;
-    let zoom = 1;
 let visibleImages = [...images];
-let realSizeMode = false;
+let currentIndex = 0;
+let zoom = 1;
+let isDragging = false;
+let startX, startY, startScrollLeft, startScrollTop;
 
-let dragging = false;
-
-let startX;
-let startY;
-
-let startScrollLeft;
-let startScrollTop;
-
-/*
- * Costruisce l'URL relativo.
- *
- * encodeURI() mantiene leggibili i nomi dei file
- * ma codifica correttamente spazi e caratteri speciali.
- */
-
-function imageURL(filename) {
-
-    return encodeURI(filename);
-
-}
-
-
-/*
- * Genera la galleria.
- */
+// -------------------- FUNZIONI --------------------
+function imageURL(name) { return encodeURI(name); }
 
 function renderGallery(list) {
-
-    gallery.innerHTML = "";
-
-    counter.textContent =
-        list.length +
-        (list.length === 1
-            ? " immagine"
-            : " immagini");
-
-    list.forEach(function(filename) {
-
-        const originalIndex =
-            images.indexOf(filename);
-
-        const item =
-            document.createElement("div");
-
-        item.className = "item";
-
-        const img =
-            document.createElement("img");
-
-        img.src =
-            imageURL(filename);
-
-        img.alt =
-            filename;
-
-        img.loading =
-            "lazy";
-
-
-        /*
-         * Se un'immagine non viene trovata,
-         * la miniatura viene nascosta.
-         */
-
-        img.addEventListener(
-            "error",
-            function() {
-
-                item.style.display =
-                    "none";
-
-            }
-        );
-
-
-        const name =
-            document.createElement("div");
-
-        name.className =
-            "filename";
-
-        name.textContent =
-            filename;
-
-
+    gallery.innerHTML = '';
+    counter.textContent = list.length + (list.length === 1 ? ' immagine' : ' immagini');
+    list.forEach(filename => {
+        const item = document.createElement('div');
+        item.className = 'item';
+        const img = document.createElement('img');
+        img.src = imageURL(filename);
+        img.alt = filename;
+        img.loading = 'lazy';
+        img.addEventListener('error', () => item.style.display = 'none');
+        const nameDiv = document.createElement('div');
+        nameDiv.className = 'filename';
+        nameDiv.textContent = filename;
         item.appendChild(img);
-        item.appendChild(name);
-
-
-        item.addEventListener(
-            "click",
-            function() {
-
-                const index =
-                    visibleImages.indexOf(filename);
-
-                openViewer(index);
-
-            }
-        );
-
-
+        item.appendChild(nameDiv);
+        item.addEventListener('click', () => {
+            const idx = visibleImages.indexOf(filename);
+            if (idx !== -1) openViewer(idx);
+        });
         gallery.appendChild(item);
-
     });
-
 }
-
-
-/*
- * Apre il visualizzatore.
- */
 
 function openViewer(index) {
-
-    if (!visibleImages.length) {
-        return;
-    }
-
+    if (!visibleImages.length) return;
     currentIndex = index;
-
-    const filename =
-        visibleImages[currentIndex];
-
-    viewerImage.src =
-        imageURL(filename);
-
-
+    const filename = visibleImages[currentIndex];
+    viewerImage.src = imageURL(filename);
+    viewerImage.alt = filename;
+    // Reset zoom e scroll
     zoom = 1;
-
-viewerImage.style.transform =
-    "scale(1)";
-
-imageContainer.scrollLeft = 0;
-imageContainer.scrollTop = 0;
-
-    
-    
-    viewerImage.alt =
-        filename;
-
-    caption.textContent =
-        (currentIndex + 1) +
-        " / " +
-        visibleImages.length +
-        " — " +
-        filename;
-
-    viewer.classList.add("active");
-
-    document.body.style.overflow =
-        "hidden";
-
+    viewerImage.style.transform = 'scale(1)';
+    imageContainer.scrollLeft = 0;
+    imageContainer.scrollTop = 0;
+    caption.textContent = (currentIndex + 1) + ' / ' + visibleImages.length + ' — ' + filename;
+    viewer.classList.add('active');
+    document.body.style.overflow = 'hidden';
 }
-
-
-/*
- * Chiude il visualizzatore.
- */
 
 function closeViewer() {
-
-    viewer.classList.remove("active");
-
-    viewerImage.src = "";
-
-    document.body.style.overflow = "";
-
+    viewer.classList.remove('active');
+    viewerImage.src = '';
+    document.body.style.overflow = '';
 }
 
-
-/*
- * Immagine precedente.
- */
-
-function previousImage() {
-
-    if (!visibleImages.length) {
-        return;
-    }
-
-    currentIndex--;
-
-    if (currentIndex < 0) {
-        currentIndex =
-            visibleImages.length - 1;
-    }
-
+function prevImage() {
+    if (!visibleImages.length) return;
+    currentIndex = (currentIndex - 1 + visibleImages.length) % visibleImages.length;
     openViewer(currentIndex);
-
 }
-
-
-/*
- * Immagine successiva.
- */
 
 function nextImage() {
-
-    if (!visibleImages.length) {
-        return;
-    }
-
-    currentIndex++;
-
-    if (currentIndex >= visibleImages.length) {
-        currentIndex = 0;
-    }
-
+    if (!visibleImages.length) return;
+    currentIndex = (currentIndex + 1) % visibleImages.length;
     openViewer(currentIndex);
-
 }
 
+// -------------------- EVENTI GALLERIA --------------------
+filter.addEventListener('input', () => {
+    const text = filter.value.trim().toLowerCase();
+    visibleImages = images.filter(f => f.toLowerCase().includes(text));
+    renderGallery(visibleImages);
+});
 
-/*
- * Filtro.
- */
+// -------------------- EVENTI VIEWER --------------------
+closeBtn.addEventListener('click', closeViewer);
+prevBtn.addEventListener('click', prevImage);
+nextBtn.addEventListener('click', nextImage);
+viewer.addEventListener('click', e => { if (e.target === viewer) closeViewer(); });
 
-filter.addEventListener(
-    "input",
-    function() {
+// Disabilita drag nativo sull'immagine
+viewerImage.addEventListener('dragstart', e => e.preventDefault());
 
-        const text =
-            filter.value
-                .trim()
-                .toLowerCase();
+// --- Pan ---
+imageContainer.addEventListener('mousedown', e => {
+    isDragging = true;
+    imageContainer.classList.add('dragging');
+    startX = e.clientX;
+    startY = e.clientY;
+    startScrollLeft = imageContainer.scrollLeft;
+    startScrollTop = imageContainer.scrollTop;
+    e.preventDefault();
+});
+window.addEventListener('mouseup', () => {
+    isDragging = false;
+    imageContainer.classList.remove('dragging');
+});
+window.addEventListener('mousemove', e => {
+    if (!isDragging) return;
+    imageContainer.scrollLeft = startScrollLeft - (e.clientX - startX);
+    imageContainer.scrollTop = startScrollTop - (e.clientY - startY);
+});
 
-        visibleImages =
-            images.filter(function(filename) {
+// --- Zoom con rotellina (centrato sul mouse) ---
+imageContainer.addEventListener('wheel', e => {
+    e.preventDefault();
 
-                return filename
-                    .toLowerCase()
-                    .includes(text);
+    // Calcola le coordinate del mouse relative al contenuto (prima dello zoom)
+    const rect = imageContainer.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left + imageContainer.scrollLeft;
+    const mouseY = e.clientY - rect.top + imageContainer.scrollTop;
 
-            });
+    const oldZoom = zoom;
+    const delta = e.deltaY > 0 ? 0.9 : 1.1;
+    zoom = Math.min(20, Math.max(0.1, zoom * delta));
 
-        renderGallery(
-            visibleImages
-        );
+    // Applica la scala
+    viewerImage.style.transform = 'scale(' + zoom + ')';
 
-    }
-);
+    // Dopo lo zoom, calcola il nuovo scroll per mantenere il punto sotto il mouse
+    const ratio = zoom / oldZoom;
+    imageContainer.scrollLeft = mouseX * ratio - (e.clientX - rect.left);
+    imageContainer.scrollTop = mouseY * ratio - (e.clientY - rect.top);
+}, { passive: false });
 
+// --- Tastiera ---
+document.addEventListener('keydown', e => {
+    if (!viewer.classList.contains('active')) return;
+    if (e.key === 'Escape') closeViewer();
+    if (e.key === 'ArrowLeft') prevImage();
+    if (e.key === 'ArrowRight') nextImage();
+});
 
-/*
- * Eventi del visualizzatore.
- */
-
-closeButton.addEventListener(
-    "click",
-    closeViewer
-);
-
-prevButton.addEventListener(
-    "click",
-    previousImage
-);
-
-nextButton.addEventListener(
-    "click",
-    nextImage
-);
-
-
-/*
- * Clic sullo sfondo = chiudi.
- */
-
-viewer.addEventListener(
-    "click",
-    function(event) {
-
-        if (event.target === viewer) {
-            closeViewer();
-        }
-
-    }
-);
-
-    viewerImage.addEventListener(
-    "dragstart",
-    function(event) {
-
-        event.preventDefault();
-
-    });
-    
-
-imageContainer.addEventListener(
-    "mousedown",
-    function(event) {
-
- 
-
-        dragging = true;
-
-        imageContainer.classList.add(
-            "dragging"
-        );
-
-        startX = event.clientX;
-        startY = event.clientY;
-
-        startScrollLeft =
-            imageContainer.scrollLeft;
-
-        startScrollTop =
-            imageContainer.scrollTop;
-
-        event.preventDefault();
-    }
-);
-
-window.addEventListener(
-    "mouseup",
-    function() {
-
-        dragging = false;
-
-        imageContainer.classList.remove(
-            "dragging"
-        );
-    }
-);
-
-window.addEventListener(
-    "mousemove",
-    function(event) {
-
-        if (!dragging) {
-            return;
-        }
-
-        imageContainer.scrollLeft =
-            startScrollLeft -
-            (event.clientX - startX);
-
-        imageContainer.scrollTop =
-            startScrollTop -
-            (event.clientY - startY);
-    }
-);
-
-imageContainer.addEventListener(
-    "wheel",
-    function(event) {
-
-        event.preventDefault();
-
-        const rect =
-            imageContainer.getBoundingClientRect();
-
-        const mouseX =
-            event.clientX - rect.left +
-            imageContainer.scrollLeft;
-
-        const mouseY =
-            event.clientY - rect.top +
-            imageContainer.scrollTop;
-
-        const oldZoom = zoom;
-
-        if (event.deltaY < 0) {
-
-            zoom *= 1.1;
-
-        } else {
-
-            zoom /= 1.1;
-
-        }
-
-        zoom =
-            Math.max(
-                0.1,
-                Math.min(20, zoom)
-            );
-
-        viewerImage.style.transform =
-            "scale(" + zoom + ")";
-
-        const ratio =
-            zoom / oldZoom;
-
-        imageContainer.scrollLeft =
-            mouseX * ratio -
-            (event.clientX - rect.left);
-
-        imageContainer.scrollTop =
-            mouseY * ratio -
-            (event.clientY - rect.top);
-
-    },
-    { passive: false }
-);
-    
-    
-/*
- * Tastiera.
- */
-
-document.addEventListener(
-    "keydown",
-    function(event) {
-
-        if (!viewer.classList.contains("active")) {
-            return;
-        }
-
-        if (event.key === "Escape") {
-            closeViewer();
-        }
-
-        if (event.key === "ArrowLeft") {
-            previousImage();
-        }
-
-        if (event.key === "ArrowRight") {
-            nextImage();
-        }
-
-    }
-);
-
-    
-
-/*
- * Avvio.
- */
-
+// -------------------- AVVIO --------------------
 renderGallery(images);
-
 </script>
-
 </body>
 </html>
