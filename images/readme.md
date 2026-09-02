@@ -1,5 +1,9 @@
 Various pictures and schematics of heliostats.
 
+[Images list 1](https://jumpjack.github.io/heliostat/images/index.html)
+
+[Images list 2](https://jumpjack.github.io/heliostat/images/index2.html)
+
 Ultra high-res images of Foucault heliostat/siderostat: [link1](https://www.invaluable.com/auction-lot/foucault-leon-9-c-f3e4626b2b) (drawing)
 
 Ultra high-res images of Foucault heliostat/siderostat: [link2](https://cosmos.obspm.fr/index.php/Detail/objects/30328) (photos)
