@@ -1,6 +1,6 @@
 Various pictures and schematics of heliostats.
 
-[Images list 1](https://jumpjack.github.io/heliostat/images/index.html)
+[Images list 1](https://jumpjack.github.io/heliostat/images/foucault_tipo1/index.html)
 
 [Images list 2](https://jumpjack.github.io/heliostat/images/index2.html)
 
