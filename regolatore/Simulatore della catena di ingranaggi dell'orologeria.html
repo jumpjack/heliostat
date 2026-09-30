@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="it"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Simulatore della catena di ingranaggi dell'orologeria</title>
+<style>
+:root{--bg:#12161c;--pn:#1b2028;--ln:#323a47;--tx:#e8e4d8;--mt:#9aa3af;--ac:#d9b45a;--ok:#7fc27a}
+*{box-sizing:border-box}
+html,body{margin:0;height:100%;overflow:hidden;overscroll-behavior:none;background:var(--bg);color:var(--tx);font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif}
+#c{position:fixed;inset:0;width:100%;height:100%;display:block;touch-action:none;outline:none}
+#p{position:fixed;top:max(10px,env(safe-area-inset-top));right:max(10px,env(safe-area-inset-right));width:310px;max-height:calc(100% - 20px);overflow:auto;background:rgba(27,32,40,.95);border:1px solid var(--ln);border-radius:10px;padding:12px 14px}
+h1{font:600 15px/1.3 Georgia,"Times New Roman",serif;margin:0 0 6px}
+p{margin:6px 0;color:var(--mt)}
+#sn{display:block;color:var(--ac);margin:8px 0 4px;min-height:2.6em}
+label{display:block;margin:6px 0}
+input[type=range]{width:100%;accent-color:var(--ac)}
+.bt{display:flex;gap:6px;margin:8px 0}
+button,select{font:inherit;color:var(--tx);background:#252c37;border:1px solid var(--ln);border-radius:6px;padding:6px 8px;cursor:pointer}
+button{flex:1}
+button.on{border-color:var(--ac);color:var(--ac)}
+button:focus-visible,select:focus-visible,tr:focus-visible{outline:2px solid var(--ac);outline-offset:1px}
+#ms{color:var(--ok);min-height:3em}
+table{width:100%;border-collapse:collapse;margin-top:6px}
+td{padding:3px 4px;border-top:1px solid var(--ln);vertical-align:top}
+tr{cursor:pointer}tr.s td{background:#2a3140;color:var(--ac)}
+td:first-child{font-weight:600;width:1.6em}td:nth-child(3),td:nth-child(4){text-align:right;white-space:nowrap}
+.f{font-size:12px}
+@media (max-width:640px){#p{top:auto;bottom:0;right:0;left:0;width:auto;max-height:46%;border-radius:12px 12px 0 0;padding-bottom:max(12px,env(safe-area-inset-bottom))}}
+</style></head><body>
+<canvas id="c" tabindex="0" aria-label="Scena 3D della catena di ingranaggi"></canvas>
+<div id="p">
+<h1>Catena di ingranaggi dell'orologeria</h1>
+<p>Clicca un ingranaggio (o una riga) per farlo girare. Trascina per orbitare, rotella o pizzica per lo zoom, tasto destro o due dita per spostare la vista. Assi: X rosso, Y verde (profondità), Z blu (alto).</p>
+<b id="sn">Nessun ingranaggio selezionato</b>
+<label>Velocità dell'ingranaggio scelto: <b id="rv"></b> giri/min<input id="sp" type="range" min="-1.5" max="1.8" step="0.01" value="0.6"></label>
+<div class="bt"><button id="cw">↻ Orario</button><button id="cc">↺ Antiorario</button><button id="st">Ferma</button></div>
+<label>Tempo della simulazione <select id="ts"><option value="1">1×</option><option value=".25">0,25×</option><option value=".05">0,05×</option></select></label>
+<p id="ms"></p>
+<table id="tb"></table>
+<p class="f" id="rt"></p>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/8.20.0/babylon.js"></script>
+<script>
+const {Vector3:V3,Color3:C3,Quaternion:Qt}=BABYLON;
+const PI=Math.PI,cs=Math.cos,sn=Math.sin,PA=PI/9,BL=.05,inv=a=>Math.tan(a)-a;
+/* ---------- geometria: evolvente, ruote cilindriche e coniche ---------- */
+function prof(z,m,nf){const rp=m*z/2,rb=rp*cs(PA),ra=rp+m,rf=rp-1.25*m,hb=PI/(2*z)+inv(PA),rs=Math.max(rb,rf),p=2*PI/z,r=[],ph=[],o=[];
+ for(let i=0;i<nf;i++){const q=rs+(ra-rs)*i/(nf-1);r.push(q);ph.push(hb-inv(Math.acos(Math.min(1,rb/q)))-BL*m/(2*rp))}
+ for(let i=0;i<nf;i++)o.push([r[i],-ph[i]]);o.push([ra,0]);
+ for(let i=nf-1;i>=0;i--)o.push([r[i],ph[i]]);
+ if(rf<rb)o.push([rf,ph[0]]);
+ o.push([rf,ph[0]+(p-2*ph[0])/3],[rf,ph[0]+(p-2*ph[0])*2/3]);
+ if(rf<rb)o.push([rf,p-ph[0]]);return o}
+function loft(A,B,ca,cb){const n=A.length,T=[];for(let i=0;i<n;i++){const j=(i+1)%n;T.push([i,j,n+j],[i,n+j,n+i],[2*n,j,i],[2*n+1,n+i,n+j])}return{P:[...A,...B,ca,cb],T}}
+function spur(z,m,rho,w0,w1){const o=prof(z,m,z>120?6:8),p=2*PI/z,A=[],B=[];
+ for(let k=0;k<z;k++)for(const[r,d]of o){const a=rho+k*p+d,x=r*cs(a),y=r*sn(a);A.push([x,y,w0]);B.push([x,y,w1])}
+ return loft(A,B,[0,0,w0],[0,0,w1])}
+function cyl(r,w0,w1,n=32,cx=0,cy=0){const A=[],B=[];for(let i=0;i<n;i++){const a=2*PI*i/n,x=cx+r*cs(a),y=cy+r*sn(a);A.push([x,y,w0]);B.push([x,y,w1])}return loft(A,B,[cx,cy,w0],[cx,cy,w1])}
+/* dentatura conica diritta: profilo sul cono complementare, raggi per l'apice comune */
+function bev(z,m,d,rho,k0){const R=m*z/2,wp=R/Math.tan(d),zv=z/cs(d),rpv=R/cs(d),o=prof(zv,m,8),pv=2*PI/zv,P=[];
+ for(let k=0;k<z;k++)for(const[r,dp]of o){const t=rho+(k*pv+dp)/cs(d),s=r-rpv,q=R+s*cs(d);P.push([q*cs(t),q*sn(t),wp-s*sn(d)])}
+ const cw=P.reduce((a,p)=>a+p[2],0)/P.length;return loft(P.map(p=>p.map(v=>v*k0)),P,[0,0,k0*cw],[0,0,cw])}
+function vane(s){const q=[[0,0],[-34*s,46],[-14*s,58]],P=[...q.map(([x,h])=>[x,-1,168+h]),...q.map(([x,h])=>[x,1,168+h])];
+ return{P,T:[[0,1,2],[3,5,4],[0,1,4],[0,4,3],[1,2,5],[1,5,4],[2,0,3],[2,3,5]]}}
+/* ---------- scena ---------- */
+const cv=document.getElementById('c'),eng=new BABYLON.Engine(cv,true,{antialias:true}),scene=new BABYLON.Scene(eng);
+scene.useRightHandedSystem=true;scene.clearColor=new BABYLON.Color4(.07,.085,.11,1);
+const cam=new BABYLON.ArcRotateCamera('cam',PI/2-.6,1.15,640,new V3(62,45,-75),scene);
+cam.attachControl(cv,false);cam.lowerRadiusLimit=30;cam.upperRadiusLimit=1800;cam.wheelDeltaPercentage=.02;cam.panningSensibility=40;cam.minZ=1;cam.maxZ=8000;
+cv.addEventListener('wheel',e=>e.preventDefault(),{passive:false});cv.addEventListener('contextmenu',e=>e.preventDefault());
+new BABYLON.HemisphericLight('h',new V3(.3,1,.5),scene).intensity=.75;
+const dl=new BABYLON.DirectionalLight('d',new V3(-.5,-1,-.7),scene);dl.intensity=.8;
+const mat=h=>{const m=new BABYLON.StandardMaterial('m',scene);m.diffuseColor=C3.FromHexString(h);m.specularColor=new C3(.28,.28,.28);m.specularPower=40;m.backFaceCulling=false;return m};
+function mesh(nm,parts,mp,mt,par,pick){const pos=[],nor=[],idx=[];let n=0;
+ for(const{P,T}of parts){const R=P.map(mp);let v=0;
+  for(const[a,b,c]of T){const A=R[a],B=R[b],C=R[c];v+=A[0]*(B[1]*C[2]-B[2]*C[1])+A[1]*(B[2]*C[0]-B[0]*C[2])+A[2]*(B[0]*C[1]-B[1]*C[0])}
+  for(const t of T){const[a,b,c]=v<0?[t[0],t[2],t[1]]:t,A=R[a],B=R[b],C=R[c];
+   const ux=B[0]-A[0],uy=B[1]-A[1],uz=B[2]-A[2],vx=C[0]-A[0],vy=C[1]-A[1],vz=C[2]-A[2];
+   let x=uy*vz-uz*vy,y=uz*vx-ux*vz,z=ux*vy-uy*vx;const l=Math.hypot(x,y,z)||1;x/=l;y/=l;z/=l;
+   pos.push(...A,...B,...C);nor.push(x,y,z,x,y,z,x,y,z);idx.push(n,n+1,n+2);n+=3}}
+ const m=new BABYLON.Mesh(nm,scene),vd=new BABYLON.VertexData();vd.positions=pos;vd.normals=nor;vd.indices=idx;vd.applyToMesh(m);
+ m.material=mt;m.parent=par;m.isPickable=!!pick;return m}
+/* ---------- dati (mm): moduli da diametro/denti, pignoni con il modulo della ruota condotta ---------- */
+const ZD=165,mA=.9,mD=113/ZD,mF=.485,mH=67.5/170,mK=62.1/234,pr=(z,m)=>z*m/2;
+const x2=pr(150,mA)+pr(25,mA),x3=x2+pr(ZD,mD)+pr(26,mD),x5=x3-pr(170,mH)-pr(34,mH),x6=x5-pr(234,mK)-pr(65,mK);
+const bd=30+9,bx=bd*cs(-PI*40/180),bz=bd*sn(-PI*40/180);
+const dF=Math.atan(200/50),dG=Math.atan(50/200),wF=pr(200,mF)/Math.tan(dF),wG=pr(50,mF)/Math.tan(dG),yA=156-wF;
+/* ---------- corpi rigidi (ognuno ruota attorno al proprio asse) ---------- */
+const AXH=new V3(0,0,-1),AXV=new V3(0,1,0),BODY={},GR={},MK=mat('#d4262e');
+function body(id,ax,pos,col){const n=new BABYLON.TransformNode(id,scene);n.position=pos;n.rotationQuaternion=Qt.Identity();BODY[id]={n,ax,th:0,mt:mat(col)}}
+const mpf=(ax,wo)=>ax==='y'?p=>[p[0],-p[1],-(p[2]+wo)]:p=>[p[0],p[2],-p[1]];
+function gear(lb,nm,z,id,parts,wo,note){const b=BODY[id],m=mesh('g'+lb,parts,mpf(b.ax,wo),b.mt,b.n,1);m.metadata=lb;GR[lb]={nm,z,id,ax:b.ax,m,note}}
+function extra(id,parts,wo,mt){const b=BODY[id];mesh('x',parts,mpf(b.ax,wo),mt||b.mt,b.n,0)}
+body('D','y',new V3(0,0,0),'#a98a3c');body('A','y',new V3(0,0,0),'#d2ac52');body('b','y',new V3(bx,bz,0),'#9aa4ae');
+body('C','y',new V3(x2,0,0),'#b08a45');body('E','y',new V3(x3,0,0),'#d9782e');
+body('G','z',new V3(x3,0,-yA),'#3f74b8');body('J','z',new V3(x5,0,-yA),'#5f9a4a');body('L','z',new V3(x6,0,-yA),'#8f5a9b');
+// asse 1: tamburo B con ruota di carica W; A sul suo piano, collegata al tamburo dal nottolino
+gear('B','Tamburo (ø 67,5 × 105 mm)',0,'D',[cyl(33.75,14.5,121,64)],0);
+gear('W','Ruota di carica sul tamburo',60,'D',[spur(60,1,Math.atan2(-bz,bx),6,14)],0,'dato assunto');
+extra('D',[cyl(5,-22,131,24)],0);extra('D',[cyl(2.5,15,120,16,33.75,0),cyl(3,5.6,14.4,16,25,0)],0,MK);
+gear('A','Ruota del tamburo (ø 135 mm)',150,'A',[spur(150,mA,0,119,127)],0);
+extra('A',[cyl(9,118.5,127.5,24)],0);extra('A',[cyl(4,118.6,127.4,16,45,0)],0,MK);
+// pignone di carica b: asse attraverso la parete di vetro, testa quadra per la chiave
+gear('b','Pignone di carica',18,'b',[spur(18,1,Math.atan2(bz,-bx)+PI/18,6,14)],0,'dato assunto');
+const sq=w=>[[-4,-4,w],[4,-4,w],[4,4,w],[-4,4,w]];
+extra('b',[cyl(3,-22,12,16),loft(sq(-34),sq(-21),[0,0,-34],[0,0,-21])],0);
+// asse 2: C (25) e D
+gear('C','Pignone',25,'C',[spur(25,mA,PI+PI/25,119,127)],0);
+gear('D','Ruota (ø 113 mm)',ZD,'C',[spur(ZD,mD,0,134,142)],0,'165 nel testo');
+extra('C',[cyl(5,115,144,24),cyl(3.5,110,146,16)],0);extra('C',[cyl(4,133.6,142.4,16,36,0)],0,MK);
+// asse 3: E (26), ruota conica F (200), pignone esterno M (25)
+gear('E','Pignone',26,'E',[spur(26,mD,PI+PI/26,134,142)],0);
+gear('F','Ruota conica (ø 97 mm)',200,'E',[bev(200,mF,dF,-PI/2+PI/200,.7),cyl(44,wF-.4,wF+4,64)],yA,'coppia conica con G');
+gear('M','Pignone esterno (fuori dalla cassa)',25,'E',[spur(25,190/204,0,-20,-12)],0);
+extra('E',[cyl(6,141.4,yA+.805*wF,24),cyl(3.5,-22,yA+wF,16)],0);extra('E',[cyl(3,7.9,9,16,26,0)],yA,MK);extra('E',[cyl(1.8,-20.4,-11.6,12,6,0)],0,MK);
+// asse 4 verticale: G (50) conico e ruota H (170)
+gear('G','Pignone conico',50,'G',[bev(50,mF,dG,PI/2,.7),cyl(10.5,wG-.5,wG+3.5,32)],0,'coppia conica con F');
+gear('H','Ruota (ø 67,5 mm)',170,'G',[spur(170,mH,PI,70,78)],0);
+extra('G',[cyl(4,wG+3,90,16),cyl(7,64,84,24)],0);extra('G',[cyl(3,69.6,78.4,16,25,0)],0,MK);
+// asse 5: J (34) e ruota K (234)
+gear('J','Pignone',34,'J',[spur(34,mH,PI/34,70,78)],0);
+gear('K','Ruota (ø 62,1 mm)',234,'J',[spur(234,mK,PI,100,108)],0);
+extra('J',[cyl(3,62,116,16)],0);extra('J',[cyl(3,99.6,108.4,16,22,0)],0,MK);
+// asse 6: pignone L (65) e regolatore semplificato
+gear('L','Pignone del regolatore',65,'L',[spur(65,mK,PI/65,100,108)],0);
+extra('L',[cyl(3,92,172,16),cyl(6,150,170,24),vane(1),vane(-1)],0,mat('#b98cc4'));
+// fune e peso (nel verso di rotazione che scarica il tamburo)
+const rope=BABYLON.MeshBuilder.CreateCylinder('r',{height:1,diameter:4,tessellation:12},scene),wt=BABYLON.MeshBuilder.CreateCylinder('w',{height:30,diameter:24,tessellation:24},scene);
+rope.material=mat('#5a4630');wt.material=mat('#6b7280');rope.isPickable=wt.isPickable=false;
+/* ---------- assi X, Y, Z ---------- */
+function axis(d,hex,lb){const col=C3.FromHexString(hex),e=d.scale(170),l=BABYLON.MeshBuilder.CreateLines('a',{points:[V3.Zero(),e]},scene);l.color=col;
+ const s=BABYLON.MeshBuilder.CreateSphere('a',{diameter:8},scene);s.position=e;const m=new BABYLON.StandardMaterial('a',scene);m.emissiveColor=col;m.disableLighting=true;s.material=m;
+ const t=new BABYLON.DynamicTexture('t',{width:64,height:64},scene,false);t.hasAlpha=true;t.drawText(lb,14,48,'bold 44px sans-serif',hex,'transparent',true);
+ const pl=BABYLON.MeshBuilder.CreatePlane('a',{size:22},scene),pm=new BABYLON.StandardMaterial('a',scene);pm.diffuseTexture=t;pm.useAlphaFromDiffuseTexture=true;pm.emissiveColor=C3.White();pm.disableLighting=true;pm.backFaceCulling=false;
+ pl.material=pm;pl.billboardMode=7;pl.position=e.add(new V3(0,14,0));
+ for(const o of[l,s,pl]){o.renderingGroupId=1;o.isPickable=false}}
+axis(new V3(1,0,0),'#e5484d','X');axis(new V3(0,0,-1),'#3fb950','Y');axis(new V3(0,1,0),'#58a6ff','Z');
+/* ---------- cinematica esatta ----------
+ Angoli positivi attorno a +Y (assi 1-3) e a +Z (assi 4-6). Coppie in presa (contatto per velocita' periferiche uguali):
+ cilindriche esterne: w2 = -w1*z1/z2; conica F-G (assi perpendicolari, stesso apice): w_G = -w_F*z_F/z_G. */
+const E=[['A','C',-150/25],['C','E',-ZD/26],['E','G',-200/50],['G','J',-170/34],['J','L',-234/65],['D','b',-60/18]];
+let drv=null,dir=1;
+function comp(w,root,val){const st=[[root,val]],seen={};while(st.length){const[i,v]=st.pop();if(seen[i])continue;seen[i]=1;w[i]=v;for(const[a,c,k]of E){if(a===i)st.push([c,v*k]);else if(c===i)st.push([a,v/k])}}}
+/* nottolino tra tamburo (D) e A: A non puo' restare indietro rispetto al tamburo in verso positivo (scarica);
+ in verso opposto (carica) il tamburo scorre da solo e A resta ferma. */
+function solve(){const w={};for(const i in BODY)w[i]=0;
+ if(drv){const id=GR[drv.g].id;comp(w,id,drv.w);
+  if(id==='D'||id==='b'){if(w.D>0)comp(w,'A',w.D)}else if(w.A<0)comp(w,'D',w.A)}
+ return w}
+/* ---------- interfaccia ---------- */
+const cw=g=>GR[g].ax==='y'?1:-1,$=i=>document.getElementById(i),fmt=(v,d)=>v.toLocaleString('it',{maximumFractionDigits:d});
+let cur=null;
+const tb=$('tb');
+for(const lb in GR){const g=GR[lb],r=tb.insertRow();r.tabIndex=0;r.dataset.g=lb;
+ r.innerHTML=`<td>${lb}</td><td>${g.nm}${g.note?` <span style="color:var(--mt)">(${g.note})</span>`:''}</td><td>${g.z?g.z+' d.':'—'}</td><td></td>`;
+ r.onclick=()=>pick(lb);r.onkeydown=e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();pick(lb)}}}
+const rpm=()=>Math.pow(10,+$('sp').value);
+function setDrv(){if(!cur)return;drv={g:cur,w:dir*cw(cur)*rpm()*PI/30};$('rv').textContent=fmt(rpm(),2);$('cw').classList.toggle('on',dir>0);$('cc').classList.toggle('on',dir<0)}
+function pick(lb){if(cur)GR[cur].m.renderOverlay=false;cur=lb;const g=GR[lb],m=g.m;m.renderOverlay=true;m.overlayColor=new C3(1,.85,.3);m.overlayAlpha=.35;
+ $('sn').textContent=`${lb} — ${g.nm}${g.z?', '+g.z+' denti':''}. Sensi visti ${g.ax==='y'?'da davanti':'dall\'alto'}.`;
+ for(const r of tb.rows)r.classList.toggle('s',r.dataset.g===lb);setDrv()}
+$('rv').textContent=fmt(rpm(),2);
+$('sp').oninput=()=>{$('rv').textContent=fmt(rpm(),2);setDrv()};
+$('cw').onclick=()=>{dir=1;setDrv()};$('cc').onclick=()=>{dir=-1;setDrv()};
+$('st').onclick=()=>{drv=null;$('cw').classList.remove('on');$('cc').classList.remove('on')};
+scene.onPointerObservable.add(pi=>{if(pi.type===BABYLON.PointerEventTypes.POINTERTAP&&pi.pickInfo&&pi.pickInfo.hit&&pi.pickInfo.pickedMesh.metadata)pick(pi.pickInfo.pickedMesh.metadata)});
+const tot=150/25*ZD/26*200/50*170/34*234/65;
+$('rt').textContent=`Con i denti del testo un giro di A fa ${fmt(tot,1)} giri di L (con D = 156 denti sarebbero 2592, come dichiarato). Dati assunti: ruota di carica 60 denti e pignone b 18 denti; regolatore e fune semplificati.`;
+let acc=0;
+scene.onBeforeRenderObservable.add(()=>{const dt=Math.min(eng.getDeltaTime()/1000,.05)*(+$('ts').value),w=solve();
+ for(const i in BODY){const b=BODY[i];b.th+=w[i]*dt;b.n.rotationQuaternion=Qt.RotationAxis(b.ax==='y'?AXH:AXV,b.th)}
+ const len=Math.min(500,Math.max(30,90+33.75*BODY.D.th));rope.scaling.y=len;rope.position.set(35.8,-len/2,-67.75);wt.position.set(35.8,-len-15,-67.75);
+ acc+=dt;if(acc>.1||!dt){acc=0;let i=0;for(const lb in GR){const g=GR[lb],v=w[g.id]*cw(lb)*30/PI,a=Math.abs(v);tb.rows[i++].cells[3].textContent=a<1e-6?'0':(v>0?'↻ ':'↺ ')+fmt(a,a<10?2:a<1000?1:0)}
+  let s='';if(drv){const id=GR[drv.g].id,d=id==='D'||id==='b';
+   if(d)s=w.D<0?'Caricamento: gira solo il tamburo B (la fune si avvolge). Il nottolino scatta e tutto il resto della catena resta fermo.':w.D>0?'Il tamburo trascina A tramite il nottolino: si muove tutta la catena, come con il peso che scende.':'';
+   else s=w.A>0?'Il nottolino scorre a vuoto: il tamburo B resta fermo mentre la catena gira.':w.A<0?'Verso opposto: il nottolino blocca e A trascina il tamburo (la fune si avvolge).':''}
+  $('ms').textContent=s}});
+eng.runRenderLoop(()=>scene.render());addEventListener('resize',()=>eng.resize());
+</script></body></html>
