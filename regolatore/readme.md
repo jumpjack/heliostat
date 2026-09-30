@@ -53,7 +53,17 @@ Gli ingranaggi interni del regolatore sono anch'essi descritti in "[Beobachtunge
 
 Notare il probabile refuso sul numero dei denti della ruota D, che devono essere 156 anzichè 165 affinchè tornino i conti rispetto a quanto spiegato nel testo.
 
-[Qui](https://geargenerator.com/beta/#jZkabxt1EZb1enb6erfgSpb5i7U4viTjB021eGbFEz0FBNt2yqDbtieW5gnBQXSuQB48dSfp00Nzxh3esfhTSPbym@pDvx23Esiz7KHQzqTSkfQntpW7wUsNz1Btm32tdkqaj83Yw$geNJjMl2t2asfpwuDoy0kzfPBtIOW4HGY9@ZJT7$HWPSG0rvxNB6m5nCCwzYBLdA) una simulazione 2d del meccanismo.
+[Qui](https://geargenerator.com/beta/#jZkabxt1EZb1enb6erfgSpb5i7U4viTjB021eGbFEz0FBNt2yqDbtieW5gnBQXSuQB48dSfp00Nzxh3esfhTSPbym@pDvx23Esiz7KHQzqTSkfQntpW7wUsNz1Btm32tdkqaj83Yw$geNJjMl2t2asfpwuDoy0kzfPBtIOW4HGY9@ZJT7$HWPSG0rvxNB6m5nCCwzYBLdA) una simulazione 2d del meccanismo. (brokenlink)
+
+Qui invece una simulazione 3d create da Claude Sonnet 5.5:
+- [Come fig.1 del testo](https://jumpjack.github.io/heliostat/regolatore/originale.html)
+- [Adattato per avere tutti gli ingranaggi modulo 1](https://jumpjack.github.io/heliostat/regolatore/modulo1.html)
+
+**Nota: secondo Claude c'è un errore di battitura nel testo: per avere un rapporto di 1:2592 tra primo e ultimo ingranaggio come indicato nel testo, la ruota D non deve avere 165 denti ma 156.**
+
+<img width="467" height="527" alt="image" src="https://github.com/user-attachments/assets/50fbdb3d-b15a-4b09-9dfa-df5f1b577aab" />
+
+Cliccando su un ingranaggio, questo inizierà a muoversi alla velocità impostata. Cliccando sull'ingranaggino "b" di ricarica, girerà solo il tamburo B per tirare su il peso.
 
 --------
 
