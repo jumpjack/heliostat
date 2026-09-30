@@ -61,7 +61,7 @@ Qui invece una simulazione 3d create da Claude Sonnet 5.5:
 
 **Nota: secondo Claude c'è un errore di battitura nel testo: per avere un rapporto di 1:2592 tra primo e ultimo ingranaggio come indicato nel testo, la ruota D non deve avere 165 denti ma 156.**
 
-<img width="467" height="527" alt="image" src="https://github.com/user-attachments/assets/50fbdb3d-b15a-4b09-9dfa-df5f1b577aab" />
+<img width="467" height="527" alt="image" src="https://github.com/user-attachments/assets/d54cf2d1-6376-41bc-a7ef-1096df926718" />
 
 Cliccando su un ingranaggio, questo inizierà a muoversi alla velocità impostata. Cliccando sull'ingranaggino "b" di ricarica, girerà solo il tamburo B per tirare su il peso.
 
