@@ -66,6 +66,15 @@ Qui invece una simulazione 3d create da Claude Sonnet 5.5:
 
 Cliccando su un ingranaggio, questo inizierà a muoversi alla velocità impostata. Cliccando sull'ingranaggino "b" di ricarica, girerà solo il tamburo B per tirare su il peso.
 
+Ecco invece il meccanismo della fig.2, quello che permette di "regolare l'ora" di un asse orario senza interromperne il moto:
+- [Regolatore Ascensione Retta](https://jumpjack.github.io/heliostat/regolatore/AR.html)
+
+<img width="572" height="418" alt="image" src="https://github.com/jumpjack/heliostat/blob/main/regolatore/fig2-3d.png" />
+
+Il tutto ottenuto con un [singolo prompt](https://jumpjack.github.io/heliostat/regolatore/prompt-fig2.md)! 
+
+L'ingranaggio sullo sfondo è l' "output" che consiste nella somma di due input: il pignone N in basso, e il perno "a" in primo piano. Se il perno "a" viene lasciato fermo, l'uscita gira 10/9 la velocità dell'ingresso; l'asse "a" di regolazione aggiunge 1/10 della sua velocità, cioè se gira a 10 rpm l'uscita girerà 1 rpm più piano o più veloce a seconda del verso di rotazione di "a".
+
 --------
 
 Recueil des travaux scientifiques de Léon Foucault
