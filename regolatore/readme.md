@@ -77,7 +77,7 @@ L'ingranaggio sullo sfondo a sinistra è l' "output" (*) che consiste nella somm
 - il pignone N in basso,
 - perno "a" in primo piano
 
-Se il perno "a" viene lasciato fermo, l'uscita gira 10/9 (=1,1) la velocità dell'ingresso; l'asse "a" di regolazione aggiunge 1/10 della propria velocità, cioè se gira a 10 rpm l'uscita girerà 1 rpm più piano o più veloce a seconda del verso di rotazione di "a".
+Se il perno "a" viene lasciato fermo, l'uscita gira 9/10 la velocità della ruota portante M; l'asse "a" di regolazione aggiunge all'asse di uscita 1/10 della propria velocità, cioè se gira a 10 rpm l'uscita girerà 1 rpm più piano o più veloce a seconda del verso di rotazione di "a".
 
  (*) Nel siderostato di Foucault è collegato un asse verticale lo collega al siderostato collocato in alto, attivandone l'asse orario.
 --------
