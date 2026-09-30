@@ -295,6 +295,19 @@ void loop() {
                   
           }  else  {
 
+          // Require a shared-secret token before executing any camera-control
+          // command: without this, any client on the WiFi network could send
+          // GET /R, /L, /U, /D and move the camera with no credentials (CWE-306).
+          bool isCommandRequest = (currentLine.indexOf(F("GET /R")) != -1) ||
+                                  (currentLine.indexOf(F("GET /L")) != -1) ||
+                                  (currentLine.indexOf(F("GET /U")) != -1) ||
+                                  (currentLine.indexOf(F("GET /D")) != -1);
+          if (isCommandRequest && currentLine.indexOf(F("token=S3cr3tPelcoD")) == -1) {
+            client.println(F("HTTP/1.1 401 Unauthorized"));
+            client.println();
+            break;
+          }
+
           // Check client request for commands:
           if (currentLine.indexOf(F("GET /R")) != -1) {
             sendPelcoDFrame(C_PAN_RIGHT_TILL_STOP, 5, 5);
