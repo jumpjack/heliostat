@@ -59,6 +59,7 @@ Qui invece una simulazione 3d create da Claude Sonnet 5.5:
 - [Come fig.1 del testo](https://jumpjack.github.io/heliostat/regolatore/originale.html)
 - [Adattato per avere tutti gli ingranaggi modulo 1](https://jumpjack.github.io/heliostat/regolatore/modulo1.html)
 - [Con ingranaggio D da 156 denti invece che 165](https://jumpjack.github.io/heliostat/regolatore/modulo1-fixed.html)
+- [Fig1 e fig2 insieme](https://jumpjack.github.io/heliostat/regolatore/regolatore-eichens-Fig1+Fig2.html) 
 
 **Nota: secondo Claude c'è un errore di battitura nel testo: per avere un rapporto di 1:2592 tra primo e ultimo ingranaggio come indicato nel testo, la ruota D non deve avere 165 denti ma 156.**
 
