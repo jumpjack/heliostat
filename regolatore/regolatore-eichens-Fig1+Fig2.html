@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orologeria completa – Fig. 1 + Fig. 2</title>
+<style>
+  :root { --bg:#12161c; --panel:#1b2028; --line:#323a47; --text:#e8e4d8; --muted:#9aa3af; --accent:#d9b45a; --ok:#7fc27a; --bad:#f08a6a; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; overflow:hidden; overscroll-behavior:none;
+               background:var(--bg); color:var(--text); font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  #stage { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; outline:none; }
+  #panel { position:fixed; top:max(10px,env(safe-area-inset-top)); right:max(10px,env(safe-area-inset-right));
+           width:350px; max-height:calc(100% - 20px); overflow:auto; padding:12px 14px;
+           background:rgba(27,32,40,.95); border:1px solid var(--line); border-radius:10px; }
+  h1 { margin:0 0 6px; font:600 15px/1.3 Georgia,"Times New Roman",serif; }
+  h2 { margin:12px 0 4px; font:600 13px/1.3 system-ui,sans-serif; color:var(--accent); }
+  p { margin:6px 0; color:var(--muted); }
+  #selected { display:block; min-height:2.6em; margin:8px 0 4px; color:var(--accent); }
+  label { display:block; margin:5px 0; }
+  input[type=range] { width:100%; accent-color:var(--accent); }
+  .buttons { display:flex; gap:6px; margin:6px 0; }
+  button, select { font:inherit; color:var(--text); background:#252c37; border:1px solid var(--line);
+                   border-radius:6px; padding:6px 8px; cursor:pointer; }
+  button { flex:1; }
+  button.on { border-color:var(--accent); color:var(--accent); }
+  button:focus-visible, select:focus-visible, tr:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { min-height:5em; color:var(--ok); white-space:pre-line; }
+  #clear.bad { color:var(--bad); }
+  table { width:100%; margin-top:6px; border-collapse:collapse; }
+  th { padding:3px 4px; text-align:left; font-weight:600; color:var(--muted); }
+  td { padding:3px 4px; border-top:1px solid var(--line); vertical-align:top; }
+  tr { cursor:pointer; }
+  tr.sel td { background:#2a3140; color:var(--accent); }
+  td:first-child { width:2em; font-weight:600; }
+  td:nth-child(n+3) { text-align:right; white-space:nowrap; }
+  .small { font-size:12px; }
+  @media (max-width:640px) {
+    #panel { top:auto; bottom:0; left:0; right:0; width:auto; max-height:48%; border-radius:12px 12px 0 0;
+             padding-bottom:max(12px,env(safe-area-inset-bottom)); }
+  }
+</style>
+</head>
+<body>
+<canvas id="stage" tabindex="0" aria-label="Scena 3D dell'orologeria completa"></canvas>
+
+<div id="panel">
+  <h1>Orologeria completa – Fig. 1 + Fig. 2</h1>
+  <p>La Fig. 1 (catena di ingranaggi) e la Fig. 2 (planetario) sono unite dall'asse 3: il pignone M, in fondo all'asse che esce da E,
+     ingrana con N. Clicca un ingranaggio (o una riga) per farlo girare. Trascina per orbitare, rotella o pizzica per lo zoom,
+     tasto destro o due dita per spostare la vista. Assi: X rosso, Y verde (profondità), Z blu (alto).</p>
+  <div class="buttons"><button id="viewAll">Insieme</button><button id="viewFront">Fig. 1 (da davanti)</button><button id="viewSide">Fig. 2 (da sinistra)</button></div>
+  <label><input id="showFig2" type="checkbox" checked> Mostra la parte Fig. 2</label>
+
+  <b id="selected">Nessun ingranaggio selezionato</b>
+  <label>Velocità dell'ingranaggio scelto: <b id="rpmLabel"></b> giri/min
+    <input id="speed" type="range" min="-1.5" max="1.8" step="0.01" value="0.6"></label>
+  <div class="buttons"><button id="btnCW">↻ Orario</button><button id="btnCCW">↺ Antiorario</button><button id="btnStop">Ferma</button></div>
+  <label><input id="brake" type="checkbox"> Freno u inserito (blocca l'asse 3: ferma E, M, N e la catena)</label>
+
+  <h2>Chiave AR (asse a)</h2>
+  <label>Velocità: <b id="keyLabel"></b> giri/min
+    <input id="keySpeed" type="range" min="-1.5" max="1.8" step="0.01" value="0.3"></label>
+  <div class="buttons"><button id="keyCW">↻ Orario</button><button id="keyCCW">↺ Antiorario</button><button id="keyStop" class="on">Rilascia</button></div>
+  <p class="small">A chiave rilasciata il suo peso tiene fermo l'asse c. (Ignorata se scegli Q, R o R′ come ingranaggio motore.)</p>
+
+  <h2>Ruote R e R′ (gemelle, sull'asse c e sull'asse a)</h2>
+  <label>Denti: <b id="zRLabel"></b><input id="zR" type="range" min="50" max="100" step="1" value="60"></label>
+  <label>Modulo: <b id="mRLabel"></b> mm<input id="mR" type="range" min="1" max="3" step="0.1" value="2"></label>
+  <p class="small" id="clear"></p>
+
+  <h2>Effetto sul moto</h2>
+  <p id="status"></p>
+  <label>Tempo della simulazione
+    <select id="timeScale"><option value="1">1×</option><option value=".25">0,25×</option><option value=".05">0,05×</option></select></label>
+
+  <table>
+    <thead><tr><th></th><th>Ingranaggio</th><th>Denti</th><th>Ø mm</th><th>giri/min</th></tr></thead>
+    <tbody id="gearRows"></tbody>
+  </table>
+  <p class="small" id="note"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/8.20.0/babylon.js"></script>
+<script>
+/* =====================================================================
+   1. DATI: numero di denti e modulo
+   Tutti i diametri derivano da  Ø primitivo = denti × modulo.
+   Le posizioni (interassi, quote, camera) si ricalcolano da soli.
+   ===================================================================== */
+const MOD = 1;                       // modulo in mm di tutti gli ingranaggi (tranne O, S ed R, R′: vedi sotto)
+
+const Z = {                          // denti
+  A:150, C:25, D:156, E:26, F:200, G:50, H:170, J:34, K:234, L:65,   // Fig. 1 (con D = 156 il rapporto totale sarebbe 2592)
+  W:60, b:18, M:25,                  // ruota di carica, pignone di carica: assunti. M: pignone dell'asse 3 (25 denti dal testo)
+  N:204, P:62, O:16, Q:31, S:80, V:66                                  // Fig. 2
+};
+const DRUM_D   = 60;                 // Ø tamburo B (libero, non dipende dai denti)
+const DRUM_LEN = 105;                // lunghezza tamburo
+const pitchR   = z => z * MOD / 2;   // raggio primitivo a modulo MOD
+const R_OF     = (z, m) => z * m / 2;// raggio primitivo con modulo m
+
+/* =====================================================================
+   2. LAYOUT DELLA FIG. 1 (mm). Sistema del modello: X destra, Y profondità (verso il fondo), Z alto.
+   Assi 1, 2, 3 (e b) paralleli a Y; assi 4, 5, 6 paralleli a Z.
+   ===================================================================== */
+const FACE = 8 * MOD;                // larghezza di fascia delle ruote cilindriche
+const GAP  = 7 * MOD;                // distanza tra piani diversi
+
+// Posizione X di ogni asse: due ruote in presa hanno interasse = somma dei raggi primitivi
+const X = { D:0, A:0 };
+X.C = X.A + pitchR(Z.A) + pitchR(Z.C);
+X.E = X.C + pitchR(Z.D) + pitchR(Z.E);
+X.G = X.E;                           // l'asse 4 passa per l'apice del cono di F
+X.J = X.G - pitchR(Z.H) - pitchR(Z.J);
+X.L = X.J - pitchR(Z.K) - pitchR(Z.L);
+
+// Il pignone b sta sotto a destra della ruota di carica W
+const bDist  = pitchR(Z.W) + pitchR(Z.b);
+const bAngle = -40 * Math.PI / 180;
+const bX = bDist * Math.cos(bAngle), bZ = bDist * Math.sin(bAngle);
+
+// Piani in profondità (Y): W davanti, poi tamburo, A e C, poi D ed E, poi F dietro
+const yW    = [6, 6 + FACE];
+const yA    = [yW[1] + DRUM_LEN, yW[1] + DRUM_LEN + FACE];
+const yD    = [yA[1] + GAP, yA[1] + GAP + FACE];
+const DRUM_R = DRUM_D / 2;
+
+// Coppia conica F–G: assi a 90°, stesso apice. tan(semiangolo) = denti / denti dell'altra
+const K0 = 0.7;                                          // il dente conico va da K0 a 1 (larghezza = 30% della generatrice)
+const dF = Math.atan(Z.F / Z.G), dG = Math.atan(Z.G / Z.F);
+const wF = pitchR(Z.F) / Math.tan(dF);                   // distanza apice → cerchio primitivo di F
+const wG = pitchR(Z.G) / Math.tan(dG);                   // distanza apice → cerchio primitivo di G
+const yApex = yD[1] + 10 * MOD - K0 * wF;                // F sta dietro a D ed E, con 10 mm di gioco
+
+// Quote (Z) degli assi verticali: H sopra il fondo di G, K sopra H
+const zH   = [wG + 4 + 8 * MOD, wG + 4 + 8 * MOD + FACE];
+const zK   = [zH[1] + 30 * MOD, zH[1] + 30 * MOD + FACE];
+const zReg = zK[1] + 40 * MOD;                           // base del regolatore
+
+/* =====================================================================
+   3. LAYOUT DELLA FIG. 2 (mm) e COLLEGAMENTO CON LA FIG. 1
+   Il meccanismo della Fig. 2 ha un proprio sistema locale: asse principale (di N, b, c) = coordinata u.
+   Un satellite = gli ingranaggi P e O sullo stesso asse eccentrico, portato da N.
+   ===================================================================== */
+// P e O hanno un solo asse, a distanza e dall'asse principale: e = r(P) + r(Q) = r(O) + r(S).
+// Con 62/31 denti a modulo 1 si ha e = 46,5 mm; per O/S (16/80 denti) serve quindi un modulo leggermente minore.
+const E_ECC = R_OF(Z.P, MOD) + R_OF(Z.Q, MOD);
+const M_OS  = E_ECC * 2 / (Z.O + Z.S);
+let zR = 60, mR = 2;                   // R e la sua gemella R′ (regolabili)
+const FACE_N = 12;                     // larghezza di N (e di M)
+const R_N = R_OF(Z.N, MOD), R_M = R_OF(Z.M, MOD);
+const DIST_MN = R_N + R_M;             // interasse M–N
+const SHAFT_A = 4;                     // raggio dell'asse a
+const uV = 0, uS = 48, uN = 92, uQ = uN + FACE_N + 36, uR = uQ + 44;   // posizioni lungo l'asse principale
+const PHI_SAT = Math.PI;               // azimut iniziale dell'asse dei satelliti (in basso, come in figura)
+const PHI_A   = 110 * Math.PI / 180;   // azimut dell'asse a
+
+// COLLEGAMENTO: l'asse 3 esce dalla cassa (Y < 0) e il suo pignone M va in presa con N.
+// L'asse principale della Fig. 2 è parallelo all'asse 3 e sta DIST_MN sopra di esso (M sotto N, come in figura).
+// Coordinata u della Fig. 2 → profondità: Y = −(u + SHIFT). Con SHIFT = 80 la parte più arretrata della Fig. 2
+// (l'estremità dell'asse a, u = −60) sta a 20 mm davanti alla parete (Y = 0), cioè fuori dalla cassa.
+const SHIFT = 80;
+const yM = [-(uN + FACE_N + SHIFT), -(uN + SHIFT)];    // piano di M (e di N) in profondità
+const yShaftEnd = -(uN + 24 + SHIFT);                  // estremità anteriore dell'asse 3
+
+/* =====================================================================
+   4. GEOMETRIA: dentatura a evolvente, ruote cilindriche e coniche
+   Ogni solido è {P: punti [x,y,w], T: triangoli}; w è la coordinata lungo l'asse.
+   ===================================================================== */
+const PI = Math.PI, cos = Math.cos, sin = Math.sin;
+const PRESSURE = 20 * PI / 180;          // angolo di pressione
+const BACKLASH = 0.05;                   // gioco sullo spessore del dente, in moduli
+const inv = a => Math.tan(a) - a;        // funzione evolvente
+
+// Un periodo di dentatura (un dente + il tratto di fondo fino al successivo).
+// Ritorna [[raggio, angolo rispetto al centro del dente], ...]
+function toothProfile(z, m, nFlank) {
+  const rp = m * z / 2, rb = rp * cos(PRESSURE);       // primitivo, base
+  const ra = rp + m, rf = rp - 1.25 * m;               // testa, piede
+  const halfBase = PI / (2 * z) + inv(PRESSURE);
+  const rStart = Math.max(rb, rf), pitch = 2 * PI / z;
+  const r = [], half = [];
+  for (let i = 0; i < nFlank; i++) {
+    const q = rStart + (ra - rStart) * i / (nFlank - 1);
+    r.push(q);
+    half.push(halfBase - inv(Math.acos(Math.min(1, rb / q))) - BACKLASH * m / (2 * rp));
+  }
+  const out = [];
+  for (let i = 0; i < nFlank; i++) out.push([r[i], -half[i]]);            // fianco destro, dal piede alla testa
+  out.push([ra, 0]);                                                      // sommità
+  for (let i = nFlank - 1; i >= 0; i--) out.push([r[i], half[i]]);        // fianco sinistro, dalla testa al piede
+  if (rf < rb) out.push([rf, half[0]]);
+  out.push([rf, half[0] + (pitch - 2 * half[0]) / 3], [rf, half[0] + (pitch - 2 * half[0]) * 2 / 3]);
+  if (rf < rb) out.push([rf, pitch - half[0]]);
+  return out;
+}
+
+// Unisce due contorni (A a w0, B a w1) in un solido chiuso, con tappi a ventaglio
+function loft(A, B, capA, capB) {
+  const n = A.length, T = [];
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    T.push([i, j, n + j], [i, n + j, n + i], [2 * n, j, i], [2 * n + 1, n + i, n + j]);
+  }
+  return { P: [...A, ...B, capA, capB], T };
+}
+
+// Ruota cilindrica. rho = rotazione iniziale (fase dei denti); m = modulo (di solito MOD)
+function spurGear(z, rho, w0, w1, m = MOD) {
+  const prof = toothProfile(z, m, z > 120 ? 6 : 8), pitch = 2 * PI / z, A = [], B = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const a = rho + k * pitch + d, x = r * cos(a), y = r * sin(a);
+      A.push([x, y, w0]); B.push([x, y, w1]);
+    }
+  }
+  return loft(A, B, [0, 0, w0], [0, 0, w1]);
+}
+
+// Ruota conica diritta: il profilo a evolvente sta sul cono complementare (Tredgold),
+// poi i raggi convergono nell'apice (origine). delta = semiangolo del cono primitivo.
+function bevelGear(z, delta, rho) {
+  const R = MOD * z / 2, wp = R / Math.tan(delta);
+  const zVirtual = z / cos(delta), rVirtual = R / cos(delta);
+  const prof = toothProfile(zVirtual, MOD, 8), pitchV = 2 * PI / zVirtual, P = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const t = rho + (k * pitchV + d) / cos(delta);   // azimut reale
+      const s = r - rVirtual;                          // distanza dal cerchio primitivo lungo il cono complementare
+      const q = R + s * cos(delta);
+      P.push([q * cos(t), q * sin(t), wp - s * sin(delta)]);
+    }
+  }
+  const wMean = P.reduce((a, p) => a + p[2], 0) / P.length;
+  const small = P.map(p => p.map(v => v * K0));         // estremità piccola: scala verso l'apice
+  return loft(small, P, [0, 0, K0 * wMean], [0, 0, wMean]);
+}
+
+// Cilindro (alberi, mozzi, marcatori) con centro (cx, cy)
+function cylinder(r, w0, w1, n = 32, cx = 0, cy = 0) {
+  const A = [], B = [];
+  for (let i = 0; i < n; i++) {
+    const a = 2 * PI * i / n, x = cx + r * cos(a), y = cy + r * sin(a);
+    A.push([x, y, w0]); B.push([x, y, w1]);
+  }
+  return loft(A, B, [cx, cy, w0], [cx, cy, w1]);
+}
+// Parallelepipedo centrato in (cx, cy) con semilati hx, hy
+function box(w0, w1, cx, cy, hx, hy) {
+  const q = w => [[cx - hx, cy - hy, w], [cx + hx, cy - hy, w], [cx + hx, cy + hy, w], [cx - hx, cy + hy, w]];
+  return loft(q(w0), q(w1), [cx, cy, w0], [cx, cy, w1]);
+}
+// Aletta triangolare del regolatore (side = ±1), spessa 2 mm
+function vane(side) {
+  const q = [[0, 0], [-34 * side, 46], [-14 * side, 58]];
+  const P = [...q.map(([x, h]) => [x, -1, zReg + 18 + h]), ...q.map(([x, h]) => [x, 1, zReg + 18 + h])];
+  return { P, T: [[0,1,2],[3,5,4],[0,1,4],[0,4,3],[1,2,5],[1,5,4],[2,0,3],[2,3,5]] };
+}
+
+/* =====================================================================
+   5. SCENA BABYLON
+   Il modello (X, Y profondità, Z alto) passa in Babylon (destrorso, Y alto) come (x, y, z) = (X, Z, −Y).
+   ===================================================================== */
+const { Vector3: V3, Color3: C3, Quaternion: Quat } = BABYLON;
+const $ = id => document.getElementById(id);
+const fmt = (v, d) => v.toLocaleString('it', { maximumFractionDigits: d });
+const canvas = $('stage');
+const engine = new BABYLON.Engine(canvas, true, { antialias: true });
+const scene  = new BABYLON.Scene(engine);
+scene.useRightHandedSystem = true;
+scene.clearColor = new BABYLON.Color4(.07, .085, .11, 1);
+
+// Camera: inquadra tutto il modello, qualunque sia il modulo (limiti in coordinate Babylon)
+const bounds = { x0: -pitchR(Z.A) - 10, x1: X.E + R_N + 10, y0: -pitchR(Z.D) - 10, y1: zReg + 80,
+                 z0: -(yApex + wF + 8), z1: SHIFT + uR + FACE + 70 };
+const diag = Math.hypot(bounds.x1 - bounds.x0, bounds.y1 - bounds.y0, bounds.z1 - bounds.z0);
+const mid  = new V3((bounds.x0 + bounds.x1) / 2, (bounds.y0 + bounds.y1) / 2, (bounds.z0 + bounds.z1) / 2);
+const camera = new BABYLON.ArcRotateCamera('cam', PI / 2 - .7, 1.1, diag * 1.25, mid, scene);
+camera.attachControl(canvas, false);          // false = la camera blocca lo scroll della pagina
+camera.lowerRadiusLimit = 30;
+camera.upperRadiusLimit = diag * 5;
+camera.wheelDeltaPercentage = .02;
+camera.panningSensibility = 40;               // tasto destro = sposta
+camera.minZ = 1; camera.maxZ = diag * 20;
+canvas.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+
+new BABYLON.HemisphericLight('sky', new V3(.3, 1, .5), scene).intensity = .75;
+new BABYLON.DirectionalLight('sun', new V3(-.5, -1, -.7), scene).intensity = .8;
+
+function material(hex) {
+  const m = new BABYLON.StandardMaterial('m', scene);
+  m.diffuseColor = C3.FromHexString(hex);
+  m.specularColor = new C3(.28, .28, .28);
+  m.backFaceCulling = false;
+  return m;
+}
+
+// Trasforma i solidi in un Mesh con normali per faccia (spigoli netti).
+// Se un solido ha i triangoli orientati al contrario (volume negativo) li rigira.
+function buildMesh(name, solids, mapPoint, mat, parent, pickable) {
+  const pos = [], nor = [], idx = [];
+  let n = 0;
+  for (const { P, T } of solids) {
+    const R = P.map(mapPoint);
+    let vol = 0;
+    for (const [a, b, c] of T) {
+      const A = R[a], B = R[b], C = R[c];
+      vol += A[0]*(B[1]*C[2]-B[2]*C[1]) + A[1]*(B[2]*C[0]-B[0]*C[2]) + A[2]*(B[0]*C[1]-B[1]*C[0]);
+    }
+    for (const t of T) {
+      const [a, b, c] = vol < 0 ? [t[0], t[2], t[1]] : t;
+      const A = R[a], B = R[b], C = R[c];
+      const ux = B[0]-A[0], uy = B[1]-A[1], uz = B[2]-A[2], vx = C[0]-A[0], vy = C[1]-A[1], vz = C[2]-A[2];
+      let x = uy*vz-uz*vy, y = uz*vx-ux*vz, z = ux*vy-uy*vx;
+      const l = Math.hypot(x, y, z) || 1; x /= l; y /= l; z /= l;
+      pos.push(...A, ...B, ...C);
+      nor.push(x, y, z, x, y, z, x, y, z);
+      idx.push(n, n + 1, n + 2); n += 3;
+    }
+  }
+  const mesh = new BABYLON.Mesh(name, scene), data = new BABYLON.VertexData();
+  data.positions = pos; data.normals = nor; data.indices = idx; data.applyToMesh(mesh);
+  mesh.material = mat; mesh.parent = parent; mesh.isPickable = !!pickable;
+  return mesh;
+}
+
+/* =====================================================================
+   6. CORPI RIGIDI E INGRANAGGI
+   Un corpo è un insieme di ingranaggi e alberi solidali che ruotano attorno allo stesso asse.
+   Fig. 1: assi 'y' (orizzontali, in profondità) e 'z' (verticali). Fig. 2: asse 'x' del suo sistema locale.
+   ===================================================================== */
+const AXIS_Y = new V3(0, 0, -1);      // asse Y del modello in Babylon (rotazione positiva = oraria vista da davanti)
+const AXIS_Z = new V3(0, 1, 0);       // asse Z del modello in Babylon (rotazione positiva = antioraria vista dall'alto)
+const AXIS_X = new V3(1, 0, 0);       // asse principale della Fig. 2 (nel suo sistema locale)
+const BODY = {}, GEAR = {};
+const markerMat = material('#d4262e');
+
+// pos = posizione dell'asse in Babylon; axis 'y' = orizzontale, 'z' = verticale
+function addBody(id, axis, pos, color) {
+  const node = new BABYLON.TransformNode(id, scene);
+  node.position = pos; node.rotationQuaternion = Quat.Identity();
+  BODY[id] = { node, axis, theta: 0, mat: material(color) };
+}
+// Da coordinate locali a Babylon; wOffset sposta l'origine lungo l'asse (serve a F, che ha l'origine nell'apice)
+const localToBabylon = (axis, wOffset) =>
+  axis === 'y' ? p => [p[0], -p[1], -(p[2] + wOffset)] : p => [p[0], p[2], -p[1]];
+
+// Ingranaggio cliccabile
+function addGear(label, name, teeth, bodyId, solids, wOffset = 0, note = '') {
+  const b = BODY[bodyId];
+  const mesh = buildMesh('gear' + label, solids, localToBabylon(b.axis, wOffset), b.mat, b.node, true);
+  mesh.metadata = label;
+  GEAR[label] = { name, teeth, bodyId, axis: b.axis, mesh, note, diameter: teeth ? teeth * MOD : DRUM_D };
+}
+// Alberi, mozzi, marcatori (non cliccabili)
+function addExtra(bodyId, solids, wOffset = 0, mat = null) {
+  const b = BODY[bodyId];
+  buildMesh('extra', solids, localToBabylon(b.axis, wOffset), mat || b.mat, b.node, false);
+}
+// Marcatore rosso su una ruota: rende visibile la rotazione
+const marker = (radius, w0, w1) => cylinder(4 * MOD, w0 - .4, w1 + .4, 16, radius, 0);
+
+addBody('D', 'y', new V3(0, 0, 0),         '#a98a3c');   // tamburo + ruota di carica
+addBody('A', 'y', new V3(0, 0, 0),         '#d2ac52');   // ruota del tamburo
+addBody('b', 'y', new V3(bX, bZ, 0),       '#9aa4ae');   // pignone di carica
+addBody('C', 'y', new V3(X.C, 0, 0),       '#b08a45');   // C + D
+addBody('E', 'y', new V3(X.E, 0, 0),       '#d9782e');   // E + F + asse 3 con M e freno u
+addBody('G', 'z', new V3(X.G, 0, -yApex),  '#3f74b8');   // G + H
+addBody('J', 'z', new V3(X.J, 0, -yApex),  '#5f9a4a');   // J + K
+addBody('L', 'z', new V3(X.L, 0, -yApex),  '#8f5a9b');   // L + regolatore
+
+// --- asse 1: tamburo B con ruota di carica W; A è collegata al tamburo dal nottolino ---
+const phiW = Math.atan2(-bZ, bX);                       // azimut di W verso b
+addGear('B', 'Tamburo', 0, 'D', [cylinder(DRUM_R, yW[1] + .5, yA[0] + 1, 64)]);
+addGear('W', 'Ruota di carica', Z.W, 'D', [spurGear(Z.W, phiW, yW[0], yW[1])], 0, 'assunta');
+addExtra('D', [cylinder(5 * MOD, -22, yA[1] + 4, 24)]);                                        // albero
+addExtra('D', [cylinder(2.5 * MOD, yW[1] + 1, yA[0], 16, DRUM_R, 0), marker(.55 * pitchR(Z.W), yW[0], yW[1])], 0, markerMat);
+addGear('A', 'Ruota del tamburo', Z.A, 'A', [spurGear(Z.A, 0, yA[0], yA[1])]);
+addExtra('A', [cylinder(9 * MOD, yA[0] - 1, yA[1] + 1, 24)]);
+addExtra('A', [marker(.6 * pitchR(Z.A), yA[0], yA[1])], 0, markerMat);
+
+// --- pignone di carica b: albero attraverso la parete di vetro, testa quadra per la chiave ---
+const square = w => [[-4,-4,w],[4,-4,w],[4,4,w],[-4,4,w]];
+addGear('b', 'Pignone di carica', Z.b, 'b', [spurGear(Z.b, Math.atan2(bZ, -bX) + PI / Z.b, yW[0], yW[1])], 0, 'assunto');
+addExtra('b', [cylinder(3 * MOD, -22, yW[1] - 2, 16), loft(square(-34), square(-21), [0,0,-34], [0,0,-21])]);
+
+// --- asse 2: pignone C (in presa con A) e ruota D ---
+addGear('C', 'Pignone', Z.C, 'C', [spurGear(Z.C, PI + PI / Z.C, yA[0], yA[1])]);
+addGear('D', 'Ruota', Z.D, 'C', [spurGear(Z.D, 0, yD[0], yD[1])]);
+addExtra('C', [cylinder(5 * MOD, yA[0] - 4, yD[1] + 2, 24), cylinder(3.5 * MOD, yA[0] - 9, yD[1] + 4, 16)]);
+addExtra('C', [marker(.6 * pitchR(Z.D), yD[0], yD[1])], 0, markerMat);
+
+// --- asse 3: pignone E (in presa con D), ruota conica F (dietro), e in fondo all'asse il pignone M (in presa con N) ---
+addGear('E', 'Pignone', Z.E, 'E', [spurGear(Z.E, PI + PI / Z.E, yD[0], yD[1])]);
+addGear('F', 'Ruota conica', Z.F, 'E',
+        [bevelGear(Z.F, dF, -PI / 2 + PI / Z.F), cylinder(.88 * pitchR(Z.F), wF - .4, wF + 4 * MOD, 64)], yApex, 'in presa con G');
+// M: vano verso N, che sta sopra (azimut locale −π/2 nel sistema di questo corpo)
+addGear('M', 'Pignone (fondo dell\'asse 3)', Z.M, 'E', [spurGear(Z.M, -PI / 2 + PI / Z.M, yM[0], yM[1])], 0, 'in presa con N');
+addExtra('E', [cylinder(6 * MOD, yD[1] - .6, yApex + 1.15 * K0 * wF, 24),
+               cylinder(3.5 * MOD, yShaftEnd, yApex + wF, 16),                                     // asse 3, esteso fino a M
+               cylinder(15, -(uN - 18 + SHIFT), -(uN - 34 + SHIFT), 32)]);                         // tamburo del freno u
+addExtra('E', [cylinder(3 * MOD, K0 * wF - .6, K0 * wF + .5, 16, .5 * pitchR(Z.F), 0)], yApex, markerMat);
+addExtra('E', [cylinder(1.8, yM[0] - .4, yM[1] + .4, 12, 6, 0), box(-(uN - 22 + SHIFT), -(uN - 30 + SHIFT), 0, -12, 3, 3)], 0, markerMat);
+
+// --- asse 4 (verticale): pignone conico G (in presa con F) e ruota H ---
+addGear('G', 'Pignone conico', Z.G, 'G',
+        [bevelGear(Z.G, dG, PI / 2), cylinder(.85 * pitchR(Z.G), wG - 1, wG + 4, 32)], 0, 'in presa con F');
+addGear('H', 'Ruota', Z.H, 'G', [spurGear(Z.H, PI, zH[0], zH[1])]);
+addExtra('G', [cylinder(4 * MOD, wG + 3, zH[1] + 10, 16), cylinder(7 * MOD, zH[0] - 6, zH[1] + 6, 24)]);
+addExtra('G', [marker(.6 * pitchR(Z.H), zH[0], zH[1])], 0, markerMat);
+
+// --- asse 5: pignone J (in presa con H) e ruota K ---
+addGear('J', 'Pignone', Z.J, 'J', [spurGear(Z.J, PI / Z.J, zH[0], zH[1])]);
+addGear('K', 'Ruota', Z.K, 'J', [spurGear(Z.K, PI, zK[0], zK[1])]);
+addExtra('J', [cylinder(3 * MOD, zH[0] - 8, zK[1] + 8, 16)]);
+addExtra('J', [marker(.6 * pitchR(Z.K), zK[0], zK[1])], 0, markerMat);
+
+// --- asse 6: pignone L (in presa con K) e regolatore semplificato ---
+addGear('L', 'Pignone del regolatore', Z.L, 'L', [spurGear(Z.L, PI / Z.L, zK[0], zK[1])]);
+addExtra('L', [cylinder(3 * MOD, zK[0] - 8, zReg + 22, 16), cylinder(6 * MOD, zReg, zReg + 20, 24), vane(1), vane(-1)], 0, material('#b98cc4'));
+
+// --- fune e peso (a destra del tamburo, il lato che scende quando il tamburo scarica) ---
+const rope   = BABYLON.MeshBuilder.CreateCylinder('rope', { height: 1, diameter: 4, tessellation: 12 }, scene);
+const weight = BABYLON.MeshBuilder.CreateCylinder('weight', { height: 30, diameter: 24, tessellation: 24 }, scene);
+rope.material = material('#5a4630'); weight.material = material('#6b7280');
+rope.isPickable = weight.isPickable = false;
+const ropeX = DRUM_R + 2.05, ropeZ = -(yW[1] + yA[0]) / 2;
+
+/* =====================================================================
+   7. FIG. 2: PLANETARIO. Un nodo radice porta il sistema locale della Fig. 2 nella scena:
+   asse principale (u) → verso lo spettatore (+z Babylon), su → su, e il lato destro locale → verso −x.
+   L'origine sta sull'asse principale, DIST_MN sopra l'asse 3 (così M, sull'asse 3, sta sotto N).
+   ===================================================================== */
+const root2 = new BABYLON.TransformNode('fig2', scene);
+root2.position = new V3(X.E, DIST_MN, SHIFT);
+root2.rotationQuaternion = Quat.RotationAxis(new V3(0, 1, 0), -PI / 2);
+
+const radial = (r, phi) => new V3(0, r * cos(phi), r * sin(phi));    // punto nel piano perpendicolare all'asse principale (locale)
+const toLocal2 = p => [p[2], p[0], p[1]];                            // (x, y, w) → (u, y, z) locale della Fig. 2
+function addBody2(id, parent, pos, color) {
+  const node = new BABYLON.TransformNode(id, scene);
+  node.parent = parent; node.position = pos; node.rotationQuaternion = Quat.Identity();
+  BODY[id] = { node, axis: 'x', theta: 0, mat: material(color) };
+}
+function addGear2(label, name, teeth, module, bodyId, solids) {
+  const b = BODY[bodyId], mesh = buildMesh('gear' + label, solids, toLocal2, b.mat, b.node, true);
+  mesh.metadata = label;
+  GEAR[label] = { name, teeth, module, bodyId, axis: 'x', mesh, note: '', diameter: teeth * module };
+  return mesh;
+}
+function addExtra2(bodyId, solids, mat = null) {
+  const b = BODY[bodyId];
+  return buildMesh('extra', solids, toLocal2, mat || b.mat, b.node, false);
+}
+const marker2 = (radius, w0, w1) => cylinder(3.5, w0 - .4, w1 + .4, 16, radius, 0);
+
+addBody2('N',   root2,        V3.Zero(),                '#d2ac52');
+addBody2('sat', BODY.N.node,  radial(E_ECC, PHI_SAT),   '#9aa4ae');
+addBody2('c',   root2,        V3.Zero(),                '#5f9a4a');
+addBody2('bt',  root2,        V3.Zero(),                '#3f74b8');   // tubo b
+addBody2('a',   root2,        V3.Zero(),                '#2fa39a');   // la posizione dipende da R e R′
+
+// --- N: ruota di 204 denti (in presa con M) e asse interno che passa dentro i tubi b e c ---
+// Fase: N ha un dente verso M (azimut π); M un vano verso N.
+addGear2('N', 'Ruota portasatelliti', Z.N, MOD, 'N', [spurGear(Z.N, PI, uN, uN + FACE_N, MOD)]);
+addExtra2('N', [cylinder(3, uV - 34, uR + FACE + 20, 20),                                                // asse di N, dentro b e c
+                cylinder(9, uN - 2, uN + FACE_N + 2, 24, E_ECC * cos(PHI_SAT), E_ECC * sin(PHI_SAT))]);   // bussola eccentrica
+addExtra2('N', [marker2(.8 * R_N, uN, uN + FACE_N)], markerMat);
+// T: solo contrappeso, alla stessa distanza dall'asse principale dell'asse OP, dalla parte opposta
+addExtra2('N', [box(uN + FACE_N, uN + FACE_N + 12, E_ECC, 0, 10, 12)], material('#6b7280'));
+
+// --- satelliti P (62) e O (16): un solo asse che attraversa la bussola di N ---
+// P ingrana con Q (modulo 1), O con S (modulo M_OS). Fase: Q ed S hanno un dente verso i satelliti (azimut π), P e O un vano.
+addGear2('P', 'Satellite grande', Z.P, MOD, 'sat', [spurGear(Z.P, PI / Z.P, uQ, uQ + FACE, MOD)]);
+addGear2('O', 'Satellite piccolo', Z.O, M_OS, 'sat', [spurGear(Z.O, PI / Z.O, uS, uS + FACE, M_OS)]);
+addExtra2('sat', [cylinder(3.5, uS - 10, uQ + FACE + 4, 20), marker2(.6 * R_OF(Z.P, MOD), uQ, uQ + FACE)]);
+
+// --- gruppo c: tubo con Q (31) e R ---
+addGear2('Q', 'Ruota su c', Z.Q, MOD, 'c', [spurGear(Z.Q, PI, uQ, uQ + FACE, MOD)]);
+addExtra2('c', [cylinder(6.5, uN + FACE_N + 1, uR + FACE + 8, 24)]);
+
+// --- gruppo b: tubo con S (80) e V (66) ---
+addGear2('S', 'Ruota su b', Z.S, M_OS, 'bt', [spurGear(Z.S, PI, uS, uS + FACE, M_OS)]);
+addGear2('V', 'Ruota su b (verso la vite)', Z.V, MOD, 'bt', [spurGear(Z.V, 0, uV, uV + FACE, MOD)]);
+addExtra2('bt', [cylinder(6.5, uV - 22, uN - 1, 24)]);
+addExtra2('bt', [marker2(.6 * R_OF(Z.V, MOD), uV, uV + FACE), marker2(.6 * R_OF(Z.S, M_OS), uS, uS + FACE)], markerMat);
+
+// --- freno u: la ganascia sta sotto il tamburo del freno, sull'asse 3 (fra la cassa e M) ---
+const shoe = BABYLON.MeshBuilder.CreateBox('shoe', { width: 16, height: 6, depth: 24 }, scene);
+shoe.material = material('#6b7280'); shoe.isPickable = false;
+shoe.position.set(X.E, -15 - 3, SHIFT + uN - 26);
+
+// --- R (su c) e R′ (su a), gemelle, e lungo asse a con estremità quadrate ---
+let keyMeshes = [];
+function buildKeyGears() {
+  keyMeshes.forEach(m => m.dispose()); keyMeshes = [];
+  const da = zR * mR;                                     // interasse R–R′ = distanza dell'asse a dall'asse principale
+  BODY.a.node.position = radial(da, PHI_A);
+  // R ha un dente verso R′ (azimut PHI_A), R′ un vano verso R
+  const R1 = addGear2('R', 'Ruota su c', zR, mR, 'c', [spurGear(zR, PHI_A, uR, uR + FACE, mR)]);
+  const R2 = addGear2("R'", 'Gemella su asse a', zR, mR, 'a', [spurGear(zR, PHI_A + PI + PI / zR, uR, uR + FACE, mR)]);
+  const m1 = addExtra2('c', [marker2(.6 * R_OF(zR, mR), uR, uR + FACE)], markerMat);
+  const m2 = addExtra2('a', [cylinder(SHAFT_A, uV - 46, uR + FACE + 46, 20), box(uV - 60, uV - 46, 0, 0, 5, 5), box(uR + FACE + 46, uR + FACE + 60, 0, 0, 5, 5)]);
+  const m3 = addExtra2('a', [marker2(.6 * R_OF(zR, mR), uR, uR + FACE)], markerMat);
+  keyMeshes = [R1, R2, m1, m2, m3];
+  updateKeyRows(da);
+}
+
+/* ---------- Assi X, Y, Z (sempre visibili sopra la scena) ---------- */
+function drawAxis(dir, hex, label) {
+  const col = C3.FromHexString(hex), end = dir.scale(.4 * diag);
+  const line = BABYLON.MeshBuilder.CreateLines('axis', { points: [V3.Zero(), end] }, scene);
+  line.color = col;
+  const tip = BABYLON.MeshBuilder.CreateSphere('axisTip', { diameter: 8 }, scene);
+  tip.position = end;
+  const tipMat = new BABYLON.StandardMaterial('a', scene);
+  tipMat.emissiveColor = col; tipMat.disableLighting = true; tip.material = tipMat;
+  const tex = new BABYLON.DynamicTexture('t', { width: 64, height: 64 }, scene, false);
+  tex.hasAlpha = true;
+  tex.drawText(label, 14, 48, 'bold 44px sans-serif', hex, 'transparent', true);
+  const plane = BABYLON.MeshBuilder.CreatePlane('axisLabel', { size: 24 }, scene);
+  const pm = new BABYLON.StandardMaterial('a', scene);
+  pm.diffuseTexture = tex; pm.useAlphaFromDiffuseTexture = true;
+  pm.emissiveColor = C3.White(); pm.disableLighting = true; pm.backFaceCulling = false;
+  plane.material = pm; plane.billboardMode = 7; plane.position = end.add(new V3(0, 14, 0));
+  for (const o of [line, tip, plane]) { o.renderingGroupId = 1; o.isPickable = false; }
+}
+drawAxis(new V3(1, 0, 0), '#e5484d', 'X');
+drawAxis(new V3(0, 0, -1), '#3fb950', 'Y');
+drawAxis(new V3(0, 1, 0), '#58a6ff', 'Z');
+
+/* =====================================================================
+   8. CINEMATICA
+   Ogni corpo ha una velocità angolare w. Fig. 1: positiva attorno a +Y (assi 1–3) o +Z (assi 4–6).
+   Fig. 2: positiva attorno al proprio asse principale (che punta verso lo spettatore).
+   Coppie in presa: velocità periferiche uguali sul punto di contatto.
+     - ruote cilindriche esterne (assi paralleli):  w2 = −w1 · z1 / z2
+     - coppia conica F–G (assi perpendicolari, stesso apice): w_G = −w_F · z_F / z_G
+   Collegamento E → M → N: M è solidale con E. Il verso positivo della Fig. 1 attorno a +Y è opposto
+   a quello della Fig. 2 (che guarda lungo −Y), quindi w_M(Fig. 2) = −w_E  e  w_N = −(z_M / z_N) · w_M = (z_M / z_N) · w_E.
+   Planetario (formula di Willis, ruote esterne e portasatelliti N):
+        (w_Q − w_N) / (w_P − w_N) = − z_P / z_Q          (P ingrana con Q)
+        (w_S − w_N) / (w_O − w_N) = − z_O / z_S          (O ingrana con S), con w_O = w_P
+   da cui  w_S = w_N + k (w_c − w_N),   k = (z_O · z_Q) / (z_S · z_P)
+   ===================================================================== */
+const MESHES = [                                   // Fig. 1: [corpo1, corpo2, rapporto w2 / w1]
+  ['A', 'C', -Z.A / Z.C],
+  ['C', 'E', -Z.D / Z.E],
+  ['E', 'G', -Z.F / Z.G],
+  ['G', 'J', -Z.H / Z.J],
+  ['J', 'L', -Z.K / Z.L],
+  ['D', 'b', -Z.W / Z.b]
+];
+const K_DIFF = (Z.O * Z.Q) / (Z.S * Z.P);
+const TRAIN = ['A', 'C', 'E', 'G', 'J', 'L'], FIG1 = [...TRAIN, 'D', 'b'];
+let driver = null;                                  // {gear, w}: l'ingranaggio mosso dall'utente
+let direction = 1;
+const state = { keyDir: 0, brake: false };
+const rpm = id => Math.pow(10, +$(id).value);
+
+// Propaga la velocità da un corpo della Fig. 1 a tutti quelli collegati da ingranamenti
+function propagate(w, root, value) {
+  const stack = [[root, value]], seen = {};
+  while (stack.length) {
+    const [id, v] = stack.pop();
+    if (seen[id]) continue;
+    seen[id] = true; w[id] = v;
+    for (const [a, c, k] of MESHES) {
+      if (a === id) stack.push([c, v * k]);
+      else if (c === id) stack.push([a, v / k]);
+    }
+  }
+}
+
+/* Nottolino tra tamburo (D) e ruota A: A non può restare indietro rispetto al tamburo nel verso positivo (scarica).
+   - il tamburo gira in verso positivo → trascina A e tutta la catena
+   - il tamburo gira in verso opposto (carica, dal pignone b in senso orario) → gira solo il tamburo, A resta ferma
+   - la catena gira in verso positivo → il nottolino scorre a vuoto, il tamburo resta fermo
+   - la catena gira in verso opposto → il nottolino blocca e A trascina il tamburo */
+function solveSpeeds() {
+  const w = {};
+  for (const id in BODY) w[id] = 0;
+  const id = driver ? GEAR[driver.gear].bodyId : null;
+  const r = Z.Q / Z.P;
+
+  // 1. Chiave: asse a e gruppo c (R′ ingrana con R, uguali: velocità opposte)
+  let wa, wc;
+  if (id === 'c')      { wc = driver.w;  wa = -wc; }
+  else if (id === 'a') { wa = driver.w;  wc = -wa; }
+  else                 { wa = -state.keyDir * rpm('keySpeed') * PI / 30; wc = -wa; }   // orario da davanti = verso negativo in Fig. 2
+
+  // 2. Corpo della Fig. 1 che dà la velocità alla catena (E per tutto ciò che arriva dalla Fig. 2)
+  let rootBody = null, rootVal = 0;
+  if (FIG1.includes(id))   { rootBody = id;  rootVal = driver.w; }
+  else if (id === 'N')     { rootBody = 'E'; rootVal = (Z.N / Z.M) * driver.w; }
+  else if (id === 'bt')    { rootBody = 'E'; rootVal = (Z.N / Z.M) * ((driver.w - K_DIFF * wc) / (1 - K_DIFF)); }
+  else if (id === 'sat')   { rootBody = 'E'; rootVal = (Z.N / Z.M) * ((driver.w + r * wc) / (1 + r)); }
+  if (rootBody) {
+    propagate(w, rootBody, rootVal);
+    if (rootBody === 'D' || rootBody === 'b') { if (w.D > 0) propagate(w, 'A', w.D); }
+    else if (w.A < 0) propagate(w, 'D', w.A);
+  }
+  // Freno u: blocca l'asse 3, quindi E e tutta la catena. Il tamburo può solo caricare.
+  if (state.brake) {
+    const drumDriven = id === 'D' || id === 'b';
+    for (const k of TRAIN) w[k] = 0;
+    if (!drumDriven || w.D > 0) { w.D = 0; w.b = 0; }
+  }
+
+  // 3. Planetario
+  const wN = (Z.M / Z.N) * w.E;
+  w.N = wN; w.a = wa; w.c = wc;
+  w.bt  = wN + K_DIFF * (wc - wN);                 // uscita: S e V
+  w.sat = wN - r * (wc - wN);                      // rotazione assoluta di P e O
+  return w;
+}
+
+/* =====================================================================
+   9. INTERFACCIA
+   ===================================================================== */
+// Segno che rende "orario": da davanti per gli assi orizzontali (anche quelli della Fig. 2), dall'alto per i verticali
+const clockwise = label => GEAR[label].axis === 'y' ? 1 : -1;
+const tbody = $('gearRows'), rowOf = {};
+let current = null;
+
+function addRow(label) {
+  const g = GEAR[label], row = tbody.insertRow();
+  row.tabIndex = 0; row.dataset.gear = label; rowOf[label] = row;
+  row.innerHTML = `<td>${label}</td><td>${g.name}${g.note ? ` <span style="color:var(--muted)">(${g.note})</span>` : ''}</td><td></td><td></td><td></td>`;
+  row.onclick = () => selectGear(label);
+  row.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGear(label); } };
+}
+function updateRows() {
+  for (const label in rowOf) {
+    rowOf[label].cells[2].textContent = GEAR[label].teeth || '—';
+    rowOf[label].cells[3].textContent = fmt(GEAR[label].diameter, 1);
+  }
+}
+function updateKeyRows(da) {
+  updateRows();
+  const clearance = da - SHAFT_A - (R_N + MOD);      // spazio tra l'asse a e il bordo di N
+  const el = $('clear');
+  el.className = 'small' + (clearance < 2 ? ' bad' : '');
+  el.textContent = `Asse a a ${fmt(da, 1)} mm dall'asse principale (${zR} denti × modulo ${fmt(mR, 1)}). ` +
+    (clearance < 2 ? `Interferisce con N: mancano ${fmt(2 - clearance, 1)} mm. Aumenta denti o modulo.` : `Libero da N (gioco ${fmt(clearance, 1)} mm).`);
+}
+function updateDriver() {
+  if (!current) return;
+  driver = { gear: current, w: direction * clockwise(current) * rpm('speed') * PI / 30 };   // giri/min → rad/s
+  $('rpmLabel').textContent = fmt(rpm('speed'), 2);
+  $('btnCW').classList.toggle('on', direction > 0);
+  $('btnCCW').classList.toggle('on', direction < 0);
+}
+function selectGear(label) {
+  if (current && GEAR[current]) GEAR[current].mesh.renderOverlay = false;
+  current = label;
+  const g = GEAR[label];
+  g.mesh.renderOverlay = true; g.mesh.overlayColor = new C3(1, .85, .3); g.mesh.overlayAlpha = .35;
+  $('selected').textContent = `${label} — ${g.name}${g.teeth ? ', ' + g.teeth + ' denti' : ''}. Sensi visti ${g.axis === 'z' ? "dall'alto" : 'da davanti'}.`;
+  for (const r of tbody.rows) r.classList.toggle('sel', r.dataset.gear === label);
+  updateDriver();
+}
+buildKeyGears();                                      // costruisce R, R′ e l'asse a (devono esistere prima delle righe della tabella)
+['B','W','A','b','C','D','E','F','M','G','H','J','K','L','N','P','O','Q','R',"R'",'S','V'].forEach(addRow);
+updateRows();
+
+// Click (non trascinamento) su un ingranaggio
+scene.onPointerObservable.add(info => {
+  const hit = info.pickInfo;
+  if (info.type === BABYLON.PointerEventTypes.POINTERTAP && hit && hit.hit && hit.pickedMesh.metadata) selectGear(hit.pickedMesh.metadata);
+});
+
+$('rpmLabel').textContent = fmt(rpm('speed'), 2);
+$('keyLabel').textContent = fmt(rpm('keySpeed'), 2);
+$('speed').oninput = () => { $('rpmLabel').textContent = fmt(rpm('speed'), 2); updateDriver(); };
+$('keySpeed').oninput = () => { $('keyLabel').textContent = fmt(rpm('keySpeed'), 2); };
+$('btnCW').onclick = () => { direction = 1; updateDriver(); };
+$('btnCCW').onclick = () => { direction = -1; updateDriver(); };
+$('btnStop').onclick = () => { driver = null; $('btnCW').classList.remove('on'); $('btnCCW').classList.remove('on'); };
+const keyBtns = ['keyCW', 'keyCCW', 'keyStop'];
+const setKey = (dir, i) => { state.keyDir = dir; keyBtns.forEach((b, j) => $(b).classList.toggle('on', i === j)); };
+$('keyCW').onclick = () => setKey(1, 0); $('keyCCW').onclick = () => setKey(-1, 1); $('keyStop').onclick = () => setKey(0, 2);
+$('brake').onchange = e => { state.brake = e.target.checked; };
+$('showFig2').onchange = e => { root2.setEnabled(e.target.checked); shoe.setEnabled(e.target.checked); };
+
+// Cambiare denti o modulo di R rifà R, R′ e sposta l'asse a
+function onKeyGearChange() {
+  zR = +$('zR').value; mR = +$('mR').value;
+  $('zRLabel').textContent = zR; $('mRLabel').textContent = fmt(mR, 1);
+  const wasSelected = current;
+  buildKeyGears();
+  if (wasSelected === 'R' || wasSelected === "R'") selectGear(wasSelected);
+}
+$('zR').oninput = onKeyGearChange; $('mR').oninput = onKeyGearChange;
+$('zRLabel').textContent = zR; $('mRLabel').textContent = fmt(mR, 1);
+
+// Viste: tutto, Fig. 1 da davanti, Fig. 2 da sinistra (come nella figura)
+function setView(target, alpha, beta, radius) {
+  camera.setTarget(target); camera.alpha = alpha; camera.beta = beta; camera.radius = radius;
+}
+$('viewAll').onclick   = () => setView(mid.clone(), PI / 2 - .7, 1.1, diag * 1.25);
+$('viewFront').onclick = () => setView(new V3(100, 60, -60), PI / 2, PI / 2, 900);
+$('viewSide').onclick  = () => setView(new V3(X.E, 100, SHIFT + 110), PI, PI / 2, 760);
+
+const totalRatio = Z.A / Z.C * Z.D / Z.E * Z.F / Z.G * Z.H / Z.J * Z.K / Z.L;
+$('note').textContent = `Ø primitivo = denti × modulo (${MOD} mm). Un giro di A fa ${fmt(totalRatio, 1)} giri di L. ` +
+  `L'asse 3 esce da E, attraversa la cassa e termina con M, in presa con N. In Fig. 2 P–Q e M–N sono a modulo ${MOD}, O–S a modulo ${fmt(M_OS, 5)} ` +
+  `(un solo asse per i satelliti, a ${fmt(E_ECC, 1)} mm da Q e da S). La bussola di N è resa come manicotto. ` +
+  `Dati assunti: ruota di carica, pignone b; regolatore e fune semplificati.`;
+
+function statusText(w) {
+  const id = driver ? GEAR[driver.gear].bodyId : null;
+  let s = '';
+  if (id === 'D' || id === 'b') {
+    if (w.D < 0) s = 'Fig. 1: gira solo il tamburo B (la fune si avvolge); il nottolino scatta e il resto resta fermo.';
+    else if (w.D > 0) s = 'Fig. 1: il tamburo trascina A tramite il nottolino e si muove tutta la catena, M e N compresi.';
+  } else if (FIG1.includes(id)) {
+    if (w.A > 0) s = 'Fig. 1: il nottolino scorre a vuoto, il tamburo resta fermo.';
+    else if (w.A < 0) s = 'Fig. 1: verso opposto, il nottolino blocca e A trascina il tamburo (la fune si avvolge).';
+  }
+  if (state.brake) s += (s ? '\n' : '') + 'Freno u inserito: asse 3, M e N bloccati.';
+  const wS = Math.abs(w.bt) * 30 / PI;
+  const f2 = `Fig. 2: w_S = ${fmt(1 - K_DIFF, 3)} · w_N + ${fmt(K_DIFF, 3)} · w_c.`;
+  if (!w.N && !w.c) return (s ? s + '\n' : '') + f2 + ' Tutto fermo.';
+  if (w.N && !w.c) return (s ? s + '\n' : '') + `${f2} Chiave a riposo (c fermo): P rotola attorno a Q e S gira a ${fmt(1 - K_DIFF, 3)} × N (${fmt(wS, 3)} giri/min).`;
+  if (!w.N) return (s ? s + '\n' : '') + `${f2} Orologeria ferma: la chiave muove comunque S, a ${fmt(K_DIFF, 3)} × c (${fmt(wS, 3)} giri/min).`;
+  return (s ? s + '\n' : '') + `${f2} I due moti si sommano: S gira a ${fmt(wS, 3)} giri/min.`;
+}
+
+/* =====================================================================
+   10. ANIMAZIONE: integra gli angoli e ruota i corpi
+   Gli angoli non vanno ridotti modulo 2π: i denti restano in presa solo se ogni angolo
+   mantiene il rapporto esatto con quello vicino.
+   ===================================================================== */
+let sinceTable = 0;
+scene.onBeforeRenderObservable.add(() => {
+  const dt = Math.min(engine.getDeltaTime() / 1000, .05) * (+$('timeScale').value);
+  const w = solveSpeeds();
+  for (const id in BODY) BODY[id].theta += w[id] * dt;
+  for (const id in BODY) {
+    const b = BODY[id];
+    // il satellite è figlio di N: la sua rotazione locale è quella assoluta meno quella di N
+    const th = id === 'sat' ? BODY.sat.theta - BODY.N.theta : b.theta;
+    const axis = b.axis === 'y' ? AXIS_Y : b.axis === 'z' ? AXIS_Z : AXIS_X;
+    b.node.rotationQuaternion = Quat.RotationAxis(axis, th);
+  }
+  // fune: si allunga quando il tamburo scarica (θ positivo), si accorcia quando carica
+  const len = Math.min(500, Math.max(30, 90 + DRUM_R * BODY.D.theta));
+  rope.scaling.y = len;   rope.position.set(ropeX, -len / 2, ropeZ);
+  weight.position.set(ropeX, -len - 15, ropeZ);
+  // freno: la ganascia si appoggia al tamburo
+  shoe.position.y = -15 - 3 + (state.brake ? 3 : -3);
+  shoe.material.diffuseColor = C3.FromHexString(state.brake ? '#d4262e' : '#6b7280');
+
+  sinceTable += dt;
+  if (sinceTable > .1 || !dt) {                         // tabella dei giri/min, 10 volte al secondo
+    sinceTable = 0;
+    for (const label in rowOf) {
+      const g = GEAR[label], v = w[g.bodyId] * clockwise(label) * 30 / PI, a = Math.abs(v);
+      rowOf[label].cells[4].textContent = a < 1e-6 ? '0' : (v > 0 ? '↻ ' : '↺ ') + fmt(a, a < 10 ? 3 : a < 1000 ? 1 : 0);
+    }
+    $('status').textContent = statusText(w);
+  }
+});
+engine.runRenderLoop(() => scene.render());
+addEventListener('resize', () => engine.resize());
+</script>
+</body>
+</html>
