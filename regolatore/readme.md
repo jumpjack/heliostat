@@ -14,7 +14,7 @@ Un altro telescopio su cui fu utilizzato, però forse in un'altra forma, è quel
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/8fa40bf4-413d-429e-8689-c1e04c4fd5b6) ![image](https://github.com/jumpjack/heliostat/assets/1620953/ec740946-1ba5-4c80-9225-e7a2ea30e0b3)
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/eced900b-c8e9-42db-976a-7a40497d59c1)
+![Regolatore installato su telescopi](https://github.com/jumpjack/heliostat/blob/main/regolatore/regolatore-inastallato.png)
 
 
 
