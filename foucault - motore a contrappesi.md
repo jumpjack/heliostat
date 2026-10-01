@@ -29,7 +29,7 @@ Nel frattempo, però, la ruotina L trasmette il movimento al sistema di regolazi
 
 Il meccanismo anticipatore è illustrato nella figura 3 all'interno del testo degli annales, qui modificate per mostrare come ingrana la ruota L:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/6e2e6123-3cb5-424b-825a-afb5fad895be)
+![image](https://github.com/jumpjack/heliostat/blob/main/images/meccanismo-inferiore.png)
 
 
 
