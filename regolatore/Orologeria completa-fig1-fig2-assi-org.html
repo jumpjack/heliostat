@@ -1,0 +1,1679 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orologeria completa – struttura dati JSON</title>
+<style>
+  :root { --bg:#12161c; --panel:#1b2028; --line:#323a47; --text:#e8e4d8; --muted:#9aa3af; --accent:#d9b45a; --ok:#7fc27a; --bad:#f08a6a; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; overflow:hidden; overscroll-behavior:none;
+               background:var(--bg); color:var(--text); font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  #stage { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; outline:none; }
+  #panel { position:fixed; top:max(10px,env(safe-area-inset-top)); right:max(10px,env(safe-area-inset-right));
+           width:350px; max-height:calc(100% - 20px); overflow:auto; padding:12px 14px;
+           background:rgba(27,32,40,.95); border:1px solid var(--line); border-radius:10px; }
+  h1 { margin:0 0 6px; font:600 15px/1.3 Georgia,"Times New Roman",serif; }
+  h2 { margin:12px 0 4px; font:600 13px/1.3 system-ui,sans-serif; color:var(--accent); }
+  p { margin:6px 0; color:var(--muted); }
+  #selected { display:block; min-height:2.6em; margin:8px 0 4px; color:var(--accent); }
+  label { display:block; margin:5px 0; }
+  input[type=range] { width:100%; accent-color:var(--accent); }
+  .buttons { display:flex; gap:6px; margin:6px 0; }
+  button, select { font:inherit; color:var(--text); background:#252c37; border:1px solid var(--line);
+                   border-radius:6px; padding:6px 8px; cursor:pointer; }
+  button { flex:1; }
+  button.on { border-color:var(--accent); color:var(--accent); }
+  button:focus-visible, select:focus-visible, tr:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { min-height:5em; color:var(--ok); white-space:pre-line; }
+  .bad { color:var(--bad); }
+  table { width:100%; margin-top:6px; border-collapse:collapse; }
+  th { padding:3px 4px; text-align:left; font-weight:600; color:var(--muted); }
+  td { padding:3px 4px; border-top:1px solid var(--line); vertical-align:top; }
+  tr { cursor:pointer; }
+  tr.sel td { background:#2a3140; color:var(--accent); }
+  td:first-child { min-width:2em; font-weight:600; white-space:nowrap; }
+  td:nth-child(n+3) { text-align:right; white-space:nowrap; }
+  .small { font-size:12px; }
+  @media (max-width:640px) {
+    #panel { top:auto; bottom:0; left:0; right:0; width:auto; max-height:48%; border-radius:12px 12px 0 0;
+             padding-bottom:max(12px,env(safe-area-inset-bottom)); }
+  }
+</style>
+</head>
+<body>
+<canvas id="stage" tabindex="0" aria-label="Scena 3D dell'orologeria completa"></canvas>
+
+<div id="panel">
+  <h1 id="title"></h1>
+  <p>Clicca un ingranaggio (o una riga) per farlo girare. Trascina per orbitare, rotella o pizzica per lo zoom,
+     tasto destro o due dita per spostare la vista. Assi: X rosso, Y verde (profondità), Z blu (alto).</p>
+  <div id="views" class="buttons"></div>
+  <div id="groups"></div>
+  <div id="variants"></div>
+
+  <b id="selected">Nessun ingranaggio selezionato</b>
+  <label>Velocità dell'ingranaggio scelto: <b id="rpmLabel"></b> giri/min
+    <input id="speed" type="range" min="-1.5" max="1.8" step="0.01" value="0.6"></label>
+  <div class="buttons"><button id="btnCW">↻ Orario</button><button id="btnCCW">↺ Antiorario</button><button id="btnStop">Ferma</button></div>
+  <div id="brakes"></div>
+
+  <div id="inputs"></div>
+  <div id="controls"></div>
+  <p class="small" id="check"></p>
+
+  <h2>Effetto sul moto</h2>
+  <p id="status"></p>
+  <label>Tempo della simulazione
+    <select id="timeScale"><option value="1">1×</option><option value=".25">0,25×</option><option value=".05">0,05×</option></select></label>
+
+  <table>
+    <thead><tr><th></th><th>Ingranaggio</th><th>Denti</th><th>Ø mm</th><th>giri/min</th></tr></thead>
+    <tbody id="gearRows"></tbody>
+  </table>
+  <p class="small" id="note"></p>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/8.20.0/babylon.js"></script>
+<script>
+/* =====================================================================
+   0. STRUTTURA DATI  (tutto ciò che serve per costruire e far girare la macchina)
+   ---------------------------------------------------------------------
+   Per aggiungere un asse o un ingranaggio basta aggiungere un elemento in "axes" o in "gears".
+   Sistema di riferimento del modello: X destra, Y profondità (verso il fondo), Z alto. Millimetri.
+   Ovunque un numero è atteso si può scrivere un'espressione tra virgolette (es. "pr_F+4+8"):
+     • costanti di "consts" e valori dei cursori di "controls" (per nome)
+     • z_ID, m_ID, pr_ID, d_ID  = denti, modulo, raggio primitivo, diametro dell'ingranaggio ID
+     • ox_ID, oy_ID, oz_ID      = coordinate dell'origine dell'asse ID (dopo il posizionamento)
+     • pi, sin, cos, tan, atan, atan2, sqrt, abs, min, max
+   Ogni elemento può avere  variant:{nome:valore}  e viene incluso solo se quella variante è attiva.
+
+   AXES (assi di rotazione)
+     id        nome breve (compare nelle espressioni ox_ID...)
+     dir       direzione positiva di rotazione [x,y,z]
+     ref       direzione di azimut 0 (perpendicolare a dir). L'azimut cresce da ref verso dir × ref
+     view      da dove si guarda per dire "orario" (vettore dal centro verso l'osservatore) e viewLabel (testo)
+     color     colore
+     place     come si trova l'origine dell'asse:
+                 {at:[x,y,z]}                         posizione assoluta
+                 {coaxial:'ID'}                       stessa origine di un altro asse
+                 {offset:{from:'ID', by:[x,y,z]}}     spostamento rispetto a un altro asse
+                 {byMesh:'G', dir:[x,y,z]}            a distanza (r1+r2) dall'asse con cui l'ingranaggio G ingrana, nella direzione dir
+                 {byApex:'G'}                         nell'apice del cono dell'ingranaggio conico G
+     carrier   id dell'asse che porta questo asse (satelliti): l'asse orbita con lui
+     rotate    {around:'ID', deg:30}  ruota questo asse e tutti quelli che dipendono da lui (posizionati o portati da lui,
+               a catena) attorno alla retta dell'asse ID. deg positivo = orario visto dal "view" di ID, negativo = antiorario.
+               Può essere un'espressione (es. 'alpha'). Gli assi dipendenti ruotano con tutti i loro vettori: nulla va riposizionato a mano.
+     hold      true = quando nessuno lo muove, resta fermo (ingresso a riposo, peso del cliente…)
+     parts     alberi, mozzi, marcatori: {shape:'cylinder'|'box'|'prism', ...} nel sistema locale dell'asse
+               (w = coordinata lungo dir, at:[x,y] = posizione nel piano, color:'marker' o '#rrggbb')
+     group     gruppo di visibilità (vedi "groups")
+
+   GEARS (ingranaggi, ciascuno su un asse)
+     id, label, name, axis
+     type      'spur' (cilindrico, w:[w0,w1]) | 'bevel' (conico: apexW, side, plate) | 'cylinder' (r, w:[w0,w1], senza denti)
+               | 'worm' (vite senza fine vera: module, q = diametro primitivo/modulo, starts, hand = +1 destra/−1 sinistra, w:[w0,w1])
+               | 'wormwheel' (ruota per vite: teeth, module, meshWith = id della vite, face opzionale). Va su un asse perpendicolare alla
+                 vite e all'interasse; place:{byMesh:'ruota', dir:[...]} la posiziona a distanza (r_vite + r_ruota), centrata sulla vite.
+                 La ruota è generata "dentandola" con la vite stessa: i denti combaciano per costruzione. Rapporto = starts/teeth.
+     teeth, module            denti e modulo
+     meshWith  id dell'ingranaggio con cui ingrana: questo ha un vano, l'altro un dente al punto di contatto,
+               il rapporto di velocità e le distanze tra gli assi si ricavano dalla geometria
+     apexW     (conico) coordinata sull'asse dove sta l'apice; side = +1/−1: verso da cui sta l'estremità grande
+     plate     (conico) disco posteriore {k, from, to, n}
+   ===================================================================== */
+const MACHINE = {
+  title: 'Orologeria completa – Fig. 1 + Fig. 2',
+
+  // Varianti: interruttori che includono/escludono gli elementi con "variant"
+  variants: {
+    input: { label: "Ingresso dell'asse c", active: 'spur',
+             options: { spur: 'Ruote gemelle R–R′ e asse a', bevel: 'Coppia conica R–R′ con asta lunga e snodo S' } }
+  },
+
+  // Cursori: il valore finisce nel parametro con lo stesso id (usabile nelle espressioni)
+  controls: [
+    { id: 'zR', label: 'Denti di R e R′', variantKey: 'input', step: 1,
+      ranges: { spur: { min: 50, max: 100, value: 60 }, bevel: { min: 20, max: 60, value: 30 } } },
+    { id: 'mR', label: 'Modulo di R e R′ (mm)', variantKey: 'input', step: 0.1,
+      ranges: { spur: { min: 1, max: 3, value: 2 }, bevel: { min: 1, max: 3, value: 2 } } },
+    // senza variantKey il cursore vale per tutte le varianti (qui sotto: range con chiave 'all')
+    { id: 'alpha', label: "Rotazione della Fig. 2 attorno all'asse 3 (°, orario da davanti)", step: 1,
+      ranges: { all: { min: -180, max: 180, value: 0 } } }
+  ],
+
+  // Costanti (espressioni valutate al bisogno)
+  consts: {
+  bExt: 350,
+    module: 1, face: 8, gap: 7, faceN: 12,
+    drumD: 60, drumLen: 105, drumR: 'drumD/2', k0: 0.7,
+    // Fig. 1: piani in profondità (Y) e quote verticali (Z)
+    yW0: 6, yW1: 'yW0+face', yA0: 'yW1+drumLen', yA1: 'yA0+face', yD0: 'yA1+gap', yD1: 'yD0+face',
+    yApex: 'yD1+10-k0*pr_G',                    // apice della coppia F–G (F sta dietro a D ed E)
+    zH0: 'pr_F+4+8', zH1: 'zH0+face', zK0: 'zH1+30', zK1: 'zK0+face', zReg: 'zK1+40',
+    // Fig. 2: la coordinata w dell'asse principale è u + shift (la parte più arretrata sta 20 mm fuori dalla cassa)
+    shift: 80, uV: 0, uS: 48, uN: 92, uQ: 'uN+faceN+36', uR: 'uQ+44',
+    yM0: '-(shift+uN+faceN)', yM1: '-(shift+uN)',   // piano di M (e di N)
+    e: 'pr_P+pr_Q',                                // interasse dei satelliti = r(P)+r(Q)
+    mOS: 'e*2/(z_O+z_S)',                          // modulo di O ed S: stesso interasse di P–Q
+    vlen: 300, hlen: 100, rodLen: 200, jointArm: 40,
+    phiB: '-pi/2-0.5', bend: '25*pi/180',
+    d1x: '-sin(phiB)', d1z: 'cos(phiB)',           // direzione dell'asse di R′ (variante conica)
+    d2x: '-sin(phiB+bend)', d2z: 'cos(phiB+bend)', // direzione dell'asta
+    lj: 'pr_R+4+jointArm'                          // distanza dello snodo dall'apice
+  },
+
+  axes: [
+    // ---------------- Fig. 1: assi 1, 2, 3 (orizzontali, in profondità) ----------------
+    { id: 'D', name: 'Asse 1 – tamburo', dir: [0, 1, 0], ref: [1, 0, 0], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#a98a3c', hold: true, place: { at: [0, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 5, w: [-22, 'yA1+4'], n: 24 },
+        { shape: 'cylinder', r: 2.5, w: ['yW1+1', 'yA0'], at: ['drumR', 0], n: 16, color: 'marker' },
+        { shape: 'cylinder', r: 4, w: ['yW0-.4', 'yW1+.4'], at: ['.55*pr_W', 0], n: 16, color: 'marker' }] },
+    { id: 'A', name: 'Asse 1 – ruota A', dir: [0, 1, 0], ref: [1, 0, 0], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#d2ac52', place: { at: [0, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 9, w: ['yA0-1', 'yA1+1'], n: 24 },
+        { shape: 'cylinder', r: 4, w: ['yA0-.4', 'yA1+.4'], at: ['.6*pr_A', 0], n: 16, color: 'marker' }] },
+    { id: 'b', name: 'Asse del pignone di carica', dir: [0, 1, 0], ref: [1, 0, 0], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#9aa4ae', place: { byMesh: 'b', dir: ['cos(-40*pi/180)', 0, 'sin(-40*pi/180)'] },
+      parts: [
+        { shape: 'cylinder', r: 3, w: [-22, 'yW1-2'], n: 16 },
+        { shape: 'box', w: [-34, -21], half: [4, 4] }] },                       // testa quadra per la chiave
+    { id: 'C', name: 'Asse 2', dir: [0, 1, 0], ref: [1, 0, 0], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#b08a45', place: { byMesh: 'C', dir: [1, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 5, w: ['yA0-4', 'yD1+2'], n: 24 },
+        { shape: 'cylinder', r: 3.5, w: ['yA0-9', 'yD1+4'], n: 16 },
+        { shape: 'cylinder', r: 4, w: ['yD0-.4', 'yD1+.4'], at: ['.6*pr_D', 0], n: 16, color: 'marker' }] },
+    { id: 'E', name: 'Asse 3', dir: [0, 1, 0], ref: [1, 0, 0], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#d9782e', hold: true, place: { byMesh: 'E', dir: [1, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 6, w: ['yD1-.6', 'yApex+1.15*k0*pr_G'], n: 24 },
+        { shape: 'cylinder', r: 3.5, w: ['-(uN+24+shift)', 'yApex+pr_G'], n: 16 },             // asse 3, esteso fino a M
+        { shape: 'cylinder', r: 15, w: ['-(uN-18+shift)', '-(uN-34+shift)'], n: 32 },          // tamburo del freno u
+        { shape: 'cylinder', r: 3, w: ['yApex+k0*pr_G-.6', 'yApex+k0*pr_G+.5'], at: ['.5*pr_F', 0], n: 16, color: 'marker' },
+        { shape: 'cylinder', r: 1.8, w: ['yM0-.4', 'yM1+.4'], at: [6, 0], n: 12, color: 'marker' },
+        { shape: 'box', w: ['-(uN-22+shift)', '-(uN-30+shift)'], at: [0, -12], half: [3, 3], color: 'marker' }] },
+
+    // ---------------- Fig. 1: assi 4, 5, 6 (verticali) ----------------
+    { id: 'G', name: 'Asse 4', dir: [0, 0, 1], ref: [1, 0, 0], view: [0, 0, 1], viewLabel: "dall'alto",
+      color: '#3f74b8', place: { byApex: 'F' },
+      parts: [
+        { shape: 'cylinder', r: 4, w: ['pr_F+3', 'zH1+10'], n: 16 },
+        { shape: 'cylinder', r: 7, w: ['zH0-6', 'zH1+6'], n: 24 },
+        { shape: 'cylinder', r: 4, w: ['zH0-.4', 'zH1+.4'], at: ['.6*pr_H', 0], n: 16, color: 'marker' }] },
+    { id: 'J', name: 'Asse 5', dir: [0, 0, 1], ref: [1, 0, 0], view: [0, 0, 1], viewLabel: "dall'alto",
+      color: '#5f9a4a', place: { byMesh: 'J', dir: [-1, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 3, w: ['zH0-8', 'zK1+8'], n: 16 },
+        { shape: 'cylinder', r: 4, w: ['zK0-.4', 'zK1+.4'], at: ['.6*pr_K', 0], n: 16, color: 'marker' }] },
+    { id: 'L', name: 'Asse 6 – regolatore', dir: [0, 0, 1], ref: [1, 0, 0], view: [0, 0, 1], viewLabel: "dall'alto",
+      color: '#8f5a9b', place: { byMesh: 'L', dir: [-1, 0, 0] },
+      parts: [
+        { shape: 'cylinder', r: 3, w: ['zK0-8', 'zReg+22'], n: 16 },
+        { shape: 'cylinder', r: 6, w: ['zReg', 'zReg+20'], n: 24 },
+        { shape: 'prism', poly: [[0, 'zReg+18'], [-34, 'zReg+64'], [-14, 'zReg+76']], y: [-1, 1], color: '#b98cc4' },   // alette
+        { shape: 'prism', poly: [[0, 'zReg+18'], [34, 'zReg+64'], [14, 'zReg+76']], y: [-1, 1], color: '#b98cc4' }] },
+
+    // ---------------- Fig. 2: planetario (asse principale parallelo all'asse 3, sopra di esso) ----------------
+    { id: 'N', name: 'Asse principale – N', dir: [0, -1, 0], ref: [0, 0, 1], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#d2ac52', group: 'fig2', place: { byMesh: 'N', dir: [0, 0, 1] },
+      rotate: { around: 'E', deg: 'alpha' },        // tutta la Fig. 2 (assi che dipendono da N) ruota attorno all'asse 3
+      parts: [
+        { shape: 'cylinder', r: 9, w: ['shift+uN-2', 'shift+uN+faceN+2'], at: ['-e', 0], n: 24 },                    // bussola eccentrica
+        { shape: 'cylinder', r: 3.5, w: ['shift+uN-.4', 'shift+uN+faceN+.4'], at: ['.8*pr_N', 0], n: 16, color: 'marker' },
+        { shape: 'box', w: ['shift+uN+faceN', 'shift+uN+faceN+12'], at: ['e', 0], half: [10, 12], color: '#6b7280' },    // T: contrappeso
+        { shape: 'cylinder', r: 3, w: ['shift+uV-34', 'shift+uR+face+20'], n: 20, variant: { input: 'spur' } },      // asse interno di N
+        { shape: 'cylinder', r: 3, w: ['shift+uV-34', 'shift+uR+6'], n: 20, variant: { input: 'bevel' } }] },
+    { id: 'sat', name: 'Asse dei satelliti P e O', dir: [0, -1, 0], ref: [0, 0, 1], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#9aa4ae', group: 'fig2', carrier: 'N', place: { byMesh: 'P', dir: [0, 0, -1] },
+      parts: [
+        { shape: 'cylinder', r: 3.5, w: ['shift+uS-10', 'shift+uQ+face+4'], n: 20 },
+        { shape: 'cylinder', r: 3.5, w: ['shift+uQ-.4', 'shift+uQ+face+.4'], at: ['.6*pr_P', 0], n: 16, color: 'marker' }] },
+    { id: 'c', name: 'Tubo c (Q e R)', dir: [0, -1, 0], ref: [0, 0, 1], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#5f9a4a', group: 'fig2', place: { coaxial: 'N' },
+      parts: [
+        { shape: 'cylinder', r: 6.5, w: ['shift+uN+faceN+1', 'shift+uR+face+8'], n: 24, variant: { input: 'spur' } },
+        { shape: 'cylinder', r: 3.5, w: ['shift+uR-.4', 'shift+uR+face+.4'], at: ['.6*pr_R', 0], n: 16, color: 'marker', variant: { input: 'spur' } },
+        { shape: 'cylinder', r: 6.5, w: ['shift+uN+faceN+1', 'shift+uR-2'], n: 24, variant: { input: 'bevel' } },
+        { shape: 'cylinder', r: 3.5, w: ['shift+uR-4.4', 'shift+uR-3.6'], at: ['.5*pr_R', 0], n: 12, color: 'marker', variant: { input: 'bevel' } }] },
+    
+{ id: 'bt', name: 'Tubo b (S e V)', dir: [0, -1, 0], ref: [0, 0, 1], view: [0, -1, 0], viewLabel: 'da davanti',
+  color: '#3f74b8', group: 'fig2', place: { coaxial: 'N' },
+  parts: [
+    { shape: 'cylinder', r: 6.5, w: ['shift+uV+face-2-bExt', 'shift+uN-1'], n: 24 },
+    { shape: 'cylinder', r: 3.5, w: ['shift+uS-.4', 'shift+uS+face+.4'], at: ['.6*pr_S', 0], n: 16, color: 'marker' },
+    { shape: 'cylinder', r: 3.5, w: ['shift+uV+face+3.6-bExt', 'shift+uV+face+4.4-bExt'], at: ['.5*pr_V', 0], n: 12, color: 'marker' }] },
+        
+
+    { id: 'vs', name: 'Albero verticale (V2, V3)', dir: [0, 0, 1], ref: [1, 0, 0], view: [0, 0, 1], viewLabel: "dall'alto",
+      color: '#c7864a', group: 'fig2', place: { byApex: 'V' },
+      parts: [
+        { shape: 'cylinder', r: 4, w: ['pr_V2+3', 'vlen-pr_V3-3'], n: 20 },
+        { shape: 'cylinder', r: 3.5, w: ['pr_V2+3.6', 'pr_V2+4.4'], at: ['.5*pr_V2', 0], n: 12, color: 'marker' }] },
+        
+        
+        
+{ id: 'hs', name: 'Albero orizzontale (V4 e vite)', dir: [-1, 0, 0], ref: [0, 0, 1], view: [-1, 0, 0],
+  viewLabel: "dall'estremità libera, guardando verso la coppia conica",
+  color: '#4a9bc7', group: 'fig2', place: { byApex: 'V3' },
+  rotate: { around: 'vs', deg: -90 },          // -90 = antiorario visto dall'alto
+      parts: [
+        { shape: 'cylinder', r: 4, w: ['pr_V4+3', 'hlen'], n: 20 },
+        { shape: 'box', w: ['hlen', 'hlen+14'], half: [6, 6] },                                                      // estremità quadrata
+        { shape: 'cylinder', r: 3.5, w: ['pr_V4+3.6', 'pr_V4+4.4'], at: ['.5*pr_V4', 0], n: 12, color: 'marker' }] },
+        
+        
+
+    // ---------------- Fig. 2: ruota della vite senza fine, con asse perpendicolare all'asse hs, centrata sopra la vite ----------------
+{ id: 'aw', name: 'Asse della ruota della vite (AR)', dir: [0, 1, 0], ref: [0, 0, 1], view: [0, 1, 0], viewLabel: 'da davanti',
+  color: '#c9a45a', group: 'fig2', place: { byMesh: 'WG', dir: [0, 0, 1] },
+  parts: [
+    { shape: 'cylinder', r: 3, w: [-20, '300'], n: 16 },     // 300 mm
+    ] },    
+
+    // ---------------- Fig. 2, variante cilindrica: lungo asse a con estremità quadrate ----------------
+    { id: 'a', name: 'Asse a (chiave AR)', dir: [0, -1, 0], ref: [0, 0, 1], view: [0, -1, 0], viewLabel: 'da davanti',
+      color: '#2fa39a', group: 'fig2', variant: { input: 'spur' },
+      place: { byMesh: 'Rp', dir: ['-sin(110*pi/180)', 0, 'cos(110*pi/180)'] },
+      parts: [
+        { shape: 'cylinder', r: 4, w: ['shift+uV-46', 'shift+uR+face+46'], n: 20 },
+        { shape: 'box', w: ['shift+uV-60', 'shift+uV-46'], half: [5, 5] },
+        { shape: 'box', w: ['shift+uR+face+46', 'shift+uR+face+60'], half: [5, 5] },
+        { shape: 'cylinder', r: 3.5, w: ['shift+uR-.4', 'shift+uR+face+.4'], at: ['.6*pr_R', 0], n: 16, color: 'marker' }] },
+
+    // ---------------- Fig. 2, variante conica: R′ sul suo asse e asta lunga dopo lo snodo ----------------
+    { id: 'a', name: 'Asse di R′', dir: ['d1x', 0, 'd1z'], view: ['d1x', 0, 'd1z'], viewLabel: "dall'esterno, guardando verso R",
+      color: '#2fa39a', group: 'fig2', variant: { input: 'bevel' }, place: { byApex: 'R' },
+      parts: [                                                                                  // albero e forcella di ingresso (perno A lungo y)
+        { shape: 'cylinder', r: 4, w: ['pr_R+3', 'lj-20'], n: 20 },
+        { shape: 'box', w: ['lj-20', 'lj-14'], half: [11, 11] },
+        { shape: 'box', w: ['lj-14', 'lj+5'], at: [0, 14.5], half: [7, 2.5] },
+        { shape: 'box', w: ['lj-14', 'lj+5'], at: [0, -14.5], half: [7, 2.5] }] },
+    { id: 'rod', name: 'Asta lunga', dir: ['d2x', 0, 'd2z'], view: ['d2x', 0, 'd2z'], viewLabel: "dall'estremità libera, guardando verso lo snodo",
+      color: '#9aa4ae', group: 'fig2', variant: { input: 'bevel' },
+      place: { offset: { from: 'a', by: ['lj*d1x', 0, 'lj*d1z'] } },
+      parts: [                                                                                  // forcella di uscita (perno B lungo y) ed estremità quadrata
+        { shape: 'box', w: [14, 20], half: [11, 11] },
+        { shape: 'box', w: [-5, 14], at: [0, 14.5], half: [7, 2.5] },
+        { shape: 'box', w: [-5, 14], at: [0, -14.5], half: [7, 2.5] },
+        { shape: 'box', w: ['rodLen', 'rodLen+14'], half: [6, 6] }] }
+  ],
+
+  gears: [
+    // ---------------- Fig. 1 ----------------
+    { id: 'B', name: 'Tamburo', axis: 'D', type: 'cylinder', r: 'drumR', w: ['yW1+.5', 'yA0+1'], n: 64 },
+    { id: 'W', name: 'Ruota di carica', axis: 'D', teeth: 60, module: 'module', w: ['yW0', 'yW1'], note: 'assunta' },
+    { id: 'A', name: 'Ruota del tamburo', axis: 'A', teeth: 150, module: 'module', w: ['yA0', 'yA1'] },
+    { id: 'b', name: 'Pignone di carica', axis: 'b', teeth: 18, module: 'module', w: ['yW0', 'yW1'], meshWith: 'W', note: 'assunto' },
+    { id: 'C', name: 'Pignone', axis: 'C', teeth: 25, module: 'module', w: ['yA0', 'yA1'], meshWith: 'A' },
+    { id: 'D', name: 'Ruota', axis: 'C', teeth: 165, module: 'module', w: ['yD0', 'yD1'], note: '165 nel testo' },
+    { id: 'E', name: 'Pignone', axis: 'E', teeth: 26, module: 'module', w: ['yD0', 'yD1'], meshWith: 'D' },
+    { id: 'F', name: 'Ruota conica', axis: 'E', type: 'bevel', teeth: 200, module: 'module', apexW: 'yApex', side: 1,
+      plate: { k: 0.88, from: -0.4, to: 4, n: 64 }, note: 'in presa con G' },
+    { id: 'M', name: "Pignone (fondo dell'asse 3)", axis: 'E', teeth: 25, module: 'module', w: ['yM0', 'yM1'], note: 'in presa con N' },
+    { id: 'G', name: 'Pignone conico', axis: 'G', type: 'bevel', teeth: 50, module: 'module', apexW: 0, side: 1,
+      plate: { k: 0.85, from: -1, to: 4, n: 32 }, meshWith: 'F', note: 'in presa con F' },
+    { id: 'H', name: 'Ruota', axis: 'G', teeth: 170, module: 'module', w: ['zH0', 'zH1'] },
+    { id: 'J', name: 'Pignone', axis: 'J', teeth: 34, module: 'module', w: ['zH0', 'zH1'], meshWith: 'H' },
+    { id: 'K', name: 'Ruota', axis: 'J', teeth: 234, module: 'module', w: ['zK0', 'zK1'] },
+    { id: 'L', name: 'Pignone del regolatore', axis: 'L', teeth: 65, module: 'module', w: ['zK0', 'zK1'], meshWith: 'K' },
+
+    // ---------------- Fig. 2 ----------------
+    { id: 'N', name: 'Ruota portasatelliti', axis: 'N', teeth: 204, module: 'module', w: ['shift+uN', 'shift+uN+faceN'], meshWith: 'M' },
+    { id: 'P', name: 'Satellite grande', axis: 'sat', teeth: 62, module: 'module', w: ['shift+uQ', 'shift+uQ+face'], meshWith: 'Q' },
+    { id: 'O', name: 'Satellite piccolo', axis: 'sat', teeth: 16, module: 'mOS', w: ['shift+uS', 'shift+uS+face'], meshWith: 'S' },
+    { id: 'Q', name: 'Ruota su c', axis: 'c', teeth: 31, module: 'module', w: ['shift+uQ', 'shift+uQ+face'] },
+    { id: 'S', name: 'Ruota su b', axis: 'bt', teeth: 80, module: 'mOS', w: ['shift+uS', 'shift+uS+face'] },
+    { id: 'V', name: 'Ruota conica su b (uscita)', axis: 'bt', type: 'bevel', teeth: 66, module: 'module',
+  apexW: 'shift+uV+face-pr_V-bExt', side: 1,
+  plate: { k: 0.85, from: -0.4, to: 4, n: 48 } },
+    { id: 'V2', name: 'Ruota conica su asse verticale', axis: 'vs', type: 'bevel', teeth: 66, module: 'module', apexW: 0, side: 1,
+      plate: { k: 0.85, from: -0.4, to: 4, n: 48 }, meshWith: 'V', note: 'dati assunti' },
+    { id: 'V3', name: 'Ruota conica in cima', axis: 'vs', type: 'bevel', teeth: 40, module: 'module', apexW: 'vlen', side: -1,
+      plate: { k: 0.85, from: -0.4, to: 4, n: 48 }, note: 'dati assunti' },
+    { id: 'V4', name: 'Ruota conica su asse orizzontale (−X)', axis: 'hs', type: 'bevel', teeth: 40, module: 'module', apexW: 0, side: 1,
+      plate: { k: 0.85, from: -0.4, to: 4, n: 48 }, meshWith: 'V3', note: 'dati assunti' },
+
+    // Vite senza fine sull'asse hs (diametro primitivo 12 mm, 1 principio, passo destro) e la sua ruota da 40 denti
+    { id: 'WV', label: 'vite', name: 'Vite senza fine (1 principio, passo destro)', axis: 'hs', type: 'worm', module: 'module', q: 12, starts: 1, hand: 1,
+      w: ['hlen-50', 'hlen-10'], note: 'dati assunti' },
+    { id: 'WG', label: 'ruota vite', name: 'Ruota della vite', axis: 'aw', type: 'wormwheel', teeth: 40, module: 'module', meshWith: 'WV', note: 'dati assunti' },
+
+    // ---------------- Fig. 2, variante cilindrica ----------------
+    { id: 'R', name: 'Ruota su c', axis: 'c', teeth: 'zR', module: 'mR', w: ['shift+uR', 'shift+uR+face'], variant: { input: 'spur' } },
+    { id: 'Rp', label: 'R′', name: 'Gemella su asse a', axis: 'a', teeth: 'zR', module: 'mR', w: ['shift+uR', 'shift+uR+face'],
+      meshWith: 'R', variant: { input: 'spur' } },
+    // ---------------- Fig. 2, variante conica ----------------
+    { id: 'R', name: 'Ruota conica su c', axis: 'c', type: 'bevel', teeth: 'zR', module: 'mR', apexW: 'shift+uR+pr_R', side: -1,
+      plate: { k: 0.85, from: -0.4, to: 4, n: 48 }, variant: { input: 'bevel' } },
+    { id: 'Rp', label: 'R′', name: 'Ruota conica (con asta)', axis: 'a', type: 'bevel', teeth: 'zR', module: 'mR', apexW: 0, side: 1,
+      plate: { k: 0.85, from: -0.4, to: 4, n: 48 }, meshWith: 'R', variant: { input: 'bevel' } },
+    { id: 'asta', label: 'asta', name: 'Asta lunga con snodo S', axis: 'rod', type: 'cylinder', r: 5, w: [20, 'rodLen'], n: 24,
+      variant: { input: 'bevel' } }
+  ],
+
+  // Collegamenti che non sono ingranamenti
+  links: [
+    // Nottolino tra tamburo e ruota A: A non può restare indietro rispetto al tamburo nel verso "sign"
+    { type: 'ratchet', driver: 'D', driven: 'A', sign: 1,
+      messages: { drives: 'Il tamburo trascina A tramite il nottolino: si muove tutta la catena, M e N compresi.',
+                  winding: 'Caricamento: gira solo il tamburo B (la fune si avvolge). Il nottolino scatta e il resto della catena resta fermo.',
+                  freewheel: 'Il nottolino scorre a vuoto: il tamburo B resta fermo mentre la catena gira.',
+                  blocks: 'Verso opposto: il nottolino blocca e A trascina il tamburo (la fune si avvolge).' } },
+    // Freno u: ferma l'asse. La ganascia sta sotto il tamburo del freno (si alza quando è disinserito)
+    { type: 'brake', axis: 'E', group: 'fig2', label: "Freno u inserito (blocca l'asse 3: ferma E, M, N e la catena)",
+      shoe: { at: ['ox_E', '-(shift+uN-26)', -15], size: [16, 24, 6], released: [0, 0, -6] },
+      message: 'Freno u inserito: asse 3, M e N bloccati.' },
+    // Fune e peso: la fune si allunga quando il tamburo gira nel verso positivo
+    { type: 'rope', axis: 'D', at: ['drumR+2.05', '(yW1+yA0)/2', 0], radius: 'drumR', len0: 90, min: 30, max: 500 },
+    // Snodo cardanico (Hooke) tra R′ (ingresso) e asta (uscita): tan ψ = tan φ / cos β
+    { type: 'hooke', input: 'a', output: 'rod', group: 'fig2', variant: { input: 'bevel' },
+      arm: { r: 2.3, len: 13 },
+      message: "Snodo S ({beta|0}°): l'asta gira regolare, R′ no; la sua velocità oscilla tra {lo|3}× e {hi|3}× quella dell'asta, due volte per giro." }
+  ],
+
+  // Ingressi manuali (chiavi): una velocità e un verso scelti dall'utente su un asse
+  inputs: [
+    { id: 'key', label: 'Chiave AR (asse a)', axis: 'a', variant: { input: 'spur' },
+      hint: "A chiave rilasciata il suo peso tiene fermo l'asse c." },
+    { id: 'key', label: 'Chiave AR (asta lunga)', axis: 'rod', variant: { input: 'bevel' },
+      hint: "A chiave rilasciata il suo peso tiene ferma l'asta, quindi l'asse c." }
+  ],
+
+  groups: [{ id: 'fig2', label: 'Mostra la parte Fig. 2', visible: true }],
+
+  views: [
+    { id: 'all', label: 'Insieme', auto: true, alpha: 'pi/2-0.7', beta: 1.1, scale: 1.25 },
+    { id: 'front', label: 'Fig. 1 (da davanti)', target: [100, 60, 60], alpha: 'pi/2', beta: 'pi/2', radius: 900 },
+    { id: 'side', label: 'Fig. 2 (da sinistra)', target: ['ox_E', '-(shift+110)', 100], alpha: 'pi', beta: 'pi/2', radius: 760 }
+  ],
+
+  // Verifiche di ingombro (solo messaggi)
+  checks: [
+    { type: 'axisClearsGear', axis: 'a', shaftR: 4, gear: 'N', min: 2, variant: { input: 'spur' },
+      text: "Asse a a {dist|1} mm dall'asse principale ({zR|0} denti × modulo {mR|1}). ",
+      ok: 'Libero da N (gioco {gap|1} mm).', bad: 'Interferisce con N: mancano {miss|1} mm. Aumenta denti o modulo.' },
+    { type: 'info', variant: { input: 'bevel' },
+      text: "Coppia conica: R e R′ da {zR|0} denti, modulo {mR|1} (Ø {d_R|1} mm), assi a 90° con apice sull'asse principale. Sta davanti a N e l'asta parte da lì: nessuna interferenza. Snodo S di {bend*180/pi|0}°." }
+  ],
+
+  // Relazione lineare tra le velocità di tre assi, ricavata dalla geometria (formula del differenziale)
+  differential: { out: 'bt', ins: ['N', 'c'], text: 'Fig. 2: w_S = {a|3} · w_N + {b|3} · w_c.' },
+
+  // Rapporti di trasmissione (a nottolino e snodo trascurati)
+  ratios: [{ from: 'A', to: 'L', text: 'Un giro di A fa {r|1} giri di L.' }],
+
+  notes: [
+    "Ø primitivo = denti × modulo ({module|1} mm). P–Q e M–N a modulo {module|1}, O–S a modulo {mOS|5}: i satelliti hanno un solo asse, a {e|1} mm da Q e da S.",
+    "La bussola di N è resa come manicotto. Dati assunti: ruota di carica, pignone b, denti di V2, V3, V4; regolatore e fune semplificati."
+  ]
+};
+
+/* =====================================================================
+   1. UTILITÀ: vettori, valutatore di espressioni, formattazione
+   ===================================================================== */
+const PI = Math.PI, cos = Math.cos, sin = Math.sin;
+const $ = id => document.getElementById(id);
+
+/**
+ * Formatta un numero all'italiana.
+ * @param {number} v  valore;  @param {number} d  cifre decimali massime
+ * @returns {string}
+ */
+const fmt = (v, d) => v.toLocaleString('it', { maximumFractionDigits: d });
+
+/** Operazioni su vettori 3D (array [x,y,z]). toB converte dal modello (X, Y profondità, Z alto) a Babylon (X, Z, −Y). */
+const V = {
+  add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
+  sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
+  mul: (a, k) => [a[0] * k, a[1] * k, a[2] * k],
+  dot: (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2],
+  cross: (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]],
+  len: a => Math.hypot(a[0], a[1], a[2]),
+  unit: a => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; },
+  /** componente di a perpendicolare al versore d */
+  perp: (a, d) => V.sub(a, V.mul(d, V.dot(a, d))),
+  /** un vettore unitario perpendicolare a d */
+  anyPerp: d => V.unit(V.cross(d, Math.abs(d[2]) < 0.9 ? [0, 0, 1] : [1, 0, 0])),
+  toB: a => [a[0], a[2], -a[1]]
+};
+
+/** Errore lanciato quando un'espressione usa l'origine di un asse non ancora posizionato. */
+class NotPlaced extends Error {}
+
+/**
+ * Crea un valutatore di espressioni aritmetiche (+ − * / ^, parentesi, funzioni, identificatori).
+ * @param {(name:string, extra?:object)=>number} lookup  risolve un identificatore
+ * @returns {(expr:number|string, extra?:object)=>number}  valuta un numero o una stringa; "extra" aggiunge variabili locali
+ */
+function makeEvaluator(lookup) {
+  const FN = { sin: Math.sin, cos: Math.cos, tan: Math.tan, atan: Math.atan, atan2: Math.atan2, sqrt: Math.sqrt, abs: Math.abs, min: Math.min, max: Math.max };
+  const cache = {};
+  function compile(src) {
+    const toks = src.match(/\d*\.?\d+(?:e[+-]?\d+)?|[A-Za-z_]\w*|[-+*/^(),]/gi) || [];
+    let i = 0;
+    const peek = () => toks[i], next = () => toks[i++];
+    const expr = () => {
+      let l = term();
+      while (peek() === '+' || peek() === '-') {
+        const op = next(), r = term(), a = l;
+        l = op === '+' ? x => a(x) + r(x) : x => a(x) - r(x);
+      }
+      return l;
+    };
+    const term = () => {
+      let l = unary();
+      while (peek() === '*' || peek() === '/') {
+        const op = next(), r = unary(), a = l;
+        l = op === '*' ? x => a(x) * r(x) : x => a(x) / r(x);
+      }
+      return l;
+    };
+    const unary = () => {
+      if (peek() === '-') { next(); const u = unary(); return x => -u(x); }
+      if (peek() === '+') { next(); return unary(); }
+      const b = primary();
+      if (peek() === '^') { next(); const e = unary(); return x => Math.pow(b(x), e(x)); }
+      return b;
+    };
+    const primary = () => {
+      const t = next();
+      if (t === undefined) throw new Error('Espressione incompleta: ' + src);
+      if (t === '(') { const e = expr(); next(); return e; }
+      if (/^[\d.]/.test(t)) { const v = +t; return () => v; }
+      if (peek() === '(') {
+        next(); const args = [];
+        if (peek() !== ')') { do { args.push(expr()); } while (peek() === ',' && next()); }
+        next();
+        if (!FN[t]) throw new Error('Funzione sconosciuta: ' + t);
+        return x => FN[t](...args.map(a => a(x)));
+      }
+      return x => lookup(t, x);
+    };
+    const f = expr();
+    return f;
+  }
+  return (e, extra) => {
+    if (typeof e === 'number') return e;
+    return (cache[e] || (cache[e] = compile(e)))(extra);
+  };
+}
+
+/**
+ * Sostituisce nel testo i segnaposto {espressione|decimali} con il valore calcolato.
+ * @param {string} str  testo con segnaposto;  @param {Function} ev  valutatore;  @param {object} extra  variabili locali
+ * @returns {string}
+ */
+function template(str, ev, extra) {
+  return str.replace(/\{([^{}|]+)(?:\|(\d+))?\}/g, (_, e, d) => fmt(ev(e, extra), d === undefined ? 1 : +d));
+}
+
+/* =====================================================================
+   2. GEOMETRIA: dentatura a evolvente, ruote cilindriche e coniche, solidi semplici
+   Un solido è {P: punti [x,y,w], T: triangoli}; w corre lungo l'asse.
+   ===================================================================== */
+const PRESSURE = 20 * PI / 180;          // angolo di pressione
+const BACKLASH = 0.05;                   // gioco sullo spessore del dente, in moduli
+const inv = a => Math.tan(a) - a;        // funzione evolvente
+
+/**
+ * Un periodo di dentatura a evolvente (un dente più il tratto di fondo fino al successivo).
+ * @param {number} z denti;  @param {number} m modulo;  @param {number} nFlank punti per fianco
+ * @returns {Array<[number,number]>}  coppie [raggio, angolo rispetto al centro del dente]
+ */
+function toothProfile(z, m, nFlank) {
+  const rp = m * z / 2, rb = rp * cos(PRESSURE), ra = rp + m, rf = rp - 1.25 * m;
+  const halfBase = PI / (2 * z) + inv(PRESSURE), rStart = Math.max(rb, rf), pitch = 2 * PI / z;
+  const r = [], half = [];
+  for (let i = 0; i < nFlank; i++) {
+    const q = rStart + (ra - rStart) * i / (nFlank - 1);
+    r.push(q);
+    half.push(halfBase - inv(Math.acos(Math.min(1, rb / q))) - BACKLASH * m / (2 * rp));
+  }
+  const out = [];
+  for (let i = 0; i < nFlank; i++) out.push([r[i], -half[i]]);
+  out.push([ra, 0]);
+  for (let i = nFlank - 1; i >= 0; i--) out.push([r[i], half[i]]);
+  if (rf < rb) out.push([rf, half[0]]);
+  out.push([rf, half[0] + (pitch - 2 * half[0]) / 3], [rf, half[0] + (pitch - 2 * half[0]) * 2 / 3]);
+  if (rf < rb) out.push([rf, pitch - half[0]]);
+  return out;
+}
+
+/**
+ * Solido chiuso tra due contorni, con tappi a ventaglio.
+ * @param {number[][]} A contorno a w0;  @param {number[][]} B contorno a w1;  @param {number[]} capA centro del tappo A;  @param {number[]} capB centro del tappo B
+ * @returns {{P:number[][], T:number[][]}}
+ */
+function loft(A, B, capA, capB) {
+  const n = A.length, T = [];
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    T.push([i, j, n + j], [i, n + j, n + i], [2 * n, j, i], [2 * n + 1, n + i, n + j]);
+  }
+  return { P: [...A, ...B, capA, capB], T };
+}
+
+/**
+ * Ruota cilindrica a denti esterni.
+ * @param {number} z denti;  @param {number} m modulo;  @param {number} rho azimut del centro del dente 0;  @param {number} w0,w1 estremi lungo l'asse
+ * @returns {{P,T}} solido nel sistema locale (x_l, y_l, w)
+ */
+function spurGear(z, m, rho, w0, w1) {
+  const prof = toothProfile(z, m, z > 120 ? 6 : 8), pitch = 2 * PI / z, A = [], B = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const a = rho + k * pitch + d, x = r * cos(a), y = r * sin(a);
+      A.push([x, y, w0]); B.push([x, y, w1]);
+    }
+  }
+  return loft(A, B, [0, 0, w0], [0, 0, w1]);
+}
+
+/**
+ * Ruota conica diritta: profilo a evolvente sul cono complementare (Tredgold), raggi convergenti nell'apice (origine).
+ * @param {number} z denti;  @param {number} m modulo;  @param {number} delta semiangolo del cono primitivo;  @param {number} rho fase;  @param {number} k0 estremità piccola (frazione)
+ * @returns {{P,T}} solido con l'apice nell'origine e w che cresce verso l'estremità grande
+ */
+function bevelGear(z, m, delta, rho, k0) {
+  const R = m * z / 2, wp = R / Math.tan(delta);
+  const zVirtual = z / cos(delta), rVirtual = R / cos(delta);
+  const prof = toothProfile(zVirtual, m, 8), pitchV = 2 * PI / zVirtual, P = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const t = rho + (k * pitchV + d) / cos(delta);   // azimut reale
+      const s = r - rVirtual;                          // distanza dal cerchio primitivo lungo il cono complementare
+      const q = R + s * cos(delta);
+      P.push([q * cos(t), q * sin(t), wp - s * sin(delta)]);
+    }
+  }
+  const wMean = P.reduce((a, p) => a + p[2], 0) / P.length;
+  return loft(P.map(p => p.map(v => v * k0)), P, [0, 0, k0 * wMean], [0, 0, wMean]);
+}
+
+/**
+ * Unisce più anelli (contorni con lo stesso numero di punti) in un solido chiuso, con tappi a ventaglio.
+ * @param {number[][][]} rings anelli consecutivi lungo w;  @param {number[]} capA centro del tappo sul primo anello;  @param {number[]} capB centro del tappo sull'ultimo
+ * @returns {{P:number[][], T:number[][]}}
+ */
+function ringsLoft(rings, capA, capB) {
+  const nr = rings.length, n = rings[0].length, P = [], T = [];
+  for (const r of rings) P.push(...r);
+  const cA = P.length; P.push(capA);
+  const cB = P.length; P.push(capB);
+  for (let i = 0; i < nr - 1; i++) for (let j = 0; j < n; j++) {
+    const j2 = (j + 1) % n, a = i * n + j, b = i * n + j2, c = (i + 1) * n + j2, d = (i + 1) * n + j;
+    T.push([a, b, c], [a, c, d]);
+  }
+  for (let j = 0; j < n; j++) {
+    const j2 = (j + 1) % n;
+    T.push([cA, j2, j], [cB, (nr - 1) * n + j, (nr - 1) * n + j2]);
+  }
+  return { P, T };
+}
+
+/**
+ * Parametri di una vite senza fine con profilo assiale trapezoidale (tipo ZA, angolo di pressione 20°).
+ * @param {number} m modulo assiale;  @param {number} q fattore di diametro (diametro primitivo = q·m);  @param {number} starts numero di principi;  @param {number} hand +1 passo destro, −1 sinistro;  @param {number} L lunghezza
+ * @returns {object} {m, rp, ra, rr (raggi primitivo, di testa, di fondo), px (passo assiale), lead (passo dell'elica), starts, hand, L}
+ */
+function wormParams(m, q, starts, hand, L) {
+  const rp = q * m / 2;
+  return { m, rp, ra: rp + m, rr: rp - 1.2 * m, px: PI * m, lead: starts * PI * m, starts, hand, L };
+}
+
+/**
+ * Raggio del filetto a distanza assiale u dalla mezzeria del filetto (profilo trapezoidale: testa piatta, fianchi a 20°, fondo piatto).
+ * @param {object} wp parametri della vite;  @param {number} u distanza assiale, già ridotta a [−px/2, px/2]
+ * @returns {number} raggio
+ */
+function wormRadius(wp, u) {
+  const au = Math.abs(u), t = Math.tan(PRESSURE);
+  const tipHalf = (wp.px / 2 - 2 * (wp.ra - wp.rp) * t) / 2, rootHalf = (wp.px / 2 + 2 * (wp.rp - wp.rr) * t) / 2;
+  if (au <= tipHalf) return wp.ra;
+  if (au >= rootHalf) return wp.rr;
+  return wp.ra - (au - tipHalf) * (wp.ra - wp.rr) / (rootHalf - tipHalf);
+}
+
+/**
+ * Vite senza fine: superficie elicoidale vera, r = R(u) con u = x − x_c − hand·lead·ψ/2π (ψ = azimut dalla direzione del contatto).
+ * @param {object} wp parametri;  @param {number} rho azimut (nel riferimento dell'asse) della direzione verso la ruota;  @param {number} w0,w1 estremi lungo l'asse
+ * @returns {{P,T}} solido nel sistema locale (x_l, y_l, w); la mezzeria del filetto sta a (w0+w1)/2 verso la ruota
+ */
+function wormSolid(wp, rho, w0, w1) {
+  const n = 96, nx = Math.max(2, Math.ceil((w1 - w0) / (wp.px / 20))), wc = (w0 + w1) / 2, k = wp.hand * wp.lead / (2 * PI);
+  const rings = [];
+  for (let i = 0; i <= nx; i++) {
+    const x = w0 + (w1 - w0) * i / nx, ring = [];
+    for (let j = 0; j < n; j++) {
+      const psi = 2 * PI * j / n;
+      let u = x - wc - k * psi; u -= wp.px * Math.round(u / wp.px);
+      const r = wormRadius(wp, u), a = rho + psi;
+      ring.push([r * cos(a), r * sin(a), x]);
+    }
+    rings.push(ring);
+  }
+  return ringsLoft(rings, [0, 0, w0], [0, 0, w1]);
+}
+
+/**
+ * Larghezza di fascia predefinita di una ruota per vite senza fine.
+ * @param {number} m modulo;  @param {object} wp parametri della vite
+ * @returns {number}
+ */
+const wheelFace = (m, wp) => 1.7 * Math.sqrt(4.5 * m * wp.rp);
+
+/**
+ * Ruota per vite senza fine ottenuta come inviluppo: si "dentano" il cilindro grezzo facendo ruotare la vite vera
+ * in presa (simulazione di dentatura). I denti combaciano quindi con la vite per costruzione, con un piccolo gioco.
+ * Sistema di riferimento della simulazione: asse della vite = X, direzione verso l'asse della ruota = Y, asse della ruota = sg·Z.
+ * Rotando la ruota di φ la vite gira di −hand·sg·(z/starts)·φ: il disegno del filetto trasla lungo X di sg·r_g·φ.
+ * @param {number} z denti;  @param {number} m modulo;  @param {object} wp parametri della vite;  @param {number} sg ±1: verso dell'asse della ruota rispetto a vite × interasse
+ * @param {number} rho azimut (nel riferimento dell'asse) della direzione verso la vite;  @param {number} w0,w1 estremi della fascia
+ * @returns {{P,T}} solido nel sistema locale (x_l, y_l, w); la superficie esterna è r(φ, w) = raggio non tagliato dalla vite
+ */
+function wormWheelSolid(z, m, wp, sg, rho, w0, w1) {
+  const rg = z * m / 2, a = wp.rp + rg, t = Math.tan(PRESSURE), e = 0.03 * m;           // e = gioco sul fianco
+  const rc = wp.ra + 0.25 * m, rBlank = rg + m;                                         // fresa: testa della vite + 0.25 m di gioco al fondo
+  const inCutter = (Y, Zc, xt) => {                                                     // punto dentro la vite (con gioco)?
+    const r = Math.hypot(Y, Zc);
+    if (r > rc) return false;
+    if (r <= wp.rr) return true;
+    let u = xt - wp.hand * wp.lead / (2 * PI) * Math.atan2(Zc, Y); u -= wp.px * Math.round(u / wp.px);
+    return Math.abs(u) <= wp.px / 4 - (r - wp.rp) * t + e;
+  };
+  const cut = (r, phiP, zP) => {                                                        // il punto (r, φ_P, z_P) della ruota viene mai toccato dalla vite?
+    const lim = (a - rc) / r;
+    if (lim >= 1) return false;
+    const Pm = Math.acos(Math.max(-1, lim)), NS = 90;
+    for (let s = 0; s <= NS; s++) {
+      const Phi = -Pm + 2 * Pm * s / NS, X = sg * r * Math.sin(Phi);
+      if (Math.abs(X) > wp.L / 2) continue;
+      if (inCutter(a - r * Math.cos(Phi), sg * zP, X - sg * rg * (Phi - phiP))) return true;
+    }
+    return false;
+  };
+  const nPhi = 40, nZ = 17, pitch = 2 * PI / z, rLo = a - rc - 0.5 * m, table = [];     // la tabella r(φ_P, z_P) vale su un passo e si ripete
+  for (let iz = 0; iz < nZ; iz++) {
+    const zP = w0 + (w1 - w0) * iz / (nZ - 1), row = [];
+    for (let ip = 0; ip < nPhi; ip++) {
+      const phiP = pitch * ip / nPhi;
+      let r = rBlank;
+      if (cut(rBlank, phiP, zP)) {
+        let lo = rLo, hi = rBlank;
+        for (let b = 0; b < 16; b++) { const mid = (lo + hi) / 2; if (cut(mid, phiP, zP)) hi = mid; else lo = mid; }
+        r = lo;
+      }
+      row.push(r);
+    }
+    table.push(row);
+  }
+  const rings = table.map((row, iz) => {
+    const zP = w0 + (w1 - w0) * iz / (nZ - 1), ring = [];
+    for (let k = 0; k < z; k++) for (let ip = 0; ip < nPhi; ip++) {
+      const ang = rho + (k * nPhi + ip) * 2 * PI / (z * nPhi);
+      ring.push([row[ip] * cos(ang), row[ip] * sin(ang), zP]);
+    }
+    return ring;
+  });
+  return ringsLoft(rings, [0, 0, w0], [0, 0, w1]);
+}
+
+/**
+ * Cilindro con centro (cx, cy) nel piano locale.
+ * @param {number} r raggio;  @param {number} w0,w1 estremi;  @param {number} n lati;  @param {number} cx,cy centro
+ * @returns {{P,T}}
+ */
+function cylinderSolid(r, w0, w1, n = 32, cx = 0, cy = 0) {
+  const A = [], B = [];
+  for (let i = 0; i < n; i++) {
+    const a = 2 * PI * i / n, x = cx + r * cos(a), y = cy + r * sin(a);
+    A.push([x, y, w0]); B.push([x, y, w1]);
+  }
+  return loft(A, B, [cx, cy, w0], [cx, cy, w1]);
+}
+
+/**
+ * Parallelepipedo centrato in (cx, cy) con semilati hx, hy.
+ * @returns {{P,T}}
+ */
+function boxSolid(w0, w1, cx, cy, hx, hy) {
+  const q = w => [[cx - hx, cy - hy, w], [cx + hx, cy - hy, w], [cx + hx, cy + hy, w], [cx - hx, cy + hy, w]];
+  return loft(q(w0), q(w1), [cx, cy, w0], [cx, cy, w1]);
+}
+
+/**
+ * Prisma con base poligonale convessa nel piano (x_l, w), estruso lungo y_l tra y0 e y1.
+ * @param {number[][]} poly vertici [x, w];  @param {number} y0,y1 estremi lungo y_l
+ * @returns {{P,T}}
+ */
+function prismSolid(poly, y0, y1) {
+  const cx = poly.reduce((a, p) => a + p[0], 0) / poly.length, cw = poly.reduce((a, p) => a + p[1], 0) / poly.length;
+  return loft(poly.map(([x, w]) => [x, y0, w]), poly.map(([x, w]) => [x, y1, w]), [cx, y0, cw], [cx, y1, cw]);
+}
+
+/* =====================================================================
+   3. STATO e RISOLUZIONE DEL MODELLO
+   resolveModel() legge MACHINE e produce il modello runtime M:
+   assi posizionati, ingranaggi con fase dei denti, equazioni di ingranamento, collegamenti.
+   ===================================================================== */
+const state = {
+  variants: {}, params: {}, ctrl: {}, inputs: {},
+  brakes: {}, groups: {}, driver: null, direction: 1, current: null, timeScale: 1
+};
+for (const k in MACHINE.variants) state.variants[k] = MACHINE.variants[k].active;
+for (const c of MACHINE.controls) {
+  state.ctrl[c.id] = {};
+  for (const v in c.ranges) state.ctrl[c.id][v] = c.ranges[v].value;
+}
+for (const inp of MACHINE.inputs) state.inputs[inp.id] = { dir: 0, speed: 0.3 };
+for (const g of MACHINE.groups) state.groups[g.id] = g.visible !== false;
+
+/** Copia nei parametri il valore corrente di ogni cursore, secondo la variante attiva. */
+function syncParams() {
+  for (const c of MACHINE.controls) state.params[c.id] = state.ctrl[c.id][c.variantKey ? state.variants[c.variantKey] : 'all'];
+}
+syncParams();
+
+/**
+ * Dice se un elemento della struttura dati è incluso con le varianti attive.
+ * @param {object} el elemento con eventuale proprietà "variant"
+ * @returns {boolean}
+ */
+function isActive(el) {
+  return !el.variant || Object.keys(el.variant).every(k => state.variants[k] === el.variant[k]);
+}
+
+/**
+ * Coefficienti della velocità di un punto solidale a un asse, come combinazione lineare delle velocità angolari.
+ * Se l'asse è portato da un altro (satelliti), si somma la velocità di trascinamento del portasatelliti.
+ * @param {object} M modello;  @param {number[]} P punto;  @param {number} ai indice dell'asse a cui il punto è solidale;  @param {object} out accumulatore {indice: vettore}
+ * @returns {object} out: velocità del punto = Σ w[k] · out[k]
+ */
+function velCoeffs(M, P, ai, out = {}) {
+  const a = M.axes[ai];
+  out[ai] = V.add(out[ai] || [0, 0, 0], V.cross(a.dir, V.sub(P, a.O)));
+  if (a.carrier) velCoeffs(M, a.O, a.carrier.idx, out);
+  return out;
+}
+
+/**
+ * Ruota un vettore attorno a un asse (formula di Rodrigues, regola della mano destra).
+ * @param {number[]} v vettore;  @param {number[]} k versore dell'asse di rotazione;  @param {number} phi angolo (rad)
+ * @returns {number[]} il vettore ruotato
+ */
+function rotateVec(v, k, phi) {
+  const c = cos(phi), s = sin(phi), kv = V.cross(k, v), kd = V.dot(k, v);
+  return [v[0] * c + kv[0] * s + k[0] * kd * (1 - c), v[1] * c + kv[1] * s + k[1] * kd * (1 - c), v[2] * c + kv[2] * s + k[2] * kd * (1 - c)];
+}
+
+/**
+ * Insieme degli assi che dipendono, direttamente o a catena, da un asse (per come sono posizionati o portati).
+ * @param {object} M modello in costruzione;  @param {object} root asse di partenza
+ * @returns {Set<object>} l'asse stesso e tutti i suoi dipendenti
+ */
+function dependentsOf(M, root) {
+  const set = new Set([root]);
+  const refsOf = a => {                                            // assi da cui a dipende
+    const out = [], p = a.def.place;
+    if (a.carrier) out.push(a.carrier);
+    if (p.coaxial) out.push(M.axisBy[p.coaxial]);
+    if (p.offset) out.push(M.axisBy[p.offset.from]);
+    if (p.byMesh) { const g = M.gearBy[p.byMesh], q = M.gearBy[g.def.meshWith]; out.push(M.axisBy[q.def.axis]); }
+    if (p.byApex) out.push(M.axisBy[M.gearBy[p.byApex].def.axis]);
+    return out;
+  };
+  for (let changed = true; changed;) {
+    changed = false;
+    for (const a of M.axes) if (!set.has(a) && refsOf(a).some(r => set.has(r))) { set.add(a); changed = true; }
+  }
+  return set;
+}
+
+/**
+ * Geometria del contatto tra due ingranaggi in presa (cilindrici o conici).
+ * @param {object} g ingranaggio che dichiara meshWith;  @param {object} p il partner
+ * @returns {{X:number[], cg:number[], cp:number[]}}  punto di contatto e, per ciascuna ruota, la direzione dal suo asse al contatto
+ */
+function contactGeometry(g, p) {
+  if (g.type === 'wormwheel') {                                       // assi incrociati a 90°, interasse perpendicolare a entrambi
+    const uc = V.unit(V.perp(V.sub(g.ax.O, p.ax.O), p.ax.dir));       // dalla vite verso l'asse della ruota
+    const dist = V.len(V.perp(V.sub(g.ax.O, p.ax.O), p.ax.dir));
+    if (Math.abs(dist - (g.r + p.r)) > 1e-6) console.warn(`Vite ${p.id} – ruota ${g.id}: interasse ${dist.toFixed(3)} invece di ${(g.r + p.r).toFixed(3)}`);
+    if (Math.abs(V.dot(g.ax.dir, p.ax.dir)) > 1e-6 || Math.abs(V.dot(g.ax.dir, uc)) > 1e-6) console.warn(`Vite ${p.id} – ruota ${g.id}: l'asse della ruota non è perpendicolare alla vite e all'interasse`);
+    g.sprime = Math.sign(V.dot(g.ax.dir, V.cross(p.ax.dir, uc))) || 1;
+    return { X: V.add(g.ax.O, V.mul(uc, -g.r)), cg: V.mul(uc, -1), cp: uc };
+  }
+  if (g.type === 'bevel' && p.type === 'bevel') {
+    const gh = V.unit(V.add(V.mul(g.e, Math.sin(p.delta)), V.mul(p.e, Math.sin(g.delta))));
+    if (V.len(V.sub(g.apex, p.apex)) > 1e-6) console.warn(`Coppia conica ${g.id}–${p.id}: gli apici non coincidono`);
+    return { X: V.add(g.apex, V.mul(gh, g.r / Math.sin(g.delta))), cg: V.unit(V.perp(gh, g.e)), cp: V.unit(V.perp(gh, p.e)) };
+  }
+  const v = V.sub(p.ax.O, g.ax.O), cg = V.unit(V.perp(v, g.ax.dir)), cp = V.unit(V.perp(V.mul(v, -1), p.ax.dir));
+  const dist = V.len(V.perp(v, g.ax.dir));
+  if (Math.abs(dist - (g.r + p.r)) > 1e-6) console.warn(`Ingranaggi ${g.id}–${p.id}: interasse ${dist.toFixed(3)} invece di ${(g.r + p.r).toFixed(3)}`);
+  return { X: V.add(g.ax.O, V.mul(cg, g.r)), cg, cp };
+}
+
+/**
+ * Legge MACHINE con le varianti e i parametri correnti e costruisce il modello runtime.
+ * @returns {object} M con: axes[], gears[], meshes[] (equazioni di ingranamento), ratchets[], brakes[], ropes[], hookes[], inputs[], ev()
+ */
+function resolveModel() {
+  const M = { axes: [], axisBy: {}, gears: [], gearBy: {}, meshes: [], ratchets: [], brakes: [], ropes: [], hookes: [], inputs: [], constVal: {} };
+  const resolving = new Set();
+  let ev;
+  const gTeeth = g => g.z !== undefined ? g.z : (g.z = g.def.teeth !== undefined ? ev(g.def.teeth) : g.def.type === 'worm' ? ev(g.def.starts === undefined ? 1 : g.def.starts) : 0);
+  const gModule = g => g.m !== undefined ? g.m : (g.m = g.def.module !== undefined ? ev(g.def.module) : 0);
+  const gRadius = g => g.def.r !== undefined ? ev(g.def.r) : g.def.q !== undefined ? ev(g.def.q) * gModule(g) / 2 : gTeeth(g) * gModule(g) / 2;
+  const wMid = g => { const w = vec(g.def.w); return (w[0] + w[1]) / 2; };           // mezzeria della vite lungo il suo asse
+
+  // Risolutore degli identificatori delle espressioni
+  const lookup = (name, extra) => {
+    if (extra && name in extra) return extra[name];
+    if (name === 'pi') return PI;
+    if (name in state.params) return state.params[name];
+    if (name in MACHINE.consts) {
+      if (!(name in M.constVal)) {
+        if (resolving.has(name)) throw new Error('Costante circolare: ' + name);
+        resolving.add(name); M.constVal[name] = ev(MACHINE.consts[name]); resolving.delete(name);
+      }
+      return M.constVal[name];
+    }
+    let m;
+    if ((m = /^(z|m|pr|d)_(\w+)$/.exec(name))) {
+      const g = M.gearBy[m[2]];
+      if (!g) throw new Error('Ingranaggio sconosciuto in espressione: ' + m[2]);
+      return m[1] === 'z' ? gTeeth(g) : m[1] === 'm' ? gModule(g) : m[1] === 'pr' ? gRadius(g) : 2 * gRadius(g);
+    }
+    if ((m = /^o([xyz])_(\w+)$/.exec(name))) {
+      const a = M.axisBy[m[2]];
+      if (!a) throw new Error('Asse sconosciuto in espressione: ' + m[2]);
+      if (!a.O) throw new NotPlaced(name);
+      return a.O['xyz'.indexOf(m[1])];
+    }
+    throw new Error('Simbolo sconosciuto: ' + name);
+  };
+  ev = M.ev = makeEvaluator(lookup);
+  const vec = arr => arr.map(e => ev(e));
+
+  // --- elementi attivi ---
+  for (const def of MACHINE.axes) if (isActive(def)) {
+    const a = { id: def.id, def, idx: M.axes.length, O: null, theta: 0 };
+    M.axes.push(a); M.axisBy[a.id] = a;
+  }
+  for (const def of MACHINE.gears) if (isActive(def)) {
+    const g = { id: def.id, def, label: def.label || def.id };
+    M.gears.push(g); M.gearBy[g.id] = g;
+  }
+
+  // --- direzioni e riferimenti degli assi ---
+  for (const a of M.axes) {
+    a.dir = V.unit(vec(a.def.dir));
+    a.view = V.unit(vec(a.def.view || [0, -1, 0]));
+    a.cw = -Math.sign(V.dot(a.view, a.dir)) || 1;          // +1 se "orario" = rotazione positiva
+    a.carrier = a.def.carrier ? M.axisBy[a.def.carrier] : null;
+    a.ref = a.def.ref ? V.unit(V.perp(vec(a.def.ref), a.dir)) : null;
+  }
+  // Snodo di Hooke: i riferimenti dei due alberi sono scelti in modo che i perni siano lungo y_l a riposo
+  for (const l of MACHINE.links) if (l.type === 'hooke' && isActive(l)) {
+    const ai = M.axisBy[l.input], ao = M.axisBy[l.output];
+    const bend = V.unit(V.perp(ao.dir, ai.dir)), pinB = V.cross(ai.dir, bend);
+    ai.ref = ai.ref || V.unit(V.cross(bend, ai.dir));
+    ao.ref = ao.ref || V.unit(V.cross(pinB, ao.dir));
+  }
+  for (const a of M.axes) { a.ref = a.ref || V.anyPerp(a.dir); a.yv = V.cross(a.dir, a.ref); }
+
+  // --- posizionamento degli assi (si ripete finché non sono tutti piazzati) ---
+  const originOf = a => {
+    const p = a.def.place;
+    if (p.at) return vec(p.at);
+    if (p.coaxial) { const o = M.axisBy[p.coaxial]; if (!o.O) throw new NotPlaced(p.coaxial); return o.O.slice(); }
+    if (p.offset) { const o = M.axisBy[p.offset.from]; if (!o.O) throw new NotPlaced(p.offset.from); return V.add(o.O, vec(p.offset.by)); }
+    if (p.byMesh) {
+      const g = M.gearBy[p.byMesh], q = M.gearBy[g.def.meshWith], qa = M.axisBy[q.def.axis];
+      if (!qa.O) throw new NotPlaced(q.def.axis);
+      let o = V.add(qa.O, V.mul(V.unit(vec(p.dir)), gRadius(g) + gRadius(q)));
+      if (q.def.type === 'worm') o = V.add(o, V.mul(qa.dir, wMid(q)));    // la ruota sta centrata sulla vite
+      if (g.def.type === 'worm') o = V.sub(o, V.mul(a.dir, wMid(g)));      // la vite viene centrata sulla ruota
+      return o;
+    }
+    if (p.byApex) {
+      const g = M.gearBy[p.byApex], ga = M.axisBy[g.def.axis];
+      if (!ga.O) throw new NotPlaced(g.def.axis);
+      return V.add(ga.O, V.mul(ga.dir, ev(g.def.apexW)));
+    }
+    throw new Error('Posizionamento mancante per l\'asse ' + a.id);
+  };
+  for (let pass = 0, left = M.axes.length; left > 0 && pass < 50; pass++) {
+    for (const a of M.axes) if (!a.O) { try { a.O = originOf(a); left--; } catch (e) { if (!(e instanceof NotPlaced)) throw e; } }
+  }
+  if (M.axes.some(a => !a.O)) throw new Error('Assi non posizionabili: ' + M.axes.filter(a => !a.O).map(a => a.id));
+
+  // --- rotazioni rigide di sotto-assiemi: rotate:{around:'ID', deg:...} ---
+  // L'asse, e tutti gli assi che dipendono da lui (coaxial, offset, byMesh, byApex, carrier, a catena), ruotano insieme
+  // di "deg" gradi attorno alla retta dell'asse "around" (positivo = orario visto dal view di quell'asse).
+  for (const a of M.axes) if (a.def.rotate) {
+    const ar = M.axisBy[a.def.rotate.around];
+    if (!ar) throw new Error('rotate.around sconosciuto: ' + a.def.rotate.around);
+    const group = dependentsOf(M, a);
+    if (group.has(ar)) throw new Error(`rotate: l'asse ${ar.id} dipende da ${a.id}, non si può ruotare ${a.id} attorno ad esso`);
+    const phi = ev(a.def.rotate.deg) * PI / 180 * ar.cw, k = ar.dir, P = ar.O.slice();
+    for (const b of group) {
+      b.O = V.add(P, rotateVec(V.sub(b.O, P), k, phi));
+      b.dir = rotateVec(b.dir, k, phi); b.ref = rotateVec(b.ref, k, phi); b.view = rotateVec(b.view, k, phi);
+      b.yv = V.cross(b.dir, b.ref);
+    }
+  }
+
+  // --- ingranaggi: dimensioni, partner, angoli dei coni, fase dei denti ---
+  for (const g of M.gears) {
+    g.ax = M.axisBy[g.def.axis];
+    if (!g.ax) throw new Error('Asse mancante per l\'ingranaggio ' + g.id);
+    g.type = g.def.type || 'spur';
+    g.z = gTeeth(g); g.m = gModule(g); g.r = gRadius(g);
+    g.side = g.def.side || 1;
+    g.w = g.def.w ? vec(g.def.w) : null;
+    if (g.type === 'bevel') {
+      g.apexW = ev(g.def.apexW);
+      g.apex = V.add(g.ax.O, V.mul(g.ax.dir, g.apexW));
+      g.e = V.mul(g.ax.dir, g.side);                                // dall'apice verso l'estremità grande
+    }
+  }
+  for (const g of M.gears) if (g.type === 'worm') {                  // vite senza fine: passo, principi, verso dell'elica
+    g.hand = g.def.hand || 1;
+    g.wp = wormParams(g.m, ev(g.def.q), g.z, g.hand, g.w[1] - g.w[0]);
+  }
+  for (const g of M.gears) if (g.def.meshWith) {
+    const p = M.gearBy[g.def.meshWith];
+    if (!p) throw new Error('meshWith sconosciuto: ' + g.def.meshWith);
+    g.partner = p; g.role = 'gap';                                  // chi dichiara meshWith ha un vano, il partner un dente
+    if (!p.partner) { p.partner = g; p.role = 'tooth'; }
+  }
+  for (const g of M.gears) if (g.type === 'wormwheel') {            // ruota per vite: fascia centrata sul piano della vite
+    if (!g.partner || g.partner.type !== 'worm') throw new Error(`${g.id}: una ruota per vite deve avere meshWith = una vite`);
+    const f = g.def.face !== undefined ? ev(g.def.face) : wheelFace(g.m, g.partner.wp);
+    g.w = g.def.w ? vec(g.def.w) : [-f / 2, f / 2];
+  }
+  for (const g of M.gears) if (g.type === 'bevel' && g.partner) {   // semiangolo del cono: tan δ = sin Σ / (z2/z1 + cos Σ)
+    const p = g.partner, cs = V.dot(g.e, p.e);
+    g.delta = Math.atan2(Math.sqrt(Math.max(0, 1 - cs * cs)), p.z / g.z + cs);
+  }
+  for (const g of M.gears) if (g.def.meshWith) {
+    const c = contactGeometry(g, g.partner);
+    g.cdir = c.cg; g.partner.cdir = c.cp;
+    M.meshes.push({ g, p: g.partner, X: c.X });
+  }
+  for (const g of M.gears) {
+    g.rho = 0;
+    if (g.cdir) {                                                   // azimut del contatto nel riferimento dell'ingranaggio
+      const phi = Math.atan2(V.dot(g.cdir, V.mul(g.ax.yv, g.side)), V.dot(g.cdir, g.ax.ref));
+      g.rho = phi + (g.role === 'gap' && g.type !== 'worm' && g.type !== 'wormwheel' ? PI / g.z : 0);
+    }
+  }
+
+  // --- equazioni di ingranamento: componente tangente delle velocità uguale nel punto di contatto ---
+  const n = M.axes.length;
+  for (const m of M.meshes) {
+    if (m.g.type === 'wormwheel') {                                // z·w_ruota + hand·sg·principi·w_vite = 0 (un filetto destro che gira in senso positivo fa traslare il disegno del filetto verso −asse)
+      m.row = new Array(n).fill(0);
+      m.row[m.g.ax.idx] += m.g.z;
+      m.row[m.p.ax.idx] += m.p.hand * m.g.sprime * m.p.z;
+      continue;
+    }
+    const t = V.unit(V.cross(m.g.ax.dir, V.sub(m.X, m.g.ax.O)));
+    const vg = velCoeffs(M, m.X, m.g.ax.idx), vp = velCoeffs(M, m.X, m.p.ax.idx);
+    m.row = new Array(n).fill(0);
+    for (const k in vg) m.row[k] += V.dot(t, vg[k]);
+    for (const k in vp) m.row[k] -= V.dot(t, vp[k]);
+  }
+
+  // --- collegamenti ---
+  for (const l of MACHINE.links) if (isActive(l)) {
+    if (l.type === 'ratchet') M.ratchets.push({ def: l, driver: M.axisBy[l.driver].idx, driven: M.axisBy[l.driven].idx, sign: l.sign || 1 });
+    if (l.type === 'brake') M.brakes.push({ def: l, idx: M.axisBy[l.axis].idx });
+    if (l.type === 'rope') M.ropes.push({ def: l, idx: M.axisBy[l.axis].idx, at: vec(l.at), radius: ev(l.radius) });
+    if (l.type === 'hooke') {
+      const ai = M.axisBy[l.input], ao = M.axisBy[l.output], cb = V.dot(ai.dir, ao.dir);
+      M.hookes.push({ def: l, inIdx: ai.idx, outIdx: ao.idx, cb, sb: Math.sqrt(1 - cb * cb), bend: V.unit(V.perp(ao.dir, ai.dir)) });
+    }
+  }
+  for (const def of MACHINE.inputs) if (isActive(def)) M.inputs.push({ def, id: def.id, idx: M.axisBy[def.axis].idx });
+  return M;
+}
+
+/* =====================================================================
+   4. CINEMATICA
+   Incognite: la velocità angolare di ogni asse (positiva attorno a dir).
+   Equazioni, in ordine di priorità (una equazione incompatibile con le precedenti viene scartata):
+     freno → ingranamenti e snodi → nottolino bloccato → ingranaggio motore → ingressi (chiavi) → assi "hold" a riposo
+   ===================================================================== */
+
+/**
+ * Sistema lineare costruito riga per riga con eliminazione di Gauss.
+ * @param {number} n numero di incognite
+ * @returns {{add(c:number[], b:number):boolean, solve():number[]}}  add scarta (false) le righe incompatibili; solve mette a 0 le incognite libere
+ */
+function makeSystem(n) {
+  const rows = [];
+  return {
+    add(c, b) {
+      c = c.slice();
+      const s = Math.max(...c.map(Math.abs)) || 1; for (let j = 0; j < n; j++) c[j] /= s; b /= s;
+      for (const r of rows) { const f = c[r.p]; if (Math.abs(f) > 1e-12) { for (let j = 0; j < n; j++) c[j] -= f * r.c[j]; b -= f * r.b; } }
+      let p = -1, best = 1e-9;
+      for (let j = 0; j < n; j++) if (Math.abs(c[j]) > best) { best = Math.abs(c[j]); p = j; }
+      if (p < 0) return Math.abs(b) < 1e-7;                          // riga dipendente: ok solo se coerente
+      const d = c[p]; for (let j = 0; j < n; j++) c[j] /= d; b /= d;
+      for (const r of rows) { const f = r.c[p]; if (Math.abs(f) > 1e-12) { for (let j = 0; j < n; j++) r.c[j] -= f * c[j]; r.b -= f * b; } }
+      rows.push({ p, c, b }); return true;
+    },
+    solve() { const w = new Array(n).fill(0); for (const r of rows) w[r.p] = r.b; return w; }
+  };
+}
+
+/** Rapporto d(φ_ingresso)/d(ψ_uscita) di uno snodo di Hooke, quando l'albero d'ingresso è all'angolo theta. */
+const hookeRatio = (h, theta) => (1 - h.sb * h.sb * cos(theta) ** 2) / h.cb;
+/** Angolo dell'albero d'uscita (continuo) di uno snodo di Hooke, dato quello d'ingresso: tan ψ = tan φ / cos β. */
+function hookePsi(h, phi) {
+  const p = Math.atan2(sin(phi), h.cb * cos(phi));
+  return p + 2 * PI * Math.round((phi - p) / (2 * PI));
+}
+/** Velocità imposta da un ingresso: verso (±1, 0 = a riposo) · segno "orario" · giri/min → rad/s. */
+const inputOmega = (ax, st) => st.dir * ax.cw * Math.pow(10, st.speed) * PI / 30;
+
+/**
+ * Risolve le velocità angolari di tutti gli assi nello stato corrente (motrice, ingressi, freno, angoli dello snodo).
+ * @param {object} M modello
+ * @returns {{w:number[], locked:Set<object>}}  w[i] = velocità dell'asse i (rad/s); locked = nottolini che trascinano
+ */
+function solveSpeeds(M) {
+  const n = M.axes.length, unit = i => { const r = new Array(n).fill(0); r[i] = 1; return r; };
+  const solveOnce = locked => {
+    const sys = makeSystem(n);
+    for (const b of M.brakes) if (state.brakes[b.def.axis]) sys.add(unit(b.idx), 0);
+    for (const m of M.meshes) sys.add(m.row, 0);
+    for (const h of M.hookes) { const r = new Array(n).fill(0); r[h.inIdx] = 1; r[h.outIdx] = -hookeRatio(h, M.axes[h.inIdx].theta); sys.add(r, 0); }
+    for (const rt of locked) { const r = new Array(n).fill(0); r[rt.driven] = 1; r[rt.driver] = -1; sys.add(r, 0); }
+    const dg = state.driver && M.gearBy[state.driver.gear];
+    if (dg) sys.add(unit(dg.ax.idx), state.driver.w);
+    for (const inp of M.inputs) sys.add(unit(inp.idx), inputOmega(M.axes[inp.idx], state.inputs[inp.id]));
+    for (const a of M.axes) if (a.def.hold) sys.add(unit(a.idx), 0);
+    return sys.solve();
+  };
+  const locked = new Set();
+  let w = solveOnce(locked);
+  for (let i = 0; i <= M.ratchets.length; i++) {                     // il nottolino blocca se A resterebbe indietro rispetto al tamburo
+    let changed = false;
+    for (const rt of M.ratchets) if (!locked.has(rt) && rt.sign * (w[rt.driven] - w[rt.driver]) < -1e-9) { locked.add(rt); changed = true; }
+    if (!changed) break;
+    w = solveOnce(locked);
+  }
+  return { w, locked };
+}
+
+/**
+ * Coefficienti a, b tali che w_out = a·w_in1 + b·w_in2 (solo ingranamenti): formula del differenziale.
+ * @param {object} M modello;  @param {string} outId asse di uscita;  @param {string[]} insIds due assi d'ingresso
+ * @returns {number[]}
+ */
+function relationCoeffs(M, outId, insIds) {
+  return insIds.map((_, k) => {
+    const n = M.axes.length, sys = makeSystem(n);
+    for (const m of M.meshes) sys.add(m.row, 0);
+    insIds.forEach((id, j) => { const r = new Array(n).fill(0); r[M.axisBy[id].idx] = 1; sys.add(r, j === k ? 1 : 0); });
+    return sys.solve()[M.axisBy[outId].idx];
+  });
+}
+
+/* =====================================================================
+   5. SCENA BABYLON
+   Il modello (X, Y profondità, Z alto) passa in Babylon (destrorso, Y alto) come (x, y, z) = (X, Z, −Y).
+   ===================================================================== */
+const { Vector3: V3, Color3: C3, Quaternion: Quat } = BABYLON;
+const canvas = $('stage');
+const engine = new BABYLON.Engine(canvas, true, { antialias: true });
+const scene  = new BABYLON.Scene(engine);
+scene.useRightHandedSystem = true;
+scene.clearColor = new BABYLON.Color4(.07, .085, .11, 1);
+
+const camera = new BABYLON.ArcRotateCamera('cam', PI / 2 - .7, 1.1, 1000, V3.Zero(), scene);
+camera.attachControl(canvas, false);          // false = la camera blocca lo scroll della pagina
+camera.lowerRadiusLimit = 30;
+camera.wheelDeltaPercentage = .02;
+camera.panningSensibility = 40;               // tasto destro = sposta
+camera.minZ = 1;
+canvas.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+new BABYLON.HemisphericLight('sky', new V3(.3, 1, .5), scene).intensity = .75;
+new BABYLON.DirectionalLight('sun', new V3(-.5, -1, -.7), scene).intensity = .8;
+
+const matCache = {};
+/**
+ * Materiale colorato (con cache).
+ * @param {string} hex colore #rrggbb
+ * @returns {BABYLON.StandardMaterial}
+ */
+function material(hex) {
+  if (!matCache[hex]) {
+    const m = new BABYLON.StandardMaterial('m' + hex, scene);
+    m.diffuseColor = C3.FromHexString(hex); m.specularColor = new C3(.28, .28, .28); m.backFaceCulling = false;
+    matCache[hex] = m;
+  }
+  return matCache[hex];
+}
+const markerMat = material('#d4262e');
+const toV3 = a => new V3(a[0], a[1], a[2]);
+
+/**
+ * Trasforma solidi in un Mesh con normali per faccia (spigoli netti); se un solido ha i triangoli al contrario li rigira.
+ * @param {string} name nome;  @param {Array<{P,T}>} solids solidi;  @param {(p:number[])=>number[]} mapPoint da coordinate locali a Babylon
+ * @param {BABYLON.Material} mat materiale;  @param {boolean} pickable cliccabile
+ * @returns {BABYLON.Mesh}
+ */
+function buildMesh(name, solids, mapPoint, mat, pickable) {
+  const pos = [], nor = [], idx = [];
+  let n = 0;
+  for (const { P, T } of solids) {
+    const R = P.map(mapPoint);
+    let vol = 0;
+    for (const [a, b, c] of T) {
+      const A = R[a], B = R[b], C = R[c];
+      vol += A[0]*(B[1]*C[2]-B[2]*C[1]) + A[1]*(B[2]*C[0]-B[0]*C[2]) + A[2]*(B[0]*C[1]-B[1]*C[0]);
+    }
+    for (const t of T) {
+      const [a, b, c] = vol < 0 ? [t[0], t[2], t[1]] : t;
+      const A = R[a], B = R[b], C = R[c];
+      const ux = B[0]-A[0], uy = B[1]-A[1], uz = B[2]-A[2], vx = C[0]-A[0], vy = C[1]-A[1], vz = C[2]-A[2];
+      let x = uy*vz-uz*vy, y = uz*vx-ux*vz, z = ux*vy-uy*vx;
+      const l = Math.hypot(x, y, z) || 1; x /= l; y /= l; z /= l;
+      pos.push(...A, ...B, ...C);
+      nor.push(x, y, z, x, y, z, x, y, z);
+      idx.push(n, n + 1, n + 2); n += 3;
+    }
+  }
+  const mesh = new BABYLON.Mesh(name, scene), data = new BABYLON.VertexData();
+  data.positions = pos; data.normals = nor; data.indices = idx; data.applyToMesh(mesh);
+  mesh.material = mat; mesh.isPickable = !!pickable;
+  return mesh;
+}
+
+/**
+ * Mappa dalle coordinate di un ingranaggio (x_l, y_l, w) alle coordinate del riferimento dell'asse (x = ref, y = dir × ref, z = dir).
+ * Le ruote coniche hanno w verso side e l'apice a apexW sull'asse. L'orientazione nel mondo la porta il nodo "frame" dell'asse,
+ * così la geometria non dipende da come è ruotato l'assieme e le mesh si riusano.
+ * @param {number} side verso di w (+1/−1);  @param {number} apexW coordinata dell'apice sull'asse
+ * @returns {(p:number[])=>number[]}
+ */
+function frameMap(side = 1, apexW = 0) {
+  return p => [p[0], side * p[1], apexW + side * p[2]];
+}
+
+/**
+ * Arrotonda i numeri (6 decimali) in una chiave di cache, così piccole differenze di calcolo non invalidano la cache.
+ * @param {*} obj struttura da serializzare
+ * @returns {string}
+ */
+/** Riduce un angolo a [0, 2π): angoli equivalenti (es. +π e −π) danno la stessa chiave di cache. */
+const wrapAngle = a => { const r = ((a % (2 * PI)) + 2 * PI) % (2 * PI); return r > 2 * PI - 1e-6 ? 0 : r; };
+const cacheKey = obj => JSON.stringify(obj, (k, v) => typeof v === 'number' ? Math.round(v * 1e6) / 1e6 : v);
+
+/**
+ * Solidi di un ingranaggio (denti, e disco posteriore per i conici) nel suo sistema locale.
+ * @param {object} g ingranaggio risolto
+ * @returns {Array<{P,T}>}
+ */
+function gearSolids(g) {
+  if (g.type === 'cylinder') return [cylinderSolid(g.r, g.w[0], g.w[1], g.def.n || 32)];
+  if (g.type === 'worm') return [wormSolid(g.wp, g.rho, g.w[0], g.w[1])];
+  if (g.type === 'wormwheel') return [wormWheelSolid(g.z, g.m, g.partner.wp, g.sprime, g.rho, g.w[0], g.w[1])];
+  if (g.type === 'spur') return [spurGear(g.z, g.m, g.rho, g.w[0], g.w[1])];
+  const out = [bevelGear(g.z, g.m, g.delta, g.rho, g.def.k0 || 0.7)], pl = g.def.plate;
+  if (pl) { const wp = g.r / Math.tan(g.delta); out.push(cylinderSolid(pl.k * g.r, wp + pl.from, wp + pl.to, pl.n || 48)); }
+  return out;
+}
+
+/**
+ * Valuta le espressioni di una parte (albero, mozzo, marcatore) e ne costruisce il solido.
+ * @param {object} p definizione della parte;  @param {Function} ev valutatore
+ * @returns {{key:object, solid:{P,T}}}  key = definizione risolta (serve come chiave di cache)
+ */
+function resolvePart(p, ev) {
+  const k = { shape: p.shape, n: p.n || 32, color: p.color };
+  if (p.r !== undefined) k.r = ev(p.r);
+  if (p.w) k.w = p.w.map(e => ev(e));
+  k.at = (p.at || [0, 0]).map(e => ev(e));
+  if (p.half) k.half = p.half.map(e => ev(e));
+  if (p.poly) { k.poly = p.poly.map(pt => pt.map(e => ev(e))); k.y = p.y || [-1, 1]; }
+  const solid = k.shape === 'cylinder' ? cylinderSolid(k.r, k.w[0], k.w[1], k.n, k.at[0], k.at[1])
+              : k.shape === 'box' ? boxSolid(k.w[0], k.w[1], k.at[0], k.at[1], k.half[0], k.half[1])
+              : prismSolid(k.poly, k.y[0], k.y[1]);
+  return { key: k, solid };
+}
+
+/* =====================================================================
+   6. COSTRUZIONE DELLA SCENA A PARTIRE DAL MODELLO
+   ===================================================================== */
+let M = null;                                   // modello corrente
+const meshCache = new Map();                    // mesh riusate tra una ricostruzione e l'altra (chiave = geometria)
+
+/**
+ * Crea nodi, mesh e collegamenti visivi del modello M. Le mesh uguali a quelle già costruite vengono riusate.
+ * @param {object} M modello risolto (viene arricchito con nodi e mesh)
+ */
+function buildScene(M) {
+  const used = new Set();
+  const cached = (key, make) => {
+    used.add(key);
+    let m = meshCache.get(key);
+    if (!m || m.isDisposed()) { m = make(); meshCache.set(key, m); }
+    m.renderOverlay = false;
+    return m;
+  };
+  M.nodes = []; M.extras = []; M.allMeshes = []; M.groupItems = {};
+  const inGroup = (grp, item) => { if (grp) (M.groupItems[grp] = M.groupItems[grp] || []).push(item); };
+
+  // nodo di rotazione di ogni asse (i satelliti sono figli del portasatelliti)
+  for (const a of M.axes) { a.node = new BABYLON.TransformNode('axis_' + a.id, scene); a.node.rotationQuaternion = Quat.Identity(); M.nodes.push(a.node); }
+  for (const a of M.axes) {
+    const Ob = V.toB(a.O);
+    if (a.carrier) { a.node.parent = a.carrier.node; a.node.position = toV3(V.sub(Ob, V.toB(a.carrier.O))); }
+    else a.node.position = toV3(Ob);
+    a.axisB = toV3(V.toB(a.dir));
+    inGroup(a.group, a.node);
+    // nodo "frame": orienta il sistema locale (ref, dir × ref, dir) dell'asse nel mondo; le mesh sono figlie di questo
+    a.frame = new BABYLON.TransformNode('frame_' + a.id, scene); a.frame.parent = a.node; M.nodes.push(a.frame);
+    const fx = V.toB(a.ref), fy = V.toB(a.yv), fz = V.toB(a.dir);
+    a.frame.rotationQuaternion = Quat.FromRotationMatrix(BABYLON.Matrix.FromValues(fx[0], fx[1], fx[2], 0, fy[0], fy[1], fy[2], 0, fz[0], fz[1], fz[2], 0, 0, 0, 0, 1));
+  }
+
+  // ingranaggi
+  for (const g of M.gears) {
+    g.sig = JSON.stringify([g.type, g.z, g.m, g.def.axis, g.apexW, g.w, g.side]);
+    const key = 'g|' + cacheKey([g.type, g.z, g.m, wrapAngle(g.rho), g.w, g.apexW, g.side, g.delta, g.def.plate, g.r, g.def.n, g.def.k0, g.def.color || g.ax.def.color, g.wp, g.partner && g.partner.wp, g.sprime]);
+    g.mesh = cached(key, () => buildMesh('gear' + g.id, gearSolids(g), frameMap(g.side, g.apexW || 0), material(g.def.color || g.ax.def.color), true));
+    g.mesh.parent = g.ax.frame; g.mesh.metadata = g.id; g.mesh.setEnabled(true);
+    M.allMeshes.push(g.mesh);
+  }
+  // alberi, mozzi, marcatori, alette...
+  for (const a of M.axes) for (const pd of a.def.parts || []) if (isActive(pd)) {
+    const { key, solid } = resolvePart(pd, M.ev);
+    const mat = key.color === 'marker' ? markerMat : material(key.color || a.def.color);
+    const mesh = cached('p|' + cacheKey([key, key.color || a.def.color]), () => buildMesh('part', [solid], frameMap(), mat, false));
+    mesh.parent = a.frame; mesh.setEnabled(true);
+    M.allMeshes.push(mesh);
+  }
+  for (const [k, m] of meshCache) if (!used.has(k)) { m.dispose(); meshCache.delete(k); }
+
+  // freno: ganascia sotto il tamburo del freno
+  for (const b of M.brakes) {
+    const s = b.def.shoe, at = V.toB(s.at.map(e => M.ev(e))), rel = V.toB(s.released);
+    b.mesh = BABYLON.MeshBuilder.CreateBox('shoe', { width: s.size[0], height: s.size[2], depth: s.size[1] }, scene);
+    b.mesh.material = new BABYLON.StandardMaterial('shoeMat', scene); b.mesh.isPickable = false;
+    b.engaged = toV3(at); b.released = toV3(V.add(at, rel));
+    M.extras.push(b.mesh); inGroup(b.def.group, b.mesh);
+  }
+  // fune e peso
+  for (const r of M.ropes) {
+    r.rope = BABYLON.MeshBuilder.CreateCylinder('rope', { height: 1, diameter: 4, tessellation: 12 }, scene);
+    r.weight = BABYLON.MeshBuilder.CreateCylinder('weight', { height: 30, diameter: 24, tessellation: 24 }, scene);
+    r.rope.material = material('#5a4630'); r.weight.material = material('#6b7280');
+    r.rope.isPickable = r.weight.isPickable = false; r.top = V.toB(r.at);
+    M.extras.push(r.rope, r.weight); inGroup(r.def.group, r.rope); inGroup(r.def.group, r.weight);
+  }
+  // crociera dello snodo di Hooke: braccio A (rosso) e braccio B (blu), orientati a ogni fotogramma
+  for (const h of M.hookes) {
+    const arm = h.def.arm, cross = new BABYLON.TransformNode('cross', scene);
+    cross.rotationQuaternion = Quat.Identity(); cross.position = toV3(V.toB(M.axes[h.outIdx].O));
+    const mk = (mat, rot) => {
+      const c = BABYLON.MeshBuilder.CreateCylinder('crossArm', { height: 2 * arm.len, diameter: 2 * arm.r, tessellation: 16 }, scene);
+      c.material = mat; c.parent = cross; c.isPickable = false; if (rot) c.rotation.z = PI / 2; M.extras.push(c);
+    };
+    mk(material('#d4262e'), true);                // lungo x locale: braccio A
+    mk(material('#2f6fe0'), false);               // lungo y locale: braccio B
+    const core = BABYLON.MeshBuilder.CreateBox('crossCore', { size: 8 }, scene);
+    core.material = material('#7c8590'); core.parent = cross; core.isPickable = false; M.extras.push(core);
+    h.cross = cross; M.nodes.push(cross); inGroup(h.def.group, cross);
+  }
+  applyGroups();
+}
+
+/** Mostra o nasconde gli elementi dei gruppi di visibilità secondo state.groups. */
+function applyGroups() {
+  if (!M) return;
+  for (const g in M.groupItems) for (const it of M.groupItems[g]) it.setEnabled(state.groups[g] !== false);
+}
+
+/**
+ * Orienta la crociera di uno snodo di Hooke: A = cos φ · bend + sin φ · y′ ;  B = −sin ψ · e1 + cos ψ · y′
+ * (bend = direzione di flessione, y′ = d_in × bend, e1 = bend inclinato di β).
+ * @param {object} h snodo risolto;  @param {number} phi angolo dell'albero d'ingresso
+ */
+function orientCross(h, phi) {
+  const psi = hookePsi(h, phi), din = M.axes[h.inIdx].dir, yp = V.cross(din, h.bend);
+  const A = V.add(V.mul(h.bend, cos(phi)), V.mul(yp, sin(phi)));
+  const e1 = V.sub(V.mul(h.bend, h.cb), V.mul(din, h.sb));
+  const B = V.add(V.mul(e1, -sin(psi)), V.mul(yp, cos(psi)));
+  const nn = V.cross(A, B), a = V.toB(A), b = V.toB(B), c = V.toB(nn);
+  h.cross.rotationQuaternion = Quat.FromRotationMatrix(BABYLON.Matrix.FromValues(
+    a[0], a[1], a[2], 0, b[0], b[1], b[2], 0, c[0], c[1], c[2], 0, 0, 0, 0, 1));
+}
+
+/**
+ * Ingombro del modello in coordinate Babylon.
+ * @returns {{min:number[], max:number[]}}
+ */
+function modelBounds() {
+  const min = [1e9, 1e9, 1e9], max = [-1e9, -1e9, -1e9];
+  for (const m of M.allMeshes) {
+    m.computeWorldMatrix(true);
+    const bb = m.getBoundingInfo().boundingBox;
+    for (const v of [bb.minimumWorld, bb.maximumWorld]) for (let i = 0; i < 3; i++) { min[i] = Math.min(min[i], [v.x, v.y, v.z][i]); max[i] = Math.max(max[i], [v.x, v.y, v.z][i]); }
+  }
+  return { min, max };
+}
+
+/**
+ * Ricostruisce modello e scena (dopo un cambio di variante o di cursore) conservando gli angoli degli assi.
+ * Gli assi i cui ingranaggi sono tutti nuovi o cambiati vengono risincronizzati con il partner,
+ * così i denti restano in presa.
+ */
+function rebuild() {
+  const prevTheta = {}, prevSig = {};
+  if (M) {
+    for (const a of M.axes) prevTheta[a.id] = a.theta;
+    for (const g of M.gears) prevSig[g.id] = g.sig;
+    for (const m of meshCache.values()) { m.parent = null; m.renderOverlay = false; }
+    M.nodes.forEach(n => n.dispose(true)); M.extras.forEach(m => m.dispose());
+  }
+  syncParams();
+  M = resolveModel();
+  buildScene(M);
+  for (const a of M.axes) a.theta = prevTheta[a.id] || 0;
+  const dirty = a => { const gs = M.gears.filter(g => g.ax === a); return gs.length > 0 && gs.every(g => prevSig[g.id] !== g.sig); };
+  for (const a of M.axes) if (dirty(a)) for (const m of M.meshes) {
+    const other = m.g.ax === a ? m.p.ax : m.p.ax === a ? m.g.ax : null;
+    if (!other || dirty(other)) continue;
+    const nz = m.row.map((v, i) => Math.abs(v) > 1e-9 ? i : -1).filter(i => i >= 0);
+    if (nz.length === 2) { a.theta = -m.row[other.idx] / m.row[a.idx] * other.theta; break; }
+  }
+  M.differential = MACHINE.differential && relationCoeffs(M, MACHINE.differential.out, MACHINE.differential.ins);
+  M.ratioVals = (MACHINE.ratios || []).map(r => Math.abs(relationCoeffs(M, r.to, [r.from, r.from])[0]));
+}
+
+/* =====================================================================
+   7. INTERFACCIA (generata dalla struttura dati)
+   ===================================================================== */
+const rpmOf = exp => Math.pow(10, exp);          // il cursore della velocità è un esponente (scala logaritmica)
+let sinceTable = 0;                              // tempo dall'ultimo aggiornamento della tabella dei giri/min
+let rowOf = {};                                  // riga della tabella per id di ingranaggio
+
+/**
+ * Crea un elemento DOM.
+ * @param {string} tag tag;  @param {object} props proprietà da assegnare;  @param {...(string|Node)} kids figli
+ * @returns {HTMLElement}
+ */
+function el(tag, props = {}, ...kids) {
+  const e = document.createElement(tag);
+  Object.assign(e, props);
+  e.append(...kids);
+  return e;
+}
+
+/** Ricostruisce la tabella degli ingranaggi (una riga per ingranaggio attivo). */
+function buildTable() {
+  const tb = $('gearRows'); tb.innerHTML = ''; rowOf = {};
+  for (const g of M.gears) {
+    const row = tb.insertRow(); row.tabIndex = 0; row.dataset.gear = g.id; rowOf[g.id] = row;
+    row.innerHTML = `<td>${g.label}</td><td>${g.def.name}${g.def.note ? ` <span style="color:var(--muted)">(${g.def.note})</span>` : ''}</td>` +
+                    `<td>${g.z || '—'}</td><td>${fmt(2 * g.r, 1)}</td><td></td>`;
+    row.onclick = () => selectGear(g.id);
+    row.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGear(g.id); } };
+  }
+}
+
+/**
+ * Evidenzia un ingranaggio e aggiorna il testo di selezione.
+ * @param {string} id id dell'ingranaggio
+ */
+function highlight(id) {
+  if (state.current && M.gearBy[state.current]) M.gearBy[state.current].mesh.renderOverlay = false;
+  state.current = id;
+  const g = M.gearBy[id];
+  g.mesh.renderOverlay = true; g.mesh.overlayColor = new C3(1, .85, .3); g.mesh.overlayAlpha = .35;
+  $('selected').textContent = `${g.label} — ${g.def.name}${g.z ? ', ' + g.z + ' denti' : ''}. Sensi visti ${g.ax.def.viewLabel || 'da davanti'}.`;
+  for (const r of document.querySelectorAll('#gearRows tr')) r.classList.toggle('sel', r.dataset.gear === id);
+}
+
+/** Imposta l'ingranaggio selezionato come motore, con la velocità e il verso scelti nel pannello. */
+function updateDriver() {
+  if (!state.current || !M.gearBy[state.current]) return;
+  const g = M.gearBy[state.current];
+  state.driver = { gear: state.current, w: state.direction * g.ax.cw * rpmOf(+$('speed').value) * PI / 30 };   // giri/min → rad/s
+  $('rpmLabel').textContent = fmt(rpmOf(+$('speed').value), 2);
+  $('btnCW').classList.toggle('on', state.direction > 0);
+  $('btnCCW').classList.toggle('on', state.direction < 0);
+}
+
+/**
+ * Seleziona un ingranaggio e lo mette in moto.
+ * @param {string} id id dell'ingranaggio
+ */
+function selectGear(id) { highlight(id); updateDriver(); }
+
+/** Testi sotto i comandi: verifiche di ingombro, rapporti e note, calcolati dalla struttura dati. */
+function updateTexts() {
+  const lines = []; let bad = false;
+  for (const c of MACHINE.checks || []) if (isActive(c)) {
+    if (c.type === 'axisClearsGear') {                                 // distanza tra l'asse e il bordo di una ruota
+      const a = M.axisBy[c.axis], g = M.gearBy[c.gear];
+      const dist = V.len(V.perp(V.sub(a.O, g.ax.O), a.dir)), gap = dist - c.shaftR - (g.r + g.m), ex = { dist, gap, miss: c.min - gap };
+      lines.push(template(c.text, M.ev, ex) + template(gap < c.min ? c.bad : c.ok, M.ev, ex));
+      if (gap < c.min) bad = true;
+    } else if (c.type === 'info') lines.push(template(c.text, M.ev));
+  }
+  $('check').textContent = lines.join(' ');
+  $('check').className = 'small' + (bad ? ' bad' : '');
+  const notes = (MACHINE.ratios || []).map((r, i) => template(r.text, M.ev, { r: M.ratioVals[i] }));
+  $('note').textContent = notes.concat((MACHINE.notes || []).map(t => template(t, M.ev))).join(' ');
+}
+
+/**
+ * Testo di stato: nottolino, freno, snodo e formula del differenziale, ricavati dalle velocità correnti.
+ * @param {number[]} w velocità degli assi;  @param {Set} locked nottolini che trascinano
+ * @returns {string}
+ */
+function statusText(w, locked) {
+  const lines = [], E = 1e-9;
+  for (const r of M.ratchets) {
+    const wd = w[r.driver], wa = w[r.driven], m = r.def.messages;
+    if (locked.has(r)) lines.push(r.sign * wd > E ? m.drives : m.blocks);
+    else if (Math.abs(wd) > E && Math.abs(wa) < E) lines.push(m.winding);
+    else if (Math.abs(wa) > E && Math.abs(wd) < E) lines.push(m.freewheel);
+  }
+  for (const b of M.brakes) if (state.brakes[b.def.axis] && b.def.message) lines.push(b.def.message);
+  for (const h of M.hookes) if (Math.abs(w[h.inIdx]) > E) lines.push(template(h.def.message, M.ev, { beta: Math.acos(h.cb) * 180 / PI, lo: h.cb, hi: 1 / h.cb }));
+  if (M.differential) {
+    const d = MACHINE.differential, [a, b] = M.differential;
+    lines.push(template(d.text, M.ev, { a, b }) + ` Uscita: ${fmt(Math.abs(w[M.axisBy[d.out].idx]) * 30 / PI, 3)} giri/min.`);
+  }
+  return lines.join('\n');
+}
+
+/** Dopo ogni ricostruzione: tabella, selezione, ingresso motore e testi. */
+function afterRebuild() {
+  buildTable();
+  const cur = state.current;
+  if (cur && M.gearBy[cur]) highlight(cur);
+  else {
+    state.current = null;
+    if (state.driver && !M.gearBy[state.driver.gear]) state.driver = null;
+    $('selected').textContent = 'Nessun ingranaggio selezionato';
+  }
+  updateTexts();
+  sinceTable = 1;                                // forza l'aggiornamento immediato della tabella
+}
+
+/** Cambia un cursore: ricostruisce il modello senza rifare il pannello (si sta trascinando il cursore). */
+function onModelChange() { rebuild(); afterRebuild(); }
+/** Cambia una variante: ricostruisce il modello e rifà il pannello (cursori e ingressi cambiano). */
+function onVariantChange() { rebuild(); buildPanel(); afterRebuild(); }
+
+/**
+ * Sposta la camera su una vista della struttura dati.
+ * @param {object} v vista: {auto, alpha, beta, scale} oppure {target:[x,y,z] (modello), alpha, beta, radius}
+ */
+function goView(v) {
+  let target, radius;
+  if (v.auto) {
+    const b = modelBounds();
+    target = new V3((b.min[0] + b.max[0]) / 2, (b.min[1] + b.max[1]) / 2, (b.min[2] + b.max[2]) / 2);
+    radius = Math.hypot(b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]) * v.scale;
+  } else { target = toV3(V.toB(v.target.map(e => M.ev(e)))); radius = v.radius; }
+  camera.setTarget(target);
+  camera.alpha = M.ev(v.alpha); camera.beta = M.ev(v.beta); camera.radius = radius;
+}
+
+/** (Ri)genera i comandi dipendenti dalle varianti: varianti, cursori, ingressi (chiavi), freni. */
+function buildPanel() {
+  // varianti: interruttore se hanno due opzioni, altrimenti elenco
+  const vb = $('variants'); vb.innerHTML = '';
+  for (const key in MACHINE.variants) {
+    const v = MACHINE.variants[key], opts = Object.keys(v.options);
+    vb.append(el('h2', { textContent: v.label }));
+    if (opts.length === 2) {
+      const cb = el('input', { type: 'checkbox', checked: state.variants[key] === opts[1] });
+      cb.onchange = () => { state.variants[key] = cb.checked ? opts[1] : opts[0]; onVariantChange(); };
+      vb.append(el('label', {}, cb, ' ' + v.options[opts[1]]));
+    } else {
+      const sel = el('select', {}, ...opts.map(o => el('option', { value: o, textContent: v.options[o], selected: o === state.variants[key] })));
+      sel.onchange = () => { state.variants[key] = sel.value; onVariantChange(); };
+      vb.append(el('label', {}, sel));
+    }
+  }
+  // cursori
+  const cb = $('controls'); cb.innerHTML = '';
+  for (const c of MACHINE.controls) {
+    const vv = c.variantKey ? state.variants[c.variantKey] : 'all', rng = c.ranges[vv];
+    if (!rng) continue;
+    const out = el('b', { textContent: fmt(state.ctrl[c.id][vv], 1) });
+    const inp = el('input', { type: 'range', min: rng.min, max: rng.max, step: c.step, value: state.ctrl[c.id][vv] });
+    inp.oninput = () => { state.ctrl[c.id][vv] = +inp.value; out.textContent = fmt(+inp.value, 1); onModelChange(); };
+    cb.append(el('label', {}, c.label + ': ', out, inp));
+  }
+  // ingressi manuali (chiavi)
+  const ib = $('inputs'); ib.innerHTML = '';
+  for (const inp of M.inputs) {
+    const st = state.inputs[inp.id], lab = el('b', { textContent: fmt(rpmOf(st.speed), 2) });
+    const sp = el('input', { type: 'range', min: -1.5, max: 1.8, step: 0.01, value: st.speed });
+    const mk = (text, dir) => el('button', { textContent: text, className: st.dir === dir ? 'on' : '' });
+    const bs = [mk('↻ Orario', 1), mk('↺ Antiorario', -1), mk('Rilascia', 0)];
+    sp.oninput = () => { st.speed = +sp.value; lab.textContent = fmt(rpmOf(st.speed), 2); };
+    [1, -1, 0].forEach((d, i) => { bs[i].onclick = () => { st.dir = d; bs.forEach((b, j) => b.classList.toggle('on', i === j)); }; });
+    ib.append(el('h2', { textContent: inp.def.label }), el('label', {}, 'Velocità: ', lab, ' giri/min', sp),
+              el('div', { className: 'buttons' }, ...bs), el('p', { className: 'small', textContent: inp.def.hint || '' }));
+  }
+  // freni
+  const bb = $('brakes'); bb.innerHTML = '';
+  for (const b of M.brakes) {
+    const c = el('input', { type: 'checkbox', checked: !!state.brakes[b.def.axis] });
+    c.onchange = () => { state.brakes[b.def.axis] = c.checked; };
+    bb.append(el('label', {}, c, ' ' + b.def.label));
+  }
+}
+
+/** Comandi che non dipendono dalle varianti: titolo, viste, gruppi, velocità, verso, tempo. */
+function buildStaticPanel() {
+  $('title').textContent = MACHINE.title;
+  for (const v of MACHINE.views) $('views').append(el('button', { textContent: v.label, onclick: () => goView(v) }));
+  for (const g of MACHINE.groups) {
+    const c = el('input', { type: 'checkbox', checked: state.groups[g.id] });
+    c.onchange = () => { state.groups[g.id] = c.checked; applyGroups(); };
+    $('groups').append(el('label', {}, c, ' ' + g.label));
+  }
+  $('rpmLabel').textContent = fmt(rpmOf(+$('speed').value), 2);
+  $('speed').oninput = updateDriver;
+  $('btnCW').onclick = () => { state.direction = 1; updateDriver(); };
+  $('btnCCW').onclick = () => { state.direction = -1; updateDriver(); };
+  $('btnStop').onclick = () => { state.driver = null; $('btnCW').classList.remove('on'); $('btnCCW').classList.remove('on'); };
+  $('timeScale').onchange = e => { state.timeScale = +e.target.value; };
+}
+
+/** Disegna gli assi X, Y, Z del modello (rosso, verde, blu), sempre visibili sopra la scena. */
+function drawAxes(len) {
+  const defs = [[[1, 0, 0], '#e5484d', 'X'], [[0, 1, 0], '#3fb950', 'Y'], [[0, 0, 1], '#58a6ff', 'Z']];
+  for (const [d, hex, label] of defs) {
+    const col = C3.FromHexString(hex), end = toV3(V.mul(V.toB(d), len));
+    const line = BABYLON.MeshBuilder.CreateLines('axis', { points: [V3.Zero(), end] }, scene);
+    line.color = col;
+    const tip = BABYLON.MeshBuilder.CreateSphere('axisTip', { diameter: 8 }, scene);
+    tip.position = end;
+    const tm = new BABYLON.StandardMaterial('a', scene); tm.emissiveColor = col; tm.disableLighting = true; tip.material = tm;
+    const tex = new BABYLON.DynamicTexture('t', { width: 64, height: 64 }, scene, false);
+    tex.hasAlpha = true; tex.drawText(label, 14, 48, 'bold 44px sans-serif', hex, 'transparent', true);
+    const plane = BABYLON.MeshBuilder.CreatePlane('axisLabel', { size: 24 }, scene), pm = new BABYLON.StandardMaterial('a', scene);
+    pm.diffuseTexture = tex; pm.useAlphaFromDiffuseTexture = true; pm.emissiveColor = C3.White(); pm.disableLighting = true; pm.backFaceCulling = false;
+    plane.material = pm; plane.billboardMode = 7; plane.position = end.add(new V3(0, 14, 0));
+    for (const o of [line, tip, plane]) { o.renderingGroupId = 1; o.isPickable = false; }
+  }
+}
+
+/* =====================================================================
+   8. AVVIO e ANIMAZIONE
+   Gli angoli non vanno ridotti modulo 2π: i denti restano in presa solo se ogni angolo
+   mantiene il rapporto esatto con quello vicino.
+   ===================================================================== */
+buildStaticPanel();
+rebuild();
+buildPanel();
+afterRebuild();
+{
+  const b = modelBounds(), diag = Math.hypot(b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]);
+  camera.upperRadiusLimit = diag * 5; camera.maxZ = diag * 20;
+  goView(MACHINE.views[0]);
+  drawAxes(.4 * diag);
+}
+
+// Click (non trascinamento) su un ingranaggio
+scene.onPointerObservable.add(info => {
+  const hit = info.pickInfo;
+  if (info.type === BABYLON.PointerEventTypes.POINTERTAP && hit && hit.hit && hit.pickedMesh.metadata) selectGear(hit.pickedMesh.metadata);
+});
+
+scene.onBeforeRenderObservable.add(() => {
+  const dt = Math.min(engine.getDeltaTime() / 1000, .05) * state.timeScale;
+  const { w, locked } = solveSpeeds(M);
+  M.axes.forEach((a, i) => { a.theta += w[i] * dt; });
+  for (const h of M.hookes) M.axes[h.outIdx].theta = hookePsi(h, M.axes[h.inIdx].theta);   // l'asta segue R′ attraverso lo snodo
+  for (const a of M.axes) {                                                                 // il satellite è figlio del portasatelliti: angolo relativo
+    a.node.rotationQuaternion = Quat.RotationAxis(a.axisB, a.carrier ? a.theta - a.carrier.theta : a.theta);
+  }
+  for (const h of M.hookes) orientCross(h, M.axes[h.inIdx].theta);
+  for (const r of M.ropes) {                                                                // fune: si allunga nel verso positivo
+    const len = Math.min(r.def.max, Math.max(r.def.min, r.def.len0 + r.radius * M.axes[r.idx].theta));
+    r.rope.scaling.y = len; r.rope.position.set(r.top[0], r.top[1] - len / 2, r.top[2]);
+    r.weight.position.set(r.top[0], r.top[1] - len - 15, r.top[2]);
+  }
+  for (const b of M.brakes) {                                                               // freno: la ganascia si appoggia al tamburo
+    const on = !!state.brakes[b.def.axis];
+    b.mesh.position.copyFrom(on ? b.engaged : b.released);
+    b.mesh.material.diffuseColor = C3.FromHexString(on ? '#d4262e' : '#6b7280');
+  }
+  sinceTable += dt;
+  if (sinceTable > .1 || !dt) {                                                             // tabella dei giri/min, 10 volte al secondo
+    sinceTable = 0;
+    for (const g of M.gears) {
+      const v = w[g.ax.idx] * g.ax.cw * 30 / PI, a = Math.abs(v);
+      if (rowOf[g.id]) rowOf[g.id].cells[4].textContent = a < 1e-6 ? '0' : (v > 0 ? '↻ ' : '↺ ') + fmt(a, a < 10 ? 3 : a < 1000 ? 1 : 0);
+    }
+    $('status').textContent = statusText(w, locked);
+  }
+});
+engine.runRenderLoop(() => scene.render());
+addEventListener('resize', () => engine.resize());
+</script>
+</body>
+</html>
