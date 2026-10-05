@@ -6,6 +6,7 @@
 
 *(avec une planche)*
 
+(traduzione automatica: [link](https://github.com/jumpjack/heliostat/blob/main/Regulateur_foucault_wilterdink_1929.pdf))
 ---
 
 > **Nota del trascrittore (italiano):** Il documento è stato digitalizzato pagina per pagina; i numeri di pagina originali (A3, A4, … A88) sono indicati come marcatori nel testo (*p. Axx*). La notazione originale per il tempo siderale usa lettere in apice h (heures), m (minutes), s (secondes) dopo ogni numero (es. "3h16m57s,7"); in alcune tabelle la "s" appare nella scansione come un asterisco "*" — è stata ripristinata come "s" ove il contesto lo rendesse inequivocabile. Le lettere greche (θ, ω, β, γ, δ, λ, μ, ε, ρ) e i simboli matematici sono stati mantenuti come nell'originale, con apici resi con ² ³ e pedici resi con underscore (es. l_0, θ_0). Le parole o cifre che non si sono potute ricostruire con certezza sono indicate tra [parentesi quadre]. Due tavole fuori testo accompagnano l'articolo: una carta stellare intitolata "TAFEL V" (apparentemente non pertinente a questo articolo, probabilmente rilegata da un articolo adiacente nello stesso volume — non trascritta in dettaglio in quanto priva di testo) e la tavola illustrativa con le Figure 1–10 richiamate nei §2 e §6 (di questa sono riportate solo le didascalie/etichette visibili, trattandosi di contenuto grafico).
