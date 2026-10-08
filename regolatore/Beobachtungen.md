@@ -40,12 +40,19 @@ All'estremità dell'asse 3, all'esterno della scatola di vetro, è montato un pi
 
 [nota 1]
 Prima catena:
-150:25 * 165:25 = 6*6.6 = 39.6
-La ruota E fa 39.6 giri per ogni giro di A
+- Numeri del testo:
+  - $\frac{150}{25} * \frac{165}{25} = 6 * 6.6 = 39.6$
+- Numeri rivisti e corretti:
+  - $\frac{150}{25} * \frac{156}{26} = 6 * 6 = 36$
+
+La ruota E fa 39.6 [36] giri per ogni giro di A
 
 [nota 2]
-150:25 * 165:25 * 200:50 * 170:34 * 234:65
-6 * 6.6 * 4 * 5 * 3.6 = 2592
+- Numeri del testo:
+  - $\frac{150}{25} * \frac{165}{25}  * \frac{170}{34}  * \frac{234}{65} = 6 * 6.6 * 4 * 5 * 3.6 = 2613.6$
+- Numeri rivisti e corretti:
+  - $\frac{150}{25} * \frac{156}{26}  * \frac{170}{34}  * \frac{234}{65} = 6 * 6 * 4 * 5 * 3.6 = 2592$
+
 
 
 [nota 3]
