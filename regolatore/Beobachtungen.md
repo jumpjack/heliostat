@@ -43,7 +43,7 @@ Prima catena:
 - Numeri del testo:
   - $\frac{150}{25} * \frac{165}{25} = 6 * 6.6 = 39.6$
 - Numeri rivisti e corretti:
-  - $\frac{150}{25} * \frac{156}{26} = 6 * 6 = 36$
+  - $\frac{150}{25} * \[\frac{156}{26}\] = 6 * 6 = 36$
 
 La ruota E fa 39.6 [36] giri per ogni giro di A
 
@@ -51,13 +51,13 @@ La ruota E fa 39.6 [36] giri per ogni giro di A
 - Numeri del testo:
   - $\frac{150}{25} * \frac{165}{25}  * \frac{170}{34}  * \frac{234}{65} = 6 * 6.6 * 4 * 5 * 3.6 = 2613.6$
 - Numeri rivisti e corretti:
-  - $\frac{150}{25} * \frac{156}{26}  * \frac{170}{34}  * \frac{234}{65} = 6 * 6 * 4 * 5 * 3.6 = 2592$
+  - $\frac{150}{25} * \[\frac{156}{26}\]   * \frac{170}{34}  * \frac{234}{65} = 6 * 6 * 4 * 5 * 3.6 = 2592$
 
 
 
 [nota 3]
-1 giro in 347.5s
-1 giro in 0.134s
+- 1 giro in 347.5s
+- 1 giro in 0.134s
 
 347.5/2592 = 0.134066
 
