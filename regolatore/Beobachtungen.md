@@ -32,18 +32,19 @@ dell'Equatoriale fornita nel primo fascicolo delle nostre osservazioni, è possi
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/1cb5cfbe-0651-4dad-98a6-8046a671feec)
 
  
- Dalla rappresentazione schematica allegata (Fig. 1) è evidente l'accoppiamento degli ingranaggi dell'orologio. Gli assi 1, 2 e 3 sono posizionati orizzontalmente, mentre 4, 5 e 6 verticalmente. La ruota dentata A ha un diametro di 13,5 centimetri e 150 denti, mentre la ruota B, che ha una lunghezza di 10,5 centimetri e un diametro di 6,75 centimetri, è progettata per ospitare un cavo d'acciaio di 0,4 centimetri di spessore. Con questo cavo, il peso è collegato in modo convenzionale attraverso una puleggia. La ruota dentata ospita anche il blocco e la molla ausiliaria, mentre la ruota B ospita un altro ingranaggio nel quale entra il meccanismo b, il cui asse è guidato attraverso il vetro del contenitore per permettere l'innesto dall'esterno della chiave per l'avvolgimento del peso. A ingrana con una ruota C di 25 denti, che a sua volta ingrana con una ruota D (diametro di 11,3 centimetri) di 165 denti. Questa ruota è collegata a un ingranaggio E di 26 denti [errore: sono 25], che a sua volta ingrana con una ruota conica F (diametro di 9,7 centimetri) di 200 denti, che è collegata all'ingranaggio G di 50 denti associato all'asse verticale 4. [nota 1]
+ Dalla rappresentazione schematica allegata (Fig. 1) è evidente l'accoppiamento degli ingranaggi dell'orologio. Gli assi 1, 2 e 3 sono posizionati orizzontalmente, mentre 4, 5 e 6 verticalmente. La ruota dentata A ha un diametro di 13,5 centimetri e 150 denti, mentre la ruota B, che ha una lunghezza di 10,5 centimetri e un diametro di 6,75 centimetri, è progettata per ospitare un cavo d'acciaio di 0,4 centimetri di spessore. Con questo cavo, il peso è collegato in modo convenzionale attraverso una puleggia. La ruota dentata ospita anche il blocco e la molla ausiliaria, mentre la ruota B ospita un altro ingranaggio nel quale entra il meccanismo b, il cui asse è guidato attraverso il vetro del contenitore per permettere l'innesto dall'esterno della chiave per l'avvolgimento del peso. A ingrana con una ruota C di 25 denti, che a sua volta ingrana con una ruota D (diametro di 11,3 centimetri) di 165 denti. Questa ruota è collegata a un ingranaggio E di 26 denti, che a sua volta ingrana con una ruota conica F (diametro di 9,7 centimetri) di 200 denti, che è collegata all'ingranaggio G di 50 denti associato all'asse verticale 4. [nota 1]
  
-All'estremità dell'asse 3, all'esterno della scatola di vetro, è montato un pignone di 25 denti, attraverso il quale il movimento viene trasmesso ai pignoni esterni e, infine, alla corona dentata fissata all'asse AR [ascensione retta?]. La  ruota conica G è solidale col pignone H (diametro di 6,75 centimetri) di 170 denti, che ingrana con il pignone J di 34 denti e la ruota K (diametro di 6,21 centimetri) di 234 denti collegata a questo, che infine ingrana con il pignone L di 65 denti posto sull'asse del regolatore. Di conseguenza, l'asse L del meccanismo compie 2592 rotazioni [nota 2], mentre la ruota dentata A ha completato un giro. Se l'orologio è regolato secondo il tempo siderale, A compie un giro in 5 minuti e 47,5 secondi, quindi L in 0,134 secondi, cioè circa 7,5 rotazioni al secondo. [nota 3]
+All'estremità dell'asse 3, all'esterno della scatola di vetro, è montato un pignone di 25 denti, attraverso il quale il movimento viene trasmesso ai pignoni esterni e, infine, alla corona dentata fissata all'asse AR [Ascensione Retta?]. La  ruota conica G è solidale col pignone H (diametro di 6,75 centimetri) di 170 denti, che ingrana con il pignone J di 34 denti e la ruota K (diametro di 6,21 centimetri) di 234 denti collegata a questo, che infine ingrana con il pignone L di 65 denti posto sull'asse del regolatore. Di conseguenza, l'asse L del meccanismo compie 2592 rotazioni [nota 2], mentre la ruota dentata A ha completato un giro. Se l'orologio è regolato secondo il tempo siderale, A compie un giro in 5 minuti e 47,5 secondi, quindi L in 0,134 secondi, cioè circa 7,5 rotazioni al secondo. [nota 3]
 
 
 
 [nota 1]
-Prima catena:
 - Numeri del testo:
   - $\frac{150}{25} * \frac{165}{25} = 6 * 6.6 = 39.6$
+  - $\frac{A}{C} * \frac{D}{E}$
 - Numeri rivisti e corretti:
   - $\frac{150}{25} * \[\frac{156}{26}\] = 6 * 6 = 36$
+  - $\frac{A}{C} * \frac{D}{E}$
 
 La ruota E fa 39.6 [36] giri per ogni giro di A
 
