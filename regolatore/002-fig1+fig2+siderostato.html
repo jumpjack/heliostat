@@ -1,0 +1,2409 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orologeria completa – struttura dati JSON</title>
+<style>
+  :root { --bg:#12161c; --panel:#1b2028; --line:#323a47; --text:#e8e4d8; --muted:#9aa3af; --accent:#d9b45a; --ok:#7fc27a; --bad:#f08a6a; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; overflow:hidden; overscroll-behavior:none;
+               background:var(--bg); color:var(--text); font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+  #stage { position:fixed; inset:0; width:100%; height:100%; display:block; touch-action:none; outline:none; }
+  #panel { position:fixed; top:max(10px,env(safe-area-inset-top)); right:max(10px,env(safe-area-inset-right));
+           width:620px; max-height:calc(100% - 20px); overflow:auto; padding:12px 14px;
+           background:rgba(27,32,40,.95); border:1px solid var(--line); border-radius:10px; }
+  h1 { margin:0 0 6px; font:600 15px/1.3 Georgia,"Times New Roman",serif; }
+  h2 { margin:12px 0 4px; font:600 13px/1.3 system-ui,sans-serif; color:var(--accent); }
+  p { margin:6px 0; color:var(--muted); }
+  #selected { display:block; min-height:2.6em; margin:8px 0 4px; color:var(--accent); }
+  label { display:block; margin:5px 0; }
+  input[type=range] { width:100%; accent-color:var(--accent); }
+  .buttons { display:flex; gap:6px; margin:6px 0; }
+  button, select { font:inherit; color:var(--text); background:#252c37; border:1px solid var(--line);
+                   border-radius:6px; padding:6px 8px; cursor:pointer; }
+  button { flex:1; }
+  button.on { border-color:var(--accent); color:var(--accent); }
+  button:focus-visible, select:focus-visible, tr:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { min-height:5em; color:var(--ok); white-space:pre-line; }
+  .bad { color:var(--bad); }
+  table { width:100%; margin-top:6px; border-collapse:collapse; }
+  th { padding:3px 4px; text-align:left; font-weight:600; color:var(--muted); }
+  th:nth-child(n+4) { text-align:right; }
+  td { padding:3px 4px; border-top:1px solid var(--line); vertical-align:top; }
+  tr { cursor:pointer; }
+  tr.sel td { background:#2a3140; color:var(--accent); }
+  td:first-child { min-width:2em; font-weight:600; white-space:nowrap; }
+  td:nth-child(3) { font-size:11px; color:var(--muted); word-break:break-all; }
+  td:nth-child(n+4) { text-align:right; white-space:nowrap; }
+  th:nth-child(6), td:nth-child(6) { text-align:left; }
+  td:nth-child(6) { font-size:11px; }
+  td:nth-child(6) div { white-space:nowrap; }
+  .mk { color:var(--accent); }
+  .small { font-size:12px; }
+  #errBanner { position:fixed; left:max(10px,env(safe-area-inset-left)); top:max(10px,env(safe-area-inset-top)); max-width:min(60%,520px); max-height:70%; overflow:auto;
+               z-index:99; padding:8px 10px; background:#4a1d1d; border:1px solid var(--bad); color:#ffd8cc; border-radius:8px;
+               font:12px/1.4 ui-monospace,Menlo,Consolas,monospace; white-space:pre-wrap; cursor:pointer; }
+  #errBanner div { margin:2px 0; }
+  @media (max-width:640px) {
+    #panel { top:auto; bottom:0; left:0; right:0; width:auto; max-height:48%; border-radius:12px 12px 0 0; overflow-x:auto;
+             padding-bottom:max(12px,env(safe-area-inset-bottom)); }
+    #errBanner { max-width:calc(100% - 20px); max-height:40%; }
+  }
+</style>
+</head>
+<body>
+<canvas id="stage" tabindex="0" aria-label="Scena 3D dell'orologeria completa"></canvas>
+
+<div id="panel">
+  <h1 id="title"></h1>
+  <p>Clicca un ingranaggio (o una riga) per farlo girare. Trascina per orbitare, rotella o pizzica per lo zoom,
+     tasto destro o due dita per spostare la vista. Assi: X rosso, Y verde (profondità), Z blu (alto).</p>
+  <p class="small">Il log di costruzione passo-passo è nella console del browser (F12). Gli errori compaiono anche nel riquadro rosso in alto a sinistra (clic per chiuderlo).</p>
+  <label class="small"><input type="checkbox" id="logAlways"> Log dettagliato anche muovendo i cursori</label>
+  <div id="views" class="buttons"></div>
+  <div id="groups"></div>
+  <div id="variants"></div>
+
+  <b id="selected">Nessun ingranaggio selezionato</b>
+  <label>Velocità dell'ingranaggio scelto: <b id="rpmLabel"></b> giri/min
+    <input id="speed" type="range" min="-1.5" max="1.8" step="0.01" value="0.9"></label>
+  <div class="buttons"><button id="btnCW">↻ Orario</button><button id="btnCCW">↺ Antiorario</button><button id="btnStop">Ferma</button></div>
+  <div id="brakes"></div>
+
+  <div id="inputs"></div>
+  <div id="controls"></div>
+  <p class="small" id="check"></p>
+
+  <h2>Effetto sul moto</h2>
+  <p id="status"></p>
+    <div class="buttons"><button id="btnExplain">Spiega le velocità (console)</button></div>
+  <label>Tempo della simulazione
+    <select id="timeScale"><option value="1">1×</option><option value=".25">0,25×</option><option value=".05">0,05×</option></select></label>
+
+<table>
+  <thead><tr>
+    <th></th><th>Ingranaggio</th><th>Asse</th><th>Denti</th><th>Ø mm</th>
+    <th>giri/min lungo l'asse: vs mondo e vs ogni parent<br><span class="small" style="color:var(--muted)">◀ = riferimento da cui è calcolata</span></th>
+  </tr></thead>
+  <tbody id="gearRows"></tbody>
+</table>
+
+  <p class="small" id="note"></p>
+</div>
+
+<!-- ===== Diagnostica: caricata per prima, così intercetta anche errori di caricamento e di sintassi ===== -->
+<script>
+const T0 = performance.now();
+const DBG = { on: true, always: false };      // DBG.on: log passo-passo attivo per la ricostruzione corrente
+const CTX = { where: '' };                    // contesto corrente, aggiunto ai messaggi d'errore delle espressioni
+const seenMsgs = new Set(), seenBanner = new Set();
+
+function banner(tag, text) {
+  const key = tag + '|' + text;
+  if (seenBanner.has(key)) return;
+  seenBanner.add(key);
+  let b = document.getElementById('errBanner');
+  if (!b) {
+    b = document.createElement('div'); b.id = 'errBanner'; b.title = 'Clic per chiudere';
+    b.onclick = () => { b.remove(); seenBanner.clear(); };
+    (document.body || document.documentElement).append(b);
+  }
+  const line = document.createElement('div');
+  line.textContent = `[${tag}] ${text}`;
+  b.append(line);
+}
+function step(tag, msg, ...rest) {
+  if (DBG.on) console.log(`%c[${tag}]%c ${msg}`, 'color:#d9b45a;font-weight:bold', 'color:inherit', ...rest);
+}
+function warn(tag, msg, ...rest) {
+  const k = tag + '|' + msg;
+  if (seenMsgs.has(k)) return;
+  seenMsgs.add(k);
+  console.warn(`[${tag}] ⚠ ${msg}`, ...rest);
+}
+function fail(tag, msg, ...rest) {
+  console.error(`[${tag}] ✖ ${msg}`, ...rest);
+  banner(tag, msg);
+}
+function reportError(where, e) {
+  const msg = (e && e.message) || String(e);
+  console.error(`[ERRORE: ${where}] ✖ ${msg}`, e);
+  banner(where, msg);
+}
+addEventListener('error', ev => reportError('window.onerror', ev.error || ev.message));
+addEventListener('unhandledrejection', ev => reportError('promise', ev.reason));
+</script>
+<script src="babylon.js" onerror="fail('caricamento','babylon.js non trovato (deve stare accanto a questa pagina)')"></script>
+
+<!-- ===== MACHINE: descrizione della macchina (era machine-new.js) ===== -->
+<script>
+/*
+  Campi nuovi/rilevanti per la cinematica:
+   • asse  "rest": "carrier"  → se nessun altro vincolo ne determina la velocità, l'asse non gira rispetto al suo carrier
+                                (senza questo campo, un asse non vincolato resta fermo rispetto al mondo, come prima).
+   • meshWith può essere una stringa oppure {id:"..."}; basta dichiarare la coppia una sola volta (i doppioni sono ignorati).
+   • Velocità: ogni asse ha una velocità w = componente, lungo il proprio asse, della velocità angolare assoluta.
+     La velocità relativa al carrier è calcolata correttamente anche quando l'asse è perpendicolare al carrier.
+*/
+var MACHINE = {
+  "title": "Orologeria completa – Fig. 1 + Fig. 2",
+  "variants": {
+    "input": {
+      "label": "Ingresso dell'asse c",
+      "active": "spur",
+      "options": {
+        "spur": "Ruote gemelle R–R′ e asse a",
+        "bevel": "Coppia conica R–R′ con asta lunga e snodo S"
+      }
+    }
+  },
+  "controls": [
+    {"id": "zR","label": "Denti di R e R′","variantKey": "input","step": 1,"ranges": {"spur": {"min": 50,"max": 100,"value": 60},"bevel": {"min": 20,"max": 60,"value": 30}}},
+    {"id": "mR","label": "Modulo di R e R′ (mm)","variantKey": "input","step": 0.1,"ranges": {"spur": {"min": 1,"max": 3,"value": 2},"bevel": {"min": 1,"max": 3,"value": 2}}},
+    {"id": "alpha","label": "Rotazione della Fig. 2 attorno all'asse 3 (°, orario da davanti)","step": 1,"ranges": {"all": {"min": -180,"max": 180,"value": 30}}}
+  ],
+  "consts": {
+    "bExt": 350,"module": 1,"face": 8,"gap": 7,"faceN": 12,"drumD": 60,"drumLen": 105,"drumR": "drumD/2","k0": 0.7,
+    "yW0": 6,"yW1": "yW0+face","yA0": "yW1+drumLen","yA1": "yA0+face","yD0": "yA1+gap","yD1": "yD0+face",
+    "yApex": "yD1+10-k0*gears.gear_G.pr",
+    "zH0": "gears.gear_F.pr+4+8","zH1": "zH0+face","zK0": "zH1+30","zK1": "zK0+face","zReg": "zK1+40",
+    "shift": 80,"uV": 0,"uS": 48,"uN": 92,"uQ": "uN+faceN+36","uR": "uQ+44",
+    "yM0": "-(shift+uN+faceN)","yM1": "-(shift+uN)",
+    "e": "gears.gear_P.pr+gears.gear_Q.pr",
+    "mOS": "e*2/(gears.gear_O.z+gears.gear_S.z)",
+    "vlen": 300,"hlen": 100,"rodLen": 200,"jointArm": 40,
+    "phiB": "-pi/2-0.5","bend": "25*pi/180",
+    "d1x": "-sin(phiB)","d1z": "cos(phiB)","d2x": "-sin(phiB+bend)","d2z": "cos(phiB+bend)",
+    "lj": "gears.gear_R.pr+4+jointArm",
+    "latitude": 42,
+    "fork_length" : 300,
+    "initialDecli" : 48*Math.PI/180,
+    "initialDecliDeg" : 48,
+    "XXp_axis_rotation" : 135
+  },
+  "axes": [
+    {"id": "axis_1B","name": "Asse 1 – tamburo","dir": [0,1,0],"ref": [1,0,0],"view": [0,-1,0],"viewLabel": "da davanti","color": "#a98a3c","hold": true,"place": {"at": [0,0,0]},"parts": [
+      {"shape": "cylinder","r": 5,"w": [-22,"yA1+4"],"n": 24},
+      {"shape": "cylinder","r": 2.5,"w": ["yW1+1","yA0"],"at": ["drumR",0],"n": 16,"color": "marker"},
+      {"shape": "cylinder","r": 4,"w": ["yW0-.4","yW1+.4"],"at": [".55*gears.gear_W.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_1A","name": "Asse 1 – ruota A","dir": [0,1,0],"ref": [1,0,0],"view": [0,-1,0],"viewLabel": "da davanti","color": "#d2ac52","place": {"at": [0,0,0]},"parts": [
+      {"shape": "cylinder","r": 9,"w": ["yA0-1","yA1+1"],"n": 24},
+      {"shape": "cylinder","r": 4,"w": ["yA0-.4","yA1+.4"],"at": [".6*gears.gear_A.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_b","name": "Asse del pignone di carica","dir": [0,1,0],"ref": [1,0,0],"view": [0,-1,0],"viewLabel": "da davanti","color": "#9aa4ae","place": {"byMesh": "gear_b","dir": ["cos(-40*pi/180)",0,"sin(-40*pi/180)"]},"parts": [
+      {"shape": "cylinder","r": 3,"w": [-22,"yW1-2"],"n": 16},
+      {"shape": "box","w": [-34,-21],"half": [4,4]}
+    ]},
+    {"id": "axis_2CD","name": "Asse 2","dir": [0,1,0],"ref": [1,0,0],"view": [0,-1,0],"viewLabel": "da davanti","color": "#b08a45","place": {"byMesh": "gear_C","dir": [1,0,0]},"parts": [
+      {"shape": "cylinder","r": 5,"w": ["yA0-4","yD1+2"],"n": 24},
+      {"shape": "cylinder","r": 3.5,"w": ["yA0-9","yD1+4"],"n": 16},
+      {"shape": "cylinder","r": 4,"w": ["yD0-.4","yD1+.4"],"at": [".6*gears.gear_D.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_3EF","name": "Asse 3","dir": [0,1,0],"ref": [1,0,0],"view": [0,-1,0],"viewLabel": "da davanti","color": "#d9782e","hold": true,"place": {"byMesh": "gear_E","dir": [1,0,0]},"parts": [
+      {"shape": "cylinder","r": 6,"w": ["yD1-.6","yApex+1.15*k0*gears.gear_G.pr"],"n": 24},
+      {"shape": "cylinder","r": 3.5,"w": ["-(uN+24+shift)","yApex+gears.gear_G.pr"],"n": 16},
+      {"shape": "cylinder","r": 15,"w": ["-(uN-18+shift)","-(uN-34+shift)"],"n": 32},
+      {"shape": "cylinder","r": 3,"w": ["yApex+k0*gears.gear_G.pr-.6","yApex+k0*gears.gear_G.pr+.5"],"at": [".5*gears.gear_F.pr",0],"n": 16,"color": "marker"},
+      {"shape": "cylinder","r": 1.8,"w": ["yM0-.4","yM1+.4"],"at": [6,0],"n": 12,"color": "marker"},
+      {"shape": "box","w": ["-(uN-22+shift)","-(uN-30+shift)"],"at": [0,-12],"half": [3,3],"color": "marker"}
+    ]},
+    {"id": "axis_3GH","name": "Asse 4","dir": [0,0,1],"ref": [1,0,0],"view": [0,0,1],"viewLabel": "dall'alto","color": "#3f74b8","place": {"byApex": "gear_F"},"parts": [
+      {"shape": "cylinder","r": 4,"w": ["gears.gear_F.pr+3","zH1+10"],"n": 16},
+      {"shape": "cylinder","r": 7,"w": ["zH0-6","zH1+6"],"n": 24},
+      {"shape": "cylinder","r": 4,"w": ["zH0-.4","zH1+.4"],"at": [".6*gears.gear_H.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_5JK","name": "Asse 5","dir": [0,0,1],"ref": [1,0,0],"view": [0,0,1],"viewLabel": "dall'alto","color": "#5f9a4a","place": {"byMesh": "gear_J","dir": [-1,0,0]},"parts": [
+      {"shape": "cylinder","r": 3,"w": ["zH0-8","zK1+8"],"n": 16},
+      {"shape": "cylinder","r": 4,"w": ["zK0-.4","zK1+.4"],"at": [".6*gears.gear_K.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_6L","name": "Asse 6 – regolatore","dir": [0,0,1],"ref": [1,0,0],"view": [0,0,1],"viewLabel": "dall'alto","color": "#8f5a9b","place": {"byMesh": "gear_L","dir": [-1,0,0]},"parts": [
+      {"shape": "cylinder","r": 3,"w": ["zK0-8","zReg+22"],"n": 16},
+      {"shape": "cylinder","r": 6,"w": ["zReg","zReg+20"],"n": 24},
+      {"shape": "prism","poly": [[0,"zReg+18"],[-34,"zReg+64"],[-14,"zReg+76"]],"y": [-1,1],"color": "#b98cc4"},
+      {"shape": "prism","poly": [[0,"zReg+18"],[34,"zReg+64"],[14,"zReg+76"]],"y": [-1,1],"color": "#b98cc4"}
+    ]},
+    {"id": "axis_XXp","name": "Asse orario inferiore XX'","dir": [0,-1,0],"ref": [0,0,1],"view": [0,-1,0],"viewLabel": "da davanti","color": "#d2ac52",
+    "group": "fig2","place": {"byMesh": "gear_N","dir": [0,0,1]},
+    "rotate": {"around": "axis_3EF","deg": "alpha"},
+
+    "parts": [
+      {"shape": "cylinder","r": 9,"w": ["shift+uN-2","shift+uN+faceN+2"],"at": ["-e",0],"n": 24},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uN-.4","shift+uN+faceN+.4"],"at": [".8*gears.gear_N.pr",0],"n": 16,"color": "marker"},
+      {"shape": "box","w": ["shift+uN+faceN","shift+uN+faceN+12"],"at": ["e",0],"half": [10,12],"color": "#6b7280"},
+      {"shape": "cylinder","r": 3,"w": ["shift+uV-34","shift+uR+face+20"],"n": 20,"variant": {"input": "spur"}},
+      {"shape": "cylinder","r": 3,"w": ["shift+uV-34","shift+uR+6"],"n": 20,"variant": {"input": "bevel"}}
+    ]},
+    {"id": "axis_YYp","name": "Asse satellite inferiore","dir": [0,-1,0],"ref": [0,0,1],"view": [0,-1,0],"viewLabel": "da davanti","color": "#9aa4ae","group": "fig2","carrier": "axis_XXp","place": {"byMesh": "gear_P","dir": [0,0,-1]},"parts": [
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uS-10","shift+uQ+face+4"],"n": 20},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uQ-.4","shift+uQ+face+.4"],"at": [".6*gears.gear_P.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_cQR",
+    "name": "Tubo ingresso AR",
+    "dir": [0,-1,0],"ref": [0,0,1],"view": [0,-1,0],"viewLabel": "da davanti","color": "#5f9a4a","group": "fig2",
+    "carrier": "axis_XXp",
+    "place": {"coaxial": "axis_XXp"},
+    "parts": [
+      {"shape": "cylinder","r": 6.5,"w": ["shift+uN+faceN+1","shift+uR+face+8"],"n": 24,"variant": {"input": "spur"}},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uR-.4","shift+uR+face+.4"],"at": [".6*gears.gear_R.pr",0],"n": 16,"color": "marker","variant": {"input": "spur"}},
+      {"shape": "cylinder","r": 6.5,"w": ["shift+uN+faceN+1","shift+uR-2"],"n": 24,"variant": {"input": "bevel"}},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uR-4.4","shift+uR-3.6"],"at": [".5*gears.gear_R.pr",0],"n": 12,"color": "marker","variant": {"input": "bevel"}}
+    ]},
+    {"id": "axis_btSV","name": "Tubo uscita AR","dir": [0,-1,0],"ref": [0,0,1],"view": [0,-1,0],"viewLabel": "da davanti","color": "#3f74b8","group": "fig2",
+    "carrier": "axis_XXp",
+    "place": {"coaxial": "axis_XXp"},"parts": [
+      {"shape": "cylinder","r": 6.5,"w": ["shift+uV+face-2-bExt","shift+uN-1"],"n": 24},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uS-.4","shift+uS+face+.4"],"at": [".6*gears.gear_S.pr",0],"n": 16,"color": "marker"},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uV+face+3.6-bExt","shift+uV+face+4.4-bExt"],"at": [".5*gears.gear_V.pr",0],"n": 12,"color": "marker"}
+    ]},
+    {"id": "axis_vs","name": "Albero verticale (V2, V3)","dir": [0,0,1],"ref": [1,0,0],"view": [0,0,1],"viewLabel": "dall'alto","color": "#c7864a",
+    "group": "fig2","place": {"byApex": "gear_V"},
+    "rotate": {"around": "axis_XXp","deg": "-alpha"},
+    "parts": [
+      {"shape": "cylinder","r": 4,"w": ["gears.gear_V2.pr+3","vlen-gears.gear_V3.pr-3"],"n": 20},
+      {"shape": "cylinder","r": 3.5,"w": ["gears.gear_V2.pr+3.6","gears.gear_V2.pr+4.4"],"at": [".5*gears.gear_V2.pr",0],"n": 12,"color": "marker"}
+    ]},
+    {"id": "axis_worm","name": "Albero orizzontale (V4 e vite)","dir": [-1,0,0],"ref": [0,0,1],"view": [-1,0,0],"viewLabel": "dall'estremità libera, guardando verso la coppia conica","color": "#4a9bc7","group": "fig2","place": {"byApex": "gear_V3"},
+    "rotate": {"around": "axis_vs","deg": -90},"parts": [
+      {"shape": "cylinder","r": 4,"w": ["gears.gear_V4.pr+3","hlen"],"n": 20},
+      {"shape": "box","w": ["hlen","hlen+14"],"half": [6,6]},
+      {"shape": "cylinder","r": 3.5,"w": ["gears.gear_V4.pr+3.6","gears.gear_V4.pr+4.4"],"at": [".5*gears.gear_V4.pr",0],"n": 12,"color": "marker"}
+    ]},
+    {"id": "axis_K_a_a1","name": "Asse della ruota della vite (AR)","dir": [0,1,0],"ref": [0,0,1],"view": [0,1,0],"viewLabel": "da davanti",
+    "color": "#c9a45a","group": "upper","place": {"byMesh": "gear_K_worm","dir": [0,0,1]},
+    "rotate": {"around": "axis_worm","deg": "latitude"},
+    "parts": [
+      {"shape": "cylinder","r": 3,"w": [-20,"300"],"n": 16}
+    ]},
+    {"id": "axis_a","name": "Asse a (chiave AR)","dir": [0,-1,0],"ref": [0,0,1],"view": [0,-1,0],"viewLabel": "da davanti","color": "#2fa39a","group": "upper","variant": {"input": "spur"},"place": {"byMesh": "gear_Rp","dir": ["-sin(110*pi/180)",0,"cos(110*pi/180)"]},"parts": [
+      {"shape": "cylinder","r": 4,"w": ["shift+uV-46","shift+uR+face+46"],"n": 20},
+      {"shape": "box","w": ["shift+uV-60","shift+uV-46"],"half": [5,5]},
+      {"shape": "box","w": ["shift+uR+face+46","shift+uR+face+60"],"half": [5,5]},
+      {"shape": "cylinder","r": 3.5,"w": ["shift+uR-.4","shift+uR+face+.4"],"at": [".6*gears.gear_R.pr",0],"n": 16,"color": "marker"}
+    ]},
+    {"id": "axis_a","name": "Asse di R′","dir": ["d1x",0,"d1z"],"view": ["d1x",0,"d1z"],"viewLabel": "dall'esterno, guardando verso R","color": "#2fa39a","group": "upper","variant": {"input": "bevel"},"place": {"byApex": "gear_R"},"parts": [
+      {"shape": "cylinder","r": 4,"w": ["gears.gear_R.pr+3","lj-20"],"n": 20},
+      {"shape": "box","w": ["lj-20","lj-14"],"half": [11,11]},
+      {"shape": "box","w": ["lj-14","lj+5"],"at": [0,14.5],"half": [7,2.5]},
+      {"shape": "box","w": ["lj-14","lj+5"],"at": [0,-14.5],"half": [7,2.5]}
+    ]},
+    {"id": "axis_rod","name": "Asta lunga","dir": ["d2x",0,"d2z"],"view": ["d2x",0,"d2z"],"viewLabel": "dall'estremità libera, guardando verso lo snodo","color": "#9aa4ae","group": "upper","variant": {"input": "bevel"},"place": {"offset": {"from": "axis_a","by": ["lj*d1x",0,"lj*d1z"]}},"parts": [
+      {"shape": "box","w": [14,20],"half": [11,11]},
+      {"shape": "box","w": [-5,14],"at": [0,14.5],"half": [7,2.5]},
+      {"shape": "box","w": [-5,14],"at": [0,-14.5],"half": [7,2.5]},
+      {"shape": "box","w": ["rodLen","rodLen+14"],"half": [6,6]}
+    ]},
+
+    {
+      "id": "axis_XXp_upper",
+      "name": "Asse superiore parallelo a K_a_a1 – portasatelliti superiore (solidale con A1_upper)",
+      "dir": [0,1,0], "ref": [0,0,1], "view": [0,-1,0], "viewLabel": "da davanti", "color": "#c9a45a", "group": "upper",
+      "place": { "byMesh": "gear_A_upper", "dir": [1,0,0] },
+      "rotate": {"around": "axis_K_a_a1","deg": "XXp_axis_rotation"},
+      "parts": [
+        {"shape": "cylinder", "r": 9, "w": ["50-2","58+2"], "at": ["-(gears.gear_b_upper.pr + gears.gear_B_upper.pr)",0], "n": 24},
+        {"shape": "cylinder", "r": 3.5, "w": ["50-.4","58+.4"], "at": [".8*gears.gear_A_upper.pr",0], "n": 16, "color": "marker"},
+        {"shape": "box", "w": ["58","58+12"], "at": ["e",0], "half": [10,12], "color": "#6b7280"},
+        {"shape": "cylinder", "r": 3, "w": ["-295+shift+uV-34","shift+uR+face+20"], "n": 20, "variant": {"input": "spur"}},
+        {"shape": "cylinder", "r": 3, "w": ["shift+uV-34","shift+uR+6"], "n": 20, "variant": {"input": "bevel"}},
+        {"shape": "box", "w": ["-250","-240"], "at": [0,0], "half": [5,20], "color": "#ffffff"}, /* barra traversa */
+        {"shape": "box", "w": ["-360","-250"], "at": [0,-18], "half": [5,2], "color": "#ffffff"}, /* asta lunga */
+        {"shape": "box", "w": ["-300","-250"], "at": [0,18], "half": [5,2], "color": "#ffffff"} /* asta lunga */
+      ]
+    },
+
+    {
+      "id": "axis_Decli",
+      "name": "Asse ruota declinazione",
+      "dir": [1,0,0], "ref":  [0, "cos(initialDecli)", "sin(initialDecli)"], "view": [-1,0,0], "viewLabel": "da davanti", "color": "#aaaa44", "group": "declinazione",
+      "carrier": "axis_XXp_upper",
+      "rest": "carrier",
+      "place": {"offset": {"from": "axis_XXp_upper", "by": [0, -350, 0]}},
+      "parts": [
+        {"shape": "cylinder", "r": 3, "w": [-20,20], "n": 20},
+        {"shape": "box", "w": [-5,5], "at": ["-fork_length/2+70",0], "half": ["fork_length/2",5], "color": "#aaaa44"},
+        {"shape": "box", "w": [-26,26], "at": ["-fork_length+67",0], "half": [3,5], "color": "#44aa44"},
+        {"shape": "box", "w": [-26,-20], "at": ["-fork_length+39.5",0], "half": [25,5], "color": "#aaaa44"},
+        {"shape": "box", "w": [20,26], "at": ["-fork_length+39.5",0], "half": [25,5], "color": "#aaaa44"}
+      ]
+    },
+
+    {
+      "id": "axis_Decli_pinion",
+      "name": "Asse pignone declinazione",
+      "dir": [-1,0,0], "ref": [0,1,0], "view": [1,0,0], "viewLabel": "da davanti", "color": "#aaaa44", "group": "declinazione",
+      "carrier": "axis_XXp_upper",
+      "place": {"offset": {"from": "axis_XXp_upper", "by": [0, -262, 0]}},
+      "parts": [
+        {"shape": "cylinder", "r": 1, "w": [-20,20], "n": 20}
+      ]
+    },
+
+    {
+      "id": "axis_barilotto_left",
+      "name": "Asse barilotto",
+      "dir": [1,0,0], "ref": [0,0,1], "view": [0,0,1], "viewLabel": "laterale", "color": "#444444", "group": "declinazione",
+      "carrier": "axis_Decli",
+      "rest": "carrier",
+      "place": {"offset": {"from": "axis_Decli", "by": [0, "-fork_length+39.5", 0]}},
+      "rotate": {"around": "axis_Decli","deg": "initialDecliDeg"},
+      "parts": [
+        {"shape": "cylinder", "r": 2, "w": [-20,-10], "n": 24, "color": "#ff8800"}
+      ]
+    },
+
+    {
+      "id": "axis_barilotto_right",
+      "name": "Asse barilotto",
+      "dir": [1,0,0], "ref": [0,0,1], "view": [0,0,1], "viewLabel": "laterale", "color": "#444444", "group": "declinazione",
+      "carrier": "axis_Decli",
+      "rest": "carrier",
+      "place": {"offset": {"from": "axis_Decli", "by": [0, "-fork_length+39.5", 0]}},
+      "rotate": {"around": "axis_Decli","deg": "initialDecliDeg"},
+      "parts": [
+        {"shape": "cylinder", "r": 2, "w": [20,10], "n": 24, "color": "#ff8800"}
+      ]
+    },
+
+    {
+      "id": "axis_tubo",
+      "name": "Tubo 40mm perpendicolare a barilotto",
+      "dir": [0,0,1], "ref": [1,0,0], "view": [0,1,0], "viewLabel": "frontale tubo", "color": "#8888ff", "group": "declinazione",
+      "carrier": "axis_barilotto_right",
+      "rest": "carrier",
+      "place": {"offset": {"from": "axis_barilotto_right", "by": [0, 0, 0]}},
+      "parts": [
+        {"shape": "cylinder", "r": 10, "w": [-20,20], "n": 24, "color": "#8888ff"}
+      ]
+    },
+
+    {
+      "id": "axis_YYp_upper",
+      "name": "Asse satellite superiore",
+      "dir": [0,1,0],
+      "ref": [0,0,1],
+      "view": [0,1,0],
+      "viewLabel": "da davanti",
+      "color": "#9aa4ae",
+      "group": "upper",
+      "carrier": "axis_A_idle_upper",
+      "place": {
+        "byMesh": "gear_b_upper",
+        "dir": [0,0,-1]
+      },
+      "parts": [
+        {"shape": "cylinder", "r": 3.5, "w": [0,110], "n": 20},
+        {"shape": "cylinder", "r": 3.5, "w": [0-.4,10+.4], "at": [".6*gears.gear_b_upper.pr",0], "n": 16, "color": "marker"},
+        {"shape": "cylinder", "r": 3.5, "w": [100-.4,110+.4], "at": [".6*gears.gear_c_upper.pr",0], "n": 16, "color": "marker"},
+        {"shape": "cylinder", "r": 3.5, "w": ["50-.4","58+.4"], "at": ["gears.gear_b_upper.pr+gears.gear_B_upper.pr",0], "n": 12, "color": "#6b7280"}
+      ]
+    },
+    {
+      "id": "axis_C_D_upper",
+      "compare": ["axis_XXp_upper"],
+      "name": "Tubo C_D upper libero",
+      "place": {"coaxial": "axis_XXp_upper"},
+      "dir": [0,1,0],
+      "ref": [0,0,1],
+      "view": [0,1,0],
+      "viewLabel": "da davanti",
+      "color": "#5f9a4a",
+      "group": "upper",
+      "parts": [
+        {"shape": "cylinder", "r": 6.5, "w": [95,115], "n": 24},
+        {"shape": "cylinder", "r": 3.5, "w": [100-.4,110+.4], "at": [".6*gears.gear_C_upper.pr",0], "n": 16, "color": "marker"}
+      ]
+    },
+    {
+      "id": "axis_B_bevel_upper",
+      "compare": ["axis_XXp_upper"],
+      "name": "Tubo uscita da B_upper a B_bevel",
+      "place": {"coaxial": "axis_XXp_upper"},
+      "dir": [0,1,0],
+      "ref": [0,0,1],
+      "view": [0,1,0],
+      "viewLabel": "da davanti",
+      "color": "#ffffff",
+      "group": "upper",
+      "parts": [
+        {"shape": "cylinder", "r": 6.5, "w": [-235,25], "n": 24},   /* tubo B-bevelB */
+        {"shape": "cylinder", "r": 3.5, "w": [0-.4,10+.4], "at": [".6*gears.gear_B_upper.pr",0], "n": 16, "color": "marker"},   /* marker B */
+        {"shape": "cylinder", "r": 3.5, "w": [-235-.4,-225+.4], "at": [".5*gears.gear_B_bevel_upper.pr",0], "n": 12, "color": "marker"}   /* marker bevel */
+      ]
+    },
+
+    {
+      "id": "axis_A_idle_upper",
+      "name": "Tubo su cui A_upper è libero di girare (folle su XXp_upper)",
+      "compare": ["axis_XXp_upper"],
+      "place": {"coaxial": "axis_XXp_upper"},
+      "dir": [0,1,0],
+      "ref": [0,0,1],
+      "view": [0,1,0],
+      "viewLabel": "da davanti",
+      "color": "#ffff00",
+      "group": "upper",
+      "parts": [
+        {"shape": "cylinder", "r": 6.5, "w": [40,70], "n": 24},   /* tubo */
+        {"shape": "cylinder", "r": 3.5, "w": [30,40], "at": [".6*gears.gear_A_upper.pr",0], "n": 16, "color": "marker"}   /* marker A */
+      ]
+    },
+
+
+
+{"id": "axis_decli_tuning",
+"compare": ["axis_XXp_upper"],
+"name": "Asse di regolazione declinazione",
+"dir": [0,1,0],"ref": [0,0,1],"view": [0,1,0],"viewLabel": "da davanti","color": "#d98c3a",
+"group": "upper",
+"rest": "world",
+"place": {"byMesh": "gear_E_upper","dir": [0,0,1]},"parts": [
+  {"shape": "cylinder","r": 3.5,"w": [-23,130],"n": 20},
+  {"shape": "cylinder","r": 3.5,"w": [110-.4,118+.4],"at": [".6*gears.gear_E_upper.pr",0],"n": 16,"color": "marker"},
+  {"shape": "cylinder","r": 3.5,"w": ["-15-4.4","-15-3.6"],"at": [".5*gears.gear_F_upper.pr",0],"n": 12,"color": "marker"}
+]},
+
+{"id": "axis_decli_tuning_in","name": "Asse di uscita coppia conica di regolazione (verticale)","dir": [0,0,1],"ref": [1,0,0],"view": [0,0,1],
+"viewLabel": "dall'alto","color": "#d98c3a","group": "upper",
+"rest": "carrier",
+"place": {"byApex": "gear_F_upper"},
+"rotate": {"around": "axis_decli_tuning","deg": "XXp_axis_rotation-90"},
+"parts": [
+  {"shape": "cylinder","r": 3.5,"w": ["gears.gear_G_upper.pr+3","gears.gear_G_upper.pr+60"],"n": 20},
+  {"shape": "cylinder","r": 3.5,"w": ["gears.gear_G_upper.pr+3.6","gears.gear_G_upper.pr+4.4"],"at": [".5*gears.gear_G_upper.pr",0],"n": 16,"color": "marker"}
+]},
+
+
+  ],
+  "gears": [
+    {"id": "gear_B","name": "Tamburo","axis": "axis_1B","type": "cylinder","r": "drumR","w": ["yW1+.5","yA0+1"],"n": 64},
+    {"id": "gear_W","name": "Ruota di carica","axis": "axis_1B","teeth": 60,"module": "module","w": ["yW0","yW1"],"note": "assunta"},
+    {"id": "gear_A","name": "Ruota del tamburo","axis": "axis_1A","teeth": 150,"module": "module","w": ["yA0","yA1"]},
+    {"id": "gear_b","name": "Pignone di carica","axis": "axis_b","teeth": 18,"module": "module","w": ["yW0","yW1"],"meshWith": "gear_W","note": "assunto"},
+    {"id": "gear_C","name": "Pignone","axis": "axis_2CD","teeth": 25,"module": "module","w": ["yA0","yA1"],"meshWith": "gear_A"},
+    {"id": "gear_D","name": "Ruota","axis": "axis_2CD","teeth": 156,"module": "module","w": ["yD0","yD1"],"note": "165 nel testo"},
+    {"id": "gear_E","name": "Pignone","axis": "axis_3EF","teeth": 26,"module": "module","w": ["yD0","yD1"],"meshWith": "gear_D"},
+    {"id": "gear_F","name": "Ruota conica","axis": "axis_3EF","type": "bevel","teeth": 200,"module": "module","apexW": "yApex","side": 1,"plate": {"k": 0.88,"from": -0.4,"to": 4,"n": 64},"note": "in presa con G"},
+    {"id": "gear_M","name": "Uscita differenziale inferiore","axis": "axis_3EF","teeth": 25,"module": "module","w": ["yM0","yM1"],"note": "in presa con N"},
+    {"id": "gear_G","name": "Pignone conico","axis": "axis_3GH","type": "bevel","teeth": 50,"module": "module","apexW": 0,"side": 1,"plate": {"k": 0.85,"from": -1,"to": 4,"n": 32},"meshWith": "gear_F","note": "in presa con F"},
+    {"id": "gear_H","name": "Ruota","axis": "axis_3GH","teeth": 170,"module": "module","w": ["zH0","zH1"]},
+    {"id": "gear_J","name": "Pignone","axis": "axis_5JK","teeth": 34,"module": "module","w": ["zH0","zH1"],"meshWith": "gear_H"},
+    {"id": "gear_K","name": "Ruota","axis": "axis_5JK","teeth": 234,"module": "module","w": ["zK0","zK1"]},
+    {"id": "gear_L","name": "Pignone del regolatore ad alette","axis": "axis_6L","teeth": 65,"module": "module","w": ["zK0","zK1"],"meshWith": "gear_K"},
+    {"id": "gear_N","name": "Ruota portasatelliti","axis": "axis_XXp","teeth": 204,"module": "module","w": ["shift+uN","shift+uN+faceN"],"meshWith": "gear_M"},
+    {"id": "gear_P","name": "Satellite grande di ingresso AR","axis": "axis_YYp","teeth": 62,"module": "module","w": ["shift+uQ","shift+uQ+face"],"meshWith": "gear_Q"},
+    {"id": "gear_O","name": "Satellite piccolo di uscita AR","axis": "axis_YYp","teeth": 16,"module": "mOS","w": ["shift+uS","shift+uS+face"],"meshWith": "gear_S"},
+    {"id": "gear_Q","name": "Pianeta di ingresso AR","axis": "axis_cQR","teeth": 31,"module": "module","w": ["shift+uQ","shift+uQ+face"]},
+    {"id": "gear_S","name": "Pianeta di uscita AR","axis": "axis_btSV","teeth": 80,"module": "mOS","w": ["shift+uS","shift+uS+face"]},
+    {"id": "gear_V","name": "Ruota conica di uscita AR","axis": "axis_btSV","type": "bevel","teeth": 66,"module": "module","apexW": "shift+uV+face-gears.gear_V.pr-bExt","side": 1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48}},
+    {"id": "gear_V2","name": "Ruota conica in basso","axis": "axis_vs","type": "bevel","teeth": 66,"module": "module","apexW": 0,"side": 1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},"meshWith": "gear_V","note": "dati assunti"},
+    {"id": "gear_V3","name": "Ruota conica in alto","axis": "axis_vs","type": "bevel","teeth": 40,"module": "module","apexW": "vlen","side": -1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},"note": "dati assunti"},
+    {"id": "gear_V4","name": "Ruota conica per worm","axis": "axis_worm","type": "bevel","teeth": 40,"module": "module","apexW": 0,"side": 1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},"meshWith": "gear_V3","note": "dati assunti"},
+    {"id": "gear_Worm","label": "worm","name": "Vite senza fine (1 principio, passo destro)","axis": "axis_worm","type": "worm","module": "module","q": 12,"starts": 1,"hand": 1,"w": ["hlen-50","hlen-10"],"note": "dati assunti"},
+    {"id": "gear_K_worm","label": "gear di worm","name": "Ruota della vite","axis": "axis_K_a_a1","type": "wormwheel","teeth": 40,"module": "module","meshWith": "gear_Worm","note": "dati assunti"},
+
+    {"id": "gear_R","label": "R","name": "Input AR spur 1","axis": "axis_cQR","teeth": "zR","module": "mR","w": ["shift+uR","shift+uR+face"],"variant": {"input": "spur"}},
+    {"id": "gear_Rp","label": "R′","name": "Input AR spur 2","axis": "axis_a","teeth": "zR","module": "mR","w": ["shift+uR","shift+uR+face"],"meshWith": "gear_R","variant": {"input": "spur"}},
+    {"id": "gear_R","label": "R","name": "Input AR bevel 1","axis": "axis_cQR","type": "bevel","teeth": "zR","module": "mR","apexW": "shift+uR+gears.gear_R.pr","side": -1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},"variant": {"input": "bevel"}},
+    {"id": "gear_Rp","label": "R′","name": "Input AR bevel 2","axis": "axis_a","type": "bevel","teeth": "zR","module": "mR","apexW": 0,"side": 1,"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},"meshWith": "gear_R","variant": {"input": "bevel"}},
+
+    {"id": "gear_a","name": "Pignone a su worm (20 denti)","axis": "axis_K_a_a1","teeth": 20,"module": "module","w": [50,58]},
+    {"id": "gear_a1","name": "Pignone a1 su worm (18 denti)","axis": "axis_K_a_a1","teeth": 18,"module": "module","w": [150,158]},
+
+    {"id": "gear_A_upper",
+        "name": "Ruota A_upper – FOLLE su XXp_upper, prende moto da gear_a (20/200)",
+      "axis": "axis_A_idle_upper",
+      "teeth": 200,
+      "module": "module","w": [50,58],"meshWith": "gear_a"
+    },
+
+    {"id": "gear_A1_upper",
+    "name": "Ruota A1_upper – SOLIDALE con XXp_upper, prende moto da gear_a1 (18/200)",
+    "axis": "axis_XXp_upper","teeth": 200,"module": "module","w": [150,158],
+    "meshWith": "gear_a1"},
+
+    {"id": "gear_b_upper","name": "Satellite b 8 denti - SINISTRA","axis": "axis_YYp_upper","teeth": 8,"module": 1,"w": [0,10],"meshWith": "gear_B_upper"},
+    {"id": "gear_B_upper","name": "Pianeta B 40 denti - SINISTRA","axis": "axis_B_bevel_upper","teeth": 40,"module": 1,"w": [0,10]},
+    {"id": "gear_B_bevel_upper","name": "Conica B_bevel -100mm da B in X+","axis": "axis_B_bevel_upper","type": "bevel","teeth": 66,"module": 1,"apexW": "-295+gears.gear_B_bevel_upper.pr","side": 1,"plate": {"k": 0.85,"from": 3,"to": 0,"n": 48},"meshWith": "gear_U_bevel_decli"},
+    {"id": "gear_c_upper","name": "Satellite c 32 denti - DESTRA","axis": "axis_YYp_upper","teeth": 32,"module": 1,"w": [100,110],"meshWith": "gear_C_upper"},
+    {"id": "gear_C_upper","name": "Pianeta C 16 denti - DESTRA","axis": "axis_C_D_upper","teeth": 16,"module": 1,"w": [100,110]},
+
+    {"id": "gear_D_upper","label": "D_upper","name": "D_upper solidale a C_upper (ingresso declinazione)",
+     "axis": "axis_C_D_upper","teeth": 160,"module": 1,"w": [117,123]},
+
+    {"id": "gear_U_bevel_decli","name": "Conica gemella B_bevel (pignone di declinazione)","axis": "axis_Decli_pinion","type": "bevel","teeth": 66,"module": 1,"apexW": "0",
+    "side": -1,"plate": {"k": 0.85, "from": 3, "to": 0, "n": 48}},
+
+    {"id": "gear_I_pinion_decli","name": "Pignone declinazione (16 denti)","axis": "axis_Decli_pinion","teeth": 16,"module": 1,"w": [-15,15]},
+
+    {"id": "gear_H__decli","name": "Semiruota di declinazione (160 denti)","axis": "axis_Decli","teeth": 160,"module": 1,"w": [-15,-10],"meshWith": "gear_I_pinion_decli"},
+
+{"id": "gear_E_upper","label": "gear_E_upper","name": "Ruota di regolazione declinazione (80 denti)","axis": "axis_decli_tuning","teeth": 60,"module": 1,"w": [115,125],
+"meshWith": "gear_D_upper"},
+
+
+{
+  "id": "gear_F_upper","name": "Conico di regolazione (40 denti) su decli_tuning",
+  "axis": "axis_decli_tuning",
+  "type": "bevel","teeth": 40,"module": 1,"apexW": "-15+gears.gear_F_upper.pr","side": -1,
+  "plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48},
+  "meshWith": "gear_G_upper"
+},
+
+
+{
+"id": "gear_G_upper",
+"name": "Conico di uscita (40 denti)",
+"axis": "axis_decli_tuning_in",
+"type": "bevel",
+"teeth": 40,"module": 1,"apexW": 0,"side": 1,
+"plate": {"k": 0.85,"from": -0.4,"to": 4,"n": 48}
+},
+
+  ],
+  "links": [
+    {"type": "ratchet","driver": "axis_1B","driven": "axis_1A","sign": 1,"messages": {"drives": "Il tamburo trascina A tramite il nottolino: si muove tutta la catena, M e N compresi.","winding": "Caricamento: gira solo il tamburo B (la fune si avvolge). Il nottolino scatta e il resto della catena resta fermo.","freewheel": "Il nottolino scorre a vuoto: il tamburo B resta fermo mentre la catena gira.","blocks": "Verso opposto: il nottolino blocca e A trascina il tamburo (la fune si avvolge)."}},
+    {"type": "brake","axis": "axis_3EF","group": "fig2","label": "Freno u inserito (blocca l'asse 3: ferma E, M, N e la catena)","shoe": {"at": ["axes.axis_3EF.ox","-(shift+uN-26)",-15],"size": [16,24,6],"released": [0,0,-6]},"message": "Freno u inserito: asse 3, M e N bloccati."},
+    {"type": "rope","axis": "axis_1B","at": ["drumR+2.05","(yW1+yA0)/2",0],"radius": "drumR","len0": 90,"min": 30,"max": 500},
+    {"type": "hooke","input": "axis_a","output": "axis_rod","group": "fig2","variant": {"input": "bevel"},"arm": {"r": 2.3,"len": 13},"message": "Snodo S ({beta|0}°): l'asta gira regolare, R′ no; la sua velocità oscilla tra {lo|3}× e {hi|3}× quella dell'asta, due volte per giro."},
+{"type": "brake","axis": "axis_decli_tuning_in","group": "upper","label": "Freno sull'asse axis_decli_tuning_in (blocca G_upper, F_upper e la catena collegata)","shoe": {"at": ["axes.axis_decli_tuning_in.ox+3.5+4","axes.axis_decli_tuning_in.oy","axes.axis_decli_tuning_in.oz+50"],"size": [8,16,24],"released": [10,0,0]},"message": "Freno su axis_decli_tuning_in inserito: asse bloccato."},
+  ],
+  "inputs": [
+    {"id": "key","label": "Chiave AR (asse a)","axis": "axis_a","variant": {"input": "spur"},"hint": "A chiave rilasciata il suo peso tiene fermo l'asse c."},
+    {"id": "key","label": "Chiave AR (asta lunga)","axis": "axis_rod","variant": {"input": "bevel"},"hint": "A chiave rilasciata il suo peso tiene ferma l'asta, quindi l'asse c."}
+  ],
+  "groups": [{"id": "fig2","label": "Mostra la parte Fig. 2","visible": true}],
+  "views": [
+    {"id": "all","label": "Insieme","auto": true,"alpha": "pi/2-0.7","beta": 1.1,"scale": 1.25},
+    {"id": "front","label": "Fig. 1 (da davanti)","target": [100,60,60],"alpha": "pi/2","beta": "pi/2","radius": 900},
+    {"id": "side","label": "Fig. 2 (da sinistra)","target": ["axes.axis_3EF.ox","-(shift+110)",100],"alpha": "pi","beta": "pi/2","radius": 760}
+  ],
+  "checks": [
+    {"type": "axisClearsGear","axis": "axis_a","shaftR": 4,"gear": "gear_N","min": 2,"variant": {"input": "spur"},"text": "Asse a a {dist|1} mm dall'asse principale ({zR|0} denti × modulo {mR|1}). ","ok": "Libero da N (gioco {gap|1} mm).","bad": "Interferisce con N: mancano {miss|1} mm. Aumenta denti o modulo."},
+    {"type": "info","variant": {"input": "bevel"},"text": "Coppia conica: R e R′ da {zR|0} denti, modulo {mR|1} (Ø {gears.gear_R.d|1} mm), assi a 90° con apice sull'asse principale. Sta davanti a N e l'asta parte da lì: nessuna interferenza. Snodo S di {bend*180/pi|0}°."}
+  ],
+  "differential": {"out": "axis_btSV","ins": ["axis_XXp","axis_cQR"],"text": "Fig. 2: w_S = {a|3} · w_N + {b|3} · w_c."},
+  "ratios": [{"from": "axis_1A","to": "axis_6L","text": "Un giro di A fa {r|1} giri di L."}],
+  "notes": ["Ø primitivo = denti × modulo ({module|1} mm). P–Q e M–N a modulo {module|1}, O–S a modulo {mOS|5}: i satelliti hanno un solo asse, a {e|1} mm da Q e da S.","La bussola di N è resa come manicotto. Dati assunti: ruota di carica, pignone b, denti di V2, V3, V4; regolatore e fune semplificati."]
+};
+</script>
+
+<script>
+if (typeof BABYLON === 'undefined') throw new Error('babylon.js non caricato');
+if (typeof MACHINE === 'undefined') throw new Error('MACHINE non definito (errore di sintassi nel blocco MACHINE: guarda gli errori sopra in console)');
+step('avvio', `Babylon ${BABYLON.Engine.Version} · MACHINE "${MACHINE.title}": ${MACHINE.axes.length} assi e ${MACHINE.gears.length} ingranaggi definiti (tutte le varianti)`);
+
+/* =====================================================================
+   0. STRUTTURA DATI  (tutto ciò che serve per costruire e far girare la macchina)
+   ---------------------------------------------------------------------
+   Per aggiungere un asse o un ingranaggio basta aggiungere un elemento in "axes" o in "gears".
+   Sistema di riferimento del modello: X destra, Y profondità (verso il fondo), Z alto. Millimetri.
+   Ovunque un numero è atteso si può scrivere un'espressione tra virgolette (es. "gears.gear_F.pr+4+8"):
+     • costanti di "consts" e valori dei cursori di "controls" (per nome)
+     • gears[ID].z, gears[ID].m, gears[ID].pr, gears[ID].d  = denti, modulo, raggio primitivo, diametro dell'ingranaggio ID (anche gears.ID.pr)
+     • axes[ID].ox, axes[ID].oy, axes[ID].oz = coordinate dell'origine dell'asse ID (dopo il posizionamento) (anche axes.ID.ox)
+     • pi, sin, cos, tan, atan, atan2, sqrt, abs, min, max
+   Ogni elemento può avere  variant:{nome:valore}  e viene incluso solo se quella variante è attiva.
+   Ingranaggi conici senza ingranaggio accoppiato (nessun meshWith): aggiungere  "delta": gradi  (semi-angolo del cono primitivo).
+   Asse con  "rest":"carrier": se nulla ne determina la velocità, resta solidale al suo carrier.
+*/
+
+/* =====================================================================
+   1. UTILITÀ: vettori, valutatore di espressioni, formattazione
+   ===================================================================== */
+const PI = Math.PI, cos = Math.cos, sin = Math.sin;
+const $ = id => document.getElementById(id);
+
+const fmt = (v, d) => v.toLocaleString('it', { maximumFractionDigits: d });
+const fmtV = v => '(' + v.map(x => Number.isFinite(x) ? +x.toFixed(2) : x).join(', ') + ')';
+
+const V = {
+  add: (a, b) => [a[0] + b[0], a[1] + b[1], a[2] + b[2]],
+  sub: (a, b) => [a[0] - b[0], a[1] - b[1], a[2] - b[2]],
+  mul: (a, k) => [a[0] * k, a[1] * k, a[2] * k],
+  dot: (a, b) => a[0] * b[0] + a[1] * b[1] + a[2] * b[2],
+  cross: (a, b) => [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]],
+  len: a => Math.hypot(a[0], a[1], a[2]),
+  unit: a => { const l = Math.hypot(a[0], a[1], a[2]) || 1; return [a[0] / l, a[1] / l, a[2] / l]; },
+  perp: (a, d) => V.sub(a, V.mul(d, V.dot(a, d))),
+  anyPerp: d => V.unit(V.cross(d, Math.abs(d[2]) < 0.9 ? [0, 0, 1] : [1, 0, 0])),
+  toB: a => [a[0], a[2], -a[1]]
+};
+
+class NotPlaced extends Error {}
+
+function makeEvaluator(M, state, resolving, gTeeth, gModule, gRadius) {
+  const FN = { sin: Math.sin, cos: Math.cos, tan: Math.tan, atan: Math.atan, atan2: Math.atan2, sqrt: Math.sqrt, abs: Math.abs, min: Math.min, max: Math.max };
+  const cache = {};
+
+  function tokenize(src) {
+    const tokens = [];
+    let i = 0;
+    while (i < src.length) {
+      const ch = src[i];
+      if (/\s/.test(ch)) { i++; continue; }
+      if (ch === '"' || ch === "'") {
+        const quote = ch;
+        let j = i + 1;
+        let str = "";
+        while (j < src.length) {
+          const c = src[j];
+          if (c === "\\" && j + 1 < src.length) {
+            const nxt = src[j+1];
+            if (nxt === quote || nxt === "\\") { str += nxt; j += 2; continue; }
+          }
+          if (c === quote) break;
+          str += c; j++;
+        }
+        if (j >= src.length) throw new Error('Stringa non chiusa: ' + src);
+        tokens.push({type:'string', value:str});
+        i = j + 1;
+        continue;
+      }
+      if (/[0-9]/.test(ch) || (ch === '.' && i+1 < src.length && /[0-9]/.test(src[i+1]))) {
+        const m = src.slice(i).match(/^\d*\.?\d+(?:[eE][+-]?\d+)?/);
+        if (m) {
+          tokens.push({type:'number', value:parseFloat(m[0])});
+          i += m[0].length;
+          continue;
+        }
+      }
+      if (/[A-Za-z_]/.test(ch)) {
+        let j = i;
+        while (j < src.length && /[A-Za-z0-9_]/.test(src[j])) j++;
+        tokens.push({type:'identifier', name:src.slice(i,j)});
+        i = j;
+        continue;
+      }
+      if (',.+-*/^()[]'.indexOf(ch) >= 0) {
+        tokens.push({type:'op', value:ch});
+        i++;
+        continue;
+      }
+      throw new Error('Carattere inatteso: ' + ch + ' in ' + src);
+    }
+    return tokens;
+  }
+
+  class Parser {
+    constructor(tokens){ this.tokens=tokens; this.pos=0; }
+    peek(){ return this.tokens[this.pos]; }
+    consume(){ return this.tokens[this.pos++]; }
+    parseExpression(){ return this.parseAddSub(); }
+    parseAddSub(){
+      let left=this.parseMulDiv();
+      while (this.peek() && this.peek().type==='op' && (this.peek().value==='+'||this.peek().value==='-')){
+        const op=this.consume().value;
+        const right=this.parseMulDiv();
+        left={type:'bin', op, left, right};
+      }
+      return left;
+    }
+    parseMulDiv(){
+      let left=this.parseUnary();
+      while (this.peek() && this.peek().type==='op' && (this.peek().value==='*'||this.peek().value==='/')){
+        const op=this.consume().value;
+        const right=this.parseUnary();
+        left={type:'bin', op, left, right};
+      }
+      return left;
+    }
+    parseUnary(){
+      const t=this.peek();
+      if (t && t.type==='op' && (t.value==='+'||t.value==='-')){
+        const op=this.consume().value;
+        const operand=this.parseUnary();
+        return {type:'unary', op, operand};
+      }
+      return this.parsePower();
+    }
+    parsePower(){
+      let left=this.parsePostfix();
+      const t=this.peek();
+      if (t && t.type==='op' && t.value==='^'){
+        this.consume();
+        const right=this.parseUnary();
+        left={type:'bin', op:'^', left, right};
+      }
+      return left;
+    }
+    parsePostfix(){
+      let node=this.parsePrimary();
+      while (true){
+        const t=this.peek();
+        if (!t) break;
+        if (t.type==='op' && t.value==='.'){
+          this.consume();
+          const id=this.peek();
+          if (!id || id.type!=='identifier') throw new Error('Atteso identificatore dopo .');
+          this.consume();
+          node={type:'member_dot', base:node, prop:id.name};
+        } else if (t.type==='op' && t.value==='['){
+          this.consume();
+          const key=this.parseExpression();
+          const closing=this.peek();
+          if (!closing || closing.type!=='op' || closing.value!==']') throw new Error('Atteso ]');
+          this.consume();
+          node={type:'member_bracket', base:node, key};
+        } else break;
+      }
+      return node;
+    }
+    parsePrimary(){
+      const t=this.peek();
+      if (!t) throw new Error('Espressione incompleta');
+      if (t.type==='number'){ this.consume(); return {type:'number', value:t.value}; }
+      if (t.type==='string'){ this.consume(); return {type:'string', value:t.value}; }
+      if (t.type==='identifier'){
+        const name=t.name;
+        this.consume();
+        const nxt=this.peek();
+        if (nxt && nxt.type==='op' && nxt.value==='('){
+          this.consume();
+          const args=[];
+          if (!(this.peek() && this.peek().type==='op' && this.peek().value===')')){
+            while (true){
+              args.push(this.parseExpression());
+              const sep=this.peek();
+              if (sep && sep.type==='op' && sep.value===','){ this.consume(); continue; }
+              break;
+            }
+          }
+          const closing=this.peek();
+          if (!closing || closing.type!=='op' || closing.value!==')') throw new Error('Atteso )');
+          this.consume();
+          return {type:'call', name, args};
+        }
+        return {type:'identifier', name};
+      }
+      if (t.type==='op' && t.value==='('){
+        this.consume();
+        const expr=this.parseExpression();
+        const closing=this.peek();
+        if (!closing || closing.type!=='op' || closing.value!==')') throw new Error('Atteso )');
+        this.consume();
+        return expr;
+      }
+      throw new Error('Token inatteso: '+JSON.stringify(t));
+    }
+  }
+
+  function parse(src){
+    if (cache[src]) return cache[src];
+    const tokens=tokenize(src);
+    const parser=new Parser(tokens);
+    const ast=parser.parseExpression();
+    if (parser.pos !== tokens.length) throw new Error('Espressione non completa: ' + src);
+    cache[src]=ast;
+    return ast;
+  }
+
+  function evalNode(node, extra){
+    switch(node.type){
+      case 'number': return node.value;
+      case 'string': return node.value;
+      case 'identifier': {
+        const name=node.name;
+        if (name==='gears') return {__type:'gears_proxy'};
+        if (name==='axes') return {__type:'axes_proxy'};
+        if (name==='pi') return PI;
+        if (extra && name in extra) return extra[name];
+        if (name in state.params) return state.params[name];
+        if (name in M.constVal) return M.constVal[name];
+        if (name in MACHINE.consts){
+          if (resolving.has(name)) throw new Error('Costante circolare: '+name);
+          resolving.add(name);
+          try {
+            const v = ev(MACHINE.consts[name], extra);
+            M.constVal[name]=v;
+            return v;
+          } finally { resolving.delete(name); }
+        }
+        throw new Error('Simbolo sconosciuto: '+name);
+      }
+      case 'member_dot': {
+        const base=evalNode(node.base, extra);
+        const prop=node.prop;
+        if (base && base.__type==='gears_proxy'){
+          const g=M.gearBy[prop];
+          if (!g) throw new Error('Ingranaggio sconosciuto (o non attivo in questa variante): '+prop);
+          return {__type:'gear', id:prop, ref:g};
+        }
+        if (base && base.__type==='gear'){
+          const g=base.ref;
+          if (prop==='z') return gTeeth(g);
+          if (prop==='m') return gModule(g);
+          if (prop==='pr') return gRadius(g);
+          if (prop==='d') return 2*gRadius(g);
+          throw new Error('Proprietà ingranaggio sconosciuta: '+prop);
+        }
+        if (base && base.__type==='axes_proxy'){
+          const a=M.axisBy[prop];
+          if (!a) throw new Error('Asse sconosciuto (o non attivo in questa variante): '+prop);
+          return {__type:'axis', id:prop, ref:a};
+        }
+        if (base && base.__type==='axis'){
+          const a=base.ref;
+          if (!a.O) throw new NotPlaced(a.id);
+          if (prop==='ox') return a.O[0];
+          if (prop==='oy') return a.O[1];
+          if (prop==='oz') return a.O[2];
+          throw new Error('Proprietà asse sconosciuta: '+prop);
+        }
+        throw new Error('Accesso . non valido');
+      }
+      case 'member_bracket': {
+        const base=evalNode(node.base, extra);
+        let keyVal;
+        try { keyVal=evalNode(node.key, extra); }
+        catch(e){
+          if (node.key.type==='identifier') keyVal=node.key.name;
+          else throw e;
+        }
+        const keyStr = typeof keyVal==='string' ? keyVal : String(keyVal);
+        if (base && base.__type==='gears_proxy'){
+          const g=M.gearBy[keyStr];
+          if (!g) throw new Error('Ingranaggio sconosciuto (o non attivo in questa variante): '+keyStr);
+          return {__type:'gear', id:keyStr, ref:g};
+        }
+        if (base && base.__type==='axes_proxy'){
+          const a=M.axisBy[keyStr];
+          if (!a) throw new Error('Asse sconosciuto (o non attivo in questa variante): '+keyStr);
+          return {__type:'axis', id:keyStr, ref:a};
+        }
+        if (base && base.__type==='gear'){
+          const g=base.ref;
+          if (keyStr==='z') return gTeeth(g);
+          if (keyStr==='m') return gModule(g);
+          if (keyStr==='pr') return gRadius(g);
+          if (keyStr==='d') return 2*gRadius(g);
+          throw new Error('Proprietà ingranaggio sconosciuta: '+keyStr);
+        }
+        if (base && base.__type==='axis'){
+          const a=base.ref;
+          if (!a.O) throw new NotPlaced(a.id);
+          if (keyStr==='ox') return a.O[0];
+          if (keyStr==='oy') return a.O[1];
+          if (keyStr==='oz') return a.O[2];
+          throw new Error('Proprietà asse sconosciuta: '+keyStr);
+        }
+        throw new Error('Accesso [] non valido');
+      }
+      case 'bin': {
+        const l=evalNode(node.left, extra);
+        const r=evalNode(node.right, extra);
+        switch(node.op){
+          case '+': return l+r;
+          case '-': return l-r;
+          case '*': return l*r;
+          case '/': return l/r;
+          case '^': return Math.pow(l,r);
+          default: throw new Error('Operatore sconosciuto: '+node.op);
+        }
+      }
+      case 'unary': {
+        const v=evalNode(node.operand, extra);
+        return node.op==='+' ? +v : -v;
+      }
+      case 'call': {
+        const fn=FN[node.name];
+        if (!fn) throw new Error('Funzione sconosciuta: '+node.name);
+        const args=node.args.map(a=>evalNode(a, extra));
+        return fn(...args);
+      }
+      default: throw new Error('Nodo sconosciuto');
+    }
+  }
+
+  // Valuta un numero o un'espressione. Gli errori vengono arricchiti con l'espressione e con il contesto (CTX.where).
+  function ev(e, extra){
+    if (typeof e==='number') return e;
+    if (typeof e!=='string') throw new Error('valore non valido (atteso un numero o un\'espressione tra virgolette): ' + JSON.stringify(e) + (CTX.where ? '  [' + CTX.where + ']' : ''));
+    try { return evalNode(parse(e), extra); }
+    catch (err) {
+      if (err instanceof NotPlaced) throw err;
+      if (!err.__ctx) { err.message += `  ⟵ espressione "${e}"` + (CTX.where ? `  [${CTX.where}]` : ''); err.__ctx = true; }
+      throw err;
+    }
+  }
+  return ev;
+}
+
+function template(str, ev, extra) {
+  return str.replace(/\{([^{}|]+)(?:\|(\d+))?\}/g, (_, e, d) => fmt(ev(e, extra), d === undefined ? 1 : +d));
+}
+
+/* =====================================================================
+   2. GEOMETRIA: dentatura a evolvente, ruote cilindriche e coniche, solidi semplici
+   ===================================================================== */
+const PRESSURE = 20 * PI / 180;
+const BACKLASH = 0.05;
+const inv = a => Math.tan(a) - a;
+
+function toothProfile(z, m, nFlank) {
+  const rp = m * z / 2, rb = rp * cos(PRESSURE), ra = rp + m, rf = rp - 1.25 * m;
+  const halfBase = PI / (2 * z) + inv(PRESSURE), rStart = Math.max(rb, rf), pitch = 2 * PI / z;
+  const r = [], half = [];
+  for (let i = 0; i < nFlank; i++) {
+    const q = rStart + (ra - rStart) * i / (nFlank - 1);
+    r.push(q);
+    half.push(halfBase - inv(Math.acos(Math.min(1, rb / q))) - BACKLASH * m / (2 * rp));
+  }
+  const out = [];
+  for (let i = 0; i < nFlank; i++) out.push([r[i], -half[i]]);
+  out.push([ra, 0]);
+  for (let i = nFlank - 1; i >= 0; i--) out.push([r[i], half[i]]);
+  if (rf < rb) out.push([rf, half[0]]);
+  out.push([rf, half[0] + (pitch - 2 * half[0]) / 3], [rf, half[0] + (pitch - 2 * half[0]) * 2 / 3]);
+  if (rf < rb) out.push([rf, pitch - half[0]]);
+  return out;
+}
+
+function loft(A, B, capA, capB) {
+  const n = A.length, T = [];
+  for (let i = 0; i < n; i++) {
+    const j = (i + 1) % n;
+    T.push([i, j, n + j], [i, n + j, n + i], [2 * n, j, i], [2 * n + 1, n + i, n + j]);
+  }
+  return { P: [...A, ...B, capA, capB], T };
+}
+
+function spurGear(z, m, rho, w0, w1) {
+  const prof = toothProfile(z, m, z > 120 ? 6 : 8), pitch = 2 * PI / z, A = [], B = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const a = rho + k * pitch + d, x = r * cos(a), y = r * sin(a);
+      A.push([x, y, w0]); B.push([x, y, w1]);
+    }
+  }
+  return loft(A, B, [0, 0, w0], [0, 0, w1]);
+}
+
+function bevelGear(z, m, delta, rho, k0) {
+  const R = m * z / 2, wp = R / Math.tan(delta);
+  const zVirtual = z / cos(delta), rVirtual = R / cos(delta);
+  const prof = toothProfile(zVirtual, m, 8), pitchV = 2 * PI / zVirtual, P = [];
+  for (let k = 0; k < z; k++) {
+    for (const [r, d] of prof) {
+      const t = rho + (k * pitchV + d) / cos(delta);
+      const s = r - rVirtual;
+      const q = R + s * cos(delta);
+      P.push([q * cos(t), q * sin(t), wp - s * sin(delta)]);
+    }
+  }
+  const wMean = P.reduce((a, p) => a + p[2], 0) / P.length;
+  return loft(P.map(p => p.map(v => v * k0)), P, [0, 0, k0 * wMean], [0, 0, wMean]);
+}
+
+function ringsLoft(rings, capA, capB) {
+  const nr = rings.length, n = rings[0].length, P = [], T = [];
+  for (const r of rings) P.push(...r);
+  const cA = P.length; P.push(capA);
+  const cB = P.length; P.push(capB);
+  for (let i = 0; i < nr - 1; i++) for (let j = 0; j < n; j++) {
+    const j2 = (j + 1) % n, a = i * n + j, b = i * n + j2, c = (i + 1) * n + j2, d = (i + 1) * n + j;
+    T.push([a, b, c], [a, c, d]);
+  }
+  for (let j = 0; j < n; j++) {
+    const j2 = (j + 1) % n;
+    T.push([cA, j2, j], [cB, (nr - 1) * n + j, (nr - 1) * n + j2]);
+  }
+  return { P, T };
+}
+
+function wormParams(m, q, starts, hand, L) {
+  const rp = q * m / 2;
+  return { m, rp, ra: rp + m, rr: rp - 1.2 * m, px: PI * m, lead: starts * PI * m, starts, hand, L };
+}
+
+function wormRadius(wp, u) {
+  const au = Math.abs(u), t = Math.tan(PRESSURE);
+  const tipHalf = (wp.px / 2 - 2 * (wp.ra - wp.rp) * t) / 2, rootHalf = (wp.px / 2 + 2 * (wp.rp - wp.rr) * t) / 2;
+  if (au <= tipHalf) return wp.ra;
+  if (au >= rootHalf) return wp.rr;
+  return wp.ra - (au - tipHalf) * (wp.ra - wp.rr) / (rootHalf - tipHalf);
+}
+
+function wormSolid(wp, rho, w0, w1) {
+  const n = 96, nx = Math.max(2, Math.ceil((w1 - w0) / (wp.px / 20))), wc = (w0 + w1) / 2, k = wp.hand * wp.lead / (2 * PI);
+  const rings = [];
+  for (let i = 0; i <= nx; i++) {
+    const x = w0 + (w1 - w0) * i / nx, ring = [];
+    for (let j = 0; j < n; j++) {
+      const psi = 2 * PI * j / n;
+      let u = x - wc - k * psi; u -= wp.px * Math.round(u / wp.px);
+      const r = wormRadius(wp, u), a = rho + psi;
+      ring.push([r * cos(a), r * sin(a), x]);
+    }
+    rings.push(ring);
+  }
+  return ringsLoft(rings, [0, 0, w0], [0, 0, w1]);
+}
+
+const wheelFace = (m, wp) => 1.7 * Math.sqrt(4.5 * m * wp.rp);
+
+function wormWheelSolid(z, m, wp, sg, rho, w0, w1) {
+  const rg = z * m / 2, a = wp.rp + rg, t = Math.tan(PRESSURE), e = 0.03 * m;
+  const rc = wp.ra + 0.25 * m, rBlank = rg + m;
+  const inCutter = (Y, Zc, xt) => {
+    const r = Math.hypot(Y, Zc);
+    if (r > rc) return false;
+    if (r <= wp.rr) return true;
+    let u = xt - wp.hand * wp.lead / (2 * PI) * Math.atan2(Zc, Y); u -= wp.px * Math.round(u / wp.px);
+    return Math.abs(u) <= wp.px / 4 - (r - wp.rp) * t + e;
+  };
+  const cut = (r, phiP, zP) => {
+    const lim = (a - rc) / r;
+    if (lim >= 1) return false;
+    const Pm = Math.acos(Math.max(-1, lim)), NS = 90;
+    for (let s = 0; s <= NS; s++) {
+      const Phi = -Pm + 2 * Pm * s / NS, X = sg * r * Math.sin(Phi);
+      if (Math.abs(X) > wp.L / 2) continue;
+      if (inCutter(a - r * Math.cos(Phi), sg * zP, X - sg * rg * (Phi - phiP))) return true;
+    }
+    return false;
+  };
+  const nPhi = 40, nZ = 17, pitch = 2 * PI / z, rLo = a - rc - 0.5 * m, table = [];
+  for (let iz = 0; iz < nZ; iz++) {
+    const zP = w0 + (w1 - w0) * iz / (nZ - 1), row = [];
+    for (let ip = 0; ip < nPhi; ip++) {
+      const phiP = pitch * ip / nPhi;
+      let r = rBlank;
+      if (cut(rBlank, phiP, zP)) {
+        let lo = rLo, hi = rBlank;
+        for (let b = 0; b < 16; b++) { const mid = (lo + hi) / 2; if (cut(mid, phiP, zP)) hi = mid; else lo = mid; }
+        r = lo;
+      }
+      row.push(r);
+    }
+    table.push(row);
+  }
+  const rings = table.map((row, iz) => {
+    const zP = w0 + (w1 - w0) * iz / (nZ - 1), ring = [];
+    for (let k = 0; k < z; k++) for (let ip = 0; ip < nPhi; ip++) {
+      const ang = rho + (k * nPhi + ip) * 2 * PI / (z * nPhi);
+      ring.push([row[ip] * cos(ang), row[ip] * sin(ang), zP]);
+    }
+    return ring;
+  });
+  return ringsLoft(rings, [0, 0, w0], [0, 0, w1]);
+}
+
+function cylinderSolid(r, w0, w1, n = 32, cx = 0, cy = 0) {
+  const A = [], B = [];
+  for (let i = 0; i < n; i++) {
+    const a = 2 * PI * i / n, x = cx + r * cos(a), y = cy + r * sin(a);
+    A.push([x, y, w0]); B.push([x, y, w1]);
+  }
+  return loft(A, B, [cx, cy, w0], [cx, cy, w1]);
+}
+
+function boxSolid(w0, w1, cx, cy, hx, hy) {
+  const q = w => [[cx - hx, cy - hy, w], [cx + hx, cy - hy, w], [cx + hx, cy + hy, w], [cx - hx, cy + hy, w]];
+  return loft(q(w0), q(w1), [cx, cy, w0], [cx, cy, w1]);
+}
+
+function prismSolid(poly, y0, y1) {
+  const cx = poly.reduce((a, p) => a + p[0], 0) / poly.length, cw = poly.reduce((a, p) => a + p[1], 0) / poly.length;
+  return loft(poly.map(([x, w]) => [x, y0, w]), poly.map(([x, w]) => [x, y1, w]), [cx, y0, cw], [cx, y1, cw]);
+}
+
+/* =====================================================================
+   3. STATO, VALIDAZIONE DEL JSON e RISOLUZIONE DEL MODELLO
+   ===================================================================== */
+const state = {
+  variants: {}, params: {}, ctrl: {}, inputs: {},
+  brakes: {}, groups: {}, driver: null, direction: 1, current: null, timeScale: 1
+};
+for (const k in MACHINE.variants) state.variants[k] = MACHINE.variants[k].active;
+for (const c of MACHINE.controls) {
+  state.ctrl[c.id] = {};
+  for (const v in c.ranges) state.ctrl[c.id][v] = c.ranges[v].value;
+}
+for (const inp of MACHINE.inputs) state.inputs[inp.id] = { dir: 0, speed: 0.3 };
+for (const g of MACHINE.groups) state.groups[g.id] = g.visible !== false;
+
+function syncParams() {
+  for (const c of MACHINE.controls) state.params[c.id] = state.ctrl[c.id][c.variantKey ? state.variants[c.variantKey] : 'all'];
+}
+syncParams();
+
+function isActive(el) {
+  return !el.variant || Object.keys(el.variant).every(k => state.variants[k] === el.variant[k]);
+}
+
+/* id dell'ingranaggio a cui punta un meshWith (stringa oppure {id:...}) */
+const meshId = g => g.meshWith && typeof g.meshWith === 'object' ? g.meshWith.id : g.meshWith;
+
+/* Controllo strutturale del JSON per la variante attiva: riferimenti mancanti, campi obbligatori, tipi non supportati.
+   Stampa ogni problema con "fail" (console + riquadro rosso); se ce ne sono, lancia un errore e la costruzione si ferma. */
+function validateMachine() {
+  const errs = [];
+  const E = m => { errs.push(m); fail('json', m); };
+  const W = m => warn('json', m);
+  const act = l => (l || []).filter(isActive);
+  const axes = act(MACHINE.axes), gears = act(MACHINE.gears), links = act(MACHINE.links);
+  const axisBy = {}, gearBy = {};
+  const isVec = (v, n) => Array.isArray(v) && v.length === n;
+  step('json', `Controllo del JSON (variante attiva: ${JSON.stringify(state.variants)})`);
+
+  // varianti: chiavi e valori devono esistere
+  const checkVariant = (el, what) => {
+    if (!el.variant) return;
+    for (const k in el.variant) {
+      if (!MACHINE.variants[k]) E(`${what}: "variant" usa la chiave sconosciuta "${k}"`);
+      else if (!(el.variant[k] in MACHINE.variants[k].options)) E(`${what}: variant ${k}="${el.variant[k]}" non è fra le opzioni (${Object.keys(MACHINE.variants[k].options).join(', ')})`);
+    }
+  };
+  for (const a of MACHINE.axes) { checkVariant(a, `asse "${a.id}"`); (a.parts || []).forEach((p, i) => checkVariant(p, `asse "${a.id}", parte #${i}`)); }
+  for (const g of MACHINE.gears) checkVariant(g, `ingranaggio "${g.id}"`);
+  for (const l of MACHINE.links) checkVariant(l, `link "${l.type}"`);
+  for (const i of MACHINE.inputs) checkVariant(i, `input "${i.id}"`);
+  for (const c of MACHINE.checks || []) checkVariant(c, `check "${c.type}"`);
+
+  // id univoci (nella variante attiva)
+  for (const a of axes) { if (!a.id) E('c\'è un asse senza "id"'); else if (axisBy[a.id]) E(`asse duplicato nella variante attiva: "${a.id}"`); else axisBy[a.id] = a; }
+  for (const g of gears) { if (!g.id) E('c\'è un ingranaggio senza "id"'); else if (gearBy[g.id]) E(`ingranaggio duplicato nella variante attiva: "${g.id}"`); else gearBy[g.id] = g; }
+
+  // assi
+  for (const a of axes) {
+    const w = `asse "${a.id}"`;
+    if (!isVec(a.dir, 3)) E(`${w}: "dir" deve essere un array di 3 elementi`);
+    if (a.view !== undefined && !isVec(a.view, 3)) E(`${w}: "view" deve essere un array di 3 elementi`);
+    if (a.rest !== undefined && a.rest !== 'carrier' && a.rest !== 'world') E(`${w}: "rest" può essere solo "carrier" o "world"`);
+    if (a.rest === 'carrier' && !a.carrier) W(`${w}: "rest":"carrier" senza "carrier": ignorato`);
+    if (!a.place) { E(`${w}: manca "place"`); continue; }
+    const p = a.place, kinds = ['at', 'coaxial', 'offset', 'byMesh', 'byApex'].filter(k => p[k] !== undefined);
+    if (kinds.length !== 1) E(`${w}: "place" deve contenere esattamente una chiave fra at/coaxial/offset/byMesh/byApex (trovate: ${kinds.join(', ') || 'nessuna'})`);
+    if (p.at !== undefined && !isVec(p.at, 3)) E(`${w}: place.at deve avere 3 elementi`);
+    if (p.coaxial !== undefined && !axisBy[p.coaxial]) E(`${w}: place.coaxial riferisce l'asse "${p.coaxial}" che non esiste o non è attivo`);
+    if (p.offset) {
+      if (!axisBy[p.offset.from]) E(`${w}: place.offset.from riferisce l'asse "${p.offset.from}" che non esiste o non è attivo`);
+      if (!isVec(p.offset.by, 3)) E(`${w}: place.offset.by deve avere 3 elementi`);
+    }
+    if (p.byMesh !== undefined) {
+      const g = gearBy[p.byMesh];
+      if (!g) E(`${w}: place.byMesh riferisce l'ingranaggio "${p.byMesh}" che non esiste o non è attivo`);
+      else if (!meshId(g)) E(`${w}: place.byMesh="${p.byMesh}" ma quell'ingranaggio non ha "meshWith": impossibile calcolare l'interasse`);
+      else if (!gearBy[meshId(g)]) E(`${w}: l'ingranaggio "${p.byMesh}" ha meshWith="${meshId(g)}" che non esiste o non è attivo`);
+      if (!isVec(p.dir, 3)) E(`${w}: place.byMesh richiede "dir" con 3 elementi`);
+    }
+    if (p.byApex !== undefined) {
+      const g = gearBy[p.byApex];
+      if (!g) E(`${w}: place.byApex riferisce l'ingranaggio "${p.byApex}" che non esiste o non è attivo`);
+      else if (g.apexW === undefined) E(`${w}: place.byApex="${p.byApex}" ma quell'ingranaggio non ha "apexW"`);
+    }
+    if (a.carrier !== undefined && !axisBy[a.carrier]) E(`${w}: carrier "${a.carrier}" non esiste o non è attivo`);
+    if (a.rotate) {
+      if (!axisBy[a.rotate.around]) E(`${w}: rotate.around riferisce l'asse "${a.rotate.around}" che non esiste o non è attivo`);
+      if (a.rotate.deg === undefined) E(`${w}: rotate senza "deg"`);
+    }
+    if (a.group && !(MACHINE.groups || []).some(g => g.id === a.group)) W(`${w}: group "${a.group}" non è definito in "groups"`);
+    (a.parts || []).forEach((pt, i) => {
+      if (!isActive(pt)) return;
+      const pw = `${w}, parte #${i} (${pt.shape})`;
+      if (pt.shape === 'cylinder') { if (pt.r === undefined) E(`${pw}: manca "r"`); if (!isVec(pt.w, 2)) E(`${pw}: "w" deve avere 2 elementi`); }
+      else if (pt.shape === 'box') { if (!isVec(pt.w, 2)) E(`${pw}: "w" deve avere 2 elementi`); if (!isVec(pt.half, 2)) E(`${pw}: "half" deve avere 2 elementi`); }
+      else if (pt.shape === 'prism') { if (!Array.isArray(pt.poly) || pt.poly.length < 3) E(`${pw}: "poly" deve avere almeno 3 punti`); }
+      else E(`${pw}: forma sconosciuta (ammesse: cylinder, box, prism)`);
+      if (pt.at !== undefined && !isVec(pt.at, 2)) E(`${pw}: "at" deve avere 2 elementi`);
+    });
+  }
+
+  // ingranaggi
+  const partnerOf = {};
+  for (const g of gears) if (meshId(g) && !partnerOf[meshId(g)]) partnerOf[meshId(g)] = g.id;
+  for (const g of gears) {
+    const w = `ingranaggio "${g.id}"`, type = g.type || 'spur';
+    if (!g.axis) E(`${w}: manca "axis"`);
+    else if (!axisBy[g.axis]) E(`${w}: asse "${g.axis}" non esiste o non è attivo`);
+    if (!['spur', 'bevel', 'cylinder', 'worm', 'wormwheel'].includes(type)) { E(`${w}: tipo sconosciuto "${type}"`); continue; }
+    if (g.meshWith !== undefined) {
+      if (meshId(g) === g.id) E(`${w}: meshWith punta a sé stesso`);
+      else if (!gearBy[meshId(g)]) E(`${w}: meshWith="${meshId(g)}" non esiste o non è attivo`);
+      else {
+        const pt = gearBy[meshId(g)].type || 'spur';
+        const ok = (type === 'spur' && pt === 'spur') || (type === 'bevel' && pt === 'bevel') || (type === 'wormwheel' && pt === 'worm') || (type === 'worm' && pt === 'wormwheel');
+        if (!ok) E(`${w} (${type}) in presa con "${meshId(g)}" (${pt}): combinazione non supportata`);
+      }
+    }
+    if (type === 'spur') {
+      if (g.teeth === undefined) E(`${w}: mancano i "teeth"`);
+      if (g.module === undefined) E(`${w}: manca "module"`);
+      if (!isVec(g.w, 2)) E(`${w}: "w" deve avere 2 elementi (larghezza lungo l'asse)`);
+    }
+    if (type === 'bevel') {
+      if (g.teeth === undefined) E(`${w}: mancano i "teeth"`);
+      if (g.module === undefined) E(`${w}: manca "module"`);
+      if (g.apexW === undefined) E(`${w}: manca "apexW" (posizione dell'apice lungo l'asse)`);
+      if (g.side !== undefined && g.side !== 1 && g.side !== -1) E(`${w}: "side" deve essere 1 oppure -1`);
+      if (!g.meshWith && !partnerOf[g.id] && g.delta === undefined) W(`${w}: conico senza ingranaggio accoppiato e senza "delta": userò 45°. Aggiungi "delta": gradi nel JSON`);
+    }
+    if (type === 'cylinder') { if (g.r === undefined) E(`${w}: manca "r"`); if (!isVec(g.w, 2)) E(`${w}: "w" deve avere 2 elementi`); }
+    if (type === 'worm') {
+      if (g.q === undefined) E(`${w}: manca "q"`);
+      if (g.module === undefined) E(`${w}: manca "module"`);
+      if (!isVec(g.w, 2)) E(`${w}: "w" deve avere 2 elementi`);
+    }
+    if (type === 'wormwheel') {
+      if (g.teeth === undefined) E(`${w}: mancano i "teeth"`);
+      if (g.module === undefined) E(`${w}: manca "module"`);
+      if (!g.meshWith) E(`${w}: una ruota per vite senza fine deve avere meshWith = la vite`);
+    }
+  }
+
+  // link
+  for (const l of links) {
+    const w = `link "${l.type}"`, ax = (id, what) => { if (!axisBy[id]) E(`${w}: ${what} "${id}" non esiste o non è attivo`); };
+    if (l.type === 'ratchet') {
+      ax(l.driver, 'driver'); ax(l.driven, 'driven');
+      for (const k of ['drives', 'winding', 'freewheel', 'blocks']) if (!l.messages || l.messages[k] === undefined) W(`${w}: manca messages.${k}`);
+    } else if (l.type === 'brake') {
+      ax(l.axis, 'axis');
+      if (!l.shoe || !isVec(l.shoe.at, 3) || !isVec(l.shoe.size, 3) || !isVec(l.shoe.released, 3)) E(`${w}: "shoe" richiede at, size e released con 3 elementi ciascuno`);
+    } else if (l.type === 'rope') {
+      ax(l.axis, 'axis');
+      if (!isVec(l.at, 3)) E(`${w}: "at" deve avere 3 elementi`);
+      for (const k of ['radius', 'len0', 'min', 'max']) if (l[k] === undefined) E(`${w}: manca "${k}"`);
+    } else if (l.type === 'hooke') {
+      ax(l.input, 'input'); ax(l.output, 'output');
+      if (!l.arm) E(`${w}: manca "arm"`);
+    } else E(`link di tipo sconosciuto: "${l.type}"`);
+  }
+  for (const i of act(MACHINE.inputs)) if (!axisBy[i.axis]) E(`input "${i.id}": asse "${i.axis}" non esiste o non è attivo`);
+  if (MACHINE.differential) {
+    const d = MACHINE.differential;
+    if (!axisBy[d.out]) E(`differential.out "${d.out}" non esiste o non è attivo`);
+    for (const id of d.ins || []) if (!axisBy[id]) E(`differential.ins "${id}" non esiste o non è attivo`);
+  }
+  for (const r of MACHINE.ratios || []) { if (!axisBy[r.from]) E(`ratios.from "${r.from}" non esiste o non è attivo`); if (!axisBy[r.to]) E(`ratios.to "${r.to}" non esiste o non è attivo`); }
+  for (const v of MACHINE.views || []) if (!v.auto && (!isVec(v.target, 3) || v.radius === undefined)) E(`vista "${v.id}": richiede "auto" oppure "target" (3 elementi) e "radius"`);
+  for (const c of act(MACHINE.checks)) if (c.type === 'axisClearsGear') {
+    if (!axisBy[c.axis]) E(`check axisClearsGear: asse "${c.axis}" non esiste o non è attivo`);
+    if (!gearBy[c.gear]) E(`check axisClearsGear: ingranaggio "${c.gear}" non esiste o non è attivo`);
+  }
+
+  if (errs.length) throw new Error(`${errs.length} errore/i nel JSON (variante ${JSON.stringify(state.variants)}): ${errs[0]}${errs.length > 1 ? ` … (+${errs.length - 1}, vedi console)` : ''}`);
+  step('json', `JSON ok: ${axes.length} assi, ${gears.length} ingranaggi, ${links.length} link attivi`);
+}
+
+/* =====================================================================
+   3b. CINEMATICA DEI CORPI (assi con carrier)
+   ---------------------------------------------------------------------
+   Per ogni asse i la variabile di velocità è  w_i = Ω_i · dir_i  (componente, lungo l'asse, della velocità
+   angolare ASSOLUTA del corpo). La velocità angolare assoluta si compone con quella del carrier c:
+        Ω_i = Ω_c + s_i · dir_i ,   s_i = w_i − Ω_c·dir_i   (s_i = velocità RELATIVA al carrier)
+   quindi Ω_i = Ω_c − dir_i (dir_i·Ω_c) + w_i dir_i.
+   Se l'asse è parallelo al carrier (satelliti) Ω_c·dir = w_c e si ritrova la solita formula  s = w − w_c.
+   Se è perpendicolare (asse di declinazione) Ω_c·dir = 0 e s = w: la ruota non "sente" la rotazione del carrier.
+   Ω_i e la velocità dell'origine v(O_i) sono forme lineari nelle w_k: le memorizziamo come {k: vettore}.
+   ===================================================================== */
+function buildKinematics(M) {
+  const n = M.axes.length, busy = new Set();
+  const visit = a => {
+    if (a.Om) return;
+    if (busy.has(a)) throw new Error(`catena di carrier circolare attorno all'asse "${a.id}"`);
+    busy.add(a);
+    const c = a.carrier;
+    if (!c) { a.Om = { [a.idx]: a.dir }; a.vO = {}; }
+    else {
+      visit(c);
+      const Om = {}, vO = {}, d = V.sub(a.O, c.O);
+      for (const k in c.Om) Om[k] = V.sub(c.Om[k], V.mul(a.dir, V.dot(c.Om[k], a.dir)));
+      Om[a.idx] = a.dir;
+      for (const k in c.vO) vO[k] = c.vO[k].slice();
+      for (const k in c.Om) vO[k] = V.add(vO[k] || [0, 0, 0], V.cross(c.Om[k], d));
+      a.Om = Om; a.vO = vO;
+    }
+    busy.delete(a);
+  };
+  M.axes.forEach(visit);
+  // vincolo "debole" rest:"carrier":  s_i = 0  ⇔  w_i − Ω_c·dir_i = 0  (usato solo se nient'altro determina l'asse)
+  for (const a of M.axes) {
+    a.soft = null;
+    if (a.def.rest === 'carrier' && a.carrier) {
+      const r = new Array(n).fill(0);
+      r[a.idx] = 1;
+      for (const k in a.carrier.Om) r[k] -= V.dot(a.carrier.Om[k], a.dir);
+      a.soft = r;
+    }   else if (a.def.rest === 'world') { const r = new Array(n).fill(0); r[a.idx] = 1; a.soft = r; }
+  }
+}
+
+/* velocità (come forma lineare nelle w_k) di un punto P solidale al corpo dell'asse a */
+function pointVel(a, P) {
+  const out = {}, r = V.sub(P, a.O);
+  for (const k in a.vO) out[k] = a.vO[k].slice();
+  for (const k in a.Om) out[k] = V.add(out[k] || [0, 0, 0], V.cross(a.Om[k], r));
+  return out;
+}
+
+/* velocità angolare assoluta (vettore) del corpo dell'asse a, dati i w */
+function omegaOf(a, w) {
+  let o = [0, 0, 0];
+  for (const k in a.Om) o = V.add(o, V.mul(a.Om[k], w[k]));
+  return o;
+}
+
+/* velocità relative al carrier: s_i = w_i − Ω_carrier·dir_i  (per gli assi senza carrier s_i = w_i) */
+function relSpins(M, w) {
+  return M.axes.map((a, i) => a.carrier ? w[i] - V.dot(omegaOf(a.carrier, w), a.dir) : w[i]);
+}
+
+function rotateVec(v, k, phi) {
+  const c = cos(phi), s = sin(phi), kv = V.cross(k, v), kd = V.dot(k, v);
+  return [v[0] * c + kv[0] * s + k[0] * kd * (1 - c), v[1] * c + kv[1] * s + k[1] * kd * (1 - c), v[2] * c + kv[2] * s + k[2] * kd * (1 - c)];
+}
+
+function dependentsOf(M, root) {
+  const set = new Set([root]);
+  const refsOf = a => {
+    const out = [], p = a.def.place;
+    if (a.carrier) out.push(a.carrier);
+    if (p.coaxial) out.push(M.axisBy[p.coaxial]);
+    if (p.offset) out.push(M.axisBy[p.offset.from]);
+    if (p.byMesh) { const g = M.gearBy[p.byMesh], q = M.gearBy[meshId(g.def)]; out.push(M.axisBy[q.def.axis]); }
+    if (p.byApex) out.push(M.axisBy[M.gearBy[p.byApex].def.axis]);
+    return out;
+  };
+  for (let changed = true; changed;) {
+    changed = false;
+    for (const a of M.axes) if (!set.has(a) && refsOf(a).some(r => set.has(r))) { set.add(a); changed = true; }
+  }
+  return set;
+}
+
+function contactGeometry(g, p) {
+  if (g.type === 'wormwheel') {
+    const uc = V.unit(V.perp(V.sub(g.ax.O, p.ax.O), p.ax.dir));
+    const dist = V.len(V.perp(V.sub(g.ax.O, p.ax.O), p.ax.dir));
+    step('ingranamento', `${g.id} (ruota, z=${g.z}) ⇄ ${p.id} (vite): interasse ${dist.toFixed(3)} mm (atteso ${(g.r + p.r).toFixed(3)})`);
+    if (Math.abs(dist - (g.r + p.r)) > 1e-6) warn('ingranamento', `Vite ${p.id} – ruota ${g.id}: interasse ${dist.toFixed(3)} invece di ${(g.r + p.r).toFixed(3)}`);
+    if (Math.abs(V.dot(g.ax.dir, p.ax.dir)) > 1e-6 || Math.abs(V.dot(g.ax.dir, uc)) > 1e-6) warn('ingranamento', `Vite ${p.id} – ruota ${g.id}: l'asse della ruota non è perpendicolare alla vite e all'interasse`);
+    g.sprime = Math.sign(V.dot(g.ax.dir, V.cross(p.ax.dir, uc))) || 1;
+    return { X: V.add(g.ax.O, V.mul(uc, -g.r)), cg: V.mul(uc, -1), cp: uc };
+  }
+  if (g.type === 'bevel' && p.type === 'bevel') {
+    const gh = V.unit(V.add(V.mul(g.e, Math.sin(p.delta)), V.mul(p.e, Math.sin(g.delta))));
+    const apexDist = V.len(V.sub(g.apex, p.apex));
+    step('ingranamento', `${g.id} (conico, z=${g.z}, δ=${(g.delta * 180 / PI).toFixed(2)}°) ⇄ ${p.id} (conico, z=${p.z}, δ=${(p.delta * 180 / PI).toFixed(2)}°): distanza fra gli apici ${apexDist.toFixed(3)} mm`);
+    if (apexDist > 1e-6) warn('ingranamento', `Coppia conica ${g.id}–${p.id}: gli apici non coincidono (distanza ${apexDist.toFixed(3)} mm): ${g.id} apice ${fmtV(g.apex)}, ${p.id} apice ${fmtV(p.apex)}`);
+    return { X: V.add(g.apex, V.mul(gh, g.r / Math.sin(g.delta))), cg: V.unit(V.perp(gh, g.e)), cp: V.unit(V.perp(gh, p.e)) };
+  }
+  const v = V.sub(p.ax.O, g.ax.O), cg = V.unit(V.perp(v, g.ax.dir)), cp = V.unit(V.perp(V.mul(v, -1), p.ax.dir));
+  const dist = V.len(V.perp(v, g.ax.dir));
+  step('ingranamento', `${g.id} (z=${g.z}) ⇄ ${p.id} (z=${p.z}): interasse ${dist.toFixed(3)} mm (atteso ${(g.r + p.r).toFixed(3)})`);
+  if (V.len(V.cross(g.ax.dir, p.ax.dir)) > 1e-6) warn('ingranamento', `Ingranaggi ${g.id}–${p.id}: gli assi (${g.ax.id}, ${p.ax.id}) non sono paralleli: la coppia cilindrica non ingrana correttamente`);
+  if (Math.abs(dist - (g.r + p.r)) > 1e-6) warn('ingranamento', `Ingranaggi ${g.id}–${p.id}: interasse ${dist.toFixed(3)} invece di ${(g.r + p.r).toFixed(3)} (la velocità resta calcolata dal rapporto dei denti ${g.z}:${p.z})`);
+  // Punto di contatto "cinematico": divide l'interasse reale in proporzione ai DENTI (non ai raggi primitivi).
+  // Così il rapporto di velocità è sempre z_g : z_p, anche quando due ruote di denti diversi (a, a1) condividono lo stesso interasse.
+  const dg = (g.z + p.z) > 0 ? dist * g.z / (g.z + p.z) : g.r;
+  return { X: V.add(g.ax.O, V.mul(cg, dg)), cg, cp };
+}
+
+function describePlace(M, p) {
+  if (p.at) return `posizione fissa ${JSON.stringify(p.at)}`;
+  if (p.coaxial) return `coassiale a ${p.coaxial}`;
+  if (p.offset) return `spostato da ${p.offset.from} di ${JSON.stringify(p.offset.by)}`;
+  if (p.byMesh) {
+    const g = M.gearBy[p.byMesh];
+    return `interasse di ${p.byMesh} con ${g && meshId(g.def)}`;
+  }
+  if (p.byApex) return `apice di ${p.byApex}`;
+  return 'sconosciuto';
+}
+
+function resolveModel() {
+  CTX.where = 'validazione del JSON';
+  validateMachine();
+  step('modello', 'Variante attiva', { ...state.variants }, 'parametri', { ...state.params });
+
+  const M = { axes: [], axisBy: {}, gears: [], gearBy: {}, pairs: [], meshes: [], ratchets: [], brakes: [], ropes: [], hookes: [], inputs: [], constVal: {} };
+  const resolving = new Set();
+  let ev;
+  const gTeeth = g => g.z !== undefined ? g.z : (g.z = g.def.teeth !== undefined ? ev(g.def.teeth) : g.def.type === 'worm' ? ev(g.def.starts === undefined ? 1 : g.def.starts) : 0);
+  const gModule = g => g.m !== undefined ? g.m : (g.m = g.def.module !== undefined ? ev(g.def.module) : 0);
+  const gRadius = g => g.def.r !== undefined ? ev(g.def.r) : g.def.q !== undefined ? ev(g.def.q) * gModule(g) / 2 : gTeeth(g) * gModule(g) / 2;
+  const wMid = g => { const w = vec(g.def.w); return (w[0] + w[1]) / 2; };
+
+  ev = M.ev = makeEvaluator(M, state, resolving, gTeeth, gModule, gRadius);
+  const vec = arr => arr.map(e => ev(e));
+
+  // ---- 1. registrazione di assi e ingranaggi attivi
+  const skippedA = [], skippedG = [];
+  for (const def of MACHINE.axes) {
+    if (isActive(def)) { const a = { id: def.id, def, idx: M.axes.length, O: null, theta: 0 }; M.axes.push(a); M.axisBy[a.id] = a; }
+    else skippedA.push(def.id);
+  }
+  for (const def of MACHINE.gears) {
+    if (isActive(def)) { const g = { id: def.id, def, label: def.label || def.id }; M.gears.push(g); M.gearBy[g.id] = g; }
+    else skippedG.push(def.id);
+  }
+  step('assi', `${M.axes.length} assi attivi: ${M.axes.map(a => a.id).join(', ')}` + (skippedA.length ? `  (saltati per variante: ${skippedA.join(', ')})` : ''));
+  step('ingranaggi', `${M.gears.length} ingranaggi attivi: ${M.gears.map(g => g.id).join(', ')}` + (skippedG.length ? `  (saltati per variante: ${skippedG.join(', ')})` : ''));
+
+  // ---- 2. costanti
+  for (const name in MACHINE.consts) {
+    CTX.where = `costante "${name}"`;
+    try {
+      const v = ev(name);
+      if (typeof v === 'number' && !Number.isFinite(v)) throw new Error(`la costante "${name}" vale ${v} (espressione: ${JSON.stringify(MACHINE.consts[name])})`);
+      step('costante', `${name} = ${typeof v === 'number' ? +v.toFixed(4) : v}`);
+    } catch (e) {
+      if (e instanceof NotPlaced) warn('costante', `"${name}" dipende dall'asse "${e.message}", non ancora posizionato: verrà valutata più tardi`);
+      else if (/non finit|vale (NaN|Infinity|-Infinity)/.test(e.message)) throw e;
+      else warn('costante', `"${name}" non valutabile: ${e.message}`);
+    }
+  }
+
+  // ---- 3. direzioni degli assi
+  for (const a of M.axes) {
+    CTX.where = `asse "${a.id}", campi dir/view/ref`;
+    a.dir = V.unit(vec(a.def.dir));
+    if (!a.dir.every(Number.isFinite) || V.len(a.dir) < 1e-9) throw new Error(`asse "${a.id}": "dir" nulla o non valida: ${JSON.stringify(a.def.dir)} → ${fmtV(a.dir)}`);
+    a.view = V.unit(vec(a.def.view || [0, -1, 0]));
+    a.cw = -Math.sign(V.dot(a.view, a.dir)) || 1;
+    a.carrier = a.def.carrier ? M.axisBy[a.def.carrier] : null;
+    a.ref = a.def.ref ? V.unit(V.perp(vec(a.def.ref), a.dir)) : null;
+    step('asse', `${a.id} "${a.def.name}": dir=${fmtV(a.dir)}, visto ${a.def.viewLabel || 'da davanti'}` + (a.carrier ? `, portato da ${a.carrier.id}` : ''));
+  }
+  for (const l of MACHINE.links) if (l.type === 'hooke' && isActive(l)) {
+    CTX.where = `link hooke ${l.input} → ${l.output}`;
+    const ai = M.axisBy[l.input], ao = M.axisBy[l.output];
+    const bend = V.unit(V.perp(ao.dir, ai.dir)), pinB = V.cross(ai.dir, bend);
+    ai.ref = ai.ref || V.unit(V.cross(bend, ai.dir));
+    ao.ref = ao.ref || V.unit(V.cross(pinB, ao.dir));
+  }
+  for (const a of M.axes) { a.ref = a.ref || V.anyPerp(a.dir); a.yv = V.cross(a.dir, a.ref); }
+
+  // ---- 4. posizionamento degli assi (iterativo: un asse può dipendere da un altro non ancora posizionato)
+  const originOf = a => {
+    const p = a.def.place;
+    if (p.at) return vec(p.at);
+    if (p.coaxial) { const o = M.axisBy[p.coaxial]; if (!o.O) throw new NotPlaced(p.coaxial); return o.O.slice(); }
+    if (p.offset) { const o = M.axisBy[p.offset.from]; if (!o.O) throw new NotPlaced(p.offset.from); return V.add(o.O, vec(p.offset.by)); }
+    if (p.byMesh) {
+      const g = M.gearBy[p.byMesh], q = M.gearBy[meshId(g.def)], qa = M.axisBy[q.def.axis];
+      if (!qa.O) throw new NotPlaced(q.def.axis);
+      let o = V.add(qa.O, V.mul(V.unit(vec(p.dir)), gRadius(g) + gRadius(q)));
+      if (q.def.type === 'worm') o = V.add(o, V.mul(qa.dir, wMid(q)));
+      if (g.def.type === 'worm') o = V.sub(o, V.mul(a.dir, wMid(g)));
+      return o;
+    }
+    if (p.byApex) {
+      const g = M.gearBy[p.byApex], ga = M.axisBy[g.def.axis];
+      if (!ga.O) throw new NotPlaced(g.def.axis);
+      return V.add(ga.O, V.mul(ga.dir, ev(g.def.apexW)));
+    }
+    throw new Error('Posizionamento mancante per l\'asse ' + a.id);
+  };
+  const waiting = {};
+  for (let pass = 0, left = M.axes.length; left > 0 && pass < 50; pass++) {
+    let progress = false;
+    for (const a of M.axes) if (!a.O) {
+      CTX.where = `posizionamento dell'asse "${a.id}" (${describePlace(M, a.def.place)})`;
+      try {
+        a.O = originOf(a); left--; progress = true; delete waiting[a.id];
+        step('asse', `${a.id}: posizionato in ${fmtV(a.O)}  ← ${describePlace(M, a.def.place)}`);
+      } catch (e) { if (!(e instanceof NotPlaced)) throw e; waiting[a.id] = e.message; }
+    }
+    if (!progress) break;
+  }
+  const unplaced = M.axes.filter(a => !a.O);
+  if (unplaced.length) {
+    for (const a of unplaced) fail('posizionamento', `asse "${a.id}": non posizionabile, attende l'asse "${waiting[a.id]}" che a sua volta non è posizionabile (dipendenza circolare o catena di riferimenti interrotta)`);
+    throw new Error('Assi non posizionabili: ' + unplaced.map(a => a.id).join(', '));
+  }
+
+  // ---- 5. rotazioni di gruppo (rotate)
+  for (const a of M.axes) if (a.def.rotate) {
+    CTX.where = `rotate dell'asse "${a.id}"`;
+    const ar = M.axisBy[a.def.rotate.around];
+    if (!ar) throw new Error('rotate.around sconosciuto: ' + a.def.rotate.around);
+    const group = dependentsOf(M, a);
+    if (group.has(ar)) throw new Error(`rotate: l'asse ${ar.id} dipende da ${a.id}, non si può ruotare ${a.id} attorno ad esso`);
+    const deg = ev(a.def.rotate.deg), phi = deg * PI / 180 * ar.cw, k = ar.dir, P = ar.O.slice();
+    for (const b of group) {
+      b.O = V.add(P, rotateVec(V.sub(b.O, P), k, phi));
+      b.dir = rotateVec(b.dir, k, phi); b.ref = rotateVec(b.ref, k, phi); b.view = rotateVec(b.view, k, phi);
+      b.yv = V.cross(b.dir, b.ref);
+    }
+    step('rotazione', `${a.id}: ${+deg.toFixed(2)}° attorno a ${ar.id}; trascina: ${[...group].map(b => b.id).join(', ')}`);
+  }
+
+  // ---- 5b. cinematica dei corpi: velocità angolare assoluta e velocità dell'origine di ogni asse
+  CTX.where = 'cinematica dei corpi';
+  buildKinematics(M);
+  for (const a of M.axes) if (a.carrier) {
+    const par = Math.abs(V.dot(a.dir, a.carrier.dir));
+    step('carrier', `${a.id} portato da ${a.carrier.id}: ` + (par > 1 - 1e-9 ? 'asse parallelo al carrier' : par < 1e-9 ? 'asse PERPENDICOLARE al carrier' : `asse inclinato (cos=${par.toFixed(3)})`) + (a.soft ? ' · a riposo: solidale al carrier' : ''));
+  }
+
+  // ---- 6. ingranaggi
+  for (const g of M.gears) {
+    CTX.where = `ingranaggio "${g.id}"`;
+    g.ax = M.axisBy[g.def.axis];
+    if (!g.ax) throw new Error('Asse mancante per l\'ingranaggio ' + g.id);
+    g.type = g.def.type || 'spur';
+    g.z = gTeeth(g); g.m = gModule(g); g.r = gRadius(g);
+    if (![g.z, g.m, g.r].every(Number.isFinite)) throw new Error(`ingranaggio "${g.id}": valori non validi z=${g.z} m=${g.m} r=${g.r}`);
+    g.side = g.def.side || 1;
+    g.w = g.def.w ? vec(g.def.w) : null;
+    let extra = '';
+    if (g.type === 'bevel') {
+      g.apexW = ev(g.def.apexW);
+      g.apex = V.add(g.ax.O, V.mul(g.ax.dir, g.apexW));
+      g.e = V.mul(g.ax.dir, g.side);
+      extra = `, apexW=${+g.apexW.toFixed(2)} (apice ${fmtV(g.apex)}), side=${g.side}`;
+    }
+    step('ingranaggio', `${g.id} [${g.type}] "${g.def.name}" su ${g.ax.id}: z=${g.z}, m=${+g.m.toFixed(5)}, r=${+g.r.toFixed(3)}` + (g.w ? `, w=[${g.w.map(x => +x.toFixed(2)).join(', ')}]` : '') + extra);
+  }
+  for (const g of M.gears) if (g.type === 'worm') {
+    CTX.where = `vite "${g.id}"`;
+    g.hand = g.def.hand || 1;
+    g.wp = wormParams(g.m, ev(g.def.q), g.z, g.hand, g.w[1] - g.w[0]);
+    step('vite', `${g.id}: principi=${g.z}, passo destro=${g.hand > 0}, rp=${+g.wp.rp.toFixed(3)}, passo assiale=${+g.wp.px.toFixed(3)}, lunghezza=${+g.wp.L.toFixed(2)}`);
+  }
+
+  // ---- 7. coppie di ingranaggi (ogni coppia una sola volta, anche se dichiarata da entrambi i lati)
+  const seenPairs = new Set();
+  for (const g of M.gears) if (meshId(g.def)) {
+    const p = M.gearBy[meshId(g.def)];
+    if (!p) throw new Error('meshWith sconosciuto: ' + meshId(g.def));
+    const key = [g.id, p.id].sort().join('|');
+    if (seenPairs.has(key)) { step('coppia', `${g.id} ⇄ ${p.id}: dichiarata due volte, ignoro il doppione`); continue; }
+    seenPairs.add(key);
+    g.partner = p; g.role = 'gap';
+    if (!p.partner) { p.partner = g; p.role = 'tooth'; }
+    M.pairs.push({ g, p });
+    step('coppia', `${g.id} → ${p.id}`);
+  }
+  for (const g of M.gears) if (g.type === 'wormwheel') {
+    CTX.where = `ruota della vite "${g.id}"`;
+    if (!g.partner || g.partner.type !== 'worm') throw new Error(`${g.id}: una ruota per vite deve avere meshWith = una vite`);
+    const f = g.def.face !== undefined ? ev(g.def.face) : wheelFace(g.m, g.partner.wp);
+    g.w = g.def.w ? vec(g.def.w) : [-f / 2, f / 2];
+    step('ruota-vite', `${g.id}: larghezza di fascia ${+f.toFixed(2)} mm`);
+  }
+  for (const g of M.gears) if (g.type === 'bevel' && g.partner) {
+    const p = g.partner, cs = V.dot(g.e, p.e);
+    g.delta = Math.atan2(Math.sqrt(Math.max(0, 1 - cs * cs)), p.z / g.z + cs);
+    step('conico', `${g.id}: δ=${(g.delta * 180 / PI).toFixed(3)}° calcolato dalla coppia con ${p.id}`);
+  }
+  // conici senza ingranaggio accoppiato: "delta" in gradi dal JSON (default 45°). Senza questo la geometria diventerebbe NaN.
+  for (const g of M.gears) if (g.type === 'bevel' && g.delta === undefined) {
+    CTX.where = `conico "${g.id}" senza coppia`;
+    if (g.def.delta !== undefined) {
+      g.delta = ev(g.def.delta) * PI / 180;
+      step('conico', `${g.id}: nessun ingranaggio accoppiato, uso "delta" del JSON = ${(g.delta * 180 / PI).toFixed(3)}°`);
+    } else {
+      g.delta = PI / 4;
+      warn('conico', `${g.id}: nessun ingranaggio accoppiato e nessun "delta" nel JSON: uso 45° (aggiungi "delta": gradi per evitare questo avviso)`);
+    }
+  }
+  for (const { g, p } of M.pairs) {
+    CTX.where = `contatto ${g.id} ⇄ ${p.id}`;
+    const c = contactGeometry(g, p);
+    g.cdir = c.cg; p.cdir = c.cp;
+    M.meshes.push({ g, p, X: c.X });
+  }
+  for (const g of M.gears) {
+    g.rho = 0;
+    if (g.cdir) {
+      const phi = Math.atan2(V.dot(g.cdir, V.mul(g.ax.yv, g.side)), V.dot(g.cdir, g.ax.ref));
+      g.rho = phi + (g.role === 'gap' && g.type !== 'worm' && g.type !== 'wormwheel' ? PI / g.z : 0);
+    }
+  }
+
+  // ---- 8. equazioni cinematiche degli ingranamenti
+  // Condizione: nel punto di contatto X le velocità (assolute) dei due corpi hanno la stessa componente tangenziale.
+  // Con la composizione corretta delle velocità angolari (sezione 3b) l'equazione vale in qualunque sistema di riferimento,
+  // quindi non servono riferimenti "relativeTo": il moto del carrier è già incluso, anche per assi perpendicolari al carrier.
+  const n = M.axes.length;
+  for (const m of M.meshes) {
+    m.frame = commonFrame(m.g.ax, m.p.ax);
+    m.g.meshInfo = { partner: m.p, frame: m.frame };
+    m.p.meshInfo = { partner: m.g, frame: m.frame };
+    step('cinematica', `${m.g.id} ⇄ ${m.p.id}: rapporto denti ${m.g.z}:${m.p.z}, riferimento del rapporto: ${m.frame ? m.frame.id : 'mondo'}`);
+    m.row = new Array(n).fill(0);
+    if (m.g.type === 'wormwheel') {
+      m.row[m.g.ax.idx] += m.g.z;
+      m.row[m.p.ax.idx] += m.p.hand * m.g.sprime * m.p.z;
+      continue;
+    }
+    const t = V.unit(V.cross(m.g.ax.dir, V.sub(m.X, m.g.ax.O)));
+    const vg = pointVel(m.g.ax, m.X), vp = pointVel(m.p.ax, m.X);
+    for (const k in vg) m.row[k] += V.dot(t, vg[k]);
+    for (const k in vp) m.row[k] -= V.dot(t, vp[k]);
+  }
+  step('cinematica', `${M.meshes.length} equazioni di ingranamento su ${n} assi`);
+
+  // ---- 9. link e input
+  for (const l of MACHINE.links) if (isActive(l)) {
+    CTX.where = `link ${l.type}`;
+    if (l.type === 'ratchet') { M.ratchets.push({ def: l, driver: M.axisBy[l.driver].idx, driven: M.axisBy[l.driven].idx, sign: l.sign || 1 }); step('link', `nottolino: ${l.driver} → ${l.driven}`); }
+    if (l.type === 'brake') { M.brakes.push({ def: l, idx: M.axisBy[l.axis].idx }); step('link', `freno su ${l.axis}`); }
+    if (l.type === 'rope') { M.ropes.push({ def: l, idx: M.axisBy[l.axis].idx, at: vec(l.at), radius: ev(l.radius) }); step('link', `fune su ${l.axis}`); }
+    if (l.type === 'hooke') {
+      const ai = M.axisBy[l.input], ao = M.axisBy[l.output], cb = V.dot(ai.dir, ao.dir);
+      M.hookes.push({ def: l, inIdx: ai.idx, outIdx: ao.idx, cb, sb: Math.sqrt(1 - cb * cb), bend: V.unit(V.perp(ao.dir, ai.dir)) });
+      step('link', `snodo di Hooke: ${l.input} → ${l.output}, angolo ${(Math.acos(cb) * 180 / PI).toFixed(2)}°`);
+    }
+  }
+  for (const def of MACHINE.inputs) if (isActive(def)) { M.inputs.push({ def, id: def.id, idx: M.axisBy[def.axis].idx }); step('input', `${def.id}: asse ${def.axis}`); }
+  CTX.where = '';
+  return M;
+}
+
+/* Verifica del modello risolto: valori non finiti, assi isolati. Lancia un errore se qualcosa renderebbe la scena inutilizzabile. */
+function validateModel(M) {
+  let bad = 0;
+  const B = (m, ...r) => { bad++; fail('verifica', m, ...r); };
+  for (const a of M.axes) if (![...a.O, ...a.dir, ...a.ref].every(Number.isFinite)) B(`asse ${a.id}: origine/direzione/riferimento non finiti`, a.O, a.dir, a.ref);
+  for (const g of M.gears) {
+    if (!(g.r > 0)) B(`ingranaggio ${g.id}: raggio non valido (${g.r})`);
+    if (g.type === 'bevel' && !(Number.isFinite(g.delta) && g.delta > 0 && g.delta < PI)) B(`conico ${g.id}: delta non valido (${g.delta})`);
+    if (g.type === 'bevel' && !g.apex.every(Number.isFinite)) B(`conico ${g.id}: apice non finito`, g.apex);
+    if (g.w && !g.w.every(Number.isFinite)) B(`ingranaggio ${g.id}: w non valido`, g.w);
+    if (['spur', 'bevel', 'wormwheel'].includes(g.type) && !(g.z >= 3)) B(`ingranaggio ${g.id}: numero di denti non valido (${g.z})`);
+  }
+  for (const m of M.meshes) if (!m.row.every(Number.isFinite)) B(`ingranamento ${m.g.id}⇄${m.p.id}: coefficienti cinematici non finiti`, m.row);
+
+  const linked = new Set();
+  for (const m of M.meshes) { linked.add(m.g.ax); linked.add(m.p.ax); }
+  for (const r of M.ratchets) { linked.add(M.axes[r.driver]); linked.add(M.axes[r.driven]); }
+  for (const h of M.hookes) { linked.add(M.axes[h.inIdx]); linked.add(M.axes[h.outIdx]); }
+  for (const a of M.axes) if (a.carrier) { linked.add(a); linked.add(a.carrier); }
+  for (const a of M.axes) if (!linked.has(a)) warn('verifica', `asse ${a.id}: nessun ingranamento, nottolino, snodo o portasatelliti lo collega al resto (${M.gears.filter(g => g.ax === a).length} ingranaggi): girerà solo se pilotato direttamente`);
+
+  if (DBG.on) {
+    console.groupCollapsed('[verifica] riepilogo assi e ingranaggi (clic per aprire)');
+    console.table(M.axes.map(a => ({ asse: a.id, origine: fmtV(a.O), dir: fmtV(a.dir), portato_da: a.carrier ? a.carrier.id : '', a_riposo: a.soft ? 'solidale al carrier' : '', gruppo: a.def.group || '' })));
+    console.table(M.gears.map(g => ({ id: g.id, tipo: g.type, asse: g.ax.id, denti: g.z, modulo: +g.m.toFixed(4), raggio: +g.r.toFixed(3), delta_gradi: g.delta !== undefined ? +(g.delta * 180 / PI).toFixed(2) : '', in_presa_con: g.partner ? g.partner.id : '' })));
+    console.groupEnd();
+  }
+  if (bad) throw new Error(`${bad} problema/i nel modello risolto (vedi console)`);
+  step('verifica', `modello risolto valido: ${M.axes.length} assi, ${M.gears.length} ingranaggi, ${M.meshes.length} ingranamenti`);
+}
+
+/* =====================================================================
+   4. CINEMATICA
+   ===================================================================== */
+function makeSystem(n) {
+  const rows = [];
+  return {
+    lastIndependent: false,
+    add(c, b) {
+      this.lastIndependent = false;
+      c = c.slice();
+      const s = Math.max(...c.map(Math.abs)) || 1; for (let j = 0; j < n; j++) c[j] /= s; b /= s;
+      for (const r of rows) { const f = c[r.p]; if (Math.abs(f) > 1e-12) { for (let j = 0; j < n; j++) c[j] -= f * r.c[j]; b -= f * r.b; } }
+      let p = -1, best = 1e-9;
+      for (let j = 0; j < n; j++) if (Math.abs(c[j]) > best) { best = Math.abs(c[j]); p = j; }
+      if (p < 0) return Math.abs(b) < 1e-7;
+      const d = c[p]; for (let j = 0; j < n; j++) c[j] /= d; b /= d;
+      for (const r of rows) { const f = r.c[p]; if (Math.abs(f) > 1e-12) { for (let j = 0; j < n; j++) r.c[j] -= f * c[j]; r.b -= f * b; } }
+      rows.push({ p, c, b }); this.lastIndependent = true; return true;
+    },
+    solve() { const w = new Array(n).fill(0); for (const r of rows) w[r.p] = r.b; return w; },
+    rows: () => rows
+  };
+}
+
+const hookeRatio = (h, theta) => (1 - h.sb * h.sb * cos(theta) ** 2) / h.cb;
+function hookePsi(h, phi) {
+  const p = Math.atan2(sin(phi), h.cb * cos(phi));
+  return p + 2 * PI * Math.round((phi - p) / (2 * PI));
+}
+const inputOmega = (ax, st) => st.dir * ax.cw * Math.pow(10, st.speed) * PI / 30;
+
+/* Elenco ordinato dei vincoli: i primi hanno la precedenza (quelli dopo, se incompatibili, vengono scartati). */
+function buildConstraints(M, locked) {
+  const n = M.axes.length, unit = i => { const r = new Array(n).fill(0); r[i] = 1; return r; };
+  const L = [], push = (kind, label, row, b, extra = {}) => L.push({ kind, label, row, b, ...extra });
+  for (const b of M.brakes) if (state.brakes[b.def.axis]) push('freno', `freno su ${b.def.axis}`, unit(b.idx), 0, { axisIdx: b.idx });
+  for (const m of M.meshes) push('presa', `ingranamento ${m.g.id} ⇄ ${m.p.id}`, m.row, 0);
+  for (const h of M.hookes) { const r = new Array(n).fill(0); r[h.inIdx] = 1; r[h.outIdx] = -hookeRatio(h, M.axes[h.inIdx].theta); push('hooke', `snodo ${M.axes[h.inIdx].id} → ${M.axes[h.outIdx].id}`, r, 0); }
+  for (const rt of locked) { const r = new Array(n).fill(0); r[rt.driven] = 1; r[rt.driver] = -1; push('nottolino', `nottolino ${M.axes[rt.driver].id} → ${M.axes[rt.driven].id} (bloccato)`, r, 0); }
+  const dg = state.driver && M.gearBy[state.driver.gear];
+  if (dg) push('driver', `ruota pilotata ${dg.id} (asse ${dg.ax.id})`, unit(dg.ax.idx), state.driver.w, { axisIdx: dg.ax.idx });
+  for (const inp of M.inputs) push('input', `input "${inp.id}" (asse ${M.axes[inp.idx].id})`, unit(inp.idx), inputOmega(M.axes[inp.idx], state.inputs[inp.id]), { axisIdx: inp.idx });
+  for (const a of M.axes) if (a.def.hold) push('hold', `asse ${a.id} fermo ("hold")`, unit(a.idx), 0, { axisIdx: a.idx });
+  for (const a of M.axes) if (a.soft) push('rest', a.def.rest === 'world' ? `${a.id} a riposo nel mondo` : `${a.id} a riposo, solidale a ${a.carrier.id}`, a.soft, 0, { axisIdx: a.idx });
+  return L;
+}
+
+/* Risolve in ordine; bvals (opzionale) sostituisce i termini noti: serve a calcolare il contributo di ogni ingresso. */
+function solveConstraints(M, L, bvals) {
+  const sys = makeSystem(M.axes.length);
+  L.forEach((c, i) => {
+    const ok = sys.add(c.row, bvals ? bvals[i] : c.b);
+    c.independent = sys.lastIndependent;
+    if (!bvals) c.conflict = !ok;
+  });
+  return { w: sys.solve(), sys };
+}
+
+function solveSpeeds(M) {
+  const locked = new Set();
+  let L = buildConstraints(M, locked), r = solveConstraints(M, L), w = r.w;
+  for (let i = 0; i <= M.ratchets.length; i++) {
+    let changed = false;
+    for (const rt of M.ratchets) if (!locked.has(rt) && rt.sign * (w[rt.driven] - w[rt.driver]) < -1e-9) { locked.add(rt); changed = true; }
+    if (!changed) break;
+    L = buildConstraints(M, locked); r = solveConstraints(M, L); w = r.w;
+  }
+  for (const c of L) if (c.conflict && ['freno', 'driver', 'input', 'hold'].includes(c.kind)) warn('cinematica', `vincoli in conflitto: ${c.label} contraddice gli altri vincoli`);
+  return { w, locked, cons: L, sys: r.sys };
+}
+
+function relationCoeffs(M, outId, insIds) {
+  if (!M.axisBy[outId]) throw new Error(`asse di uscita "${outId}" non esiste o non è attivo`);
+  return insIds.map((_, k) => {
+    const n = M.axes.length, sys = makeSystem(n);
+    for (const m of M.meshes) sys.add(m.row, 0);
+    insIds.forEach((id, j) => {
+      if (!M.axisBy[id]) throw new Error(`asse di ingresso "${id}" non esiste o non è attivo`);
+      const r = new Array(n).fill(0); r[M.axisBy[id].idx] = 1; sys.add(r, j === k ? 1 : 0);
+    });
+    return sys.solve()[M.axisBy[outId].idx];
+  });
+}
+
+/* ---------- velocità di una ruota rispetto a mondo e a tutti i parent ---------- */
+const axName = a => a.id.replace(/^axis_/, '');
+const rpmOfW = (a, v) => v * a.cw * 30 / PI;
+const fmtRpm = v => { const x = Math.abs(v); return x < 1e-6 ? '0' : (v > 0 ? '↻ ' : '↺ ') + fmt(x, x < 10 ? 4 : x < 1000 ? 2 : 0); };
+const chainOf = a => { const o = []; for (let x = a.carrier; x; x = x.carrier) o.push(x); return o; };   // antenati stretti
+function commonFrame(a, b) { const cb = new Set(chainOf(b)); for (const x of chainOf(a)) if (cb.has(x)) return x; return null; }   // null = mondo
+
+/* rotazione del corpo di a rispetto al corpo ref (null = mondo): componente lungo l'asse di a e parte ortogonale */
+function relToFrame(a, ref, w) {
+  const rel = V.sub(omegaOf(a, w), ref ? omegaOf(ref, w) : [0, 0, 0]), raw = V.dot(rel, a.dir);
+  return { raw, along: rpmOfW(a, raw), perp: V.len(V.sub(rel, V.mul(a.dir, raw))) * 30 / PI };
+}
+
+   function velocityLines(a, w) {
+     const out = [{ ref: null, label: 'mondo', ...relToFrame(a, null, w) }], seen = new Set();
+     for (const c of chainOf(a)) { seen.add(c); out.push({ ref: c, label: 'vs ' + axName(c), ...relToFrame(a, c, w) }); }
+     for (const id of a.def.compare || []) { const c = M.axisBy[id]; if (c && c !== a && !seen.has(c)) out.push({ ref: c, label: 'vs ' + axName(c) + ' (confronto)', ...relToFrame(a, c, w) }); }
+     return out;
+   }
+
+/* ---------- colonna della tabella ---------- */
+function updateTable(w, cons) {
+  const direct = {};
+  for (const c of cons) if (c.axisIdx !== undefined && c.independent && !direct[c.axisIdx]) direct[c.axisIdx] = c.kind;
+  const kindText = { driver: 'imposta (ruota pilotata)', input: 'imposta (input)', hold: 'imposta (hold: ferma)', freno: 'imposta (freno: ferma)', rest: 'a riposo: solidale al carrier' };
+  for (const g of M.gears) {
+    const row = rowOf[g.id];
+    if (!row || row.cells.length < 6) continue;
+    let markRef = null, markText = '';
+    const k = direct[g.ax.idx];
+       if (k) { const rc = k === 'rest' && g.ax.def.rest === 'carrier'; markRef = (rc || (k === 'driver' && g.ax.carrier)) ? g.ax.carrier : null; markText = k === 'rest' ? (rc ? kindText.rest : 'a riposo nel mondo') : kindText[k]; }
+    else {
+      const src = g.meshInfo ? g : M.gears.find(x => x.ax === g.ax && x.meshInfo);
+      if (src) { markRef = src.meshInfo.frame; markText = `rapporto denti con ${src.meshInfo.partner.id}` + (src === g ? '' : ` (via ${src.id}, stesso asse)`); }
+    }
+    row.cells[5].innerHTML = velocityLines(g.ax, w).map(l => {
+      const mk = markText && l.ref === markRef;
+      return `<div class="${mk ? 'mk' : ''}">${l.label}: ${fmtRpm(l.along)}` +
+             (l.perp > 1e-6 ? ` <span style="color:var(--bad)">(+⟂ ${fmt(l.perp, 3)})</span>` : '') + (mk ? ' ◀ ' + markText : '') + '</div>';
+    }).join('');
+  }
+}
+
+/* ---------- spiegazione in console ---------- */
+const EXPL = { timer: null };
+function explainSoon() { clearTimeout(EXPL.timer); EXPL.timer = setTimeout(explainSpeeds, 150); }
+
+function explainSpeeds() {
+  if (!M) return;
+  const { w, cons, sys } = solveSpeeds(M);
+  const rows = sys.rows(), pivot = new Map(rows.map(r => [r.p, r]));
+  const free = M.axes.filter(a => !pivot.has(a.idx));
+  const L = (...a) => console.log(...a);
+  // contributo di ogni ingresso imposto (velocità ≠ 0): il sistema è lineare, quindi w = somma dei contributi
+  const contrib = [];
+  cons.forEach((c, i) => {
+    if (c.b !== 0 && (c.kind === 'driver' || c.kind === 'input')) {
+      const bv = cons.map(() => 0); bv[i] = c.b;
+      contrib.push({ c, w: solveConstraints(M, cons, bv).w });
+    }
+  });
+  const why = a => {
+    const i = a.idx;
+    const dir = cons.find(c => c.axisIdx === i && c.independent && c.kind !== 'rest');
+    if (dir) return `imposta direttamente: ${dir.label}`;
+    const r = pivot.get(i);
+    if (!r) return '⚠ GRADO DI LIBERTÀ LIBERO: nessun vincolo la determina, quindi la velocità assoluta è posta a 0';
+    const parts = contrib.filter(k => Math.abs(k.w[i]) > 1e-12).map(k => `${k.c.label}: ${fmtRpm(rpmOfW(a, k.w[i]))}`);
+    let s = 'ricavata dai vincoli (ingranamenti, ecc.) — ' + (parts.length ? `contributi: ${parts.join(' + ')}` : 'nessun ingresso imposto la muove');
+    const fr = free.filter(f => Math.abs(r.c[f.idx]) > 1e-9);
+    if (fr.length) s += ` — ⚠ dipende da assi liberi posti a 0: ${fr.map(f => `${f.id} (coeff ${(-r.c[f.idx]).toFixed(3)})`).join(', ')}`; // `
+    const rest = cons.find(c => c.axisIdx === i && c.kind === 'rest' && c.independent);
+    if (rest) s += ` — fissata per default: ${rest.label}`;
+    return s;
+  };
+
+  console.groupCollapsed('%c[velocità]%c come si ottiene la velocità di ogni ruota (clic per aprire)', 'color:#d9b45a;font-weight:bold', 'color:inherit');
+  L('Vincoli attivi, nell\'ordine in cui vengono applicati (i primi hanno la precedenza):');
+  cons.forEach((c, i) => {
+    const ax = c.axisIdx !== undefined ? M.axes[c.axisIdx] : null;
+    L(`  ${i + 1}. [${c.kind}] ${c.label}` + (ax && c.b !== 0 ? ` = ${fmtRpm(rpmOfW(ax, c.b))} giri/min` : '') +
+      (c.independent ? '' : '  → già implicito nei precedenti (nessun effetto)') + (c.conflict ? '  ⚠ IN CONFLITTO con i precedenti' : ''));
+  });
+  L(free.length ? `⚠ Assi non determinati da nessun vincolo (velocità assoluta posta a 0): ${free.map(a => a.id).join(', ')}. Se uno di questi dovrebbe muoversi, manca un vincolo o un "rest".`
+                : 'Tutti gli assi sono determinati dai vincoli.'); // `
+  for (const g of M.gears) {
+    const a = g.ax, vl = velocityLines(a, w);
+    L(`%c${g.id}%c "${g.def.name}" · ${g.type}, z=${g.z}, su ${a.id}` + (a.carrier ? ` (portato da ${chainOf(a).map(c => c.id).join(' → ')})` : ' (asse senza carrier: fisso nel mondo)'),
+      'color:#d9b45a;font-weight:bold', 'color:inherit');
+    L('    velocità lungo l\'asse: ' + vl.map(l => `${l.label} ${fmtRpm(l.along)}` + (l.perp > 1e-6 ? ` [+⟂ ${fmt(l.perp, 3)}]` : '')).join(' · '));
+    L('    asse: ' + why(a));
+    if (g.meshInfo) {
+      const p = g.meshInfo.partner, f = g.meshInfo.frame, fn = f ? axName(f) : 'mondo';
+      const m = M.meshes.find(x => (x.g === g && x.p === p) || (x.g === p && x.p === g));
+      const res = m ? m.row.reduce((s, c, k) => s + c * w[k], 0) : NaN;
+      L(`    ingranamento con ${p.id} (z ${g.z}:${p.z}): le due velocità sono legate dal rapporto denti, misurate RISPETTO A «${fn}» (il corpo che porta entrambi gli assi). Residuo dell'equazione di presa: ${res.toExponential(2)}`);
+      if ((g.ax.carrier || null) === f && (p.ax.carrier || null) === f) {
+        const sg = relToFrame(g.ax, f, w), sp = relToFrame(p.ax, f, w), exp = p.z / g.z;
+        const got = Math.abs(sp.raw) > 1e-12 ? Math.abs(sg.raw / sp.raw) : null;
+        const ok = got === null ? Math.abs(sg.raw) < 1e-12 : Math.abs(got - exp) < 1e-6 * Math.max(1, exp);
+        L(`    verifica rispetto a ${fn}: ω_${g.id} = ${fmtRpm(sg.along)}, ω_${p.id} = ${fmtRpm(sp.along)}; |ω_${g.id}/ω_${p.id}| atteso ${p.z}/${g.z} = ${exp.toFixed(5)}, ottenuto ${got === null ? 'n/d (ferme)' : got.toFixed(5)}  ${ok ? '✓' : '✗ ERRORE'}`);
+      } else L('    (gli assi non sono portati direttamente dallo stesso corpo: il rapporto va letto sul punto di contatto, vedi il residuo)'); //`
+    }
+  }
+  console.groupEnd();
+}
+
+/* =====================================================================
+   5. SCENA BABYLON
+   ===================================================================== */
+const { Vector3: V3, Color3: C3, Quaternion: Quat } = BABYLON;
+const canvas = $('stage');
+const engine = new BABYLON.Engine(canvas, true, { antialias: true });
+const scene  = new BABYLON.Scene(engine);
+scene.useRightHandedSystem = true;
+scene.clearColor = new BABYLON.Color4(.8, .8, .8, 1);
+
+const camera = new BABYLON.ArcRotateCamera('cam', PI / 2 - .7, 1.1, 1000, V3.Zero(), scene);
+camera.attachControl(canvas, false);
+camera.lowerRadiusLimit = 30;
+camera.wheelDeltaPercentage = .02;
+camera.panningSensibility = 40;
+camera.minZ = 1;
+canvas.addEventListener('wheel', e => e.preventDefault(), { passive: false });
+canvas.addEventListener('contextmenu', e => e.preventDefault());
+new BABYLON.HemisphericLight('sky', new V3(.3, 1, .5), scene).intensity = .75;
+new BABYLON.DirectionalLight('sun', new V3(-.5, -1, -.7), scene).intensity = .8;
+
+const matCache = {};
+function material(hex) {
+  if (!matCache[hex]) {
+    const m = new BABYLON.StandardMaterial('m' + hex, scene);
+    m.diffuseColor = C3.FromHexString(hex); m.specularColor = new C3(.28, .28, .28); m.backFaceCulling = false;
+    matCache[hex] = m;
+  }
+  return matCache[hex];
+}
+const markerMat = material('#d4262e');
+const toV3 = a => new V3(a[0], a[1], a[2]);
+
+// Costruisce una mesh da uno o più solidi. I solidi con vertici non finiti (NaN/Infinity) vengono saltati e segnalati.
+function buildMesh(name, solids, mapPoint, mat, pickable) {
+  const pos = [], nor = [], idx = [];
+  let n = 0;
+  for (const { P, T } of solids) {
+    const R = P.map(mapPoint);
+    const badIdx = R.findIndex(p => !p.every(Number.isFinite));
+    if (badIdx >= 0) {
+      fail('mesh', `"${name}": vertice non finito (#${badIdx} su ${R.length}): solido saltato. Causa tipica: parametro mancante o non valido nel JSON (es. delta/apexW di un conico, denti, modulo, raggio, w)`, P[badIdx]);
+      continue;
+    }
+    let vol = 0;
+    for (const [a, b, c] of T) {
+      const A = R[a], B = R[b], C = R[c];
+      vol += A[0]*(B[1]*C[2]-B[2]*C[1]) + A[1]*(B[2]*C[0]-B[0]*C[2]) + A[2]*(B[0]*C[1]-B[1]*C[0]);
+    }
+    for (const t of T) {
+      const [a, b, c] = vol < 0 ? [t[0], t[2], t[1]] : t;
+      const A = R[a], B = R[b], C = R[c];
+      const ux = B[0]-A[0], uy = B[1]-A[1], uz = B[2]-A[2], vx = C[0]-A[0], vy = C[1]-A[1], vz = C[2]-A[2];
+      let x = uy*vz-uz*vy, y = uz*vx-ux*vz, z = ux*vy-uy*vx;
+      const l = Math.hypot(x, y, z) || 1; x /= l; y /= l; z /= l;
+      pos.push(...A, ...B, ...C);
+      nor.push(x, y, z, x, y, z, x, y, z);
+      idx.push(n, n + 1, n + 2); n += 3;
+    }
+  }
+  const mesh = new BABYLON.Mesh(name, scene);
+  if (pos.length) {
+    const data = new BABYLON.VertexData();
+    data.positions = pos; data.normals = nor; data.indices = idx; data.applyToMesh(mesh);
+  } else warn('mesh', `"${name}": nessuna geometria valida, la mesh resta vuota`);
+  mesh.material = mat; mesh.isPickable = !!pickable;
+  return mesh;
+}
+
+function frameMap(side = 1, apexW = 0) {
+  return p => [p[0], side * p[1], apexW + side * p[2]];
+}
+
+const wrapAngle = a => { const r = ((a % (2 * PI)) + 2 * PI) % (2 * PI); return r > 2 * PI - 1e-6 ? 0 : r; };
+const cacheKey = obj => JSON.stringify(obj, (k, v) => typeof v === 'number' ? Math.round(v * 1e6) / 1e6 : v);
+
+function gearSolids(g) {
+  if (g.type === 'cylinder') return [cylinderSolid(g.r, g.w[0], g.w[1], g.def.n || 32)];
+  if (g.type === 'worm') return [wormSolid(g.wp, g.rho, g.w[0], g.w[1])];
+  if (g.type === 'wormwheel') return [wormWheelSolid(g.z, g.m, g.partner.wp, g.sprime, g.rho, g.w[0], g.w[1])];
+  if (g.type === 'spur') return [spurGear(g.z, g.m, g.rho, g.w[0], g.w[1])];
+  const out = [bevelGear(g.z, g.m, g.delta, g.rho, g.def.k0 || 0.7)], pl = g.def.plate;
+  if (pl) { const wp = g.r / Math.tan(g.delta); out.push(cylinderSolid(pl.k * g.r, wp + pl.from, wp + pl.to, pl.n || 48)); }
+  return out;
+}
+
+function resolvePart(p, ev) {
+  const k = { shape: p.shape, n: p.n || 32, color: p.color };
+  if (p.r !== undefined) k.r = ev(p.r);
+  if (p.w) k.w = p.w.map(e => ev(e));
+  k.at = (p.at || [0, 0]).map(e => ev(e));
+  if (p.half) k.half = p.half.map(e => ev(e));
+  if (p.poly) { k.poly = p.poly.map(pt => pt.map(e => ev(e))); k.y = p.y || [-1, 1]; }
+  const solid = k.shape === 'cylinder' ? cylinderSolid(k.r, k.w[0], k.w[1], k.n, k.at[0], k.at[1])
+              : k.shape === 'box' ? boxSolid(k.w[0], k.w[1], k.at[0], k.at[1], k.half[0], k.half[1])
+              : prismSolid(k.poly, k.y[0], k.y[1]);
+  return { key: k, solid };
+}
+
+/* =====================================================================
+   6. COSTRUZIONE DELLA SCENA A PARTIRE DAL MODELLO
+   ===================================================================== */
+let M = null;
+const meshCache = new Map();
+
+function buildScene(M) {
+  step('scena', `Costruzione della scena: ${M.axes.length} assi, ${M.gears.length} ingranaggi`);
+  const used = new Set();
+  let built = false;
+  const cached = (key, make) => {
+    used.add(key);
+    let m = meshCache.get(key);
+    built = false;
+    if (!m || m.isDisposed()) { m = make(); meshCache.set(key, m); built = true; }
+    m.renderOverlay = false;
+    return m;
+  };
+  M.nodes = []; M.extras = []; M.allMeshes = []; M.groupItems = {};
+  const inGroup = (grp, item) => { if (grp) (M.groupItems[grp] = M.groupItems[grp] || []).push(item); };
+
+  for (const a of M.axes) { a.node = new BABYLON.TransformNode('axis_' + a.id, scene); a.node.rotationQuaternion = Quat.Identity(); M.nodes.push(a.node); }
+  for (const a of M.axes) {
+    const Ob = V.toB(a.O);
+    if (a.carrier) { a.node.parent = a.carrier.node; a.node.position = toV3(V.sub(Ob, V.toB(a.carrier.O))); }
+    else a.node.position = toV3(Ob);
+    a.axisB = toV3(V.toB(a.dir));
+    inGroup(a.group || a.def.group, a.node);
+    a.frame = new BABYLON.TransformNode('frame_' + a.id, scene); a.frame.parent = a.node; M.nodes.push(a.frame);
+    const fx = V.toB(a.ref), fy = V.toB(a.yv), fz = V.toB(a.dir);
+    a.frame.rotationQuaternion = Quat.FromRotationMatrix(BABYLON.Matrix.FromValues(fx[0], fx[1], fx[2], 0, fy[0], fy[1], fy[2], 0, fz[0], fz[1], fz[2], 0, 0, 0, 0, 1));
+    step('scena', `asse ${a.id}: nodo creato in ${fmtV(a.O)}` + (a.carrier ? ` (figlio di ${a.carrier.id})` : ''));
+  }
+
+  for (const g of M.gears) {
+    CTX.where = `scena: ingranaggio ${g.id}`;
+    g.sig = JSON.stringify([g.type, g.z, g.m, g.def.axis, g.apexW, g.w, g.side]);
+    const key = 'g|' + cacheKey([g.type, g.z, g.m, wrapAngle(g.rho), g.w, g.apexW, g.side, g.delta, g.def.plate, g.r, g.def.n, g.def.k0, g.def.color || g.ax.def.color, g.wp, g.partner && g.partner.wp, g.sprime]);
+    const t0 = performance.now();
+    try {
+      g.mesh = cached(key, () => buildMesh('gear_' + g.id, gearSolids(g), frameMap(g.side, g.apexW || 0), material(g.def.color || g.ax.def.color), true));
+    } catch (e) { throw new Error(`ingranaggio ${g.id} (${g.type}): errore nella geometria: ${e.message}`); }
+    const tri = g.mesh.getTotalIndices() / 3;
+    step('ingranaggio', `${g.id} [${g.type}]: ${built ? `mesh costruita (${tri} triangoli, ${(performance.now() - t0).toFixed(0)} ms)` : `mesh riusata dalla cache (${tri} triangoli)`}`);
+    if (!tri) warn('ingranaggio', `${g.id}: la mesh non contiene triangoli`);
+    g.mesh.parent = g.ax.frame; g.mesh.metadata = g.id; g.mesh.setEnabled(true);
+    M.allMeshes.push(g.mesh);
+  }
+  for (const a of M.axes) {
+    const parts = a.def.parts || []; let count = 0;
+    parts.forEach((pd, i) => {
+      if (!isActive(pd)) return;
+      CTX.where = `scena: asse ${a.id}, parte #${i} (${pd.shape})`;
+      const { key, solid } = resolvePart(pd, M.ev);
+      const mat = key.color === 'marker' ? markerMat : material(key.color || a.def.color);
+      const mesh = cached('p|' + cacheKey([key, key.color || a.def.color]), () => buildMesh(`part_${a.id}_${i}_${pd.shape}`, [solid], frameMap(), mat, false));
+      mesh.parent = a.frame; mesh.setEnabled(true);
+      M.allMeshes.push(mesh); count++;
+    });
+    step('parti', `${a.id}: ${count} parti costruite` + (parts.length - count ? ` (${parts.length - count} saltate per variante)` : ''));
+  }
+  CTX.where = '';
+  for (const [k, m] of meshCache) if (!used.has(k)) { m.dispose(); meshCache.delete(k); }
+
+  for (const b of M.brakes) {
+    const s = b.def.shoe, at = V.toB(s.at.map(e => M.ev(e))), rel = V.toB(s.released);
+    b.mesh = BABYLON.MeshBuilder.CreateBox('shoe', { width: s.size[0], height: s.size[2], depth: s.size[1] }, scene);
+    b.mesh.material = new BABYLON.StandardMaterial('shoeMat', scene); b.mesh.isPickable = false;
+    b.engaged = toV3(at); b.released = toV3(V.add(at, rel));
+    M.extras.push(b.mesh); inGroup(b.def.group, b.mesh);
+    step('scena', `freno su ${b.def.axis}: ceppo creato`);
+  }
+  for (const r of M.ropes) {
+    r.rope = BABYLON.MeshBuilder.CreateCylinder('rope', { height: 1, diameter: 4, tessellation: 12 }, scene);
+    r.weight = BABYLON.MeshBuilder.CreateCylinder('weight', { height: 30, diameter: 24, tessellation: 24 }, scene);
+    r.rope.material = material('#5a4630'); r.weight.material = material('#6b7280');
+    r.rope.isPickable = r.weight.isPickable = false; r.top = V.toB(r.at);
+    M.extras.push(r.rope, r.weight); inGroup(r.def.group, r.rope); inGroup(r.def.group, r.weight);
+    step('scena', `fune su ${r.def.axis}: fune e peso creati`);
+  }
+  for (const h of M.hookes) {
+    const arm = h.def.arm, cross = new BABYLON.TransformNode('cross', scene);
+    cross.rotationQuaternion = Quat.Identity(); cross.position = toV3(V.toB(M.axes[h.outIdx].O));
+    const mk = (mat, rot) => {
+      const c = BABYLON.MeshBuilder.CreateCylinder('crossArm', { height: 2 * arm.len, diameter: 2 * arm.r, tessellation: 16 }, scene);
+      c.material = mat; c.parent = cross; c.isPickable = false; if (rot) c.rotation.z = PI / 2; M.extras.push(c);
+    };
+    mk(material('#d4262e'), true);
+    mk(material('#2f6fe0'), false);
+    const core = BABYLON.MeshBuilder.CreateBox('crossCore', { size: 8 }, scene);
+    core.material = material('#7c8590'); core.parent = cross; core.isPickable = false; M.extras.push(core);
+    h.cross = cross; M.nodes.push(cross); inGroup(h.def.group, cross);
+    step('scena', `snodo di Hooke ${h.def.input} → ${h.def.output}: crociera creata`);
+  }
+  applyGroups();
+  step('scena', `Scena completa: ${M.allMeshes.length} mesh, ${M.nodes.length} nodi, ${M.extras.length} elementi extra`);
+}
+
+function applyGroups() {
+  if (!M) return;
+  for (const g in M.groupItems) for (const it of M.groupItems[g]) it.setEnabled(state.groups[g] !== false);
+}
+
+function orientCross(h, phi) {
+  const psi = hookePsi(h, phi), din = M.axes[h.inIdx].dir, yp = V.cross(din, h.bend);
+  const A = V.add(V.mul(h.bend, cos(phi)), V.mul(yp, sin(phi)));
+  const e1 = V.sub(V.mul(h.bend, h.cb), V.mul(din, h.sb));
+  const B = V.add(V.mul(e1, -sin(psi)), V.mul(yp, cos(psi)));
+  const nn = V.cross(A, B), a = V.toB(A), b = V.toB(B), c = V.toB(nn);
+  h.cross.rotationQuaternion = Quat.FromRotationMatrix(BABYLON.Matrix.FromValues(
+    a[0], a[1], a[2], 0, b[0], b[1], b[2], 0, c[0], c[1], c[2], 0, 0, 0, 0, 1));
+}
+
+// Ingombro del modello: ignora le mesh vuote o con bounding box non finito (e le segnala).
+function modelBounds() {
+  const min = [1e9, 1e9, 1e9], max = [-1e9, -1e9, -1e9];
+  let skipped = 0;
+  for (const m of M.allMeshes) {
+    if (!m.getTotalVertices()) { skipped++; continue; }
+    m.computeWorldMatrix(true);
+    const bb = m.getBoundingInfo().boundingBox, vs = [bb.minimumWorld, bb.maximumWorld];
+    if (!vs.every(v => Number.isFinite(v.x + v.y + v.z))) { skipped++; warn('ingombro', `bounding box non finito per la mesh "${m.name}"${m.metadata ? ` (ingranaggio ${m.metadata})` : ''}`); continue; }
+    for (const v of vs) for (let i = 0; i < 3; i++) { const c = [v.x, v.y, v.z][i]; min[i] = Math.min(min[i], c); max[i] = Math.max(max[i], c); }
+  }
+  step('ingombro', `min=${fmtV(min)} max=${fmtV(max)}` + (skipped ? ` (${skipped} mesh ignorate)` : ''));
+  return { min, max };
+}
+
+function rebuild(verbose = true) {
+  DBG.on = verbose || DBG.always;
+  if (verbose) seenMsgs.clear();
+  const t0 = performance.now();
+  step('rebuild', '════════ ricostruzione del modello ════════');
+  syncParams();
+  const newM = resolveModel();   // se fallisce lancia un errore e resta il modello precedente
+  validateModel(newM);
+
+  const prevTheta = {}, prevSig = {};
+  if (M) {
+    for (const a of M.axes) prevTheta[a.id] = a.theta;
+    for (const g of M.gears) prevSig[g.id] = g.sig;
+    for (const m of meshCache.values()) { m.parent = null; m.renderOverlay = false; }
+    M.nodes.forEach(n => n.dispose(true)); M.extras.forEach(m => m.dispose());
+  }
+  M = newM;
+  buildScene(M);
+  for (const a of M.axes) a.theta = prevTheta[a.id] || 0;
+  const dirty = a => { const gs = M.gears.filter(g => g.ax === a); return gs.length > 0 && gs.every(g => prevSig[g.id] !== g.sig); };
+  for (const a of M.axes) if (dirty(a)) for (const m of M.meshes) {
+    const other = m.g.ax === a ? m.p.ax : m.p.ax === a ? m.g.ax : null;
+    if (!other || dirty(other)) continue;
+    const nz = m.row.map((v, i) => Math.abs(v) > 1e-9 ? i : -1).filter(i => i >= 0);
+    if (nz.length === 2) { a.theta = -m.row[other.idx] / m.row[a.idx] * other.theta; break; }
+  }
+  CTX.where = 'differential';
+  try {
+    M.differential = MACHINE.differential && relationCoeffs(M, MACHINE.differential.out, MACHINE.differential.ins);
+    if (M.differential) step('differenziale', `w_${MACHINE.differential.out} = ${M.differential.map((c, i) => `${+c.toFixed(4)}·w_${MACHINE.differential.ins[i]}`).join(' + ')}`);
+  } catch (e) { M.differential = null; warn('differenziale', `non calcolabile: ${e.message}`); }
+  CTX.where = 'ratios';
+  M.ratioVals = (MACHINE.ratios || []).map(r => {
+    try { const v = Math.abs(relationCoeffs(M, r.to, [r.from, r.from])[0]); step('rapporto', `${r.from} → ${r.to}: ${+v.toFixed(4)}`); return v; }
+    catch (e) { warn('rapporto', `${r.from} → ${r.to} non calcolabile: ${e.message}`); return NaN; }
+  });
+  CTX.where = '';
+  step('rebuild', `completata in ${(performance.now() - t0).toFixed(0)} ms`);
+}
+
+/* =====================================================================
+   7. INTERFACCIA
+   ===================================================================== */
+const rpmOf = exp => Math.pow(10, exp);
+let sinceTable = 0;
+let rowOf = {};
+
+function el(tag, props = {}, ...kids) {
+  const e = document.createElement(tag);
+  Object.assign(e, props);
+  e.append(...kids);
+  return e;
+}
+
+function buildTable() {
+  const tb = $('gearRows'); tb.innerHTML = ''; rowOf = {};
+  for (const g of M.gears) {
+    const row = tb.insertRow(); row.tabIndex = 0; row.dataset.gear = g.id; rowOf[g.id] = row;
+    row.innerHTML = `<td>${g.label}</td><td>${g.def.name}${g.def.note ? ` <span style="color:var(--muted)">(${g.def.note})</span>` : ''}</td>` +
+                    `<td>${g.ax.id}</td><td>${g.z || '—'}</td><td>${fmt(2 * g.r, 1)}</td><td></td>`;
+    row.onclick = () => selectGear(g.id);
+    row.onkeydown = e => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); selectGear(g.id); } };
+  }
+}
+
+function highlight(id) {
+  if (state.current && M.gearBy[state.current]) M.gearBy[state.current].mesh.renderOverlay = false;
+  state.current = id;
+  const g = M.gearBy[id];
+  g.mesh.renderOverlay = true; g.mesh.overlayColor = new C3(1, .85, .3); g.mesh.overlayAlpha = .35;
+  $('selected').textContent = `${g.label} — ${g.def.name}${g.z ? ', ' + g.z + ' denti' : ''}. Sensi visti ${g.ax.def.viewLabel || 'da davanti'}.`;
+  for (const r of document.querySelectorAll('#gearRows tr')) r.classList.toggle('sel', r.dataset.gear === id);
+}
+
+function updateDriver() {
+  if (!state.current || !M.gearBy[state.current]) return;
+  const g = M.gearBy[state.current];
+  state.driver = { gear: state.current, w: state.direction * g.ax.cw * rpmOf(+$('speed').value) * PI / 30 };
+  $('rpmLabel').textContent = fmt(rpmOf(+$('speed').value), 2);
+  $('btnCW').classList.toggle('on', state.direction > 0);
+  $('btnCCW').classList.toggle('on', state.direction < 0);
+  explainSoon();
+}
+
+function selectGear(id) { highlight(id); updateDriver(); }
+
+function updateTexts() {
+  const lines = []; let bad = false;
+  try {
+    for (const c of MACHINE.checks || []) if (isActive(c)) {
+      if (c.type === 'axisClearsGear') {
+        const a = M.axisBy[c.axis], g = M.gearBy[c.gear];
+        const dist = V.len(V.perp(V.sub(a.O, g.ax.O), a.dir)), gap = dist - c.shaftR - (g.r + g.m), ex = { dist, gap, miss: c.min - gap };
+        lines.push(template(c.text, M.ev, ex) + template(gap < c.min ? c.bad : c.ok, M.ev, ex));
+        if (gap < c.min) bad = true;
+      } else if (c.type === 'info') lines.push(template(c.text, M.ev));
+    }
+    const notes = (MACHINE.ratios || []).map((r, i) => template(r.text, M.ev, { r: M.ratioVals[i] }));
+    $('note').textContent = notes.concat((MACHINE.notes || []).map(t => template(t, M.ev))).join(' ');
+  } catch (e) { warn('testi', `errore nei testi di "checks"/"ratios"/"notes": ${e.message}`); }
+  $('check').textContent = lines.join(' ');
+  $('check').className = 'small' + (bad ? ' bad' : '');
+}
+
+function statusText(w, locked) {
+  const lines = [], E = 1e-9;
+  for (const r of M.ratchets) {
+    const wd = w[r.driver], wa = w[r.driven], m = r.def.messages;
+    if (locked.has(r)) lines.push(r.sign * wd > E ? m.drives : m.blocks);
+    else if (Math.abs(wd) > E && Math.abs(wa) < E) lines.push(m.winding);
+    else if (Math.abs(wa) > E && Math.abs(wd) < E) lines.push(m.freewheel);
+  }
+  for (const b of M.brakes) if (state.brakes[b.def.axis] && b.def.message) lines.push(b.def.message);
+  for (const h of M.hookes) if (Math.abs(w[h.inIdx]) > E) lines.push(template(h.def.message, M.ev, { beta: Math.acos(h.cb) * 180 / PI, lo: h.cb, hi: 1 / h.cb }));
+  if (M.differential) {
+    const d = MACHINE.differential, [a, b] = M.differential;
+    lines.push(template(d.text, M.ev, { a, b }) + ` Uscita: ${fmt(Math.abs(w[M.axisBy[d.out].idx]) * 30 / PI, 3)} giri/min.`);
+  }
+  return lines.join('\n');
+}
+
+function afterRebuild() {
+  buildTable();
+  const cur = state.current;
+  if (cur && M.gearBy[cur]) highlight(cur);
+  else {
+    state.current = null;
+    if (state.driver && !M.gearBy[state.driver.gear]) state.driver = null;
+    $('selected').textContent = 'Nessun ingranaggio selezionato';
+  }
+  updateTexts();
+  sinceTable = 1;
+  explainSoon();
+}
+
+function onModelChange() {
+  try { rebuild(false); afterRebuild(); }
+  catch (e) { reportError('ricostruzione (cursore)', e); console.warn('[rebuild] il modello precedente resta visualizzato'); }
+}
+function onVariantChange() {
+  try { rebuild(true); buildPanel(); afterRebuild(); }
+  catch (e) { reportError('cambio variante', e); console.warn('[rebuild] il modello precedente resta visualizzato (la variante selezionata ha errori)'); }
+}
+
+function goView(v) {
+  let target, radius;
+  CTX.where = `vista "${v.id}"`;
+  if (v.auto) {
+    const b = modelBounds();
+    target = new V3((b.min[0] + b.max[0]) / 2, (b.min[1] + b.max[1]) / 2, (b.min[2] + b.max[2]) / 2);
+    radius = Math.hypot(b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]) * v.scale;
+  } else { target = toV3(V.toB(v.target.map(e => M.ev(e)))); radius = v.radius; }
+  CTX.where = '';
+  if (![target.x, target.y, target.z, radius].every(Number.isFinite) || radius <= 0) { fail('vista', `vista "${v.id}": target/raggio non validi`, target, radius); return; }
+  camera.setTarget(target);
+  camera.alpha = M.ev(v.alpha); camera.beta = M.ev(v.beta); camera.radius = radius;
+  step('vista', `"${v.id}": target=(${target.x.toFixed(1)}, ${target.y.toFixed(1)}, ${target.z.toFixed(1)}) raggio=${radius.toFixed(1)}`);
+}
+
+function buildPanel() {
+  const vb = $('variants'); vb.innerHTML = '';
+  for (const key in MACHINE.variants) {
+    const v = MACHINE.variants[key], opts = Object.keys(v.options);
+    vb.append(el('h2', { textContent: v.label }));
+    if (opts.length === 2) {
+      const cb = el('input', { type: 'checkbox', checked: state.variants[key] === opts[1] });
+      cb.onchange = () => { state.variants[key] = cb.checked ? opts[1] : opts[0]; onVariantChange(); };
+      vb.append(el('label', {}, cb, ' ' + v.options[opts[1]]));
+    } else {
+      const sel = el('select', {}, ...opts.map(o => el('option', { value: o, textContent: v.options[o], selected: o === state.variants[key] })));
+      sel.onchange = () => { state.variants[key] = sel.value; onVariantChange(); };
+      vb.append(el('label', {}, sel));
+    }
+  }
+  const cb = $('controls'); cb.innerHTML = '';
+  for (const c of MACHINE.controls) {
+    const vv = c.variantKey ? state.variants[c.variantKey] : 'all', rng = c.ranges[vv];
+    if (!rng) continue;
+    const out = el('b', { textContent: fmt(state.ctrl[c.id][vv], 1) });
+    const inp = el('input', { type: 'range', min: rng.min, max: rng.max, step: c.step, value: state.ctrl[c.id][vv] });
+    inp.oninput = () => { state.ctrl[c.id][vv] = +inp.value; out.textContent = fmt(+inp.value, 1); onModelChange(); };
+    cb.append(el('label', {}, c.label + ': ', out, inp));
+  }
+  const ib = $('inputs'); ib.innerHTML = '';
+  for (const inp of M.inputs) {
+    const st = state.inputs[inp.id], lab = el('b', { textContent: fmt(rpmOf(st.speed), 2) });
+    const sp = el('input', { type: 'range', min: -1.5, max: 1.8, step: 0.01, value: st.speed });
+    const mk = (text, dir) => el('button', { textContent: text, className: st.dir === dir ? 'on' : '' });
+    const bs = [mk('↻ Orario', 1), mk('↺ Antiorario', -1), mk('Rilascia', 0)];
+    sp.oninput = () => { st.speed = +sp.value; lab.textContent = fmt(rpmOf(st.speed), 2); explainSoon();};
+    [1, -1, 0].forEach((d, i) => { bs[i].onclick = () => { st.dir = d; bs.forEach((b, j) => b.classList.toggle('on', i === j)); }; explainSoon();  } );
+    ib.append(el('h2', { textContent: inp.def.label }), el('label', {}, 'Velocità: ', lab, ' giri/min', sp),
+              el('div', { className: 'buttons' }, ...bs), el('p', { className: 'small', textContent: inp.def.hint || '' }));
+  }
+  const bb = $('brakes'); bb.innerHTML = '';
+  for (const b of M.brakes) {
+    const c = el('input', { type: 'checkbox', checked: !!state.brakes[b.def.axis] });
+    c.onchange = () => { state.brakes[b.def.axis] = c.checked; explainSoon(); };
+    bb.append(el('label', {}, c, ' ' + b.def.label));
+  }
+}
+
+function buildStaticPanel() {
+  $('title').textContent = MACHINE.title;
+  for (const v of MACHINE.views) $('views').append(el('button', { textContent: v.label, onclick: () => { try { goView(v); } catch (e) { reportError('vista', e); } } }));
+  for (const g of MACHINE.groups) {
+    const c = el('input', { type: 'checkbox', checked: state.groups[g.id] });
+    c.onchange = () => { state.groups[g.id] = c.checked; applyGroups(); };
+    $('groups').append(el('label', {}, c, ' ' + g.label));
+  }
+  $('rpmLabel').textContent = fmt(rpmOf(+$('speed').value), 2);
+  $('speed').oninput = updateDriver;
+  $('btnCW').onclick = () => { state.direction = 1; updateDriver(); };
+  $('btnCCW').onclick = () => { state.direction = -1; updateDriver(); };
+  $('btnStop').onclick = () => { state.driver = null; $('btnCW').classList.remove('on'); $('btnCCW').classList.remove('on'); explainSoon(); };
+  $('timeScale').onchange = e => { state.timeScale = +e.target.value; };
+  $('logAlways').onchange = e => { DBG.always = e.target.checked; };
+  $('btnExplain').onclick = explainSpeeds;
+}
+
+function drawAxes(len) {
+  const defs = [[[1, 0, 0], '#e5484d', 'X'], [[0, 1, 0], '#3fb950', 'Y'], [[0, 0, 1], '#58a6ff', 'Z']];
+  for (const [d, hex, label] of defs) {
+    const col = C3.FromHexString(hex), end = toV3(V.mul(V.toB(d), len));
+    const line = BABYLON.MeshBuilder.CreateLines('axis', { points: [V3.Zero(), end] }, scene);
+    line.color = col;
+    const tip = BABYLON.MeshBuilder.CreateSphere('axisTip', { diameter: 8 }, scene);
+    tip.position = end;
+    const tm = new BABYLON.StandardMaterial('a', scene); tm.emissiveColor = col; tm.disableLighting = true; tip.material = tm;
+    const tex = new BABYLON.DynamicTexture('t', { width: 64, height: 64 }, scene, false);
+    tex.hasAlpha = true; tex.drawText(label, 14, 48, 'bold 44px sans-serif', hex, 'transparent', true);
+    const plane = BABYLON.MeshBuilder.CreatePlane('axisLabel', { size: 24 }, scene), pm = new BABYLON.StandardMaterial('a', scene);
+    pm.diffuseTexture = tex; pm.useAlphaFromDiffuseTexture = true; pm.emissiveColor = C3.White(); pm.disableLighting = true; pm.backFaceCulling = false;
+    plane.material = pm; plane.billboardMode = 7; plane.position = end.add(new V3(0, 14, 0));
+    for (const o of [line, tip, plane]) { o.renderingGroupId = 1; o.isPickable = false; }
+  }
+}
+
+/* =====================================================================
+   8. AVVIO e ANIMAZIONE
+   ===================================================================== */
+try {
+  step('avvio', 'costruzione dell\'interfaccia e del modello');
+  buildStaticPanel();
+  rebuild(true);
+  buildPanel();
+  afterRebuild();
+  const b = modelBounds(), diag = Math.hypot(b.max[0] - b.min[0], b.max[1] - b.min[1], b.max[2] - b.min[2]);
+  if (!Number.isFinite(diag) || diag <= 0 || diag > 1e7) throw new Error(`Dimensioni del modello non valide (diagonale = ${diag}): controlla i messaggi [mesh]/[verifica]/[ingombro] qui sopra`);
+  camera.upperRadiusLimit = diag * 5; camera.maxZ = diag * 20;
+  goView(MACHINE.views[0]);
+  drawAxes(.4 * diag);
+  step('avvio', `modello pronto: diagonale ${diag.toFixed(0)} mm`);
+} catch (e) { reportError('avvio', e); }
+
+scene.onPointerObservable.add(info => {
+  const hit = info.pickInfo;
+  if (M && info.type === BABYLON.PointerEventTypes.POINTERTAP && hit && hit.hit && hit.pickedMesh.metadata) selectGear(hit.pickedMesh.metadata);
+});
+
+scene.onBeforeRenderObservable.add(() => {
+  if (!M) return;
+  const dt = Math.min(engine.getDeltaTime() / 1000, .05) * state.timeScale;
+    const { w, locked, cons } = solveSpeeds(M);
+  // s[i] = velocità dell'asse i RELATIVA al suo carrier: è quella che fa ruotare il nodo (figlio del nodo del carrier)
+  const s = relSpins(M, w);
+  M.axes.forEach((a, i) => { a.theta += s[i] * dt; });
+  for (const h of M.hookes) M.axes[h.outIdx].theta = hookePsi(h, M.axes[h.inIdx].theta);
+  for (const a of M.axes) a.node.rotationQuaternion = Quat.RotationAxis(a.axisB, a.theta);
+  for (const h of M.hookes) orientCross(h, M.axes[h.inIdx].theta);
+  for (const r of M.ropes) {
+    const len = Math.min(r.def.max, Math.max(r.def.min, r.def.len0 + r.radius * M.axes[r.idx].theta));
+    r.rope.scaling.y = len; r.rope.position.set(r.top[0], r.top[1] - len / 2, r.top[2]);
+    r.weight.position.set(r.top[0], r.top[1] - len - 15, r.top[2]);
+  }
+  for (const b of M.brakes) {
+    const on = !!state.brakes[b.def.axis];
+    b.mesh.position.copyFrom(on ? b.engaged : b.released);
+    b.mesh.material.diffuseColor = C3.FromHexString(on ? '#d4262e' : '#6b7280');
+  }
+  sinceTable += dt;
+  if (sinceTable > .1 || !dt) {
+    sinceTable = 0;
+    updateTable(w, cons);
+    $('status').textContent = statusText(w, locked);
+  }
+});
+
+let frames = 0;
+engine.runRenderLoop(() => {
+  try {
+    scene.render();
+    if (++frames === 1) console.log('%c[render]%c primo frame disegnato', 'color:#d9b45a;font-weight:bold', 'color:inherit');
+  } catch (e) {
+    reportError('render', e);
+    engine.stopRenderLoop();
+  }
+});
+addEventListener('resize', () => engine.resize());
+</script>
+</body>
+</html>
