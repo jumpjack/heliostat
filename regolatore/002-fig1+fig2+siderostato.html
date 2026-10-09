@@ -134,7 +134,7 @@ function reportError(where, e) {
 addEventListener('error', ev => reportError('window.onerror', ev.error || ev.message));
 addEventListener('unhandledrejection', ev => reportError('promise', ev.reason));
 </script>
-<script src="babylon.js" onerror="fail('caricamento','babylon.js non trovato (deve stare accanto a questa pagina)')"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/babylonjs/8.20.0/babylon.js" onerror="fail('caricamento','babylon.js non trovato (deve stare accanto a questa pagina)')"></script>
 
 <!-- ===== MACHINE: descrizione della macchina (era machine-new.js) ===== -->
 <script>
