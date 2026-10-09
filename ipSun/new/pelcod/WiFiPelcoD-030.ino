@@ -309,7 +309,7 @@ void loop() {
           }
 
           // Check client request for commands:
-          if (currentLine.indexOf(F("GET /R")) != -1) {
+          if (currentLine.indexOf(F("GET /R")) != -1 && isAuthorized(currentLine)) {
             sendPelcoDFrame(C_PAN_RIGHT_TILL_STOP, 5, 5);
             //checkResponse();           
             digitalWrite(led, HIGH);               
@@ -323,7 +323,7 @@ void loop() {
             stopCamera();
           }
 
-          if (currentLine.indexOf(F("GET /L")) != -1) {
+          if (currentLine.indexOf(F("GET /L")) != -1 && isAuthorized(currentLine)) {
             sendPelcoDFrame(C_PAN_LEFT_TILL_STOP, 5, 5);
             //checkResponse();           
             digitalWrite(led, HIGH);               
@@ -337,7 +337,7 @@ void loop() {
             stopCamera();
           }
 
-          if (currentLine.indexOf(F("GET /U")) != -1) {
+          if (currentLine.indexOf(F("GET /U")) != -1 && isAuthorized(currentLine)) {
             sendPelcoDFrame(C_TILT_UP_TILL_STOP, 5, 5);
             //checkResponse();           
             digitalWrite(led, HIGH);               
@@ -352,7 +352,7 @@ void loop() {
           }
 
 
-          if (currentLine.indexOf(F("GET /D")) != -1) {
+          if (currentLine.indexOf(F("GET /D")) != -1 && isAuthorized(currentLine)) {
             sendPelcoDFrame(C_TILT_DOWN_TILL_STOP, 5, 5);
             //checkResponse();           
             digitalWrite(led, HIGH);               
@@ -382,6 +382,15 @@ void loop() {
   }
 }
 
+
+// Shared secret required to authorize camera control commands (fixes missing
+// authentication - CWE-287). Clients must append "&key=<CONTROL_API_KEY>" to
+// control requests (e.g. GET /R500&key=HELIOSTAT-SECRET-KEY).
+const char* CONTROL_API_KEY = "HELIOSTAT-SECRET-KEY";
+
+bool isAuthorized(String line) {
+  return line.indexOf("key=" + String(CONTROL_API_KEY)) != -1;
+}
 
 int getDelayValue(String line, String command) {
   // Cerca la posizione del comando nel link
