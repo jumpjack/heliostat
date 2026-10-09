@@ -84,6 +84,10 @@ L'ingranaggio sullo sfondo a sinistra è l' "output" (*) che consiste nella somm
 Se il perno "a" viene lasciato fermo, l'uscita gira 9/10 la velocità della ruota portante M; l'asse "a" di regolazione aggiunge all'asse di uscita 1/10 della propria velocità, cioè se gira a 10 rpm l'uscita girerà 1 rpm più piano o più veloce a seconda del verso di rotazione di "a".
 
  (*) Nel siderostato di Foucault è collegato un asse verticale lo collega al siderostato collocato in alto, attivandone l'asse orario.
+
+ Versione con incluso il siderostato di Foucault:
+
+ ![image](https://github.com/jumpjack/heliostat/blob/main/regolatore/fig1%2Bfig2%2Bsiderostato.png)
 --------
 
 Recueil des travaux scientifiques de Léon Foucault
