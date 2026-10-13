@@ -64,6 +64,7 @@ Qui invece una simulazione 3d create da Claude Sonnet 5.5:
 -    [test n.1](https://jumpjack.github.io/heliostat/regolatore/001-fig1+fig2_configurable.html)
 -    [test n.2](https://jumpjack.github.io/heliostat/regolatore/002-fig1+fig2+siderostato.html): regolatore collegato a siderostato di Foucault
 -    [test n.3](https://jumpjack.github.io/heliostat/regolatore/003-regolatore+siderostato.html)- Siderostato completo di specchi e di regolazioni esterne di Ascensione Retta e Declinazione
+-    [Test n-3 - variante Claude semplificata](https://jumpjack.github.io/heliostat/regolatore/009-fig1_fig2_siderostato.html) 
 
 **Nota: secondo Claude c'è un errore di battitura nel testo: per avere un rapporto di 1:2592 tra primo e ultimo ingranaggio come indicato nel testo, la ruota D non deve avere 165 denti ma 156.**
 
