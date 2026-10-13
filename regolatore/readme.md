@@ -63,6 +63,7 @@ Qui invece una simulazione 3d create da Claude Sonnet 5.5:
 - Versione configurabile tramite struttura JSON
 -    [test n.1](https://jumpjack.github.io/heliostat/regolatore/001-fig1+fig2_configurable.html)
 -    [test n.2](https://jumpjack.github.io/heliostat/regolatore/002-fig1+fig2+siderostato.html): regolatore collegato a siderostato di Foucault
+-    [test n.3](https://jumpjack.github.io/heliostat/regolatore/003-regolatore+siderostato.html)- Siderostato completo di specchi e di regolazioni esterne di Ascensione Retta e Declinazione
 
 **Nota: secondo Claude c'è un errore di battitura nel testo: per avere un rapporto di 1:2592 tra primo e ultimo ingranaggio come indicato nel testo, la ruota D non deve avere 165 denti ma 156.**
 
@@ -88,6 +89,12 @@ Se il perno "a" viene lasciato fermo, l'uscita gira 9/10 la velocità della ruot
  Versione con incluso il siderostato di Foucault:
 
  ![image](https://github.com/jumpjack/heliostat/blob/main/regolatore/fig1%2Bfig2%2Bsiderostato.png)
+
+Versione con specchio e input esterni:
+
+ ![image](https://github.com/jumpjack/heliostat/blob/main/regolatore/003-regolatore+siderostato.png)
+
+ 
 --------
 
 Recueil des travaux scientifiques de Léon Foucault
