@@ -473,7 +473,7 @@ Foucault non  fornisce indicazioni sulle dimensioni degli ingranaggi del meccani
 # Calcoli sparsi 
 
 Proviamo a fare un po' di calcoli:
-- l'asse XX' di uscita dell'anticipatore ha una velocità pari a R/200 di $V_R$, supponendo $V_R$ la velocità di uscita del pignone del regolatore che ingrana con la ruota A.
+- l'asse XX' di uscita dell'anticipatore ha una velocità pari a R/200 (Nota 1) di $V_R$, supponendo $V_R$ la velocità di uscita del pignone del regolatore che ingrana con la ruota A.
 
 <img width="290" height="247" alt="image" src="https://github.com/user-attachments/assets/ad5a3775-011d-47d2-abe8-4ed087e63169" />
 
@@ -557,3 +557,34 @@ Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
 $$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}  = \frac{3^2}{2 * 5 * 1000}= \frac{9}{10000}  = 0.0009$$
 
 $$\frac{K}{L} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}    = \frac{3^3 * 2}{5 * 1000} = \frac{54}{5000} = 0.0108$$
+
+-----------
+
+Nota 1
+
+Nel [documento originale](https://github.com/jumpjack/heliostat/blob/main/regolatore/Beobachtungen.md) che descrive in dettaglio il funzionamento del regolatore isocrono di Eichens, l' "anticipatore" ha ruote con numero di denti diverso rispetto a quello del siderostato di Foucault; ma il siderostato fu descritto postumo da Eichens e dalla moglie di Foucault, che forse potrebbero aver dedotto il funzionamento del meccanismo inferiore da quello superiore (Foucault si limitò a dire che "non c'era spazio per descriverlo qui").
+
+<img width="340" height="382" alt="image" src="https://github.com/user-attachments/assets/92f10851-2e09-49e4-afda-3ca11c1dc55b" />
+
+- M: 25
+- N: 204
+- O: 16
+- P: 62 (Q:P = 31:62 = 1:2)
+- Q: 31
+- R: 50
+- S: 80 (O:S = 16:80 = 1:5)
+
+Quello che conta, però, sono solo i rapporti pianeti/satelliti, che sono esattamente gli stessi del meccanismo del siderostato: 
+- ingresso (Q->P): 1:2
+- uscita (O->S): 1:5
+
+Il risultato è che la velocità di uscita $$V_S$$ è pari a:
+
+$$V_S = 0.9 * V_N$$
+
+Notare che negli schemi originali la velocità di uscita è quella del tubo che permette a S di muoversi liberamente sull'asse, mentre negli schemi di Foacault/Eichens questo tubo viene connesso all'asse XX', e la velocità di questo viene presa come uscita; ma la cosa è indifferente, essendo XX' scollegato dalla ruota portasatelliti e dal pianeta di ingresso.
+
+
+
+
+
