@@ -489,7 +489,7 @@ Questo asse XX' dovrà compiere 1 giro ogni 24 ore, ossia 1 giro ogni 1440 minut
 
 $$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
 
-Questo significa che la ruota conica L che riceve il moto dal regolatore in basso deve  avere velocità pari a:
+Questo significa che la ruota conica L che riceve il moto dalla barra di regolazione manuale della declinazione deve  avere velocità pari a:
 
 $$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321 rpm$$
 
