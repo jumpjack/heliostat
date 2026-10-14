@@ -473,7 +473,14 @@ Foucault non  fornisce indicazioni sulle dimensioni degli ingranaggi del meccani
 # Calcoli sparsi 
 
 Proviamo a fare un po' di calcoli:
-- l'asse XX' di uscita dell'anticipatore ha una velocità pari a L/200 di $V_L$
+- l'asse XX' di uscita dell'anticipatore ha una velocità pari a R/200 di $V_R$, supponendo $V_R$ la velocità di uscita del pignone del regolatore che ingrana con la ruota A.
+
+<img width="290" height="247" alt="image" src="https://github.com/user-attachments/assets/ad5a3775-011d-47d2-abe8-4ed087e63169" />
+
+<img width="409" height="579" alt="image" src="https://github.com/user-attachments/assets/0651436e-c665-4290-9e36-30fbdba81347" />
+
+
+
 - questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
 
 <img width="600" height="542" alt="image" src="https://github.com/user-attachments/assets/a69cafc1-41b7-459e-a93f-d5c228b512d2" />
