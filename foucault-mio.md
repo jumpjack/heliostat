@@ -468,32 +468,43 @@ Foucault non  fornisce indicazioni sulle dimensioni degli ingranaggi del meccani
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/c7921b14-ed3f-4eb1-a649-8c0afed78600)
 
+-----------
+
+# Calcoli sparsi 
+
 Proviamo a fare un po' di calcoli:
 - l'asse XX' di uscita dell'anticipatore ha una velocità pari a L/200 di $V_L$
 - questa velocità è ulteriormente ridotta di un fattore 1/K dalla coppia worm-gear in alto:
 
-![image](https://github.com/jumpjack/heliostat/assets/1620953/899cc279-9b54-4c2a-aab2-f3d74608b798)
+<img width="600" height="542" alt="image" src="https://github.com/user-attachments/assets/a69cafc1-41b7-459e-a93f-d5c228b512d2" />
 
-- Il perno che supporta le ruote K, a e a1 imprime il suo moto alle ruote A e A1, col risultato finale che l'asse XX' finale dell'eliostato avrà una velocità pari a 9/100 dell'asse K.
 
-La velocità finale dell'asse XX' superiore sarà quindi pari a:
+- Il perno che supporta le ruote K, a e a1 imprime il suo moto alle ruote A e A1, col risultato finale che l'asse XX' superiore dell'eliostato avrà una velocità pari a 9/100 dell'asse K.
 
-$$V_{xx'} = V_L * \frac{L}{200} * \frac 1K *  \frac{9}{100}$$
+La velocità dell'asse K dipende dal rapporto worm/gear, non specificato nel documento, che quindi indicheremo con 1/K , con K = numero di denti della ruota K.
 
-cioè
+Il meccanismo che trasmette il moto orario dal regolatore in basso alla ruota K in alto non è mai visibile in nessuna immagine disponibile, ma può essere così ricostruito: una barra verticale (celeste) con due coppie coniche alle estremità, una contenente la ruota conica K in alto, l'altra connessa con l'asse XX' orario inferiore, di uscita del regolatore:
 
-$$V_{xx'} = V_L * \frac{L*9}{20000} * \frac 1K$$
+<img width="2284" height="2670" alt="image" src="https://github.com/user-attachments/assets/ecea05e1-16e2-4153-88ad-9632be3f7356" />
+
+
+Possiamo quindi supporre che la velocità di XX' superiore sia semplicemente pari a 1/k la velocità dell'asse di uscita XX' inferiore del regolatore:
+
+$$V_K = \frac{V_{XX'inf}}{K}$$
+
+$$V_{XX'sup} = \frac{9}{100}V_K = \frac{9}{100}  \frac{V_{XX'inf}}{K}$$
 
 
 Questo asse XX' dovrà compiere 1 giro ogni 24 ore, ossia 1 giro ogni 1440 minuti, cioè avere una velocità di 0.000694444 RPM:
 
-$$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
+$$\frac1{1440}  = \frac{9}{100}  \frac{V_{XX'inf}}{K}$$
 
-Questo significa che la ruota conica L che riceve il moto dalla barra di regolazione manuale della declinazione deve  avere velocità pari a:
+Questo significa che per imprimere a XX' superiore una velocità di 1 giro al giorno, il regolatore inferiore dovrà uscire con una velocità pari a:
 
-$$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321 rpm$$
+$$V_{XX'inf}  =  \frac{K}{1440}  \frac{100}{9}  = K * \frac{10}{1296} =~ 0,00772 *  K$$
 
-Questa sarà anche la velocità della ruota E che ingrana con la ruota D solidale al pianeta C incaricato di sommare la declinazione alla velocità dell'asse orario, tramite il differenziale a satellite, per causare la rotazione della ruota di ceclinazione.
+
+
 
 ## Ipotesi su numero di denti K (gear di worm) e L (conica di ricezione declinazione)
 
