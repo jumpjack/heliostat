@@ -86,7 +86,7 @@ Entrambi i meccanismi si basano sullo stesso "ruotismo satellite" formato dagli 
 - un primo meccanismo, più semplice, prende il movimento principale solo dalla ruota **A**, azionata da un "regolatore isocrono di precisione" (un orologio), a cui aggiunge/toglie una certa velocità rotazionale tramite una ruota esterna controllata dall'utilizzatore
 - un secondo meccanismo, più complesso, aggiunge una ruota **A1**, coassiale alla ruota **A**, e un ruotino **a1**, coassiale al ruotino **a** che nell'altro meccanismo aziona la ruota **A**; queste due ruote aggiuntive **A1** e **a1**, unitamente a un differente tipo di fissaggio delle ruote all'asse **XX'**, permettono di far ruotare la ruota finale **B** alla stessa velocità dell'asse **XX'** in assenza di intervento dall'esterno, ma di muoverla all'occorrenza **temporaneamente** più avanti o più indietro, in modo che la semiruota di declinazione ad essa collegata, che ruota con l'asse **XX'**, possa anche ruotare **perpendicolarmente** all'asse **XX'**, in modo da variare il puntamentro dello strumento (variazione della declinazione).
 
-## Ruotismo 1 - variazione oraria
+## Ruotismo 1 - variazione oraria (meccanismo inferiore) per regolazione Ascensione Retta
 
 Vediamo meglio il meccanismo in questa moderna ricostruzione 3d:
 
@@ -102,7 +102,7 @@ Possiamo rappresentare questo primo meccanismo in forma più compatta:
 
 ![image](https://github.com/jumpjack/heliostat/assets/1620953/bdf8a05b-4db3-441b-a555-a848a671f6f3)
 
-**N.B.: E' importante notare che in questa variante del meccanismo la ruota B è libera, non è collegata all'asse XX': la velocità è imposta a XX' dal pianeta di uscita B, che riceve il moto tramite il meccanismo pianeti-satelliti**
+**N.B.: E' importante notare che in questa variante del meccanismo la ruota B di uscita è collegata all'asse XX' tramite una spina/vite, quindi  XX' avrà la velocità di B; invece, quando questo meccanismo è utilizzato nella parte superiore del siderostato, la ruota B è libera di ruotare intorno a XX', e proprio la differenza di velocità tra B e XX' è alla base del funzionamento della ruota di declinazione.**
 
 Foucault (o forse Eichens?) calcolò queste formule:
 
