@@ -513,34 +513,34 @@ $$V_{XX'inf}  =  \frac{K}{1440}  \frac{100}{9}  = K * \frac{10}{1296} =~ 0,00772
 
 
 
-## Ipotesi su numero di denti K (gear di worm) e L (conica di ricezione declinazione)
+## Ipotesi su numero di denti K (gear di worm) e R (pignone uscita regolatore)
 
 ### Caso 1: numeri "a caso"
 
-Se assumiamo K = 81 e L = 25:
+Se assumiamo K = 81 e R = 25:
 
-$$V_L =  \frac KL * \frac{125}{81} = \frac {81}{25} * \frac{125}{81} =  5 rpm$$
+$$V_R =  \frac KR * \frac{125}{81} = \frac {81}{25} * \frac{125}{81} =  5 rpm$$
 
 
-K = 162 e L = 25:
+K = 162 e R = 25:
 
-$$V_L =  \frac KL * \frac{125}{81} = \frac {162}{25} * \frac{125}{81} = 10 rpm$$
+$$V_R =  \frac KR * \frac{125}{81} = \frac {162}{25} * \frac{125}{81} = 10 rpm$$
 
-K = 81 e L = 18:
+K = 81 e R = 18:
 
-$$V_L =  \frac KL * \frac{125}{81} = \frac {81}{18} * \frac{125}{81} = 6.944 = 0.001389 * 1000/2 = 0.001389 * 500 rpm = ore * 500$$
+$$V_R =  \frac KR * \frac{125}{81} = \frac {81}{18} * \frac{125}{81} = 6.944 = 0.001389 * 1000/2 = 0.001389 * 500 rpm = ore * 500$$
 
 
 
 ### Caso 2: orologio
 
-$$K = L * V_L * \frac{1440*9}{20000}$$
+$$K = R * V_R * \frac{1440*9}{20000}$$
 
-$$K = L * V_L * 0.648$$
+$$K = R * V_R * 0.648$$
 
-$$K = L * V_L * \frac {648}{1000}$$
+$$K = R * V_R * \frac {648}{1000}$$
 
-$$K = L * V_L * \frac {3^4 * 2^3}{1000}$$
+$$K = R * V_R * \frac {3^4 * 2^3}{1000}$$
 
 Ora, che velocità hanno le lancette di un orologio?
 
@@ -548,15 +548,15 @@ Ora, che velocità hanno le lancette di un orologio?
 - minuti: 1 giro / 1 ora = 1 giro / 60 minuti = $\frac{1}{3 * 2^2 * 5} = 0.0167 RPM$
 - secondi: 1 giro / 1 minuto = 1RPM
 
-Uguagliando i 3 casi a VL otteniamo i possibili valori di K:
+Uguagliando i 3 casi a VR otteniamo i possibili valori di K:
 
-- Ore: $K = L *  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}$
-- Minuti: $K = L * \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}$
-- Secondi: $K = L *  \frac {3^4 * 2^3}{1000}$
+- Ore: $K = R *  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}$
+- Minuti: $K = R * \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}$
+- Secondi: $K = R *  \frac {3^4 * 2^3}{1000}$
 
-$$\frac{K}{L} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}  = \frac{3^2}{2 * 5 * 1000}= \frac{9}{10000}  = 0.0009$$
+$$\frac{K}{R} =  \frac{2}{3^2 * 2^5 * 5} * \frac {3^4 * 2^3}{1000}  = \frac{3^2}{2 * 5 * 1000}= \frac{9}{10000}  = 0.0009$$
 
-$$\frac{K}{L} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}    = \frac{3^3 * 2}{5 * 1000} = \frac{54}{5000} = 0.0108$$
+$$\frac{K}{R} =  \frac{1}{3 * 2^2 * 5} * \frac {3^4 * 2^3}{1000}    = \frac{3^3 * 2}{5 * 1000} = \frac{54}{5000} = 0.0108$$
 
 -----------
 
