@@ -493,9 +493,9 @@ Questo significa che la ruota conica L che riceve il moto dal regolatore in bass
 
 $$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321 rpm$$
 
-Questa sarà anche la velocità di tutto l'asse che contiene anche K, a e a1.
+Questa sarà anche la velocità della ruota E che ingrana con la ruota D solidale al pianeta C incaricato di sommare la declinazione alla velocità dell'asse orario, tramite il differenziale a satellite, per causare la rotazione della ruota di ceclinazione.
 
-## Ipotesi su numero di denti K (gear di worm) e L (conica di ricezione)
+## Ipotesi su numero di denti K (gear di worm) e L (conica di ricezione declinazione)
 
 ### Caso 1: numeri "a caso"
 
