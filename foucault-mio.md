@@ -75,7 +75,7 @@ Versione equivalente, ottenuta usando invece delle "spine" la colorazione unifor
 
 ![fig.4 Annales org](https://github.com/jumpjack/heliostat/blob/main/images/annales-fig4-color.png?raw=true)
 
-Un'ulteriore vantaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L di modulazione della declinazione, omessi nell'altra immagine.
+Un'ulteriore vantaggio di questa illustrazione è che mostra anche l'asse degli ingranaggi E ed L (ruota conica sulla destra) di modulazione della declinazione, omessi nell'altra immagine.
 
 
 
@@ -489,11 +489,13 @@ Questo asse XX' dovrà compiere 1 giro ogni 24 ore, ossia 1 giro ogni 1440 minut
 
 $$\frac1{1440}  = V_L * \frac{L*9}{20000} * \frac 1K$$
 
-Questo significa che L deve  avere velocità pari a:
+Questo significa che la ruota conica L che riceve il moto dal regolatore in basso deve  avere velocità pari a:
 
 $$V_L = \frac1{1440} * \frac{20000}{L*9} * K = \frac KL * \frac{5^3}{3^4} = \frac KL * \frac{25 * 5}{27 * 3} =  \frac KL * \frac{125}{81} = \frac KL * 1.54321 rpm$$
 
-## Ipotesi su numero di denti K e L
+Questa sarà anche la velocità di tutto l'asse che contiene anche K, a e a1.
+
+## Ipotesi su numero di denti K (gear di worm) e L (conica di ricezione)
 
 ### Caso 1: numeri "a caso"
 
