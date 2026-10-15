@@ -64,18 +64,38 @@ La ruota E fa 39.6 [36] giri per ogni giro di A
 
 L' "asse a velocità siderale" a cui si riferisce il testo potrebbe essere quello del siderostato di Foucault, il cui asse orario deve ruotare proprio a velocità siderale, che vale:
 
-$$V_{sid} = 1/86164s$$
+$$V_{sid} = \frac{1}{86164 sec}$$
 
 Per avere questa vlocità per l'asse $$V_{XX'}$$ superiore del sierostato, bisogna considerare questi rapporti:
 - $$V_{XX'} = \frac{9}{100} V_K$$ (da asse worm/gear a asse orario)
-- $$V_K = \frac{V_w}{K}$$
-- $$V_w = V_b * \frac{x}{66}$$ (da ruota da 66 a pignone x ignoto, che gira alla velocità del worm  di worm/gear)
-- $$V_b = 0.9 * V_N$$ (da ruota portasatelliti ad asse di uscita b che trasporta ruota da 66)
-- $$V_N = \frac{25}{204}V_M$$ (da pignone M di uscita regolatore a ruota N portasatelliti)
-- $$V_M = \frac{V_L}{2592}$$ (da regolatore ad alette a pignone M di uscita)
+- $$V_K = \frac{1}{K} * V_w$$
+- $$V_w = \frac{66}{x} * V_b$$ (da ruota da 66 a pignone x ignoto, che gira alla velocità del worm  di worm/gear)
+- $$V_b = \frac{9}{10} * V_N$$ (da ruota portasatelliti ad asse di uscita b che trasporta ruota da 66)
+- $$V_N = \frac{25}{204} * V_M$$ (da pignone M di uscita regolatore a ruota N portasatelliti)
+- $$V_M = 2592 * V_L$$ (da regolatore ad alette a pignone M di uscita)
+
+Perciò:
+$$V_{XX'} =  \frac{9}{100} * \frac{1}{K} * \frac{66}{x} * \frac{9}{10} * \frac{25}{204} * \frac{1}{2592} * V_L$$
 
 oppure, all'inverso:
 
+$$V_L = 2592 * \frac{204}{25} * \frac{10}{9} * \frac{x}{66} * K * \frac{100}{9} * V_{XX'}$$
+
+Ma abbiamo detto che $V_{XX'}$ è la velocità siderale $$\frac{1}{86164}$$, quindi:
+
+$$V_L =  2592  * \frac{204}{25} * \frac{10}{9} * \frac{x}{66} * K * \frac{100}{9} *\frac{1}{86164}$$
+
+che possiamo anche riscrivere come:
+
+$$ = \frac{2592 * 204 * 10 * x * K * 100 * 1}{1 * 25 * 9 * 66 * 9 * 86164}$$
+
+Non conosciamo il numero di denti della ruota K del worm/gear, nè sappiamo  quale sia la "ulteriore trasmissione, trasferisce il movimento alla vite e da questa all'asse AR dell'istrumento" che ingrana con la ruota di uscita da 66 denti, che quindi rappresenteremo come Y/X, ottenendo:
+
+$$ = \frac{2592 * 204 * 10 * x * K * 100 * 1 * Y}{ 25 * 9 * 66 * 9 * 86164 * X}$$
+
+Facendo i calcoli viene:
+
+$$ = \frac{528768000 * K * Y}{11515818600X}$$
 
 p.3
 
