@@ -57,10 +57,24 @@ La ruota E fa 39.6 [36] giri per ogni giro di A
 
 
 [nota 3]
-- 1 giro in 347.5s
-- 1 giro in 0.134s
+- VM = 1 giro in 347.5s
+- VL =  2592 * VM
+- VM = 1 giro / 347.5 sec
+- Risultato:  VL = 2592 * 1/347.5 = 7.45899 giri/sec = 1 giro ogni 0.134s
 
-347.5/2592 = 0.134066
+L' "asse a velocità siderale" a cui si riferisce il testo potrebbe essere quello del siderostato di Foucault, il cui asse orario deve ruotare proprio a velocità siderale, che vale:
+
+$$V_{sid} = 1/86164s$$
+
+Per avere questa vlocità per l'asse $$V_{XX'}$$ superiore del sierostato, bisogna considerare questi rapporti:
+- $$V_{XX'} = \frac{9}{100} V_K$$ (da asse worm/gear a asse orario)
+- $$V_K = \frac{V_w}{K}$$
+- $$V_w = V_b * \frac{x}{66}$$ (da ruota da 66 a pignone x ignoto, che gira alla velocità del worm  di worm/gear)
+- $$V_b = 0.9 * V_N$$ (da ruota portasatelliti ad asse di uscita b che trasporta ruota da 66)
+- $$V_N = \frac{25}{204}V_M$$ (da pignone M di uscita regolatore a ruota N portasatelliti)
+- $$V_M = \frac{V_L}{2592}$$ (da regolatore ad alette a pignone M di uscita)
+
+oppure, all'inverso:
 
 
 p.3
