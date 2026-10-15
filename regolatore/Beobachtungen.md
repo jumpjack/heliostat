@@ -103,17 +103,49 @@ Abbiamo detto che $$V_L = \frac{2592}{347.5}$$
 
 Quindi
 
-$$\frac{2592}{347.5}  = \frac{2592 * 204 * 10  * 100 }{ 25 * 9 * 66 * 9 * 86164 }  \frac{x * K * Y}{X}$$
+$$\frac{2592}{347.5}  = \frac{2592 * 204 * 10  * 100 }{ 25 * 9 * 66 * 9 * 86164 }*  \frac{x * K * Y}{X}$$
 
 e
-...
 
-Facendo i calcoli viene:
+$$\frac{1}{347.5}  = \frac{1 * 204 * 10  * 100 }{ 25 * 9 * 66 * 9 * 86164 } * K * \frac{x* Y}{X}$$
 
-$$ = \frac{528768000 * x * K * Y}{11515818600 * X}$$
 
-$$ = 0,04591 * x * K * \frac{X}{Y}$$
+Bisogna ipotizzare valori plausibili per le ruote x, K e Y:
+- dalle figure del siderostato sembra che K sia rande più o meno 1/4 delle ruote da 200, quindi intorno ai 50 denti
+- la ruota x deve ingranare con quella da 66
 
+L'IA suggerisce "per motivi suoi": 
+- K = 54
+- x = 6
+- Y/X = 1/2, per esempio 16:32
+
+Da cui:
+
+$$\frac{1}{347.5}  = \frac{1 * 204 * 10  * 100 }{ 25 * 9 * 66 * 9 * 86164 } * 54 * \frac{6* 16}{32}$$
+
+$$\frac{1}{347.5}  = \frac{1 * 204 * 10  * 100* 54 * 6 * 16 }{ 25 * 9 * 66 * 9 * 86164 * 32 } $$
+
+$$\frac{1}{347.5}  = \frac{1057536000}{368506195200}$$
+
+$$0,00288 ~= 0,00287$$
+
+Corrispondenza precisa al quarto decimale.
+
+Tornando all'inizio avremo quindi che...
+
+$$ V_L = \frac{2592 * 204 * 10 * x * K * 100 * 1 * Y}{ 25 * 9 * 66 * 9 * 86164 * X}$$
+
+diventa:
+
+$$ V_L = \frac{2592 * 204 * 10 * 6 * 54 * 100 * 1 * 16}{ 25 * 9 * 66 * 9 * 86164 * 32}$$
+
+o, scomposto nei rapporti:
+
+$$V_L =  2592  * (\frac{204}{25}) * (\frac{10}{9}) * (\frac{6}{66} *  \frac{16}{32}) * 54 * \frac{100}{9}   * \frac{1}{86164}$$
+
+cioè
+
+$$V_L =  2592  * (Regolatore -> Sommatore AR) * (Sommatore AR) * UlterioreTrasmissione * K * Siderostato   * XX'$$
 
 p.3
 
