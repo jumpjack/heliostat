@@ -1,0 +1,63 @@
+
+  :root { --bg:#12161c; --panel:#1b2028; --line:#323a47; --text:#e8e4d8; --muted:#9aa3af; --accent:#d9b45a; --ok:#7fc27a; --bad:#f08a6a; }
+  * { box-sizing:border-box; }
+  html, body { margin:0; height:100%; overflow:hidden; overscroll-behavior:none;
+               background:var(--bg); color:var(--text); font:13px/1.45 system-ui,-apple-system,"Segoe UI",sans-serif; }
+body { display:flex; }
+  #stage { flex:1 1 50%; width:50%; min-width:0; height:100%; display:block; touch-action:none; outline:none; }
+  #panel { flex:1 1 50%; width:50%; min-width:0; height:100%; overflow:auto; padding:14px 16px;
+           background:var(--panel); border-left:1px solid var(--line); }
+  h1 { margin:0 0 6px; font:600 15px/1.3 Georgia,"Times New Roman",serif; }
+  h2 { margin:12px 0 4px; font:600 13px/1.3 system-ui,sans-serif; color:var(--accent); }
+  p { margin:6px 0; color:var(--muted); }
+  #selected { display:block; min-height:1.4em; margin:8px 0 4px; color:var(--accent); cursor:help; }
+  .wheel-controls { border:1px solid var(--line); border-radius:6px; padding:6px 8px; margin:8px 0; }
+  .wheel-controls h2 { margin:0 0 4px; }
+  .wheel-controls label { font-size:12px; }
+  label { display:block; margin:5px 0; }
+  input[type=range] { width:100%; accent-color:var(--accent); }
+  #dataLayout { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:12px; align-items:start; }
+  #leftControls, #showSpeeds { min-width:0; }
+  #leftControls label, #controls label { font-size:12px; }
+  #leftControls input[type=range], #controls input[type=range] { width:100%; max-width:100%; display:block; }
+  #showSpeeds { padding-top:2px; }
+  #leftControls h2:first-child { margin-top:0; }
+  .shown-speed { padding:5px 0; border-bottom:1px solid var(--line); }
+  .shown-speed-label { display:block; color:var(--muted); font-size:11px; line-height:1.25; }
+  .shown-speed-value { color:var(--accent); font-weight:600; overflow-wrap:anywhere; }
+  .buttons { display:flex; gap:6px; margin:6px 0; }
+  .sidereal-button { width:100%; margin:2px 0 8px; border-color:var(--accent); }
+  button, select { font:inherit; color:var(--text); background:#252c37; border:1px solid var(--line);
+                   border-radius:6px; padding:6px 8px; cursor:pointer; }
+  button { flex:1; }
+  button.on { border-color:var(--accent); color:var(--accent); }
+  button:focus-visible, select:focus-visible, tr:focus-visible, input:focus-visible { outline:2px solid var(--accent); outline-offset:1px; }
+  #status { min-height:5em; color:var(--ok); white-space:pre-line; }
+  .bad { color:var(--bad); }
+  table { width:100%; margin-top:6px; border-collapse:collapse; }
+  th { padding:3px 4px; text-align:left; font-weight:600; color:var(--muted); }
+  th:nth-child(n+4) { text-align:right; }
+  td { padding:3px 4px; border-top:1px solid var(--line); vertical-align:top; }
+  tr { cursor:pointer; }
+  tr.sel td { background:#2a3140; color:var(--accent); }
+  td:first-child { min-width:2em; font-weight:600; white-space:nowrap; }
+  td:nth-child(3) { font-size:11px; color:var(--muted); word-break:break-all; }
+  td:nth-child(n+4) { text-align:right; white-space:nowrap; }
+  th:nth-child(6), td:nth-child(6) { text-align:left; }
+  td:nth-child(6) { font-size:11px; }
+  td:nth-child(6) div { white-space:nowrap; }
+  .mk { color:var(--accent); }
+  .small { font-size:12px; }
+  #errBanner { position:fixed; left:max(10px,env(safe-area-inset-left)); top:max(10px,env(safe-area-inset-top)); max-width:min(60%,520px); max-height:70%; overflow:auto;
+               z-index:99; padding:8px 10px; background:#4a1d1d; border:1px solid var(--bad); color:#ffd8cc; border-radius:8px;
+               font:12px/1.4 ui-monospace,Menlo,Consolas,monospace; white-space:pre-wrap; cursor:pointer; }
+  #errBanner { max-width:min(45%,520px); }
+  @media (max-width:900px) {
+    #dataLayout { grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:8px; }
+  }
+  @media (max-width:640px) {
+    body { flex-direction:column; }
+    #stage { flex:none; width:100%; height:50%; }
+    #panel { flex:none; width:100%; height:50%; border-left:0; border-top:1px solid var(--line); }
+    #errBanner { max-width:calc(100% - 20px); max-height:40%; }
+  }

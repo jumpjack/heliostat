@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Orologeria completa – struttura dati JSON</title>
+<link rel="stylesheet" type="text/css" href="siderostato.css">
+</head>
+<body>
+<canvas id="stage" tabindex="0" aria-label="Scena 3D dell'orologeria completa"></canvas>
+
+<div id="panel">
+  <h1 id="title"></h1>
+
+  <h2>Gruppi visibili</h2>
+  <div id="groups"></div>
+
+  <div id="dataLayout">
+    <div id="leftControls">
+      <h2>Ingranaggio selezionato</h2>
+      <b id="selected" title="Nessun ingranaggio selezionato">Nessun ingranaggio selezionato</b>
+      <label>Velocità: <b id="rpmLabel"></b> giri/min (negativo = senso opposto)
+        <input id="speed" type="range" min="-450" max="450" step="1" value="10"></label>
+      <button id="siderealTime" type="button" class="sidereal-button" title="Il pulsante imposta l'asse XXp superiore a 1 giro ogni 1440 minuti.">Tempo siderale su siderostato</button>
+      <button id="siderealTimeRegulator" type="button" class="sidereal-button" title="Il pulsante imposta il pignone di uscita del regolatore in basso a 1 giro ogni 1440 minuti.">Tempo siderale su regolatore</button>
+      <div id="wheelControls"></div>
+
+      <h2>Freni</h2>
+      <div id="brakes"></div>
+      <h2>Geometria</h2>
+      <div id="controls"></div>
+    </div>
+    <div id="showSpeeds" aria-live="polite"><div class="small" style="color:var(--muted)">Velocità degli organi</div></div>
+  </div>
+
+  <p class="small" id="check"></p>
+  <h2>Effetto sul moto</h2>
+  <p id="status"></p>
+  <h2>Angoli del siderostato</h2>
+  <div id="siderostatAngles" class="small" aria-live="polite">In attesa della cinematica…</div>
+  <p class="small">Lettura degli angoli relativi: <code>axis_vert_fork</code> corrisponde all'asse cinematico <code>axis_vert</code>; <code>axis_mirror</code> a <code>axis_mirror_center</code>.</p>
+
+<table>
+  <thead><tr>
+    <th></th><th>Ingranaggio</th><th>Asse</th><th>Denti</th><th>Ø mm</th>
+    <th>giri/min lungo l'asse: vs mondo e vs ogni parent<br><span class="small" style="color:var(--muted)">◀ = riferimento da cui è calcolata</span></th>
+  </tr></thead>
+  <tbody id="gearRows"></tbody>
+</table>
+
+  <p class="small" id="note"></p>
+</div>
+
+<!-- ===== Diagnostica: caricata per prima, così intercetta anche errori di caricamento e di sintassi ===== -->
+<script src="diagnosis.js"></script>
+<script src="babylon.js" onerror="fail('caricamento','babylon.js non trovato (deve stare accanto a questa pagina)')"></script>
+
+<!-- ===== MACHINE: descrizione della macchina (era machine-new.js) ===== -->
+<script src="machine-eliostato1.js"></script>
+<script src="script_1.js"></script>
+
+</body>
+</html>
