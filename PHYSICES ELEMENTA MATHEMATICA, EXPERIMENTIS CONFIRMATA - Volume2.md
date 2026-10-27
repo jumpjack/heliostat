@@ -98,9 +98,9 @@ Le viti **I, I, I**, passando attraverso la piastra di rame **LLM**, alla quale 
 ![image](https://user-images.githubusercontent.com/1620953/234854724-371d2e9f-f33d-49e5-b94c-45a4538be84e.png)
 
 
-2679: All'estremità dell'indice **O** si trova un cilindretto **n**, lungo il cui asse è praticato un foro.
+2679: All'estremità **O** della lancetta si trova un cilindretto **n** forato.
 
-2680: La lunghezza della lancetta è misurata lungo una linea, perpendicolare a **lk**, tracciata dall'asse del cilindro **n** all'asse del filo **lk**. Nella nostra macchina, questa lunghezza è di sei pollici.
+2680: La lunghezza della lancetta è misurata lungo una linea, perpendicolare a **lk**, tracciata dall'asse del cilindreto **n** all'asse del filo **lk**. Nella nostra macchina, questa lunghezza è di sei pollici.
 
 
 <img width="953" height="758" alt="image" src="https://github.com/user-attachments/assets/b1b3ac02-be2e-4bc8-9706-6d918e24ed24" />
