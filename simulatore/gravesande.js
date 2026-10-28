@@ -12,13 +12,13 @@
   "consts": { "module": 1, "lungh" : 35, "altezzaBaseP"  : 100 , "altezzaSupportoPosizionatore": 200, "lunghezzaLancetta" : 100, "xclock" : 180, "lunghezzaCoda": 200},
   "controls": [
     { "id": "latitudine", "label": "Latitudine", "step": 1, "ranges": { "all": { "min": 0, "max": 90, "value": 42 } } },
-    { "id": "barra_len", "label": "Lunghezza barra YZ (declinazione)", "step": 2, "ranges": { "all": { "min": 60, "max": 300, "value": 100 } } },
+    { "id": "barra_len", "label": "Lunghezza barra YZ (declinazione)", "step": 2, "ranges": { "all": { "min": 60, "max": 300, "value": 78 } } },
     { "id": "tilt", "label": "Altezza target", "step": 1, "ranges": { "all": { "min": -90, "max": 90, "value": 0 } } },
     { "id": "azimuth", "label": "Azimuth target", "step": 1, "ranges": { "all": { "min": -180, "max": 180, "value": -90 } } },
     { "id": "clock_h", "label": "Altezza orologio", "step": 1, "ranges": { "all": { "min": 200, "max": 300, "value": 270 } } },
-    { "id": "altezzaAsseForcella", "label": "Altezza tubo guida", "step": 1, "ranges": { "all": { "min": 5, "max": 35, "value": 20 } } },
-    { "id": "xmirror", "label": "Posizione X specchio", "step": 1, "ranges": { "all": { "min": -500, "max": 500, "value": 80 } } },
-    { "id": "ymirror", "label": "Posizione Y specchio", "step": 1, "ranges": { "all": { "min": -500, "max": 500, "value": -54 } } }
+    { "id": "altezzaAsseForcella", "label": "Altezza tubo guida", "step": 1, "ranges": { "all": { "min": 5, "max": 35, "value": 22 } } },
+    { "id": "xmirror", "label": "Posizione X specchio", "step": 1, "ranges": { "all": { "min": -500, "max": 500, "value": 102 } } },
+    { "id": "ymirror", "label": "Posizione Y specchio", "step": 1, "ranges": { "all": { "min": -500, "max": 500, "value": -56 } } }
   ],
   "axes": [
     {
