@@ -16,6 +16,7 @@ Troviamo descrizioni di questa macchina in vari testi e in varie lingue:
 - [Spiegazione in inglese](https://books.google.it/books?id=tFP9Y7VC5_MC&pg=PA91&lpg=PA91&dq=the+radius+is+secant+to+23%C2%B0,30%27+as+10000000+to+10904411&source=bl&ots=J7ssVYrhy8&sig=ACfU3U1zy5NTuWyS1vIPdquCJLV87pNQHA&hl=it&sa=X&ved=2ahUKEwi6uLT2z8z-AhXEqaQKHcSfBEgQ6AF6BAgIEAM#v=onepage&q&f=false) in _Philosophia Britannica: Or, A New and Comprehensive System Of The Newtonian Philosophy, Astronomy and Geography, In A Course of Twelfe Lectures_ , pp.89-92 e tavola LI, paragrafi da 20 a 30
 - [Definizione/spiegazione inglese](https://archive.org/details/bim_eighteenth-century_the-complete-dictionary-_croker-temple-henry_1765_2/page/n265/mode/2up) in _The complete dictionary of arts and sciences_,  1765: Vol 2, di Temple Henry Croker.
 - [Traduzione francese](https://www.google.it/books/edition/%C3%89l%C3%A9mens_de_physique_d%C3%A9montrez_math%C3%A9m/95vDCwJlppkC?hl=it&gbpv=1&dq=soleil+miroir++Physique++gravesande&pg=PA246&printsec=frontcover) di C.F. Roland De Virloys, 1747, vol. 2 (da pagina 126, righe 2659-2702
+- Spiegazione geometrica in _Lehrbuch der physik - zweiter theil: akustik and optik, zweiter band, Geometrische Optik_ (Manuale di fisica – Seconda parte: Acustica e ottica;  Volume 2: Ottica geometrica) - [Originale in tedesco](https://books.google.it/books?hl=it&lr=&id=P2oiAQAAMAAJ&oi=fnd&pg=PA301&dq=prazmowski+heliostat&ots=x0XRIuSg53&sig=Xdy6Ykf6Ws6_EEA68xdUHDCCJgQ&redir_esc=y#v=onepage&q=prazmowski%20heliostat&f=false), [Mia traduzione in italiano](https://github.com/jumpjack/heliostat/blob/main/Lehrbuch%20der%20Physik%20%20-%20Th%20Akustik%20und%20Optik.md)
 
 ![Tavola LXXXIII](https://github.com/jumpjack/heliostat/blob/main/images/gravesande/gravesande-tav%20LXXXIII.jpg)
 
@@ -44,5 +45,24 @@ una volta inserita sulla base che prima reggeva lo specchio, potrà ruotare anch
 2c) Togliere il posizionatore e sostituirlo con lo specchio 
 
 A questo punto, avviando l'orologio, lo specchio proietterà il riflesso del sole sempre nello stesso punto man mano che il sole si sposta.
+
+
+## Funzionamento
+
+La geometria di questo apparecchio non è descritta da Gravesande nella sua opera originale, ma ho trovato una sua descrizione in un altro testo, in tedesco, a pag.337, dove c'è questa figura (fig. 191):
+
+<img width="382" height="283" alt="image" src="https://github.com/user-attachments/assets/c7708fa9-3037-4494-acdf-6b313cf6b813" />
+
+Nella mia [traduzione in inglese del testo](https://github.com/jumpjack/heliostat/blob/main/Lehrbuch%20der%20Physik%20%20-%20Th%20Akustik%20und%20Optik.md) ho rifatto la figura a colori per meglo evidenziare i raggi solari e e iraggi riflessi:
+
+
+<img width="417" height="334" alt="image" src="https://github.com/user-attachments/assets/9c17366b-442a-4b44-8a65-d12a2d2f0fee" />
+
+La chiave di tutto è l'uguaglianza dei segmenti AC e AB, con C centro dello specchio e B centro del tubo-guida della coda dello specchio, ma la spiegazione è molto stringata:
+
+_Un orologio HH [ha il suo asse di rotazione orientato come l'asse polare nord sud], in modo che la lancetta A'B segua sempre l'ombra dell'asse AA' sul quadrante, che è parallelo all'equatore, mentre il raggio SB descrive il suo cono diurno intorno all'asse del mondo. Gravesande collega poi lo specchio MM' a questo movimento mediante una guida collegata all'estremo B della lancetta, in cui è fissata un'asta perpendiocolare_ .... e poi continua non con spiegazioni geometriche ma con la descrizione delle parti dello strumento.
+
+
+
 
 
