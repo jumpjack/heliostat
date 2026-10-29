@@ -2,6 +2,8 @@
 
 <img  src="https://github.com/jumpjack/heliostat/blob/main/gravesande-cyclopaedia-schematic.jpg" />
 
+![image](https://github.com/jumpjack/heliostat/blob/main/images/gravesande/gravesande-photo.jpg)
+
 
 Pare che l'apparecchio di Gravesande sia il primo eliostato della storia, e Gravesande fu il primo a usare questo nome 
 (o meglio Heliostata, perchè scriveva in latino).
