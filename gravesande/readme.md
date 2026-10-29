@@ -79,5 +79,10 @@ La retta **OE** divide l'angolo **DOS** in due parti eguali, e quindi la retta *
 
 Ora, è noto per la Geometria che questi diversi punti sono situati sopra una circonferenza di circolo; quindi la coda dello specchio dovrà descrivere in 24 ore una superficie conica obliqua, la di cui base parallela all’equatore sarà un circolo . Si soddisfa a questa condizione per mezzo dell'apparecchio rappresentato dalla fig. 40, Tav XV. composto d'uno specchio **AB** e d'un orologio **M**. Lo specchio é mobile intorno all'asse **cc'**; l'asta che sostiene questo asse si muove sopra sè medesima; all'ago del quadrante è adattata una forca **hl** mobile intorno all'asse **u**; e finalmente questa forca sostiene un tubo in cui scorre liberamente a incastro l'asse **c c '**; il qual tubo è mobile intorno ad un asse perpendicolare alla sua direzione. Si noti che il quadrante dell'orologio deve sempre esser diretto parallelamente all'equatore. Del resto il rapporto che deve passare fra la situazione dell'orologio e quella dello specchio deve essere regolato secondo l' epoca dell'anno e il luogo dell'osservazione. L'eliostato imaginato per la prima volta dallo S' Gravesand è stato perfezionato dai Prof. Charles , Malus ecc. Si può riscontrare in questo proposito il **Journal de l'Ecole Polytechnique**, t. 10. 11, in cui l' Hachette descrive i diversi eliostati, come pure il **Bulletin de la Société d'Encouragement **an. 1826 , per una descrizione fatta dal medesimo fisico d'un eliostato proposto dal sig. Gambey._
 
+Questa figura (da [Lehrbuch der Physik](https://github.com/jumpjack/heliostat/blob/main/Lehrbuch%20der%20Physik%20%20-%20Th%20Akustik%20und%20Optik.md)) dovrebbe rappresentare l'eliostato "evoluto" creato da Charles (Jacques Alexandre César Charles?) per semplificare la taratura del modello di Gravesande:
+
+<img width="509" height="648" alt="image" src="https://github.com/user-attachments/assets/2c7067ab-7268-4a8b-83a8-9e751f97299b" />
+
+
 
 
