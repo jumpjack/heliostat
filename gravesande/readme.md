@@ -11,9 +11,10 @@ lo specchio e l'orologio, che però dovevano essere messe in posizioni ben preci
 Troviamo descrizioni di questa macchina in vari testi e in varie lingue:
 - Originale in latino di Gravesande, _PHYSICES ELEMENTA MATHEMATICA, EXPERIMENTIS CONFIRMATA - Volume 2_: [Google books](https://books.google.it/books?id=pG414R2jTBMC&lpg=PA715&ots=IWSB0d5yy-&dq=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&hl=it&pg=PA715#v=onepage&q=HELIOSTATA%20Qua%20Radii%20Solares%20firmantur&f=false), [archive.org](https://archive.org/details/A077240117)
 - [Mia traduzione in italiano](https://github.com/jumpjack/heliostat/blob/main/PHYSICES%20ELEMENTA%20MATHEMATICA%2C%20EXPERIMENTIS%20CONFIRMATA%20-%20Volume2.md)
-- [Traduzione inglese](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up) di John Theophilus Desaguliers in _Mathematical elements of natural philosophy, confirm'd by experiments:or, An introduction to Sir Isaac Newton's philosophy_
- pagina 107 del testo originale, p.151 della versione online
+- [Traduzione inglese](https://archive.org/details/mathematicalelem02grav/page/n151/mode/2up) di John Theophilus Desaguliers in _Mathematical elements of natural philosophy, confirm'd by experiments:or, An introduction to Sir Isaac Newton's philosophy_, pagina 107 del testo originale, p.151 della versione online
 - [Altra traduzione inglese](https://archive.org/details/mobot31753002000542/page/552/mode/2up) in _The cyclopædia; or, Universal dictionary of arts, sciences, and literature_ , di Abraham Rees, 1743-1825  ([estratto (jpg)](https://github.com/jumpjack/heliostat/blob/main/gravesande-heliostat-cyclopedia.png))
+- Spiegazione in inglese in _Philosophia Britannica: Or, A New and Comprehensive System Of The Newtonian Philosophy, Astronomy and Geography, In A Course of Twelfe Lectures_ , pp.89-92 e tavola LI, paragrafi da 20 a 30
+- [Definizione/spiegazione inglese](https://archive.org/details/bim_eighteenth-century_the-complete-dictionary-_croker-temple-henry_1765_2/page/n265/mode/2up) in _The complete dictionary of arts and sciences_,  1765: Vol 2, di Temple Henry Croker.
 - [Traduzione francese](https://www.google.it/books/edition/%C3%89l%C3%A9mens_de_physique_d%C3%A9montrez_math%C3%A9m/95vDCwJlppkC?hl=it&gbpv=1&dq=soleil+miroir++Physique++gravesande&pg=PA246&printsec=frontcover) di C.F. Roland De Virloys, 1747, vol. 2 (da pagina 126, righe 2659-2702
 
 ![Tavola LXXXIII](https://github.com/jumpjack/heliostat/blob/main/images/gravesande/gravesande-tav%20LXXXIII.jpg)
