@@ -62,7 +62,22 @@ La chiave di tutto è l'uguaglianza dei segmenti AC e AB, con C centro dello spe
 
 _Un orologio HH [ha il suo asse di rotazione orientato come l'asse polare nord sud], in modo che la lancetta A'B segua sempre l'ombra dell'asse AA' sul quadrante, che è parallelo all'equatore, mentre il raggio SB descrive il suo cono diurno intorno all'asse del mondo. Gravesande collega poi lo specchio MM' a questo movimento mediante una guida collegata all'estremo B della lancetta, in cui è fissata un'asta perpendiocolare_ .... e poi continua non con spiegazioni geometriche ma con la descrizione delle parti dello strumento.
 
+## Altre versioni
+Charles Desprez provò a rendere più facilmente utilizzabile l'eliostato di Gravesande rendendolo un corpo unico dotato di varie regolazioni; ne parla nel suo [Trattato elementare di fisica](https://github.com/jumpjack/heliostat/blob/main/Trattato_elementare_di_fisica-Charles_Despretz-1835.md), dove troviamo, nascosto in un angolo in basso a destra della tavola XV, questa figura (fig. 40):
 
+![image](https://user-images.githubusercontent.com/1620953/231124987-f02150f9-b5e3-408a-ada5-996ea13e6e4b.png)
+
+La figura 40 fa coppia con la figura 39, che mostra la spiegazione geometrica del funzionamento:
+
+![image](https://user-images.githubusercontent.com/1620953/231124801-d0659ddf-c540-4fdc-be0e-895167124309.png)
+
+Questa è la spiegazione fornita, a pag. 608:
+
+_Sia **S S' S'' S'''** ( f. 39. 1. XV. ) il circolo descritto dal Sole in 24 ore , e **AB** sia la situazione dello specchio. I raggi solari coincidano successivainente con le costole della superficie conica **O S S' S'' S'''**, **OD** sia la direzione costante dei raggi reflessi, e **OE** una perpendicolare allo specchio che passi per il suo centro , e intorno al quale lo specchio può prendere qualunque situazione. 
+
+La retta **OE** divide l'angolo **DOS** in due parti eguali, e quindi la retta **SD** è divisa nel punto **E** in due partli proporzionali ad **SO** e **OD** , il punto **E** essendo preso nello stesso piano **S S' S'' S'''** . Per an altro raggio solare **OS** la perpendicolare **OE** dividerà del pari la linea **DS'** in due parti proporzionali **SO'** e **OD'**. Quindi la coda dello specchio incontrerà i piani **D S S' S ''"** in alcuni punti **E E' E''** ecc., che dividono le rette **DS**, **DS'** ecc. in parti proporzionali.
+
+Ora, è noto per la Geometria che questi diversi punti sono situati sopra una circonferenza di circolo; quindi la coda dello specchio dovrà descrivere in 24 ore una superficie conica obliqua, la di cui base parallela all’equatore sarà un circolo . Si soddisfa a questa condizione per mezzo dell'apparecchio rappresentato dalla fig. 40, Tav XV. composto d'uno specchio **AB** e d'un orologio **M**. Lo specchio é mobile intorno all'asse **cc'**; l'asta che sostiene questo asse si muove sopra sè medesima; all'ago del quadrante è adattata una forca **hl** mobile intorno all'asse **u**; e finalmente questa forca sostiene un tubo in cui scorre liberamente a incastro l'asse **c c '**; il qual tubo è mobile intorno ad un asse perpendicolare alla sua direzione. Si noti che il quadrante dell'orologio deve sempre esser diretto parallelamente all'equatore. Del resto il rapporto che deve passare fra la situazione dell'orologio e quella dello specchio deve essere regolato secondo l' epoca dell'anno e il luogo dell'osservazione. L'eliostato imaginato per la prima volta dallo S' Gravesand è stato perfezionato dai Prof. Charles , Malus ecc. Si può riscontrare in questo proposito il **Journal de l'Ecole Polytechnique**, t. 10. 11, in cui l' Hachette descrive i diversi eliostati, come pure il **Bulletin de la Société d'Encouragement **an. 1826 , per una descrizione fatta dal medesimo fisico d'un eliostato proposto dal sig. Gambey._
 
 
 
