@@ -64,7 +64,7 @@ _Un orologio HH [ha il suo asse di rotazione orientato come l'asse polare nord s
 
 In "Dictionnaire technologique ou nouveau dictionnaire universel des arts et métiersTome 10 : Gabare à Hoyau" si trova invece questo riferimento a spiegazioni tecniche dettagliate:
 
-_Coloro che vorranno conoscere questo calcolo potranno consultare il **Traité de Physique mathématique** di **M. Biot**, Tomo III, pagina 180, e Tomo IV, pagina 192. Malus ha apportato ulteriori modifiche a questo apparecchio (Vedi i **Journaux de l’École polytechnique**, Tomi IX e X, ovvero i quaderni 16° e 17°; e la corrispondenza, n° di gennaio 1810, pagina 101)._
+_Coloro che vorranno conoscere questo calcolo potranno consultare il **[Traité de Physique mathématique](https://wellcomecollection.org/works/kz3s48bg/items?canvas=183&manifest=2&query=heliostat)** di **M. Biot**, Tomo III, pagina 180, e Tomo IV, pagina 192. Malus ha apportato ulteriori modifiche a questo apparecchio (Vedi i **Journaux de l’École polytechnique**, Tomi IX e X, ovvero i quaderni 16° e 17°; e la corrispondenza, n° di gennaio 1810, pagina 101)._
 
 
 
