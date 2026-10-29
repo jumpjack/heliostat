@@ -62,6 +62,12 @@ La chiave di tutto è l'uguaglianza dei segmenti AC e AB, con C centro dello spe
 
 _Un orologio HH [ha il suo asse di rotazione orientato come l'asse polare nord sud], in modo che la lancetta A'B segua sempre l'ombra dell'asse AA' sul quadrante, che è parallelo all'equatore, mentre il raggio SB descrive il suo cono diurno intorno all'asse del mondo. Gravesande collega poi lo specchio MM' a questo movimento mediante una guida collegata all'estremo B della lancetta, in cui è fissata un'asta perpendiocolare_ .... e poi continua non con spiegazioni geometriche ma con la descrizione delle parti dello strumento.
 
+In "Dictionnaire technologique ou nouveau dictionnaire universel des arts et métiersTome 10 : Gabare à Hoyau" si trova invece questo riferimento a spiegazioni tecniche dettagliate:
+
+_Coloro che vorranno conoscere questo calcolo potranno consultare il **Traité de Physique mathématique** di **M. Biot**, Tomo III, pagina 180, e Tomo IV, pagina 192. Malus ha apportato ulteriori modifiche a questo apparecchio (Vedi i **Journaux de l’École polytechnique**, Tomi IX e X, ovvero i quaderni 16° e 17°; e la corrispondenza, n° di gennaio 1810, pagina 101)._
+
+
+
 ## Altre versioni
 Charles Desprez provò a rendere più facilmente utilizzabile l'eliostato di Gravesande rendendolo un corpo unico dotato di varie regolazioni; ne parla nel suo [Trattato elementare di fisica](https://github.com/jumpjack/heliostat/blob/main/Trattato_elementare_di_fisica-Charles_Despretz-1835.md), dove troviamo, nascosto in un angolo in basso a destra della tavola XV, questa figura (fig. 40):
 
