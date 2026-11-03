@@ -19,6 +19,7 @@ Gli eliostati sono apparecchi destinati a dare per riflessione una direzione cos
 
 **Eliostata di Fahrenheit** - Questo strumento, il più semplice di tutti, dà un raggio riflesso costantemente parallelo all'asse della terra. Esso consiste in un orologio **HH'** (fig. **1431**) la cui lancetta percorre il quadrante in 24 ore. Si dirige questo quadrante parallelamente all'equatore. 
 
+<img width="205" height="423" alt="image" src="https://github.com/user-attachments/assets/0c1c1abd-43ea-45ec-bf24-979ac47ace07" />
 <img width="200" alt="image" src="https://github.com/user-attachments/assets/fd4a97fc-8705-48d8-a9d3-0b6878036cf3" />
 
 
