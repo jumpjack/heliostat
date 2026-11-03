@@ -35,17 +35,21 @@ Supponiamo il sole in **s**; **so** sarà il raggio incidente, e l'angolo **soE*
 <img width="471" height="492" alt="image" src="https://github.com/user-attachments/assets/68dbff7f-8203-4158-8f28-19008fb5342d" />
 
 Per fare ciò, si porrà in **mm'** un quadrante d'orologio parallelo all'equatore, la cui lancetta, compiendo un giro in 24 ore, trascinerà la coda dello specchio rimanendo sempre nel meridiano occupato dal sole.
-Si vede che l'ombra di uno stilo **ec** perpendicolare al centro del quadrante **mm'** dovrà sempre cadere sulla lancetta **em** quando essa indicherà l'ora vera. Inoltre, se la lunghezza di questo stilo è limitata in **e** dal prolungamento **or'** del raggio riflesso, l'estremità dell'ombra cadrà nel punto in cui la normale **om** incontra la lancetta **cm**. I valori di **oe** e di **ce**, che corrispondono a questa condizione, possono essere calcolati in funzione della lunghezza **cm** = **l** e della declinazione **d** del sole. Infatti, il triangolo rettangolo **ecm** fornisce:
+Si vede che l'ombra di uno stilo **ec** perpendicolare al centro del quadrante **mm'** dovrà sempre cadere sulla lancetta **em** quando essa indicherà l'ora vera. Inoltre, se la lunghezza di questo stilo è limitata in **e** dal prolungamento **or'** del raggio riflesso, l'estremità dell'ombra cadrà nel punto in cui la normale **om** incontra la lancetta **cm**. I valori di **oe** e di **ce**, che corrispondono a questa condizione, possono essere calcolati in funzione della lunghezza **em** = **l** e della declinazione **d** del sole. Infatti, il triangolo rettangolo **ecm** fornisce:
 
-ce = cm * tan(emc) = l * tan(d)  [1]
+ce = em * tan(emc) = l * tan(d)  [1]
 
-poiché, essendo **em** parallelo a **oi**, l'angolo **emc** è uguale a **soe**, che è la declinazione. Si ha inoltre **oe** = 1/2 * **or'** = **em**, giacché si è posto **or'** = **oi**. Ora, il triangolo **ecm** fornisce:
+poiché, essendo **em** parallelo a **oi**, l'angolo **emo** è uguale a **soc**, che è la declinazione (???). Si ha inoltre **oe** = 1/2 * **or'** = **cm**, giacché si è posto **or'** = **oi**. Ora, il triangolo **ecm** fornisce:
 
 cm = l = em * cos(emc) = em * cos(d); 
 
+[errore?!? Cosa c'entra = l = ?? Forse: cm =  em * cos(emc) = em * cos(d) = l * cos(d)]
+
 di qui:
 
-em = oe * 1/cos(d)  [2]
+em = oe * l/cos(d)  [2]
+
+[non ha senso, però avrebbe  senso cm = oe = l * cos(d) , anche se non c'entra completamente niente con la [2] !!]
 
 -----------
 
