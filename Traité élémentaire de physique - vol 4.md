@@ -49,7 +49,7 @@ di qui:
 
 em = oe * l/cos(d)  [2]
 
-[non ha senso, però avrebbe  senso cm = oe = l * cos(d) , anche se non c'entra completamente niente con la [2] !!]
+[non ha senso, però avrebbe  senso** cm = oe = l * cos(d)** , anche se non c'entra completamente niente con la [2] !! Infatti più avanti la [4] dice che "siccome oe = l/cos(d), allora l'uguaglianza **pe = oe * cos(alfa)** si può scrivere anche **pe = l/cos(d) * cos(alfa=)**"]
 
 -----------
 
