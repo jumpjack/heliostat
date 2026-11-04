@@ -3,10 +3,10 @@
 | :--- | :--- | :--- |
 | **SCHOLIUM** | **SCHOLIO** | |
 | *Demonstratio Effectûs præcedentis Machinæ:* | *Dimostrazione dell'Effetto della Macchina precedente:* | |
-| Demonftratio hæc deducitur ex Motu Solis diurno; ideò illi, quibus | Questa dimostrazione si deduce dal Moto diurno del Sole; perciò coloro, ai quali | |
+| Demonftratio hæc deducitur ex Motu Solis diurno; ideò illi, quibus | Questa dimostrazione si deduce dal Moto diurno del Sole; perciò coloro, ai quali | **2709** |
 | Leges hujus Motûs funt ignotæ; prætermittere poterunt hocce Scholium, | sono ignote le Leggi di questo Moto; potranno omettere questo Scolio, | |
 | donec, quæ ad hanc Materiam pertinent, in Libro fequenti legerint. | finché non avranno letto quanto pertiene a questa Materia nel Libro seguente. | |
-| Sit **S** Punctum medium Speculi; **SA** Radius reflexus, qui in hoc fitu, | Sia **S** il punto medio dello Specchio; **SA** il raggio riflesso, che in questa posizione, | |
+| Sit **S** Punctum medium Speculi; **SA** Radius reflexus, qui in hoc fitu, | Sia **S** il punto medio dello Specchio; **SA** il raggio riflesso, che in questa posizione, | **2710** <br> **TAB. LXXXV, Fig.8** |
 | ad arbitrium fumto, fervandus eft; fit, Momento quocumque, Radius inci- | presa ad arbitrio, deve essere conservato; sia, in un momento qualunque, il raggio inci- | |
 | dens **BS**. Ubi de Reflexione Luminis agam, demonftrabo, hos duos Radios dari | dente **BS**. Quando tratterò della riflessione della luce, dimostrerò che questi due raggi sono dati | |
 | in Plano perpendiculari ad Planum Speculi, Lineamque, ad hoc idem Pla- | in un piano perpendicolare al piano dello specchio, e che la linea, a questo medesimo piano | |
