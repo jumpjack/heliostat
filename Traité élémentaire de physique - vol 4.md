@@ -73,6 +73,8 @@ di qui [essendo **cm** = **oe** e avendo posto **em** = **l**]:
 
 <img width="269" height="309" alt="image" src="https://github.com/user-attachments/assets/45f7ac14-3610-466e-8338-36a2d6b3e686" />
 
+<img width="400" alt="image" src="https://github.com/user-attachments/assets/de2335ca-9ae0-4d03-8876-0e89fd1ba4db" />
+
 
 **HH'** (fig. 1433) è l'orologio, il cui quadrante viene orientato parallelamente all'equatore, potendo questo orologio ruotare attorno a un asse orizzontale parallelo al suo quadrante. La lancetta **cm**, che compie un giro in 24 ore, si estende oltre il diametro del quadrante e sorregge una forcella **f** che può ruotare su se stessa, e i cui bracci sostengono un asse perpendicolare a un piccolo tubo di metallo in cui scorre la coda **of** dello specchio [collocato in] **o**. Questo specchio può ruotare in ogni direzione all'estremità del suo supporto, in modo che la coda **of** possa seguire i movimenti della lancetta. Si colloca quest'ultima sull'ombra dello "stilo" [l'asta passante per il centro del quadrante dell'orologio], e  si dà allo stilo una lunghezza tale che l'estremità della sua ombra cada in **f**; la lunghezza dello stilo e la distanza **of** saranno legate dalla formula **[1]** (essendo la lunghezza dell ostilo pari a **ce** e la distanza **of** pari a **cm**].
 
