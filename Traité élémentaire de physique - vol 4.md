@@ -57,11 +57,9 @@ cm = em * cos(d) [abbreviazione mia]
 
 di qui [essendo **cm** = **oe** e avendo posto **em** = **l**]:
 
-[ow = l * cos(d)] [aggiunta da me]
-
 **[2]** em = oe * l / cos(d)  [originale]
 
-**[2]** **oe = l * cos(d)**   [formula corretta da me]
+**[2]** **cm = oe = l * cos(d)**   [formula corretta da me]
 
 [Abbiamo così trovato le due lunghezze cxercare **oe** e **ce**, che serviranno po per configurare lo strumento:
 
@@ -69,6 +67,16 @@ di qui [essendo **cm** = **oe** e avendo posto **em** = **l**]:
 - [2] **oe = l * cos(d)**
 - 
 ]
+
+
+**Descrizione dell'apparecchio**
+
+<img width="269" height="309" alt="image" src="https://github.com/user-attachments/assets/45f7ac14-3610-466e-8338-36a2d6b3e686" />
+
+
+**HH'** (fig. 1433) è l'orologio, il cui quadrante viene orientato parallelamente all'equatore, potendo questo orologio ruotare attorno a un asse orizzontale parallelo al suo quadrante. La lancetta **cm**, che compie un giro in 24 ore, si estende oltre il diametro del quadrante e sorregge una forcella **f** che può ruotare su se stessa, e i cui bracci sostengono un asse perpendicolare a un piccolo tubo di metallo in cui scorre la coda **of** dello specchio [collocato in] **o**. Questo specchio può ruotare in ogni direzione all'estremità del suo supporto, in modo che la coda **of** possa seguire i movimenti della lancetta. Si colloca quest'ultima sull'ombra dello "stilo" [l'asta passante per il centro del quadrante dell'orologio], e  si dà allo stilo una lunghezza tale che l'estremità della sua ombra cada in **f**; la lunghezza dello stilo e la distanza **of** saranno legate dalla formula **[1]** (essendo la lunghezza dell ostilo pari a **ce** e la distanza **of** pari a **cm**].
+
+La direzione del raggio riflesso dipende dalla posizione del centro **o**  dello specchio. Nell'apparecchio di 's Gravesande, essendo questo specchio sorretto da un piede indipendente da quello dell'orologio, era piuttosto difficile dargli esattamente la posizione adatta. Charles ha apportato all'apparecchio un importante perfezionamento: il piede dell'orologio può scorrere in una scanalatura diretta secondo il meridiano, e il piede dello specchio è inserito nella scanalatura di un binario che può ruotare attorno a un asse  posto sulla verticale che passerebbe per l'estremità [**e**] dello stilo, se esso avesse la lunghezza data dalla formula **[1]**. Delle divisioni permettono di valutare le distanze degli assi del supporto dell'orologio e dello specchio dall'[asse di rotazione passante per] **e**. Infine, lo specchio può essere sollevato e abbassato a piacimento.
 
 -----------
 
@@ -90,6 +98,13 @@ On voit que l'ombre d'un style **ec** perpendiculaire au centre du cadran **mm'*
 
 ce = cm * tan(emc) = l * tan(d)  [1]
 
-car, **em** étant parallèle à **oi**, l'angle **emc** est égal à **soe** qui est la déclinaison. On a de plus **oe** = 1/2 * **or'** = **em**, puisqu'on a fait **or'** = **oi**. Or, le triangle **ecm** donne
+car, **em** étant parallèle à **oi**, l'angle **emc** est égal à **soe** qui est la déclinaison. On a de plus **oe** = 1/2 * **or'** = **em**, puisqu'on a fait **or'** = **oi**. Or, le triangle **ecm** donne 
 
 cm = l = em * cos(emc) = em * cos(d); d'où  em = oe * 1/cos(d)  [2]
+
+
+**Description de l'appareil**
+
+**HH'** (fig. 1433) est l'horloge, dont on dirige le cadran parallèlement à l'équateur, cette horloge pouvant tourner autour d'un axe horizontal parallèle à son cadran. L'aiguille cm, qui accomplit un tour en 24 heures, dépasse le cadran et porte une fourchette f pouvant tourner sur elle-même, et dont les branches soutiennent un axe perpendiculaire à un petit tube en métal dans lequel glisse la queue of du miroir o. Ce miroir peut tourner en tout sens à l'extrémité de son support, de manière que la queue of puisse suivre les mouvements de l'aiguille. On place celle-ci sur l'ombre du style, et si l'on donne à ce dernier une longueur telle que l'extrémité de son ombre tombe en f, la longueur du style et la distance of seront liées par la formule [1].
+
+La direction du rayon réfléchi dépend de la position du centre du miroir. Dans l'appareil de 's Gravesande, ce miroir étant porté par un pied indépendant de celui de l'horloge, il était assez difficile de lui donner exactement la position convenable. Charles a apporté à l'appareil un perfectionnement important : le pied de l'horloge peut glisser dans une rainure dirigée suivant la méridienne, et le pied du miroir est engagé dans une rainure d'une règle pouvant tourner autour d'un axe e placé sur la verticale qui passerait par l'extrémité du style, s'il avait la longueur donnée par la formule [1]. Des divisions permettent d'évaluer les distances des axes du support de l'horloge et du miroir au pivot e. Enfin, le miroir peut s'élever et s'abaisser à volonté.
