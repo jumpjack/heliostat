@@ -63,7 +63,11 @@ di qui [essendo **cm** = **oe** e avendo posto **em** = **l**]:
 
 **[2]** **oe = l * cos(d)**   [formula corretta da me]
 
-[Abbiamo così trovato le due lunghezze cxercare **oe** e **ce**, che serviranno po per configurare lo strumento]
+[Abbiamo così trovato le due lunghezze cxercare **oe** e **ce**, che serviranno po per configurare lo strumento:
+
+[1] **ce = l * tan(d)**
+[2] **oe = l * cos(d)**
+]
 
 -----------
 
