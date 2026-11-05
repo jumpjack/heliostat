@@ -35,21 +35,35 @@ Supponiamo il sole in **s**; **so** sarà il raggio incidente, e l'angolo **soE*
 <img width="471" height="492" alt="image" src="https://github.com/user-attachments/assets/68dbff7f-8203-4158-8f28-19008fb5342d" />
 
 Per fare ciò, si porrà in **mm'** un quadrante d'orologio parallelo all'equatore, la cui lancetta, compiendo un giro in 24 ore, trascinerà la coda dello specchio rimanendo sempre nel meridiano occupato dal sole.
-Si vede che l'ombra di uno stilo **ec** perpendicolare al centro del quadrante **mm'** dovrà sempre cadere sulla lancetta **em** quando essa indicherà l'ora vera. Inoltre, se la lunghezza di questo stilo è limitata in **e** dal prolungamento **or'** del raggio riflesso, l'estremità dell'ombra cadrà nel punto in cui la normale **om** incontra la lancetta **cm**. I valori di **oe** e di **ce**, che corrispondono a questa condizione, possono essere calcolati in funzione della lunghezza **em** = **l** e della declinazione **d** del sole. Infatti, il triangolo rettangolo **ecm** fornisce:
+Si vede che l'ombra di uno stilo **ec** perpendicolare al centro del quadrante **mm'** dovrà sempre cadere sulla lancetta **cm** quando essa indicherà l'ora vera. Inoltre, se la lunghezza di questo stilo è limitata in **e** dal prolungamento **or'** del raggio riflesso, l'estremità dell'ombra cadrà nel punto in cui la normale **om** incontra la lancetta **cm**. 
 
-ce = em * tan(emc) = l * tan(d)  [1]
+## calcolo delle lunghezze oe e ce 
 
-poiché, essendo **em** parallelo a **oi**, l'angolo **emo** è uguale a **soc**, che è la declinazione (???). Si ha inoltre **oe** = 1/2 * **or'** = **cm**, giacché si è posto **or'** = **oi**. Ora, il triangolo **ecm** fornisce:
+I valori di **oe** e di **ce**, che corrispondono a questa condizione, possono essere calcolati in funzione della lunghezza **em** = **l** e della declinazione **d** del sole. Infatti, il triangolo rettangolo **ecm** fornisce:
 
-cm = l = em * cos(emc) = em * cos(d); 
+**[1]** ce = em * tan(emc) = l * tan(d) 
 
-[errore?!? Cosa c'entra = l = ?? Forse: cm =  em * cos(emc) = em * cos(d) = l * cos(d)]
+[quindi in finale **ce = l * tan(d)** ]
 
-di qui:
+perché, essendo **em** parallelo a **oi**, l'angolo **emc** è uguale a **soE**, che è la declinazione **d**. 
 
-em = oe * l/cos(d)  [2]
+Si ha inoltre **oe** = 1/2 * **or'** = 1/2 * **oi** = **cm**, giacché si è posto **or'** = **oi**. 
 
-[non ha senso, però avrebbe  senso** cm = oe = l * cos(d)** , anche se non c'entra completamente niente con la [2] !! Infatti più avanti la [4] dice che "siccome oe = l/cos(d), allora l'uguaglianza **pe = oe * cos(alfa)** si può scrivere anche **pe = l/cos(d) * cos(alfa=)**"]
+Ora, il triangolo **emc** fornisce:
+
+cm = em * cos(emc) = em * cos(d)  [formula corretta da me]
+
+cm = em * cos(d) [abbreviazione mia]
+
+di qui [essendo **cm** = **oe** e avendo posto **em** = **l**]:
+
+[ow = l * cos(d)] [aggiunta da me]
+
+**[2]** em = oe * l / cos(d)  [originale]
+
+**[2]** **oe = l * cos(d)**   [formula corretta da me]
+
+[Abbiamo così trovato le due lunghezze cxercare **oe** e **ce**, che serviranno po per configurare lo strumento]
 
 -----------
 
