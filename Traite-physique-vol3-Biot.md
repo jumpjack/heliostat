@@ -3,7 +3,8 @@
 
 
 
-_Spiegazione dei miglioramenti apportati da Charles all'eliostato di Gravesande, per rendere più semplice e veloce la calibrazioe: il "posizionatore", anzichè essere un oggetto separato, è un tutt'uno col piedistallo dell'orologio, rispetto al quale è vincolato a scorrere e ruotare secondo regole ben precise che permettono di soddisfare automaticamente i complicati vincoli di distanze necessari al funzionamento del meccanismo._
+_Spiegazione dei miglioramenti apportati da Charles all'eliostato di Gravesande, per rendere più semplice e veloce la calibrazioe: il "posizionatore", anzichè essere un oggetto separato, è un tutt'uno col piedistallo dell'orologio, rispetto al quale è vincolato a scorrere e ruotare secondo regole ben precise che permettono di soddisfare automaticamente i complicati vincoli di distanze necessari al funzionamento del meccanismo.
+Nota: le lettere e figure usate nel testo non sembrano corrispondere a quelle presenti nella tavola indicata nel testo stesso._
 
 Gravesande originale:
 
