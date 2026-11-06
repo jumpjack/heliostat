@@ -33,7 +33,7 @@ essendo i lati $AB$ e $AC$ di lunghezza invariabile, il triangolo resterà isosc
 di conseguenza, gli angoli $RCB'$ e $SCB'$, rispettivamente uguali agli angoli $C$ e $B$ del triangolo, 
 saranno costantemente uguali: $CR$ sarà dunque sempre la direzione del raggio riflesso.  
 
-<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/4a1a55cc-e998-4f7e-b81c-6fcb7b1f870e" />
+<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/4f746b35-4288-4447-a424-b26c07432a8b" />
 
 
 La costruzione dell'apparecchio è semplice; ma la regolazione è così complicata ($^1$) che, malgrado gli 
