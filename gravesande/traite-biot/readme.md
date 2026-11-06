@@ -1,4 +1,4 @@
-Immagini tratte da _Traité de physique expérimentale et mathématique_ di Jean-Baptiste Biot, 1816
+Immagini tratte da [Traité de physique expérimentale et mathématique](https://wellcomecollection.org/works/kz3s48bg/items?canvas=195&manifest=2&query=gravesande) di Jean-Baptiste Biot, 1816
 
 <img src="https://github.com/jumpjack/heliostat/blob/main/gravesande/traite-biot/fig-all.png">
 
