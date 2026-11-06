@@ -43,5 +43,12 @@ sforzi di Charles per renderlo pratico, questo eliostato è stato impiegato molt
 
 (1) In base a quanto detto più in alto, essendo $R$ la lunghezza della lancetta $A'B$, il centro $C$ dello specchio deve essere elevato al di sopra dell'orizzontale passante per il centro di rotazione $A'$ di $R \tan(d) \sin( \lambda)$,   e questo stesso punto $C$ deve essere distante da $A'$ di $R \tan (d) \cos( \lambda ) + \frac{R}{\cos( d)}$.   Bisogna calcolare queste lunghezze e riportarle esattamente [sullo strumento], il che non è facile.   [Spiegazione migliore  èdisponibile in [Traité de physique expérimentale et mathématique ](https://github.com/jumpjack/heliostat/blob/main/Traite-physique-vol3-Biot.md):
 
-"Ora, essendo questo stile perpendicolare al piano del quadrante che rappresenta l'equatore, esso è parallelo all'asse di rotazione diurna del cielo. Di conseguenza, l'angolo che esso forma con l'orizzonte è precisamente uguale alla distanza dell'equatore dal zenith, che abbiamo chiamato **$\Delta$** [ $\lambda$ in questo testo; in sostanza: la latitudine ]. Così la variazione di lunghezza dello stile essendo $$R * \tan(d)$$, quella della sua proiezione orizzontale sarà $$R * \tan(d) \cos(\Delta)$$."  [quindi $$R * \tan(d) \cos\lambda)$$] ]
+" siccome il braccio XZ è composto da due righelli mobili l'uno nell'altro, gli si dà precisamente una lunghezza uguale alla distanza $\frac R {\cos(d)}$  che deve esistere quel giorno tra l'estremità P' dello stilo C'P' dell'orologio e il punto C o X nel quale la coda interseca la superficie dello specchio.
+
+  <img width="1340" height="429" alt="image" src="https://github.com/user-attachments/assets/c1b94947-8611-4f64-8a75-a1c0b6914b7e" />
+
+
+ [...]
+ 
+Ora, essendo questo stile perpendicolare al piano del quadrante che rappresenta l'equatore, esso è parallelo all'asse di rotazione diurna del cielo. Di conseguenza, l'angolo che esso forma con l'orizzonte è precisamente uguale alla distanza dell'equatore dal zenith, che abbiamo chiamato **$\Delta$** [ $\lambda$ in questo testo; in sostanza: la latitudine ]. Così la variazione di lunghezza dello stile essendo $$R * \tan(d)$$, quella della sua proiezione orizzontale sarà $$R * \tan(d) \cos(\Delta)$$."  [quindi $$R * \tan(d) \cos\lambda)$$] ]
 
