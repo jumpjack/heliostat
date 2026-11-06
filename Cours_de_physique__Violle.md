@@ -33,7 +33,8 @@ essendo i lati $AB$ e $AC$ di lunghezza invariabile, il triangolo resterà isosc
 di conseguenza, gli angoli $RCB'$ e $SCB'$, rispettivamente uguali agli angoli $C$ e $B$ del triangolo, 
 saranno costantemente uguali: $CR$ sarà dunque sempre la direzione del raggio riflesso.  
 
-<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/a3f1a776-b2c2-477f-b9fe-6b3b2ccd3dd8" />
+<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/4a1a55cc-e998-4f7e-b81c-6fcb7b1f870e" />
+
 
 La costruzione dell'apparecchio è semplice; ma la regolazione è così complicata ($^1$) che, malgrado gli 
 sforzi di Charles per renderlo pratico, questo eliostato è stato impiegato molto raramente. 
