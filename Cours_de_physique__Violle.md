@@ -16,13 +16,15 @@ cercare di semplificare la calibrazione dello strumento]
 <img width="440" height="560" alt="image" src="https://github.com/user-attachments/assets/5b3bd541-9f0b-491c-9f9e-51944a1c878e" />
 
 
-Disposto un orologio $HH$  
- come descritto in precedenza (cioè col quadrante parallelo all'equatore], in modo che la lancetta $A'B$ segua l'ombra dell'asse $AA'$ sul quadrante parallelo 
-all'equatore, mentre il raggio solare $SB$ descrive il suo cono diurno intorno all'asse del mondo; S'Gravesande 
+Si disponga un orologio $HH$   come descritto in precedenza [cioè col quadrante parallelo all'equatore], in modo che la lancetta $A'B$ segua l'ombra dell'asse $AA'$ sul quadrante parallelo 
+all'equatore, mentre il raggio solare $SB$ [secondo me $AB$] descrive il suo cono diurno intorno all'asse del mondo; S'Gravesande 
 collega lo specchio $MM'$ a questo orologio per mezzo di un anello montato sull'estremità $B$ della lancetta e nel 
-quale può scorrere e girare liberamente una coda impiantata normalmente dietro lo specchio.   Quest'ultimo è 
+quale può scorrere e girare liberamente una coda fissata perpendicolarmente al retro lo specchio.   Quest'ultimo è 
 supportato da un supporto verticale indipendente, attorno al quale è mobile così come attorno a un asse orizzontale, 
 in modo da poter assumere tutte le orientazioni possibili.   
+
+
+<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/b8857acf-9204-41e2-9a3b-99dcb3b807f5" />
 
 Spostando il supporto e alzando abbassando lo specchio, si porta il punto 
 $C$ in una situazione tale che il raggio riflesso prolungato incontra l'asse del mondo in un punto $A$, 
@@ -31,8 +33,12 @@ essendo i lati $AB$ e $AC$ di lunghezza invariabile, il triangolo resterà isosc
 di conseguenza, gli angoli $RCB'$ e $SCB'$, rispettivamente uguali agli angoli $C$ e $B$ del triangolo, 
 saranno costantemente uguali: $CR$ sarà dunque sempre la direzione del raggio riflesso.  
 
-La costruzione dell'apparecchio è semplice; ma la regolazione ne è complicata ($^1$), al punto stesso che, malgrado gli 
+<img width="875" height="490" alt="image" src="https://github.com/user-attachments/assets/a3f1a776-b2c2-477f-b9fe-6b3b2ccd3dd8" />
+
+La costruzione dell'apparecchio è semplice; ma la regolazione è così complicata ($^1$) che, malgrado gli 
 sforzi di Charles per renderlo pratico, questo eliostato è stato impiegato molto raramente. 
 
 (3) S'GRAVESANDE, Physices elementa mathematica, 715. Lugd. Batav.; 1720
+
+(1) In base a quanto detto più in alto, essendo $R$ la lunghezza della lancetta $A'B$, il centro $C$ dello specchio deve essere elevato al di sopra dell'orizzontale passante per il centro di rotazione $A'$ di $R \tan(d) \sin( \lambda)$,   e questo stesso punto $C$ deve essere distante da $A'$ di $R \tan (d) \cos( \lambda ) + \frac{R}{\cos( d)}$.   Bisogna calcolare queste lunghezze e riportarle esattamente [sullo strumento], il che non è facile. 
 
