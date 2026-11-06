@@ -20,11 +20,11 @@ Gravesande modificato da Charles:
 
 184
 
-Supporrò dapprima che il piede dello specchio e l'orologio siano 
+Supporrò inizialmente che il supporto dello specchio e l'orologio siano 
 
 185
 
-assolutamente indipendenti l'uno dall'altro e possano essere trasportati separatamente. Era così nello strumento di S'gravesande. M. Charles ha modificato questa disposizione e ha reso il posizionamento dell'apparecchio molto più comodo; vedremo tra poco in cosa consiste questa modifica, esaminando dapprima il caso più semplice.   Si comincia a dare allo stilo $C'P'$ portato dall'orologio la lunghezza $R \tan (d)$ in base al giorno dell'osservazione, con **R**  raggio della lancetta dell'orologio e **d** la declinazione del sole, che si prende nell'annuario o nella conoscenza dei tempi. Se si considerano le declinazioni come positive quando il sole è da un lato dell'equatore, per esempio verso il polo boreale, bisogna considerarle negative quando si trova dall'altro lato di questo piano. Ma poiché non si può fare la lunghezza dello stilo minore di zero, non si fa partire la sua origine dal quadrante stesso; la si conta a partire da una certa altezza arbitraria **A** al di sopra di questo piano. Allora bisogna elevare anch'esso della stessa quantità **A** l'asse del tubo **tt** (fig. 21), 
+assolutamente indipendenti l'uno dall'altro e possano essere spostati separatamente. Era così nello strumento di S'gravesande. M. Charles ha modificato questa disposizione e ha reso il posizionamento dell'apparecchio molto più comodo; vedremo tra poco in cosa consiste questa modifica, esaminando dapprima il caso più semplice.   Si comincia a dare allo stilo $C'P'$ portato dall'orologio la lunghezza $R \tan (d)$ in base al giorno dell'osservazione, con **R**  raggio della lancetta dell'orologio e **d** la declinazione del sole, che si prende nell'annuario o nella conoscenza dei tempi. Se si considerano le declinazioni come positive quando il sole è da un lato dell'equatore, per esempio verso il polo boreale, bisogna considerarle negative quando si trova dall'altro lato di questo piano. Ma poiché non si può fare la lunghezza dello stilo minore di zero, non si fa partire la sua origine dal quadrante stesso; la si conta a partire da una certa altezza arbitraria **A** al di sopra di questo piano. Allora bisogna elevare anch'esso della stessa quantità **A** l'asse del tubo **tt** (fig. 21), 
 
 <img width="304" height="366" alt="image" src="https://github.com/user-attachments/assets/9409c37f-4e69-4bd1-9a4e-9ce72c31ec44" />
 
