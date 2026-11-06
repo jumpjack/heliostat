@@ -56,7 +56,7 @@ Tutta la difficoltà dell'operazione consiste, come si vede, nel tentativo per t
 
 Il piedistallo comune del positore e dello specchio è invariabilmente unito al piedistallo dell'orologio da un braccio orizzontale **L" C"**, che può ruotare orizzontalmente attorno al punto di giunzione **C"**. Il pezzo **C" L** che appartiene al piedistallo dell'orologio è parallelo alla linea meridiana, ed inoltre è mobile nel senso della sua lunghezza, in modo da poter far variare la distanza del punto **C"** dalla verticale **L O**, che passa per il centro del quadrante. Si determina ogni giorno questa distanza tramite la condizione che l'estremità **P'** dello stile sia verticale al di sopra di **C"**, quando l'orologio è collocato su un piano orizzontale; a tal fine ci si serve di una divisione tracciata su **C" L**. Il pezzo **C" L"** può anche allungarsi o accorciarsi, e il supporto del positore può sollevarsi e abbassarsi.
 
-<img width="1340" height="429" alt="image" src="https://github.com/user-attachments/assets/17aba572-b1ee-4e8e-935b-9ad8df8e2138" />
+<img width="1340" height="429" alt="image" src="https://github.com/user-attachments/assets/faf8c384-7539-4c68-ba76-9573d94ba979" />
 
 
 Ciò posto, quando si è orientato l'orologio, si comincia a operare come se il raggio riflesso dovesse essere diretto nel piano del meridiano che passa per lo stile. 
