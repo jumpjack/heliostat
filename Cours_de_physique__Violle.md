@@ -15,9 +15,6 @@ cercare di semplificare la calibrazione dello strumento]
 
 <img width="440" height="560" alt="image" src="https://github.com/user-attachments/assets/5b3bd541-9f0b-491c-9f9e-51944a1c878e" />
 
-<img width="669" height="320" alt="image" src="https://github.com/user-attachments/assets/d268833f-e882-4e2d-b58f-8cb48a68602c" />
-
-
 Si disponga un orologio $HH$   come descritto in precedenza [cioè col quadrante parallelo all'equatore], in modo che la lancetta $A'B$ segua l'ombra dell'asse $AA'$ sul quadrante parallelo 
 all'equatore, mentre il raggio solare $SB$ [secondo me $AB$] descrive il suo cono diurno intorno all'asse del mondo; S'Gravesande 
 collega lo specchio $MM'$ a questo orologio per mezzo di un anello montato sull'estremità $B$ della lancetta e nel 
@@ -61,6 +58,9 @@ Ora, essendo questo stile perpendicolare al piano del quadrante che rappresenta 
 **Eliostato di Gambey**. — L'eliostato di Gambey presenta, come quello di S'gravesande, un triangolo isoscele $ACF$ [con AC = AF], di cui il lato $AF$ è parallelo alla direzione dei raggi solari, 
 
 <img width="669" height="320" alt="image" src="https://github.com/user-attachments/assets/da1144f5-7213-4e1c-9cdf-c23a8fc308b7" />
+
+<img width="669" height="320" alt="image" src="https://github.com/user-attachments/assets/d268833f-e882-4e2d-b58f-8cb48a68602c" />
+
 
 l'altro $AC$ parallelo alla direzione dei raggi riflessi, e di cui la base $CF$ è costituita dalla coda, posta qui in prolungamento dello specchio $MM'$; ma questo triangolo è più solido, e lo scorrimento del lato mobile $AF$ sulla base è più dolce che nell'apparecchio precedente. Il lato $AF$ è mantenuto nella direzione dei raggi solari dalla rotazione di una ruota $EE'$, parallela all'equatore, sulla quale [ $AF$ ] è fissato in modo tale da formare con il suo piano un angolo eguale alla declinazione [angolo $CFA$]. L'impiego dei due riferimenti di Silbermann (che è agevole aggiungere all'apparecchio) faciliterà la messa in opera di questo lato e permetterà di verificarne a ogni istante la posizione. 
 
